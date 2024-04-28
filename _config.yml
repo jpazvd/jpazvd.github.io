@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "João Pedro's personal website"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "João Pedro Azevedo"
 description              : &description "personal description"
 url                      : https://jpazvd.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Joao Pedro Azevedo"
+  name             : "João Pedro Azevedo"
   avatar           : "profile.png"
   bio              : "Husband, dad of twins and Development Economist. Working to help countries reduce poverty and boost shared prosperity through human capital"
   location         : "New York City, NY"
