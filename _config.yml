@@ -89,7 +89,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
   email            : "jpazevedo@unicef.org"
   researchgate     : "https://ideas.repec.org/e/pwa88.html"
-  uri              : "https://www.unicef.org/media/experts/joao-pedro-azevedo"
+  uri              : #"https://www.unicef.org/media/experts/joao-pedro-azevedo"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -102,20 +102,22 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/jpazvd/"
   orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "https://twitter.com/jpazvd"
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
-
+  unicef           : "https://www.unicef.org/media/experts/joao-pedro-azevedo"
+  WorldBank        : "https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo"
+  
 
 # Reading Files
 include:
