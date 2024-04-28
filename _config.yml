@@ -80,23 +80,23 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  name             : "Joao Pedro Azevedo"
+  avatar           : "profile.jpg"
+  bio              : "Husband, dad of twins and Development Economist. Working to help countries reduce poverty and boost shared prosperity through human capital"
+  location         : "New York City, NY"
+  employer         : "UNICEF"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+  email            : "jpazevedo@unicef.org"
+  researchgate     : "https://ideas.repec.org/e/pwa88.html"
+  uri              : "https://www.unicef.org/media/experts/joao-pedro-azevedo"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/jpazvd"
   google_plus      :
   keybase          :
   instagram        :
