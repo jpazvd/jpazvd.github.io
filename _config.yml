@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "João Pedro's Personal Website
+title                    : "Welcome to JP's personal website!"
 title_separator          : "-"
 name                     : &name "João Pedro Azevedo"
-description              : &description "UNICEF Chief Statistician and Deputy Director of Data and Analytics"
+description              : &description "João Pedro Azevedo's personal website. UNICEF Chief Statistician and Deputy Director of Data and Analytics. Husband, dad of twins and Development Economist. Working to help countries reduce poverty and boost shared prosperity through human capital."
 url                      : https://jpazvd.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "jpazvd/jpazvd.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
