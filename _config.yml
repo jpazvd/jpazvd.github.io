@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Welcome to JP's personal website!"
+title                    : "João Pedro Azevedo"
 title_separator          : "-"
 name                     : &name "João Pedro Azevedo"
 description              : &description "João Pedro Azevedo's personal website. UNICEF Chief Statistician and Deputy Director of Data and Analytics. Husband, dad of twins and Development Economist. Working to help countries reduce poverty and boost shared prosperity through human capital."
@@ -102,21 +102,21 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/jpazvd/"
+  linkedin         : "jpazvd"
   orcid            : "https://orcid.org/0000-0002-3844-215X"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "https://twitter.com/jpazvd"
+  twitter          : "jpazvd"
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
-  unicef           : "https://www.unicef.org/media/experts/joao-pedro-azevedo"
-  WorldBank        : "https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo"
+  website          : "https://www.unicef.org/media/experts/joao-pedro-azevedo"
+  website          : "https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo"
   
 
 # Reading Files
