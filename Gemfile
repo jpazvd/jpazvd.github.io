@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 #gem "github-pages", group: :jekyll_plugins
-gem "github-pages", "~> 227", group: :jekyll_plugins
+#gem "github-pages", "~> 227", group: :jekyll_plugins
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -21,7 +21,12 @@ gem "github-pages", "~> 227", group: :jekyll_plugins
 
 #gem 'liquid', '~> 4.0.0'
 #gem 'liquid', '4.0.3'
-gem "jekyll", "~> 3.9" # Ensure only one version requirement exists
+#gem "jekyll", "~> 3.9" # Ensure only one version requirement exists
+
+gem "jekyll", "~> 3.9"
+gem "github-pages", "~> 227", group: :jekyll_plugins
+gem "liquid", "4.0.3"
+
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -30,6 +35,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem 'jekyll-scholar'
+  gem 'tzinfo'
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'hawkins'
 end
