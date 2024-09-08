@@ -47,42 +47,21 @@ exclude:
 # Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /teaching/:path/
   publications:
     output: true
     permalink: /publications/:path/
-  portfolio:
+  blogs:
     output: true
-    permalink: /portfolio/:path/
-  talks:
+    permalink: /blogs/:path/
+  cv:
     output: true
-    permalink: /talks/:path/
+    permalink: /cv/:path/
 
 # Defaults
 defaults:
-  # Posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      comments: true
-      share: true
-  # Pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
   # Publications
   - scope:
       path: ""
@@ -91,7 +70,20 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+  # Blogs
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: single
+      author_profile: true
+  # CV
+  - scope:
+      path: ""
+      type: cv
+    values:
+      layout: single
+      author_profile: true
 
 # Output Settings
 permalink: /:categories/:title/
@@ -102,14 +94,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-scholar
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 # HTML Compression
 compress_html:
