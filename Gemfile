@@ -1,43 +1,37 @@
 source "https://rubygems.org"
+# Specifies the RubyGems repository to fetch all required gems for your project.
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-
-#gem "github-pages", group: :jekyll_plugins
-#gem "github-pages", "~> 227", group: :jekyll_plugins
-
-# If you want to use Jekyll native, uncomment the line below.
-# To upgrade, run `bundle update`.
-
-# gem "jekyll"
-
-# gem "wdm", "~> 0.1.0" if Gem.win_platform?
-
-#gem 'liquid', '~> 4.0.0'
-#gem 'liquid', '4.0.3'
-#gem "jekyll", "~> 3.9" # Ensure only one version requirement exists
-
+# Jekyll is the static site generator for GitHub Pages.
+# The "~> 3.9" ensures you're using Jekyll version 3.9.x.
 gem "jekyll", "~> 3.9"
+
+# Includes GitHub Pages-specific plugins and configurations.
+# This locks the `github-pages` gem to version 227.
 gem "github-pages", "~> 227", group: :jekyll_plugins
+
+# Liquid is a templating language used by Jekyll.
+# Lock the version to 4.0.3 for compatibility with Jekyll 3.9.
 gem "liquid", "4.0.3"
 
+# Nokogiri is used for parsing HTML and XML in Jekyll.
+# We lock it below version 1.13.6 for compatibility with older Ruby versions like 2.7.
+gem "nokogiri"
 
-# If you have any plugins, put them here!
+# Use the pure Ruby version of EventMachine, forcing it not to use the x64-mingw32 version
+gem 'eventmachine', '1.2.7', platforms: [:ruby, :mswin, :x64_mingw]
+
+# Group for Jekyll plugins
 group :jekyll_plugins do
-  # gem 'jekyll'
-  # gem "jekyll-archives"
-  gem "jekyll-feed"
-  gem 'jekyll-sitemap'
-  gem 'jekyll-scholar'
-  gem 'tzinfo'
-  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-  gem 'hawkins'
+  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site’s posts.
+  gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
+  gem "jekyll-scholar"      # Adds academic references and citations to your site.
+  gem "tzinfo"              # Required for proper timezone handling.
+  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
+  # Timezone data for Windows and JRuby platforms.
+  
+  gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
 end
 
-
+# Windows-specific gem
+gem "wdm", "~> 0.1.0" if Gem.win_platform? 
+# This gem improves live-reloading on Windows while serving the site.
