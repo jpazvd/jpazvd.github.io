@@ -1,8 +1,7 @@
 ---
-layout: archive
+layout: page
 title: "Publications"
 permalink: /publications/
-author_profile: true
 ---
 
-{# {% bibliography %} #}
+{% bibliography %}

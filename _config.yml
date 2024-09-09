@@ -100,3 +100,16 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Scholar configuration
+scholar:
+  source: "_bibliography"
+  bibliography: "minimal.bib"  # Ensure this matches your actual .bib filename
+  style: apa  # You can change this based on your citation style preference (e.g., ieee, mla)
+  locale: en  # Adjust for language preference, if needed
+  bibliography_class: bibliography  # CSS class for bibliography
+  bibliography_template: "{{ reference }}."  # Template for formatting citations
+  sort_by: none  # Sort entries by (e.g., year, none)
+  suppress_errors: true  # Suppress any errors during generation
+
+
