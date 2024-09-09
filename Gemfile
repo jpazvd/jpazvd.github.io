@@ -19,6 +19,7 @@ gem "nokogiri"
 
 # Use the pure Ruby version of EventMachine, forcing it not to use the x64-mingw32 version
 gem 'eventmachine', '1.2.7', platforms: [:ruby, :mswin, :x64_mingw]
+gem 'webrick'
 
 # Group for Jekyll plugins
 group :jekyll_plugins do
@@ -29,7 +30,7 @@ group :jekyll_plugins do
   gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
   # Timezone data for Windows and JRuby platforms.
   
-  gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
+  #gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
 end
 
 # Windows-specific gem
