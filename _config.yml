@@ -95,6 +95,35 @@ plugins:
   - jekyll-sitemap
   - jekyll-scholar
 
+# Jekyll Scholar Configuration
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: bib
+  sort_by: year,month
+  order: descending,ascending
+  group_by: year
+  group_order: descending
+  
+  details_dir: bibliography
+  details_layout: bib.html
+  details_link: Details
+  
+  bibtex_filters:
+    - latex
+    - smallcaps
+    - superscript
+  
+  replace_strings: true
+  join_strings: true
+  
+  use_raw_bibtex_entry: false
+  bibtex_skip_month: false
+  
+  query: "@*"
+
 # HTML Compression
 compress_html:
   clippings: all

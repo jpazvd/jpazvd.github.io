@@ -1,0 +1,49 @@
+---
+---
+<div class="publication-entry">
+  <div class="reference">
+    {{ reference }}
+  </div>
+  
+  {% if entry.abstract %}
+  <div class="abstract">
+    <h4>Abstract</h4>
+    <p>{{ entry.abstract }}</p>
+  </div>
+  {% endif %}
+  
+  {% if entry.keywords %}
+  <div class="keywords">
+    <h4>Keywords</h4>
+    <p>{{ entry.keywords }}</p>
+  </div>
+  {% endif %}
+  
+  {% if entry.url %}
+  <div class="links">
+    <a href="{{ entry.url }}" target="_blank" class="btn btn--primary">View Publication</a>
+  </div>
+  {% endif %}
+  
+  {% if entry.doi %}
+  <div class="doi">
+    <strong>DOI:</strong> <a href="https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a>
+  </div>
+  {% endif %}
+  
+  {% if links %}
+  <div class="file-links">
+    <h4>Files</h4>
+    {% for link in links %}
+      <a href="{{ link[1] }}" class="btn btn--info">{{ link[0] | upcase }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <div class="bibtex-entry">
+    <details>
+      <summary>BibTeX Citation</summary>
+      <pre><code>{{ entry.bibtex }}</code></pre>
+    </details>
+  </div>
+</div>
