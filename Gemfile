@@ -1,5 +1,16 @@
-source "https://rubygems.org"
-# Specifies the RubyGems repository to fetch all required gems for your project.
+source "https://rubygem# Group for Jekyll plugins
+group :jekyll_plugins do
+  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site's posts.
+  gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
+  gem "jekyll-scholar"      # Adds academic references and citations to your site.
+  gem "jekyll-include-cache" # Required for Minimal Mistakes theme performance
+  gem "jekyll-remote-theme" # Required for remote theme functionality
+  gem "tzinfo"              # Required for proper timezone handling.
+  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
+  # Timezone data for Windows and JRuby platforms.
+  
+  #gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
+endpecifies the RubyGems repository to fetch all required gems for your project.
 
 # Jekyll is the static site generator for GitHub Pages.
 # The "3.10.0" ensures you're using the latest GitHub Pages supported Jekyll version.
