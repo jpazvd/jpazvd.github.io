@@ -2,16 +2,16 @@ source "https://rubygems.org"
 # Specifies the RubyGems repository to fetch all required gems for your project.
 
 # Jekyll is the static site generator for GitHub Pages.
-# The "~> 3.9" ensures you're using Jekyll version 3.9.x.
-gem "jekyll", "~> 3.9"
+# The "3.10.0" ensures you're using the latest GitHub Pages supported Jekyll version.
+gem "jekyll", "3.10.0"
 
 # Includes GitHub Pages-specific plugins and configurations.
-# This locks the `github-pages` gem to version 227.
-gem "github-pages", "~> 227", group: :jekyll_plugins
+# This locks the `github-pages` gem to version 232.
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Liquid is a templating language used by Jekyll.
-# Lock the version to 4.0.3 for compatibility with Jekyll 3.9.
-gem "liquid", "4.0.3"
+# Lock the version to 4.0.4 for compatibility with Jekyll 3.10.
+gem "liquid", "4.0.4"
 
 # Nokogiri is used for parsing HTML and XML in Jekyll.
 # We lock it below version 1.13.6 for compatibility with older Ruby versions like 2.7.

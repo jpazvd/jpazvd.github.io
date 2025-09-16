@@ -1,22 +1,23 @@
 {
-  "name": "minimal-mistakes",
-  "version": "3.4.2",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "name": "jpazvd-github-io",
+  "version": "1.0.0",
+  "description": "João Pedro Azevedo's personal academic website",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/jpazvd/jpazvd.github.io.git"
   },
   "keywords": [
     "jekyll",
-    "theme",
-    "minimal"
+    "academic",
+    "personal-website",
+    "github-pages"
   ],
-  "author": "Michael Rose",
+  "author": "João Pedro Azevedo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/jpazvd/jpazvd.github.io/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://jpazvd.github.io/",
   "engines": {
     "node": ">= 0.10.0"
   },
