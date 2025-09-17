@@ -29,3 +29,31 @@ See more info at https://academicpages.github.io/
 There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
 
 To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+
+## Deployment (GitHub Actions + Optional Pages Parity)
+
+This site uses GitHub Actions as the default deployment path. The workflow builds with Jekyll 4 + jekyll-scholar and deploys the generated `_site` to GitHub Pages.
+
+- Set repository Settings → Pages → Build and deployment → Source = GitHub Actions.
+- Workflow file: `.github/workflows/pages.yml`
+- CI Gemfile: `Gemfile.ci` (Jekyll 4 + Scholar)
+- Native Pages compatibility is retained via the production `Gemfile` using the `github-pages` gem.
+
+### Local modes (Windows PowerShell)
+
+- Pages parity (matches native GitHub Pages):
+  - `scripts/bootstrap-jekyll.ps1 -Mode pages -Task version`
+  - `scripts/bootstrap-jekyll.ps1 -Mode pages -Task build`
+  - `scripts/bootstrap-jekyll.ps1 -Mode pages -Task serve`
+
+- Full Scholar preview (Jekyll 4 + Scholar 7):
+  - `scripts/bootstrap-jekyll.ps1 -Mode scholar -Task serve`
+  - Optional faster file watching (may fail to compile): add `-EnableWdm`
+
+- Simulate CI locally (build with CI Gemfile):
+  - `scripts/bootstrap-jekyll.ps1 -Mode ci -Task build`
+
+Notes:
+
+- The script writes a `Gemfile.local` for `pages` and `scholar` modes. It leaves the production `Gemfile` untouched.
+- The CI workflow builds with `_config.yml,_config.scholar.yml` so Scholar is active only in CI (and local scholar/ci modes).
