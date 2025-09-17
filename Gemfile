@@ -1,4 +1,4 @@
-source "https://rubygems.org"source "https://rubygems.org"source "https://rubygems.org"source "https://rubygem# Group for Jekyll plugins
+source "https://rubygems.org"source "https://rubygems.org"source "https://rubygems.org"source "https://rubygems.org"source "https://rubygems.org"source "https://rubygem# Group for Jekyll plugins
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # GitHub Pages compatible Jekyll version
 
-gem "github-pages", "~> 232", group: :jekyll_plugins# Specifies the RubyGems repository to fetch all required gems for your project.group :jekyll_plugins do
+gem "github-pages", "~> 232", group: :jekyll_pluginsgit_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
 
@@ -14,13 +14,57 @@ gem "github-pages", "~> 232", group: :jekyll_plugins# Specifies the RubyGems rep
 
 gem "jekyll-scholar", "~> 7.0"
 
-gem "github-pages", "~> 232", group: :jekyll_plugins  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site's posts.
+gem "github-pages", "~> 232", group: :jekyll_pluginsgit_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Additional plugins for caching and theme support
 
 gem "jekyll-include-cache", "~> 0.2"
 
 
+
+# Windows and JRuby timezone handling# Jekyll Scholar for academic bibliography (requires GitHub Actions)# GitHub Pages compatible Jekyll version
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+
+  gem "tzinfo", ">= 1", "< 3"gem "jekyll-scholar", "~> 7.0"
+
+  gem "tzinfo-data"
+
+endgem "github-pages", "~> 232", group: :jekyll_plugins# Specifies the RubyGems repository to fetch all required gems for your project.group :jekyll_plugins do
+
+
+
+# Performance booster for Windows# Additional plugins for caching and theme support
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+gem "jekyll-include-cache", "~> 0.2"
+
+# JRuby http parser lock
+
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# Windows and JRuby timezone handling# Jekyll Scholar for academic bibliography (requires GitHub Actions)# GitHub Pages compatible Jekyll version
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+
+  gem "tzinfo", ">= 1", "< 3"gem "jekyll-scholar", "~> 7.0"
+
+  gem "tzinfo-data"
+
+endgem "github-pages", "~> 232", group: :jekyll_plugins  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site's posts.
+
+
+
+# Performance booster for Windows# Additional plugins for caching and theme support
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+gem "jekyll-include-cache", "~> 0.2"
+
+# JRuby http parser lock
+
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Windows and JRuby timezone handling# Jekyll Scholar for academic bibliography# Jekyll is the static site generator for GitHub Pages.  gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
 
