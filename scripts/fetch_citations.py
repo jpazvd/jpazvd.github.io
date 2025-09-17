@@ -18,10 +18,23 @@ def http_get(url: str):
         return json.loads(resp.read().decode("utf-8"))
 
 
-def get_author_id(orcid: str):
-    url = f"{OPENALEX_BASE}/authors/ORCID:{orcid}"
-    data = http_get(url)
-    return data
+def get_author(orcid: str):
+    # try direct ORCID lookup
+    try:
+        url = f"{OPENALEX_BASE}/authors/ORCID:{orcid}"
+        return http_get(url)
+    except Exception as e:
+        # fallback: search by ORCID filter
+        try:
+            q = urlencode({"filter": f"orcid:{orcid}"})
+            url = f"{OPENALEX_BASE}/authors?{q}"
+            res = http_get(url)
+            results = res.get("results", [])
+            if results:
+                return results[0]
+        except Exception:
+            pass
+        raise RuntimeError(f"OpenAlex lookup failed for ORCID {orcid}: {e}")
 
 
 def get_h_index(works_count: int, citations_by_year: list):
@@ -33,7 +46,7 @@ def get_h_index(works_count: int, citations_by_year: list):
 
 def main():
     try:
-        author = get_author_id(ORCID)
+        author = get_author(ORCID)
     except Exception as e:
         print(f"Failed to fetch author: {e}", file=sys.stderr)
         return 1
