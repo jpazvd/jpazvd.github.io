@@ -39,6 +39,19 @@ author_profile: true
 
 {% bibliography --query @techreport[year<2020] %}
 
+## Reports
+
+{% bibliography --query @report[year<2020] %}
+
+## Others
+
 {% bibliography --query @misc[year<2020] %}
 
 {% bibliography --query @unpublished[year<2020] %}
+
+
+## Software and Data
+
+{% bibliography --query @software%}
+
+{% bibliography --query @dataset%}
