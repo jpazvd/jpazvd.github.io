@@ -106,6 +106,7 @@ if ($Mode -eq 'pages') {
   Write-Host "This environment matches GitHub Pages' pinned versions (via github-pages gem)."
   Write-Host "Use -Mode scholar to run a full local server with jekyll-scholar 7.x."
 } else {
-  Write-Step "Serving site at http://127.0.0.1:4000"
-  & bundle exec jekyll serve --livereload
+  Write-Step "Serving site at http://127.0.0.1:4000 (Scholar mode)"
+  # Merge base config with Scholar-only config so the plugin is loaded locally
+  & bundle exec jekyll serve --livereload --config _config.yml,_config.scholar.yml
 }

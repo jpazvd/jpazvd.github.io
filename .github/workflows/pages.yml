@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll Site with Scholar
+name: Build and Deploy (Jekyll 4 + Scholar)
 
 on:
   push:
@@ -30,16 +30,21 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 1
+          # Use the CI Gemfile that includes Jekyll 4 and Scholar
+          bundler: 'latest'
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Install dependencies
-        run: bundle install
+      - name: Use CI Gemfile
+        run: echo "BUNDLE_GEMFILE=$GITHUB_WORKSPACE/Gemfile.ci" >> $GITHUB_ENV
 
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build with Jekyll (Scholar enabled)
+        run: bundle exec jekyll build --config _config.yml,_config.scholar.yml --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 

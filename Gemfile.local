@@ -1,14 +1,12 @@
 ﻿source "https://rubygems.org"
 
-# GitHub Pages mode: pins Jekyll and core plugins to the versions used by GitHub Pages
-gem "github-pages", group: :jekyll_plugins
-
-# Load locally-required plugins under Jekyll 3.x
-group :jekyll_plugins do
-  gem "jekyll-include-cache"
-  # jekyll-scholar is not supported on GitHub Pages, but we load it locally to render bibliography tags
-  gem "jekyll-scholar", "~> 5.16"
-end
-
-gem "webrick"     # Required for Ruby 3 with Jekyll 3.x
-gem "tzinfo-data" # Timezone data on Windows
+# Scholar mode: use latest Jekyll compatible with jekyll-scholar 7
+gem "jekyll", "~> 4.4"
+gem "jekyll-scholar", "~> 7.0"
+gem "jekyll-include-cache", "~> 0.2"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "webrick"
+gem "tzinfo-data"

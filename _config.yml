@@ -97,7 +97,6 @@ timezone: America/New_York
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-scholar
   - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-seo-tag
@@ -111,8 +110,6 @@ scholar:
   bibliography_template: "{{reference}}"
   sort_by: year,month
   order: descending,ascending
-  group_by: year
-  group_order: descending
   repository: /assets/papers
   repository_file_delimiter: "."
   
@@ -127,8 +124,6 @@ scholar:
   
   replace_strings: true
   join_strings: true
-  
-  use_raw_bibtex_entry: false
   bibtex_skip_month: false
   
   query: "@*"
