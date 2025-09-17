@@ -129,7 +129,7 @@ scholar:
   join_strings: true
   bibtex_skip_month: false
   
-  query: "@*"
+  # Removed global query to prevent automatic "All Publications" section
 
 # HTML Compression
 compress_html:

@@ -5,6 +5,12 @@ permalink: /publications/
 author_profile: true
 ---
 
+## All Publications
+
+{% bibliography %}
+
+---
+
 ## Recent Publications (Last 5 Years)
 
 {% bibliography --query @*[year>=2020] %}
@@ -13,32 +19,32 @@ author_profile: true
 
 ## Journal Articles
 
-{% bibliography --query @article[year<2020] %}
+{% bibliography --query @article %}
 
 ---
 
 ## Books and Book Chapters
 
-{% bibliography --query @book[year<2020] %}
+{% bibliography --query @book %}
 
-{% bibliography --query @incollection[year<2020] %}
+{% bibliography --query @incollection %}
 
-{% bibliography --query @inbook[year<2020] %}
+{% bibliography --query @inbook %}
 
 ---
 
 ## Conference Papers
 
-{% bibliography --query @inproceedings[year<2020] %}
+{% bibliography --query @inproceedings %}
 
-{% bibliography --query @conference[year<2020] %}
+{% bibliography --query @conference %}
 
 ---
 
 ## Working Papers and Reports
 
-{% bibliography --query @techreport[year<2020] %}
+{% bibliography --query @techreport %}
 
-{% bibliography --query @misc[year<2020] %}
+{% bibliography --query @misc %}
 
-{% bibliography --query @unpublished[year<2020] %}
+{% bibliography --query @unpublished %}
