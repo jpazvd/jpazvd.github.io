@@ -45,6 +45,7 @@ author:
 # Reading Files
 include:
   - _pages
+  - _blogs
   - files
 exclude:
   - node_modules
