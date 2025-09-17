@@ -35,9 +35,13 @@ author_profile: true
 
 ---
 
-## Working Papers and Reports
+## Working Papers and Technical Reports, and Series
+
+{% bibliography --query @workingpaper[year<2020] %}
 
 {% bibliography --query @techreport[year<2020] %}
+
+{% bibliography --query @series[year<2020] %}
 
 ## Reports
 
@@ -55,3 +59,7 @@ author_profile: true
 {% bibliography --query @software%}
 
 {% bibliography --query @dataset%}
+
+## GitHub Repositories
+
+{% bibliography --query @github%}
