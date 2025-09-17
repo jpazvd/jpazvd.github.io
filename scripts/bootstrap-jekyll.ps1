@@ -9,8 +9,11 @@
 [CmdletBinding()]
 param(
   [string]$LocalGemfile = "Gemfile.local",
-  [ValidateSet('pages','scholar')]
-  [string]$Mode = 'pages'
+  [ValidateSet('pages','scholar','ci')]
+  [string]$Mode = 'pages',
+  [ValidateSet('serve','build','version')]
+  [string]$Task = 'serve',
+  [switch]$EnableWdm
 )
 
 Set-StrictMode -Version Latest
@@ -59,15 +62,12 @@ source "https://rubygems.org"
 # GitHub Pages mode: pins Jekyll and core plugins to the versions used by GitHub Pages
 gem "github-pages", group: :jekyll_plugins
 
-# Load locally-required plugins under Jekyll 3.x
-group :jekyll_plugins do
-  gem "jekyll-include-cache"
-  # jekyll-scholar is not supported on GitHub Pages, but we load it locally to render bibliography tags
-  gem "jekyll-scholar", "~> 5.16"
-end
+# Additional plugins supported by Pages
+gem "jekyll-include-cache"
 
-gem "webrick"     # Required for Ruby 3 with Jekyll 3.x
-gem "tzinfo-data" # Timezone data on Windows
+# Windows/Ruby runtime helpers for local serve
+gem "webrick"       # Needed for Ruby 3 with Jekyll 3.x
+gem "tzinfo-data"   # Timezone data on Windows
 '@
 
 $gemfileScholar = @'
@@ -85,28 +85,58 @@ gem "webrick"
 gem "tzinfo-data"
 '@
 
-switch ($Mode) {
-  'pages'   { $gemfileContent = $gemfilePages }
-  'scholar' { $gemfileContent = $gemfileScholar }
+# Determine gemfile usage and configs
+if ($Mode -eq 'ci') {
+  # Use tracked Gemfile.ci without generating a local gemfile
+  $env:BUNDLE_GEMFILE = (Join-Path (Get-Location) 'Gemfile.ci')
+  Write-Step "Using CI Gemfile: $env:BUNDLE_GEMFILE"
+} else {
+  # Generate a local Gemfile based on selected mode
+  Write-Step "Creating $LocalGemfile"
+  switch ($Mode) {
+    'pages'   { $gemfileContent = $gemfilePages }
+    'scholar' { $gemfileContent = $gemfileScholar }
+  }
+  # Optionally add Windows directory watcher (may fail to compile on some Ruby builds)
+  if ($EnableWdm) {
+    $gemfileContent += "`n" + 'gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]'
+  }
+  $gemfileContent | Out-File -Encoding UTF8 -FilePath (Join-Path (Get-Location) $LocalGemfile)
+  $env:BUNDLE_GEMFILE = (Join-Path (Get-Location) $LocalGemfile)
 }
 
-$gemfileContent | Out-File -Encoding UTF8 -FilePath (Join-Path (Get-Location) $LocalGemfile)
-
-# Install gems and serve
+# Install gems
 Write-Step "Installing gems to vendor/bundle"
-$env:BUNDLE_GEMFILE = (Join-Path (Get-Location) $LocalGemfile)
 Confirm-Bundler
 & bundle config set path 'vendor/bundle'
 & bundle install
 if (-not $?) { throw "bundle install failed. Check errors above (version conflicts or native builds)." }
 
-if ($Mode -eq 'pages') {
-  Write-Step "GitHub Pages mode ready"
-  & bundle exec jekyll -v | Out-Host
-  Write-Host "This environment matches GitHub Pages' pinned versions (via github-pages gem)."
-  Write-Host "Use -Mode scholar to run a full local server with jekyll-scholar 7.x."
-} else {
-  Write-Step "Serving site at http://127.0.0.1:4000 (Scholar mode)"
-  # Merge base config with Scholar-only config so the plugin is loaded locally
-  & bundle exec jekyll serve --livereload --config _config.yml,_config.scholar.yml
+# Choose configs based on mode
+$baseConfig = '_config.yml'
+$scholarConfig = '_config.scholar.yml'
+
+switch ($Mode) {
+  'pages'   { $configArgs = @($baseConfig) }
+  'scholar' { $configArgs = @($baseConfig, $scholarConfig) }
+  'ci'      { $configArgs = @($baseConfig, $scholarConfig) }
+}
+
+# Execute task
+switch ($Task) {
+  'version' {
+    Write-Step "Jekyll version"
+    & bundle exec jekyll -v | Out-Host
+    if ($Mode -eq 'pages') {
+      Write-Host "This environment matches GitHub Pages' pinned versions (via github-pages gem)."
+    }
+  }
+  'build' {
+    Write-Step "Building site"
+    & bundle exec jekyll build --config ($configArgs -join ',')
+  }
+  'serve' {
+    Write-Step "Serving site at http://127.0.0.1:4000"
+    & bundle exec jekyll serve --livereload --config ($configArgs -join ',')
+  }
 }
