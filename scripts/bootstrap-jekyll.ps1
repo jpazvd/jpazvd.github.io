@@ -6,17 +6,17 @@
   Run in a normal PowerShell. After Ruby+DevKit install completes.
 #>
 
-[CmdletBinding()]
-param(
-  [string]$LocalGemfile = "Gemfile.local",
-  [ValidateSet('pages','scholar','ci')]
-  [string]$Mode = 'pages',
-  [ValidateSet('serve','build','version')]
-  [string]$Task = 'serve',
-  [switch]$EnableWdm
-)
-
-Set-StrictMode -Version Latest
+ [CmdletBinding()]
+ param(
+   [string]$LocalGemfile = "Gemfile.local",
+   [ValidateSet('pages','scholar','ci')]
+   [string]$Mode = 'pages',
+   [ValidateSet('serve','build','version')]
+   [string]$Task = 'serve',
+   [switch]$EnableWdm,
+   [int]$Port = 4000,
+   [string]$BindHost = '127.0.0.1'
+ )Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 function Write-Step([string]$Msg) { Write-Host "==> $Msg" }
@@ -52,6 +52,11 @@ function Confirm-Bundler {
     }
   }
 }
+
+# Determine the site root directory (parent of scripts/)
+$SiteRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+Write-Step "Site root: $SiteRoot"
+Set-Location $SiteRoot
 
 # Create Gemfile.local
 Write-Step "Creating $LocalGemfile"
@@ -137,6 +142,6 @@ switch ($Task) {
   }
   'serve' {
     Write-Step "Serving site at http://127.0.0.1:4000"
-    & bundle exec jekyll serve --livereload --config ($configArgs -join ',')
+    & bundle exec jekyll serve --livereload --host $BindHost --port $Port --config ($configArgs -join ',')
   }
 }
