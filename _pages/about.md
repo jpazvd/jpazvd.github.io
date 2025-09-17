@@ -13,3 +13,5 @@ I am [UNICEF’s first Chief Statistician](https://www.unicef.org/media/experts/
 Most of my publications can be found listed on [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ) or at the [World Bank Open Knowledge Repository](https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257). A full list of my Stata ado is available at the [Boston College Statistical Software Components](https://ideas.repec.org/e/pwa88.html).
 
 I am a Brazilian national and hold a PhD in Economics from Newcastle University. I have over 70 publications including several in referred journals such as Lancet, World Development, World Bank Research Observer and Frontier in Public Health. I am married and a father of twin daughters.
+
+{% include citation-metrics.html %}

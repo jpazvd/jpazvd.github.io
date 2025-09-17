@@ -100,6 +100,7 @@ plugins:
   - jekyll-scholar
   - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 # Jekyll Scholar Configuration
 scholar:
@@ -112,6 +113,8 @@ scholar:
   order: descending,ascending
   group_by: year
   group_order: descending
+  repository: /assets/papers
+  repository_file_delimiter: "."
   
   details_dir: bibliography
   details_layout: bib.html
