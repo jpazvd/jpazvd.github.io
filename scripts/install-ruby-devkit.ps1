@@ -20,6 +20,42 @@ function Test-Command {
   $null -ne (Get-Command $Name -ErrorAction SilentlyContinue)
 }
 
+function Update-EnvPath {
+  # Merge Machine and User PATH into current session PATH
+  $machine = [System.Environment]::GetEnvironmentVariable('PATH','Machine')
+  $user = [System.Environment]::GetEnvironmentVariable('PATH','User')
+  $current = $env:PATH -split ';'
+  foreach ($src in @($machine, $user)) {
+    if (-not $src) { continue }
+    foreach ($p in ($src -split ';')) {
+      if ($p -and ($current -notcontains $p)) { $current += $p }
+    }
+  }
+  $env:PATH = ($current -join ';')
+}
+
+function Add-RubyBinToPath {
+  # Try to find Ruby bin directory if not on PATH and add it to current session PATH
+  if (Test-Command -Name 'ruby') { return }
+  $candidates = @()
+  $candidates += (Get-ChildItem -Path 'C:\' -Filter 'Ruby*' -Directory -ErrorAction SilentlyContinue | ForEach-Object { Join-Path $_.FullName 'bin' })
+  $candidates += (Join-Path $env:ProgramFiles 'Ruby*\bin')
+  foreach ($cand in $candidates) {
+    foreach ($path in (Get-ChildItem -Path $cand -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName)) {
+      if (Test-Path (Join-Path $path 'ruby.exe')) {
+        if (-not (($env:PATH -split ';') -contains $path)) { $env:PATH = $env:PATH + ';' + $path }
+        return
+      }
+    }
+    if (Test-Path $cand) {
+      if (Test-Path (Join-Path $cand 'ruby.exe')) {
+        if (-not (($env:PATH -split ';') -contains $cand)) { $env:PATH = $env:PATH + ';' + $cand }
+        return
+      }
+    }
+  }
+}
+
 function Invoke-Safely {
   param([ScriptBlock]$Script, [string]$Name)
   Write-Host ("==> " + $Name)
@@ -43,15 +79,9 @@ Invoke-Safely -Name 'Install Ruby+DevKit' -Script {
   }
 }
 
-# Ensure Ruby available in PATH in the current session
-$envPath = [System.Environment]::GetEnvironmentVariable('PATH','Machine')
-if ($envPath) {
-  foreach ($p in $envPath.Split(';')) {
-    if ($p -and ($env:PATH -split ';') -notcontains $p) {
-      $env:PATH = $env:PATH + ';' + $p
-    }
-  }
-}
+  Update-EnvPath
+  Add-RubyBinToPath
+Add-RubyBinToPath
 
 # Run ridk to set up MSYS2/DevKit toolchain
 Invoke-Safely -Name 'Configure MSYS2/DevKit (ridk)' -Script {
@@ -69,6 +99,11 @@ Invoke-Safely -Name 'Configure MSYS2/DevKit (ridk)' -Script {
 
 # Install bundler
 Invoke-Safely -Name 'Install Bundler' -Script {
-  gem install bundler
+  if (-not (Test-Command -Name 'gem')) { Update-EnvPath; Add-RubyBinToPath }
+  if (Test-Command -Name 'gem') {
+    gem install bundler
+  } else {
+    Write-Warning "Ruby 'gem' not found in PATH. Open a new PowerShell or ensure Ruby bin directory is on PATH, then run: gem install bundler"
+  }
 }
 Write-Host "All done. You can now run 'bundle install' inside the repo."
