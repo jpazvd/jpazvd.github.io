@@ -31,7 +31,7 @@ jobs:
           bundler-cache: true
           cache-version: 1
           # Use the CI Gemfile that includes Jekyll 4 and Scholar
-          bundler: 'latest'
+          bundler: '2.4.22'
 
       - name: Setup Pages
         id: pages
