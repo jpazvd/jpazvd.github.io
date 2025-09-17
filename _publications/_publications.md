@@ -5,12 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-## All Publications
-
-{% bibliography %}
-
----
-
 ## Recent Publications (Last 5 Years)
 
 {% bibliography --query @*[year>=2020] %}
