@@ -1,26 +1,70 @@
-source "https://rubygems.org"source "https://rubygem# Group for Jekyll plugins
+source "https://rubygems.org"source "https://rubygems.org"source "https://rubygems.org"source "https://rubygem# Group for Jekyll plugins
 
-# Specifies the RubyGems repository to fetch all required gems for your project.group :jekyll_plugins do
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site's posts.
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Jekyll is the static site generator for GitHub Pages.  gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
+# GitHub Pages compatible Jekyll version
 
-# The "3.10.0" ensures you're using the latest GitHub Pages supported Jekyll version.  gem "jekyll-scholar"      # Adds academic references and citations to your site.
+gem "github-pages", "~> 232", group: :jekyll_plugins# Specifies the RubyGems repository to fetch all required gems for your project.group :jekyll_plugins do
 
-gem "jekyll", "3.10.0"  gem "jekyll-include-cache" # Required for Minimal Mistakes theme performance
 
-  gem "jekyll-remote-theme" # Required for remote theme functionality
 
-# Includes GitHub Pages-specific plugins and configurations.  gem "tzinfo"              # Required for proper timezone handling.
+# Jekyll Scholar for academic bibliography (requires GitHub Actions)# GitHub Pages compatible Jekyll version
 
-# This locks the `github-pages` gem to version 232.  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
+gem "jekyll-scholar", "~> 7.0"
 
-gem "github-pages", "~> 232", group: :jekyll_plugins  # Timezone data for Windows and JRuby platforms.
+gem "github-pages", "~> 232", group: :jekyll_plugins  gem "jekyll-feed"         # Generates RSS/Atom feeds for your site's posts.
+
+# Additional plugins for caching and theme support
+
+gem "jekyll-include-cache", "~> 0.2"
+
+
+
+# Windows and JRuby timezone handling# Jekyll Scholar for academic bibliography# Jekyll is the static site generator for GitHub Pages.  gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+
+  gem "tzinfo", ">= 1", "< 3"gem "jekyll-scholar", "~> 7.0"
+
+  gem "tzinfo-data"
+
+end# The "3.10.0" ensures you're using the latest GitHub Pages supported Jekyll version.  gem "jekyll-scholar"      # Adds academic references and citations to your site.
+
+
+
+# Performance booster for Windows# Additional plugins for caching and theme support
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+gem "jekyll-include-cache", "~> 0.2"gem "jekyll", "3.10.0"  gem "jekyll-include-cache" # Required for Minimal Mistakes theme performance
+
+# JRuby http parser lock
+
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# Windows and JRuby does not include zoneinfo files  gem "jekyll-remote-theme" # Required for remote theme functionality
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+
+  gem "tzinfo", ">= 1", "< 3"# Includes GitHub Pages-specific plugins and configurations.  gem "tzinfo"              # Required for proper timezone handling.
+
+  gem "tzinfo-data"
+
+end# This locks the `github-pages` gem to version 232.  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
+
+
+
+# Performance-booster for watching directories on Windowsgem "github-pages", "~> 232", group: :jekyll_plugins  # Timezone data for Windows and JRuby platforms.
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
   
 
-# Liquid is a templating language used by Jekyll.  #gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
+# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds
+
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]# Liquid is a templating language used by Jekyll.  #gem "hawkins"             # A plugin to perform code analysis for Jekyll sites.
 
 # Lock the version to 4.0.4 for compatibility with Jekyll 3.10.endpecifies the RubyGems repository to fetch all required gems for your project.
 
