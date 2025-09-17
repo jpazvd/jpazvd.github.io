@@ -3,13 +3,13 @@ source "https://rubygems.org"
 # CI Gemfile for GitHub Actions build with Jekyll 4 + Scholar
 # This is used only by the Actions workflow (not by GitHub Pages native build).
 
-gem "jekyll", "~> 4.4"
-gem "jekyll-scholar", "~> 7.0"
-gem "jekyll-include-cache", "~> 0.2"
+gem "jekyll", "~> 4.3"
+gem "jekyll-scholar"
+gem "jekyll-include-cache"
 gem "jekyll-feed"
 gem "jekyll-sitemap"
 gem "jekyll-remote-theme"
 gem "jekyll-seo-tag"
 
-# Ruby 3 compatibility when serving locally (generally not needed in CI)
+# Ruby 3 compatibility
 gem "webrick"
