@@ -13,33 +13,33 @@ author_profile: true
 
 ## Journal Articles
 
-{% bibliography --query @article %}
+{% bibliography --query @article[year<2020] %}
 
 ---
 
 ## Books and Book Chapters
 
-{% bibliography --query @book %}
+{% bibliography --query @book[year<2020] %}
 
-{% bibliography --query @incollection %}
+{% bibliography --query @incollection[year<2020] %}
 
-{% bibliography --query @inbook %}
+{% bibliography --query @inbook[year<2020] %}
 
 ---
 
 ## Conference Papers
 
-{% bibliography --query @inproceedings %}
+{% bibliography --query @inproceedings[year<2020] %}
 
-{% bibliography --query @conference %}
+{% bibliography --query @conference[year<2020] %}
 
 ---
 
 ## Working Papers and Reports
 
-{% bibliography --query @techreport %}
+{% bibliography --query @techreport[year<2020] %}
 
-{% bibliography --query @misc %}
+{% bibliography --query @misc[year<2020] %}
 
-{% bibliography --query @unpublished %}
+{% bibliography --query @unpublished[year<2020] %}
 
