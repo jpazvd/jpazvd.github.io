@@ -13,7 +13,7 @@ author_profile: true
 
 ## Recent Publications (Last 5 Years)
 
-{% bibliography --query @*[year>=2020] --max 10 %}
+{% bibliography --query @*[year>=2020] %}
 
 ---
 
@@ -25,17 +25,27 @@ author_profile: true
 
 ## Books and Book Chapters
 
-{% bibliography --query @book,@incollection,@inbook %}
+{% bibliography --query @book %}
+
+{% bibliography --query @incollection %}
+
+{% bibliography --query @inbook %}
 
 ---
 
 ## Conference Papers
 
-{% bibliography --query @inproceedings,@conference %}
+{% bibliography --query @inproceedings %}
+
+{% bibliography --query @conference %}
 
 ---
 
 ## Working Papers and Reports
 
-{% bibliography --query @techreport,@misc,@unpublished %}
+{% bibliography --query @techreport %}
+
+{% bibliography --query @misc %}
+
+{% bibliography --query @unpublished %}
 
