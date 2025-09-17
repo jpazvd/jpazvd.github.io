@@ -2,9 +2,9 @@ name: Build and Deploy (Jekyll 4 + Scholar)
 
 on:
   push:
-    branches: ["main"]
+    branches: ["mm"]
   pull_request:
-    branches: ["main"]
+    branches: ["mm"]
 
 permissions:
   contents: read
@@ -59,7 +59,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/mm'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
