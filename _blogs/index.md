@@ -7,7 +7,7 @@ author_profile: true
 
 This section contains my blog posts and academic commentary on development economics, education policy, and global poverty issues.
 
-{% assign all_posts = site.posts | concat: site.blogs | sort: 'date' | reverse %}
+{% assign all_posts = site.blogs | sort: 'date' | reverse %}
 
 {% for post in all_posts limit: 10 %}
   <article class="archive__item">
@@ -52,25 +52,6 @@ This section contains my blog posts and academic commentary on development econo
   <h3>Tags</h3>
   {% for tag in unique_tags %}
     <a href="/blogs/tag/{{ tag | slugify }}/" class="tag-link">{{ tag }}</a>
-  {% endfor %}
-</div>
-{% endif %}
-
-## Browse by Category
-
-{% assign all_categories = "" | split: "" %}
-{% for post in all_posts %}
-  {% for category in post.categories %}
-    {% assign all_categories = all_categories | push: category %}
-  {% endfor %}
-{% endfor %}
-{% assign unique_categories = all_categories | uniq | sort %}
-
-{% if unique_categories.size > 0 %}
-<div class="category-cloud">
-  <h3>Categories</h3>
-  {% for category in unique_categories %}
-    <a href="/blogs/category/{{ category | slugify }}/" class="category-link">{{ category }}</a>
   {% endfor %}
 </div>
 {% endif %}
