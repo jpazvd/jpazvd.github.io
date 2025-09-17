@@ -1,2 +1,54 @@
+##############################
+# Jekyll build artifacts
+##############################
 _site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+##############################
+# Ruby/Bundler
+##############################
+/.bundle/
+/vendor/
+Gemfile.local
+Gemfile.local.lock
+.ruby-version
+
+##############################
+# Node/npm (if used for tooling)
+##############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+##############################
+# OS/editor cruft
+##############################
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.tmp
+
+##############################
+# Python (for scripts/metrics)
+##############################
+__pycache__/
+*.pyc
+
+##############################
+# Research data safeguards
+##############################
+# Deny-by-default pattern for data folders; allow metadata only
+_data/**/*.csv
+_data/**/*.json
+!_data/citations.json
+
+##############################
+# Logs
+##############################
+*.log
 

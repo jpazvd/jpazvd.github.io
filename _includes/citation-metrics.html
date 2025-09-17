@@ -1,0 +1,14 @@
+{% assign metrics = site.data.citations %}
+<div class="citation-metrics">
+  <h3>Citation Metrics</h3>
+  {% if metrics and metrics.summary %}
+    <ul>
+      <li>Total citations: {{ metrics.summary.total_citations | default: '—' }}</li>
+      <li>H-index: {{ metrics.summary.h_index | default: '—' }}</li>
+      <li>i10-index: {{ metrics.summary.i10_index | default: '—' }}</li>
+      <li>Last updated: {{ metrics.fetched_at | default: '—' }}</li>
+    </ul>
+  {% else %}
+    <p><em>Metrics will appear here when available.</em></p>
+  {% endif %}
+</div>

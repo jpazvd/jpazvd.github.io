@@ -1,0 +1,12 @@
+﻿source "https://rubygems.org"
+
+# Scholar mode: use latest Jekyll compatible with jekyll-scholar 7
+gem "jekyll", "~> 4.4"
+gem "jekyll-scholar", "~> 7.0"
+gem "jekyll-include-cache", "~> 0.2"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "webrick"
+gem "tzinfo-data"

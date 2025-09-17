@@ -5,12 +5,46 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+## All Publications
 
-{% include base_path %}
+{% bibliography %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+---
+
+## Recent Publications (Last 5 Years)
+
+{% bibliography --query @*[year>=2020] %}
+
+---
+
+## Journal Articles
+
+{% bibliography --query @article %}
+
+---
+
+## Books and Book Chapters
+
+{% bibliography --query @book %}
+
+{% bibliography --query @incollection %}
+
+{% bibliography --query @inbook %}
+
+---
+
+## Conference Papers
+
+{% bibliography --query @inproceedings %}
+
+{% bibliography --query @conference %}
+
+---
+
+## Working Papers and Reports
+
+{% bibliography --query @techreport %}
+
+{% bibliography --query @misc %}
+
+{% bibliography --query @unpublished %}

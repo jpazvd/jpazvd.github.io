@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-scholar
+
+# This file is used only for local/CI builds that need Scholar.
+# Production (GitHub Pages native build) does NOT use this config.
