@@ -5,12 +5,7 @@ permalink: /blogs/
 author_profile: true
 ---
 
-# Blog Posts
-
 This section contains my blog posts and academic commentary on development economics, education policy, and global poverty issues.
-<!-- Updated: 2025-01-17 -->
-
-## Recent Posts
 
 {% assign all_posts = site.posts | concat: site.blogs | sort: 'date' | reverse %}
 
