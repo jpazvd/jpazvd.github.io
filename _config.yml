@@ -63,9 +63,6 @@ collections:
   blogs:
     output: true
     permalink: /blogs/:path/
-  cv:
-    output: true
-    permalink: /cv/:path/
 
 # Defaults
 defaults:
@@ -81,13 +78,6 @@ defaults:
   - scope:
       path: ""
       type: blogs
-    values:
-      layout: single
-      author_profile: true
-  # CV
-  - scope:
-      path: ""
-      type: cv
     values:
       layout: single
       author_profile: true
