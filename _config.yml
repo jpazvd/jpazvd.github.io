@@ -19,8 +19,8 @@ read_more                : "disabled"
 talkmap_link             : false
 
 # Theme Configuration
-remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin    : "default"
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
 
 # Comments and Social Settings
 comments:
@@ -63,9 +63,6 @@ collections:
   blogs:
     output: true
     permalink: /blogs/:path/
-  cv:
-    output: true
-    permalink: /cv/:path/
 
 # Defaults
 defaults:
@@ -84,13 +81,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # CV
-  - scope:
-      path: ""
-      type: cv
-    values:
-      layout: single
-      author_profile: true
 
 # Output Settings
 permalink: /:categories/:title/
@@ -98,38 +88,16 @@ timezone: America/New_York
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-include-cache
-  - jekyll-remote-theme
   - jekyll-seo-tag
-
-# Jekyll Scholar Configuration
-scholar:
-  style: apa
-  locale: en
-  source: ./_bibliography
-  bibliography: references.bib
-  bibliography_template: "{{reference}}"
-  sort_by: year,month
-  order: descending,ascending
-  repository: /assets/papers
-  repository_file_delimiter: "."
-  
-  details_dir: bibliography
-  details_layout: bib.html
-  details_link: Details
-  
-  bibtex_filters:
-    - latex
-    - smallcaps
-    - superscript
-  
-  replace_strings: true
-  join_strings: true
-  bibtex_skip_month: false
-  
-  query: "@*"
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
 
 # HTML Compression
 compress_html:

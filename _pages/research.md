@@ -1,42 +1,99 @@
 ---
 layout: single
-title: "Research Interests"
+title: "Research"
 permalink: /research/
 author_profile: true
 ---
 
-This page summarizes my current research interests and selected work. It links to publications (with details pages and PDFs where available) and highlights ongoing lines of inquiry.
+My research is driven by a commitment to using data and evidence to improve the lives of children and vulnerable populations globally. Spanning over two decades at institutions like UNICEF, the World Bank, and in the Brazilian public sector, my work focuses on the intersection of development economics, education policy, and poverty analysis.
 
-## Research Themes
+I specialize in measuring and diagnosing development challenges, evaluating the policies designed to address them, and building the statistical capacity of systems to support evidence-based policymaking. A significant portion of my recent work has centered on creating global public goods, such as the Learning Poverty measure, and assessing the profound impacts of the COVID-19 pandemic on education and intergenerational mobility.
 
-### 1) Child Wellbeing and Equity
+This page outlines my primary research agendas and highlights key contributions.
 
-- Measurement frameworks, dashboards, and longitudinal analysis of child outcomes.
-- Selected publications:
-  - See the [Publications](/publications/) page filtered by topic tags.
+---
 
-### 2) Education Analytics and Learning Poverty
+## Core Research Agendas
 
-- Learning poverty measurement, equity in learning outcomes, and education policy analytics.
-- Selected publications:
-  - See the [Publications](/publications/) page; search for Learning Poverty and equity-related terms.
+My work is organized around three interconnected themes:
 
-### 3) Data for Goals and Statistical Capacity
+### 1. Child Wellbeing, Poverty, and Equity
 
-- Evidence-to-policy pipelines, data governance, and capacity building for national statistical systems.
-- Selected publications:
-  - See the [Publications](/publications/) page; look for statistical capacity and systems papers.
+This agenda focuses on the multidimensional aspects of child poverty and wellbeing. It includes developing frameworks for monitoring progress on the Sustainable Development Goals (SDGs) for children, analyzing the drivers of inequality, and investigating the determinants of child health and mortality.
 
-## Citation Metrics
+**Selected Works:**
+{% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
+{% bibliography --query azevedo2023progress-on-childr %}
+{% bibliography --query azevedo2024hard-truths-about- %}
+{% bibliography --query castaneda2018a-new-profile-of-t %}
+{% endcomment %}
+{% else %}
+*Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+{% endif %}
 
-{% include citation-metrics.html %}
+### 2. Education, Learning, and Human Capital
 
-## Featured Works
+This is a central pillar of my research, with a focus on ensuring quality education for all. This work involves measuring educational outcomes, diagnosing inequalities in learning, and evaluating the impact of educational interventions and global shocks.
 
-Below are a few highlighted items. For a comprehensive list, see the [Publications](/publications/) page.
+#### **Sub-theme: Learning Poverty and Foundational Skills**
+A core contribution of my work at the World Bank was the co-creation of the global "Learning Poverty" indicator—a measure of the percentage of children unable to read and understand a simple text by age 10. This research stream involves the harmonization of learning assessments and the analysis of policies to accelerate progress in foundational learning.
 
-- Recent journal articles in child wellbeing and equity (last 5 years):
-  {% bibliography --query @article[year>=2020] --max 5 %}
+**Selected Works:**
+{% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
+{% bibliography --query azevedo2019ending-learning-po %}
+{% bibliography --query azevedo2021will-every-child-b %}
+{% endcomment %}
+{% else %}
+*Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+{% endif %}
 
-- Reports and policy notes:
-  {% bibliography --query @techreport --max 5 %}
+#### **Sub-theme: The Educational Impacts of the COVID-19 Pandemic**
+In response to the global crisis, I led research to simulate and measure the impact of school closures on learning outcomes. This work quantified the scale of "learning losses," analyzed the effectiveness of remote learning strategies, and informed global education recovery efforts.
+
+**Selected Works:**
+{% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
+{% bibliography --query azevedo2021simulating-the-pot %}
+{% bibliography --query azevedo2021the-state-of-the-g %}
+{% bibliography --query azevedo2023covid-19-school-cl %}
+{% endcomment %}
+{% else %}
+*Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+{% endif %}
+
+### 3. Data Systems, Methods, and Statistical Capacity
+
+Underpinning all my research is a focus on improving the data and methods we use to measure development. This includes strengthening national statistical systems, developing new econometric tools, and making data more accessible and useful for policymakers and researchers.
+
+#### **Sub-theme: Data for Policy and Global Monitoring**
+This work focuses on building evidence-to-policy pipelines, from the global harmonization of household surveys for poverty monitoring to the development of data compacts that align countries and partners around common measurement goals.
+
+**Selected Works:**
+{% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
+{% bibliography --query tcg-wg-gaml-62021learning-data-comp %}
+{% bibliography --query azevedo2013from-noise-to-sign %}
+{% endcomment %}
+{% else %}
+*Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+{% endif %}
+
+#### **Sub-theme: Econometric and Statistical Software Development**
+To support rigorous and reproducible research, I have developed over 20 open-source statistical packages, primarily for Stata. These tools, covering topics from small area estimation to decomposition analysis, have been downloaded over 25,000 times by the global research community.
+
+**Selected Works:**
+{% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
+{% bibliography --query nguyen2018sae-a-stata-packag %}
+{% bibliography --query software2012adecomp %}
+{% bibliography --query software2011wbopendata %}
+{% endcomment %}
+{% else %}
+*Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+{% endif %}
+
+---
+
+For a complete and filterable list of all my work, please see the [**Publications Page**](/publications/)
