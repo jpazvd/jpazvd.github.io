@@ -1,10 +1,8 @@
-﻿---
+---
 layout: archive
 title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
 <!-- Include citation metrics at the top -->
@@ -26,26 +24,12 @@ Development economist and data scientist with over two decades of experience at 
 
 ---
 
-## Education
+## Recent Publications (Last 5 Years)
 
-{% for edu in site.data.education %}
-* **{{ edu.degree }}**, {{ edu.institution }}, {{ edu.location }} ({{ edu.year }}){% if edu.supervisors %}  
-  *Supervisors: {{ edu.supervisors }}*{% elsif edu.supervisor %}  
-  *Supervisor: {{ edu.supervisor }}*{% endif %}
-{% endfor %}
+{% bibliography --query @*[year>=2020] %}
 
 ---
 
-## Work Experience
-
-{% for job in site.data.work_experience %}
-* **{{ job.position }}**, {{ job.organization }}  
-  *{{ job.start_date }} - {{ job.end_date }}*  
-  {{ job.description }}
-
-{% endfor %}
-
----
 
 ## Skills
 
@@ -58,73 +42,6 @@ Development economist and data scientist with over two decades of experience at 
 
 ---
 
-## Recent Publications (Last 5 Years)
-
-{% bibliography --query @*[year>=2020] %}
-
----
-
-## Journal Articles
-
-{% bibliography --query @article[year<2020] %}
-
----
-
-## Books and Book Chapters
-
-{% bibliography --query @book[year<2020] %}
-
-{% bibliography --query @incollection[year<2020] %}
-
-{% bibliography --query @inbook[year<2020] %}
-
----
-
-## Conference Papers
-
-{% bibliography --query @inproceedings[year<2020] %}
-
-{% bibliography --query @conference[year<2020] %}
-
----
-
-## Working Papers and Technical Reports
-
-{% bibliography --query @workingpaper[year<2020] %}
-
-{% bibliography --query @techreport[year<2020] %}
-
-{% bibliography --query @series[year<2020] %}
-
----
-
-## Reports
-
-{% bibliography --query @report[year<2020] %}
-
----
-
-## Other Publications
-
-{% bibliography --query @misc[year<2020] %}
-
-{% bibliography --query @unpublished[year<2020] %}
-
----
-
-## Talks
-
-<ul>{% for post in site.talks %}
-{% include archive-single-talk-cv.html %}
-{% endfor %}</ul>
-
----
-
-## Teaching
-
-<ul>{% for post in site.teaching %}
-{% include archive-single-cv.html %}
-{% endfor %}</ul>
 
 ---
 
