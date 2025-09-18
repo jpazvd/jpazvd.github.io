@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* PhD, Economics. University of Newcastle, United Kingdom. 2005. Supervisors: Prof. Peter Dolton and Prof. Nauro Campos.
-*	MSc, Economics. Universidade Federal Fluminense, Brazil, 2001. Supervisor: Marcelo C. Neri.
-*	BA, Economics. Universidade Federal do Rio de Janeiro, Brazil, 1998. 
+{% for edu in site.data.education %}
+* {{ edu.degree }}. {{ edu.institution }}, {{ edu.location }}. {{ edu.year }}. {% if edu.supervisors %}Supervisors: {{ edu.supervisors }}.{% elsif edu.supervisor %}Supervisor: {{ edu.supervisor }}.{% endif %}
+{% endfor %} 
 
 
 Work experience
