@@ -134,6 +134,29 @@ __pycache__/
 *.tmp
 *.temp
 
+# LaTeX intermediate files (block these)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.figlist
+*.makefile
+*.figlist
+*.figlist
+
 ##############################
 # Configuration files with potential secrets
 ##############################
@@ -151,9 +174,13 @@ database.yml
 connection.yml
 
 ##############################
-# Logs and debugging
+# Logs and debugging (general)
 ##############################
-*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+error.log
 logs/
 debug/
 trace/
@@ -215,12 +242,19 @@ trace/
 !assets/**/*.jpg
 !assets/**/*.pdf
 
+# LaTeX and academic files (explicitly allowed)
+!**/*.bib
+!**/*.tex
+!**/*.pdf
+!**/*.csl
+
 ##############################
 # END OF SECURITY CONFIGURATION
 # This gitignore uses a layered approach:
 # 1. Block common development artifacts
 # 2. Block all credential and key patterns
 # 3. Block research data by default
-# 4. Explicitly allow known safe academic content
+# 4. Block LaTeX intermediate files
+# 5. Explicitly allow known safe academic content (.bib, .tex, .pdf)
 ##############################
 
