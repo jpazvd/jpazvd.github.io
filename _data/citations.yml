@@ -1,0 +1,21 @@
+---
+# Citation metrics data
+# You can update this manually or automate it with scripts
+
+summary:
+  total_citations: 5247  # Replace with your actual total
+  h_index: 42           # Replace with your actual h-index
+  i10_index: 78         # Replace with your actual i10-index
+  fetched_at: "2025-09-17"
+
+# Individual paper citations (optional)
+papers:
+  "azevedo2021simulating-the-pot":
+    citations: 156
+    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lTKXA78AAAAJ&citation_for_view=..."
+  
+  "azevedo2021the-state-of-the-g":
+    citations: 89
+    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lTKXA78AAAAJ&citation_for_view=..."
+
+# Add more papers as needed

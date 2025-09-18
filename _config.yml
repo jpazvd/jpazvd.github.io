@@ -129,6 +129,20 @@ scholar:
   join_strings: true
   bibtex_skip_month: false
   
+  # Citation metrics configuration
+  query: "@*"
+  bibliography_list_tag: ul
+  bibliography_item_tag: li
+  
+  # Enable citation tracking
+  bibliography_group_tag: h2
+  bibliography_group_prefix: ""
+  bibliography_group_suffix: ""
+  
+  # Sort by citations if available
+  sort_by: year, month, citations
+  order: descending, ascending, descending
+  
   # Removed global query to prevent automatic "All Publications" section
 
 # HTML Compression
