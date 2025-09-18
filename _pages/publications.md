@@ -53,6 +53,9 @@ author_profile: true
 
 {% bibliography --query @unpublished[year<2020] %}
 
+## Blogs
+
+{% bibliography --query @online%}
 
 ## Software and Data
 
