@@ -35,17 +35,17 @@ Skills
 Publications
 ======
 
-**Recent Publications:**
+{% include citation-metrics.html %}
 
-* Azevedo JP, Banerjee A, Wilmoth J, Fu H, You D. "Hard truths about under-5 mortality: call for urgent global action." *Lancet*. 2024.
+**Recent Key Publications (Last 5 Years):**
 
-* Strong K, You D, Banerjee A, Azevedo JP. "Global health estimates should be more responsive to country needs." *Lancet*. 2024.
+{% bibliography --max 8 --query @*[year>=2020] %}
 
-* Azevedo JP, Hasan A, Goldemberg D, Geven K, Iqbal SA. "Simulating the potential impacts of COVID-19 school closures on schooling and learning outcomes: A set of global estimates." *The World Bank Research Observer*. 2021; 36(1): 1-40.
+**Selected Earlier Work:**
 
-* Azevedo JP, Crawford M, Nayar R, Rogers FH, et al. "Ending Learning Poverty: What Will It Take?" World Bank Report. 2019.
+{% bibliography --max 5 --query @*[year<2020 && year>=2015] %}
 
-*For a complete list of 70+ publications, see [Publications page]({{ base_path }}/publications/) or [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+*For complete publication list (70+ publications), see [Publications page]({{ base_path }}/publications/) or [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
   
 Talks
 ======
