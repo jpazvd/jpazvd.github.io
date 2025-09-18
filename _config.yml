@@ -90,7 +90,6 @@ timezone: America/New_York
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-seo-tag
 
