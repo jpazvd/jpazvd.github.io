@@ -26,7 +26,13 @@ Development economist and data scientist with over two decades of experience at 
 
 ## Recent Publications (Last 5 Years)
 
+{% if site.plugins contains 'jekyll-scholar' %}
 {% bibliography --query @*[year>=2020] %}
+{% else %}
+**For a complete list of publications, please visit:**
+- [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ)
+- [Publications Page](/publications/)
+{% endif %}
 
 ---
 

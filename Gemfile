@@ -1,11 +1,21 @@
 source "https://rubygems.org"
 
-# Production Gemfile for GitHub Pages native build
-# Keep this minimal and ONLY include plugins supported by GitHub Pages.
+# GitHub Pages compatible Gemfile
+# Uses github-pages gem but with explicit plugin specifications for clarity
 
-# Meta gem that pins Jekyll and the supported plugins to the exact versions
-# used by GitHub Pages' build environment.
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
-# For local development with full bibliography support, use scripts/bootstrap-jekyll.ps1
-# which generates a separate Gemfile.local and should not affect production.
+# Explicitly specify supported plugins for documentation
+# These are included by github-pages gem but listed for clarity
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-sitemap" 
+  gem "jekyll-include-cache"
+  gem "jekyll-remote-theme"
+  gem "jekyll-seo-tag"
+end
+
+# Windows and Ruby compatibility
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
