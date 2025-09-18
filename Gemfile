@@ -7,8 +7,5 @@ source "https://rubygems.org"
 # used by GitHub Pages' build environment.
 gem "github-pages", group: :jekyll_plugins
 
-# Caching plugin recommended by Minimal Mistakes (supported by Pages)
-gem "jekyll-include-cache"
-
 # For local development with full bibliography support, use scripts/bootstrap-jekyll.ps1
 # which generates a separate Gemfile.local and should not affect production.
