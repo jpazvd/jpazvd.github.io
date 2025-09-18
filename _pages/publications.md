@@ -5,6 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
+My research portfolio spans over two decades of work at the intersection of development economics, education policy, and poverty analysis. As a development economist with extensive experience at the World Bank and UNICEF, my publications address critical global challenges including education access and quality, poverty measurement and reduction, inequality dynamics, and the socioeconomic impacts of global crises. Recent work has focused intensively on understanding and addressing the educational consequences of COVID-19, with seminal contributions to measuring learning poverty and quantifying pandemic-related learning losses across developing countries. My research has been published in leading journals including *The Lancet* and *World Development*, and has informed major policy initiatives through collaborative work with UNESCO, UNICEF, and the World Bank. This body of work combines rigorous quantitative analysis with practical policy applications, contributing both to academic understanding and to evidence-based policymaking in international development. My publications range from technical working papers and policy research to peer-reviewed articles and comprehensive policy reports that have shaped global education recovery strategies and poverty reduction frameworks.
+
 ## Recent Publications (Last 5 Years)
 
 {% bibliography --query @*[year>=2020] %}
