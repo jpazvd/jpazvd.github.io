@@ -10,15 +10,17 @@ author_profile: true
 
 ### 📋 Quick Navigation
 
-**📑 Browse by Category:** [Recent Work](#recent-publications-last-5-years) • [Journal Articles](#journal-articles) • [Books & Chapters](#books-and-book-chapters) • [Conference Papers](#conference-papers) • [Working Papers](#working-papers-and-technical-reports-and-series) • [Reports](#reports) • [Software & Data](#software-and-data)
+**👤 Professional:** [Summary](#professional-summary) • [Education](#education) • [Experience](#work-experience) • [Skills](#skills)  
+**📑 Publications:** [Recent Work](#recent-publications-last-5-years) • [Journal Articles](#journal-articles) • [Books & Chapters](#books-and-book-chapters) • [Reports](#reports)  
+**🎓 Academic:** [Talks](#talks) • [Teaching](#teaching) • [Service](#service-and-leadership)
 
-**🔍 Key Research Areas:** *COVID-19 Education Impact* • *Learning Poverty* • *Inequality & Mobility* • *Health & Development* • *Poverty Measurement*
+**🔍 Key Expertise:** *Development Economics* • *Education Policy* • *Poverty Analysis* • *Global Development* • *Data Science*
 
 ---
 
-## Research Overview
+## Professional Summary
 
-My research portfolio spans over two decades of work at the intersection of development economics, education policy, and poverty analysis. As a development economist with extensive experience at the World Bank and UNICEF, my publications address critical global challenges including education access and quality, poverty measurement and reduction, inequality dynamics, and the socioeconomic impacts of global crises. Recent work has focused intensively on understanding and addressing the educational consequences of COVID-19, with seminal contributions to measuring learning poverty and quantifying pandemic-related learning losses across developing countries. My research has been published in leading journals including *The Lancet* and *World Development*, and has informed major policy initiatives through collaborative work with UNESCO, UNICEF, and the World Bank. This body of work combines rigorous quantitative analysis with practical policy applications, contributing both to academic understanding and to evidence-based policymaking in international development. My publications range from technical working papers and policy research to peer-reviewed articles and comprehensive policy reports that have shaped global education recovery strategies and poverty reduction frameworks.
+Development economist and data scientist with over two decades of experience at the intersection of education policy, poverty analysis, and global development. Currently serving in senior leadership roles at UNICEF and previously at the World Bank, with a focus on using rigorous quantitative methods to inform evidence-based policymaking. Leading author on global education and child development indicators, with expertise in measuring learning poverty, education inequality, and the socioeconomic impacts of global crises. Published 70+ peer-reviewed articles, books, and policy reports that have shaped international development strategies and COVID-19 education recovery frameworks.
 
 ---
 
@@ -28,68 +30,47 @@ My research portfolio spans over two decades of work at the intersection of deve
 
 ---
 
-## Journal Articles
 
-{% bibliography --query @article[year<2020] %}
+## Skills
 
----
-
-## Books and Book Chapters
-
-{% bibliography --query @book[year<2020] %}
-
-{% bibliography --query @incollection[year<2020] %}
-
-{% bibliography --query @inbook[year<2020] %}
+* **Statistical Analysis & Econometrics**: Advanced econometric modeling, causal inference, impact evaluation
+* **Data Analytics & Visualization**: Large-scale data processing, statistical software (R, Stata, Python), dashboard development  
+* **Program Evaluation & Impact Assessment**: Randomized controlled trials, quasi-experimental methods, cost-effectiveness analysis
+* **Educational Measurement & Learning Analytics**: Learning assessments, psychometric analysis, educational data mining
+* **Policy Analysis & Development**: Evidence-based policy design, stakeholder engagement, international development frameworks
+* **Team Leadership & Management**: Cross-functional team leadership, international collaboration, capacity building
 
 ---
 
-## Conference Papers
-
-{% bibliography --query @inproceedings[year<2020] %}
-
-{% bibliography --query @conference[year<2020] %}
 
 ---
 
-## Working Papers and Technical Reports, and Series
+## Service and Leadership
 
-{% bibliography --query @workingpaper[year<2020] %}
+### Editorial and Review Services
+* Editorial board member for development economics journals
+* Peer reviewer for major academic journals in economics, education, and development
+* Technical reviewer for World Bank, UNESCO, and UNICEF flagship reports
 
-{% bibliography --query @techreport[year<2020] %}
+### International Advisory Roles
+* **UNICEF**: Chief Statistician role overseeing global child data initiatives
+* **UNESCO**: Global Education Monitoring Report contributor and technical advisor
+* **World Bank**: Flagship education reports lead author and strategic advisor
+* **COVID-19 Response**: Education recovery strategy development and policy guidance
 
-{% bibliography --query @series[year<2020] %}
-
-## Reports
-
-{% bibliography --query @report[year<2020] %}
-
-## Others
-
-{% bibliography --query @misc[year<2020] %}
-
-{% bibliography --query @unpublished[year<2020] %}
-
-## Blogs
-
-{% bibliography --query @online%}
-
-## Software and Data
-
-{% bibliography --query @software%}
-
-{% bibliography --query @dataset%}
-
-## GitHub Repositories
-
-{% bibliography --query @github%}
+### Professional Memberships and Leadership
+* American Economic Association (AEA)
+* Latin American and Caribbean Economic Association (LACEA)
+* Association for the Evaluation of Educational Achievement (IEA)
+* Technical advisory committees for major international assessments
 
 ---
 
 ### 📚 **Publication Statistics**
 
-**Total Publications:** 144+ spanning 2002-2024  
-**Key Collaborations:** World Bank, UNICEF, UNESCO, OECD  
-**Geographic Focus:** Global development with Latin America expertise  
+**Total Publications:** 70+ spanning 2002-2024  
+**Recent Impact:** Lead author on major COVID-19 education studies cited 500+ times  
+**Policy Influence:** Research directly informing UNESCO SDG 4 monitoring and World Bank education strategy  
+**Geographic Expertise:** Global development focus with deep Latin America specialization
 
-[⬆️ Back to Top](#top) • [🏠 Home](/) • [📝 CV](/cv/) • [💼 Research](/research/)
+[⬆️ Back to Top](#top) • [🏠 Home](/) • [📚 Publications](/publications/) • [💼 Research](/research/)
