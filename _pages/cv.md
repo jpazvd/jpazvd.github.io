@@ -60,9 +60,9 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+{% bibliography --max 20 %}
+
+<p><em>For a complete list of publications, see <a href="{{ base_path }}/publications/">Publications page</a> or <a href="https://scholar.google.com/citations?user=lTKXA78AAAAJ">Google Scholar</a>.</em></p>
   
 Talks
 ======
