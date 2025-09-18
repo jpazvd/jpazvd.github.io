@@ -34,9 +34,21 @@ Skills
 
 Publications
 ======
-{% bibliography --max 20 %}
+<p><strong>Recent Publications:</strong></p>
 
-*For a complete list of publications, see [Publications page]({{ base_path }}/publications/) or [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
+<ul>
+<li>Azevedo JP, Banerjee A, Wilmoth J, Fu H, You D. "Hard truths about under-5 mortality: call for urgent global action." <em>Lancet</em>. 2024. DOI: <a href="https://doi.org/10.1016/S0140-6736(24)00501-4">10.1016/S0140-6736(24)00501-4</a></li>
+
+<li>Strong K, You D, Banerjee A, Azevedo JP. "Global health estimates should be more responsive to country needs." <em>Lancet</em>. 2024. DOI: <a href="https://doi.org/10.1016/S0140-6736(24)00463-X">10.1016/S0140-6736(24)00463-X</a></li>
+
+<li>Azevedo JP, Hasan A, Goldemberg D, Geven K, Iqbal SA. "Simulating the potential impacts of COVID-19 school closures on schooling and learning outcomes: A set of global estimates." <em>The World Bank Research Observer</em>. 2021; 36(1): 1-40.</li>
+
+<li>Azevedo JP, Crawford M, Nayar R, Rogers FH, et al. "Ending Learning Poverty: What Will It Take?" World Bank Report. 2019.</li>
+
+<li>Castañeda A, Doan D, Newhouse D, Nguyen MC, Uematsu H, Azevedo JP. "A New Profile of the Global Poor." <em>World Development</em>. 2018; 101(C): 250-267.</li>
+</ul>
+
+<p><em>For a complete list of 70+ publications, see <a href="{{ base_path }}/publications/">Publications page</a> or <a href="https://scholar.google.com/citations?user=lTKXA78AAAAJ">Google Scholar</a>.</em></p>
   
 Talks
 ======
