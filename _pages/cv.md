@@ -12,9 +12,11 @@ redirect_from:
 
 ### 📋 Quick Navigation
 
-**👤 Profile:** [Education](#education) • [Experience](#work-experience) • [Skills](#skills)  
-**📑 Research:** [Recent Publications](#recent-publications-last-5-years) • [All Publications](#publications-by-type) • [Books](#books-and-book-chapters) • [Reports](#reports)  
+**👤 Professional:** [Summary](#professional-summary) • [Education](#education) • [Experience](#work-experience) • [Skills](#skills)  
+**📑 Publications:** [Recent Work](#recent-publications-last-5-years) • [Journal Articles](#journal-articles) • [Books & Chapters](#books-and-book-chapters) • [Reports](#reports)  
 **🎓 Academic:** [Talks](#talks) • [Teaching](#teaching) • [Service](#service-and-leadership)
+
+**🔍 Key Expertise:** *Development Economics* • *Education Policy* • *Poverty Analysis* • *Global Development* • *Data Science*
 
 ---
 
@@ -25,18 +27,20 @@ Development economist and data scientist with over two decades of experience at 
 ---
 
 ## Education
-======
+
 {% for edu in site.data.education %}
-* {{ edu.degree }}. {{ edu.institution }}, {{ edu.location }}. {{ edu.year }}. {% if edu.supervisors %}Supervisors: {{ edu.supervisors }}.{% elsif edu.supervisor %}Supervisor: {{ edu.supervisor }}.{% endif %}
+* **{{ edu.degree }}**, {{ edu.institution }}, {{ edu.location }} ({{ edu.year }}){% if edu.supervisors %}  
+  *Supervisors: {{ edu.supervisors }}*{% elsif edu.supervisor %}  
+  *Supervisor: {{ edu.supervisor }}*{% endif %}
 {% endfor %}
 
 ---
 
 ## Work Experience
-======
+
 {% for job in site.data.work_experience %}
 * **{{ job.position }}**, {{ job.organization }}  
-  {{ job.start_date }} - {{ job.end_date }}  
+  *{{ job.start_date }} - {{ job.end_date }}*  
   {{ job.description }}
 
 {% endfor %}
@@ -44,7 +48,7 @@ Development economist and data scientist with over two decades of experience at 
 ---
 
 ## Skills
-======
+
 * **Statistical Analysis & Econometrics**: Advanced econometric modeling, causal inference, impact evaluation
 * **Data Analytics & Visualization**: Large-scale data processing, statistical software (R, Stata, Python), dashboard development  
 * **Program Evaluation & Impact Assessment**: Randomized controlled trials, quasi-experimental methods, cost-effectiveness analysis
@@ -55,73 +59,76 @@ Development economist and data scientist with over two decades of experience at 
 ---
 
 ## Recent Publications (Last 5 Years)
-======
 
 {% bibliography --query @*[year>=2020] %}
 
 ---
 
-## Publications by Type
-======
-
-### Journal Articles (Pre-2020)
+## Journal Articles
 
 {% bibliography --query @article[year<2020] %}
 
-### Books and Book Chapters
+---
 
-{% bibliography --query @book %}
+## Books and Book Chapters
 
-{% bibliography --query @incollection %}
+{% bibliography --query @book[year<2020] %}
 
-{% bibliography --query @inbook %}
+{% bibliography --query @incollection[year<2020] %}
 
-### Reports
+{% bibliography --query @inbook[year<2020] %}
 
-{% bibliography --query @report %}
+---
 
-### Working Papers and Technical Reports
+## Conference Papers
 
-{% bibliography --query @workingpaper %}
+{% bibliography --query @inproceedings[year<2020] %}
 
-{% bibliography --query @techreport %}
+{% bibliography --query @conference[year<2020] %}
 
-{% bibliography --query @series %}
+---
 
-### Conference Papers
+## Working Papers and Technical Reports
 
-{% bibliography --query @inproceedings %}
+{% bibliography --query @workingpaper[year<2020] %}
 
-{% bibliography --query @conference %}
+{% bibliography --query @techreport[year<2020] %}
 
-### Other Publications
+{% bibliography --query @series[year<2020] %}
 
-{% bibliography --query @misc %}
+---
 
-{% bibliography --query @unpublished %}
+## Reports
 
-{% bibliography --query @online %}
+{% bibliography --query @report[year<2020] %}
+
+---
+
+## Other Publications
+
+{% bibliography --query @misc[year<2020] %}
+
+{% bibliography --query @unpublished[year<2020] %}
 
 ---
 
 ## Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
+
+<ul>{% for post in site.talks %}
+{% include archive-single-talk-cv.html %}
+{% endfor %}</ul>
+
 ---
 
 ## Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+
+<ul>{% for post in site.teaching %}
+{% include archive-single-cv.html %}
+{% endfor %}</ul>
 
 ---
-  
+
 ## Service and Leadership
-======
 
 ### Editorial and Review Services
 * Editorial board member for development economics journals
