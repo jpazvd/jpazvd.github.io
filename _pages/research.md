@@ -23,9 +23,11 @@ This agenda focuses on the multidimensional aspects of child poverty and wellbei
 
 **Selected Works:**
 {% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
 {% bibliography --query azevedo2023progress-on-childr %}
 {% bibliography --query azevedo2024hard-truths-about- %}
 {% bibliography --query castaneda2018a-new-profile-of-t %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
@@ -39,8 +41,10 @@ A core contribution of my work at the World Bank was the co-creation of the glob
 
 **Selected Works:**
 {% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
 {% bibliography --query azevedo2019ending-learning-po %}
 {% bibliography --query azevedo2021will-every-child-b %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
@@ -50,9 +54,11 @@ In response to the global crisis, I led research to simulate and measure the imp
 
 **Selected Works:**
 {% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
 {% bibliography --query azevedo2021simulating-the-pot %}
 {% bibliography --query azevedo2021the-state-of-the-g %}
 {% bibliography --query azevedo2023covid-19-school-cl %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
@@ -66,8 +72,10 @@ This work focuses on building evidence-to-policy pipelines, from the global harm
 
 **Selected Works:**
 {% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
 {% bibliography --query tcg-wg-gaml-62021learning-data-comp %}
 {% bibliography --query azevedo2013from-noise-to-sign %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
@@ -77,9 +85,11 @@ To support rigorous and reproducible research, I have developed over 20 open-sou
 
 **Selected Works:**
 {% if site.plugins contains 'jekyll-scholar' %}
+{% comment %}
 {% bibliography --query nguyen2018sae-a-stata-packag %}
 {% bibliography --query software2012adecomp %}
 {% bibliography --query software2011wbopendata %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
