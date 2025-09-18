@@ -98,6 +98,46 @@ plugins:
   - jekyll-readme-index
   - jekyll-default-layout
   - jekyll-titles-from-headings
+  - jekyll-scholar
+
+# Jekyll Scholar Configuration
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+  sort_by: year,month
+  order: descending,ascending
+  repository: /assets/papers
+  repository_file_delimiter: "."
+  
+  details_dir: bibliography
+  details_layout: bib.html
+  details_link: Details
+  
+  bibtex_filters:
+    - latex
+    - smallcaps
+    - superscript
+  
+  replace_strings: true
+  join_strings: true
+  bibtex_skip_month: false
+  
+  # Citation metrics configuration
+  query: "@*"
+  bibliography_list_tag: ul
+  bibliography_item_tag: li
+  
+  # Enable citation tracking
+  bibliography_group_tag: h2
+  bibliography_group_prefix: ""
+  bibliography_group_suffix: ""
+  
+  # Sort by citations if available
+  sort_by: year, month, citations
+  order: descending, ascending, descending
 
 # HTML Compression
 compress_html:

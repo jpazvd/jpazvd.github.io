@@ -1,19 +1,19 @@
 source "https://rubygems.org"
 
-# GitHub Pages compatible Gemfile
-# Uses github-pages gem but with explicit plugin specifications for clarity
+# Specify Jekyll version and plugins directly
+gem "jekyll", "~> 4.3.3"
+gem "jekyll-scholar"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "jekyll-include-cache"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "jekyll-paginate"
+gem "jekyll-relative-links"
+gem "jekyll-readme-index"
+gem "jekyll-default-layout"
+gem "jekyll-titles-from-headings"
 
-gem "github-pages", "~> 232", group: :jekyll_plugins
-
-# Explicitly specify supported plugins for documentation
-# These are included by github-pages gem but listed for clarity
-group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-sitemap" 
-  gem "jekyll-include-cache"
-  gem "jekyll-remote-theme"
-  gem "jekyll-seo-tag"
-end
 
 # Windows and Ruby compatibility
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
