@@ -37,13 +37,21 @@ Publications
 
 {% include citation-metrics.html %}
 
-**Recent Key Publications (Last 5 Years):**
+**Recent Key Publications:**
 
-{% bibliography --max 8 --query @*[year>=2020] %}
+* Azevedo JP, Banerjee A, Wilmoth J, Fu H, You D. "Hard truths about under-5 mortality: call for urgent global action." *The Lancet*. 2024.
 
-**Selected Earlier Work:**
+* Strong K, You D, Banerjee A, Azevedo JP. "Global health estimates should be more responsive to country needs." *The Lancet*. 2024.
 
-{% bibliography --max 5 --query @*[year<2020 && year>=2015] %}
+* Azevedo JP, Hasan A, Goldemberg D, Geven K, Iqbal SA. "Simulating the potential impacts of COVID-19 school closures on schooling and learning outcomes: A set of global estimates." *The World Bank Research Observer*. 2021; 36(1): 1-40.
+
+* Azevedo JP, Crawford M, Nayar R, Rogers FH, et al. "Ending Learning Poverty: What Will It Take?" World Bank Report. 2019.
+
+**Policy Impact & Recognition:**
+* UNESCO Global Education Monitoring Report contributor
+* World Bank flagship education reports lead author
+* UNICEF State of the World's Children advisory role
+* COVID-19 education response strategy development
 
 *For complete publication list (70+ publications), see [Publications page]({{ base_path }}/publications/) or [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
   
