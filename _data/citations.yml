@@ -1,21 +1,32 @@
 ---
-# Citation metrics data
-# You can update this manually or automate it with scripts
+# Citation metrics data linked to Google Scholar profile
+# Profile: https://scholar.google.com/citations?user=d4PhqKMAAAAJ
 
 summary:
-  total_citations: 5247  # Replace with your actual total
-  h_index: 42           # Replace with your actual h-index
-  i10_index: 78         # Replace with your actual i10-index
+  total_citations: 5247  # Update from Google Scholar profile
+  h_index: 42           # Update from Google Scholar profile  
+  i10_index: 78         # Update from Google Scholar profile
   fetched_at: "2025-09-17"
 
-# Individual paper citations (optional)
+# Google Scholar profile integration
+google_scholar:
+  profile_url: "https://scholar.google.com/citations?user=d4PhqKMAAAAJ"
+  profile_id: "d4PhqKMAAAAJ"
+
+# Individual paper citations (optional - update with real Google Scholar URLs)
 papers:
   "azevedo2021simulating-the-pot":
     citations: 156
-    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lTKXA78AAAAJ&citation_for_view=..."
+    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=d4PhqKMAAAAJ&citation_for_view=..."
   
   "azevedo2021the-state-of-the-g":
     citations: 89
-    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lTKXA78AAAAJ&citation_for_view=..."
+    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=d4PhqKMAAAAJ&citation_for_view=..."
+
+# Instructions for updating:
+# 1. Visit your Google Scholar profile: https://scholar.google.com/citations?user=d4PhqKMAAAAJ
+# 2. Update summary metrics with current values
+# 3. For individual papers, click on paper titles in Google Scholar to get specific URLs
+# 4. Update fetched_at date when you refresh the metrics
 
 # Add more papers as needed
