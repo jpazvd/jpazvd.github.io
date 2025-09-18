@@ -86,4 +86,4 @@ To support rigorous and reproducible research, I have developed over 20 open-sou
 
 ---
 
-For a complete and filterable list of all my work, please see the [**Publications Page**](/publications/).
+For a complete and filterable list of all my work, please see the [**Publications Page**](/publications/)
