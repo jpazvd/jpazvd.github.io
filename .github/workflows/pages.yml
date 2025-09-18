@@ -36,11 +36,14 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Use CI Gemfile
+        run: echo "BUNDLE_GEMFILE=$GITHUB_WORKSPACE/Gemfile.ci" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
 
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Build with Jekyll (Scholar enabled)
+        run: bundle exec jekyll build --config _config.yml,_config.scholar.yml --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
