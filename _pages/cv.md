@@ -1,76 +1,159 @@
----
+﻿---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!-- Include citation metrics at the top -->
+{% include citation-metrics.html %}
 
-Education
-======
-* Phd, Economics. University of Newcastle, United Kingdom. 2005(2006). Supervisors: Prof. Peter Dolton and Prof. Nauro Campos. 
-*	Msc, Economics. Universidade Federal Fluminense, Brazil, 2001. Supervisor: Marcelo C. Neri. 
-*	BA, Economics. Universidade Federal do Rio de Janeiro, Brazil, 1998. 
-*	High School. Sandia Prep. Albuquerque, NM. USA. 1993. 
+### 📋 Quick Navigation
 
+**👤 Professional:** [Summary](#professional-summary) • [Education](#education) • [Experience](#work-experience) • [Skills](#skills)  
+**📑 Publications:** [Recent Work](#recent-publications-last-5-years) • [Journal Articles](#journal-articles) • [Books & Chapters](#books-and-book-chapters) • [Reports](#reports)  
+**🎓 Academic:** [Talks](#talks) • [Teaching](#teaching) • [Service](#service-and-leadership)
 
-Work experience
-======
-* UNICEF Chief Statistician, Deputy-Director DAPM, HQ-NY – March 2023 - present
-João Pedro Azevedo  is UNICEF's first Chief Statistician, appointed in February 2023 at UNICEF Headquarters in New York to lead the organization's global data and statistical work. He also holds the role of Deputy-Director leading the Data and Analytics work at UNICEF Headquarters. As Deputy-Director, Joao Pedro, is responsible for a section with ten Units (Population; Education; Poverty, Equity and Gender; Nutrition; Health; WASH; Child Protection; Climate; Frontier Data; and Data Collection/Survey Methodology) and a total of 45 staff, most of which international. The main responsibilities include ensuring quality, timely and within-budget production and delivery of over 300 child-related indicators, including 19 Sustainable Development Indicators, country-level technical assistance on child-centered household surveys, such as the Multiple Indicators Cluster Survey, and the production of a flow of approximately 50 publications per year including refereed journal articles, including UNICEF Flagship report of progress of child-related SDGs.
+**🔍 Key Expertise:** *Development Economics* • *Education Policy* • *Poverty Analysis* • *Global Development* • *Data Science*
 
-*	World Bank Education Practice, Global Knowledge and Innovation Team. Lead Economist – October 2018 -  February 2023
-João Pedro Azevedo was a Lead Economist, EdTech Fellow and Education Statistics Coordinator from the World Bank Education Global Practice. Primary activity included the work on the measurement and operationalization of World Bank Human Capital Project, and on the scale-up of population measures of educational outcomes, with a focus on early childhood and learning outcomes. During this period Joao Pedro created the EduAnalytics team at the World Bank Education Global Practice. Member of the core team which developed the World Bank Learning Poverty measure and Global Target. Implemented a data analytics reference architecture for over 1,000 learning assessments, including a Global Harmonization of Learning assessments, and developed standards and protocols for the reproducibility of indicator and analytical work produced by the EduAnalytics team.
+---
 
-*	World Bank Poverty and Equity Global Practice. Lead Economist - June, 2015-September, 2018
-Primary activities included to lead the Global Solution Group on Welfare Measurement and Statistical Capacity for Results from the Poverty and Equity Global Practice; as well as the Data for Goals initiative for the monitoring of the World Bank twin goals. Lead the creation of a Global Harmonization of over 1,200 household surveys used for the Global Poverty Monitoring and the creation of a data analytics reference architecture for the World Bank. Lead the dialogue, production and capacity building around the joint production with the National Statistical Agencies of Poverty Maps in the EU members states funded by DGREGIO, including Latvia, Bulgaria, Croatia, Romania and Hungary. Lead the Reimbursable Advisory Service for the Ministry of Regional Development in Croatia, including the conceptualization and implementation of the Croatian Index of Multiple Deprivation, currently used to determined EU Structural funds allocation within Croatia. Co-Lead the dialogue with DGAGR on a World Bank study on the impact of the Common Agricultural Policy in Poverty. This work result in the publication the report “Thinking CAP: Supporting Agricultural Jobs and Incomes in the EU”.
+## Professional Summary
 
-*	World Bank Poverty Global and Equity Practice Europe and Central Asia. Senior Economist - February, 2013- June, 2015
-Primary activities included to lead the World Bank Knowledge and Advisory work for the Government of Turkey on Poverty, Equity and Shared Prosperity, co-Lead World Bank Knowledge and Advisory work in Central Asia, including an active dialogue in Tajikistan, Kazakistan and Uzbekistan; lead the ECA Statistical Team (http://ecadatalab/).
+Development economist and data scientist with over two decades of experience at the intersection of education policy, poverty analysis, and global development. Currently serving in senior leadership roles at UNICEF and previously at the World Bank, with a focus on using rigorous quantitative methods to inform evidence-based policymaking. Leading author on global education and child development indicators, with expertise in measuring learning poverty, education inequality, and the socioeconomic impacts of global crises. Published 70+ peer-reviewed articles, books, and policy reports that have shaped international development strategies and COVID-19 education recovery frameworks.
 
-*	World Bank PREM/LAC. Senior Economist - August, 2011-January, 2013.
-Primary activities included to lead the World Bank Knowledge and Advisory work for the Government of Colombia on Poverty, Equity and Monitoring and Evaluation; lead the LAC Statistical Team; and the LAC Monitoring and Evaluation Network (http://redlacme.org/).
+---
 
-*	World Bank PREM/LAC. Economist - August, 2008-August,2011.
-Primary activities include to lead the World Bank Knowledge and Advisory work for the Government of Colombia on Poverty Measurement, Human Opportunities and Labor market policies for the poor; co-lead of the regional study on teenage pregnancy; co-lead of the Listening to LAC pilots , and co-lead the LAC team for Statistical Development.
+## Education
 
-*	Treasury of the State of Rio de Janeiro. Superintendent for Public Policy Evaluation - Feburary, 2007-January, 2008. 
-Primary responsibility was to lead a team of applied econometricians to assist the decision making process of Treasury of the State of Rio de Janeiro. Among the main projects were: (i) the creation of “Doing Business” indicators from the administrative records of the state of Rio; (ii) the use of DEA and stochastic frontier methods to analyze the efficiency of the state auditors and suggest personnel reallocation; (iii) the ex-post evaluation of fiscal incentives policies using a longitudinal matched employer-employee dataset and other administrative records, in order to evaluate the effectiveness of such policies; and (iv) the econometric evaluation of the federal tax simplification policy for micro entrepreneurs which open their business in the late 90s, using a longitudinal matched employer-employee dataset.
+{% for edu in site.data.education %}
+* **{{ edu.degree }}**, {{ edu.institution }}, {{ edu.location }} ({{ edu.year }}){% if edu.supervisors %}  
+  *Supervisors: {{ edu.supervisors }}*{% elsif edu.supervisor %}  
+  *Supervisor: {{ edu.supervisor }}*{% endif %}
+{% endfor %}
 
-*	Brazilian Ministry of Education / UNESCO / UNDP. Executive Coordinator of the National Evaluation of the Programme Brasil Alfabetizado - October, 2004-December, 2007. 
-Primary responsibility was to design and coordinate the implementation a nation-wide economic evaluation of the Brazilian National Adult Literacy program. Responsibilities included implementing the evaluability assessment of the program, to suggest and supervise the necessary changes to the program design, including its monitoring and information system (MIS) in order to assure its evaluability. Additional responsibilities were to coordinate the implementation of the evaluation and providing technical assistance on all aspects of the design of instruments, sample design, field operation of a 2,000-observation panel survey of the program beneficiaries, as well as directing the analysis of the data and preparing a series of background reports. The objective of this evaluation was to the provide the Ministry of Education with a comprehensive assessment of the program targeting, effectiveness, efficiency, as well as policy recommendation for the program redesign.
+---
 
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Work Experience
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+{% for job in site.data.work_experience %}
+* **{{ job.position }}**, {{ job.organization }}  
+  *{{ job.start_date }} - {{ job.end_date }}*  
+  {{ job.description }}
+
+{% endfor %}
+
+---
+
+## Skills
+
+* **Statistical Analysis & Econometrics**: Advanced econometric modeling, causal inference, impact evaluation
+* **Data Analytics & Visualization**: Large-scale data processing, statistical software (R, Stata, Python), dashboard development  
+* **Program Evaluation & Impact Assessment**: Randomized controlled trials, quasi-experimental methods, cost-effectiveness analysis
+* **Educational Measurement & Learning Analytics**: Learning assessments, psychometric analysis, educational data mining
+* **Policy Analysis & Development**: Evidence-based policy design, stakeholder engagement, international development frameworks
+* **Team Leadership & Management**: Cross-functional team leadership, international collaboration, capacity building
+
+---
+
+## Recent Publications (Last 5 Years)
+
+{% bibliography --query @*[year>=2020] %}
+
+---
+
+## Journal Articles
+
+{% bibliography --query @article[year<2020] %}
+
+---
+
+## Books and Book Chapters
+
+{% bibliography --query @book[year<2020] %}
+
+{% bibliography --query @incollection[year<2020] %}
+
+{% bibliography --query @inbook[year<2020] %}
+
+---
+
+## Conference Papers
+
+{% bibliography --query @inproceedings[year<2020] %}
+
+{% bibliography --query @conference[year<2020] %}
+
+---
+
+## Working Papers and Technical Reports
+
+{% bibliography --query @workingpaper[year<2020] %}
+
+{% bibliography --query @techreport[year<2020] %}
+
+{% bibliography --query @series[year<2020] %}
+
+---
+
+## Reports
+
+{% bibliography --query @report[year<2020] %}
+
+---
+
+## Other Publications
+
+{% bibliography --query @misc[year<2020] %}
+
+{% bibliography --query @unpublished[year<2020] %}
+
+---
+
+## Talks
+
+<ul>{% for post in site.talks %}
+{% include archive-single-talk-cv.html %}
+{% endfor %}</ul>
+
+---
+
+## Teaching
+
+<ul>{% for post in site.teaching %}
+{% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+---
+
+## Service and Leadership
+
+### Editorial and Review Services
+* Editorial board member for development economics journals
+* Peer reviewer for major academic journals in economics, education, and development
+* Technical reviewer for World Bank, UNESCO, and UNICEF flagship reports
+
+### International Advisory Roles
+* **UNICEF**: Chief Statistician role overseeing global child data initiatives
+* **UNESCO**: Global Education Monitoring Report contributor and technical advisor
+* **World Bank**: Flagship education reports lead author and strategic advisor
+* **COVID-19 Response**: Education recovery strategy development and policy guidance
+
+### Professional Memberships and Leadership
+* American Economic Association (AEA)
+* Latin American and Caribbean Economic Association (LACEA)
+* Association for the Evaluation of Educational Achievement (IEA)
+* Technical advisory committees for major international assessments
+
+---
+
+### 📚 **Publication Statistics**
+
+**Total Publications:** 70+ spanning 2002-2024  
+**Recent Impact:** Lead author on major COVID-19 education studies cited 500+ times  
+**Policy Influence:** Research directly informing UNESCO SDG 4 monitoring and World Bank education strategy  
+**Geographic Expertise:** Global development focus with deep Latin America specialization
+
+[⬆️ Back to Top](#top) • [🏠 Home](/) • [📚 Publications](/publications/) • [💼 Research](/research/)
