@@ -2,9 +2,9 @@ name: Build and Deploy (Jekyll 4 + Scholar)
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "dev"]
   pull_request:
-    branches: ["main"]
+    branches: ["main", "dev"]
 
 permissions:
   contents: read
@@ -61,5 +61,17 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-dev:
+    environment:
+      name: github-pages-dev
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/dev'
+    steps:
+      - name: Deploy to GitHub Pages (Dev)
         id: deployment
         uses: actions/deploy-pages@v4
