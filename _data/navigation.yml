@@ -3,6 +3,9 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Data Science & Analytics Tools"
+    url: /softwares/
+
   - title: "CV"
     url: /cv/
 
