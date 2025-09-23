@@ -13,9 +13,10 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-remote-theme"
   gem "jekyll-seo-tag"
+  gem "jekyll-scholar", "~> 7.1"
 end
 
 # Windows and Ruby compatibility
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "wdm", "~> 0.2.0" if Gem.win_platform?
 
