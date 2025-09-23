@@ -22,7 +22,8 @@ My work is organized around three interconnected themes:
 This agenda focuses on the multidimensional aspects of child poverty and wellbeing. It includes developing frameworks for monitoring progress on the Sustainable Development Goals (SDGs) for children, analyzing the drivers of inequality, and investigating the determinants of child health and mortality.
 
 **Selected Works:**
-{% if site.plugins contains 'jekyll-scholar' %}
+{% if site.data.navigation %}
+<!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
 {% bibliography --query azevedo2023progress-on-childr %}
 {% bibliography --query azevedo2024hard-truths-about- %}
@@ -40,7 +41,8 @@ This is a central pillar of my research, with a focus on ensuring quality educat
 A core contribution of my work at the World Bank was the co-creation of the global "Learning Poverty" indicator—a measure of the percentage of children unable to read and understand a simple text by age 10. This research stream involves the harmonization of learning assessments and the analysis of policies to accelerate progress in foundational learning.
 
 **Selected Works:**
-{% if site.plugins contains 'jekyll-scholar' %}
+{% if site.data.navigation %}
+<!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
 {% bibliography --query azevedo2019ending-learning-po %}
 {% bibliography --query azevedo2021will-every-child-b %}
@@ -53,7 +55,8 @@ A core contribution of my work at the World Bank was the co-creation of the glob
 In response to the global crisis, I led research to simulate and measure the impact of school closures on learning outcomes. This work quantified the scale of "learning losses," analyzed the effectiveness of remote learning strategies, and informed global education recovery efforts.
 
 **Selected Works:**
-{% if site.plugins contains 'jekyll-scholar' %}
+{% if site.data.navigation %}
+<!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
 {% bibliography --query azevedo2021simulating-the-pot %}
 {% bibliography --query azevedo2021the-state-of-the-g %}
@@ -71,7 +74,8 @@ Underpinning all my research is a focus on improving the data and methods we use
 This work focuses on building evidence-to-policy pipelines, from the global harmonization of household surveys for poverty monitoring to the development of data compacts that align countries and partners around common measurement goals.
 
 **Selected Works:**
-{% if site.plugins contains 'jekyll-scholar' %}
+{% if site.data.navigation %}
+<!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
 {% bibliography --query tcg-wg-gaml-62021learning-data-comp %}
 {% bibliography --query azevedo2013from-noise-to-sign %}
@@ -84,7 +88,8 @@ This work focuses on building evidence-to-policy pipelines, from the global harm
 To support rigorous and reproducible research, I have developed over 20 open-source statistical packages, primarily for Stata. These tools, covering topics from small area estimation to decomposition analysis, have been downloaded over 25,000 times by the global research community.
 
 **Selected Works:**
-{% if site.plugins contains 'jekyll-scholar' %}
+{% if site.data.navigation %}
+<!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
 {% bibliography --query nguyen2018sae-a-stata-packag %}
 {% bibliography --query software2012adecomp %}
