@@ -3,8 +3,7 @@ source "https://rubygems.org"
 # CI Gemfile for GitHub Actions build with Jekyll 4 + Scholar
 # This is used only by the Actions workflow (not by GitHub Pages native build).
 
-gem "jekyll", "~> 4.3.0"
-gem "jekyll-scholar", "~> 7.1.0"
+gem "jekyll", "~> 3.10.0"
 gem "jekyll-feed", "~> 0.17.0"
 gem "jekyll-sitemap", "~> 1.4.0"
 gem "jekyll-seo-tag", "~> 2.8.0"
