@@ -5,41 +5,43 @@ permalink: /softwares/
 author_profile: true
 ---
 
-Over the past two decades, I have authored or co-authored **22 Stata modules** hosted on the SSC archive. These contributions span three areas:  
-- **Methodological Innovation**: extending the frontier of poverty, inequality, and opportunity analysis.  
-- **Method Dissemination & Operationalization**: translating established methods into reproducible, accessible Stata commands.  
-- **Data Access, Reproducibility & Scalability**: embedding open data, efficient computation, and standardized reporting into analytical workflows.  
+# Software Contributions
+
+Over the past two decades, I have authored or co-authored **22 Stata modules** hosted on the SSC archive. These contributions span three areas:
+
+- **Methodological Innovation**: extending the frontier of poverty, inequality, and opportunity analysis.
+- **Method Dissemination & Operationalization**: translating established methods into reproducible, accessible Stata commands.
+- **Data Access, Reproducibility & Scalability**: embedding open data, efficient computation, and standardized reporting into analytical workflows.
 
 Together, these tools are used by researchers, national statistical offices, and international agencies to produce results that are rigorous, reproducible, and operational at scale.
 
 ---
 
-### Methodological Innovation  
+## Methodological Innovation
+
 Modules where I developed or co-developed new analytical approaches.  
 
 - ADECOMP, DRDECOMP, SKDECOMP, MPOVLINE — Shapley decompositions of poverty changes (growth, distribution, prices).  
 - HOI — Human Opportunity Index.  
 - ALORENZ, ISOPOVERTY, CHANGEMEAN — Lorenz dominance, iso-poverty curves, mean vs. distribution effects.  
-- GRQREG — Graphical quantile regression coefficients.  
+- GRQREG — Graphical quantile regression coefficients.
 
 ---
 
-### Method Dissemination & Operationalization  
-Modules where I translated established methods into reproducible, accessible Stata commands.  
+## Method Dissemination & Operationalization
 
-- DFL — DiNardo–Fortin–Lemieux counterfactual density decomposition.  
+Modules where I translated established methods into reproducible, accessible Stata commands.- DFL — DiNardo–Fortin–Lemieux counterfactual density decomposition.  
 - SAE / FHSAE — Small area estimation: unit- and area-level models.  
 - APOVERTY, AINEQUAL — FGT poverty measures and inequality indices.  
 - TURNBULL, SPIKE — Nonparametric willingness-to-pay estimators.  
 - MOL — Effective literacy index (Basu–Foster).  
-- FACTORTEST, CRTEST — Econometric tests for factor analysis and multinomial logit pooling.  
+- FACTORTEST, CRTEST — Econometric tests for factor analysis and multinomial logit pooling.
 
 ---
 
-### Data Access, Reproducibility & Scalability  
-Modules that make data workflows more reliable, auditable, and efficient.  
+## Data Access, Reproducibility & Scalability
 
-- WBOPENDATA — API access to World Bank databases.  
+Modules that make data workflows more reliable, auditable, and efficient.- WBOPENDATA — API access to World Bank databases.  
 - GROUPFUNCTION — High-performance data aggregation for large datasets.  
 - OUTTABLE — Standardized export of results to LaTeX.  
 
@@ -77,7 +79,7 @@ Modules that make data workflows more reliable, auditable, and efficient.
 {% else %}
 <!-- Static fallback for GitHub Pages build -->
 
-
+---
 
 ### 🐙 GitHub Repositories
 **For a complete list of my software and code, please visit:**
