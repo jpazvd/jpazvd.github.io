@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Software & Datasets"
+title: "Data Science & Analytics Tools"
 permalink: /softwares/
 author_profile: true
 ---
