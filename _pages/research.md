@@ -51,7 +51,7 @@ A core contribution of my work at the World Bank was the co-creation of the glob
 In response to the global crisis, I led research to simulate and measure the impact of school closures on learning outcomes. This work quantified the scale of "learning losses," analyzed the effectiveness of remote learning strategies, and informed global education recovery efforts.
 
 **Selected Works:**
-{% if site.data.navigation %}
+{% if site.plugins contains 'jekyll-scholar' %}
 <!-- Jekyll Scholar is available in CI builds -->
 {% bibliography --query azevedo2021simulating-the-pot %}
 {% bibliography --query azevedo2021the-state-of-the-g %}
