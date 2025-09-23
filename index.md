@@ -1,66 +1,18 @@
 ---
-layout: home
+layout: single
+permalink: /
+title: "About me"
+excerpt: "About me"
 author_profile: true
-title: "João Pedro Azevedo"
-classes: wide
+redirect_from:
+  - /about/
+  - /about.html
 ---
 
-<div class="hero">
-  <div class="hero__content">
-    <h1>Welcome</h1>
-    <p class="hero__description">
-      Development Economist and UNICEF Chief Statistician specializing in education, poverty measurement, and socioeconomic analysis.
-    </p>
-  </div>
-</div>
+I am [UNICEF's first Chief Statistician](https://www.unicef.org/media/experts/joao-pedro-azevedo), appointed in March 2023 to lead the organization's global data and statistical work. Before joining UNICEF, I worked for 16 years at the [World Bank](https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo), as Lead Economist of the Poverty and Equity Practice and Education Global Practice, where I had several roles such as EdTech Fellow, Education Statistics Coordinator, and Global Lead, co-leading the Global Solution Group on Welfare Measurement and Statistical Capacity for Results, as well as the Data for Goals agenda. Before my tenure at the World Bank, I served as the superintendent of Monitoring and Evaluation at the [Secretary of Finance for the State of Rio de Janeiro](https://www.fazenda.rj.gov.br/), as well as a research fellow at the [Institute of Applied Economic Research](https://ipea.gov.br) from the Brazilian Ministry of Planning (IPEA) in Rio de Janeiro.
 
-<div class="feature-grid">
-  <div class="feature">
-    <h3>📚 Publications</h3>
-    <p>144+ academic publications spanning development economics, education policy, and poverty analysis.</p>
-    <a href="/publications/" class="btn btn--primary">View Publications</a>
-  </div>
+Most of my publications can be found listed on [Google Scholar](https://scholar.google.com/citations?user=lTKXA78AAAAJ) or at the [World Bank Open Knowledge Repository](https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257). A full list of my Stata ado is available at the [Boston College Statistical Software Components](https://ideas.repec.org/e/pwa88.html).
 
-  <div class="feature">
-    <h3>💻 Software & Tools</h3>
-    <p>Statistical software and datasets for econometric analysis in development economics.</p>
-    <a href="/softwares/" class="btn btn--primary">Explore Tools</a>
-  </div>
+I am a Brazilian national and hold a PhD in Economics from Newcastle University. I have over 70 publications including several in referred journals such as Lancet, World Development, World Bank Research Observer and Frontier in Public Health. I am married and a father of twin daughters.
 
-  <div class="feature">
-    <h3>📊 Research</h3>
-    <p>Current research on COVID-19 education impacts, learning poverty, and inequality dynamics.</p>
-    <a href="/research/" class="btn btn--primary">Learn More</a>
-  </div>
-</div>
-
-<div class="recent-highlights">
-  <h2>Recent Highlights</h2>
-
-  <div class="highlights-grid">
-    <div class="highlight">
-      <h4>🏆 COVID-19 Education Recovery</h4>
-      <p>Seminal contributions to measuring pandemic learning losses and designing recovery strategies for developing countries.</p>
-    </div>
-
-    <div class="highlight">
-      <h4>📈 Learning Poverty Measurement</h4>
-      <p>Leading quantitative analysis of global learning poverty and evidence-based policy recommendations.</p>
-    </div>
-
-    <div class="highlight">
-      <h4>🌍 International Collaboration</h4>
-      <p>Collaborative work with UNESCO, UNICEF, World Bank, and OECD on global education and development initiatives.</p>
-    </div>
-  </div>
-</div>
-
-<div class="contact-section">
-  <h2>Get In Touch</h2>
-  <p>Connect with me on professional networks or explore my academic work.</p>
-  <div class="social-links">
-    <a href="https://twitter.com/jpazvd" class="btn btn--info">Twitter</a>
-    <a href="https://www.linkedin.com/in/joão-pedro-azevedo-123456789/" class="btn btn--info">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=your-id" class="btn btn--info">Google Scholar</a>
-  </div>
-</div>
+{% include citation-metrics.html %}
