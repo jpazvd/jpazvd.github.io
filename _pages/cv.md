@@ -62,14 +62,9 @@ Development economist and data scientist with over two decades of experience at 
 * **UNICEF**: Chief Statistician role overseeing global child data initiatives
 * **UNESCO**: Global Education Monitoring Report contributor and technical advisor
 * **World Bank**: Flagship education reports lead author and strategic advisor
-* **COVID-19 Response**: Education recovery strategy development and policy guidance
 
 ### Professional Memberships and Leadership
-* American Economic Association (AEA)
-* Latin American and Caribbean Economic Association (LACEA)
-* Association for the Evaluation of Educational Achievement (IEA)
-* Technical advisory committees for major international assessments
-
+* Elected member of International Statistical Society
 ---
 
 ### 📚 **Publication Statistics**
