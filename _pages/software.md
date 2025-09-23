@@ -24,7 +24,7 @@ Modules where I developed or co-developed new analytical approaches.
 
 ---
 
-## Method Dissemination & Operationalization  
+### Method Dissemination & Operationalization  
 Modules where I translated established methods into reproducible, accessible Stata commands.  
 
 - DFL — DiNardo–Fortin–Lemieux counterfactual density decomposition.  
@@ -36,12 +36,22 @@ Modules where I translated established methods into reproducible, accessible Sta
 
 ---
 
-### 3 Data Access, Reproducibility & Scalability  
+### Data Access, Reproducibility & Scalability  
 Modules that make data workflows more reliable, auditable, and efficient.  
 
 - WBOPENDATA — API access to World Bank databases.  
 - GROUPFUNCTION — High-performance data aggregation for large datasets.  
 - OUTTABLE — Standardized export of results to LaTeX.  
+
+## Impact  
+
+📊 **Software Impact (RePEc/LogEc, Aug 2025)**  
+
+- **22 SSC modules** authored/co-authored (2001–2021)  
+- **26,798 downloads** | **111,269 abstract views**  
+- Ranked **#20 worldwide** and **#6 among U.S. authors** by software downloads  
+- Widely adopted tools include **WBOPENDATA**, **HOI**, **DFL**, and **SAE/FHSAE**
+
 
 ---
 
@@ -67,16 +77,7 @@ Modules that make data workflows more reliable, auditable, and efficient.
 {% else %}
 <!-- Static fallback for GitHub Pages build -->
 
-## Impact  
 
-📊 **Software Impact (RePEc/LogEc, Aug 2025)**  
-
-- **22 SSC modules** authored/co-authored (2001–2021)  
-- **26,798 downloads** | **111,269 abstract views**  
-- Ranked **#20 worldwide** and **#6 among U.S. authors** by software downloads  
-- Widely adopted tools include **WBOPENDATA**, **HOI**, **DFL**, and **SAE/FHSAE**
-
----
 
 ### 🐙 GitHub Repositories
 **For a complete list of my software and code, please visit:**
