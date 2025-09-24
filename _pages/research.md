@@ -24,9 +24,11 @@ This agenda focuses on the multidimensional aspects of child poverty and wellbei
 **Selected Works:**
 {% if site.data.navigation %}
 <!-- Jekyll Scholar is available in CI builds -->
+{% comment %}
 {% bibliography --query azevedo2023progress-on-childr %}
 {% bibliography --query azevedo2024hard-truths-about- %}
 {% bibliography --query castaneda2018a-new-profile-of-t %}
+{% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
