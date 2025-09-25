@@ -91,14 +91,14 @@ To support rigorous and reproducible research, I have developed over 20 open-sou
 {% if site.data.navigation %}
 <!-- Jekyll Scholar is available in CI builds -->
 {% comment %}
-{% bibliography --query nguyen2018sae-a-stata-packag %}
-{% bibliography --query software2012adecomp %}
-{% bibliography --query software2011wbopendata %}
+{% bibliography --query nguyen2018sae-stata-module %}
+{% bibliography --query nguyen2012adecomp-stata %}
+{% bibliography --query azevedo2011wbopendata-stata %}
 {% endcomment %}
 {% else %}
 *Selected publications on this topic are available on my [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ).*
 {% endif %}
 
----
+
 
 For a complete and filterable list of all my work, please see the [**Publications Page**](/publications/)
