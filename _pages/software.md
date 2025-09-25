@@ -81,11 +81,11 @@ Modules that make data workflows more reliable, auditable, and efficient.
 <!-- Static fallback for GitHub Pages build -->
 
 
+{% endif %}
+
 
 ### 🐙 GitHub Repositories
 **For a complete list of my software and code, please visit:**
 
 - [Boston College Statistical Software Components (SSC)](https://ideas.repec.org/e/pwa88.html)
 - [GitHub Profile](https://github.com/jpazvd)
-
-{% endif %}
