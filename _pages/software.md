@@ -71,11 +71,6 @@ Modules that make data workflows more reliable, auditable, and efficient.
 
 {% bibliography --query @dataset %}
 
----
-
-### 🐙 Code Repositories
-
-{% bibliography --query @github %}
 
 {% else %}
 <!-- Static fallback for GitHub Pages build -->
@@ -84,7 +79,7 @@ Modules that make data workflows more reliable, auditable, and efficient.
 {% endif %}
 
 
-### 🐙 GitHub Repositories
+### 🐙 Code Repositories
 **For a complete list of my software and code, please visit:**
 
 - [Boston College Statistical Software Components (SSC)](https://ideas.repec.org/e/pwa88.html)
