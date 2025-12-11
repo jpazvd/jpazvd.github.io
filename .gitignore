@@ -1,6 +1,28 @@
+# Jekyll build output
 _site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 # Environment variables (API keys, secrets)
 .env
 .env.local
 .env.*.local
+
+# Local development
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ruby/Bundler
+vendor/
+.bundle/
