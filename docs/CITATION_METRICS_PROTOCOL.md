@@ -107,10 +107,17 @@ Add this section after Publications:
 
 #### Option B: Automated Update (GitHub Actions)
 
+Both **RePEc/LogEc** and **Google Scholar** can be updated automatically:
+
+| Source | Script | API Required |
+|--------|--------|-------------|
+| RePEc/LogEc | `scripts/fetch_repec_stats.py` | None (free) |
+| Google Scholar | `scripts/fetch_scholar_metrics.py` | SerpAPI (free tier: 100/mo) |
+
 The automated pipeline fetches:
-1. **Author statistics** from `http://logec.repec.org/RAS/pwa88.htm`
-2. **Global software ranking** from LogEc ranking pages
-3. **US software ranking** from LogEc ranking pages
+1. **RePEc Author statistics** from `http://logec.repec.org/RAS/pwa88.htm`
+2. **RePEc Rankings** (software downloads/abstract views, global/US)
+3. **Google Scholar metrics** via SerpAPI (citations, h-index, i10-index, yearly data)
 
 Create `.github/workflows/update-citations.yml`:
 ```yaml
@@ -135,11 +142,16 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4 pyyaml
+        run: pip install -r scripts/requirements.txt
       
       - name: Fetch RePEc statistics and rankings
         run: python scripts/fetch_repec_stats.py
+      
+      - name: Fetch Google Scholar metrics
+        if: env.SERPAPI_KEY != ''
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/fetch_scholar_metrics.py
       
       - name: Commit changes
         run: |
@@ -149,6 +161,10 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: Update citation metrics [skip ci]"
           git push
 ```
+
+**Setup for Google Scholar automation:**
+1. Get a free SerpAPI key at https://serpapi.com
+2. Add it as a repository secret: Settings → Secrets → `SERPAPI_KEY`
 
 ### Data Structure
 
@@ -222,9 +238,14 @@ Please update the _data/citations.yml file with these values.
 
 ## Automated Pipeline
 
-### What the Script Fetches
+### Scripts Overview
 
-The `scripts/fetch_repec_stats.py` script automatically retrieves:
+| Script | Source | Data Retrieved |
+|--------|--------|----------------|
+| `fetch_repec_stats.py` | LogEc/RePEc | Downloads, views, rankings by category |
+| `fetch_scholar_metrics.py` | Google Scholar | Citations, h-index, i10-index, yearly data |
+
+### What `fetch_repec_stats.py` Retrieves
 
 1. **Author Statistics** (from LogEc)
    - Working papers: downloads & views (12mo + total)
@@ -234,9 +255,30 @@ The `scripts/fetch_repec_stats.py` script automatically retrieves:
    - Software: downloads & views (12mo + total)
 
 2. **Author Rankings**
-   - Global software downloads ranking
-   - US software downloads ranking
-   - Global all-works ranking
+   - Global software downloads ranking (monthly + total)
+   - US software downloads ranking (monthly + total)
+   - Global software abstract views ranking
+   - US software abstract views ranking
+
+### What `fetch_scholar_metrics.py` Retrieves
+
+1. **All-Time Metrics**
+   - Total citations
+   - h-index
+   - i10-index
+
+2. **Last 5 Years Metrics**
+   - Citations (5yr)
+   - h-index (5yr)
+   - i10-index (5yr)
+
+3. **Historical Data**
+   - Citations by year (full timeline)
+
+**API Options:**
+- **SerpAPI** (recommended): Set `SERPAPI_KEY` environment variable
+- **scholarly library**: Falls back if no API key (may be blocked)
+- **Manual input**: Use `--manual` flag for interactive mode
 
 ### Running Locally
 
@@ -244,8 +286,23 @@ The `scripts/fetch_repec_stats.py` script automatically retrieves:
 # Install dependencies
 pip install -r scripts/requirements.txt
 
-# Run the script
+# Run RePEc script (no API key needed)
 python scripts/fetch_repec_stats.py
+
+# Run Google Scholar script
+# Option 1: With SerpAPI (recommended)
+export SERPAPI_KEY=your_key_here  # or use .env file
+python scripts/fetch_scholar_metrics.py
+
+# Option 2: Manual input mode
+python scripts/fetch_scholar_metrics.py --manual
+```
+
+**Windows PowerShell:**
+```powershell
+# Load from .env file and run
+Get-Content .env | ForEach-Object { if ($_ -match '^([^#][^=]+)=(.*)$') { [Environment]::SetEnvironmentVariable($matches[1], $matches[2]) } }
+python scripts/fetch_scholar_metrics.py
 ```
 
 ### GitHub Actions Schedule
@@ -325,12 +382,15 @@ git push origin source
 
 ## Future Enhancements
 
-Potential additions to the pipeline (not yet implemented):
+**Completed:**
+- [x] Google Scholar automated fetching (via SerpAPI)
+- [x] Track abstract views rankings (global/US)
+- [x] Track work counts by category
 
+**Potential additions:**
 - [ ] Track working papers rankings (global/US)
 - [ ] Track journal articles rankings (global/US)
 - [ ] Track books rankings
-- [ ] Add Google Scholar automated fetching (requires proxy handling)
 - [ ] Add Scopus/Web of Science integration
 - [ ] Display citation metrics on CV page with Liquid templates
 - [ ] Add citation trend charts/visualizations

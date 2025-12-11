@@ -1,11 +1,15 @@
 # Update Citation Metrics
 # 
 # This workflow automatically fetches citation statistics from:
-# - RePEc/IDEAS (LogEc statistics)
-# - Google Scholar (optional, requires manual trigger due to rate limits)
+# - RePEc/IDEAS (LogEc statistics) - always runs
+# - Google Scholar (via SerpAPI) - requires SERPAPI_KEY secret
 #
 # Schedule: Weekly on Monday at 6:00 AM UTC
 # Manual: Can be triggered via workflow_dispatch
+#
+# Setup for Google Scholar:
+# 1. Get a free API key at https://serpapi.com
+# 2. Add it as repository secret: Settings → Secrets → SERPAPI_KEY
 
 name: Update Citation Metrics
 
@@ -19,10 +23,11 @@ on:
       source:
         description: 'Which source to update'
         required: true
-        default: 'repec'
+        default: 'all'
         type: choice
         options:
           - repec
+          - scholar
           - all
 
 permissions:
@@ -47,10 +52,17 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pyyaml
+          pip install -r scripts/requirements.txt
       
       - name: Fetch RePEc statistics
+        if: github.event.inputs.source != 'scholar'
         run: python scripts/fetch_repec_stats.py
+      
+      - name: Fetch Google Scholar metrics
+        if: github.event.inputs.source != 'repec' && env.SERPAPI_KEY != ''
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/fetch_scholar_metrics.py
       
       - name: Check for changes
         id: git-check
@@ -66,7 +78,7 @@ jobs:
           git commit -m "chore: Update citation metrics [skip ci]
           
           Automated update from GitHub Actions.
-          Source: RePEc/IDEAS (LogEc)
+          Sources: RePEc/IDEAS, Google Scholar
           Date: $(date -u +%Y-%m-%d)"
           git push
       
