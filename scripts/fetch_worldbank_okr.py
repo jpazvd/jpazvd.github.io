@@ -336,6 +336,7 @@ def export_publications_list(okr_stats: dict) -> bool:
                 'handle': pub['handle'],
                 'doi': pub['doi'] if pub['doi'] else None,
                 'authors': pub['authors'],
+                'abstract': pub.get('abstract', '') if pub.get('abstract') else None,
             })
         
         with open(PUBLICATIONS_FILE, 'w', encoding='utf-8') as f:
