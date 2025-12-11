@@ -3,6 +3,7 @@
 Fetch World Bank Open Knowledge Repository statistics for João Pedro Azevedo.
 
 This script uses the DSpace 7 REST API to fetch publication data.
+It searches for multiple name variations to get an accurate publication count.
 
 Usage:
     python scripts/fetch_worldbank_okr.py
@@ -17,6 +18,12 @@ API Documentation:
 Note:
     Download/view statistics are not publicly available via API.
     Only publication count and metadata can be fetched without authentication.
+
+Name Variations Found in OKR:
+    - "Azevedo, Joao Pedro" (20 publications)
+    - "Azevedo, João Pedro" (9 publications)
+    - "Azevedo, Joao Pedro Wagner De" (3+ publications)
+    - "Wagner De Azevedo, Joao Pedro"
 """
 
 import sys
@@ -38,6 +45,12 @@ OKR_API_BASE = "https://openknowledge.worldbank.org/server/api"
 OKR_PROFILE_URL = f"https://openknowledge.worldbank.org/entities/person/{AUTHOR_UUID}"
 CITATIONS_FILE = Path(__file__).parent.parent / "_data" / "citations.yml"
 
+# Name variations to search for (some publications use different formats)
+NAME_VARIATIONS = [
+    "Joao Pedro Azevedo",
+    "Joao Pedro Wagner de Azevedo",
+]
+
 
 def fetch_author_profile(author_uuid: str) -> dict:
     """Fetch author profile from OKR API."""
@@ -53,8 +66,60 @@ def fetch_author_profile(author_uuid: str) -> dict:
         return None
 
 
-def parse_publication_count(profile_data: dict) -> int:
-    """Extract publication count from profile metadata."""
+def search_publications_by_name(name_query: str, size: int = 100) -> dict:
+    """Search for publications by author name."""
+    url = f"{OKR_API_BASE}/discover/search/objects"
+    params = {
+        "query": name_query,
+        "dsoType": "item",
+        "size": size
+    }
+    
+    try:
+        response = requests.get(url, params=params, timeout=30)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"  ✗ Error searching for '{name_query}': {e}")
+        return None
+
+
+def count_unique_publications() -> tuple[int, set]:
+    """
+    Count unique publications across all name variations.
+    Returns (count, set of UUIDs).
+    """
+    unique_uuids = set()
+    
+    for name in NAME_VARIATIONS:
+        print(f"  Searching for: {name}")
+        results = search_publications_by_name(name)
+        
+        if not results:
+            continue
+        
+        search_result = results.get("_embedded", {}).get("searchResult", {})
+        embedded = search_result.get("_embedded", {})
+        objects = embedded.get("objects", [])
+        
+        for obj in objects:
+            indexable = obj.get("_embedded", {}).get("indexableObject", {})
+            entity_type = indexable.get("entityType", "")
+            uuid = indexable.get("uuid", "")
+            
+            # Only count publications, not Person records
+            if entity_type == "Publication" and uuid:
+                unique_uuids.add(uuid)
+        
+        page_info = search_result.get("page", {})
+        total = page_info.get("totalElements", 0)
+        print(f"    Found {total} items ({len(objects)} publications)")
+    
+    return len(unique_uuids), unique_uuids
+
+
+def parse_publication_count_from_profile(profile_data: dict) -> int:
+    """Extract publication count from profile metadata (linked publications only)."""
     if not profile_data:
         return 0
     
@@ -71,17 +136,17 @@ def fetch_okr_stats() -> dict:
     print("=" * 60)
     print()
     
+    # First get the profile
+    print("Step 1: Fetching author profile...")
     profile = fetch_author_profile(AUTHOR_UUID)
     
     if not profile:
         return None
     
-    # Extract data
-    publication_count = parse_publication_count(profile)
+    # Extract profile data
+    linked_count = parse_publication_count_from_profile(profile)
     handle = profile.get("handle", "")
     name = profile.get("name", AUTHOR_NAME)
-    entity_type = profile.get("entityType", "")
-    last_modified = profile.get("lastModified", "")
     
     # Extract specializations
     metadata = profile.get("metadata", {})
@@ -90,18 +155,42 @@ def fetch_okr_stats() -> dict:
         for item in metadata.get("authorProfile.specialization", [])
     ]
     
+    # Extract name variants from profile
+    name_variants = [
+        item.get("value", "") 
+        for item in metadata.get("authorProfile.name.variant", [])
+    ]
+    
     print(f"  ✓ Name: {name}")
     print(f"  ✓ Handle: {handle}")
-    print(f"  ✓ Publication count: {publication_count}")
+    print(f"  ✓ Linked publications: {linked_count}")
+    print(f"  ✓ Name variants in profile: {name_variants}")
     print(f"  ✓ Specializations: {', '.join(specializations)}")
+    
+    # Search for all publications including those with name variations
+    print()
+    print("Step 2: Searching for publications across name variations...")
+    total_count, unique_uuids = count_unique_publications()
+    
+    print()
+    print(f"  ✓ Total unique publications found: {total_count}")
+    
+    # Use the higher count (search is more comprehensive than profile links)
+    final_count = max(total_count, linked_count)
+    
+    if total_count > linked_count:
+        print(f"  ℹ Note: {total_count - linked_count} additional publications found via name search")
+        print("    (These may use alternative name formats like 'Joao Pedro Wagner de Azevedo')")
     
     return {
         'author_id': AUTHOR_UUID,
         'handle': handle,
         'name': name,
-        'publication_count': publication_count,
+        'publication_count': final_count,
+        'linked_count': linked_count,
+        'search_count': total_count,
         'specializations': specializations,
-        'profile_last_modified': last_modified,
+        'name_variants': name_variants,
     }
 
 
