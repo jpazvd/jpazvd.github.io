@@ -17,26 +17,31 @@ repec:
   stats_url: "http://logec.repec.org/RAS/pwa88.htm"
   # Summary Statistics (as of December 2025)
   working_papers:
+    count: 50
     downloads_12mo: 124
     downloads_total: 4833
     abstract_views_12mo: 569
     abstract_views_total: 15903
   journal_articles:
+    count: 7
     downloads_12mo: 10
     downloads_total: 413
     abstract_views_12mo: 79
     abstract_views_total: 1558
   books:
+    count: 3
     downloads_12mo: 8
     downloads_total: 81
     abstract_views_12mo: 31
     abstract_views_total: 309
   chapters:
+    count: 2
     downloads_12mo: 4
     downloads_total: 52
     abstract_views_12mo: 11
     abstract_views_total: 386
   software:
+    count: 22
     downloads_12mo: 444
     downloads_total: 26886
     abstract_views_12mo: 1822
@@ -65,7 +70,7 @@ repec:
       url_monthly_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us"
       url_total_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us"
       url_total_abstract_views: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us"
-  registered_works: 78              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
+  total_works: 84                    # 50+7+3+2+22              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
   last_updated: "2024-12-10"
 
 orcid:

@@ -80,11 +80,20 @@ def fetch_repec_stats() -> dict:
     tables = soup.find_all('table')
     
     stats = {
-        'working_papers': {'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
-        'journal_articles': {'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
-        'books': {'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
-        'chapters': {'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
-        'software': {'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+        'working_papers': {'count': 0, 'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+        'journal_articles': {'count': 0, 'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+        'books': {'count': 0, 'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+        'chapters': {'count': 0, 'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+        'software': {'count': 0, 'downloads_12mo': 0, 'downloads_total': 0, 'abstract_views_12mo': 0, 'abstract_views_total': 0},
+    }
+    
+    # Track item counts per category
+    item_counts = {
+        'working_papers': 0,
+        'journal_articles': 0,
+        'books': 0,
+        'chapters': 0,
+        'software': 0,
     }
     
     # Category mapping from table headers
@@ -108,7 +117,7 @@ def fetch_repec_stats() -> dict:
                     current_category = value
                     break
         
-        # Look for "Total" rows in each table
+        # Look for rows in each table
         rows = table.find_all('tr')
         for row in rows:
             cells = row.find_all(['td', 'th'])
@@ -129,22 +138,36 @@ def fetch_repec_stats() -> dict:
                     # Table structure: Name | Downloads (month, 3mo, 12mo, total) | Views (month, 3mo, 12mo, total)
                     try:
                         stats[current_category] = {
+                            'count': item_counts.get(current_category, 0),
                             'downloads_12mo': parse_stat_value(cells[3].get_text()),
                             'downloads_total': parse_stat_value(cells[4].get_text()),
                             'abstract_views_12mo': parse_stat_value(cells[7].get_text()),
                             'abstract_views_total': parse_stat_value(cells[8].get_text()),
                         }
-                        print(f"  Found {current_category}: {stats[current_category]}")
+                        print(f"  Found {current_category}: count={stats[current_category]['count']}, stats={stats[current_category]}")
                     except (IndexError, ValueError) as e:
                         print(f"  Warning: Could not parse {current_category} stats: {e}")
+            # Count individual items (non-total rows with numeric data)
+            elif current_category and len(cells) >= 9:
+                # Check if this looks like a data row (has numeric values in download columns)
+                try:
+                    # Try to parse the total downloads column - if it's numeric, this is a data row
+                    total_downloads = parse_stat_value(cells[4].get_text())
+                    total_views = parse_stat_value(cells[8].get_text())
+                    if total_downloads > 0 or total_views > 0:
+                        item_counts[current_category] = item_counts.get(current_category, 0) + 1
+                except (IndexError, ValueError):
+                    pass
     
     # Calculate totals
+    total_works = sum(s['count'] for s in stats.values())
     total_downloads_12mo = sum(s['downloads_12mo'] for s in stats.values())
     total_downloads_all = sum(s['downloads_total'] for s in stats.values())
     total_views_12mo = sum(s['abstract_views_12mo'] for s in stats.values())
     total_views_all = sum(s['abstract_views_total'] for s in stats.values())
     
     print(f"\nTotals:")
+    print(f"  Works: {total_works}")
     print(f"  Downloads (12mo): {total_downloads_12mo:,}")
     print(f"  Downloads (all time): {total_downloads_all:,}")
     print(f"  Abstract views (12mo): {total_views_12mo:,}")
@@ -152,6 +175,7 @@ def fetch_repec_stats() -> dict:
     
     return {
         'categories': stats,
+        'total_works': total_works,
         'total_downloads_12mo': total_downloads_12mo,
         'total_downloads_all_time': total_downloads_all,
         'total_abstract_views_12mo': total_views_12mo,
@@ -243,6 +267,7 @@ def update_citations_file(repec_stats: dict, rankings: dict = None) -> bool:
             'books': repec_stats['categories']['books'],
             'chapters': repec_stats['categories']['chapters'],
             'software': repec_stats['categories']['software'],
+            'total_works': repec_stats['total_works'],
             'total_downloads_12mo': repec_stats['total_downloads_12mo'],
             'total_downloads_all_time': repec_stats['total_downloads_all_time'],
             'total_abstract_views_12mo': repec_stats['total_abstract_views_12mo'],
