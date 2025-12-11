@@ -97,6 +97,57 @@ world_bank_okr:
   author_id: 360f7a2e-0784-56e1-acf4-7f805fd50257
   handle: 10986/38780
   publication_count: 34
-  last_updated: '2025-12-10'
   profile_linked_count: 29
   search_count: 34
+  last_updated: '2025-12-11'
+  # Publication type breakdown
+  by_type:
+    working_paper: 16
+    journal_article: 2
+    report: 1
+    brief: 1
+    other: 14
+  # Timeline statistics
+  timeline:
+    first_year: 2010
+    latest_year: 2023
+    active_years: 14
+  # By year distribution
+  by_year:
+    '2023': 2
+    '2022': 1
+    '2021': 4
+    '2020': 4
+    '2018': 3
+    '2016': 5
+    '2015': 1
+    '2014': 5
+    '2013': 5
+    '2012': 3
+    '2010': 1
+  # Authorship statistics
+  authorship:
+    solo_authored: 3
+    co_authored: 31
+    first_author: 8
+    unique_coauthors: 76
+  # Top co-authors (3+ papers)
+  top_coauthors:
+    - name: Diana Goldemberg
+      count: 4
+    - name: Minh Cong Nguyen
+      count: 4
+    - name: Gabriela Inchauste
+      count: 4
+    - name: Maryam Akmal
+      count: 3
+    - name: Amer Hasan
+      count: 3
+    - name: Syedah Aroob Iqbal
+      count: 3
+    - name: Jaime Saavedra
+      count: 3
+    - name: Hiroki Uematsu
+      count: 3
+  # DOI coverage
+  doi_coverage: 100
