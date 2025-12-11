@@ -1,29 +1,37 @@
-# Citation Metrics
-# Last Updated: 2024-12-10
-# 
-# To update: Edit values below with current data from each platform
-# Then commit to source branch
-
 google_scholar:
-  profile_url: "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
-  # All-time metrics
-  total_citations: null      # Update from Google Scholar
-  h_index: null              # Update from Google Scholar
-  i10_index: null            # Update from Google Scholar
-  # Last 5 years metrics
-  citations_5yr: null        # Citations since ~2020
-  h_index_5yr: null          # h-index since ~2020
-  i10_index_5yr: null        # i10-index since ~2020
-  # Optional: yearly breakdown
-  # citations_by_year:
-  #   2024: 0
-  #   2023: 0
-  last_updated: "2024-12-10"
-
+  profile_url: https://scholar.google.com/citations?user=lTKXA78AAAAJ
+  total_citations: 5555
+  h_index: 30
+  i10_index: 62
+  citations_5yr: 3691
+  h_index_5yr: 23
+  i10_index_5yr: 38
+  last_updated: '2025-12-10'
+  citations_by_year:
+    2006: 16
+    2007: 32
+    2008: 40
+    2009: 47
+    2010: 78
+    2011: 62
+    2012: 79
+    2013: 103
+    2014: 137
+    2015: 189
+    2016: 215
+    2017: 215
+    2018: 299
+    2019: 247
+    2020: 338
+    2021: 619
+    2022: 800
+    2023: 753
+    2024: 631
+    2025: 510
+  publication_count: 20
 repec:
-  profile_url: "https://ideas.repec.org/e/pwa88.html"
-  stats_url: "http://logec.repec.org/RAS/pwa88.htm"
-  # Summary Statistics (as of December 2025)
+  profile_url: https://ideas.repec.org/e/pwa88.html
+  stats_url: http://logec.repec.org/RAS/pwa88.htm
   working_papers:
     count: 50
     downloads_12mo: 124
@@ -54,49 +62,32 @@ repec:
     downloads_total: 26886
     abstract_views_12mo: 1822
     abstract_views_total: 111699
-  # Totals across all categories
-  total_downloads_12mo: 590         # 124+10+8+4+444
-  total_downloads_all_time: 32265   # 4833+413+81+52+26886
-  total_abstract_views_12mo: 2512   # 569+79+31+11+1822
-  total_abstract_views_all_time: 129855  # 15903+1558+309+386+111699
-  # Rankings
-  ranking_note: "Top 5% of authors by downloads and abstract views (12 months)"
+  total_downloads_12mo: 590
+  total_downloads_all_time: 32265
+  total_abstract_views_12mo: 2512
+  total_abstract_views_all_time: 129855
+  ranking_note: Top 5% of authors by downloads and abstract views (12 months)
   rankings:
     software_global:
       rank_monthly_downloads: 27
       rank_total_downloads: 19
       rank_total_abstract_views: 17
-      description: "Global ranking for software"
-      url_monthly_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all"
-      url_total_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all"
-      url_total_abstract_views: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all"
+      description: Global ranking for software
+      url_monthly_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all
+      url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all
+      url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all
     software_us:
       rank_monthly_downloads: 10
       rank_total_downloads: 6
       rank_total_abstract_views: 6
-      description: "US ranking for software"
-      url_monthly_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us"
-      url_total_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us"
-      url_total_abstract_views: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us"
-  total_works: 84                    # 50+7+3+2+22              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
-  last_updated: "2024-12-10"
-
+      description: US ranking for software
+      url_monthly_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us
+      url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us
+      url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us
+  total_works: 84
+  last_updated: '2024-12-10'
 orcid:
-  profile_url: "https://orcid.org/0000-0003-2111-0596"
-  orcid_id: "0000-0003-2111-0596"
-  works_count: null          # Number of works registered
-  last_updated: "2024-12-10"
-
-# Optional: Add other platforms as needed
-# scopus:
-#   author_id: null
-#   h_index: null
-#   citations: null
-#   documents: null
-#   last_updated: null
-
-# web_of_science:
-#   researcher_id: null
-#   h_index: null
-#   citations: null
-#   last_updated: null
+  profile_url: https://orcid.org/0000-0003-2111-0596
+  orcid_id: 0000-0003-2111-0596
+  works_count: null
+  last_updated: '2024-12-10'
