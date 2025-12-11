@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+description: "Curriculum Vitae of João Pedro Azevedo - UNICEF Chief Statistician, former World Bank Lead Economist. PhD Economics, Newcastle University."
 redirect_from:
   - /resume
 ---
@@ -46,12 +47,32 @@ Primary responsibility was to design and coordinate the implementation a nation-
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
+**Technical & Analytical**
+* Stata (advanced, ado-file development, SSC contributor)
+* R, Python, SQL
+* Econometrics & Impact Evaluation
+* Survey Design & Sampling
+* Small Area Estimation & Poverty Mapping
+* Data Visualization & Dashboard Development
+
+**Domain Expertise**
+* Poverty Measurement & Analysis
+* Education Statistics & Learning Assessment
+* Child Development Indicators
+* SDG Monitoring & Reporting
+* Human Capital Measurement
+
+**Leadership & Management**
+* Team Leadership (45+ staff at UNICEF)
+* International Development Operations
+* Multi-stakeholder Coordination
+* Technical Assistance & Capacity Building
+
+**Languages**
+* Portuguese (native)
+* English (fluent)
+* Spanish (professional)
 
 Publications
 ======
@@ -71,6 +92,11 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Service and Leadership
 ======
-* Currently signed in to 43 different slack teams
+* Co-Lead, Global Solution Group on Welfare Measurement and Statistical Capacity (World Bank)
+* Co-Lead, Data for Goals Initiative (World Bank)
+* Education Statistics Coordinator (World Bank Education Global Practice)
+* Member, Technical Cooperation Group on SDG 4 indicators (UNESCO Institute for Statistics)
+* Reviewer for: World Development, Journal of Development Economics, World Bank Research Observer
+* SSC Statistical Software Components contributor (Boston College)
