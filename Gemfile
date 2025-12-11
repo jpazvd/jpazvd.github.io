@@ -25,7 +25,7 @@ gem 'webrick'
 group :jekyll_plugins do
   gem "jekyll-feed"         # Generates RSS/Atom feeds for your site’s posts.
   gem "jekyll-sitemap"      # Automatically creates a sitemap for your site.
-  gem "jekyll-scholar"      # Adds academic references and citations to your site.
+  # gem "jekyll-scholar"      # Adds academic references and citations to your site. (Disabled - incompatible with Ruby 3.0)
   gem "tzinfo"              # Required for proper timezone handling.
   gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] 
   # Timezone data for Windows and JRuby platforms.
