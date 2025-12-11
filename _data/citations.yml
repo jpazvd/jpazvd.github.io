@@ -48,6 +48,15 @@ repec:
   total_abstract_views_all_time: 129855  # 15903+1558+309+386+111699
   # Rankings
   ranking_note: "Top 5% of authors by downloads and abstract views (12 months)"
+  rankings:
+    software_global:
+      rank: 27
+      description: "Global ranking for software downloads (monthly)"
+      url: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all"
+    software_us:
+      rank: 10
+      description: "US ranking for software downloads (monthly)"
+      url: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us"
   registered_works: 78              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
   last_updated: "2024-12-10"
 

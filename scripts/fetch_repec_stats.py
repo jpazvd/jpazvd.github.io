@@ -10,8 +10,10 @@ Usage:
 Requirements:
     pip install requests beautifulsoup4 pyyaml
 
-Data Source:
-    http://logec.repec.org/RAS/pwa88.htm
+Data Sources:
+    - Author stats: http://logec.repec.org/RAS/pwa88.htm
+    - Global software ranking: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all
+    - US software ranking: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us
 """
 
 import re
@@ -30,8 +32,16 @@ except ImportError:
 
 # Configuration
 REPEC_AUTHOR_ID = "pwa88"
+AUTHOR_NAME = "Azevedo, João Pedro"
 LOGEC_STATS_URL = f"http://logec.repec.org/RAS/{REPEC_AUTHOR_ID}.htm"
 CITATIONS_FILE = Path(__file__).parent.parent / "_data" / "citations.yml"
+
+# Ranking URLs
+RANKING_URLS = {
+    'software_global': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all',
+    'software_us': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us',
+    'all_works_global': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=all',
+}
 
 
 def parse_stat_value(text: str) -> int:
@@ -142,7 +152,64 @@ def fetch_repec_stats() -> dict:
     }
 
 
-def update_citations_file(repec_stats: dict) -> bool:
+def fetch_author_ranking(url: str, ranking_name: str) -> dict:
+    """Fetch author ranking from a LogEc ranking page."""
+    print(f"\nFetching {ranking_name} ranking from: {url}")
+    
+    try:
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print(f"  Error fetching ranking: {e}")
+        return None
+    
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Find the main table
+    tables = soup.find_all('table')
+    
+    for table in tables:
+        rows = table.find_all('tr')
+        for row in rows:
+            cells = row.find_all(['td', 'th'])
+            if len(cells) >= 2:
+                # Check if this row contains our author
+                row_text = row.get_text().lower()
+                if 'azevedo' in row_text and 'joão' in row_text:
+                    # Found the author - extract rank from first cell
+                    rank_text = cells[0].get_text().strip()
+                    try:
+                        rank = int(rank_text)
+                        print(f"  Found rank: #{rank}")
+                        
+                        # Also extract stats from the row
+                        result = {'rank': rank}
+                        if len(cells) >= 9:
+                            result['downloads_month'] = parse_stat_value(cells[2].get_text())
+                            result['downloads_3mo'] = parse_stat_value(cells[3].get_text())
+                            result['downloads_12mo'] = parse_stat_value(cells[4].get_text())
+                            result['downloads_total'] = parse_stat_value(cells[5].get_text())
+                        return result
+                    except ValueError:
+                        continue
+    
+    print(f"  Author not found in top 100")
+    return None
+
+
+def fetch_all_rankings() -> dict:
+    """Fetch all author rankings."""
+    rankings = {}
+    
+    for key, url in RANKING_URLS.items():
+        result = fetch_author_ranking(url, key)
+        if result:
+            rankings[key] = result
+    
+    return rankings
+
+
+def update_citations_file(repec_stats: dict, rankings: dict = None) -> bool:
     """Update the citations.yml file with new RePEc statistics."""
     
     if not CITATIONS_FILE.exists():
@@ -177,6 +244,28 @@ def update_citations_file(repec_stats: dict) -> bool:
             'last_updated': today,
         })
         
+        # Add rankings if available
+        if rankings:
+            data['repec']['rankings'] = {}
+            if 'software_global' in rankings:
+                data['repec']['rankings']['software_global'] = {
+                    'rank': rankings['software_global']['rank'],
+                    'description': 'Global ranking for software downloads',
+                    'url': RANKING_URLS['software_global'],
+                }
+            if 'software_us' in rankings:
+                data['repec']['rankings']['software_us'] = {
+                    'rank': rankings['software_us']['rank'],
+                    'description': 'US ranking for software downloads',
+                    'url': RANKING_URLS['software_us'],
+                }
+            if 'all_works_global' in rankings:
+                data['repec']['rankings']['all_works_global'] = {
+                    'rank': rankings['all_works_global']['rank'],
+                    'description': 'Global ranking for all works downloads',
+                    'url': RANKING_URLS['all_works_global'],
+                }
+        
         # Write back with nice formatting
         with open(CITATIONS_FILE, 'w', encoding='utf-8') as f:
             yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False, width=120)
@@ -202,8 +291,11 @@ def main():
         print("\n✗ Failed to fetch RePEc statistics")
         sys.exit(1)
     
+    # Fetch rankings
+    rankings = fetch_all_rankings()
+    
     # Update file
-    if update_citations_file(repec_stats):
+    if update_citations_file(repec_stats, rankings):
         print("\n✓ Done! Review changes and commit if correct.")
     else:
         print("\n✗ Failed to update citations file")

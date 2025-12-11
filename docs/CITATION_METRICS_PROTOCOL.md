@@ -15,6 +15,14 @@ This document outlines the protocol for updating publication statistics on jpazv
 | **Scopus** | (Author ID needed) | h-index, citations, documents |
 | **Web of Science** | (ResearcherID needed) | h-index, citations |
 
+### RePEc Ranking Pages
+
+| Ranking | URL | Description |
+|---------|-----|-------------|
+| **Software (Global)** | https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all | Top software authors worldwide |
+| **Software (US)** | https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us | Top software authors in US |
+| **All Works (Global)** | https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=all | Top authors overall |
+
 ### Metric Definitions
 
 - **h-index**: Author has h papers with at least h citations each
@@ -99,6 +107,11 @@ Add this section after Publications:
 
 #### Option B: Automated Update (GitHub Actions)
 
+The automated pipeline fetches:
+1. **Author statistics** from `http://logec.repec.org/RAS/pwa88.htm`
+2. **Global software ranking** from LogEc ranking pages
+3. **US software ranking** from LogEc ranking pages
+
 Create `.github/workflows/update-citations.yml`:
 ```yaml
 name: Update Citation Metrics
@@ -123,10 +136,10 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install scholarly requests pyyaml
+          pip install requests beautifulsoup4 pyyaml
       
-      - name: Fetch Google Scholar metrics
-        run: python scripts/fetch_scholar_metrics.py
+      - name: Fetch RePEc statistics and rankings
+        run: python scripts/fetch_repec_stats.py
       
       - name: Commit changes
         run: |
@@ -135,6 +148,37 @@ jobs:
           git add _data/citations.yml
           git diff --staged --quiet || git commit -m "chore: Update citation metrics [skip ci]"
           git push
+```
+
+### Data Structure
+
+The `_data/citations.yml` file stores:
+
+```yaml
+repec:
+  # Individual category stats
+  working_papers:
+    downloads_12mo: 124
+    downloads_total: 4833
+    abstract_views_12mo: 569
+    abstract_views_total: 15903
+  software:
+    downloads_12mo: 444
+    downloads_total: 26886
+    # ... etc
+  
+  # Totals
+  total_downloads_12mo: 590
+  total_downloads_all_time: 32265
+  
+  # Rankings
+  rankings:
+    software_global:
+      rank: 27
+      description: "Global ranking for software downloads (monthly)"
+    software_us:
+      rank: 10
+      description: "US ranking for software downloads (monthly)"
 ```
 
 ---
@@ -170,7 +214,45 @@ Please update the _data/citations.yml file with these values.
 | About page | `_pages/about.md` |
 | Schema.org data | `_includes/person-schema.html` |
 | Automation | `.github/workflows/update-citations.yml` |
-| Fetch script | `scripts/fetch_scholar_metrics.py` |
+| RePEc fetch script | `scripts/fetch_repec_stats.py` |
+| Scholar fetch script | `scripts/fetch_scholar_metrics.py` |
+| Python requirements | `scripts/requirements.txt` |
+
+---
+
+## Automated Pipeline
+
+### What the Script Fetches
+
+The `scripts/fetch_repec_stats.py` script automatically retrieves:
+
+1. **Author Statistics** (from LogEc)
+   - Working papers: downloads & views (12mo + total)
+   - Journal articles: downloads & views (12mo + total)
+   - Books: downloads & views (12mo + total)
+   - Chapters: downloads & views (12mo + total)
+   - Software: downloads & views (12mo + total)
+
+2. **Author Rankings**
+   - Global software downloads ranking
+   - US software downloads ranking
+   - Global all-works ranking
+
+### Running Locally
+
+```bash
+# Install dependencies
+pip install -r scripts/requirements.txt
+
+# Run the script
+python scripts/fetch_repec_stats.py
+```
+
+### GitHub Actions Schedule
+
+The workflow runs automatically:
+- **Weekly**: Every Monday at 6:00 AM UTC
+- **Manual**: Can be triggered via GitHub Actions "Run workflow" button
 
 ---
 
