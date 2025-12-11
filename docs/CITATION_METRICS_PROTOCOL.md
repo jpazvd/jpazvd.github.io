@@ -320,3 +320,17 @@ git push origin source
 - [RePEc/IDEAS Profile](https://ideas.repec.org/e/pwa88.html)
 - [ORCID Profile](https://orcid.org/0000-0003-2111-0596)
 - [scholarly Python package](https://github.com/scholarly-python-package/scholarly)
+
+---
+
+## Future Enhancements
+
+Potential additions to the pipeline (not yet implemented):
+
+- [ ] Track working papers rankings (global/US)
+- [ ] Track journal articles rankings (global/US)
+- [ ] Track books rankings
+- [ ] Add Google Scholar automated fetching (requires proxy handling)
+- [ ] Add Scopus/Web of Science integration
+- [ ] Display citation metrics on CV page with Liquid templates
+- [ ] Add citation trend charts/visualizations
