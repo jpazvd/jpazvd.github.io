@@ -36,11 +36,14 @@ AUTHOR_NAME = "Azevedo, João Pedro"
 LOGEC_STATS_URL = f"http://logec.repec.org/RAS/{REPEC_AUTHOR_ID}.htm"
 CITATIONS_FILE = Path(__file__).parent.parent / "_data" / "citations.yml"
 
-# Ranking URLs
+# Ranking URLs - both monthly (ld) and total (td) downloads
 RANKING_URLS = {
-    'software_global': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all',
-    'software_us': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us',
-    'all_works_global': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=all',
+    # Monthly downloads rankings
+    'software_global_monthly': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all',
+    'software_us_monthly': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us',
+    # Total downloads rankings (all-time)
+    'software_global_total': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all',
+    'software_us_total': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us',
 }
 
 
@@ -246,25 +249,18 @@ def update_citations_file(repec_stats: dict, rankings: dict = None) -> bool:
         
         # Add rankings if available
         if rankings:
-            data['repec']['rankings'] = {}
-            if 'software_global' in rankings:
-                data['repec']['rankings']['software_global'] = {
-                    'rank': rankings['software_global']['rank'],
+            data['repec']['rankings'] = {
+                'software_global': {
+                    'rank_monthly': rankings.get('software_global_monthly', {}).get('rank'),
+                    'rank_total': rankings.get('software_global_total', {}).get('rank'),
                     'description': 'Global ranking for software downloads',
-                    'url': RANKING_URLS['software_global'],
-                }
-            if 'software_us' in rankings:
-                data['repec']['rankings']['software_us'] = {
-                    'rank': rankings['software_us']['rank'],
+                },
+                'software_us': {
+                    'rank_monthly': rankings.get('software_us_monthly', {}).get('rank'),
+                    'rank_total': rankings.get('software_us_total', {}).get('rank'),
                     'description': 'US ranking for software downloads',
-                    'url': RANKING_URLS['software_us'],
-                }
-            if 'all_works_global' in rankings:
-                data['repec']['rankings']['all_works_global'] = {
-                    'rank': rankings['all_works_global']['rank'],
-                    'description': 'Global ranking for all works downloads',
-                    'url': RANKING_URLS['all_works_global'],
-                }
+                },
+            }
         
         # Write back with nice formatting
         with open(CITATIONS_FILE, 'w', encoding='utf-8') as f:
