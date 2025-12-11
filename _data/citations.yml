@@ -1,0 +1,41 @@
+# Citation Metrics
+# Last Updated: 2024-12-10
+# 
+# To update: Edit values below with current data from each platform
+# Then commit to source branch
+
+google_scholar:
+  profile_url: "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+  total_citations: null      # Update from Google Scholar
+  h_index: null              # Update from Google Scholar
+  i10_index: null            # Update from Google Scholar
+  citations_5yr: null        # Update from Google Scholar (last 5 years)
+  last_updated: "2024-12-10"
+
+repec:
+  profile_url: "https://ideas.repec.org/e/pwa88.html"
+  downloads_12mo: null       # Downloads in last 12 months
+  abstract_views: null       # Total abstract views
+  author_rank_percentile: null  # Top X% of authors
+  registered_works: null     # Number of works in RePEc
+  last_updated: "2024-12-10"
+
+orcid:
+  profile_url: "https://orcid.org/0000-0003-2111-0596"
+  orcid_id: "0000-0003-2111-0596"
+  works_count: null          # Number of works registered
+  last_updated: "2024-12-10"
+
+# Optional: Add other platforms as needed
+# scopus:
+#   author_id: null
+#   h_index: null
+#   citations: null
+#   documents: null
+#   last_updated: null
+
+# web_of_science:
+#   researcher_id: null
+#   h_index: null
+#   citations: null
+#   last_updated: null

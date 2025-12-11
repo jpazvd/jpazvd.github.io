@@ -133,6 +133,27 @@ Note: On Windows, use WSL or ensure Ruby DevKit is properly installed.
 - Includes: `lowercase-with-dashes.html`
 - Images: `descriptive-name.png` (prefer PNG or WebP)
 
+## Citation Metrics Updates
+
+When asked to update publication statistics:
+
+1. **Check the protocol**: See `docs/CITATION_METRICS_PROTOCOL.md`
+2. **Data sources**:
+   - Google Scholar: https://scholar.google.com/citations?user=lTKXA78AAAAJ
+   - RePEc/IDEAS: https://ideas.repec.org/e/pwa88.html
+   - ORCID: https://orcid.org/0000-0003-2111-0596
+3. **Update file**: `_data/citations.yml`
+4. **Automated script**: `scripts/fetch_scholar_metrics.py`
+
+### Prompt Template for Updates
+```
+Update my citation metrics with these values:
+- Google Scholar citations: [VALUE]
+- h-index: [VALUE]
+- i10-index: [VALUE]
+- RePEc downloads: [VALUE]
+```
+
 ## When Editing This Site
 
 ### Do
