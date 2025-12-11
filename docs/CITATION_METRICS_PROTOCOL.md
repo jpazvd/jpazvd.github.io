@@ -11,10 +11,23 @@ This document outlines the protocol for updating publication statistics on jpazv
 | **Google Scholar** | https://scholar.google.com/citations?user=lTKXA78AAAAJ | Citations, h-index, i10-index, per-paper citations |
 | **RePEc/IDEAS** | https://ideas.repec.org/e/pwa88.html | Downloads, citations, rankings, abstract views |
 | **World Bank OKR** | https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257 | Publication count (downloads require auth) |
+| **World Bank Blogs** | https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo | Blog posts by channel |
 | **ORCID** | https://orcid.org/0000-0003-2111-0596 | Verified publication list, employment history |
 | **ResearchGate** | (if applicable) | Reads, citations, Research Interest score |
 | **Scopus** | (Author ID needed) | h-index, citations, documents |
 | **Web of Science** | (ResearcherID needed) | h-index, citations |
+
+### Current Statistics (as of December 2025)
+
+| Source | Key Metric | Value |
+|--------|------------|-------|
+| Google Scholar | Total Citations | 5,555 |
+| Google Scholar | h-index | 30 |
+| Google Scholar | i10-index | 62 |
+| RePEc | Total Downloads (all time) | 32,265 |
+| RePEc | Software Rankings (US) | #6 total downloads |
+| World Bank OKR | Publications | 34 |
+| World Bank Blogs | Blog Posts | 29 (24 EN + 5 translations) |
 
 ### RePEc Ranking Pages
 
@@ -227,6 +240,9 @@ Please update the _data/citations.yml file with these values.
 | Purpose | File Path |
 |---------|-----------|
 | Citation data | `_data/citations.yml` |
+| OKR publications list | `_data/okr_publications.yml` |
+| World Bank blog list | `_data/worldbank_blogs.yml` |
+| World Bank blog content | `_data/worldbank_blogs_full.yml` |
 | CV display | `_pages/cv.md` |
 | About page | `_pages/about.md` |
 | Schema.org data | `_includes/person-schema.html` |
@@ -234,6 +250,8 @@ Please update the _data/citations.yml file with these values.
 | RePEc fetch script | `scripts/fetch_repec_stats.py` |
 | Scholar fetch script | `scripts/fetch_scholar_metrics.py` |
 | World Bank OKR script | `scripts/fetch_worldbank_okr.py` |
+| World Bank Blogs script | `scripts/fetch_worldbank_blogs.py` |
+| Blog content script | `scripts/fetch_blog_content.py` |
 | Python requirements | `scripts/requirements.txt` |
 
 ---
@@ -246,7 +264,9 @@ Please update the _data/citations.yml file with these values.
 |--------|--------|----------------|
 | `fetch_repec_stats.py` | LogEc/RePEc | Downloads, views, rankings by category |
 | `fetch_scholar_metrics.py` | Google Scholar | Citations, h-index, i10-index, yearly data |
-| `fetch_worldbank_okr.py` | World Bank OKR | Publication count via DSpace API |
+| `fetch_worldbank_okr.py` | World Bank OKR | Publication count, metadata, abstracts via DSpace API |
+| `fetch_worldbank_blogs.py` | World Bank Blogs | Blog posts via Blogs API (29 posts) |
+| `fetch_blog_content.py` | World Bank Blogs | Full blog content scraping |
 
 ### What `fetch_repec_stats.py` Retrieves
 
@@ -283,6 +303,60 @@ Please update the _data/citations.yml file with these values.
 - **scholarly library**: Falls back if no API key (may be blocked)
 - **Manual input**: Use `--manual` flag for interactive mode
 
+### What `fetch_worldbank_okr.py` Retrieves
+
+1. **Publication Metadata** (via DSpace 7 REST API)
+   - Publication count (34 publications)
+   - Title, authors, year, type
+   - DOI and handle links
+   - Abstracts (truncated to 500 chars)
+
+2. **Authorship Statistics**
+   - Solo vs co-authored breakdown
+   - First author count
+   - Top co-authors with counts
+   - Unique co-author count (76)
+
+3. **Publication Types**
+   - Working papers: 16
+   - Journal articles: 2
+   - Reports: 1
+   - Briefs: 1
+   - Other: 14
+
+**Output Files:**
+- `_data/citations.yml` (statistics only)
+- `_data/okr_publications.yml` (full publication list with abstracts)
+
+### What `fetch_worldbank_blogs.py` Retrieves
+
+1. **Blog Post Metadata** (via World Bank Blogs API)
+   - 29 total posts (24 English + 5 translations)
+   - Title, URL, date, channel
+   - Authors and co-authors
+   - Topics and descriptions
+
+2. **Channel Distribution**
+   - Education for Global Development: 14
+   - Let's Talk Development: 8
+   - Data Blog: 3
+   - Latin America and Caribbean: 2
+   - All About Finance: 1
+   - Voices: 1
+
+3. **Timeline**
+   - First post: 2012
+   - Latest post: 2023
+
+**API Details:**
+- Endpoint: `https://webapi.worldbank.org/aemsite/blogs/global/search`
+- Key: `a02440fa123c4740a83ed288591eafe4`
+- Author GUID: `51402549393fa514d4308c0d3cb9c35d`
+
+**Output Files:**
+- `_data/worldbank_blogs.yml` (metadata only)
+- `_data/worldbank_blogs_full.yml` (with full content)
+
 ### Running Locally
 
 ```bash
@@ -299,6 +373,18 @@ python scripts/fetch_scholar_metrics.py
 
 # Option 2: Manual input mode
 python scripts/fetch_scholar_metrics.py --manual
+
+# Run World Bank OKR script
+python scripts/fetch_worldbank_okr.py          # Stats only
+python scripts/fetch_worldbank_okr.py --list   # Export full list with abstracts
+
+# Run World Bank Blogs script
+python scripts/fetch_worldbank_blogs.py                    # Stats only
+python scripts/fetch_worldbank_blogs.py --list             # Export to YAML
+python scripts/fetch_worldbank_blogs.py --update-citations # Update citations.yml
+
+# Fetch full blog content
+python scripts/fetch_blog_content.py           # Creates worldbank_blogs_full.yml
 ```
 
 **Windows PowerShell:**
@@ -379,6 +465,7 @@ git push origin source
 - [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ)
 - [RePEc/IDEAS Profile](https://ideas.repec.org/e/pwa88.html)
 - [World Bank OKR Profile](https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257)
+- [World Bank Blogs Author Page](https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo)
 - [ORCID Profile](https://orcid.org/0000-0003-2111-0596)
 - [scholarly Python package](https://github.com/scholarly-python-package/scholarly)
 
@@ -391,6 +478,9 @@ git push origin source
 - [x] Track abstract views rankings (global/US)
 - [x] Track work counts by category
 - [x] World Bank OKR publication count (via DSpace API)
+- [x] World Bank OKR publication metadata and abstracts
+- [x] World Bank Blogs harvesting (via Blogs API)
+- [x] Full blog content extraction
 
 **Potential additions:**
 - [ ] Track working papers rankings (global/US)
@@ -400,3 +490,4 @@ git push origin source
 - [ ] Add Scopus/Web of Science integration
 - [ ] Display citation metrics on CV page with Liquid templates
 - [ ] Add citation trend charts/visualizations
+- [ ] UNICEF publications harvesting
