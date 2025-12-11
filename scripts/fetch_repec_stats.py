@@ -36,14 +36,18 @@ AUTHOR_NAME = "Azevedo, João Pedro"
 LOGEC_STATS_URL = f"http://logec.repec.org/RAS/{REPEC_AUTHOR_ID}.htm"
 CITATIONS_FILE = Path(__file__).parent.parent / "_data" / "citations.yml"
 
-# Ranking URLs - both monthly (ld) and total (td) downloads
+# Ranking URLs
+# Sorting options: ld=monthly downloads, td=total downloads, ta=total abstract views
 RANKING_URLS = {
     # Monthly downloads rankings
-    'software_global_monthly': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all',
-    'software_us_monthly': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us',
+    'software_global_monthly_downloads': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all',
+    'software_us_monthly_downloads': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us',
     # Total downloads rankings (all-time)
-    'software_global_total': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all',
-    'software_us_total': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us',
+    'software_global_total_downloads': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all',
+    'software_us_total_downloads': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us',
+    # Total abstract views rankings (all-time)
+    'software_global_total_abstract_views': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all',
+    'software_us_total_abstract_views': 'https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us',
 }
 
 
@@ -251,14 +255,16 @@ def update_citations_file(repec_stats: dict, rankings: dict = None) -> bool:
         if rankings:
             data['repec']['rankings'] = {
                 'software_global': {
-                    'rank_monthly': rankings.get('software_global_monthly', {}).get('rank'),
-                    'rank_total': rankings.get('software_global_total', {}).get('rank'),
-                    'description': 'Global ranking for software downloads',
+                    'rank_monthly_downloads': rankings.get('software_global_monthly_downloads', {}).get('rank'),
+                    'rank_total_downloads': rankings.get('software_global_total_downloads', {}).get('rank'),
+                    'rank_total_abstract_views': rankings.get('software_global_total_abstract_views', {}).get('rank'),
+                    'description': 'Global ranking for software',
                 },
                 'software_us': {
-                    'rank_monthly': rankings.get('software_us_monthly', {}).get('rank'),
-                    'rank_total': rankings.get('software_us_total', {}).get('rank'),
-                    'description': 'US ranking for software downloads',
+                    'rank_monthly_downloads': rankings.get('software_us_monthly_downloads', {}).get('rank'),
+                    'rank_total_downloads': rankings.get('software_us_total_downloads', {}).get('rank'),
+                    'rank_total_abstract_views': rankings.get('software_us_total_abstract_views', {}).get('rank'),
+                    'description': 'US ranking for software',
                 },
             }
         

@@ -50,17 +50,21 @@ repec:
   ranking_note: "Top 5% of authors by downloads and abstract views (12 months)"
   rankings:
     software_global:
-      rank_monthly: 27
-      rank_total: 19
-      description: "Global ranking for software downloads"
-      url_monthly: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all"
-      url_total: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all"
+      rank_monthly_downloads: 27
+      rank_total_downloads: 19
+      rank_total_abstract_views: 17
+      description: "Global ranking for software"
+      url_monthly_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all"
+      url_total_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all"
+      url_total_abstract_views: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all"
     software_us:
-      rank_monthly: 10
-      rank_total: 6
-      description: "US ranking for software downloads"
-      url_monthly: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us"
-      url_total: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us"
+      rank_monthly_downloads: 10
+      rank_total_downloads: 6
+      rank_total_abstract_views: 6
+      description: "US ranking for software"
+      url_monthly_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us"
+      url_total_downloads: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us"
+      url_total_abstract_views: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us"
   registered_works: 78              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
   last_updated: "2024-12-10"
 
