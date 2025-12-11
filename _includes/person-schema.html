@@ -1,0 +1,63 @@
+<!-- Enhanced Person Schema for Academic Profile -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ site.url }}/#person",
+  "name": "{{ site.author.name }}",
+  "givenName": "João Pedro",
+  "familyName": "Azevedo",
+  "jobTitle": "Chief Statistician",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/images/{{ site.author.avatar }}",
+  "sameAs": [
+    "https://twitter.com/jpazvd",
+    "https://github.com/jpazvd",
+    "https://www.linkedin.com/in/jpazvd",
+    "https://scholar.google.com/citations?user=lTKXA78AAAAJ",
+    "https://orcid.org/0000-0002-3844-215X",
+    "https://ideas.repec.org/e/pwa88.html",
+    "https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "UNICEF",
+    "url": "https://www.unicef.org"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Newcastle University",
+      "url": "https://www.ncl.ac.uk"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidade Federal Fluminense"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidade Federal do Rio de Janeiro"
+    }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "degree",
+    "name": "PhD in Economics"
+  },
+  "knowsAbout": [
+    "Learning Poverty",
+    "Education Economics",
+    "Development Economics",
+    "Poverty Measurement",
+    "Child Statistics",
+    "Sustainable Development Goals",
+    "Stata Programming",
+    "Welfare Measurement"
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Brazil"
+  }
+}
+</script>

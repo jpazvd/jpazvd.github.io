@@ -1,260 +1,31 @@
-##############################
-# SECURITY-FIRST GITIGNORE CONFIGURATION
-# Following "deny all, allow specific" approach for academic Jekyll site
-##############################
-
-##############################
-# Jekyll build artifacts
-##############################
+# Jekyll build output
 _site/
-.jekyll-cache/
 .sass-cache/
+.jekyll-cache/
 .jekyll-metadata
 
-##############################
-# Ruby/Bundler dependencies and cache
-##############################
-/.bundle/
-/vendor/
-Gemfile.local
-Gemfile.local.lock
-.ruby-version
+# Backup files (commented-out sample content)
+*.bak
 
-##############################
-# Node/npm (if used for tooling)
-##############################
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
+# Environment variables (API keys, secrets)
+.env
+.env.local
+.env.*.local
 
-##############################
-# OS/editor cruft
-##############################
+# Local development
+*.log
+
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
 *.swp
 *.swo
-*.tmp
 *~
 
-##############################
-# Security: Credentials and API keys
-##############################
-# Environment files
-.env*
-!.env.example
-
-# API keys and tokens
-*api*key*
-*token*
-*secret*
-*credential*
-
-# SSH and encryption keys
-*.pem
-*.p12
-*.pfx
-*.key
-*.crt
-*.cer
-id_rsa*
-id_dsa*
-id_ecdsa*
-id_ed25519*
-
-# OAuth and authentication
-.auth*
-*oauth*
-*firebase*
-*credentials*
-
-##############################
-# Academic data safeguards
-##############################
-# Protect research data by default, allow metadata only
-_data/**/*.csv
-_data/**/*.xlsx
-_data/**/*.xls
-_data/**/*.dta
-_data/**/*.sav
-_data/**/*.rds
-_data/**/*.json
-!_data/citations.yml
-!_data/authors.yml
-!_data/navigation.yml
-!_data/ui-text.yml
-
-# Protect raw research files
-data/
-datasets/
-raw_data/
-survey_data/
-*confidential*
-*sensitive*
-*personal*
-
-##############################
-# Development and backup files
-##############################
-# Python (for scripts/analytics)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-.pytest_cache/
-*.egg-info/
-
-# R files (if used for analysis)
-.Rproj.user/
-.Rhistory
-.RData
-.Ruserdata
-*.Rproj
-
-# Stata files
-*.smcl
-*.gph
-
-# Backup and temporary files
-*.bak
-*.backup
-*.orig
-*.rej
-*~
-*.tmp
-*.temp
-
-# LaTeX intermediate files (block these)
-*.aux
-*.bbl
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.synctex.gz
-*.toc
-*.lof
-*.lot
-*.nav
-*.snm
-*.vrb
-*.bcf
-*.run.xml
-*.fdb_latexmk
-*.figlist
-*.makefile
-*.figlist
-*.figlist
-
-##############################
-# Configuration files with potential secrets
-##############################
-# Local configuration overrides
-_config.local.yml
-_config.secret.yml
-*config*local*
-*config*secret*
-
-# Database and connection files
-*.db
-*.sqlite
-*.sqlite3
-database.yml
-connection.yml
-
-##############################
-# Logs and debugging (general)
-##############################
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-debug.log
-error.log
-logs/
-debug/
-trace/
-
-##############################
-# Archives and large files
-##############################
-*.zip
-*.tar
-*.tar.gz
-*.rar
-*.7z
-
-##############################
-# IDE and tool-specific files
-##############################
-# VS Code
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# JetBrains IDEs
-.idea/
-*.iml
-*.iws
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Atom
-.atom/
-
-##############################
-# Documentation exceptions (allowed)
-##############################
-# These files are explicitly allowed despite containing keywords that might trigger security filters
-!README.md
-!LICENSE
-!CHANGELOG.md
-!CONTRIBUTING.md
-
-##############################
-# Academic website specific allowances
-##############################
-# Bibliography and academic content (explicitly allowed)
-!_bibliography/*.bib
-!_bibliography/*.csl
-!_cv/**/*.md
-!_posts/**/*.md
-!_pages/**/*.md
-!_includes/**/*.html
-!_layouts/**/*.html
-!assets/**/*.css
-!assets/**/*.js
-!assets/**/*.png
-!assets/**/*.jpg
-!assets/**/*.pdf
-
-# LaTeX and academic files (explicitly allowed)
-!**/*.bib
-!**/*.tex
-!**/*.pdf
-!**/*.csl
-
-##############################
-# END OF SECURITY CONFIGURATION
-# This gitignore uses a layered approach:
-# 1. Block common development artifacts
-# 2. Block all credential and key patterns
-# 3. Block research data by default
-# 4. Block LaTeX intermediate files
-# 5. Explicitly allow known safe academic content (.bib, .tex, .pdf)
-##############################
-
+# Ruby/Bundler
+vendor/
+.bundle/

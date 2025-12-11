@@ -4,6 +4,7 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
+description: "João Pedro Azevedo is UNICEF's Chief Statistician, leading global child data initiatives. PhD economist with 70+ publications in Lancet, World Development."
 redirect_from: 
   - /about/
   - /about.html

@@ -1,0 +1,460 @@
+metadata:
+  author: João Pedro Azevedo
+  source: World Bank Blogs
+  source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
+  api_url: https://webapi.worldbank.org/aemsite/blogs/global/search
+  last_updated: '2025-12-11'
+  total_posts: 29
+  english_posts: 24
+  translations: 5
+posts:
+- title: Why hasn’t the pandemic sparked more concern for learning losses in Latin
+    America?  The perils of an invisible crisis
+  url: https://blogs.worldbank.org/en/education/why-hasnt-pandemic-sparked-more-concern-learning-losses-latin-america-perils-invisible
+  date: '2023-04-20'
+  year: 2023
+  channel: Education for Global Development
+  language: en
+  description: There is now overwhelming evidence that children’s learning plummeted
+    during the COVID-19 pandemic, particularly in Latin America. Surprisingly, we
+    found that there has been little public outcry in the region for school systems
+    to act on learning recovery compared to the rest of the world.
+  authors:
+  - João Pedro Azevedo
+  - Gabriel Demombynes
+  - Yi  Ning Wong
+  topics:
+  - Education
+- title: School closures and longer-term implications of COVID-19 for inter-generational
+    mobility
+  url: https://blogs.worldbank.org/en/developmenttalk/school-closures-and-longer-term-implications-covid-19-inter-generational-mobility
+  date: '2023-04-20'
+  year: 2023
+  channel: Let's Talk Development
+  language: en
+  description: In the absence of remedial measures, learning losses are likely to
+    significantly reduce intergenerational mobility in a wide range of countries.
+  authors:
+  - João Pedro Azevedo
+  - Alexandru  Cojocaru
+  - Veronica  Montalva
+  - Ambar Narayan
+  topics:
+  - Education
+- title: The global education crisis – even more severe than previously estimated
+  url: https://blogs.worldbank.org/en/education/global-education-crisis-even-more-severe-previously-estimated
+  date: '2022-01-04'
+  year: 2022
+  channel: Education for Global Development
+  language: en
+  description: 'The State of the Global Education Crisis: A Path to Recovery report
+    (produced jointly by UNESCO, UNICEF, and the World Bank), we sounded the alarm:
+    this generation of students now risks losing $17 trillion in lifetime earnings
+    in present value, or about 14 percent of today’s glob'
+  authors:
+  - Ellinore  Carroll
+  - João Pedro Azevedo
+  - Jessica Bergmann
+  - Matt  Brossard
+  - Gwang- Chol Chang
+  - Borhene Chakroun
+  - Marie-Helene Cloutier
+  - Suguru Mizunoya
+  - Nicolas  Reuge
+  - Halsey Rogers
+  topics:
+  - Education
+- title: 'Five lessons from remote learning during COVID-19 '
+  url: https://blogs.worldbank.org/en/education/five-lessons-remote-learning-during-covid-19
+  date: '2021-11-18'
+  year: 2021
+  channel: Education for Global Development
+  language: en
+  description: Five lessons from remote learning during COVID-19
+  authors:
+  - Amer Hasan
+  - Cristóbal Cobo
+  - João Pedro Azevedo
+  - Alison Gilberto
+  - Alberto Munoz-Najar
+  - Maryam Akmal
+  topics:
+  - Digital Development
+  - Education
+- title: Will every child be able to read by 2030?
+  url: https://blogs.worldbank.org/en/developmenttalk/will-every-child-be-able-read-2030
+  date: '2021-05-03'
+  year: 2021
+  channel: Let's Talk Development
+  language: en
+  description: Will every child be able to read by 2030?
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  - Silvia Montoya
+  - Reema Nayar
+  - Halsey Rogers
+  - Jaime Saavedra
+  - Brian  Stacy
+  topics:
+  - Education
+  - Poverty
+- title: 'Building Back Better After COVID-19: The Importance of Tracking Learning
+    Inequality'
+  url: https://blogs.worldbank.org/en/education/building-back-better-after-covid-19-importance-tracking-learning-inequality
+  date: '2021-03-31'
+  year: 2021
+  channel: Education for Global Development
+  language: en
+  description: As school systems reopen after extended closures due to COVID-19, it
+    will be critical to meet students where they are and to monitor changes in the
+    learning distribution among the poor, given that evidence suggests that a significant
+    source of inequality is within groups.
+  authors:
+  - João Pedro Azevedo
+  - Silvia Montoya
+  topics:
+  - Education
+- title: How the SDG 4.1.1 Framework and Learning Poverty Can Help Countries Focus
+    Their Education Policy Response to COVID-19
+  url: https://blogs.worldbank.org/en/education/how-sdg-411-framework-and-learning-poverty-can-help-countries-focus-their-education
+  date: '2021-02-25'
+  year: 2021
+  channel: Education for Global Development
+  language: en
+  description: Most governments and development partners are working on identifying,
+    protecting, and supporting learning of the most vulnerable members of the COVID-19
+    generation.
+  authors:
+  - Silvia Montoya
+  - João Pedro Azevedo
+  topics:
+  - Education
+  - Fragility, Conflict and Violence
+- title: 'Multiple exposures to learning assessments: A photo mosaic from Brazil'
+  url: https://blogs.worldbank.org/en/education/multiple-exposures-learning-assessments-photo-mosaic-brazil
+  date: '2021-01-04'
+  year: 2021
+  channel: Education for Global Development
+  language: en
+  description: Measuring learning is a key part of evidence-based education policy,
+    and the choices of measures matter.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  - Andre Loureiro
+  topics:
+  - Education
+- title: 'Múltiplas exposições a avaliações de aprendizagem: um mosaico fotográfico
+    do Brasil'
+  url: https://blogs.worldbank.org/pt/education/multiplas-exposicoes-avaliacoes-de-aprendizagem-um-mosaico-fotografico-do-brasil
+  date: '2021-01-04'
+  year: 2021
+  channel: Education for Global Development
+  language: pt
+  description: A mensuração da aprendizagem é parte fundamental de uma política educacional
+    baseada em evidências. Neste contexto, as escolhas de medidas importam. E muito.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  - Andre Loureiro
+  topics:
+  - Education
+- title: How could COVID-19 hinder progress with Learning Poverty?  Some initial simulations
+  url: https://blogs.worldbank.org/en/education/how-could-covid-19-hinder-progress-learning-poverty-some-initial-simulations
+  date: '2020-12-15'
+  year: 2020
+  channel: Education for Global Development
+  language: en
+  description: Even before COVID-19 forced a massive closure of schools around the
+    globe, the world was in the middle of a learning crisis that threatened efforts
+    to build human capital—the skills and know-how needed for the jobs of the future.
+  authors:
+  - João Pedro Azevedo
+  topics:
+  - Education
+- title: 全民学习：国内各地的学习效果存在差异
+  url: https://blogs.worldbank.org/zh/voices/quanminxuexiguoneigededexuexixiaoguocunzaichayi
+  date: '2020-11-12'
+  year: 2020
+  channel: Voices
+  language: zh
+  description: 努力实现各组别学生学习均等化很有必要，但还不够。我们也必须推广相关方案和干预措施，以应对来自同一所学校和同一个人群的类似学生之间存在的差异。在这方面，我们拥有很多工具，但需要面向我们的孩子使用这些工具。
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+- title: 'Learning for All: Within-country learning inequality'
+  url: https://blogs.worldbank.org/en/education/learning-all-within-country-learning-inequality
+  date: '2020-11-12'
+  year: 2020
+  channel: Education for Global Development
+  language: en
+  description: Efforts to equalize learning across groups are essential but not sufficient.
+    We must also scale programs and interventions that tackle inequality of similar
+    students within schools and demographic groups. We have the tools for this, and
+    we owe it to our children.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+- title: 'Learning for All: Beyond an Average Score'
+  url: https://blogs.worldbank.org/en/education/learning-all-beyond-average-score
+  date: '2020-10-22'
+  year: 2020
+  channel: Education for Global Development
+  language: en
+  description: Learning losses due to the pandemic will likely be large. We are only
+    starting to grasp how learning inequalities may play out. Looking at historical
+    data, can we find patterns that can help us better plan our actions in the near
+    future?
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+- title: 'Aprendizagem para todos: Indo além de uma pontuação média'
+  url: https://blogs.worldbank.org/pt/education/aprendizagem-para-todos-indo-alem-de-uma-pontuacao-media
+  date: '2020-10-22'
+  year: 2020
+  channel: Education for Global Development
+  language: pt
+  description: Antes da COVID-19, o mundo já estava em uma crise de aprendizado.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+- title: Learning losses due to COVID19 could add up to $10 trillion
+  url: https://blogs.worldbank.org/en/education/learning-losses-due-covid19-could-add-10-trillion
+  date: '2020-09-10'
+  year: 2020
+  channel: Education for Global Development
+  language: en
+  description: COVID-related school closures are forcing countries even further off-track
+    to achieving their learning goals. The students currently in school stand to lose
+    $10 trillion in labor earnings over their work life.
+  authors:
+  - João Pedro Azevedo
+  - Amer Hasan
+  - Koen Geven
+  - Diana Goldemberg
+  - Syedah Aroob Iqbal
+  topics:
+  - Education
+- title: New release of WBOPENDATA Stata module
+  url: https://blogs.worldbank.org/en/opendata/new-release-wbopendata-stata-module
+  date: '2020-04-24'
+  year: 2020
+  channel: Data Blog
+  language: en
+  description: The wbopendata Stata module has been updated to Version 16.2.1. The
+    module can now be installed or updated directly from Stata's Statistical Software
+    Components (SSC) repository.
+  authors:
+  - João Pedro Azevedo
+- title: Мы должны избегать сглаживания кривой обучаемости – какими могут быть потери
+    в процессе обучения во время закрытия школ
+  url: https://blogs.worldbank.org/ru/education/my-dolzhny-izbegat-sglazhivaniya-krivoy-obuchaemosti-kakimi-mogut-byt-poteri-v-processe
+  date: '2020-04-13'
+  year: 2020
+  channel: Education for Global Development
+  language: ru
+  description: Необходимой стратегией сокращения распространения нового коронавируса
+    (COVID-19) было социальное дистанцирование, что заставило большинство стран закрыть
+    свои школы.
+  authors:
+  - Syedah Aroob Iqbal
+  - João Pedro Azevedo
+  - Koen Geven
+  - Amer Hasan
+  - Harry A. Patrinos
+  topics:
+  - Education
+- title: We should avoid flattening the curve in education – Possible scenarios for
+    learning loss during the school lockdowns
+  url: https://blogs.worldbank.org/en/education/we-should-avoid-flattening-curve-education-possible-scenarios-learning-loss-during-school
+  date: '2020-04-13'
+  year: 2020
+  channel: Education for Global Development
+  language: en
+  description: Social distancing is a necessary strategy to reduce the spread of the
+    novel coronavirus (COVID-19). With 1.5 billion children out of school in 175 countries
+    (as of April 10), there are more and more concerns about the longer-term effects
+    that school closures will have on them.
+  authors:
+  - Syedah Aroob Iqbal
+  - João Pedro Azevedo
+  - Koen Geven
+  - Amer Hasan
+  - Harry A. Patrinos
+  topics:
+  - Education
+- title: 'Going municipal: Targeting deprivation with new evidence in Croatia'
+  url: https://blogs.worldbank.org/en/developmenttalk/going-municipal-targeting-deprivation-new-evidence-croatia
+  date: '2019-06-05'
+  year: 2019
+  channel: Let's Talk Development
+  language: en
+  authors:
+  - Paul Corral
+  - João Pedro Azevedo
+  - Jonathan Karver
+  - Reena  Badiani-Magnusson
+  topics:
+  - Poverty
+- title: April 2018 global poverty update from the World Bank
+  url: https://blogs.worldbank.org/en/developmenttalk/april-2018-global-poverty-update-world-bank
+  date: '2018-04-30'
+  year: 2018
+  channel: Let's Talk Development
+  language: en
+  description: 'In April, PovcalNet revised the World Bank’s global and regional poverty
+    estimates from 1981 to 2013. The next major update of global and regional poverty
+    estimates is scheduled for October 2018, when the global poverty estimates for
+    the reference year 2015 will be released. This will coincide with '
+  authors:
+  - Christoph Lakner
+  - João Pedro Azevedo
+  - Daniel Gerszon Mahler
+  - Espen Beer Prydz
+  topics:
+  - Poverty
+- title: Feeding the craving for precision on global poverty
+  url: https://blogs.worldbank.org/en/developmenttalk/feeding-craving-precision-global-poverty
+  date: '2017-12-07'
+  year: 2017
+  channel: Let's Talk Development
+  language: en
+  description: Online pundits, hurried journalists and policymakers love precision.
+    They crave numbers. Preferably exact numbers; ranges suggest uncertainty and make
+    them anxious. As a result,  they will love the World Poverty Clock (WPC), a new
+    website that claims to track progress towards ending global poverty i
+  authors:
+  - Francisco Ferreira
+  - João Pedro Azevedo
+  - Christoph Lakner
+  topics:
+  - Poverty
+- title: How equitable is access to finance in Turkey? Evidence from the latest Global
+    FINDEX
+  url: https://blogs.worldbank.org/en/allaboutfinance/how-equitable-access-finance-turkey-evidence-latest-global-findex
+  date: '2016-05-09'
+  year: 2016
+  channel: All About Finance
+  language: en
+  description: Access to finance is an important tool against poverty since it allows
+    for the smoothing of consumption. The equality of access amongst different groups
+    in the society is also crucial in terms of correctly allocating the positive benefits
+    of improved financial services. In a recent paper published i
+  authors:
+  - João Pedro Azevedo
+  - Osman Kaan Inan
+  - Judy Yang
+  topics:
+  - Financial Inclusion
+  - Financial Sector
+- title: How persistent is poverty in the short run?
+  url: https://blogs.worldbank.org/en/developmenttalk/how-persistent-poverty-short-run
+  date: '2016-02-24'
+  year: 2016
+  channel: Let's Talk Development
+  language: en
+  description: 'Poverty is often measured using repeated cross-sectional surveys that
+    provide a snapshot of the poverty status of a given household at a particular
+    point in time. Such designs call for interviewing different respondents in each
+    round, and because individuals or households are only observed once, we '
+  authors:
+  - João Pedro Azevedo
+  - William Seitz
+  topics:
+  - Poverty
+- title: Is Poverty Seasonal?
+  url: https://blogs.worldbank.org/en/developmenttalk/poverty-seasonal
+  date: '2016-02-18'
+  year: 2016
+  channel: Let's Talk Development
+  language: en
+  description: Many countries measure poverty using annualized survey data generated
+    on the basis of a one-time “snapshot” of household consumption. Such designs gather
+    information for a single period of reference of 30, 15 or 7 days, collected using
+    either a consumption diary or an interview recall approach. More
+  authors:
+  - João Pedro Azevedo
+  - William Seitz
+  topics:
+  - Agriculture and Food
+  - Poverty
+- title: 'Inequality at the very very very top: What does the Forbes Billionaires
+    database tell us?'
+  url: https://blogs.worldbank.org/en/developmenttalk/inequality-very-very-very-top-what-does-forbes-billionaires-database-tell-us
+  date: '2014-10-09'
+  year: 2014
+  channel: Let's Talk Development
+  language: en
+  description: Thinking about inequality is back in fashion! In its November 2013
+    outlook, the World Economic Forum called rising inequality the second biggest
+    risk for 2014-15. The 2014 English translation of French economist Thomas Piketty’s
+    “Capital in the 21st Century” became an instant bestseller among academ
+  authors:
+  - João Pedro Azevedo
+  - Minh Cong Nguyen
+  - Kimberly Bolch
+  topics:
+  - Jobs & Development
+- title: Wbopendata Stata Module Upgrade
+  url: https://blogs.worldbank.org/en/opendata/wbopendata-stata-module-upgrade
+  date: '2014-07-08'
+  year: 2014
+  channel: Data Blog
+  language: en
+  description: 'The wbopendata Stata module has been updated to Version 13. The module
+    can now be installed or updated directly from Stata''s Statistical Software Components (SSC)
+    repository. To install or update your current wbopendata Stata module, please
+    type the below text in the Stata command line: ssc install '
+  authors:
+  - João Pedro Azevedo
+- title: New Stata module released
+  url: https://blogs.worldbank.org/en/opendata/new-stata-module-released
+  date: '2013-02-06'
+  year: 2013
+  channel: Data Blog
+  language: en
+  description: A new Stata module wbopendata has been released. The module can be
+    installed or updated directly from within Stata using Statistical Software Components
+    (SSC) repository.The new features of this release include:Updated list of indicator,
+    with over 1, 000 new indicators, adding up to 7, 349 series;Ab
+  authors:
+  - João Pedro Azevedo
+- title: Mulheres latino-americanas fomentam a prosperidade da região
+  url: https://blogs.worldbank.org/pt/latinamerica/mulheres-latino-americanas-fomentam-a-prosperidade-da-regi-o
+  date: '2012-09-19'
+  year: 2012
+  channel: Latin America and Caribbean
+  language: pt
+  description: Also available in English, Spanish   As mulheres estão se tornando
+    progressivamente as parceiras mais importantes no desenvolvimento da América Latina.
+    Mães, estudantes, profissionais atuantes, mulheres de todas as origens são hoje
+    a força motora da revolução de gênero que contribuiu de modo bastant
+  authors:
+  - João Pedro Azevedo
+  - Louise Cord
+  topics:
+  - Gender
+- title: Latin American women driving region’s prosperity
+  url: https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity
+  date: '2012-09-12'
+  year: 2012
+  channel: Latin America and Caribbean
+  language: en
+  description: Also available in Portuguese, Spanish Women are increasingly becoming
+    Latin America's critical development partners. Moms, students, working professionals,
+    women from all walks of life, are a driving force behind a gender revolution that
+    has made huge contributions to our region's prosperity. Over t
+  authors:
+  - João Pedro Azevedo
+  - Louise Cord
+  topics:
+  - Gender

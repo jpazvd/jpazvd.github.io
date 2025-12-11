@@ -1,32 +1,163 @@
----
-# Citation metrics data linked to Google Scholar profile
-# Profile: https://scholar.google.com/citations?user=d4PhqKMAAAAJ
-
-summary:
-  total_citations: 5247  # Update from Google Scholar profile
-  h_index: 42           # Update from Google Scholar profile  
-  i10_index: 78         # Update from Google Scholar profile
-  fetched_at: "2025-09-17"
-
-# Google Scholar profile integration
 google_scholar:
-  profile_url: "https://scholar.google.com/citations?user=d4PhqKMAAAAJ"
-  profile_id: "d4PhqKMAAAAJ"
-
-# Individual paper citations (optional - update with real Google Scholar URLs)
-papers:
-  "azevedo2021simulating-the-pot":
-    citations: 156
-    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=d4PhqKMAAAAJ&citation_for_view=..."
-  
-  "azevedo2021the-state-of-the-g":
-    citations: 89
-    google_scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=d4PhqKMAAAAJ&citation_for_view=..."
-
-# Instructions for updating:
-# 1. Visit your Google Scholar profile: https://scholar.google.com/citations?user=d4PhqKMAAAAJ
-# 2. Update summary metrics with current values
-# 3. For individual papers, click on paper titles in Google Scholar to get specific URLs
-# 4. Update fetched_at date when you refresh the metrics
-
-# Add more papers as needed
+  profile_url: https://scholar.google.com/citations?user=lTKXA78AAAAJ
+  total_citations: 5555
+  h_index: 30
+  i10_index: 62
+  citations_5yr: 3691
+  h_index_5yr: 23
+  i10_index_5yr: 38
+  last_updated: '2025-12-10'
+  citations_by_year:
+    2006: 16
+    2007: 32
+    2008: 40
+    2009: 47
+    2010: 78
+    2011: 62
+    2012: 79
+    2013: 103
+    2014: 137
+    2015: 189
+    2016: 215
+    2017: 215
+    2018: 299
+    2019: 247
+    2020: 338
+    2021: 619
+    2022: 800
+    2023: 753
+    2024: 631
+    2025: 510
+  publication_count: 20
+repec:
+  profile_url: https://ideas.repec.org/e/pwa88.html
+  stats_url: http://logec.repec.org/RAS/pwa88.htm
+  working_papers:
+    count: 50
+    downloads_12mo: 124
+    downloads_total: 4833
+    abstract_views_12mo: 569
+    abstract_views_total: 15903
+  journal_articles:
+    count: 7
+    downloads_12mo: 10
+    downloads_total: 413
+    abstract_views_12mo: 79
+    abstract_views_total: 1558
+  books:
+    count: 3
+    downloads_12mo: 8
+    downloads_total: 81
+    abstract_views_12mo: 31
+    abstract_views_total: 309
+  chapters:
+    count: 2
+    downloads_12mo: 4
+    downloads_total: 52
+    abstract_views_12mo: 11
+    abstract_views_total: 386
+  software:
+    count: 22
+    downloads_12mo: 444
+    downloads_total: 26886
+    abstract_views_12mo: 1822
+    abstract_views_total: 111699
+  total_downloads_12mo: 590
+  total_downloads_all_time: 32265
+  total_abstract_views_12mo: 2512
+  total_abstract_views_all_time: 129855
+  ranking_note: Top 5% of authors by downloads and abstract views (12 months)
+  rankings:
+    software_global:
+      rank_monthly_downloads: 27
+      rank_total_downloads: 19
+      rank_total_abstract_views: 17
+      description: Global ranking for software
+      url_monthly_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all
+      url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all
+      url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all
+    software_us:
+      rank_monthly_downloads: 10
+      rank_total_downloads: 6
+      rank_total_abstract_views: 6
+      description: US ranking for software
+      url_monthly_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us
+      url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us
+      url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us
+  total_works: 84
+  last_updated: '2024-12-10'
+orcid:
+  profile_url: https://orcid.org/0000-0003-2111-0596
+  orcid_id: 0000-0003-2111-0596
+  works_count: null
+  last_updated: '2024-12-10'
+world_bank_okr:
+  profile_url: https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257
+  api_url: https://openknowledge.worldbank.org/server/api/core/items/360f7a2e-0784-56e1-acf4-7f805fd50257
+  author_id: 360f7a2e-0784-56e1-acf4-7f805fd50257
+  handle: 10986/38780
+  publication_count: 34
+  profile_linked_count: 29
+  search_count: 34
+  last_updated: '2025-12-11'
+  by_type:
+    working_paper: 16
+    journal_article: 2
+    report: 1
+    brief: 1
+    other: 14
+  timeline:
+    first_year: 2010
+    latest_year: 2023
+    active_years: 14
+  by_year:
+    '2023': 2
+    '2022': 1
+    '2021': 4
+    '2020': 4
+    '2018': 3
+    '2016': 5
+    '2015': 1
+    '2014': 5
+    '2013': 5
+    '2012': 3
+    '2010': 1
+  authorship:
+    solo_authored: 3
+    co_authored: 31
+    first_author: 8
+    unique_coauthors: 76
+  top_coauthors:
+  - name: Diana Goldemberg
+    count: 4
+  - name: Minh Cong Nguyen
+    count: 4
+  - name: Gabriela Inchauste
+    count: 4
+  - name: Maryam Akmal
+    count: 3
+  - name: Amer Hasan
+    count: 3
+  - name: Syedah Aroob Iqbal
+    count: 3
+  - name: Jaime Saavedra
+    count: 3
+  - name: Hiroki Uematsu
+    count: 3
+  doi_coverage: 100
+world_bank_blogs:
+  post_count: 29
+  english_posts: 24
+  translations: 5
+  source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
+  last_updated: '2025-12-11'
+  timeline:
+    first_year: 2012
+    latest_year: 2023
+  by_channel:
+    Education for Global Development: 14
+    Let's Talk Development: 8
+    Voices: 1
+    Data Blog: 3
+    All About Finance: 1
+    Latin America and Caribbean: 2

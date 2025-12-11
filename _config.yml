@@ -42,6 +42,21 @@ author:
   googlescholar          : "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
   researchgate           : "https://ideas.repec.org/e/pwa88.html"
 
+# Social/Schema.org configuration (enables Person JSON-LD)
+social:
+  type: Person
+  name: "João Pedro Azevedo"
+  links:
+    - "https://twitter.com/jpazvd"
+    - "https://github.com/jpazvd"
+    - "https://www.linkedin.com/in/jpazvd"
+    - "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+    - "https://orcid.org/0000-0002-3844-215X"
+    - "https://ideas.repec.org/e/pwa88.html"
+
+# Open Graph default image (for social sharing)
+og_image: "profile.png"
+
 # Reading Files
 include:
   - _pages
@@ -104,3 +119,16 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Scholar configuration
+scholar:
+  source: "_bibliography"
+  bibliography: "references.bib"  # Full publication list (1,431 lines)
+  style: apa  # You can change this based on your citation style preference (e.g., ieee, mla)
+  locale: en  # Adjust for language preference, if needed
+  bibliography_class: bibliography  # CSS class for bibliography
+  bibliography_template: "{{ reference }}."  # Template for formatting citations
+  sort_by: none  # Sort entries by (e.g., year, none)
+  suppress_errors: true  # Suppress any errors during generation
+
+

@@ -1,0 +1,93 @@
+# Update Citation Metrics
+# 
+# This workflow automatically fetches citation statistics from:
+# - RePEc/IDEAS (LogEc statistics) - always runs
+# - Google Scholar (via SerpAPI) - requires SERPAPI_KEY secret
+# - World Bank OKR (DSpace API) - always runs
+#
+# Schedule: Weekly on Monday at 6:00 AM UTC
+# Manual: Can be triggered via workflow_dispatch
+#
+# Setup for Google Scholar:
+# 1. Get a free API key at https://serpapi.com
+# 2. Add it as repository secret: Settings → Secrets → SERPAPI_KEY
+
+name: Update Citation Metrics
+
+on:
+  schedule:
+    # Run weekly on Monday at 6:00 AM UTC
+    - cron: '0 6 * * 1'
+  
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Which source to update'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - repec
+          - scholar
+          - okr
+          - all
+
+permissions:
+  contents: write
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: source
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+      
+      - name: Fetch RePEc statistics
+        if: github.event.inputs.source == 'repec' || github.event.inputs.source == 'all' || github.event.inputs.source == ''
+        run: python scripts/fetch_repec_stats.py
+      
+      - name: Fetch Google Scholar metrics
+        if: (github.event.inputs.source == 'scholar' || github.event.inputs.source == 'all' || github.event.inputs.source == '') && env.SERPAPI_KEY != ''
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/fetch_scholar_metrics.py
+      
+      - name: Fetch World Bank OKR statistics
+        if: github.event.inputs.source == 'okr' || github.event.inputs.source == 'all' || github.event.inputs.source == ''
+        run: python scripts/fetch_worldbank_okr.py
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet _data/citations.yml || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _data/citations.yml
+          git commit -m "chore: Update citation metrics [skip ci]
+          
+          Automated update from GitHub Actions.
+          Sources: RePEc/IDEAS, Google Scholar
+          Date: $(date -u +%Y-%m-%d)"
+          git push
+      
+      - name: No changes detected
+        if: steps.git-check.outputs.changed != 'true'
+        run: echo "No changes in citation metrics"
