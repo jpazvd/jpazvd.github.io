@@ -6,10 +6,18 @@
 
 google_scholar:
   profile_url: "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+  # All-time metrics
   total_citations: null      # Update from Google Scholar
   h_index: null              # Update from Google Scholar
   i10_index: null            # Update from Google Scholar
-  citations_5yr: null        # Update from Google Scholar (last 5 years)
+  # Last 5 years metrics
+  citations_5yr: null        # Citations since ~2020
+  h_index_5yr: null          # h-index since ~2020
+  i10_index_5yr: null        # i10-index since ~2020
+  # Optional: yearly breakdown
+  # citations_by_year:
+  #   2024: 0
+  #   2023: 0
   last_updated: "2024-12-10"
 
 repec:
