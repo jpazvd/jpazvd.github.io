@@ -3,6 +3,7 @@
 # This workflow automatically fetches citation statistics from:
 # - RePEc/IDEAS (LogEc statistics) - always runs
 # - Google Scholar (via SerpAPI) - requires SERPAPI_KEY secret
+# - World Bank OKR (DSpace API) - always runs
 #
 # Schedule: Weekly on Monday at 6:00 AM UTC
 # Manual: Can be triggered via workflow_dispatch
@@ -28,6 +29,7 @@ on:
         options:
           - repec
           - scholar
+          - okr
           - all
 
 permissions:
@@ -55,14 +57,18 @@ jobs:
           pip install -r scripts/requirements.txt
       
       - name: Fetch RePEc statistics
-        if: github.event.inputs.source != 'scholar'
+        if: github.event.inputs.source == 'repec' || github.event.inputs.source == 'all' || github.event.inputs.source == ''
         run: python scripts/fetch_repec_stats.py
       
       - name: Fetch Google Scholar metrics
-        if: github.event.inputs.source != 'repec' && env.SERPAPI_KEY != ''
+        if: (github.event.inputs.source == 'scholar' || github.event.inputs.source == 'all' || github.event.inputs.source == '') && env.SERPAPI_KEY != ''
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
         run: python scripts/fetch_scholar_metrics.py
+      
+      - name: Fetch World Bank OKR statistics
+        if: github.event.inputs.source == 'okr' || github.event.inputs.source == 'all' || github.event.inputs.source == ''
+        run: python scripts/fetch_worldbank_okr.py
       
       - name: Check for changes
         id: git-check

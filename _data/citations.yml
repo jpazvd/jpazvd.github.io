@@ -91,3 +91,10 @@ orcid:
   orcid_id: 0000-0003-2111-0596
   works_count: null
   last_updated: '2024-12-10'
+world_bank_okr:
+  profile_url: https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257
+  api_url: https://openknowledge.worldbank.org/server/api/core/items/360f7a2e-0784-56e1-acf4-7f805fd50257
+  author_id: 360f7a2e-0784-56e1-acf4-7f805fd50257
+  handle: 10986/38780
+  publication_count: 29
+  last_updated: '2025-12-10'

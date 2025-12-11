@@ -10,6 +10,7 @@ This document outlines the protocol for updating publication statistics on jpazv
 |----------|-------------|-------------------|
 | **Google Scholar** | https://scholar.google.com/citations?user=lTKXA78AAAAJ | Citations, h-index, i10-index, per-paper citations |
 | **RePEc/IDEAS** | https://ideas.repec.org/e/pwa88.html | Downloads, citations, rankings, abstract views |
+| **World Bank OKR** | https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257 | Publication count (downloads require auth) |
 | **ORCID** | https://orcid.org/0000-0003-2111-0596 | Verified publication list, employment history |
 | **ResearchGate** | (if applicable) | Reads, citations, Research Interest score |
 | **Scopus** | (Author ID needed) | h-index, citations, documents |
@@ -232,6 +233,7 @@ Please update the _data/citations.yml file with these values.
 | Automation | `.github/workflows/update-citations.yml` |
 | RePEc fetch script | `scripts/fetch_repec_stats.py` |
 | Scholar fetch script | `scripts/fetch_scholar_metrics.py` |
+| World Bank OKR script | `scripts/fetch_worldbank_okr.py` |
 | Python requirements | `scripts/requirements.txt` |
 
 ---
@@ -244,6 +246,7 @@ Please update the _data/citations.yml file with these values.
 |--------|--------|----------------|
 | `fetch_repec_stats.py` | LogEc/RePEc | Downloads, views, rankings by category |
 | `fetch_scholar_metrics.py` | Google Scholar | Citations, h-index, i10-index, yearly data |
+| `fetch_worldbank_okr.py` | World Bank OKR | Publication count via DSpace API |
 
 ### What `fetch_repec_stats.py` Retrieves
 
@@ -375,6 +378,7 @@ git push origin source
 
 - [Google Scholar Profile](https://scholar.google.com/citations?user=lTKXA78AAAAJ)
 - [RePEc/IDEAS Profile](https://ideas.repec.org/e/pwa88.html)
+- [World Bank OKR Profile](https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257)
 - [ORCID Profile](https://orcid.org/0000-0003-2111-0596)
 - [scholarly Python package](https://github.com/scholarly-python-package/scholarly)
 
@@ -386,11 +390,13 @@ git push origin source
 - [x] Google Scholar automated fetching (via SerpAPI)
 - [x] Track abstract views rankings (global/US)
 - [x] Track work counts by category
+- [x] World Bank OKR publication count (via DSpace API)
 
 **Potential additions:**
 - [ ] Track working papers rankings (global/US)
 - [ ] Track journal articles rankings (global/US)
 - [ ] Track books rankings
+- [ ] World Bank OKR download statistics (requires authentication)
 - [ ] Add Scopus/Web of Science integration
 - [ ] Display citation metrics on CV page with Liquid templates
 - [ ] Add citation trend charts/visualizations
