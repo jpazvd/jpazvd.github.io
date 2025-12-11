@@ -1,4 +1,4 @@
----
+﻿---
 layout: archive
 title: "Research"
 permalink: /research/
@@ -23,9 +23,9 @@ My work is organized around three interconnected themes:
 This agenda focuses on the multidimensional aspects of child poverty and wellbeing. It includes developing frameworks for monitoring progress on the Sustainable Development Goals (SDGs) for children, analyzing the drivers of inequality, and investigating the determinants of child health and mortality.
 
 **Selected Work:**
-- 📄 [Inequality at the very very very top: What does the Forbes Billionaires database tell us?](https://blogs.worldbank.org/en/developmenttalk/inequality-very-very-very-top-what-does-forbes-billionaires-database-tell-us) (Blog, 2014)
-- 📄 [Latin American women driving region's prosperity](https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity) (Blog, 2012)
-- 📄 [How equitable is access to finance in Turkey?](https://blogs.worldbank.org/en/allaboutfinance/how-equitable-access-finance-turkey-evidence-latest-global-findex) (Blog, 2016)
+- 📝 [Latin American women driving region's prosperity](https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity) (Blog, 2012)
+- 📝 [Inequality at the very very very top: What does the Forbes Billionaires database tell us?](https://blogs.worldbank.org/en/developmenttalk/inequality-very-very-very-top-what-does-forbes-billionaires-database-tell-us) (Blog, 2014)
+- 📝 [How equitable is access to finance in Turkey?](https://blogs.worldbank.org/en/allaboutfinance/how-equitable-access-finance-turkey-evidence-latest-global-findex) (Blog, 2016)
 
 ### 2. Education, Learning, and Human Capital
 
@@ -36,26 +36,30 @@ This is a central pillar of my research, with a focus on ensuring quality educat
 A core contribution of my work at the World Bank was the co-creation of the global "Learning Poverty" indicator—a measure of the percentage of children unable to read and understand a simple text by age 10. This research stream involves the harmonization of learning assessments and the analysis of policies to accelerate progress in foundational learning.
 
 **Selected Work:**
+- 📄 [Learning Poverty: Measures and Simulations](https://openknowledge.worldbank.org/handle/10986/34654) (Working Paper, 2020)
 - 📄 [Will Every Child Be Able to Read by 2030? Defining Learning Poverty and Mapping the Dimensions of the Challenge](https://openknowledge.worldbank.org/handle/10986/35300) (Working Paper, 2021)
 - 📄 [Learning Poverty Updates and Revisions](https://openknowledge.worldbank.org/handle/10986/36082) (Working Paper, 2021)
-- 📝 [Will every child be able to read by 2030?](https://blogs.worldbank.org/en/developmenttalk/will-every-child-be-able-read-2030) (Blog, 2021)
 - 📝 [Learning for All: Beyond an Average Score](https://blogs.worldbank.org/en/education/learning-all-beyond-average-score) (Blog, 2020)
+- 📝 [Will every child be able to read by 2030?](https://blogs.worldbank.org/en/developmenttalk/will-every-child-be-able-read-2030) (Blog, 2021)
 - 📝 [Building Back Better After COVID-19: The Importance of Tracking Learning Inequality](https://blogs.worldbank.org/en/education/building-back-better-after-covid-19-importance-tracking-learning-inequality) (Blog, 2021)
+- 💻 [LearningPoverty](https://github.com/worldbank/LearningPoverty) — Stata package to calculate Learning Poverty indicators and simulate scenarios
+- 💻 [EduAnalytics](https://github.com/worldbank/EduAnalytics) — World Bank Education Global Practice analytics and data tools
+- 💻 [GLAD (Global Learning Assessment Database)](https://github.com/worldbank/GLAD) — Harmonized learning assessment microdata from 160+ countries
 
 #### Sub-theme: The Educational Impacts of the COVID-19 Pandemic
 
 In response to the global crisis, I led research to simulate and measure the impact of school closures on learning outcomes. This work quantified the scale of "learning losses," analyzed the effectiveness of remote learning strategies, and informed global education recovery efforts.
 
 **Selected Work:**
-- 📄 [COVID-19 School Closures, Learning Losses and Intergenerational Mobility](https://openknowledge.worldbank.org/handle/10986/39607) (Working Paper, 2023)
-- 📄 [Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes](https://openknowledge.worldbank.org/handle/10986/40037) (Journal Article, 2021)
-- 📄 [Learning Losses during COVID-19](https://openknowledge.worldbank.org/handle/10986/38228) (Working Paper, 2022)
-- 📄 [Remote Learning During COVID-19](https://openknowledge.worldbank.org/handle/10986/36665) (Report, 2021)
 - 📄 [Learning Poverty in the Time of COVID-19](https://openknowledge.worldbank.org/handle/10986/34850) (Brief, 2020)
+- 📄 [Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes](https://openknowledge.worldbank.org/handle/10986/40037) (Journal Article, 2021)
+- 📄 [Remote Learning During COVID-19](https://openknowledge.worldbank.org/handle/10986/36665) (Report, 2021)
+- 📄 [Learning Losses during COVID-19](https://openknowledge.worldbank.org/handle/10986/38228) (Working Paper, 2022)
+- 📄 [COVID-19 School Closures, Learning Losses and Intergenerational Mobility](https://openknowledge.worldbank.org/handle/10986/39607) (Working Paper, 2023)
 - 📝 [Learning losses due to COVID19 could add up to $10 trillion](https://blogs.worldbank.org/en/education/learning-losses-due-covid19-could-add-10-trillion) (Blog, 2020)
 - 📝 [We should avoid flattening the curve in education](https://blogs.worldbank.org/en/education/we-should-avoid-flattening-curve-education-possible-scenarios-learning-loss-during-school) (Blog, 2020)
-- 📝 [The global education crisis – even more severe than previously estimated](https://blogs.worldbank.org/en/education/global-education-crisis-even-more-severe-previously-estimated) (Blog, 2022)
 - 📝 [Five lessons from remote learning during COVID-19](https://blogs.worldbank.org/en/education/five-lessons-remote-learning-during-covid-19) (Blog, 2021)
+- 📝 [The global education crisis – even more severe than previously estimated](https://blogs.worldbank.org/en/education/global-education-crisis-even-more-severe-previously-estimated) (Blog, 2022)
 - 📝 [School closures and longer-term implications of COVID-19 for inter-generational mobility](https://blogs.worldbank.org/en/developmenttalk/school-closures-and-longer-term-implications-covid-19-inter-generational-mobility) (Blog, 2023)
 
 ### 3. Data Systems, Methods, and Statistical Capacity
@@ -67,8 +71,8 @@ Underpinning all my research is a focus on improving the data and methods we use
 This work focuses on building evidence-to-policy pipelines, from the global harmonization of household surveys for poverty monitoring to the development of data compacts that align countries and partners around common measurement goals.
 
 **Selected Work:**
-- 📝 [April 2018 global poverty update from the World Bank](https://blogs.worldbank.org/en/developmenttalk/april-2018-global-poverty-update-world-bank) (Blog, 2018)
 - 📝 [Feeding the craving for precision on global poverty](https://blogs.worldbank.org/en/developmenttalk/feeding-craving-precision-global-poverty) (Blog, 2017)
+- 📝 [April 2018 global poverty update from the World Bank](https://blogs.worldbank.org/en/developmenttalk/april-2018-global-poverty-update-world-bank) (Blog, 2018)
 - 📝 [Going municipal: Targeting deprivation with new evidence in Croatia](https://blogs.worldbank.org/en/developmenttalk/going-municipal-targeting-deprivation-new-evidence-croatia) (Blog, 2019)
 
 #### Sub-theme: Global Poverty Monitoring Infrastructure
@@ -89,8 +93,8 @@ To support rigorous and reproducible research, I have developed over 20 open-sou
 - 💻 [ADECOMP](https://ideas.repec.org/c/boc/bocode/s457562.html) — Shapley decomposition of poverty changes
 - 💻 [HOI](https://ideas.repec.org/c/boc/bocode/s457191.html) — Human Opportunity Index
 - 💻 [DFL](https://ideas.repec.org/c/boc/bocode/s449001.html) — DiNardo-Fortin-Lemieux counterfactual density decomposition
-- 📝 [New release of WBOPENDATA Stata module](https://blogs.worldbank.org/en/opendata/new-release-wbopendata-stata-module) (Blog, 2020)
 - 📝 [Wbopendata Stata Module Upgrade](https://blogs.worldbank.org/en/opendata/wbopendata-stata-module-upgrade) (Blog, 2014)
+- 📝 [New release of WBOPENDATA Stata module](https://blogs.worldbank.org/en/opendata/new-release-wbopendata-stata-module) (Blog, 2020)
 
 👉 **[View all 22 software modules on the Software page](/softwares/)**
 
