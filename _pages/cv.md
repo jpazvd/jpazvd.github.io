@@ -10,6 +10,34 @@ redirect_from:
 
 {% include base_path %}
 
+<div class="citation-metrics" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <h3 style="margin-top: 0; color: white; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem;">📊 Citation Metrics</h3>
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-around;">
+    <div style="text-align: center;">
+      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.total_citations | default: '5,500+' }}</div>
+      <div style="font-size: 0.85rem; opacity: 0.9;">Citations</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.h_index | default: '30' }}</div>
+      <div style="font-size: 0.85rem; opacity: 0.9;">h-index</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.i10_index | default: '62' }}</div>
+      <div style="font-size: 0.85rem; opacity: 0.9;">i10-index</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }}</div>
+      <div style="font-size: 0.85rem; opacity: 0.9;">RePEc Downloads</div>
+    </div>
+  </div>
+  <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8; text-align: center;">
+    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank" style="color: white;">Google Scholar</a> | 
+    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank" style="color: white;">RePEc/IDEAS</a> | 
+    <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank" style="color: white;">ORCID</a>
+    <br>Last updated: {{ site.data.citations.google_scholar.last_updated }}
+  </div>
+</div>
+
 Education
 ======
 * Phd, Economics. University of Newcastle, United Kingdom. 2005(2006). Supervisors: Prof. Peter Dolton and Prof. Nauro Campos. 
@@ -74,24 +102,30 @@ Skills
 * English (fluent)
 * Spanish (professional)
 
+<!-- Publications section commented out - using jekyll-scholar on /publications/ page instead
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+-->
+
+<!-- Talks section commented out - sample content backed up in _talks/*.bak files
 Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+-->
+
+<!-- Teaching section commented out - sample content backed up in _teaching/*.bak files
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+-->
+
 Service and Leadership
 ======
 * Co-Lead, Global Solution Group on Welfare Measurement and Statistical Capacity (World Bank)

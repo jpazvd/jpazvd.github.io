@@ -4,6 +4,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Backup files (commented-out sample content)
+*.bak
+
 # Environment variables (API keys, secrets)
 .env
 .env.local
