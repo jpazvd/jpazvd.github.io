@@ -14,10 +14,41 @@ google_scholar:
 
 repec:
   profile_url: "https://ideas.repec.org/e/pwa88.html"
-  downloads_12mo: null       # Downloads in last 12 months
-  abstract_views: null       # Total abstract views
-  author_rank_percentile: null  # Top X% of authors
-  registered_works: null     # Number of works in RePEc
+  stats_url: "http://logec.repec.org/RAS/pwa88.htm"
+  # Summary Statistics (as of December 2025)
+  working_papers:
+    downloads_12mo: 124
+    downloads_total: 4833
+    abstract_views_12mo: 569
+    abstract_views_total: 15903
+  journal_articles:
+    downloads_12mo: 10
+    downloads_total: 413
+    abstract_views_12mo: 79
+    abstract_views_total: 1558
+  books:
+    downloads_12mo: 8
+    downloads_total: 81
+    abstract_views_12mo: 31
+    abstract_views_total: 309
+  chapters:
+    downloads_12mo: 4
+    downloads_total: 52
+    abstract_views_12mo: 11
+    abstract_views_total: 386
+  software:
+    downloads_12mo: 444
+    downloads_total: 26886
+    abstract_views_12mo: 1822
+    abstract_views_total: 111699
+  # Totals across all categories
+  total_downloads_12mo: 590         # 124+10+8+4+444
+  total_downloads_all_time: 32265   # 4833+413+81+52+26886
+  total_abstract_views_12mo: 2512   # 569+79+31+11+1822
+  total_abstract_views_all_time: 129855  # 15903+1558+309+386+111699
+  # Rankings
+  ranking_note: "Top 5% of authors by downloads and abstract views (12 months)"
+  registered_works: 78              # ~49 working papers + 7 articles + 3 books + 2 chapters + 22 software
   last_updated: "2024-12-10"
 
 orcid:
