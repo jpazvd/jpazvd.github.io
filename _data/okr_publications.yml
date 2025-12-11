@@ -1,0 +1,397 @@
+metadata:
+  author: Azevedo, João Pedro
+  author_id: 360f7a2e-0784-56e1-acf4-7f805fd50257
+  profile_url: https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257
+  total_count: 34
+  generated: '2025-12-10'
+  note: Publications collected from World Bank Open Knowledge Repository
+publications:
+- title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
+  year: '2023'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/39607
+  handle: 10986/39607
+  doi: 10.1596/1813-9450-10381
+  authors:
+  - Azevedo, João Pedro
+  - Cojocaru, Alexandru
+  - Talledo, Veronica Montalva
+  - Narayan, Ambar
+- title: Blackout or Blanked Out?
+  year: '2023'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/39744
+  handle: 10986/39744
+  doi: 10.1596/1813-9450-10423
+  authors:
+  - Seitz, William
+  - Kudo, Yuya
+  - Azevedo, Joao Pedro
+- title: Learning Losses during COVID-19
+  year: '2022'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/38228
+  handle: 10986/38228
+  doi: 10.1596/1813-9450-10218
+  authors:
+  - Akmal, Maryam
+  - Azevedo, João Pedro
+  - Cloutier, Marie-Helene
+  - Rogers, Halsey
+  - Wong, Yi Ning
+- title: Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes
+  year: '2021'
+  type: Journal Article
+  url: https://openknowledge.worldbank.org/handle/10986/40037
+  handle: 10986/40037
+  doi: 10.1596/40037
+  authors:
+  - Hasan, Amer
+  - Azevedo, João Pedro
+  - Goldemberg, Diana
+  - Geven, Koen
+  - Iqbal, Syedah Aroob
+- title: Will Every Child Be Able to Read by 2030? Defining Learning Poverty and Mapping the Dimensions of the Challenge
+  year: '2021'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/35300
+  handle: 10986/35300
+  doi: 10.1596/1813-9450-9588
+  authors:
+  - Goldemberg, Diana
+  - Azevedo, Joao Pedro
+  - Montoya, Silvia
+  - Nayar, Reema
+  - Rogers, Halsey
+  - Stacy, Brian William
+  - Saavedra, Jaime
+- title: Remote Learning During COVID-19
+  year: '2021'
+  type: Report
+  url: https://openknowledge.worldbank.org/handle/10986/36665
+  handle: 10986/36665
+  doi: 10.1596/36665
+  authors:
+  - Munoz-Najar, Alberto
+  - Gilberto, Alison
+  - Hasan, Amer
+  - Cobo, Cristobal
+  - Azevedo, Joao Pedro
+  - Akmal, Maryam
+- title: Learning Poverty Updates and Revisions
+  year: '2021'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/36082
+  handle: 10986/36082
+  doi: 10.1596/36082
+  authors:
+  - Azevedo, Joao Pedro Wagner De
+  - Montoya, Silvia
+  - Akmal, Maryam
+  - Wong, Yi Ning
+  - Gregory, Laura
+  - Geven, Koen Martijn
+  - Cloutier, Marie-Helene
+  - Iqbal, Syedah Aroob
+  - Imhof, Adolfo Gustavo
+  - De Andrade Falcao, Natasha
+  - Kouame, Christelle Signo
+  - Dahal, Mahesh
+  - Gebre, Tihtina Zenebe
+  - Vargas Mancera, Maria Jose
+- title: Learning Poverty
+  year: '2020'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/34654
+  handle: 10986/34654
+  doi: 10.1596/1813-9450-9446
+  authors:
+  - Azevedo, Joao Pedro
+- title: Learning Poverty in the Time of COVID-19
+  year: '2020'
+  type: Brief
+  url: https://openknowledge.worldbank.org/handle/10986/34850
+  handle: 10986/34850
+  doi: 10.1596/34850
+  authors:
+  - Azevedo, Joao Pedro
+- title: Estimating the Potential COVID-19 Impacts on Learning Poverty in Brazil
+  year: '2020'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/37660
+  handle: 10986/37660
+  doi: 10.1596/37660
+  authors:
+  - Azevedo, Joao Pedro Wagner De
+  - Goldemberg, Diana
+- title: Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes
+  year: '2020'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/33945
+  handle: 10986/33945
+  doi: 10.1596/1813-9450-9284
+  authors:
+  - Goldemberg, Diana
+  - Azevedo, Joao Pedro
+  - Iqbal, Syedah Aroob
+  - Hasan, Amer
+  - Geven, Koen
+- title: SAE - A Stata Package for Unit Level Small Area Estimation
+  year: '2018'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/30650
+  handle: 10986/30650
+  doi: 10.1596/1813-9450-8630
+  authors:
+  - Nguyen, Minh Cong
+  - Corral, Paul
+  - Azevedo, Joao Pedro
+  - Zhao, Qinghua
+- title: A New Profile of the Global Poor
+  year: '2018'
+  type: Journal Article
+  url: https://openknowledge.worldbank.org/handle/10986/29225
+  handle: 10986/29225
+  doi: 10.1596/29225
+  authors:
+  - Castañeda, Andrés
+  - Doan, Dung
+  - Newhouse, David
+  - Nguyen, Minh Cong
+  - Uematsu, Hiroki
+  - Azevedo, João Pedro
+- title: Poverty, Inequality, and            Agriculture in the EU
+  year: '2018'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/30844
+  handle: 10986/30844
+  doi: 10.1596/1813-9450-8638
+  authors:
+  - van den Brink, Rogier J. E.
+  - Azevedo, Joao Pedro
+  - Avila, Montserrat
+  - Corral, Paul
+  - Zhao, Hongxi
+  - Mostafavi, Mohammad-Hadi
+- title: How Equitable is Access to Finance in Turkey?
+  year: '2016'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/23721
+  handle: 10986/23721
+  doi: 10.1596/1813-9450-7541
+  authors:
+  - Inan, Osman Kaan
+  - Azevedo, Joao Pedro
+  - Yang, Judy S.
+- title: What Are the Impacts of Syrian Refugees on Host Community Welfare in Turkey?
+  year: '2016'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/23722
+  handle: 10986/23722
+  doi: 10.1596/1813-9450-7542
+  authors:
+  - Yang, Judy S.
+  - Azevedo, Joao Pedro
+  - Inan, Osman Kaan
+- title: When and Where Do We See Regional Poverty Reduction and Convergence?
+  year: '2016'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/23719
+  handle: 10986/23719
+  doi: 10.1596/1813-9450-7540
+  authors:
+  - Yang, Judy S.
+  - Azevedo, Joao Pedro
+  - Inan, Osman Kaan
+  - Nguyen, Minh C.
+  - Montes, Jose
+- title: Who Are the Poor in the Developing World?
+  year: '2016'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/25161
+  handle: 10986/25161
+  doi: 10.1596/1813-9450-7844
+  authors:
+  - Castaneda, Andes
+  - Doan, Dung
+  - Newhouse, David
+  - Nguyen, Minh Cong
+  - Uematsu, Hiroki
+  - Azevedo, Joao Pedro
+- title: Robustness of Shared Prosperity Estimates
+  year: '2016'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/24152
+  handle: 10986/24152
+  doi: 10.1596/1813-9450-7611
+  authors:
+  - Wieser, Christina
+  - Atamanov, Aziz
+  - Uematsu, Hiroki
+  - Yoshida, Nobuo
+  - Nguyen, Minh Cong
+  - Wagner De Azevedo, Joao Pedro
+  - Dewina, Reno
+- title: Kyrgyz Republic
+  year: '2015'
+  type: Working Paper
+  url: https://openknowledge.worldbank.org/handle/10986/22756
+  handle: 10986/22756
+  doi: 10.1596/22756
+  authors:
+  - Calvo, Paula
+  - Azevedo, Joao Pedro
+  - Nguyen, Minh
+  - Posadas, Josefina
+- title: 'Pathways to the Middle Class in Turkey : How Have Reducing Poverty and Boosting Shared Prosperity Helped?'
+  year: '2014'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/17722
+  handle: 10986/17722
+  doi: 10.1596/1813-9450-6834
+  authors:
+  - Azevedo, Joao Pedro
+  - Atamanov, Aziz
+- title: 'Poverty Reduction and Shared Prosperity in Tajikistan : A Diagnostic'
+  year: '2014'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/18755
+  handle: 10986/18755
+  doi: 10.1596/1813-9450-6923
+  authors:
+  - Rajabov, Alisher
+  - Azevedo, Joao Pedro
+  - Atamanov, Aziz
+- title: 'Fiscal Adjustment and Income Inequality : Sub-national Evidence from Brazil'
+  year: '2014'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/19379
+  handle: 10986/19379
+  doi: 10.1596/1813-9450-6945
+  authors:
+  - David, Antonio C.
+  - Azevedo, Joao Pedro
+  - Rodrigues Bastos, Fabiano
+  - Pineda, Emilio
+- title: Weather Shocks and Health at Birth in Colombia
+  year: '2014'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/20636
+  handle: 10986/20636
+  doi: 10.1596/1813-9450-7081
+  authors:
+  - Andalon, Mabel
+  - Azevedo, Joao Pedro
+  - Rodriguez Castelan, Carlos
+  - Sanfelice, Viviane
+  - Valderrama, Daniel
+- title: Understanding Changes in Poverty
+  year: '2014'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/19445
+  handle: 10986/19445
+  doi: 10.1596/978-1-4648-0299-7
+  authors:
+  - Van Nguyen, Trang
+  - Inchauste, Gabriela
+  - Azevedo, João Pedro
+  - Essama-Nssah, B.
+  - Olivieri, Sergio
+  - Saavedra-Chanduvi, Jaime
+  - Winkler, Hernan
+- title: 'From Noise to Signal : The Successful Turnaround of Poverty Measurement in Colombia'
+  year: '2013'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/16118
+  handle: 10986/16118
+  doi: 10.1596/16118
+  authors:
+  - Azevedo, João Pedro
+- title: Decomposing the Recent Inequality Decline in Latin America
+  year: '2013'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/16931
+  handle: 10986/16931
+  doi: 10.1596/1813-9450-6715
+  authors:
+  - Sanfelice, Viviane
+  - Azevedo, Joao Pedro
+  - Inchauste, Gabriela
+- title: Setting Reasonable Performance Targets for Public Service Delivery
+  year: '2013'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/13178
+  handle: 10986/13178
+  doi: 10.1596/1813-9450-6385
+  authors:
+  - Newman, John L.
+  - Azevedo, João Pedro
+- title: 'Fifteen Years of Inequality in Latin America : How Have Labor Markets Helped?'
+  year: '2013'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/13183
+  handle: 10986/13183
+  doi: 10.1596/1813-9450-6384
+  authors:
+  - Dávalos, María Eugenia
+  - Azevedo, João Pedro
+  - Diaz-Bonilla, Carolina
+  - Atuesta, Bernardo
+  - Castañeda, Raul Andres
+- title: Is Labor Income Responsible for Poverty Reduction? A Decomposition Approach
+  year: '2013'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/15552
+  handle: 10986/15552
+  doi: 10.1596/1813-9450-6414
+  authors:
+  - Azevedo, Joao Pedro
+  - Inchauste, Gabriela
+  - Olivieri, Sergio
+  - Saavedra, Jaime
+  - Winkler, Hernan
+- title: 'Teenage Pregnancy and Opportunities in Latin America and the Caribbean : On Teenage Fertility Decisions, Poverty and Economic Achievement'
+  year: '2012'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/16978
+  handle: 10986/16978
+  doi: 10.1596/16978
+  authors:
+  - Favara, Marta
+  - Azevedo, Joao Pedro
+  - Haddock, Sarah E.
+  - Muller, Miriam
+  - Lopez-Calva, Luis F.
+  - Perova, Elizaveta
+- title: Is the Baby to Blame? An Inquiry into the Consequences of Early Childbearing
+  year: '2012'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/9345
+  handle: 10986/9345
+  doi: 10.1596/1813-9450-6074
+  authors:
+  - Perova, Elizaveta
+  - Azevedo, Joao Pedro
+  - Lopez-Calva, Luis F.
+- title: When Job Earnings Are Behind Poverty Reduction
+  year: '2012'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/17067
+  handle: 10986/17067
+  doi: 10.1596/17067
+  authors:
+  - Inchauste, Gabriela
+  - Azevedo, João Pedro
+  - Olivieri, Sergio
+  - Saavedra, Jaime
+  - Winkler, Hernan
+- title: 'Benchmarking : A Tool to improve the Effectiveness of Monitoring and Evaluation in the Policy Cycle'
+  year: '2010'
+  type: ''
+  url: https://openknowledge.worldbank.org/handle/10986/10205
+  handle: 10986/10205
+  doi: 10.1596/10205
+  authors:
+  - Newman, John L.
+  - Azevedo, João Pedro
+  - Pungiluppi, Juliana
