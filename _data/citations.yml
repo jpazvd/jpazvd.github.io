@@ -100,19 +100,16 @@ world_bank_okr:
   profile_linked_count: 29
   search_count: 34
   last_updated: '2025-12-11'
-  # Publication type breakdown
   by_type:
     working_paper: 16
     journal_article: 2
     report: 1
     brief: 1
     other: 14
-  # Timeline statistics
   timeline:
     first_year: 2010
     latest_year: 2023
     active_years: 14
-  # By year distribution
   by_year:
     '2023': 2
     '2022': 1
@@ -125,29 +122,42 @@ world_bank_okr:
     '2013': 5
     '2012': 3
     '2010': 1
-  # Authorship statistics
   authorship:
     solo_authored: 3
     co_authored: 31
     first_author: 8
     unique_coauthors: 76
-  # Top co-authors (3+ papers)
   top_coauthors:
-    - name: Diana Goldemberg
-      count: 4
-    - name: Minh Cong Nguyen
-      count: 4
-    - name: Gabriela Inchauste
-      count: 4
-    - name: Maryam Akmal
-      count: 3
-    - name: Amer Hasan
-      count: 3
-    - name: Syedah Aroob Iqbal
-      count: 3
-    - name: Jaime Saavedra
-      count: 3
-    - name: Hiroki Uematsu
-      count: 3
-  # DOI coverage
+  - name: Diana Goldemberg
+    count: 4
+  - name: Minh Cong Nguyen
+    count: 4
+  - name: Gabriela Inchauste
+    count: 4
+  - name: Maryam Akmal
+    count: 3
+  - name: Amer Hasan
+    count: 3
+  - name: Syedah Aroob Iqbal
+    count: 3
+  - name: Jaime Saavedra
+    count: 3
+  - name: Hiroki Uematsu
+    count: 3
   doi_coverage: 100
+world_bank_blogs:
+  post_count: 29
+  english_posts: 24
+  translations: 5
+  source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
+  last_updated: '2025-12-11'
+  timeline:
+    first_year: 2012
+    latest_year: 2023
+  by_channel:
+    Education for Global Development: 14
+    Let's Talk Development: 8
+    Voices: 1
+    Data Blog: 3
+    All About Finance: 1
+    Latin America and Caribbean: 2
