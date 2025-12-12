@@ -49,12 +49,12 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456876.html" target="_blank">ainequal</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank">ainequal</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Inequality measures</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install ainequal</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456875.html" target="_blank">apoverty</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank">apoverty</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Poverty measures</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install apoverty</code></td>
     </tr>
@@ -79,22 +79,17 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install mpovline</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458435.html" target="_blank">groupfunction</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank">groupfunction</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Collapse with multiple functions</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install groupfunction</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank">wbopendata</a></strong></td>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Access World Bank databases</td>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install wbopendata</code></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458418.html" target="_blank">sae</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank">sae</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Small area estimation</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install sae</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458417.html" target="_blank">fhsae</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank">fhsae</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Fay-Herriot small area estimation</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install fhsae</code></td>
     </tr>
@@ -109,52 +104,52 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install dfl</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s433401.html" target="_blank">grqreg</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank">grqreg</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Graphical quantile regression</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install grqreg</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s424201.html" target="_blank">outtable</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank">outtable</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Export matrix to LaTeX table</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install outtable</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456877.html" target="_blank">alorenz</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank">alorenz</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Lorenz and concentration curves</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install alorenz</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456878.html" target="_blank">isopoverty</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank">isopoverty</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Iso-poverty curves</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install isopoverty</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456879.html" target="_blank">changemean</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank">changemean</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Mean vs distribution effects</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install changemean</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456880.html" target="_blank">mol</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank">mol</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Effective literacy index (Basu-Foster)</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install mol</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457190.html" target="_blank">turnbull</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank">turnbull</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Willingness-to-pay estimation</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install turnbull</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457192.html" target="_blank">spike</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank">spike</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Zero willingness-to-pay</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install spike</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s432001.html" target="_blank">factortest</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank">factortest</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Tests for factor analysis</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install factortest</code></td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s432301.html" target="_blank">crtest</a></strong></td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank">crtest</a></strong></td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Cramer-Ridder pooling test</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>ssc install crtest</code></td>
     </tr>
