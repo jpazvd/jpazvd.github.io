@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research"
+title: "Evidence & Analytics for Action"
 permalink: /research/
 author_profile: true
 description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital measurement, education economics, and poverty and inequality measurement, learning poverty, sustainable development goals (SDGs), Nutrition, Child Mortality, WASH, Children climate, Child Poverty."
