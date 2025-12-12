@@ -3,11 +3,11 @@ main:
   - title: "Evidence & Analytics"
     url: /research/
 
-  - title: "Publications"
-    url: /publications/
-
   - title: "Data & Tools"
     url: /softwares/
+
+  - title: "Publications"
+    url: /publications/
 
   - title: "Blog"
     url: /blogs/
