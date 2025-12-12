@@ -8,7 +8,7 @@ description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital
 
 {% include base_path %}
 
-I use data, measurement, and applied economics to support better decisions for children and vulnerable populations. Across UNICEF, the World Bank, and the Brazilian public sector, my work sits at the intersection of development economics, education policy, poverty and equity measurement, and statistical systems.
+I use data, measurement, and applied economics to support better decisions for children and vulnerable populations. Across UNICEF, the World Bank, and the Brazilian public sector, my work sits at the intersection of development economics, education policy, poverty and equity measurement, and the strengthening of national statistical systems.
 
 My focus is operational: translating complex data into indicators, diagnostics, scalable analytics, and decision-support tools; evaluating policies and programs; and strengthening institutional capacity to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.
 
@@ -20,13 +20,26 @@ Increasingly, I am leading teams to use AI- and LLM-assisted workflows to improv
 
 <div class="research-section" markdown="1">
 
-### 1. Child Wellbeing, Poverty, and Equity
+### 1. Poverty, Equity, and Wellbeing
 
-This agenda focuses on the multidimensional aspects of child poverty and wellbeing.
+This agenda focuses on poverty, equity, and wellbeing—covering child poverty and child outcomes, but also broader distributional analysis, shared prosperity, and the measurement systems that translate evidence into policy.
 
 #### Sub-theme: Poverty, Equity, and Distributional Analysis
 
 Analyzing the drivers of inequality and the distributional impacts of policies and shocks—grounded in country-level diagnostics and extended to regional and cross-country benchmarking—with a focus on equity for children and vulnerable populations.
+
+Selected related writing:
+
+<ul class="work-list">
+<li><span class="pub-type paper">Paper</span> <a href="https://openknowledge.worldbank.org/handle/10986/16118">From Noise to Signal: The Successful Turnaround of Poverty Measurement in Colombia</a> (2013)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/developmenttalk/going-municipal-targeting-deprivation-new-evidence-croatia">Going municipal: Targeting deprivation with new evidence in Croatia</a> (2019)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://www.brookings.edu/articles/did-the-eus-economic-recession-lead-to-a-rise-in-populism/">Did the EU’s economic recession lead to a rise in populism?</a> (2018)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://www.brookings.edu/articles/prioritizing-public-schooling-over-social-transfers-in-brazil/">Prioritizing public schooling over social transfers in Brazil</a> (2018)</li>
+<li><span class="pub-type report">Report</span> <a href="http://documents1.worldbank.org/curated/en/892301518703739733/pdf/123443-repl-PUBLIC.pdf">EU Regular Economic Report: Thinking CAP—Supporting Agricultural Jobs and Incomes in the EU</a> (2018)</li>
+<li><span class="pub-type report">Report</span> <a href="https://hdl.handle.net/1992/8357">Movilidad social en Colombia</a> (2012)</li>
+<li><span class="pub-type code">Code</span> <a href="https://ideas.repec.org/c/boc/bocode/s457191.html">HOI</a> — Human Opportunity Index (incl. Colombia and Latin America applications)</li>
+<li><span class="pub-type code">Code</span> <a href="https://ideas.repec.org/c/boc/bocode/s457562.html">ADECOMP</a> — Shapley decomposition of poverty changes (incl. Latin America applications)</li>
+</ul>
 
 #### Sub-theme: Child Poverty and Wellbeing Measurement (SDGs)
 
@@ -79,6 +92,7 @@ In response to the global crisis, I led research to simulate and measure the imp
 <li><span class="pub-type paper">Paper</span> <a href="https://openknowledge.worldbank.org/handle/10986/38228">Learning Losses during COVID-19</a> (Working Paper, 2022)</li>
 <li><span class="pub-type paper">Paper</span> <a href="https://openknowledge.worldbank.org/handle/10986/39607">COVID-19 School Closures, Learning Losses and Intergenerational Mobility</a> (Working Paper, 2023)</li>
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/education/learning-losses-due-covid19-could-add-10-trillion">Learning losses due to COVID19 could add up to $10 trillion</a> (2020)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://www.brookings.edu/articles/learning-losses-due-to-covid-19-could-add-up-to-10-trillion/">Learning losses due to COVID-19 could add up to $10 trillion</a> (2020)</li>
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/education/we-should-avoid-flattening-curve-education-possible-scenarios-learning-loss-during-school">We should avoid flattening the curve in education</a> (2020)</li>
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/education/five-lessons-remote-learning-during-covid-19">Five lessons from remote learning during COVID-19</a> (2021)</li>
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/education/global-education-crisis-even-more-severe-previously-estimated">The global education crisis – even more severe than previously estimated</a> (2022)</li>
