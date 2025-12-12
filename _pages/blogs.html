@@ -11,34 +11,34 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 <p>Blog posts and articles on education, learning poverty, human capital, and development economics.</p>
 
 <!-- Stats Banner -->
-<div class="blog-stats" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; align-items: center;">
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.worldbank_blogs_full.metadata.total_posts | default: 29 }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">Blog Posts</div>
+<div class="blog-stats jp-gradient-banner">
+  <div class="jp-stats-row">
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.post_count | default: site.data.worldbank_blogs_full.metadata.total_posts | default: 29 }}</div>
+      <div class="jp-stat__label">Blog Posts</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">2012-2023</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">Active Years</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.timeline.first_year | default: 2012 }}-{{ site.data.citations.world_bank_blogs.timeline.latest_year | default: 2023 }}</div>
+      <div class="jp-stat__label">Active Years</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">6</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">WB Blog Channels</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.by_channel | size | default: 6 }}</div>
+      <div class="jp-stat__label">WB Blog Channels</div>
     </div>
   </div>
-  <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8; text-align: center;">
-    World Bank Blogs | GPE, UNESCO/UIS, UNICEF - more coming soon
+  <div class="jp-banner__footer">
+    World Bank Blogs | UNICEF | GPE, UNESCO/UIS - more coming soon
   </div>
 </div>
 
 <!-- Filter by Channel -->
-<div style="margin-bottom: 2rem;">
+<div class="blog-filters">
   <strong>Filter by Channel:</strong>
-  <span style="margin-left: 0.5rem;">
-    <a href="#all" onclick="filterPosts('all'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #667eea; color: white; border-radius: 4px; text-decoration: none;">All</a>
-    <a href="#education" onclick="filterPosts('Education for Global Development'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #e3f2fd; color: #1565c0; border-radius: 4px; text-decoration: none;">Education</a>
-    <a href="#letstalk" onclick="filterPosts('Let\\'s Talk Development'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none;">Let's Talk Dev</a>
-    <a href="#data" onclick="filterPosts('Data Blog'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #fff3e0; color: #e65100; border-radius: 4px; text-decoration: none;">Data</a>
+  <span class="blog-filters__links">
+    <a class="jp-filter__link is-active" href="#all" onclick="filterPosts(event, 'all'); return false;">All</a>
+    <a class="jp-filter__link" href="#education" onclick="filterPosts(event, 'Education for Global Development'); return false;">Education</a>
+    <a class="jp-filter__link" href="#letstalk" onclick="filterPosts(event, 'Let\\'s Talk Development'); return false;">Let's Talk Dev</a>
+    <a class="jp-filter__link" href="#data" onclick="filterPosts(event, 'Data Blog'); return false;">Data</a>
   </span>
 </div>
 
@@ -48,29 +48,29 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 {% assign other_sorted = site.data.other_blogs.posts | sort: 'date' | reverse %}
 
 {% for post in other_sorted %}
-  <article class="blog-card" style="margin-bottom: 1.5rem; padding: 1.25rem; background: #fff; border-radius: 10px; border-left: 4px solid #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <h4 style="margin: 0 0 0.5rem 0;">
-      <a href="{{ post.url }}" target="_blank" rel="noopener" style="color: #333; text-decoration: none;">{{ post.title }}</a>
+  <article class="blog-card jp-card">
+    <h4 class="jp-card__title">
+      <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
       {% if post.language and post.language != "en" %}
-        <span style="background: #ffc107; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle;">{{ post.language | upcase }}</span>
+        <span class="jp-lang-pill">{{ post.language | upcase }}</span>
       {% endif %}
     </h4>
 
-    <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.75rem;">
+    <div class="jp-card__meta">
       {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>{% endif %}
-      {% if post.organization %}&bull; <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 4px; font-size: 0.8em;">{{ post.organization }}</span>{% endif %}
+      {% if post.organization %}&bull; <span class="jp-pill">{{ post.organization }}</span>{% endif %}
       {% if post.channel %}&bull; <em>{{ post.channel }}</em>{% endif %}
     </div>
 
     {% if post.description and post.description.size > 10 %}
-    <p style="color: #555; margin: 0.75rem 0; font-size: 0.95rem; line-height: 1.5;">
+    <p class="jp-card__desc">
       {{ post.description | truncate: 250 }}
     </p>
     {% endif %}
   </article>
 {% endfor %}
 
-<hr style="margin: 2rem 0;">
+<hr class="jp-separator">
 {% endif %}
 
 <h2>World Bank Blogs</h2>
@@ -88,50 +88,49 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
     {% assign current_year = post_year %}
   {% endif %}
   
-  <article class="blog-card" data-channel="{{ post.channel }}" style="margin-bottom: 1.5rem; padding: 1.25rem; background: #fff; border-radius: 10px; border-left: 4px solid #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <h4 style="margin: 0 0 0.5rem 0;">
-      <a href="{{ post.url }}" target="_blank" rel="noopener" style="color: #333; text-decoration: none;">{{ post.title }}</a>
+  <article class="blog-card jp-card" data-channel="{{ post.channel }}">
+    <h4 class="jp-card__title">
+      <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
       {% if post.language and post.language != "en" %} 
-        <span style="background: #ffc107; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle;">{{ post.language | upcase }}</span>
+        <span class="jp-lang-pill">{{ post.language | upcase }}</span>
       {% endif %}
     </h4>
     
-    <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.75rem;">
+    <div class="jp-card__meta">
       <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
       &bull; 
-      <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 4px; font-size: 0.8em;">World Bank</span>
+      <span class="jp-pill">World Bank</span>
       &bull; 
       <em>{{ post.channel }}</em>
     </div>
     
     {% if post.description and post.description.size > 10 %}
-    <p style="color: #555; margin: 0.75rem 0; font-size: 0.95rem; line-height: 1.5;">
+    <p class="jp-card__desc">
       {{ post.description | truncate: 250 }}
     </p>
     {% endif %}
     
     {% if post.images and post.images.size > 0 %}
-    <div style="margin: 0.75rem 0;">
-      <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}" 
-           style="max-width: 100%; max-height: 200px; border-radius: 6px; object-fit: cover;">
+    <div class="jp-card__img">
+      <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}">
     </div>
     {% endif %}
     
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+    <div class="jp-card__footer">
       {% if post.authors.size > 1 %}
-        <span style="font-size: 0.8rem; color: #888;">
+        <span class="jp-muted">
           <em>with {% for author in post.authors %}{% unless author == 'João Pedro Azevedo' %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}</em>
         </span>
       {% endif %}
       
       {% if post.topics %}
         {% for topic in post.topics %}
-          <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; color: #666;">{{ topic }}</span>
+          <span class="jp-topic">{{ topic }}</span>
         {% endfor %}
       {% endif %}
       
       <a href="{{ post.url }}" target="_blank" rel="noopener" 
-         style="margin-left: auto; font-size: 0.85rem; color: #667eea; text-decoration: none;">
+         class="jp-readmore">
         Read on World Bank →
       </a>
     </div>
@@ -139,18 +138,17 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 {% endfor %}
 </div>
 
-<hr style="margin-top: 3rem;">
+<hr class="jp-separator">
 
-<p style="font-size: 0.85em; color: #666;">
+<p class="jp-muted">
   <em>More blog posts from GPE, UNESCO/UIS, and UNICEF will be added soon.</em><br>
-  <em>Last updated: {{ site.data.worldbank_blogs_full.metadata.last_updated }}</em>
+  <em>Last updated: {{ site.data.citations.world_bank_blogs.last_updated | default: site.data.worldbank_blogs_full.metadata.last_updated }}</em>
 </p>
 
 <script>
-function filterPosts(channel) {
-  const cards = document.querySelectorAll('.blog-card');
-  const yearHeaders = document.querySelectorAll('.year-header');
-  
+function filterPosts(evt, channel) {
+  const cards = document.querySelectorAll('.blog-card[data-channel]');
+
   cards.forEach(card => {
     if (channel === 'all' || card.dataset.channel === channel) {
       card.style.display = 'block';
@@ -158,13 +156,13 @@ function filterPosts(channel) {
       card.style.display = 'none';
     }
   });
-  
+
   // Update active filter button
-  document.querySelectorAll('[onclick*="filterPosts"]').forEach(btn => {
-    btn.style.background = '#e3f2fd';
-    btn.style.color = '#1565c0';
+  document.querySelectorAll('.jp-filter__link').forEach(btn => {
+    btn.classList.remove('is-active');
   });
-  event.target.style.background = '#667eea';
-  event.target.style.color = 'white';
+  if (evt && evt.target) {
+    evt.target.classList.add('is-active');
+  }
 }
 </script>

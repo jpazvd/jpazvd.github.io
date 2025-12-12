@@ -9,127 +9,127 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
 {% include base_path %}
 
 <!-- Citation Metrics Banner -->
-<div class="citation-metrics" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  <h3 style="margin-top: 0; color: white; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem;">📊 Citation & Impact Metrics</h3>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-around;">
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.total_citations | default: '5,500+' }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">Total Citations</div>
+<div class="citation-metrics jp-gradient-banner">
+  <h3 class="jp-gradient-banner__title">📊 Citation & Impact Metrics</h3>
+  <div class="jp-stats-row">
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.google_scholar.total_citations | default: '5,500+' }}</div>
+      <div class="jp-stat__label">Total Citations</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.h_index | default: '30' }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">h-index</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.google_scholar.h_index | default: '30' }}</div>
+      <div class="jp-stat__label">h-index</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.google_scholar.i10_index | default: '62' }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">i10-index</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.google_scholar.i10_index | default: '62' }}</div>
+      <div class="jp-stat__label">i10-index</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.repec.total_works | default: '84' }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">RePEc Works</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.repec.total_works | default: '84' }}</div>
+      <div class="jp-stat__label">RePEc Works</div>
     </div>
-    <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }}</div>
-      <div style="font-size: 0.85rem; opacity: 0.9;">Total Downloads</div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }}</div>
+      <div class="jp-stat__label">Total Downloads</div>
     </div>
   </div>
-  <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8; text-align: center;">
-    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank" style="color: white;">Google Scholar</a> |
-    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank" style="color: white;">RePEc/IDEAS</a> |
-    <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank" style="color: white;">ORCID</a>
+  <div class="jp-banner__footer">
+    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> |
+    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank" rel="noopener">RePEc/IDEAS</a> |
+    <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank" rel="noopener">ORCID</a>
     <br>Last updated: {{ site.data.citations.google_scholar.last_updated }}
   </div>
 </div>
 
 <!-- Publication Outlets & Impact Factors -->
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #667eea;">
-  <h3 style="margin-top: 0;">📰 Selected Publication Outlets</h3>
-  <p style="margin-bottom: 1rem; color: #666;">Publications in high-impact peer-reviewed journals and policy outlets:</p>
+<div class="jp-soft-panel">
+  <h3 class="jp-soft-panel__title">📰 Selected Publication Outlets</h3>
+  <p class="jp-muted">Publications in high-impact peer-reviewed journals and policy outlets:</p>
   
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+  <table class="jp-table">
     <thead>
-      <tr style="background: #e9ecef;">
-        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6;">Journal / Outlet</th>
-        <th style="padding: 10px; text-align: center; border-bottom: 2px solid #dee2e6;">Impact Factor</th>
-        <th style="padding: 10px; text-align: center; border-bottom: 2px solid #dee2e6;">Category</th>
+      <tr>
+        <th>Journal / Outlet</th>
+        <th class="jp-table__center">Impact Factor</th>
+        <th class="jp-table__center">Category</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>The Lancet</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #28a745; color: white; padding: 2px 8px; border-radius: 4px;">168.9</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Medical</td>
-      </tr>
-      <tr style="background: #f8f9fa;">
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>World Development</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #17a2b8; color: white; padding: 2px 8px; border-radius: 4px;">5.3</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Development Economics</td>
+        <td><strong>The Lancet</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--success">168.9</span></td>
+        <td class="jp-table__center">Medical</td>
       </tr>
       <tr>
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>World Bank Research Observer</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #17a2b8; color: white; padding: 2px 8px; border-radius: 4px;">4.2</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Economics</td>
-      </tr>
-      <tr style="background: #f8f9fa;">
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>CEPAL Review</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #6c757d; color: white; padding: 2px 8px; border-radius: 4px;">0.8</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Development Policy</td>
+        <td><strong>World Development</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--info">5.3</span></td>
+        <td class="jp-table__center">Development Economics</td>
       </tr>
       <tr>
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>World Bank Economic Premise</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #6c757d; color: white; padding: 2px 8px; border-radius: 4px;">Policy</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Policy Brief</td>
+        <td><strong>World Bank Research Observer</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--info">4.2</span></td>
+        <td class="jp-table__center">Economics</td>
       </tr>
-      <tr style="background: #f8f9fa;">
-        <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><strong>World Bank Policy Research Working Papers</strong></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;"><span style="background: #6c757d; color: white; padding: 2px 8px; border-radius: 4px;">WP</span></td>
-        <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">Working Papers</td>
+      <tr>
+        <td><strong>CEPAL Review</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--muted">0.8</span></td>
+        <td class="jp-table__center">Development Policy</td>
+      </tr>
+      <tr>
+        <td><strong>World Bank Economic Premise</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--muted">Policy</span></td>
+        <td class="jp-table__center">Policy Brief</td>
+      </tr>
+      <tr>
+        <td><strong>World Bank Policy Research Working Papers</strong></td>
+        <td class="jp-table__center"><span class="jp-badge jp-badge--muted">WP</span></td>
+        <td class="jp-table__center">Working Papers</td>
       </tr>
     </tbody>
   </table>
-  <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem; margin-bottom: 0;"><em>Impact factors from 2024 Journal Citation Reports (Clarivate)</em></p>
+  <p class="jp-muted"><em>Impact factors from 2024 Journal Citation Reports (Clarivate)</em></p>
 </div>
 
 <!-- Publication Breakdown by Type -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-  <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e9ecef; text-align: center;">
-    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">{{ site.data.citations.repec.journal_articles.count | default: '7' }}</div>
-    <div style="font-size: 0.9rem; color: #666;">Peer-Reviewed Articles</div>
+<div class="jp-breakdown-grid">
+  <div class="jp-breakdown-card">
+    <div class="jp-breakdown-card__value">{{ site.data.citations.repec.journal_articles.count | default: '7' }}</div>
+    <div class="jp-muted">Peer-Reviewed Articles</div>
   </div>
-  <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e9ecef; text-align: center;">
-    <div style="font-size: 2rem; font-weight: bold; color: #764ba2;">{{ site.data.citations.repec.working_papers.count | default: '50' }}</div>
-    <div style="font-size: 0.9rem; color: #666;">Working Papers</div>
+  <div class="jp-breakdown-card">
+    <div class="jp-breakdown-card__value">{{ site.data.citations.repec.working_papers.count | default: '50' }}</div>
+    <div class="jp-muted">Working Papers</div>
   </div>
-  <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e9ecef; text-align: center;">
-    <div style="font-size: 2rem; font-weight: bold; color: #28a745;">{{ site.data.citations.repec.books.count | default: '3' }}</div>
-    <div style="font-size: 0.9rem; color: #666;">Books</div>
+  <div class="jp-breakdown-card">
+    <div class="jp-breakdown-card__value">{{ site.data.citations.repec.books.count | default: '3' }}</div>
+    <div class="jp-muted">Books</div>
   </div>
-  <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e9ecef; text-align: center;">
-    <div style="font-size: 2rem; font-weight: bold; color: #17a2b8;">{{ site.data.citations.repec.software.count | default: '22' }}</div>
-    <div style="font-size: 0.9rem; color: #666;">Software Modules</div>
+  <div class="jp-breakdown-card">
+    <div class="jp-breakdown-card__value">{{ site.data.citations.repec.software.count | default: '22' }}</div>
+    <div class="jp-muted">Software Modules</div>
   </div>
 </div>
 
 <!-- Rankings -->
-<div style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-  <h3 style="margin-top: 0;">🏆 RePEc Rankings</h3>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-around;">
-    <div style="text-align: center; background: white; padding: 1rem; border-radius: 8px; min-width: 150px;">
-      <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">#{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}</div>
-      <div style="font-size: 0.8rem; color: #666;">Software Downloads<br>(Global)</div>
+<div class="jp-rankings">
+  <h3 class="jp-rankings__title">🏆 RePEc Rankings</h3>
+  <div class="jp-rankings-row">
+    <div class="jp-rankings-card">
+      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}</div>
+      <div class="jp-muted">Software Downloads<br>(Global)</div>
     </div>
-    <div style="text-align: center; background: white; padding: 1rem; border-radius: 8px; min-width: 150px;">
-      <div style="font-size: 1.5rem; font-weight: bold; color: #764ba2;">#{{ site.data.citations.repec.rankings.software_us.rank_total_downloads | default: '6' }}</div>
-      <div style="font-size: 0.8rem; color: #666;">Software Downloads<br>(US)</div>
+    <div class="jp-rankings-card">
+      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software_us.rank_total_downloads | default: '6' }}</div>
+      <div class="jp-muted">Software Downloads<br>(US)</div>
     </div>
-    <div style="text-align: center; background: white; padding: 1rem; border-radius: 8px; min-width: 150px;">
-      <div style="font-size: 1.5rem; font-weight: bold; color: #28a745;">Top 5%</div>
-      <div style="font-size: 0.8rem; color: #666;">Authors by<br>Downloads</div>
+    <div class="jp-rankings-card">
+      <div class="jp-rankings-card__value">Top 5%</div>
+      <div class="jp-muted">Authors by<br>Downloads</div>
     </div>
   </div>
 </div>
 
-<hr style="margin: 2rem 0;">
+<hr class="jp-hr">
 
 <h2>📚 Full Publication Profiles</h2>
 

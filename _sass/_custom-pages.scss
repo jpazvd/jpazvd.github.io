@@ -1,0 +1,358 @@
+/* ==========================================================================
+   Custom page components
+   ==========================================================================
+
+   Shared classes used across a few handcrafted pages (blogs, research,
+   publications). These styles intentionally use existing theme variables
+   (no new hard-coded brand colors).
+*/
+
+.jp-gradient-banner {
+  background: linear-gradient(
+    135deg,
+    $info-color 0%,
+    mix(#000, $info-color, 35%) 100%
+  );
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gradient-banner a {
+  color: #fff;
+}
+
+.jp-gradient-banner__title {
+  margin-top: 0;
+  color: #fff;
+  border-bottom: 1px solid rgba(#fff, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.jp-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jp-stat {
+  text-align: center;
+}
+
+.jp-stat__value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.jp-stat__label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.jp-banner__footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* Blog page */
+
+.blog-filters {
+  margin-bottom: 2rem;
+}
+
+.blog-filters__links {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.jp-filter__link {
+  padding: 4px 10px;
+  background: rgba($info-color, 0.12);
+  color: mix(#000, $info-color, 35%);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.jp-filter__link.is-active {
+  background: $info-color;
+  color: #fff;
+}
+
+.jp-card {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: $body-color;
+  border-radius: 10px;
+  border-left: 4px solid $info-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.jp-card__title {
+  margin: 0 0 0.5rem 0;
+}
+
+.jp-card__title a {
+  color: mix(#000, $text-color, 10%);
+  text-decoration: none;
+}
+
+.jp-card__meta {
+  font-size: 0.85rem;
+  color: $gray;
+  margin-bottom: 0.75rem;
+}
+
+.jp-pill {
+  background: rgba($info-color, 0.12);
+  color: mix(#000, $info-color, 35%);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.jp-lang-pill {
+  background: rgba($warning-color, 0.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
+.jp-card__desc {
+  color: mix(#000, $text-color, 15%);
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.jp-card__img {
+  margin: 0.75rem 0;
+}
+
+.jp-card__img img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.jp-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.jp-topic {
+  background: $code-background-color;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: $gray;
+}
+
+.jp-readmore {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.jp-separator {
+  margin: 2rem 0;
+}
+
+.jp-muted {
+  font-size: 0.85em;
+  color: $gray;
+}
+
+/* Research page */
+
+.pub-type {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 6px;
+  text-transform: uppercase;
+}
+
+.pub-type.paper {
+  background: rgba($info-color, 0.15);
+  color: mix(#000, $info-color, 35%);
+}
+
+.pub-type.blog {
+  background: rgba($warning-color, 0.2);
+  color: mix(#000, $warning-color, 40%);
+}
+
+.pub-type.code {
+  background: rgba($success-color, 0.18);
+  color: mix(#000, $success-color, 45%);
+}
+
+.research-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: $code-background-color;
+  border-radius: 10px;
+  border-left: 4px solid $info-color;
+}
+
+.research-section h3 {
+  margin-top: 0;
+}
+
+.research-section h4 {
+  margin-top: 1.5rem;
+}
+
+.work-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.work-list li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: $body-color;
+  border-radius: 6px;
+}
+
+.work-list li:hover {
+  background: mix(#fff, $border-color, 65%);
+}
+
+/* Publications page */
+
+.jp-soft-panel {
+  background: $code-background-color;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid $info-color;
+}
+
+.jp-soft-panel__title {
+  margin-top: 0;
+}
+
+.jp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.jp-table thead tr {
+  background: mix(#000, $border-color, 4%);
+}
+
+.jp-table th,
+.jp-table td {
+  padding: 10px;
+  border-bottom: 1px solid $border-color;
+}
+
+.jp-table th {
+  text-align: left;
+  border-bottom: 2px solid $border-color;
+}
+
+.jp-table th.jp-table__center,
+.jp-table td.jp-table__center {
+  text-align: center;
+}
+
+.jp-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.85em;
+}
+
+.jp-badge--success {
+  background: $success-color;
+}
+
+.jp-badge--info {
+  background: $info-color;
+}
+
+.jp-badge--muted {
+  background: $gray;
+}
+
+.jp-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.jp-breakdown-card {
+  background: $body-color;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  text-align: center;
+}
+
+.jp-breakdown-card__value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $info-color;
+}
+
+.jp-rankings {
+  background: linear-gradient(
+    135deg,
+    mix(#fff, $border-color, 65%) 0%,
+    mix(#000, $border-color, 6%) 100%
+  );
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.jp-rankings__title {
+  margin-top: 0;
+}
+
+.jp-rankings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.jp-rankings-card {
+  text-align: center;
+  background: $body-color;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 150px;
+}
+
+.jp-rankings-card__value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $info-color;
+}
+
+.jp-hr {
+  margin: 2rem 0;
+}
