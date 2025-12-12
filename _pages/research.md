@@ -37,6 +37,9 @@ Selected related writing:
 <li><span class="pub-type blog">Blog</span> <a href="https://www.brookings.edu/articles/prioritizing-public-schooling-over-social-transfers-in-brazil/">Prioritizing public schooling over social transfers in Brazil</a> (2018)</li>
 <li><span class="pub-type report">Report</span> <a href="http://documents1.worldbank.org/curated/en/892301518703739733/pdf/123443-repl-PUBLIC.pdf">EU Regular Economic Report: Thinking CAP—Supporting Agricultural Jobs and Incomes in the EU</a> (2018)</li>
 <li><span class="pub-type report">Report</span> <a href="https://hdl.handle.net/1992/8357">Movilidad social en Colombia</a> (2012)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity">Latin American women driving region's prosperity</a> (2012)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/developmenttalk/inequality-very-very-very-top-what-does-forbes-billionaires-database-tell-us">Inequality at the very very very top: What does the Forbes Billionaires database tell us?</a> (2014)</li>
+<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/allaboutfinance/how-equitable-access-finance-turkey-evidence-latest-global-findex">How equitable is access to finance in Turkey?</a> (2016)</li>
 <li><span class="pub-type code">Code</span> <a href="https://ideas.repec.org/c/boc/bocode/s457191.html">HOI</a> — Human Opportunity Index (incl. Colombia and Latin America applications)</li>
 <li><span class="pub-type code">Code</span> <a href="https://ideas.repec.org/c/boc/bocode/s457562.html">ADECOMP</a> — Shapley decomposition of poverty changes (incl. Latin America applications)</li>
 </ul>
@@ -45,6 +48,15 @@ Selected related writing:
 
 Developing frameworks and indicators to monitor progress on the Sustainable Development Goals (SDGs) for children, including comparable measurement and reporting.
 
+Selected related writing:
+
+<ul class="work-list">
+<li><span class="pub-type report">Report</span> <a href="https://data.unicef.org/resources/progress-on-childrens-wellbeing-sdg-country-briefs/">Progress on children’s well-being: SDG Country Briefs</a> (2023)</li>
+<li><span class="pub-type report">Report</span> <a href="https://data.unicef.org/resources/sdg-report-2023/">The Sustainable Development Goals Report 2023: Special Edition</a> (2023)</li>
+<li><span class="pub-type report">Report</span> <a href="https://www.unicef.org/reports/state-of-worlds-children/2024">The State of the World’s Children 2024</a> (2024)</li>
+<li><span class="pub-type report">Report</span> <a href="https://www.unicef.org/reports/state-of-worlds-children/2025">The State of the World’s Children 2025</a> (2025)</li>
+</ul>
+
 #### Sub-theme: Child Health and Mortality
 
 Investigating the determinants of child health and mortality, and how systems, services, and risk factors shape outcomes.
@@ -52,9 +64,10 @@ Investigating the determinants of child health and mortality, and how systems, s
 Selected related writing:
 
 <ul class="work-list">
-<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity">Latin American women driving region's prosperity</a> (2012)</li>
-<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/developmenttalk/inequality-very-very-very-top-what-does-forbes-billionaires-database-tell-us">Inequality at the very very very top: What does the Forbes Billionaires database tell us?</a> (2014)</li>
-<li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/allaboutfinance/how-equitable-access-finance-turkey-evidence-latest-global-findex">How equitable is access to finance in Turkey?</a> (2016)</li>
+
+<li><span class="pub-type paper">Commentary</span> <a href="https://doi.org/10.1016/S0140-6736(24)00501-4">Hard truths about under-5 mortality: call for urgent global action</a> (<em>Lancet</em>, 2024)</li>
+<li><span class="pub-type paper">Commentary</span> <a href="https://doi.org/10.1016/S0140-6736(24)00463-X">Global health estimates should be more responsive to country needs</a> (<em>Lancet</em>, 2024)</li>
+
 </ul>
 
 </div>

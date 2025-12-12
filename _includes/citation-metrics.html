@@ -1,48 +1,24 @@
 {% assign metrics = site.data.citations %}
-{% assign author = site.author %}
 <div class="citation-metrics">
-  <h3>📊 Citation Metrics 
-    {% if author.googlescholar %}
-      <a href="{{ author.googlescholar }}" target="_blank" title="View Google Scholar Profile">
-        <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i>
-      </a>
-    {% endif %}
-  </h3>
-  {% if metrics and metrics.summary %}
-    <ul>
-      <li><strong>Total citations:</strong> 
-        {% if author.googlescholar %}
-          <a href="{{ author.googlescholar }}" target="_blank">{{ metrics.summary.total_citations | default: '—' }}</a>
-        {% else %}
-          {{ metrics.summary.total_citations | default: '—' }}
-        {% endif %}
-      </li>
-      <li><strong>H-index:</strong> 
-        {% if author.googlescholar %}
-          <a href="{{ author.googlescholar }}" target="_blank">{{ metrics.summary.h_index | default: '—' }}</a>
-        {% else %}
-          {{ metrics.summary.h_index | default: '—' }}
-        {% endif %}
-      </li>
-      <li><strong>i10-index:</strong> 
-        {% if author.googlescholar %}
-          <a href="{{ author.googlescholar }}" target="_blank">{{ metrics.summary.i10_index | default: '—' }}</a>
-        {% else %}
-          {{ metrics.summary.i10_index | default: '—' }}
-        {% endif %}
-      </li>
-      <li><strong>Last updated:</strong> {{ metrics.fetched_at | default: '—' }}</li>
-    </ul>
-    {% if author.googlescholar %}
-      <p><a href="{{ author.googlescholar }}" target="_blank" class="btn btn--primary btn--small">
-        <i class="fas fa-graduation-cap"></i> View Full Google Scholar Profile
-      </a></p>
-    {% endif %}
-  {% else %}
-    <p><em>Metrics will appear here when available.</em> 
-      {% if author.googlescholar %}
-        <a href="{{ author.googlescholar }}" target="_blank">View Google Scholar Profile</a>
-      {% endif %}
-    </p>
-  {% endif %}
+  <h3>📊 Citation Metrics</h3>
+
+  {% assign scholar_url = metrics.google_scholar.profile_url %}
+  {% assign repec_url = metrics.repec.profile_url %}
+  {% assign orcid_url = metrics.orcid.profile_url %}
+
+  <ul>
+    <li><strong>Total citations:</strong>
+      {% if scholar_url %}<a href="{{ scholar_url }}" target="_blank" rel="noopener">{{ metrics.google_scholar.total_citations | default: '—' }}</a>{% else %}{{ metrics.google_scholar.total_citations | default: '—' }}{% endif %}
+    </li>
+    <li><strong>H-index:</strong> {{ metrics.google_scholar.h_index | default: '—' }}</li>
+    <li><strong>i10-index:</strong> {{ metrics.google_scholar.i10_index | default: '—' }}</li>
+    <li><strong>RePEc works:</strong> {{ metrics.repec.total_works | default: '—' }}</li>
+    <li><strong>Last updated:</strong> {{ metrics.google_scholar.last_updated | default: metrics.repec.last_updated | default: '—' }}</li>
+  </ul>
+
+  <p>
+    {% if scholar_url %}<a href="{{ scholar_url }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+    {% if repec_url %}{% if scholar_url %} | {% endif %}<a href="{{ repec_url }}" target="_blank" rel="noopener">RePEc/IDEAS</a>{% endif %}
+    {% if orcid_url %}{% if scholar_url or repec_url %} | {% endif %}<a href="{{ orcid_url }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+  </p>
 </div>

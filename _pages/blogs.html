@@ -62,6 +62,7 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
   </div>
   <div class="jp-banner__footer">
     World Bank Blogs | Brookings | UNICEF | GPE, UNESCO/UIS - more coming soon
+    <br>Last updated: {{ site.data.citations.all_blogs.last_updated | default: site.data.citations.world_bank_blogs.last_updated | default: site.data.worldbank_blogs_full.metadata.last_updated }}
   </div>
 </div>
 
@@ -172,12 +173,15 @@ function applyBlogFilters() {
   cards.forEach(card => {
     const matchesChannel = (activeChannel === 'all') || (card.dataset.channel === activeChannel);
     const matchesOrg = (activeOrg === 'all') || (card.dataset.org === activeOrg);
-    card.style.display = (matchesChannel && matchesOrg) ? 'block' : 'none';
+    // Use '' to restore the stylesheet-defined display (grid/flex/etc.)
+    card.style.display = (matchesChannel && matchesOrg) ? '' : 'none';
   });
 
   // Hide year sections with zero visible cards
   document.querySelectorAll('.posts-container').forEach(container => {
-    const hasVisible = Array.from(container.querySelectorAll('.blog-card')).some(card => card.style.display !== 'none');
+    const hasVisible = Array.from(container.querySelectorAll('.blog-card')).some(card => {
+      return getComputedStyle(card).display !== 'none';
+    });
     const header = container.previousElementSibling;
     container.style.display = hasVisible ? '' : 'none';
     if (header && header.classList && header.classList.contains('year-header')) {
@@ -194,12 +198,12 @@ function setBlogFilter(evt, filterType, value) {
   }
 
   // Update active state only within the clicked filter group
-  if (evt && evt.target) {
-    const groupType = evt.target.getAttribute('data-filter-type');
+  if (evt && evt.currentTarget) {
+    const groupType = evt.currentTarget.getAttribute('data-filter-type');
     document.querySelectorAll(`.jp-filter__link[data-filter-type="${groupType}"]`).forEach(btn => {
       btn.classList.remove('is-active');
     });
-    evt.target.classList.add('is-active');
+    evt.currentTarget.classList.add('is-active');
   }
 
   applyBlogFilters();

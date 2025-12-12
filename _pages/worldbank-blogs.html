@@ -13,7 +13,9 @@ description: "World Bank blog posts by João Pedro Azevedo on education, learnin
 <div class="citation-metrics" style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
   <strong>📝 {{ site.data.worldbank_blogs.metadata.total_posts }} blog posts</strong> 
   ({{ site.data.worldbank_blogs.metadata.english_posts }} English, {{ site.data.worldbank_blogs.metadata.translations }} translations) | 
-  <strong>📅 {{ site.data.citations.world_bank_blogs.timeline.first_year }}-{{ site.data.citations.world_bank_blogs.timeline.last_year }}</strong>
+  <strong>📅 {{ site.data.citations.world_bank_blogs.timeline.first_year }}-{{ site.data.citations.world_bank_blogs.timeline.latest_year }}</strong>
+  <br>
+  <em>Last updated: {{ site.data.worldbank_blogs.metadata.last_updated | default: site.data.citations.world_bank_blogs.last_updated }}</em>
 </div>
 
 <h2>By Channel</h2>
