@@ -69,7 +69,7 @@ I specialize in measuring and diagnosing development challenges, evaluating the 
 
 ## Core Research Agendas
 
-<div class="research-section">
+<div class="research-section" markdown="1">
 
 ### 1. Child Wellbeing, Poverty, and Equity
 
@@ -83,7 +83,7 @@ This agenda focuses on the multidimensional aspects of child poverty and wellbei
 
 </div>
 
-<div class="research-section">
+<div class="research-section" markdown="1">
 
 ### 2. Education, Learning, and Human Capital
 
@@ -124,7 +124,7 @@ In response to the global crisis, I led research to simulate and measure the imp
 
 </div>
 
-<div class="research-section">
+<div class="research-section" markdown="1">
 
 ### 3. Data Systems, Methods, and Statistical Capacity
 
