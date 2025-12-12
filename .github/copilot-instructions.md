@@ -75,6 +75,33 @@ Located in `_bibliography/references.bib`. Standard BibTeX format:
 
 ## Important Notes
 
+## Practices & Lessons Learned (Operational)
+
+### Archiving / Deprecation Strategy
+- Prefer a **root-level** `_archive/` (or `_deprecated/`) for historical/backup content.
+- **Avoid placing archive folders inside `_pages/`**: `_pages/` is explicitly included by config, so archived pages there may still be built/published.
+- Keep archived material clearly segregated (e.g., `_archive/root/`, `_archive/_pages/`, `_archive/_bibliography/`, `_archive/talkmap/`).
+- If you must keep backups in-place, use obvious suffixes like `.bak` and ensure they are excluded/ignored appropriately.
+
+### Jekyll Front Matter & Encoding (Hard-Won Gotchas)
+- YAML front matter must start at the **very first byte** of the file. A UTF-8 BOM can prevent Jekyll from detecting front matter.
+  - Practice: save content pages as **UTF-8 without BOM**.
+- Prefer `.md` for content pages unless you specifically need `.html`.
+- Markdown inside raw HTML blocks may not render (e.g., headings like `###` appear literally).
+  - Practice: either avoid wrapping Markdown in raw HTML, or add `markdown="1"` to the wrapper element (kramdown).
+
+### Publishing Safety / Hygiene
+- Never edit `_site/` (generated output).
+- If the repo grows, consider excluding non-site tooling folders from Jekyll builds (e.g., `scripts/`, `docs/`, `resources/`, `markdown_generator/`) via `_config.yml` `exclude:`—but verify CI output before changing.
+- After fixes that affect rendering, validate both:
+  - Local build (when possible)
+  - Live output on GitHub Pages (sometimes caches/propagation delay can confuse early checks)
+
+### Local Development on Windows
+- Jekyll on Windows can be brittle; prefer **WSL** when local `bundle exec jekyll serve` is flaky.
+- Keep local dependencies aligned with CI where practical (CI uses `Gemfile.ci` + `_config.yml,_config.scholar.yml`).
+- Don’t commit `Gemfile.lock` on the `source` branch (platform-specific), unless you intentionally change that policy.
+
 ### GitHub Pages & Jekyll
 - **GitHub Actions is recommended** over the `github-pages` gem for deployment
 - Jekyll is not officially supported for Windows (but works via WSL or Ruby DevKit)

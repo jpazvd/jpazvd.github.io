@@ -42,7 +42,38 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
   </span>
 </div>
 
-<h2>All Posts</h2>
+{% if site.data.other_blogs and site.data.other_blogs.posts and site.data.other_blogs.posts.size > 0 %}
+<h2>Other organizations</h2>
+
+{% assign other_sorted = site.data.other_blogs.posts | sort: 'date' | reverse %}
+
+{% for post in other_sorted %}
+  <article class="blog-card" style="margin-bottom: 1.5rem; padding: 1.25rem; background: #fff; border-radius: 10px; border-left: 4px solid #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <h4 style="margin: 0 0 0.5rem 0;">
+      <a href="{{ post.url }}" target="_blank" rel="noopener" style="color: #333; text-decoration: none;">{{ post.title }}</a>
+      {% if post.language and post.language != "en" %}
+        <span style="background: #ffc107; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle;">{{ post.language | upcase }}</span>
+      {% endif %}
+    </h4>
+
+    <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.75rem;">
+      {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>{% endif %}
+      {% if post.organization %}&bull; <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 4px; font-size: 0.8em;">{{ post.organization }}</span>{% endif %}
+      {% if post.channel %}&bull; <em>{{ post.channel }}</em>{% endif %}
+    </div>
+
+    {% if post.description and post.description.size > 10 %}
+    <p style="color: #555; margin: 0.75rem 0; font-size: 0.95rem; line-height: 1.5;">
+      {{ post.description | truncate: 250 }}
+    </p>
+    {% endif %}
+  </article>
+{% endfor %}
+
+<hr style="margin: 2rem 0;">
+{% endif %}
+
+<h2>World Bank Blogs</h2>
 
 {% assign sorted_posts = site.data.worldbank_blogs_full.posts | sort: 'date' | reverse %}
 {% assign current_year = "" %}
