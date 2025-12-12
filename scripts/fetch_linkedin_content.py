@@ -10,7 +10,11 @@ To keep this repo compliant and maintainable, this script supports:
 1) Export mode (recommended): parse a LinkedIn "Download your data" export folder.
    This avoids scraping and works without special API access.
 
-2) API mode (optional): placeholder wiring for official LinkedIn API access.
+2) Export + analytics merge (optional): parse an additional CSV you export from
+    LinkedIn analytics (e.g., a "content performance" export) and merge metrics
+    like impressions/views/clicks into the normalized items.
+
+3) API mode (optional): placeholder wiring for official LinkedIn API access.
    You must provide an access token and *confirm* the correct endpoints and
    permissions for your application.
 
@@ -20,6 +24,7 @@ Outputs:
 Usage:
   python scripts/fetch_linkedin_content.py --export-dir /path/to/linkedin-export
   python scripts/fetch_linkedin_content.py --export-dir ... --out _data/linkedin_content.yml
+    python scripts/fetch_linkedin_content.py --export-dir ... --analytics-csv /path/to/analytics.csv
 
 Requirements:
   pip install pyyaml
@@ -59,6 +64,12 @@ class NormalizedItem:
     date: Optional[str]  # YYYY-MM-DD
     year: Optional[int]
     text: Optional[str]
+    impressions: Optional[int] = None
+    views: Optional[int] = None
+    clicks: Optional[int] = None
+    reactions: Optional[int] = None
+    comments: Optional[int] = None
+    shares: Optional[int] = None
 
 
 def _parse_date(value: str) -> Tuple[Optional[str], Optional[int]]:
@@ -97,12 +108,29 @@ def _parse_date(value: str) -> Tuple[Optional[str], Optional[int]]:
     return None, None
 
 
+def _to_int(value: str) -> Optional[int]:
+    value = (value or "").strip()
+    if not value:
+        return None
+
+    # Common export formats: "1,234" or "1234".
+    value = value.replace(",", "")
+    try:
+        return int(float(value))
+    except ValueError:
+        return None
+
+
 def _best_field(row: Dict[str, str], field_names: Iterable[str]) -> str:
     for name in field_names:
         for key in row.keys():
             if key.strip().lower() == name.strip().lower():
                 return row.get(key, "") or ""
     return ""
+
+
+def _best_int(row: Dict[str, str], field_names: Iterable[str]) -> Optional[int]:
+    return _to_int(_best_field(row, field_names))
 
 
 def _read_csv_items(csv_path: Path, item_type: str) -> List[NormalizedItem]:
@@ -127,6 +155,14 @@ def _read_csv_items(csv_path: Path, item_type: str) -> List[NormalizedItem]:
             title = _best_field(row, ["Title", "Subject"]).strip()
             text = _best_field(row, ["Text", "Body", "Content", "Comment"]).strip()
 
+            # If the export includes metrics columns, capture them.
+            impressions = _best_int(row, ["Impressions", "Impression", "Impression Count"])
+            views = _best_int(row, ["Views", "View", "View Count"])
+            clicks = _best_int(row, ["Clicks", "Click", "Click Count"])
+            reactions = _best_int(row, ["Reactions", "Reaction Count", "Likes", "Like Count"])
+            comments = _best_int(row, ["Comments", "Comment Count"])
+            shares = _best_int(row, ["Shares", "Share Count"])
+
             # If there's no explicit title, use the first line of text.
             if not title:
                 title = (text.splitlines()[0] if text else "LinkedIn item").strip()
@@ -142,6 +178,12 @@ def _read_csv_items(csv_path: Path, item_type: str) -> List[NormalizedItem]:
                     date=date,
                     year=year,
                     text=text or None,
+                    impressions=impressions,
+                    views=views,
+                    clicks=clicks,
+                    reactions=reactions,
+                    comments=comments,
+                    shares=shares,
                 )
             )
 
@@ -171,6 +213,95 @@ def load_from_export(export_dir: Path) -> List[NormalizedItem]:
     return all_items
 
 
+def _read_analytics(csv_path: Path) -> List[Dict[str, Any]]:
+    """Read an analytics export CSV.
+
+    LinkedIn's analytics export formats vary by product (member vs page) and UI.
+    This function extracts a minimal subset and returns rows with best-effort
+    normalization.
+    """
+
+    rows_out: List[Dict[str, Any]] = []
+    with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        if not reader.fieldnames:
+            return rows_out
+
+        for row in reader:
+            date_raw = _best_field(row, ["Date", "Created Date", "Creation Date", "Time", "Timestamp"])
+            date, _year = _parse_date(date_raw)
+
+            url = _best_field(row, ["URL", "Url", "Link", "Permalink", "Update URL", "Content URL"])
+            title = _best_field(row, ["Title", "Subject", "Content", "Post", "Update"])
+
+            rows_out.append(
+                {
+                    "date": date,
+                    "title": (title or "").strip(),
+                    "url": (url or "").strip() or None,
+                    "impressions": _best_int(row, ["Impressions", "Impression", "Impression Count"]),
+                    "views": _best_int(row, ["Views", "View", "View Count"]),
+                    "clicks": _best_int(row, ["Clicks", "Click", "Click Count"]),
+                    "reactions": _best_int(row, ["Reactions", "Reaction Count", "Likes", "Like Count"]),
+                    "comments": _best_int(row, ["Comments", "Comment Count"]),
+                    "shares": _best_int(row, ["Shares", "Share Count"]),
+                }
+            )
+
+    return rows_out
+
+
+def merge_analytics(items: List[NormalizedItem], analytics_rows: List[Dict[str, Any]]) -> List[NormalizedItem]:
+    """Merge analytics metrics into normalized items.
+
+    Strategy:
+    - Prefer matching by URL when available.
+    - Fallback to (date, normalized title) for exports lacking URLs.
+    """
+
+    by_url: Dict[str, Dict[str, Any]] = {}
+    by_key: Dict[Tuple[str, str], Dict[str, Any]] = {}
+
+    for r in analytics_rows:
+        if r.get("url"):
+            by_url[str(r["url"]).strip()] = r
+        if r.get("date") and r.get("title"):
+            key = (str(r["date"]).strip(), str(r["title"]).strip().lower())
+            by_key[key] = r
+
+    merged: List[NormalizedItem] = []
+    for item in items:
+        r: Optional[Dict[str, Any]] = None
+        if item.url and item.url.strip() in by_url:
+            r = by_url[item.url.strip()]
+        elif item.date and item.title:
+            key = (item.date.strip(), item.title.strip().lower())
+            r = by_key.get(key)
+
+        if not r:
+            merged.append(item)
+            continue
+
+        merged.append(
+            NormalizedItem(
+                type=item.type,
+                title=item.title,
+                url=item.url,
+                date=item.date,
+                year=item.year,
+                text=item.text,
+                impressions=item.impressions if item.impressions is not None else r.get("impressions"),
+                views=item.views if item.views is not None else r.get("views"),
+                clicks=item.clicks if item.clicks is not None else r.get("clicks"),
+                reactions=item.reactions if item.reactions is not None else r.get("reactions"),
+                comments=item.comments if item.comments is not None else r.get("comments"),
+                shares=item.shares if item.shares is not None else r.get("shares"),
+            )
+        )
+
+    return merged
+
+
 def write_yaml(items: List[NormalizedItem], out_path: Path):
     items_sorted = sorted(items, key=lambda i: (i.date or "0000-00-00"), reverse=True)
 
@@ -182,6 +313,10 @@ def write_yaml(items: List[NormalizedItem], out_path: Path):
         first_year = None
         last_year = None
 
+    total_impressions = sum((i.impressions or 0) for i in items_sorted)
+    total_views = sum((i.views or 0) for i in items_sorted)
+    total_clicks = sum((i.clicks or 0) for i in items_sorted)
+
     payload: Dict[str, Any] = {
         "metadata": {
             "source": "LinkedIn",
@@ -189,6 +324,11 @@ def write_yaml(items: List[NormalizedItem], out_path: Path):
             "total_items": len(items_sorted),
             "timeline": {"first_year": first_year, "last_year": last_year},
             "notes": "Generated from LinkedIn export (no scraping).",
+            "traffic_totals": {
+                "impressions": total_impressions if total_impressions else None,
+                "views": total_views if total_views else None,
+                "clicks": total_clicks if total_clicks else None,
+            },
         },
         "items": [
             {
@@ -198,6 +338,12 @@ def write_yaml(items: List[NormalizedItem], out_path: Path):
                 "date": i.date,
                 "year": i.year,
                 "text": i.text,
+                "impressions": i.impressions,
+                "views": i.views,
+                "clicks": i.clicks,
+                "reactions": i.reactions,
+                "comments": i.comments,
+                "shares": i.shares,
             }
             for i in items_sorted
         ],
@@ -210,6 +356,14 @@ def write_yaml(items: List[NormalizedItem], out_path: Path):
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate _data/linkedin_content.yml from LinkedIn export.")
     parser.add_argument("--export-dir", type=str, help="Path to LinkedIn data export folder")
+    parser.add_argument(
+        "--analytics-csv",
+        type=str,
+        help=(
+            "Optional: path to a LinkedIn analytics CSV export to merge traffic metrics "
+            "(impressions/views/clicks/etc.) into items."
+        ),
+    )
     parser.add_argument("--out", type=str, default=str(DEFAULT_OUT), help="Output YAML file path")
 
     args = parser.parse_args()
@@ -225,6 +379,16 @@ def main() -> int:
         return 2
 
     items = load_from_export(export_dir)
+
+    if args.analytics_csv:
+        analytics_path = Path(args.analytics_csv)
+        if not analytics_path.exists() or not analytics_path.is_file():
+            print(f"Error: analytics CSV not found: {analytics_path}")
+            return 2
+
+        analytics_rows = _read_analytics(analytics_path)
+        items = merge_analytics(items, analytics_rows)
+
     out_path = Path(args.out)
     write_yaml(items, out_path)
 
