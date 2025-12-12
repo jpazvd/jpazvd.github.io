@@ -22,7 +22,21 @@ Increasingly, I am leading teams to use AI- and LLM-assisted workflows to improv
 
 ### 1. Child Wellbeing, Poverty, and Equity
 
-This agenda focuses on the multidimensional aspects of child poverty and wellbeing. It includes developing frameworks for monitoring progress on the Sustainable Development Goals (SDGs) for children, analyzing the drivers of inequality, and investigating the determinants of child health and mortality.
+This agenda focuses on the multidimensional aspects of child poverty and wellbeing.
+
+#### Sub-theme: Poverty, Equity, and Distributional Analysis
+
+Analyzing the drivers of inequality and the distributional impacts of policies and shocks—grounded in country-level diagnostics and extended to regional and cross-country benchmarking—with a focus on equity for children and vulnerable populations.
+
+#### Sub-theme: Child Poverty and Wellbeing Measurement (SDGs)
+
+Developing frameworks and indicators to monitor progress on the Sustainable Development Goals (SDGs) for children, including comparable measurement and reporting.
+
+#### Sub-theme: Child Health and Mortality
+
+Investigating the determinants of child health and mortality, and how systems, services, and risk factors shape outcomes.
+
+Selected related writing:
 
 <ul class="work-list">
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity">Latin American women driving region's prosperity</a> (2012)</li>
