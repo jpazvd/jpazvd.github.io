@@ -3,16 +3,16 @@ layout: archive
 title: "Evidence & Analytics for Action"
 permalink: /research/
 author_profile: true
-description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital measurement, education economics, and poverty and inequality measurement, learning poverty, sustainable development goals (SDGs), Nutrition, Child Mortality, WASH, Children climate, Child Poverty."
+description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital measurement, education economics, and poverty and inequality measurement, learning poverty, sustainable development goals (SDGs), Nutrition, Child Mortality, WASH, Children climate, Child Poverty, OpenAI, Antropics, Gemini, LLM, GPTs."
 ---
 
 {% include base_path %}
 
 I use data, measurement, and applied economics to support better decisions for children and vulnerable populations. Across UNICEF, the World Bank, and the Brazilian public sector, my work sits at the intersection of development economics, education policy, poverty and equity measurement, and statistical systems.
 
-My focus is operational: turning complex data into indicators, diagnostics, scalable analytics, and decision-support tools; evaluating policies and programs; and strengthening the capacity of institutions to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.
+My focus is operational: translating complex data into indicators, diagnostics, scalable analytics, and decision-support tools; evaluating policies and programs; and strengthening institutional capacity to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.
 
-Increasingly, I am leading teams to use AI and LLM-assisted workflows to improve coding productivity and the interpretability of rigorous, complex analytics—within clear technical and ethical guardrails and human-in-the-loop review (e.g., validation, documentation, privacy/PII safeguards, and auditability).
+Increasingly, I am leading teams to use AI- and LLM-assisted workflows to improve analytical productivity and increase the dissemination and interpretability of rigorous analysis—within clear technical and ethical guardrails and with human-in-the-loop review (e.g., validation, documentation, continuous integration and deployment, privacy/PII safeguards, and auditability).
 
 ---
 
