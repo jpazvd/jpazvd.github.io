@@ -1,12 +1,9 @@
----
+﻿---
 layout: single
 permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
 ---
 
 I am [UNICEF's first Chief Statistician](https://www.unicef.org/media/experts/joao-pedro-azevedo), appointed in March 2023 to lead the organization's global data and statistical work. Before joining UNICEF, I worked for 16 years at the [World Bank](https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo), as Lead Economist of the Poverty and Equity Practice and Education Global Practice, where I had several roles such as EdTech Fellow, Education Statistics Coordinator, and Global Lead, co-leading the Global Solution Group on Welfare Measurement and Statistical Capacity for Results, as well as the Data for Goals agenda. Before my tenure at the World Bank, I served as the superintendent of Monitoring and Evaluation at the [Secretary of Finance for the State of Rio de Janeiro](https://www.fazenda.rj.gov.br/), as well as a research fellow at the [Institute of Applied Economic Research](https://ipea.gov.br) from the Brazilian Ministry of Planning (IPEA) in Rio de Janeiro.

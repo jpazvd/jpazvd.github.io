@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch metrics from OpenAlex
         env:
-          ORCID: 0000-0002-3844-215X
+          ORCID: 0000-0003-2111-0596
         run: |
           python scripts/fetch_citations.py
 
