@@ -65,112 +65,95 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
   </div>
 </div>
 
-<!-- Filter by Channel -->
-<div class="blog-filters">
-  <strong>Filter by Channel:</strong>
-  <span class="blog-filters__links">
-    <a class="jp-filter__link is-active" href="#all" onclick="filterPosts(event, 'all'); return false;">All</a>
-    <a class="jp-filter__link" href="#education" onclick="filterPosts(event, 'Education for Global Development'); return false;">Education</a>
-    <a class="jp-filter__link" href="#letstalk" onclick="filterPosts(event, `Let's Talk Development`); return false;">Let's Talk Dev</a>
-    <a class="jp-filter__link" href="#data" onclick="filterPosts(event, 'Data Blog'); return false;">Data</a>
-  </span>
-</div>
+  <!-- Filters -->
+  <div class="blog-filters">
+    <strong>Filter by Channel:</strong>
+    <span class="blog-filters__links">
+      <a class="jp-filter__link is-active" data-filter-type="channel" href="#all" onclick="setBlogFilter(event, 'channel', 'all'); return false;">All</a>
+      <a class="jp-filter__link" data-filter-type="channel" href="#education" onclick="setBlogFilter(event, 'channel', 'Education for Global Development'); return false;">Education</a>
+      <a class="jp-filter__link" data-filter-type="channel" href="#letstalk" onclick="setBlogFilter(event, 'channel', `Let's Talk Development`); return false;">Let's Talk Dev</a>
+      <a class="jp-filter__link" data-filter-type="channel" href="#data" onclick="setBlogFilter(event, 'channel', 'Data Blog'); return false;">Data</a>
+      <a class="jp-filter__link" data-filter-type="channel" href="#futuredev" onclick="setBlogFilter(event, 'channel', 'Future Development'); return false;">Future Development</a>
+      <a class="jp-filter__link" data-filter-type="channel" href="#unicefdata" onclick="setBlogFilter(event, 'channel', 'UNICEF Data for Action'); return false;">UNICEF Data for Action</a>
+    </span>
+  </div>
 
-{% if site.data.other_blogs and site.data.other_blogs.posts and site.data.other_blogs.posts.size > 0 %}
-<h2>Other organizations</h2>
+  <div class="blog-filters">
+    <strong>Filter by Organization:</strong>
+    <span class="blog-filters__links">
+      <a class="jp-filter__link is-active" data-filter-type="org" href="#all-org" onclick="setBlogFilter(event, 'org', 'all'); return false;">All</a>
+      <a class="jp-filter__link" data-filter-type="org" href="#worldbank" onclick="setBlogFilter(event, 'org', 'World Bank'); return false;">World Bank</a>
+      <a class="jp-filter__link" data-filter-type="org" href="#unicef" onclick="setBlogFilter(event, 'org', 'UNICEF'); return false;">UNICEF</a>
+      <a class="jp-filter__link" data-filter-type="org" href="#brookings" onclick="setBlogFilter(event, 'org', 'Brookings'); return false;">Brookings</a>
+    </span>
+  </div>
 
-{% assign other_sorted = site.data.other_blogs.posts | sort: 'date' | reverse %}
+  <h2>All posts (chronological)</h2>
 
-{% for post in other_sorted %}
-  <article class="blog-card jp-card">
-    <h4 class="jp-card__title">
-      <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
-      {% if post.language and post.language != "en" %}
-        <span class="jp-lang-pill">{{ post.language | upcase }}</span>
-      {% endif %}
-    </h4>
+  {% assign all_sorted_posts = all_posts | sort: 'date' | reverse %}
+  {% assign current_year = "" %}
 
-    <div class="jp-card__meta">
-      {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>{% endif %}
-      {% if post.organization %}&bull; <span class="jp-pill">{{ post.organization }}</span>{% endif %}
-      {% if post.channel %}&bull; <em>{{ post.channel }}</em>{% endif %}
-    </div>
+  {% for post in all_sorted_posts %}
+    {% assign post_year = post.year | default: post.date | slice: 0, 4 %}
+    {% assign post_org = post.organization | default: 'World Bank' %}
 
-    {% if post.description and post.description.size > 10 %}
-    <p class="jp-card__desc">
-      {{ post.description | truncate: 250 }}
-    </p>
+    {% if post_year != current_year %}
+      {% if current_year != "" %}</div>{% endif %}
+      <h3 id="y{{ post_year }}" class="year-header">{{ post_year }}</h3>
+      <div class="posts-container">
+      {% assign current_year = post_year %}
     {% endif %}
-  </article>
-{% endfor %}
 
-<hr class="jp-separator">
-{% endif %}
+    <article class="blog-card jp-card" data-channel="{{ post.channel }}" data-org="{{ post_org }}">
+      <h4 class="jp-card__title">
+        <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
+        {% if post.language and post.language != "en" %}
+          <span class="jp-lang-pill">{{ post.language | upcase }}</span>
+        {% endif %}
+      </h4>
 
-<h2>World Bank Blogs</h2>
+      <div class="jp-card__meta">
+        {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>{% endif %}
+        &bull;
+        <span class="jp-pill">{{ post_org }}</span>
+        {% if post.channel %}
+          &bull;
+          <em>{{ post.channel }}</em>
+        {% endif %}
+      </div>
 
-{% assign sorted_posts = site.data.worldbank_blogs_full.posts | sort: 'date' | reverse %}
-{% assign current_year = "" %}
-
-{% for post in sorted_posts %}
-  {% assign post_year = post.year | default: post.date | slice: 0, 4 %}
-  
-  {% if post_year != current_year %}
-    {% if current_year != "" %}</div>{% endif %}
-    <h3 id="y{{ post_year }}" class="year-header">{{ post_year }}</h3>
-    <div class="posts-container">
-    {% assign current_year = post_year %}
-  {% endif %}
-  
-  <article class="blog-card jp-card" data-channel="{{ post.channel }}">
-    <h4 class="jp-card__title">
-      <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
-      {% if post.language and post.language != "en" %} 
-        <span class="jp-lang-pill">{{ post.language | upcase }}</span>
+      {% if post.description and post.description.size > 10 %}
+      <p class="jp-card__desc">
+        {{ post.description | truncate: 250 }}
+      </p>
       {% endif %}
-    </h4>
-    
-    <div class="jp-card__meta">
-      <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
-      &bull; 
-      <span class="jp-pill">World Bank</span>
-      &bull; 
-      <em>{{ post.channel }}</em>
-    </div>
-    
-    {% if post.description and post.description.size > 10 %}
-    <p class="jp-card__desc">
-      {{ post.description | truncate: 250 }}
-    </p>
-    {% endif %}
-    
-    {% if post.images and post.images.size > 0 %}
-    <div class="jp-card__img">
-      <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}">
-    </div>
-    {% endif %}
-    
-    <div class="jp-card__footer">
-      {% if post.authors.size > 1 %}
-        <span class="jp-muted">
-          <em>with {% for author in post.authors %}{% unless author == 'João Pedro Azevedo' %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}</em>
-        </span>
+
+      {% if post.images and post.images.size > 0 %}
+      <div class="jp-card__img">
+        <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}">
+      </div>
       {% endif %}
-      
-      {% if post.topics %}
-        {% for topic in post.topics %}
-          <span class="jp-topic">{{ topic }}</span>
-        {% endfor %}
-      {% endif %}
-      
-      <a href="{{ post.url }}" target="_blank" rel="noopener" 
-         class="jp-readmore">
-        Read on World Bank →
-      </a>
-    </div>
-  </article>
-{% endfor %}
-</div>
+
+      <div class="jp-card__footer">
+        {% if post.authors and post.authors.size > 1 %}
+          <span class="jp-muted">
+            <em>with {% for author in post.authors %}{% unless author == 'João Pedro Azevedo' %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}</em>
+          </span>
+        {% endif %}
+
+        {% if post.topics %}
+          {% for topic in post.topics %}
+            <span class="jp-topic">{{ topic }}</span>
+          {% endfor %}
+        {% endif %}
+
+        {% if post_org == 'World Bank' %}
+          <a href="{{ post.url }}" target="_blank" rel="noopener" class="jp-readmore">Read on World Bank →</a>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+  </div>
 
 <hr class="jp-separator">
 
@@ -180,23 +163,45 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 </p>
 
 <script>
-function filterPosts(evt, channel) {
-  const cards = document.querySelectorAll('.blog-card[data-channel]');
+let activeChannel = 'all';
+let activeOrg = 'all';
+
+function applyBlogFilters() {
+  const cards = document.querySelectorAll('.blog-card[data-channel][data-org]');
 
   cards.forEach(card => {
-    if (channel === 'all' || card.dataset.channel === channel) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    const matchesChannel = (activeChannel === 'all') || (card.dataset.channel === activeChannel);
+    const matchesOrg = (activeOrg === 'all') || (card.dataset.org === activeOrg);
+    card.style.display = (matchesChannel && matchesOrg) ? 'block' : 'none';
   });
 
-  // Update active filter button
-  document.querySelectorAll('.jp-filter__link').forEach(btn => {
-    btn.classList.remove('is-active');
+  // Hide year sections with zero visible cards
+  document.querySelectorAll('.posts-container').forEach(container => {
+    const hasVisible = Array.from(container.querySelectorAll('.blog-card')).some(card => card.style.display !== 'none');
+    const header = container.previousElementSibling;
+    container.style.display = hasVisible ? '' : 'none';
+    if (header && header.classList && header.classList.contains('year-header')) {
+      header.style.display = hasVisible ? '' : 'none';
+    }
   });
+}
+
+function setBlogFilter(evt, filterType, value) {
+  if (filterType === 'channel') {
+    activeChannel = value;
+  } else if (filterType === 'org') {
+    activeOrg = value;
+  }
+
+  // Update active state only within the clicked filter group
   if (evt && evt.target) {
+    const groupType = evt.target.getAttribute('data-filter-type');
+    document.querySelectorAll(`.jp-filter__link[data-filter-type="${groupType}"]`).forEach(btn => {
+      btn.classList.remove('is-active');
+    });
     evt.target.classList.add('is-active');
   }
+
+  applyBlogFilters();
 }
 </script>
