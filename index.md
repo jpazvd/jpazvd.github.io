@@ -1,4 +1,4 @@
-﻿---
+---
 layout: single
 permalink: /
 title: "About me"
