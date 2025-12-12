@@ -12,6 +12,9 @@ _site/
 .env.local
 .env.*.local
 
+# Python virtual environments
+.venv/
+
 # Local development
 *.log
 
@@ -29,3 +32,6 @@ Thumbs.db
 # Ruby/Bundler
 vendor/
 .bundle/
+
+# Bundler lockfile is platform-specific for this repo
+Gemfile.lock
