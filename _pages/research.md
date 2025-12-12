@@ -12,7 +12,7 @@ description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital
 
 My focus is operational: turning complex data into indicators, diagnostics, scalable analytics, and decision-support tools; evaluating policies and programs; and strengthening the capacity of institutions to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.
 
-Increasingly, I am leading teams to use AI and LLM-assisted workflows to improve coding productivity and the interpretability of rigorous, complex analytics—within clear technical and ethical guardrails (e.g., validation, documentation, privacy/PII safeguards, and human review).
+Increasingly, I am leading teams to use AI and LLM-assisted workflows to improve coding productivity and the interpretability of rigorous, complex analytics—within clear technical and ethical guardrails and human-in-the-loop review (e.g., validation, documentation, privacy/PII safeguards, and auditability).
 
 ---
 
