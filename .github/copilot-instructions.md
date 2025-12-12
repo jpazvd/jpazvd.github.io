@@ -168,7 +168,7 @@ When asked to update publication statistics:
 2. **Data sources**:
    - Google Scholar: https://scholar.google.com/citations?user=lTKXA78AAAAJ
    - RePEc/IDEAS: https://ideas.repec.org/e/pwa88.html
-   - ORCID: https://orcid.org/0000-0003-2111-0596
+  - ORCID: https://orcid.org/0000-0002-3844-215X
 3. **Update file**: `_data/citations.yml`
 4. **Automated script**: `scripts/fetch_scholar_metrics.py`
 

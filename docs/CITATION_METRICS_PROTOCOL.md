@@ -12,7 +12,7 @@ This document outlines the protocol for updating publication statistics on jpazv
 | **RePEc/IDEAS** | https://ideas.repec.org/e/pwa88.html | Downloads, citations, rankings, abstract views |
 | **World Bank OKR** | https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257 | Publication count (downloads require auth) |
 | **World Bank Blogs** | https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo | Blog posts by channel |
-| **ORCID** | https://orcid.org/0000-0003-2111-0596 | Verified publication list, employment history |
+| **ORCID** | https://orcid.org/0000-0002-3844-215X | Verified publication list, employment history |
 | **ResearchGate** | (if applicable) | Reads, citations, Research Interest score |
 | **Scopus** | (Author ID needed) | h-index, citations, documents |
 | **Web of Science** | (ResearcherID needed) | h-index, citations |
@@ -68,7 +68,7 @@ This document outlines the protocol for updating publication statistics on jpazv
    - Number of registered works
 
 #### ORCID (if used)
-1. Visit: https://orcid.org/0000-0003-2111-0596
+1. Visit: https://orcid.org/0000-0002-3844-215X
 2. Verify publication list is current
 3. Check for any missing works
 
@@ -466,7 +466,7 @@ git push origin source
 - [RePEc/IDEAS Profile](https://ideas.repec.org/e/pwa88.html)
 - [World Bank OKR Profile](https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257)
 - [World Bank Blogs Author Page](https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo)
-- [ORCID Profile](https://orcid.org/0000-0003-2111-0596)
+- [ORCID Profile](https://orcid.org/0000-0002-3844-215X)
 - [scholarly Python package](https://github.com/scholarly-python-package/scholarly)
 
 ---

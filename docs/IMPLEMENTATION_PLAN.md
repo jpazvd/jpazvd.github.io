@@ -51,7 +51,7 @@ social:
     - "https://github.com/jpazvd"
     - "https://www.linkedin.com/in/jpazvd"
     - "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
-    - "https://orcid.org/0000-0003-2111-0596"
+    - "https://orcid.org/0000-0002-3844-215X"
     - "https://ideas.repec.org/e/pwa88.html"
 
 # Open Graph default image (for social sharing)
@@ -133,7 +133,7 @@ scholar:
     "https://github.com/jpazvd",
     "https://www.linkedin.com/in/jpazvd",
     "https://scholar.google.com/citations?user=lTKXA78AAAAJ",
-    "https://orcid.org/0000-0003-2111-0596",
+    "https://orcid.org/0000-0002-3844-215X",
     "https://ideas.repec.org/e/pwa88.html",
     "https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257"
   ],
@@ -395,7 +395,7 @@ MIT License - See [LICENSE](LICENSE)
 ## Contact
 - Twitter: [@jpazvd](https://twitter.com/jpazvd)
 - GitHub: [jpazvd](https://github.com/jpazvd)
-- ORCID: [0000-0003-2111-0596](https://orcid.org/0000-0003-2111-0596)
+- ORCID: [0000-0002-3844-215X](https://orcid.org/0000-0002-3844-215X)
 ```
 
 ---

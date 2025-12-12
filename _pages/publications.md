@@ -34,8 +34,8 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
     </div>
   </div>
   <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8; text-align: center;">
-    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank" style="color: white;">Google Scholar</a> | 
-    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank" style="color: white;">RePEc/IDEAS</a> | 
+    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank" style="color: white;">Google Scholar</a> |
+    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank" style="color: white;">RePEc/IDEAS</a> |
     <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank" style="color: white;">ORCID</a>
     <br>Last updated: {{ site.data.citations.google_scholar.last_updated }}
   </div>
@@ -137,7 +137,7 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
   <li><a href="https://scholar.google.com/citations?user=lTKXA78AAAAJ" target="_blank"><strong>Google Scholar</strong></a> — Complete citation record ({{ site.data.citations.google_scholar.total_citations }} citations)</li>
   <li><a href="https://ideas.repec.org/e/pwa88.html" target="_blank"><strong>RePEc/IDEAS</strong></a> — Working papers, articles, and software ({{ site.data.citations.repec.total_works }} works)</li>
   <li><a href="https://openknowledge.worldbank.org/entities/person/360f7a2e-0784-56e1-acf4-7f805fd50257" target="_blank"><strong>World Bank Open Knowledge Repository</strong></a> — Official World Bank publications ({{ site.data.citations.world_bank_okr.publication_count }} publications)</li>
-  <li><a href="https://orcid.org/0000-0003-2111-0596" target="_blank"><strong>ORCID</strong></a> — Persistent author identifier</li>
+  <li><a href="https://orcid.org/0000-0002-3844-215X" target="_blank"><strong>ORCID</strong></a> — Persistent author identifier</li>
 </ul>
 
 <hr style="margin: 2rem 0;">
