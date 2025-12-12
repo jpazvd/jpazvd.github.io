@@ -8,9 +8,9 @@ description: "Research by João Pedro Azevedo on Learning Poverty, Human Capital
 
 {% include base_path %}
 
-My research is driven by a commitment to using data and evidence to improve the lives of children and vulnerable populations globally. Spanning over two decades at institutions like UNICEF, the World Bank, and in the Brazilian public sector, my work focuses on the intersection of development economics, education policy, and poverty analysis.
+**Evidence & Analytics for Action.** I use data, measurement, and applied economics to support better decisions for children and vulnerable populations. Across UNICEF, the World Bank, and the Brazilian public sector, my work sits at the intersection of development economics, education policy, poverty and equity measurement, and statistical systems.
 
-I specialize in measuring and diagnosing development challenges, evaluating the policies designed to address them, and building the statistical capacity of systems to support evidence-based policymaking. A significant portion of my recent work has centered on creating global public goods, such as the Learning Poverty measure, and assessing the profound impacts of the COVID-19 pandemic on education and intergenerational mobility.
+My focus is operational: turning complex data into indicators, diagnostics, and decision-support tools; evaluating policies and programs; and strengthening the capacity of institutions to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.
 
 ---
 
