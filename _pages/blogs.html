@@ -11,23 +11,57 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 <p>Blog posts and articles on education, learning poverty, human capital, and development economics.</p>
 
 <!-- Stats Banner -->
+{% assign other_posts = site.data.other_blogs.posts %}
+{% if other_posts == nil %}
+  {% assign other_posts = "" | split: "," %}
+{% endif %}
+
+{% assign wb_posts = site.data.worldbank_blogs_full.posts %}
+{% if wb_posts == nil %}
+  {% assign wb_posts = "" | split: "," %}
+{% endif %}
+
+{% assign wb_count = site.data.citations.world_bank_blogs.post_count | default: site.data.worldbank_blogs_full.metadata.total_posts | default: 29 %}
+{% assign other_count = other_posts.size | default: 0 %}
+{% assign total_count = wb_count | plus: other_count %}
+
+{% assign wb_first_year = site.data.citations.world_bank_blogs.timeline.first_year | default: 2012 | plus: 0 %}
+{% assign wb_last_year = site.data.citations.world_bank_blogs.timeline.latest_year | default: site.data.citations.world_bank_blogs.timeline.last_year | default: 2023 | plus: 0 %}
+
+{% assign other_years = other_posts | map: 'year' | sort %}
+{% assign other_first_year = other_years | first | default: wb_first_year | plus: 0 %}
+{% assign other_last_year = other_years | last | default: wb_last_year | plus: 0 %}
+
+{% assign first_year = wb_first_year %}
+{% if other_first_year < first_year %}
+  {% assign first_year = other_first_year %}
+{% endif %}
+
+{% assign last_year = wb_last_year %}
+{% if other_last_year > last_year %}
+  {% assign last_year = other_last_year %}
+{% endif %}
+
+{% assign all_posts = wb_posts | concat: other_posts %}
+{% assign all_channels = all_posts | group_by: 'channel' %}
+
 <div class="blog-stats jp-gradient-banner">
   <div class="jp-stats-row">
     <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.post_count | default: site.data.worldbank_blogs_full.metadata.total_posts | default: 29 }}</div>
+      <div class="jp-stat__value">{{ total_count }}</div>
       <div class="jp-stat__label">Blog Posts</div>
     </div>
     <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.timeline.first_year | default: 2012 }}-{{ site.data.citations.world_bank_blogs.timeline.latest_year | default: 2023 }}</div>
+      <div class="jp-stat__value">{{ first_year }}-{{ last_year }}</div>
       <div class="jp-stat__label">Active Years</div>
     </div>
     <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.world_bank_blogs.by_channel | size | default: 6 }}</div>
-      <div class="jp-stat__label">WB Blog Channels</div>
+      <div class="jp-stat__value">{{ all_channels | size }}</div>
+      <div class="jp-stat__label">Blog Channels</div>
     </div>
   </div>
   <div class="jp-banner__footer">
-    World Bank Blogs | UNICEF | GPE, UNESCO/UIS - more coming soon
+    World Bank Blogs | Brookings | UNICEF | GPE, UNESCO/UIS - more coming soon
   </div>
 </div>
 
@@ -37,7 +71,7 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
   <span class="blog-filters__links">
     <a class="jp-filter__link is-active" href="#all" onclick="filterPosts(event, 'all'); return false;">All</a>
     <a class="jp-filter__link" href="#education" onclick="filterPosts(event, 'Education for Global Development'); return false;">Education</a>
-    <a class="jp-filter__link" href="#letstalk" onclick="filterPosts(event, 'Let\\'s Talk Development'); return false;">Let's Talk Dev</a>
+    <a class="jp-filter__link" href="#letstalk" onclick="filterPosts(event, `Let's Talk Development`); return false;">Let's Talk Dev</a>
     <a class="jp-filter__link" href="#data" onclick="filterPosts(event, 'Data Blog'); return false;">Data</a>
   </span>
 </div>

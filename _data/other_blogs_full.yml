@@ -3,6 +3,7 @@ metadata:
   source: Other Organizations
   last_updated: '2025-12-12'
   total_posts: 4
+  includes_content: true
 posts:
   - title: UNICEF report puts children at the heart of sustainable development
     url: https://data.unicef.org/data-for-action/unicef-report-puts-children-at-the-heart-of-sustainable-development/
@@ -19,6 +20,12 @@ posts:
       - Data and Research
       - Evidence to Policy
       - Publication & data launches
+    content: |-
+      In the heart of Djibouti’s Markazi camp for Yemeni refugees, a young girl carries her textbooks with unwavering determination as she walks home from a UNICEF-supported school.
+
+      At the Sustainable Development Goal (SDG) Summit during the United Nations General Assembly this past September, leaders from across the globe convened, renewing their commitment to creating an inclusive, sustainable world by 2030.
+
+      Recognizing the need to keep children’s rights and well-being at the center of the 2030 Agenda, UNICEF published the report “Progress on Children’s Well-Being: Centring child rights in the 2030 Agenda”, compiling over 20 years of statistics across 48 indicators and 190+ countries.
 
   - title: Did the EU’s economic recession lead to a rise in populism?
     url: https://www.brookings.edu/articles/did-the-eus-economic-recession-lead-to-a-rise-in-populism/
@@ -40,6 +47,15 @@ posts:
       - Inclusive growth
       - Poverty and inequality
       - Political economy
+    images:
+      - src: https://www.brookings.edu/wp-content/uploads/2018/05/global_italy_5_star_protest.jpg?resize=2000,1333
+        alt: 5-Star Movement protest in Rome (Reuters/Tony Gentile)
+    content: |-
+      Populism in the European Union is higher than it has been at any time in the past 30 years.
+
+      Growth is back on track in the EU, but it is less inclusive than before the 2008 crisis, both in terms of convergence between countries and convergence within countries.
+
+      Poverty increased significantly during the crisis and, despite GDP per capita increasing steadily since 2009, poverty kept worsening until 2013.
 
   - title: Prioritizing public schooling over social transfers in Brazil
     url: https://www.brookings.edu/articles/prioritizing-public-schooling-over-social-transfers-in-brazil/
@@ -57,6 +73,15 @@ posts:
       - Education
       - Social protection
       - Intergenerational equity
+    images:
+      - src: https://www.brookings.edu/wp-content/uploads/2018/11/global_education_brazil_0021.jpg?resize=2000,1333
+        alt: Children at a school in Amazonas state, Brazil (Reuters/Bruno Kelly)
+    content: |-
+      The post argues for a “preferential option for the young” in Brazil.
+
+      While Brazil has reduced poverty and inequality, age profiles of poverty and the incidence of protection through transfers suggest that young people are more vulnerable.
+
+      As Brazil considers ways to rein in spending, the recommendation is to reform pensions while strengthening public schooling to improve learning outcomes.
 
   - title: Learning losses due to COVID-19 could add up to $10 trillion
     url: https://www.brookings.edu/articles/learning-losses-due-to-covid-19-could-add-up-to-10-trillion/
@@ -77,3 +102,12 @@ posts:
       - Learning losses
       - Human capital
       - Education
+    images:
+      - src: https://www.brookings.edu/wp-content/uploads/2020/07/shutterstock_1705781425_small.jpg?resize=2000,1335
+        alt: Empty desks in a classroom
+    content: |-
+      COVID-19-related school closures are forcing countries even further off track from achieving their learning goals.
+
+      The students currently in school stand to lose an estimated $10 trillion in labor earnings over their work life.
+
+      The note provides early simulations and lays out priorities for recovery and acceleration, including targeted remediation and protecting investments in people.
