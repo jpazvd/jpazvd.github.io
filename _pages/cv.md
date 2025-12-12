@@ -116,6 +116,10 @@ UNICEF Chief Statistician and Deputy Director (Data & Analytics) with senior exp
 
 * Stata (advanced, ado-file development, SSC contributor)
 * R, Python, SQL
+* Analytical APIs & data services (SDMX/REST/JSON; microdata catalogs; data warehouse APIs) integrated into reproducible workflows
+* LLM-assisted analysis (governed use of LLM APIs for summarization/classification/extraction with QA, versioning, and human review)
+* Data quality & reliability engineering (schema validation, provenance logging, caching, rate-limits/backoff, automated refresh)
+* Security & compliance for analytics (token/secret handling; PII-safe workflows; audit-friendly pipelines)
 * Econometrics & Impact Evaluation
 * Survey Design & Sampling
 * Small Area Estimation & Poverty Mapping
@@ -140,7 +144,7 @@ UNICEF Chief Statistician and Deputy Director (Data & Analytics) with senior exp
 
 * Portuguese (native)
 * English (fluent)
-* Spanish (professional)
+* Spanish (fluent)
 
 <!-- Publications section commented out - using jekyll-scholar on /publications/ page instead
 Publications
