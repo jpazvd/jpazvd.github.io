@@ -60,7 +60,6 @@ og_image: "profile.png"
 # Reading Files
 include:
   - _pages
-  - _blogs
   - files
 exclude:
   - node_modules
@@ -75,9 +74,6 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
-  blogs:
-    output: true
-    permalink: /blogs/:path/
 
 # Defaults
 defaults:
@@ -89,13 +85,6 @@ defaults:
       layout: single
       author_profile: true
       share: true
-  # Blogs
-  - scope:
-      path: ""
-      type: blogs
-    values:
-      layout: single
-      author_profile: true
 
 # Output Settings
 permalink: /:categories/:title/
