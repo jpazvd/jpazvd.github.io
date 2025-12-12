@@ -10,10 +10,11 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
 
 <p>Blog posts and articles on education, learning poverty, human capital, and development economics.</p>
 
+<!-- Stats Banner -->
 <div class="blog-stats" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; align-items: center;">
     <div style="text-align: center;">
-      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.worldbank_blogs.metadata.total_posts | default: 29 }}</div>
+      <div style="font-size: 2rem; font-weight: bold;">{{ site.data.worldbank_blogs_full.metadata.total_posts | default: 29 }}</div>
       <div style="font-size: 0.85rem; opacity: 0.9;">Blog Posts</div>
     </div>
     <div style="text-align: center;">
@@ -30,45 +31,109 @@ description: "Blog posts by João Pedro Azevedo on education, learning poverty, 
   </div>
 </div>
 
+<!-- Filter by Channel -->
+<div style="margin-bottom: 2rem;">
+  <strong>Filter by Channel:</strong>
+  <span style="margin-left: 0.5rem;">
+    <a href="#all" onclick="filterPosts('all'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #667eea; color: white; border-radius: 4px; text-decoration: none;">All</a>
+    <a href="#education" onclick="filterPosts('Education for Global Development'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #e3f2fd; color: #1565c0; border-radius: 4px; text-decoration: none;">Education</a>
+    <a href="#letstalk" onclick="filterPosts('Let\\'s Talk Development'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none;">Let's Talk Dev</a>
+    <a href="#data" onclick="filterPosts('Data Blog'); return false;" style="margin-right: 0.5rem; padding: 4px 10px; background: #fff3e0; color: #e65100; border-radius: 4px; text-decoration: none;">Data</a>
+  </span>
+</div>
+
 <h2>All Posts</h2>
 
-{% assign sorted_posts = site.data.worldbank_blogs.posts | sort: 'date' | reverse %}
+{% assign sorted_posts = site.data.worldbank_blogs_full.posts | sort: 'date' | reverse %}
 {% assign current_year = "" %}
 
 {% for post in sorted_posts %}
   {% assign post_year = post.year | default: post.date | slice: 0, 4 %}
   
   {% if post_year != current_year %}
-    {% if current_year != "" %}</ul>{% endif %}
-    <h3 id="y{{ post_year }}">{{ post_year }}</h3>
-    <ul style="list-style: none; padding-left: 0;">
+    {% if current_year != "" %}</div>{% endif %}
+    <h3 id="y{{ post_year }}" class="year-header">{{ post_year }}</h3>
+    <div class="posts-container">
     {% assign current_year = post_year %}
   {% endif %}
   
-  <li style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea;">
-    <a href="{{ post.url }}" target="_blank" rel="noopener" style="font-size: 1.1rem;"><strong>{{ post.title }}</strong></a>
-    {% if post.language and post.language != "en" %} <small style="background: #ffc107; padding: 2px 6px; border-radius: 4px;">({{ post.language | upcase }})</small>{% endif %}
-    <br>
-    <small style="color: #555;">
-      {{ post.date | date: "%B %d, %Y" }} &bull; 
-      <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 4px; font-size: 0.85em;">World Bank</span>
-      &bull; <em>{{ post.channel }}</em>
-    </small>
+  <article class="blog-card" data-channel="{{ post.channel }}" style="margin-bottom: 1.5rem; padding: 1.25rem; background: #fff; border-radius: 10px; border-left: 4px solid #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <h4 style="margin: 0 0 0.5rem 0;">
+      <a href="{{ post.url }}" target="_blank" rel="noopener" style="color: #333; text-decoration: none;">{{ post.title }}</a>
+      {% if post.language and post.language != "en" %} 
+        <span style="background: #ffc107; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle;">{{ post.language | upcase }}</span>
+      {% endif %}
+    </h4>
+    
+    <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.75rem;">
+      <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      &bull; 
+      <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 4px; font-size: 0.8em;">World Bank</span>
+      &bull; 
+      <em>{{ post.channel }}</em>
+    </div>
+    
     {% if post.description and post.description.size > 10 %}
-    <br>
-    <small style="color: #666; display: block; margin-top: 0.5rem;">{{ post.description | truncate: 200 }}</small>
+    <p style="color: #555; margin: 0.75rem 0; font-size: 0.95rem; line-height: 1.5;">
+      {{ post.description | truncate: 250 }}
+    </p>
     {% endif %}
-    {% if post.authors.size > 1 %}
-    <br>
-    <small style="color: #888;"><em>with {% assign other_authors = post.authors | where_exp: "a", "a != 'João Pedro Azevedo'" %}{{ other_authors | join: ", " }}</em></small>
+    
+    {% if post.images and post.images.size > 0 %}
+    <div style="margin: 0.75rem 0;">
+      <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}" 
+           style="max-width: 100%; max-height: 200px; border-radius: 6px; object-fit: cover;">
+    </div>
     {% endif %}
-  </li>
+    
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+      {% if post.authors.size > 1 %}
+        <span style="font-size: 0.8rem; color: #888;">
+          <em>with {% for author in post.authors %}{% unless author == 'João Pedro Azevedo' %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}</em>
+        </span>
+      {% endif %}
+      
+      {% if post.topics %}
+        {% for topic in post.topics %}
+          <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; color: #666;">{{ topic }}</span>
+        {% endfor %}
+      {% endif %}
+      
+      <a href="{{ post.url }}" target="_blank" rel="noopener" 
+         style="margin-left: auto; font-size: 0.85rem; color: #667eea; text-decoration: none;">
+        Read on World Bank →
+      </a>
+    </div>
+  </article>
 {% endfor %}
-</ul>
+</div>
 
 <hr style="margin-top: 3rem;">
 
 <p style="font-size: 0.85em; color: #666;">
   <em>More blog posts from GPE, UNESCO/UIS, and UNICEF will be added soon.</em><br>
-  <em>Last updated: {{ site.data.worldbank_blogs.metadata.last_updated }}</em>
+  <em>Last updated: {{ site.data.worldbank_blogs_full.metadata.last_updated }}</em>
 </p>
+
+<script>
+function filterPosts(channel) {
+  const cards = document.querySelectorAll('.blog-card');
+  const yearHeaders = document.querySelectorAll('.year-header');
+  
+  cards.forEach(card => {
+    if (channel === 'all' || card.dataset.channel === channel) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  
+  // Update active filter button
+  document.querySelectorAll('[onclick*="filterPosts"]').forEach(btn => {
+    btn.style.background = '#e3f2fd';
+    btn.style.color = '#1565c0';
+  });
+  event.target.style.background = '#667eea';
+  event.target.style.color = 'white';
+}
+</script>
