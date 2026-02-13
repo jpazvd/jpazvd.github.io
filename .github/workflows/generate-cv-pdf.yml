@@ -1,0 +1,154 @@
+﻿name: Generate CV PDF
+
+on:
+  # Run after pages deployment completes
+  workflow_run:
+    workflows: ["Build and Deploy (Jekyll 4 + Scholar)"]
+    types:
+      - completed
+    branches: [main]
+  
+  # Also trigger on push to any CV input file
+  push:
+    branches: [main]
+    paths:
+      # CV template
+      - '_pages/cv.md'
+      # CV data sources
+      - '_data/citations.yml'
+      - '_data/profile.yml'
+      - '_data/education.yml'
+      - '_data/work_experience.yml'
+      - '_data/skills.yml'
+      - '_data/events.yml'
+      - '_data/teaching.yml'
+      # Blog data (shown in CV)
+      - '_data/worldbank_blogs_full.yml'
+      - '_data/other_blogs_full.yml'
+      - '_data/linkedin_blogs.yml'
+      # Workflow itself (to regenerate when workflow changes)
+      - '.github/workflows/generate-cv-pdf.yml'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    # Only run if: workflow_run succeeded, OR manual trigger, OR push trigger
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Puppeteer
+        run: |
+          npm init -y
+          npm install puppeteer
+
+      - name: Wait for deployment to propagate
+        # Wait longer for push triggers (site needs to build first), shorter for workflow_run
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "Push trigger - waiting 240s for site to build and deploy..."
+            sleep 240
+          else
+            echo "Workflow_run or manual trigger - waiting 30s..."
+            sleep 30
+          fi
+
+      - name: Generate CV PDF
+        run: |
+          node << 'EOF'
+          const puppeteer = require('puppeteer');
+          const fs = require('fs');
+          const path = require('path');
+          
+          (async () => {
+            const browser = await puppeteer.launch({
+              headless: 'new',
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
+            
+            const page = await browser.newPage();
+            
+            // Set viewport for consistent rendering
+            await page.setViewport({ width: 1200, height: 800 });
+            
+            // Navigate to the CV page
+            const cvUrl = 'https://jpazvd.github.io/cv/';
+            console.log('Loading CV page:', cvUrl);
+            
+            await page.goto(cvUrl, { 
+              waitUntil: 'networkidle2',
+              timeout: 60000 
+            });
+            
+            // Wait for content to fully render
+            // CV uses archive layout which has .archive class (not .page__content)
+            await page.waitForSelector('.archive, .page__content, #main', { timeout: 30000 });
+            
+            // Add print-friendly styles
+            await page.addStyleTag({
+              content: `
+                @media print {
+                  .masthead, .page__footer, .sidebar, .author__avatar,
+                  .page__related, .pagination, nav, .social-icons,
+                  .author__urls-wrapper button { display: none !important; }
+                  .page__content { margin: 0 !important; padding: 0 !important; }
+                  body { font-size: 11pt; }
+                  a { color: #000 !important; text-decoration: none !important; }
+                  a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #666; }
+                  .citation-metrics { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+                }
+              `
+            });
+            
+            // Ensure files directory exists
+            const filesDir = path.join(process.cwd(), 'files');
+            if (!fs.existsSync(filesDir)) {
+              fs.mkdirSync(filesDir, { recursive: true });
+            }
+            
+            // Generate PDF
+            const pdfPath = path.join(filesDir, 'cv-joao-pedro-azevedo.pdf');
+            await page.pdf({
+              path: pdfPath,
+              format: 'A4',
+              margin: { top: '1cm', right: '1.5cm', bottom: '1cm', left: '1.5cm' },
+              printBackground: true,
+              displayHeaderFooter: true,
+              headerTemplate: '<div></div>',
+              footerTemplate: '<div style="font-size: 9px; width: 100%; text-align: center; color: #999;">JoÃ£o Pedro Azevedo - CV - Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
+            });
+            
+            console.log('PDF generated successfully:', pdfPath);
+            
+            await browser.close();
+          })();
+          EOF
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Commit and push PDF
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add files/cv-joao-pedro-azevedo.pdf
+          git diff --staged --quiet || git commit -m "chore: Auto-generate CV PDF (${{ steps.date.outputs.date }})"
+          git push
+

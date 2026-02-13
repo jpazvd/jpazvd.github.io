@@ -1,0 +1,26 @@
+# Featured work items displayed on the homepage
+items:
+  - title: "Learning Poverty Indicator"
+    description: "Co-created the global measure of children unable to read by age 10, now used by 100+ countries."
+    url: "https://www.worldbank.org/en/topic/education/brief/what-is-learning-poverty"
+    type: "Indicator"
+
+  - title: "The State of the World's Children 2025"
+    description: "UNICEF's flagship report on children's well-being and progress toward the SDGs."
+    url: "https://www.unicef.org/reports/state-of-worlds-children/2025"
+    type: "Report"
+
+  - title: "Hard truths about under-5 mortality"
+    description: "Commentary in The Lancet calling for urgent global action on child mortality."
+    url: "https://doi.org/10.1016/S0140-6736(24)00501-4"
+    type: "Lancet"
+
+  - title: "COVID-19 Learning Loss Simulations"
+    description: "Global estimates of pandemic impact on schooling, cited by 400+ studies."
+    url: "https://doi.org/10.1093/wbro/lkab003"
+    type: "Paper"
+
+  - title: "WBOPENDATA"
+    description: "Stata module to access World Bank databases, downloaded 26,000+ times."
+    url: "https://github.com/worldbank/wbopendata"
+    type: "Software"

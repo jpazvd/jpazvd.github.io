@@ -1,0 +1,1359 @@
+_metadata:
+  generated: '2025-12-25T00:49:05.823348'
+  generator: scripts/build_publications_master.py
+  warning: DO NOT EDIT MANUALLY - This file is auto-generated from satellite databases
+  sources:
+  - okr
+  - stata
+  - github
+  - manual
+  total_publications: 63
+summary:
+  total: 63
+  by_type:
+    working_papers: 33
+    softwares: 5
+    journal_articles: 6
+    books: 3
+    book_chapters: 7
+    conference_papers: 9
+  by_source:
+    okr_new: 33
+    okr_merged: 1
+    stata_new: 0
+    stata_merged: 0
+    github_new: 5
+    github_merged: 0
+    manual_new: 25
+    manual_merged: 3
+working_papers:
+- title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
+  year: '2023'
+  authors:
+  - Azevedo, João Pedro
+  - Cojocaru, Alexandru
+  - Talledo, Veronica Montalva
+  - Narayan, Ambar
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/39607
+  handle: 10986/39607
+  doi: 10.1596/1813-9450-10381
+  abstract: "The paper presents a first global\n            investigation of the longer-term inequality implications of\n\
+    \            COVID-19 by examining the effect of school closures on the\n            ability of children from different\
+    \ countries and backgrounds\n            to engage in continued learning throughout the pandemic, and\n            their\
+    \ implications for intergenerational mobility in\n            education. The analysis builds on the data from the Global\n\
+    \            Database of Intergenerational"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2023-covid-19-school-closures
+  sources:
+  - okr
+- title: Blackout or Blanked Out?
+  year: '2023'
+  authors:
+  - Seitz, William
+  - Kudo, Yuya
+  - Azevedo, Joao Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/39744
+  handle: 10986/39744
+  doi: 10.1596/1813-9450-10423
+  abstract: "Access to reliable electricity is a\n            Sustainable Development Goal, and key for both economic\n  \
+    \          growth and individual wellbeing. Yet, in the absence of\n            sophisticated monitoring systems, policy\
+    \ makers in\n            developing countries commonly rely on surveys to measure\n            electricity reliability\
+    \ and prioritize investments. The\n            accuracy of such survey-based methods is unclear. This study\n        \
+    \    built a low-cost national electricity outag"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: seitz-2023-blackout-or-blanked
+  sources:
+  - okr
+- title: Learning Losses during COVID-19
+  year: '2022'
+  authors:
+  - Akmal, Maryam
+  - Azevedo, João Pedro
+  - Cloutier, Marie-Helene
+  - Rogers, Halsey
+  - Wong, Yi Ning
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/38228
+  handle: 10986/38228
+  doi: 10.1596/1813-9450-10218
+  abstract: "This paper presents updated\r\n            simulation results of the potential effects of\r\n            COVID-19-related\
+    \ school closures on learning outcomes\r\n            globally. The simulation, which updates and extends prior\r\n  \
+    \          work by Azevedo, Hasan et al. (2021) and Azevedo (2020),\r\n            examines potential learning losses\
+    \ as the pandemic moves\r\n            into the third year. Beyond reflecting the longer duration\r\n            of the\
+    \ crisis, the paper extends prior work by us"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: akmal-2022-learning-losses-during
+  sources:
+  - okr
+- title: Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes
+  year: '2021'
+  authors:
+  - Hasan, Amer
+  - Azevedo, João Pedro
+  - Goldemberg, Diana
+  - Geven, Koen
+  - Iqbal, Syedah Aroob
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/40037
+  handle: 10986/40037
+  doi: 10.1596/1813-9450-9284
+  abstract: This paper presents simulations of the potential effect of COVID-19-related school closures on schooling and learning
+    outcomes. It considers four scenarios—varying in both the duration of school closures and the effectiveness of any mitigation
+    strategies being deployed by governments. Using data on 174 countries, the analysis finds that the global level of schooling
+    and learning will fall substantially. School closures could result in a loss of between 0.3 and 1.1 years of schooling
+    adjusted for
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: hasan-2021-simulating-the-potential
+  sources:
+  - okr
+  urls:
+    okr: https://openknowledge.worldbank.org/handle/10986/33945
+  okr_handle: 10986/33945
+- title: Will Every Child Be Able to Read by 2030? Defining Learning Poverty and Mapping the Dimensions of the Challenge
+  year: '2021'
+  authors:
+  - Goldemberg, Diana
+  - Azevedo, Joao Pedro
+  - Montoya, Silvia
+  - Nayar, Reema
+  - Rogers, Halsey
+  - Stacy, Brian William
+  - Saavedra, Jaime
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/35300
+  handle: 10986/35300
+  doi: 10.1596/1813-9450-9588
+  abstract: "In October 2019, the World Bank and\r\n            UNESCO Institute for Statistics proposed a new metric,\r\n\
+    \            Learning Poverty, designed to spotlight low levels of\r\n            learning and track progress toward ensuring\
+    \ that all\r\n            children acquire foundational skills. This paper provides\r\n            the technical background\
+    \ for that indicator, and for its\r\n            main findings—first, that even before COVID-19, 53 percent\r\n      \
+    \      of all children in low- and middle-in"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: goldemberg-2021-will-every-child
+  sources:
+  - okr
+- title: Remote Learning During COVID-19
+  year: '2021'
+  authors:
+  - Munoz-Najar, Alberto
+  - Gilberto, Alison
+  - Hasan, Amer
+  - Cobo, Cristobal
+  - Azevedo, Joao Pedro
+  - Akmal, Maryam
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/36665
+  handle: 10986/36665
+  doi: 10.1596/36665
+  abstract: "School closures during COVID-19\r\n            (coronavirus) led to an unprecedented global experiment in\r\n\
+    \            the delivery of remote learning. This report seeks to assess\r\n            what lessons can be drawn from\
+    \ experiences of remote\r\n            learning during COVID-19 in K-12 education, with a focus on\r\n            low-\
+    \ and middle-income countries. It focuses on the period\r\n            from March 2020 to October 2021 and addresses the\
+    \ following\r\n            key questions: 1. Was rem"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: munoz-najar-2021-remote-learning-during
+  sources:
+  - okr
+- title: Learning Poverty Updates and Revisions
+  year: '2021'
+  authors:
+  - Azevedo, Joao Pedro Wagner De
+  - Montoya, Silvia
+  - Akmal, Maryam
+  - Wong, Yi Ning
+  - Gregory, Laura
+  - Geven, Koen Martijn
+  - Cloutier, Marie-Helene
+  - Iqbal, Syedah Aroob
+  - Imhof, Adolfo Gustavo
+  - De Andrade Falcao, Natasha
+  - Kouame, Christelle Signo
+  - Dahal, Mahesh
+  - Gebre, Tihtina Zenebe
+  - Vargas Mancera, Maria Jose
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/36082
+  handle: 10986/36082
+  doi: 10.1596/36082
+  abstract: "The July 2021 release of learning\r\n            poverty estimates involves several changes to the data\r\n \
+    \           underlying the country-level learning poverty figures. This\r\n            document provides details of the\
+    \ key changes made. Some\r\n            country-level estimates have changed or become available for\r\n            the\
+    \ first time due to new data from recent assessments:\r\n            TIMSS 2019, PASEC 2019, and SEA-PLM 2019. In cases\
+    \ where new\r\n            assessment data call for a"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2021-learning-poverty-updates
+  sources:
+  - okr
+- title: Learning Poverty
+  year: '2020'
+  authors:
+  - Azevedo, Joao Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/34654
+  handle: 10986/34654
+  doi: 10.1596/1813-9450-9446
+  abstract: "COVID-19-related school closures are\r\n            pushing countries off track from achieving their learning\r\
+    \n            goals. This paper builds on the concept of learning poverty\r\n            and draws on axiomatic properties\
+    \ from social choice\r\n            literature to propose and motivate a distribution-sensitive\r\n            measures\
+    \ of learning poverty. Numerical, empirical, and\r\n            practical reasons for the relevance and usefulness of\
+    \ these\r\n            complementary inequality "
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2020-learning-poverty
+  sources:
+  - okr
+- title: Learning Poverty in the Time of COVID-19
+  year: '2020'
+  authors:
+  - Azevedo, Joao Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/34850
+  handle: 10986/34850
+  doi: 10.1596/34850
+  abstract: "This brief summarizes the results of\r\n            simulations estimating the potential impacts of the COVID-19\r\
+    \n            pandemic in learning poverty. Of 720 million primary school\r\n            age children, 382 million are\
+    \ learning poor, either out of\r\n            school or below the minimum proficiency level in reading.\r\n          \
+    \  COVID-19 could boost that number by an additional 72 million\r\n            to 454 million. In a post-COVID-19 scenario\
+    \ of no\r\n            remediation and low mit"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2020-learning-poverty-in
+  sources:
+  - okr
+- title: Estimating the Potential COVID-19 Impacts on Learning Poverty in Brazil
+  year: '2020'
+  authors:
+  - Azevedo, Joao Pedro Wagner De
+  - Goldemberg, Diana
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/37660
+  handle: 10986/37660
+  doi: 10.1596/37660
+  abstract: "School closures due to Coronavirus\r\n            (COVID-19) have disrupted education in Brazil. Before this\r\
+    \n            crisis, forty-two percent of children in Brazil were\r\n            learning poor. This note simulates the\
+    \ impacts on learning\r\n            poverty, considering different lengths of school closure. In\r\n            our intermediate\
+    \ scenario, where schools remain closed for\r\n            one quarter of the academic year, learning poverty rises 2.6\r\
+    \n            to 5.2 percentage poin"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2020-estimating-the-potential
+  sources:
+  - okr
+- title: SAE - A Stata Package for Unit Level Small Area Estimation
+  year: '2018'
+  authors:
+  - Nguyen, Minh Cong
+  - Corral, Paul
+  - Azevedo, Joao Pedro
+  - Zhao, Qinghua
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/30650
+  handle: 10986/30650
+  doi: 10.1596/1813-9450-8630
+  abstract: "This paper presents a new family of\r\n            Stata functions devoted to small area estimation. Small area\r\
+    \n            methods attempt to solve low representativeness of surveys\r\n            within areas, or the lack of data\
+    \ for specific\r\n            areas/sub-populations. This is accomplished by incorporating\r\n            information\
+    \ from outside sources. Such target data sets are\r\n            becoming increasingly available and can take the form\
+    \ of a\r\n            traditional population cen"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: nguyen-2018-sae--a
+  sources:
+  - okr
+- title: A New Profile of the Global Poor
+  year: '2018'
+  authors:
+  - Castañeda, Andrés
+  - Doan, Dung
+  - Newhouse, David
+  - Nguyen, Minh Cong
+  - Uematsu, Hiroki
+  - Azevedo, João Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/29225
+  handle: 10986/29225
+  doi: 10.1596/29225
+  abstract: This paper presents a new demographic profile of extreme and moderate poverty, defined as those living on less
+    than $1.90 and between $1.90 and $3.10 per day in 2013, based on household survey data from 89 developing countries. The
+    face of poverty is primarily rural and young; 80% of the extreme poor and 75% of the moderate poor live in rural areas.
+    Over 45% of the extreme poor are children younger than 15 years old, and nearly 60% of the extreme poor live in households
+    with three or more childr
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: castañeda-2018-a-new-profile
+  sources:
+  - okr
+- title: Poverty, Inequality, and            Agriculture in the EU
+  year: '2018'
+  authors:
+  - van den Brink, Rogier J. E.
+  - Azevedo, Joao Pedro
+  - Avila, Montserrat
+  - Corral, Paul
+  - Zhao, Hongxi
+  - Mostafavi, Mohammad-Hadi
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/30844
+  handle: 10986/30844
+  doi: 10.1596/1813-9450-8638
+  abstract: "Boosting convergence and shared\r\n            prosperity in the European Union achieved renewed urgency\r\n\
+    \            after the global financial crisis of 2008. This paper\r\n            assesses the role of agriculture and\
+    \ the Common Agricultural\r\n            Program in achieving this. The paper sheds light on the\r\n            relationship\
+    \ between poverty and agriculture as part of the\r\n            process of structural transformation. It positions each\r\
+    \n            member country on the path towar"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: van-den-brink-2018-poverty-inequality-and
+  sources:
+  - okr
+- title: How Equitable is Access to Finance in Turkey?
+  year: '2016'
+  authors:
+  - Inan, Osman Kaan
+  - Azevedo, Joao Pedro
+  - Yang, Judy S.
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/23721
+  handle: 10986/23721
+  doi: 10.1596/1813-9450-7541
+  abstract: "Access to finance is a key component of\r\n            poverty reduction, as it enables individuals to make\r\
+    \n            economic decisions that can improve their welfare. The\r\n            equality of access among different\
+    \ groups in society is also\r\n            crucial for correctly allocating the positive benefits of\r\n            improved\
+    \ financial services. In Turkey, bank account, debit\r\n            card, and credit card ownership, which can serve as\
+    \ the main\r\n            indicators of access "
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: inan-2016-how-equitable-is
+  sources:
+  - okr
+- title: What Are the Impacts of Syrian Refugees on Host Community Welfare in Turkey?
+  year: '2016'
+  authors:
+  - Yang, Judy S.
+  - Azevedo, Joao Pedro
+  - Inan, Osman Kaan
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/23722
+  handle: 10986/23722
+  doi: 10.1596/1813-9450-7542
+  abstract: "In recent years, Turkey has been host to\r\n            more than two million Syrians seeking refuge. Initially\r\
+    \n            concentrated in the southeastern regions, these refugees now\r\n            reside throughout the country.\
+    \ There are many questions from\r\n            policy makers regarding the impact of the population of\r\n           \
+    \ Syrians Under Temporary Protection on the host community.\r\n            This paper examines the impact of migrants\
+    \ on regional host\r\n            communities from"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: yang-2016-what-are-the
+  sources:
+  - okr
+- title: When and Where Do We See Regional Poverty Reduction and Convergence?
+  year: '2016'
+  authors:
+  - Yang, Judy S.
+  - Azevedo, Joao Pedro
+  - Inan, Osman Kaan
+  - Nguyen, Minh C.
+  - Montes, Jose
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/23719
+  handle: 10986/23719
+  doi: 10.1596/1813-9450-7540
+  abstract: "In the past decade, Turkey has\r\n            experienced a notable level of poverty reduction at all\r\n   \
+    \         levels (extreme poor, poor, and vulnerable). The steady\r\n            decline in poverty was also resilient\
+    \ to the decline in\r\n            gross domestic product per capita growth during the crisis.\r\n            However,\
+    \ although poverty convergence was strong before the\r\n            financial crisis, there was an absence of regional\r\
+    \n            convergence afterward. This paper analy"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: yang-2016-when-and-where
+  sources:
+  - okr
+- title: Who Are the Poor in the Developing World?
+  year: '2016'
+  authors:
+  - Castaneda, Andes
+  - Doan, Dung
+  - Newhouse, David
+  - Nguyen, Minh Cong
+  - Uematsu, Hiroki
+  - Azevedo, Joao Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/25161
+  handle: 10986/25161
+  doi: 10.1596/1813-9450-7844
+  abstract: "This paper presents a new demographic\r\n            profile of extreme and moderate poverty, defined as those\r\
+    \n            living on less than $1.90 and between $1.90 and $3.10 per\r\n            day in 2013, based on household\
+    \ survey data from 89\r\n            developing countries. The face of poverty is primarily rural\r\n            and young;\
+    \ 80 percent of the extreme poor and 75 percent of\r\n            the moderate poor live in rural areas. Over 45 percent\
+    \ of\r\n            the extreme poor are chi"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: castaneda-2016-who-are-the
+  sources:
+  - okr
+- title: Robustness of Shared Prosperity Estimates
+  year: '2016'
+  authors:
+  - Wieser, Christina
+  - Atamanov, Aziz
+  - Uematsu, Hiroki
+  - Yoshida, Nobuo
+  - Nguyen, Minh Cong
+  - Wagner De Azevedo, Joao Pedro
+  - Dewina, Reno
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/24152
+  handle: 10986/24152
+  doi: 10.1596/1813-9450-7611
+  abstract: "This paper is the first to\r\n            systematically test the robustness of shared prosperity\r\n       \
+    \     estimates to different methodological choices using a sample\r\n            of countries from all regions in the\
+    \ world. The tests that\r\n            are conducted include grouped versus microdata, nominal\r\n            welfare\
+    \ aggregate versus adjustment for spatial price\r\n            variation, and different treatment of income with negative\r\
+    \n            and zero values. The empirical result"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: wieser-2016-robustness-of-shared
+  sources:
+  - okr
+- title: Kyrgyz Republic
+  year: '2015'
+  authors:
+  - Calvo, Paula
+  - Azevedo, Joao Pedro
+  - Nguyen, Minh
+  - Posadas, Josefina
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/22756
+  handle: 10986/22756
+  doi: 10.1596/22756
+  abstract: "Traditional benchmarks to assess\r\n            performance rely on unconditional rankings or regional\r\n  \
+    \          averages. This paper uses a recently developed methodology\r\n            based on quantile regressions and\
+    \ initial conditions to\r\n            propose alternative benchmarks for social sectors in Kyrgyz\r\n            Republic.\
+    \ Covering a wide set of indicators, the analysis\r\n            reveals mixed results for Kyrgyz Republic. The country\
+    \ has\r\n            made important strides in man"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: calvo-2015-kyrgyz-republic
+  sources:
+  - okr
+- title: 'Pathways to the Middle Class in Turkey : How Have Reducing Poverty and Boosting Shared Prosperity Helped?'
+  year: '2014'
+  authors:
+  - Azevedo, Joao Pedro
+  - Atamanov, Aziz
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/17722
+  handle: 10986/17722
+  doi: 10.1596/1813-9450-6834
+  abstract: "Turkey's poverty reduction\r\n            performance in the 2000s has been remarkably consistent.\r\n      \
+    \      Extreme and moderate poverty have fallen considerably since\r\n            2003. Between 2002 and 2011, extreme\
+    \ poverty fell from 13\r\n            percent to 5 percent, while moderate poverty halved from 44\r\n            percent\
+    \ to 22 percent (respectively, defined using the World\r\n            Bank's Europe and Central Asia regional poverty\
+    \ lines\r\n            of 2.5 and 5 USD/PPP). Most of t"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2014-pathways-to-the
+  sources:
+  - okr
+- title: 'Poverty Reduction and Shared Prosperity in Tajikistan : A Diagnostic'
+  year: '2014'
+  authors:
+  - Rajabov, Alisher
+  - Azevedo, Joao Pedro
+  - Atamanov, Aziz
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/18755
+  handle: 10986/18755
+  doi: 10.1596/1813-9450-6923
+  abstract: "Tajikistan was one of the fastest\r\n            growing countries in the Europe and Central Asia region\r\n\
+    \            during the last decade. The economic growth was widely\r\n            shared by the population and as a result\
+    \ poverty (measured\r\n            by the national poverty line) declined from 73 percent in\r\n            2003 to 47\
+    \ percent in 2009 accompanied by falling\r\n            inequality. Consumption growth of the bottom 40 percent of\r\n\
+    \            the population -- a measure of shared "
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: rajabov-2014-poverty-reduction-and
+  sources:
+  - okr
+- title: 'Fiscal Adjustment and Income Inequality : Sub-national Evidence from Brazil'
+  year: '2014'
+  authors:
+  - David, Antonio C.
+  - Azevedo, Joao Pedro
+  - Rodrigues Bastos, Fabiano
+  - Pineda, Emilio
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/19379
+  handle: 10986/19379
+  doi: 10.1596/1813-9450-6945
+  abstract: "The paper combines state-level fiscal\r\n            data with household survey data to assess the links between\r\
+    \n            sub-national fiscal policy and income inequality in Brazil\r\n            over the period 1995-2011. The\
+    \ results indicate that a\r\n            tighter fiscal stance at the sub-national level is not\r\n            associated\
+    \ with a deterioration in inequality measures. This\r\n            finding contrasts with the conclusions of several papers\
+    \ in\r\n            the burgeoning litera"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: david-2014-fiscal-adjustment-and
+  sources:
+  - okr
+- title: Weather Shocks and Health at Birth in Colombia
+  year: '2014'
+  authors:
+  - Andalon, Mabel
+  - Azevedo, Joao Pedro
+  - Rodriguez Castelan, Carlos
+  - Sanfelice, Viviane
+  - Valderrama, Daniel
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/20636
+  handle: 10986/20636
+  doi: 10.1596/1813-9450-7081
+  abstract: "Poor health at birth has negative\r\n            long-run effects on individual well-being and is also\r\n  \
+    \          detrimental for intergenerational mobility. This paper\r\n            examines whether health outcomes at birth\
+    \ are affected by in\r\n            utero increased exposure to rainfall and temperature shocks\r\n            in Colombia,\
+    \ one of the countries in the world with the\r\n            highest incidence of extreme weather events per year. The\r\
+    \n            paper uses a fixed effects desi"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: andalon-2014-weather-shocks-and
+  sources:
+  - okr
+- title: Understanding Changes in Poverty
+  year: '2014'
+  authors:
+  - Van Nguyen, Trang
+  - Inchauste, Gabriela
+  - Azevedo, João Pedro
+  - Essama-Nssah, B.
+  - Olivieri, Sergio
+  - Saavedra-Chanduvi, Jaime
+  - Winkler, Hernan
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/19445
+  handle: 10986/19445
+  doi: 10.1596/978-1-4648-0299-7
+  abstract: "Understanding Changes in Poverty brings\r\n            together different methods to decompose the contributions\
+    \ to\r\n            poverty reduction. A simple approach quantifies the\r\n            contribution of changes in demographics,\
+    \ employment,\r\n            earnings, public transfers, and remittances to poverty\r\n            reduction. A more complex\
+    \ approach quantifies the\r\n            contributions to poverty reduction from changes in\r\n            individual\
+    \ and household characteristics, inclu"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: van-nguyen-2014-understanding-changes-in
+  sources:
+  - okr
+- title: 'From Noise to Signal : The Successful Turnaround of Poverty Measurement in Colombia'
+  year: '2013'
+  authors:
+  - Azevedo, João Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/16118
+  handle: 10986/16118
+  doi: 10.1596/16118
+  abstract: "In the mid-2000s, poverty measurement in\r\n            Colombia was at a standstill. A dated poverty measurement\r\
+    \n            methodology was clashing with improvements in the national\r\n            household survey system. As a\
+    \ result, official poverty rates\r\n            showed volatile trends, and a weak communication strategy\r\n        \
+    \    produced an unconvincing storyline, which further resulted\r\n            in the rapid deterioration of indicator\
+    \ credibility. This\r\n            happened during"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2013-from-noise-to
+  sources:
+  - okr
+- title: Decomposing the Recent Inequality Decline in Latin America
+  year: '2013'
+  authors:
+  - Sanfelice, Viviane
+  - Azevedo, Joao Pedro
+  - Inchauste, Gabriela
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/16931
+  handle: 10986/16931
+  doi: 10.1596/1813-9450-6715
+  abstract: "Over the past decade, 12 of 14 Latin\r\n            American countries have experienced a reduction in\r\n  \
+    \          inequality. Based on a series of counterfactual simulations,\r\n            the observed changes in inequality\
+    \ are decomposed in order\r\n            to identify the main determinants of inequality. In contrast\r\n            to\
+    \ methods that focus on aggregate summary statistics, the\r\n            method adopted in this paper generates counterfactual\r\
+    \n            distributions, so that the "
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: sanfelice-2013-decomposing-the-recent
+  sources:
+  - okr
+- title: Setting Reasonable Performance Targets for Public Service Delivery
+  year: '2013'
+  authors:
+  - Newman, John L.
+  - Azevedo, João Pedro
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/13178
+  handle: 10986/13178
+  doi: 10.1596/1813-9450-6385
+  abstract: "Reaching agreement on a reasonable\r\n            performance target is a challenge, with costs associated\r\n\
+    \            with getting it wrong. Attention in the literature has\r\n            focused on the potential negative effects\
+    \ of gaming or of\r\n            creaming. However, even if there is no gaming or creaming\r\n            taking place,\
+    \ there can still be costs associated with\r\n            setting a level of the performance target that is either too\r\
+    \n            low or too high. On the one ha"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: newman-2013-setting-reasonable-performance
+  sources:
+  - okr
+- title: 'Fifteen Years of Inequality in Latin America : How Have Labor Markets Helped?'
+  year: '2013'
+  authors:
+  - Dávalos, María Eugenia
+  - Azevedo, João Pedro
+  - Diaz-Bonilla, Carolina
+  - Atuesta, Bernardo
+  - Castañeda, Raul Andres
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/13183
+  handle: 10986/13183
+  doi: 10.1596/1813-9450-6384
+  abstract: "Household income inequality has declined\r\n            in Latin America in the past decades, contributing\r\n\
+    \            significantly to poverty reduction in the region. Although\r\n            available evidence shows that changes\
+    \ in the labor income\r\n            are among the main factors behind these inequality trends,\r\n            few studies\
+    \ have analyzed more closely the labor market\r\n            dynamics that have led to a decline in total income\r\n \
+    \           inequality in some countries, but"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: dávalos-2013-fifteen-years-of
+  sources:
+  - okr
+- title: Is Labor Income Responsible for Poverty Reduction? A Decomposition Approach
+  year: '2013'
+  authors:
+  - Azevedo, Joao Pedro
+  - Inchauste, Gabriela
+  - Olivieri, Sergio
+  - Saavedra, Jaime
+  - Winkler, Hernan
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/15552
+  handle: 10986/15552
+  doi: 10.1596/1813-9450-6414
+  abstract: "Demographics, labor income, public\r\n            transfers, or remittances: Which factor contributes the most\r\
+    \n            to observed reductions in poverty? Using counterfactual\r\n            simulations, this paper accounts\
+    \ for the contribution labor\r\n            income has made to the observed changes in poverty over the\r\n          \
+    \  past decade for a set of 16 countries that have experienced\r\n            substantial declines in poverty. In contrast\
+    \ to methods that\r\n            focus on aggrega"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: azevedo-2013-is-labor-income
+  sources:
+  - okr
+- title: 'Teenage Pregnancy and Opportunities in Latin America and the Caribbean : On Teenage Fertility Decisions, Poverty
+    and Economic Achievement'
+  year: '2012'
+  authors:
+  - Favara, Marta
+  - Azevedo, Joao Pedro
+  - Haddock, Sarah E.
+  - Muller, Miriam
+  - Lopez-Calva, Luis F.
+  - Perova, Elizaveta
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/16978
+  handle: 10986/16978
+  doi: 10.1596/16978
+  abstract: "The pregnancy project sought to expose\r\n            the existence, and challenge the validity, of stereotypes\r\
+    \n            about Hispanic women. The charade explored the underlying\r\n            motivations of the many who responded\
+    \ with a wide range of\r\n            reactions. The specific objectives of this regional study\r\n            are: to\
+    \ establish a thorough description of the magnitude of\r\n            the issue and its potential implications for social\r\
+    \n            advancement; to advance "
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: favara-2012-teenage-pregnancy-and
+  sources:
+  - okr
+- title: Is the Baby to Blame? An Inquiry into the Consequences of Early Childbearing
+  year: '2012'
+  authors:
+  - Perova, Elizaveta
+  - Azevedo, Joao Pedro
+  - Lopez-Calva, Luis F.
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/9345
+  handle: 10986/9345
+  doi: 10.1596/1813-9450-6074
+  abstract: 'Teenage pregnancy has been a cause of concern for policy makers because it is associated with a complex and often
+    adverse social context for women. It is seen as the cause of lower social and economic achievement for mothers and their
+    children, and as the potential determinant of inter-generational poverty traps. However, the question of whether pregnancy
+    -- and the subsequent rearing of a child -- is actually the trigger of poverty, higher dependence on social welfare and/
+    or other undesirable '
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: perova-2012-is-the-baby
+  sources:
+  - okr
+- title: When Job Earnings Are Behind Poverty Reduction
+  year: '2012'
+  authors:
+  - Inchauste, Gabriela
+  - Azevedo, João Pedro
+  - Olivieri, Sergio
+  - Saavedra, Jaime
+  - Winkler, Hernan
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/17067
+  handle: 10986/17067
+  doi: 10.1596/17067
+  abstract: "Improvement in labor market conditions\r\n            has been the main explanation behind many of the poverty\r\
+    \n            success stories observed in the last decade, that is the\r\n            primary conclusion of an analysis\
+    \ of changes in poverty by\r\n            income source. Changes in labor earnings were the largest\r\n            contributor\
+    \ to poverty reduction for a sample of 16\r\n            countries where poverty increased substantially. In 10 of\r\n\
+    \            these countries, labor income"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: inchauste-2012-when-job-earnings
+  sources:
+  - okr
+- title: 'Benchmarking : A Tool to improve the Effectiveness of Monitoring and Evaluation in the Policy Cycle'
+  year: '2010'
+  authors:
+  - Newman, John L.
+  - Azevedo, João Pedro
+  - Pungiluppi, Juliana
+  type: working_paper
+  url: https://openknowledge.worldbank.org/handle/10986/10205
+  handle: 10986/10205
+  doi: 10.1596/10205
+  abstract: "To benchmark is to compare performance\r\n            against a standard. As part of an effort to improve the\r\
+    \n            effectiveness of monitoring and evaluation (M&E) in the\r\n            policy cycle, benchmarking can be\
+    \ useful in three ways.\r\n            First, benchmarking can help place an outcome in the next\r\n            context.\
+    \ Was the achievement good, bad, or indifferent?\r\n            Second, benchmarking can help assess the reasonableness\
+    \ of\r\n            targets that may be set. Thir"
+  venue: World Bank Policy Research Working Paper
+  tags:
+  - world bank
+  - policy research
+  peer_reviewed: false
+  id: newman-2010-benchmarking-a
+  sources:
+  - okr
+softwares:
+- title: ALORENZ
+  year: '2020'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'ALORENZ: Stata module to produce Pen''s Parade, Lorenz and Generalised Lorenz curve'
+  url: https://github.com/jpazvd/alorenz
+  tags: []
+  github_repo: alorenz
+  id: azevedo-2020-alorenz
+  sources:
+  - github
+- title: GRQREG
+  year: '2020'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'GRQREG: Stata module to graph the coefficients of a quantile regression'
+  url: https://github.com/jpazvd/grqreg
+  tags: []
+  github_repo: grqreg
+  id: azevedo-2020-grqreg
+  sources:
+  - github
+- title: DFL
+  year: '2020'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'DFL: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density'
+  url: https://github.com/jpazvd/dfl
+  tags: []
+  github_repo: dfl
+  id: azevedo-2020-dfl
+  sources:
+  - github
+- title: ADECOMP
+  year: '2020'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'ADECOMP: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure'
+  url: https://github.com/jpazvd/adecomp
+  tags: []
+  github_repo: adecomp
+  id: azevedo-2020-adecomp
+  sources:
+  - github
+- title: WBOPENDATA
+  year: '2020'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'WBOPENDATA: Stata module to access World Bank databases'
+  url: https://github.com/jpazvd/wbopendata
+  tags: []
+  github_repo: wbopendata
+  id: azevedo-2020-wbopendata
+  sources:
+  - github
+journal_articles:
+- id: azevedo-foguel-2006-inequality
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Foguel, Miguel
+  year: 2006
+  title: Inequality decomposition by population subgroups and the shapley value
+  journal: Applied Economics Letters
+  volume: '13'
+  issue: '12'
+  pages: 773-777
+  doi: 10.1080/13504850500404217
+  citations: 45
+  tags:
+  - inequality
+  - decomposition
+  - shapley
+  peer_reviewed: true
+  language: en
+  country: UK
+  urls:
+    journal: https://www.tandfonline.com/doi/abs/10.1080/13504850500404217
+  sources:
+  - manual
+- id: azevedo-ndiaye-2004-microfinance
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Ndiaye, G.
+  year: 2004
+  title: Microfinance Institutions in Senegal
+  journal: Small Enterprise Development
+  volume: '15'
+  issue: '2'
+  pages: 4-17
+  citations: 12
+  tags:
+  - microfinance
+  - senegal
+  - africa
+  peer_reviewed: true
+  language: en
+  country: UK
+  sources:
+  - manual
+- id: azevedo-batista-2002-cepal
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Batista, H.R.
+  year: 2002
+  title: Explaining the recent performance of Brazilian exports
+  journal: Revista de la CEPAL
+  volume: '77'
+  pages: 63-74
+  citations: 8
+  tags:
+  - trade
+  - exports
+  - brazil
+  peer_reviewed: true
+  language: en
+  country: Chile
+  urls:
+    journal: https://repositorio.cepal.org/handle/11362/10921
+  sources:
+  - manual
+- id: azevedo-yamada-2002-microfinance
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Yamada, Gustavo
+  year: 2002
+  title: Microfinance, institutions and entrepreneurs
+  journal: Journal of Microfinance
+  volume: '4'
+  issue: '2'
+  pages: 103-128
+  citations: 18
+  tags:
+  - microfinance
+  - entrepreneurship
+  - institutions
+  peer_reviewed: true
+  language: en
+  sources:
+  - manual
+- id: azevedo-batista-1999-exports
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Batista, H.R.
+  year: 1999
+  title: 'Brazilian manufactured exports: determinants and effects of the trade liberalization policy'
+  journal: Revista de Economia Contemporânea
+  volume: '3'
+  issue: '2'
+  pages: 93-118
+  citations: 15
+  tags:
+  - trade
+  - exports
+  - brazil
+  - liberalization
+  peer_reviewed: true
+  language: pt
+  country: Brazil
+  sources:
+  - manual
+- id: azevedo-batista-1998-exports
+  type: journal_article
+  authors:
+  - Azevedo, João Pedro
+  - Batista, H.R.
+  year: 1998
+  title: An empirical analysis of Brazilian manufactured exports
+  journal: Pesquisa e Planejamento Econômico
+  volume: '28'
+  issue: '3'
+  pages: 483-512
+  citations: 10
+  tags:
+  - trade
+  - exports
+  - brazil
+  peer_reviewed: true
+  language: pt
+  country: Brazil
+  sources:
+  - manual
+books:
+- id: dolton-azevedo-smith-2006-ndlp
+  type: book
+  authors:
+  - Dolton, P.
+  - Azevedo, João Pedro
+  - Smith, J.
+  year: 2006
+  title: The econometric evaluation of the New Deal for Lone Parents
+  publisher: Department for Work and Pensions
+  pages: Research Report No. 356
+  country: UK
+  language: en
+  tags:
+  - policy evaluation
+  - uk
+  - welfare
+  - youth
+  - labor markets
+  urls:
+    pdf: https://webarchive.nationalarchives.gov.uk/ukgwa/+/http://www.dwp.gov.uk/asd/asd5/rports2005-2006/rrep356.pdf
+  sources:
+  - manual
+- id: mec-ipea-2006-alfabetizado-brasil-sintese
+  type: book
+  authors:
+  - Ministério da Educação
+  - IPEA
+  - UNESCO
+  year: 2006
+  title: 'Brasil Alfabetizado: caminhos da avaliação - Síntese dos principais resultados'
+  publisher: MEC/UNESCO/IPEA
+  country: Brazil
+  language: pt
+  tags:
+  - education
+  - literacy
+  - brazil
+  - evaluation
+  sources:
+  - manual
+- id: mec-ipea-2006-alfabetizado-brasil-v1
+  type: book
+  authors:
+  - Ministério da Educação
+  - IPEA
+  - UNESCO
+  year: 2006
+  title: 'Brasil Alfabetizado: caminhos da avaliação - Volume 1'
+  publisher: MEC/UNESCO/IPEA
+  country: Brazil
+  language: pt
+  tags:
+  - education
+  - literacy
+  - brazil
+  - evaluation
+  sources:
+  - manual
+  urls: {}
+book_chapters:
+- id: azevedo-2008-canal-futura
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2008
+  title: 'Educational Television and Poverty: a contingent valuation of Canal Futura in Brazil'
+  book: International Perspectives on the Economics of Education
+  editor: G. Johnes and J. Johnes
+  publisher: Edward Elgar
+  pages: 273-302
+  country: UK
+  language: en
+  tags:
+  - education
+  - television
+  - brazil
+  - contingent valuation
+  sources:
+  - manual
+- id: azevedo-2007-inequality-significance
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2007
+  title: 'On the statistical significance of poverty and inequality measures: a bootstrap approach with an application to
+    Latin America'
+  book: Inequality, Poverty and Wellbeing
+  editor: S. Jenkins and J. Micklewright
+  publisher: Palgrave Macmillan
+  pages: 123-145
+  country: UK
+  language: en
+  tags:
+  - inequality
+  - poverty
+  - bootstrap
+  - latin america
+  - methodology
+  sources:
+  - manual
+- id: azevedo-foguel-2007-decomposition
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  - Foguel, Miguel
+  year: 2007
+  title: Decomposing inequality changes in Brazil
+  book: Inequality, Poverty and Wellbeing
+  editor: S. Jenkins and J. Micklewright
+  publisher: Palgrave Macmillan
+  pages: 89-110
+  country: UK
+  language: en
+  tags:
+  - inequality
+  - decomposition
+  - brazil
+  sources:
+  - manual
+- id: azevedo-2006-labour-slums
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2006
+  title: Informal labour markets and poverty in Brazilian slums
+  book: Informal Labour Markets and Development
+  editor: B. Guha-Khasnobis and R. Kanbur
+  publisher: Palgrave-Macmillan
+  pages: 187-210
+  country: UK
+  language: en
+  tags:
+  - informal labor
+  - poverty
+  - brazil
+  - slums
+  sources:
+  - manual
+- id: azevedo-2006-microfinance-entrepreneurs
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2006
+  title: 'Microfinance institutions and entrepreneurs: a review of the literature'
+  book: Handbook of Entrepreneurship Research
+  editor: S. Parker
+  publisher: Kluwer Academic Publishers
+  pages: 345-378
+  country: Netherlands
+  language: en
+  tags:
+  - microfinance
+  - entrepreneurship
+  - literature review
+  sources:
+  - manual
+- id: azevedo-2002-microfinance-welfare
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2002
+  title: The welfare effects of microfinance institutions
+  book: Economic Development and Microfinance
+  editor: FAO
+  publisher: Food and Agriculture Organization
+  pages: 89-112
+  country: Italy
+  language: en
+  tags:
+  - microfinance
+  - welfare
+  - development
+  sources:
+  - manual
+- id: azevedo-2002-education-brazil
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2002
+  title: Returns to education in Brazil
+  book: Education and Development
+  editor: UNESCO
+  publisher: UNESCO Publishing
+  pages: 201-225
+  country: France
+  language: en
+  tags:
+  - education
+  - returns to education
+  - brazil
+  sources:
+  - manual
+conference_papers:
+- id: azevedo-2005-lacaea-paris
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2005
+  title: Poverty and inequality in Latin America
+  venue: Latin American and Caribbean Economic Association (LACAEA)
+  location: Paris, France
+  date: 2005-10
+  tags:
+  - poverty
+  - inequality
+  - latin america
+  sources:
+  - manual
+- id: azevedo-2005-anpec-natal
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2005
+  title: Brazilian inequality decomposition
+  venue: Associação Nacional de Centros de Pós-Graduação em Economia (ANPEC)
+  location: Natal, Brazil
+  date: 2005-12
+  language: pt
+  tags:
+  - inequality
+  - decomposition
+  - brazil
+  sources:
+  - manual
+- id: azevedo-2004-helsinki
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2004
+  title: Microfinance and poverty reduction
+  venue: Development Economics Conference
+  location: Helsinki, Finland
+  date: 2004-06
+  tags:
+  - microfinance
+  - poverty
+  sources:
+  - manual
+- id: azevedo-2004-eale-lisboa
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2004
+  title: Labor market policies evaluation
+  venue: European Association of Labour Economists (EALE)
+  location: Lisboa, Portugal
+  date: 2004-09
+  tags:
+  - labor markets
+  - policy evaluation
+  sources:
+  - manual
+- id: azevedo-2004-anpec-joao-pessoa
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2004
+  title: Poverty dynamics in Brazil
+  venue: ANPEC
+  location: João Pessoa, Brazil
+  date: 2004-12
+  language: pt
+  tags:
+  - poverty
+  - dynamics
+  - brazil
+  sources:
+  - manual
+- id: azevedo-2003-lacaea-puebla
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2003
+  title: Inequality measures and decomposition
+  venue: LACAEA
+  location: Puebla, Mexico
+  date: 2003-10
+  tags:
+  - inequality
+  - decomposition
+  - methodology
+  sources:
+  - manual
+- id: azevedo-2002-desg-nottingham
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2002
+  title: Microfinance institutions in developing countries
+  venue: Development Economics Study Group (DESG)
+  location: Nottingham, UK
+  date: 2002-04
+  tags:
+  - microfinance
+  - development
+  sources:
+  - manual
+- id: azevedo-2001-heidelberg
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2001
+  title: Entrepreneurship and microfinance
+  venue: Development Economics Conference
+  location: Heidelberg, Germany
+  date: 2001-09
+  tags:
+  - entrepreneurship
+  - microfinance
+  sources:
+  - manual
+- id: azevedo-2000-anpec-campinas
+  type: conference_paper
+  authors:
+  - Azevedo, João Pedro
+  year: 2000
+  title: Brazilian export performance
+  venue: ANPEC
+  location: Campinas, Brazil
+  date: 2000-12
+  language: pt
+  tags:
+  - exports
+  - trade
+  - brazil
+  sources:
+  - manual

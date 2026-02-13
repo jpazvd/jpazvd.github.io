@@ -1,0 +1,2380 @@
+adecomp:
+  title: adecomp
+  short_description: Shapley Decomposition by Components of a Welfare Measure
+  syntax: ''
+  description: 'adecomp implements the shapley decomposition of changes in a welfare
+    indicator as proposed by
+
+    Azevedo, Sanfelicce and Minh (2012). Following Barros et al (2006), this method
+    takes advantage of the additivity property of a
+
+    welfare aggregate to construct a counterfactual unconditional distribution of
+    the welfare aggregate by changing each
+
+    component at a time to calculate their contribution to the observed changes in
+    poverty and inequality.
+
+    Given that the distribution of a observable welfare measure (i.e. income or consumption)
+    for period 0 and period 1 are known, we can construct counterfactual
+
+    distributions for period 1 by substituting the observed level of the indicators
+    c in period 0, one at a time. For each
+
+    counterfactual distribution, we can compute the poverty or inequality measures,
+    and interpret those counterfactuals as the poverty or inequality
+
+    level that would have prevailed in the absence of a change in that indicator.
+
+    As much of the micro-decomposition literature, approaches of this nature traditionally
+    suffer from path-dependence (See Essama-Nssah (2012), Fortin et al (2011) and
+
+    Ferreira (2010) for recent reviews of the literature), in other words, the order
+    in which the cumulative effects are calculated
+
+    matters . One of the major contributions of Azevedo, Sanfelicce and Minh (2012)
+    is the implementation of the best known remedy for path-dependence which is to
+
+    calculate the decomposition across all possible paths and then take the average
+    between them. These averages are also known as
+
+    the Shapley-Shorrocks estimates of each component, implying that we estimate every
+    possible path to decompose these components
+
+    and then take the average of these estimates (See Shapley (1953) and Shorrocks
+    (1999)).
+
+    There is one remaining caveat to this approach: the counterfactual income distributions
+    on which these decompositions suffer
+
+    from equilibrium-inconsistency. Since we are modifying only one element at a time,
+    the counterfactuals are not the result of
+
+    an economic equilibrium, but rather a statistical exercise in which we assume
+    that we can in fact modify one factor at a time
+
+    and keep everything else constant.
+
+    For further examples of implementations of this approach please see Azevedo, Inchausete
+    and Sanfelice (2012).
+
+    welfarevar is the welfare aggregate variable.
+
+    components are the components used to construct the welfare variable, and which
+    will be for the
+
+    decomposition.
+
+    by is the comparison indicator. It must take two categorical values and is usually
+    defines two points
+
+    in time or two geographic locations, which the difference of the indicator of
+    choice is being decomposed.
+
+    eq:uation() captures the relationship between welfarevar and components.
+
+    The component variables in varlist must be denoted by c#, and must be separated
+    by an arithmetic operator.'
+  options:
+  - in:dicator(string) poverty and inequality indicators. fgt0, fgt1, fgt2, gini,
+    theil, and mean are the currently supported options.
+  - t:op(#), b:ottom(#) mean at bottom x%, top y% of the welfarevar distribution,
+    and mr:atio is the ratio between the mean of bottom x% over the mean of the whole
+    distribution.
+  - 'mid:dle(# #) mean at middle part of distribution between x% and y%.'
+  - varpl(varname) poverty line variable. It must be specified when fgt0, fgt1 and/or
+    fgt2 indicators are used.
+  - mpl(numlist) allow to calculate the poverty indicators by multiple of the poverty
+    line. It can be specified when fgt0, fgt1 and/or fgt2 indicators are used.
+  - 'gic(#) use as indicator the percentual change on the average of welfarevar in
+    which one of its # percentile, i.e., decomposing the Growth Incidence Curve of
+    welfarevar. You need to specify a number of bins'
+  - gr:oup(varname) the indicators are calculated by each group of groupvar. Differ
+    from the if option because do not restrict the database. Groupvar must be a numeric
+    and discrete variable.
+  - id(varname) to specify the identificator variable in case of balanced panel data.
+    The observed value of the unit of analysis is going to be used when changing the
+    distribution.
+  - strata(varlist) allow the transposition of distributions be made within groups
+    created using the variables listed in varlist.
+  - r:ank(string) specific the rank of which variable must be used when changing the
+    distribution. It can be a varname or typing components the rank of each component
+    is going to be used. Default is welfarevar rank.
+  - 'perc:entile(#) used # percentile of componentvar to change the distribution.
+    Default is to rescale the dataset in each period.'
+  - m:ethod(string) specify the method for Shapley decomposition, the default is "difference".
+    The other option is "growth" and the results are the annualized growth using the
+    exponential growth rate definition such as r = ln(Yt/Y1)/T, and T is the difference
+    between period 0 and period 1.
+  - oneway decomposition is made only one way from period 0 to period 1. Default is
+    both ways.
+  - std returns the standard deviation of the effect, besides the average.
+  - s:tats returns specified poverty and inequality indicators, and statistics of
+    variables in the equation.
+  examples:
+  - . adecomp percapitainc laborinc nonlaborinc, by(year) equation(c1+c2) indicator(fgt0
+    fgt1 fgt2 gini theil) varpl(pline)
+  - . adecomp percapitainc laborinc nonlaborinc, by(year) equation(c1+c2) in(fgt0)
+    varpl(pline) gic(100)
+  - . adecomp percapitainc laborinc nonlaborinc, by(year) equation(c1+c2) indicator(fgt0)
+    varpl(pline) mpl(1 3.5)
+  - . adecomp percapitainc laborinc nonlaborinc, by(year) equation(c1+c2) indicator(fgt0
+    fgt1 fgt2 gini theil) varpl(pline) gic(100) strata(urban)
+  - . adecomp percapitainc laborinc nonlaborinc, by(year) equation(c1+c2) indicator(fgt0
+    fgt1 fgt2 gini theil) varpl(pline) gic(100) id(hh_id)
+  - . adecomp percapitainc laborinc nonlaborinc [w=weight], by(year) equation(c1+c2)
+    indicator(fgt0 fgt1 fgt2) varpl(pline) group(region)
+  - . adecomp percapitainc laborinc nonlaborinc if (region == 1), by(year) equation(c1+c2)
+    indicator(gini)
+  - . adecomp percapitainc padults laborinc capitalinc pensioninc transferinc othersinc,
+    by(year) equation(c1*(c2+c3+c4+c5+c6)) indicator(fgt0) varpl(pline)
+  - . adecomp percapitainc padults laborinc capitalinc pensioninc transferinc othersinc,
+    by(year) equation(c1*(c2+c3+c4+c5+c6)) indicator(fgt0 fgt1 fgt2 gini theil mean)
+    varpl(pline) bottom(40) method(growth) (click to run the example below)
+  - . use exdata_adecomp.dta, clear
+  - . adecomp ipcf_ppp ila_ppp itran_ppp ijubi_ppp icap_ppp others /// [w=pondera],
+    by(ano) eq(c1+c2+c3+c4+c5) /// varpl(lp_2usd_ppp) in(fgt0 fgt1 fgt2 gini theil)
+  - . mat result = r(b)
+  - . mat colnames result = indicator effect rate
+  - . drop _all
+  - . svmat double result, n(col)
+  - . label define indicator 0 "FGT0" 1 "FGT1" 2 "FGT2" 3 "Gini" 4 "Theil"
+  - . label values indicator indicator
+  - . label define effect /// 1 "Labor" /// 2 "Transfer" /// 3 "Pension" /// 4 "Capital"
+    /// 5 "Others" /// 6 "Total change"
+  - . label values effect effect
+  - . local total 6
+  - . gen aux=rate if effect==`total'
+  - . egen total_effect=sum(aux) , by(indicator)
+  - . drop aux
+  - . gen share_effect= -100*rate/abs(total_effect)
+  - . keep if effect!=6
+  - . graph bar share_effect , over(effect, label(labsize(*0.6))) /// by(indicator)
+    blabel(bar, format(%16.1fc) size(*.98)) /// ytitle(Share of the component effect
+    in the total change)
+  stored_results:
+  - 'adecomp returns results in r() format. By typing return list, the following results
+    are reported: ... r(path): number of paths of the shapley decomposition r(component):
+    number of components of the decomposition r(N): number of observations utilized
+    on the calculation r(b): average effect of each components based on all paths.
+    r(sd): standard deviation of the effects based on all paths. If option std is
+    specify. r(gic): average effect of each components based on all paths when the
+    indicators are the changes on welfarevar() by bin. r(sd_gic): standard deviation
+    of each components based on all paths when the indicators are the changes on welfarevar()
+    by bin. If option std is specify. r(stats): poverty and inequality indicators.
+    If option stats is specify. r(statsvar): summary statistics of factors. If option
+    stats is specify. Obs: On the reported matrices Index label: 0 - FGT(0); 1 - FGT(1);
+    2 - FGT(2); 3 - Gini; 4 - Theil; 5 - Mean; 6 - Bottom(); 7 - Top(); 8 - Bottom()/Mean;
+    9 - Middle(# #). Effect label: 1 represents the first component listed on the
+    command, and so on. Total of components plus 1 represents the total change on
+    the indicator and plus 2 denotes the residual, when this option is specified.
+    Important: To guarantee precision, we recommend to use double when create variables.'
+  references:
+  - 'Azevedo, Joao Pedro, Viviane Sanfelice and Minh Cong Nguyen (2012) Shapley Decomposition
+    by Components of a Welfare Measure. MPRA Paper 85584, University Library of Munich,
+    Germany. https://ideas.repec.org/p/pra/mprapa/85584.html Azevedo, Joao Pedro,
+    Gabriela Inchauste, and Viviane Sanfelice (2013) "Decomposing the recent inequality
+    decline in Latin America," Policy Research Working Paper Series 6715, The World
+    Bank. https://ideas.repec.org/p/wbk/wbrwps/6715.html Azevedo, Joao Pedro, Gabriela
+    Inchauste, Sergio Olivieri, Jaime Saavedra, and Hernan Winkler. (2013) "Is labor
+    income responsible for poverty reduction ? a decomposition approach," Policy Research
+    Working Paper Series 6414, The World Bank. https://ideas.repec.org/p/wbk/wbrwps/6414.html
+    Barros, Ricardo Paes de. Carvalho, Mirela de. Franco, Samuel. Mendoça, Rosane
+    (2006). "Uma Análise das Principais Causas da Queda Recente na Desigualdade de
+    Renda Brasileira." In: Revista Econômica. Volume 8, número 1, p.117-147. Universidade
+    Federal Fluminense. Rio de Janeiro. https://doi.org/10.22409/economica.8i1.p158
+    Essama-Nssah, B. (2012). "Identification of Sources of Variation in Poverty Outcomes",
+    World Bank Policy Research Working Papers, No. 5954. Ferreira Francisco H.G. (2010)
+    "Distributions in Motion: Economic Growth, Inequality and Poverty Dynamics". World
+    Bank Policy Research Working Paper No. 5424. The World Bank, Washington, D.C.
+    Fortin Nicole, Lemieux Thomas and Firpo Sergio. (2011). "Decomposition Methods
+    in Economics". In: Ashenfelter Orley and Card David (eds) Handbook of Labor Economics,
+    Vol. 4A , pp. 1-102. Northolland, Amsterdam.. Inchauste, Gabriela , João Pedro
+    Azevedo, Sergio Olivieri, Jaime Saavedra, and Hernan Winkler (2012) When Job Earnings
+    Are behind Poverty Reduction. Economic Premise, November 2012, Number 97. World
+    Bank: Washington DC. http://siteresources.worldbank.org/EXTPREMNET/Resources/EP97.pdf
+    Shapley, L. (1953). "A value for n-person games", in: H. W. Kuhn and A. W. Tucker
+    (eds.), Contributions to the Theory of Games, Vol. 2 (Princeton, N.J.: Princeton
+    University Press). Shorrocks, Anthony (2012) Decomposition procedures for distributional
+    analysis: a unified framework based on the Shapley value. Journal of Economic
+    Inequality http://dx.doi.org/10.1007/s10888-011-9214-z World Bank (2012) The Effect
+    Of Women''S Economic Power: in Latin America and the Caribbean. LAC Poverty and
+    Labor Brief. World Bank: Washington DC. http://www.bancomundial.org/content/dam/Worldbank/document/PLBSummer12latest.pdf'
+  authors:
+  - Joao Pedro Azevedo, jazevedo@worldbank.org
+  - Minh Cong Nguyen, mnguyen3@worldbank.org
+  - Viviane Sanfelice, vsanfelice@worldbank.org
+  acknowledgements: 'The authors would like to thank Gabriela Inchauste, Samuel Freije,
+    Andres Castaneda and
+
+    Gabriel Facchini for their valuable suggestions. The code from Samuel Franco and
+    Sergio Oliveri were used
+
+    for inspiration in a few passages of this ado and should be greatfully acknowledged.
+
+
+    All errors and ommissions are of exclusive responsability of the authors.
+
+
+    This program was developed by the http://go.worldbank.org/IYDYF1BG70 (2012), in
+    the
+
+    Latin American and Caribbean Poverty Reduction and Economic Managment Group of
+    the World Bank.'
+  also_see:
+  - 'Online: help for apoverty; ainequal; wbopendata; mpovline; drdecomp; skdecomp;
+    tabmult; xtsur (if installed)'
+  version: version 1.5
+  citation: Azevedo, Joao Pedro, Viviane Sanfelice and Minh Cong Nguyen (2012) Shapley
+    Decomposition by Components of a Welfare Measure. World Bank. (mimeo)
+  other_github_respository: For previous releases please visit ADECOMP https://github.com/jpazvd/adecomp
+  help_file_type: sthlp
+drdecomp:
+  title: drdecomp
+  short_description: Shapley value of growth and distribution components of on changes
+    in poverty indicators
+  syntax: drdecomp welfarevar [weight] [if exp] [in exp], by(varname) varpl(varlist)
+    [ indicator(string) mpl(numlist) ] fweights and aweights are allowed; see help
+    weights. See help weight.
+  description: 'drdecomp implements the shapley value of the Datt and Ravallion (1992)
+    decomposition of changes in a welfare indicator into growth and distribution,
+
+    however, following the shapley and non parametric methodology suggested by Shorrocks
+    (1999/2012) and Kolenikov and Shorrocks (2003).
+
+    For examples of applications please see Azevedo and Sanfelice (2012) and Ferreira
+    et al (2012).
+
+    welfarevar is the welfare aggregate variable.
+
+    by is the comparison indicator. It must take two categorical values and is usually
+    defines two points
+
+    in time or two geographic locations, which the difference of the indicator of
+    choice is being decomposed.
+
+    varpl(varname) poverty line variable.'
+  options:
+  - in:dicator(string) poverty indicators. fgt0, fgt1, fgt2 are the currently supported
+    options. fgt0 is the indicator default.
+  - mpl(numlist) allow to calculate the poverty indicators by range using multiples
+    of the poverty line.
+  examples:
+  - . drdecomp percapitainc, by(year) varpl(pline)
+  - . drdecomp percapitainc, by(year) varpl(pline) in(fgt0 fgt1 fgt2)
+  - . drdecomp percapitainc, by(year) varpl(pline) mpl(1 3.5 6) (click to run the
+    example below)
+  - . use exdata_drdecomp, clear
+  - . drdecomp income [w=weight], by(year) varpl(lp_4usd_ppp) ///
+  - . in(fgt0 fgt1 fgt2)
+  stored_results:
+  - 'drdecomp returns results in r() format. By typing return list, the following
+    results are reported: ... r(b): average effect of the two factors and the total
+    change on the poverty indicator. r(shapley): besides the average effect, returns
+    the contribution for the two paths. r(poverty): returns the value of the indicator
+    by categorical value of by. Obs: On the reported matrices Indicator label: 0 -
+    FGT(0); 1 - FGT(1); 2 - FGT(2). Effect label: 1 represents the growth; 2 redistribtuion
+    and 3 the total change on the indicator. Line label (if mpl specified): 1 represents
+    the first multiple; 2 the second, and so on. The last indicates the range from
+    the last multiple and the maximun value.'
+  references:
+  - 'Azevedo, Joao Pedro and Viviane Sanfelice (2012) "The rise of the middle class
+    in Latin America". World Bank (mimeo). Ferreira, Francisco H.G.; Messina, Julian;
+    Rigolini, Jamele; López-Calva, Luis-Felipe; Lugo, Maria Ana; Vakis, Renos. (2013)
+    Economic Mobility and the Rise of the Latin American Middle Class. Washington,
+    DC: World Bank. https://openknowledge.worldbank.org/handle/10986/11858 Datt, G.;
+    Ravallion, M. (1992) Growth and Redistribution Components of Changes in Poverty
+    Measures: A Decomposition with Applications to Brazil and India in the 1980s.
+    Journal of Development Economics, 38: 275-296. Shorrocks, A. F. (2012) Decomposition
+    procedures for distributional analysis: a unified framework based on the Shapley
+    value. Journal of Economic Inequality. Shorrocks, A.; Kolenikov, S. (2003) A Decomposition
+    Analysis of Regional Poverty in Russia, Discussion Paper No. 2003/74 United Nations
+    University. World Bank (2011) On The Edge Of Uncertainty: Poverty Reduction in
+    Latin America and the Caribbean during the Great Recession and Beyond. LAC Poverty
+    and Labor Brief. World Bank: Washington DC. http://siteresources.worldbank.org/INTLAC/Resources/LAC_poverty_report.pdf'
+  authors:
+  - Joao Pedro Azevedo, jazevedo@worldbank.org
+  - Andres Castanedas, acastanedaa@worldbank.org
+  - Viviane Sanfelice, vsanfelice@worldbank.org
+  acknowledgements: This program was developed by the http://go.worldbank.org/IYDYF1BG70
+    (2012), in the Latin American and Caribbean Poverty Reduction and Economic Managment
+    Group of the World Bank.
+  also_see:
+  - 'Online: help for gidecomposition; apoverty; ainequal; wbopendata; adecomp; mpovline;
+    skdecomp (if installed)'
+  version: ''
+  other_shapley_value_of_growth_and_distribution_components_of_on_changes_in_poverty_indicators: drdecomp
+    welfarevar [weight] [if exp] [in exp], by(varname) varpl(varlist) [ indicator(string)
+    mpl(numlist) ] fweights and aweights are allowed; see help weights. See help weight.
+  help_file_type: sthlp
+skdecomp:
+  title: skdecomp
+  short_description: Shapley value of growth, price, and distribution components of
+    on changes in poverty indicators
+  syntax: skdecomp welfarevar [weight] [if exp] [in exp] , by(varname) varpl(varname)
+    [ indicator(string) mpl(numlist) idpl(varname) ] fweights and aweights are allowed;
+    see help weights. See help weight.
+  description: 'skdecomp implements the shapley value of Kolenikov and Shorrocks (2003)
+    decomposition of changes in a welfare
+
+    indicator into growth, distribution and price.
+
+    welfarevar is the welfare aggregate variable.
+
+    by is the comparison variable. It must take two categorical values and is usually
+    defines as two points
+
+    in time or two geographic locations, which the difference of the indicator is
+    being decomposed.
+
+    varpl(varname) poverty line variable.'
+  options:
+  - in:dicator(string) poverty indicators. fgt0, fgt1, fgt2 are the currently supported
+    options. fgt0 is the indicator default.
+  - mpl(numlist) allow to calculate the poverty indicators by range using multiples
+    of the poverty line.
+  - idpl(varname) to switch the poverty line in case the poverty line is not constant
+    to all the observation in one categorical of by. For instance, there are different
+    poverty lines to urban and rural areas.
+  examples:
+  - . skdecomp income, by(year) varpl(pline)
+  - . skdecomp income, by(year) varpl(pline) idpl(region)
+  - . skdecomp income, by(year) varpl(pline) in(fgt0 fgt1 fgt2)
+  - . skdecomp income, by(year) varpl(pline) mpl(1 2.5 6) (click to run the example
+    below) {Original SK decomposition - welfare and poverty line variable in nominal
+    terms}
+  - . skdecomp ipcf [w=pondera], by(ano) varpl(lp_4usd) ///
+  - . in(fgt0 fgt1 fgt2)
+  stored_results:
+  - 'skdecomp returns results in r() format. By typing return list, the following
+    results are reported: ... r(b): average effect by factors and the total change
+    on the poverty indicator. r(shapley): besides the average effect, returns the
+    contribution of each paths. r(poverty): returns the value of the indicator by
+    categorical value of by. Obs: On the reported matrices Indicator label: 0 - FGT(0);
+    1 - FGT(1); 2 - FGT(2). Effect label: 1 represents the growth; 2 distribtuion;
+    3 line and 4 the total change in percentage points on the indicator. Line label
+    (if mpl specified): 1 represents the first multiple; 2 the second, and so on.
+    The last indicates the range from the last multiple and the maximun value.'
+  references:
+  - 'Shorrocks, A.; Kolenikov, S. A Decomposition Analysis of Regional Poverty in
+    Russia, Discussion Paper No. 2003/74 United Nations University, 2003. Shorrocks,
+    A. F. Decomposition procedures for distributional analysis: a unified framework
+    based on the Shapley value. Journal of Economic Inequality, 2012. World Bank (2011)
+    On The Edge Of Uncertainty: Poverty Reduction in Latin America and the Caribbean
+    during the Great Recession and Beyond. LAC Poverty and Labor Brief. World Bank:
+    Washington DC. http://siteresources.worldbank.org/INTLAC/Resources/LAC_poverty_report.pdf'
+  authors:
+  - Bernardo Atuesta,
+  - Joao Pedro Azevedo, jazevedo@worldbank.org
+  - Andres Castanedas, acastanedaa@worldbank.org
+  - Viviane Sanfelice, vsanfelice@worldbank.org
+  acknowledgements: This program was developed by the http://go.worldbank.org/IYDYF1BG70
+    (2012), in the Latin American and Caribbean Poverty Reduction and Economic Managment
+    Group of the World Bank.
+  also_see:
+  - 'Online: help for gidecomposition; apoverty; ainequal; wbopendata; adecomp; mpovline;
+    drdecomp (if installed)'
+  version: ''
+  other_shapley_value_of_growth__price__and_distribution_components_of_on_changes_in_poverty_indicators: skdecomp
+    welfarevar [weight] [if exp] [in exp] , by(varname) varpl(varname) [ indicator(string)
+    mpl(numlist) idpl(varname) ] fweights and aweights are allowed; see help weights.
+    See help weight.
+  help_file_type: sthlp
+apoverty:
+  title: apoverty
+  short_description: Poverty Measures (revised)
+  syntax: apoverty varlist [weight] [if exp] [in exp] [, line(#) varpl(varname) gen(newvarname)
+    all h h2 apg pgr igr w s tak thon fgt1 fgt2 fgt3 fgt4 fgt5 fgt6 fgt7 fgt8 fgt9
+    chu1 chu2 chu3 chu4 chu5 ] aweights, fweights and pweights are allowed; see help
+    weights.
+  description: 'apoverty computes a series of poverty measures based on the (income)
+
+    distribution described by varname. It is a revised and upgraded version
+
+    of poverty published by Philippe Van Kerm.
+
+    The poverty measures that can be computed by
+
+    headcount ratio extreme poverty hratio aggregate poverty gap
+
+    poverty gap ratio income gap ratio Watts index
+
+    Sen index Takayama index Thon index,
+
+    and series of Foster, Greer and Thorbecke indices with parameters :
+
+    0.5, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
+
+    Clark et al. indices with parameters :
+
+    0.1, 0.25, 0.5, 0.75, 0.9
+
+    The poverty line is either directly specified by the user or computed relative
+
+    to the median of varname (half or two-third), see under "options" below. The extreme
+
+    poverty line is directly speciefied as half of the poverty line used in the exercise.
+
+    Up to 5 variables can be specified in varlist.'
+  options:
+  - 'line(#) sets the value of the poverty line. If # is set equal to -1, the poverty
+    line is computed as half the median of varname. If # is set equal to -2, it is
+    computed as two-third of the median of varname. Default is -1.'
+  - varpl(varname) provide the variable name containing the values of the poverty
+    line.
+  - gen(newvarname) creates a new variable that takes on the value of 1 for all observations
+    identified as poor and 0 for observations identified as non-poor. "newvarname"
+    is set to missing for observations with missing "varname" or falling outside the
+    ^if in^ statements. If more than one variable is specified on the varlist variable
+    created will refered to this last income variable.
+  - all requests that all possible measures are computed and reported. By default,
+    no measure is produced. The following options specify the measures to be computed
+    and reported.
+  - 'h : headcount ratio [FGT(0)]'
+  - 'h2 : extremem poverty headcount ratio'
+  - 'apg : aggregate poverty gap'
+  - 'pgr : poverty gap ratio [FGT(1)]'
+  - 'igr : income gap ratio'
+  - 'w : Watts index'
+  - 's : Sen index'
+  - 'tak : Takayama index'
+  - 'thon : Thon index'
+  - 'fgt1 : Foster, Greer and Thorbecke -FGT(0.5)-'
+  - 'fgt2 : Foster, Greer and Thorbecke -FGT(1.5)-'
+  - 'fgt3 : Foster, Greer and Thorbecke -FGT(2)-'
+  - 'fgt4 : Foster, Greer and Thorbecke -FGT(2.5)-'
+  - 'fgt5 : Foster, Greer and Thorbecke -FGT(3)-'
+  - 'fgt6 : Foster, Greer and Thorbecke -FGT(3.5)-'
+  - 'fgt7 : Foster, Greer and Thorbecke -FGT(4)-'
+  - 'fgt8 : Foster, Greer and Thorbecke -FGT(4.5)-'
+  - 'fgt9 : Foster, Greer and Thorbecke -FGT(5)-'
+  - 'chu1 : Clark, Ulph and Hemming index with beta of 0.10'
+  - 'chu2 : Clark, Ulph and Hemming index with beta of 0.25'
+  - 'chu3 : Clark, Ulph and Hemming index with beta of 0.50'
+  - 'chu4 : Clark, Ulph and Hemming index with beta of 0.75'
+  - 'chu5 : Clark, Ulph and Hemming index with beta of 0.90'
+  examples: []
+  stored_results:
+  - 'apoverty returns results in r() format. [Important notice: When multiple variables
+    are entered in varlist, returned results are for all inequality measures of the
+    variable listed.]'
+  references: []
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@ipea.gov.br
+  - IPEA
+  - This is a modified version of the ado poverty2 written by Philippe Van Kerm.
+  acknowledgements: ''
+  also_see:
+  - 'On-line: help for povdeco & poverty if installed'
+  version: ''
+  other_poverty_measures__revised_: apoverty varlist [weight] [if exp] [in exp] [,
+    line(#) varpl(varname) gen(newvarname) all h h2 apg pgr igr w s tak thon fgt1
+    fgt2 fgt3 fgt4 fgt5 fgt6 fgt7 fgt8 fgt9 chu1 chu2 chu3 chu4 chu5 ] aweights, fweights
+    and pweights are allowed; see help weights.
+  help_file_type: hlp
+ainequal:
+  title: ainequal
+  short_description: Measures of inequality (revised)
+  syntax: 'ainequal varlist [weight] [if exp] [in range] [, f:ormat(%fmt) ATKinson
+    EPSilon(#[ #[ ...]]) RELSGini Delta(#[ #[ ...]]) shorrocks alpha(#[ #[ ...]])
+    nogini notheil rmd cov sdl mehran piesch kakwani mld ge_1 ge2 all benchmark] aweights
+    and fweights are allowed; see help weights.'
+  description: 'ainequal computes a series of inequality measures of the variables
+    in
+
+    varlist. It is a revised and upgraded version of inequal7 and inequal
+
+    published by Edward Whitehouse in STB-23.
+
+    The inequality measures computed are: the "relative mean deviation",
+
+    the "coefficient of variation", the "standard deviation of logs", the"Gini
+
+    index", the "Mehran index", the "Piesch index", the "Kakwani index", "Theil
+
+    entropy index", the "mean log deviation", the "generalised entropy measure"
+
+    for all sensitivity [see, e.g., Cowell [1995] and Amiel and Cowell [1999] for
+    a
+
+    definition of these measures], the "Atkinson Inequality Index" using the inequality
+
+    aversion parameter epslon, and the "Donaldson-Weymark relative S-Gini" using the
+
+    distributional sensitivity paramether delta.
+
+    In addition ainequal also computes the relative poverty line proposed by Hoffmann
+    [2001]
+
+    and Lambert and Lanza [2006], for the Gini, Theil-T and Theil-L.
+
+    Up to 5 variables can be specified in varlist.'
+  options: []
+  examples: []
+  stored_results:
+  - 'ainequal returns results in r() format. [Important notice: When multiple variables
+    are entered in varlist, returned results are for all inequality measures of the
+    variable listed.]'
+  references:
+  - Amiel, Y. and Cowell, F.A. (1999) Thinking about Inequality. Cambridge University
+    Press. United Kingdom. Coulter Ph. (1989), Measuring Inequality -A Methodological
+    Handbook-, Westview Press USA. Cowell, F.A. (1995). Measuring Inequality (second
+    edition). Prentice-Hall/Harvester-Wheatsheaf, Hemel Hempstead. Hoffmann, R. (2001)
+    Effect of the rise of a person's income on inequality. Brazlian Review of Econometrics
+    v.21, no.2, pp.237-262. Lambert, P.J. and Lanza, G. (2006) The effect on inequalities
+    of changing one or two incomes. The Journal of Economic Inequality. 4:253-277.
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@ipea.gov.br
+  - IPEA
+  - This is a modified version of the ado inequal7 written by Philippe Van Kerm.
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] lorenz STB: sg30 (STB-23) On-line: help for inequal (if installed),
+    inequal7 (if installed), ineqdeco (if installed)'
+  version: ''
+  other_measures_of_inequality__revised_: 'ainequal varlist [weight] [if exp] [in
+    range] [, f:ormat(%fmt) ATKinson EPSilon(#[ #[ ...]]) RELSGini Delta(#[ #[ ...]])
+    shorrocks alpha(#[ #[ ...]]) nogini notheil rmd cov sdl mehran piesch kakwani
+    mld ge_1 ge2 all benchmark] aweights and fweights are allowed; see help weights.'
+  other_option: format(%fmt) specifies the format to be used to display the estimated
+    inequality indices. The default is to use a %6.5f format. delta() specifies the
+    distributional sensitivity parameters used in computing the relative S-Gini. epsilon()
+    specifies the inequality aversion parameters used in computing Atkinson inequality
+    index. alpha() specifies the sensitivity alpha used on the generalised entropy
+    measure. all requests that all possible measures are computed and reported. By
+    default, no measure is produced. The Gini and Theil are the deafult measures.
+    benchmark calculates the Relative Poverty Line (Hoffmann, 2001) or Benchmark Income
+    Level (Lambert and Lanza, 2006) for the Gini, Theil-L and Theil-T. The following
+    options specify the measures to be computed and reported. rmd contain the "relative
+    mean deviation" cov contain the "coefficient of variation" sdl contain the "standard
+    deviation of logs" mehran contain the "Mehran index" piesch contain the "Piesch
+    index" kakwani contain the "Kakwani index" mld contain the "Mean Log Deviation
+    (or generalised entropy measure with sensitivity parameter 0)" ge_1 contain the
+    "Generalised entropy measure with sensitivity parameter -1" ge2 contain the "Generalised
+    entropy measure with sensitivity parameter 2"
+  help_file_type: hlp
+mpovline:
+  title: mpovline
+  short_description: Calculate FGT0, FGT1 and FGT2 by intervals of multiple welfare
+    lines.
+  syntax: mpovline welfarevar [weight] [if exp] [in exp], [ varpl(varname) lines(numlist)
+    indicator(string) mpl(numlist) max ] fweights and aweights are allowed; see help
+    weights. See help weight.
+  description: 'mpovline calculate FGT0, FGT1 and FGT2 by intervals of multiple welfare
+    lines. It is useful to calculate
+
+    headcount for the poor, vulnerable and middle class lines as proposed by Ferreira
+    et al (2012), and the respective
+
+    FGT1 and FGT2 reported by Azevedo and Sanfelice (2012).
+
+    welfarevar is the welfare aggregate variable.'
+  options:
+  - varpl(varname) poverty line variables.
+  - line:s(numlist) sets of values for the poverty lines.
+  - in:dicator(string) poverty indicators. fgt0, fgt1, fgt2 are the currently supported
+    options. fgt0 is the indicator default.
+  - mpl(numlist) to calculate the poverty indicators by range using multiples of the
+    poverty line. Must be combined with the varpl option
+  - max poverty indicators for the range between the last line and the maximun value
+    of welfarevarIt is quite sensitive to outliers.
+  examples:
+  - . mpovline percapitainc, varpl(pline1 plin2)
+  - . mpovline percapitainc [w=weight], line(100 500) in(fgt0 fgt1 fgt2)
+  - . mpovline percapitainc [w=weight], varpl(pline) mpl(1 3.5 6) Headcount for moderate
+    poverty, vunerable and middle class in terms of $4USD a day, $4 to 10USD a day
+    and $10 to 50USD a day, respectively.
+  - . mpovline percapitainc [w=weight], varpl(lp_4usd_ppp) mpl(1 2.5 12.5) or
+  - . mpovline percapitainc [w=weight], line(121.68 304.2 1521) or
+  - . mpovline percapitainc [w=weight], varpl(lp_4usd_ppp lp_10usd_ppp lp_50usd_ppp)
+  stored_results:
+  - 'mpovline returns results in r() format. By typing return list, the following
+    results are reported: ... r(b): matrix in long format. The first column represents
+    the index used, the sencond the range of the poverty line used and the last column
+    reports the poverty numbers. r(fgt): short version of the matrix r(b) with results
+    by indicator. r(fgt0), r(fgt1) and r(fgt2) if indicator option specified. r(obs):
+    matrix with the number of observation by range of the lines. Obs: On the reported
+    matrices Indicator label: 0 - FGT(0); 1 - FGT(1); 2 - FGT(2). Line label: 1 represents
+    the first range; 2 the second, and so on. The last number indicates the range
+    from the last line and the maximun value if the option max is specified.'
+  references:
+  - "Azevedo, Joao Pedro and Viviane Sanfelice (2012) \"The rise of the middle class\
+    \ in Latin America\". World Bank (mimeo). Ferreira, Francisco H.G.; Messina, Julian;\
+    \ Rigolini, Jamele; López-Calva, Luis-Felipe; Lugo, Maria Ana; Vakis, Renos. (2013)\
+    \ Economic Mobility and the Rise of the Latin American Middle Class. Washington,\
+    \ DC: World Bank. https://openknowledge.worldbank.org/handle/10986/11858 Foster,\
+    \ James; Joel Greer and Erik Thorbecke (1984) \"A class of decomposablepoverty\
+    \ measures\". Econometrica. 2 81: 761\x96766. Lopez-Calva, Luis F. and Eduardo\
+    \ Ortiz-Juarez (2011) \"A Vulnerability Approach to the Definition of the Middle\
+    \ Class\". Policy Research Working Paper, World Bank, n. 5902."
+  authors:
+  - Joao Pedro Azevedo, jazevedo@worldbank.org
+  - Viviane Sanfelice, vsanfelice@worldbank.org
+  acknowledgements: This program was developed by the http://go.worldbank.org/IYDYF1BG70
+    (2012), in the Latin American and Caribbean Poverty Reduction and Economic Managment
+    Group of the World Bank.
+  also_see:
+  - 'Online: help for apoverty; ainequal; wbopendata; adecomp; drdecomp; skdecomp
+    (if installed)'
+  version: ''
+  other_calculate_fgt0__fgt1_and_fgt2_by_intervals_of_multiple_welfare_lines_: mpovline
+    welfarevar [weight] [if exp] [in exp], [ varpl(varname) lines(numlist) indicator(string)
+    mpl(numlist) max ] fweights and aweights are allowed; see help weights. See help
+    weight.
+  help_file_type: sthlp
+sae:
+  title: sae
+  short_description: ''
+  syntax: 'help for sae World Bank/Poverty and Equity GP - GSG1 ... }Introduction
+    to sae - small area estimation packages ... [Suggestion: Read [SAE] intro substantive
+    first.] ...'
+  description: 'The sae suite of commands deals with small area estimation,
+
+    abbreviated as sae data. To become familiar with sae
+
+    as quickly as possible, do the following
+
+    1. See A simple example under ...
+
+    Remarks below.
+
+    2. If you have data that require simulating, see
+
+    [SAE] sae data
+
+    [SAE] sae simulate
+
+    3. Alternatively, if you have already simulated data, see
+
+    [SAE] sae proc
+
+    4. To fit your model, see
+
+    [SAE] sae model
+
+    To perform data related functins such as to import the target dataset to a more
+    manageable
+
+    format for the simulations; to export the resulting simulations to a dataset of
+    the
+
+    user’s preference; and to compare the variables between the sources of data.
+
+    sae data import...
+
+    import sae data into Mata data file
+
+    sae data export...
+
+    export sae Mata data file to Stata data
+
+    To perform first stage estimation on sae data. This routine is for obtaining the
+    GLS estimates of the first stage. The
+
+    sub-routines, sae model lmm (linear mixed model) and sae model povmap (povmap)
+    are used interchangeably
+
+    sae model lmm...
+
+    model first stage estimations for the linear mixed models
+
+    To perform second stage estimation on sae data. This routine and sub-routine obtains
+    the GLS estimates of the first
+
+    stage, and goes on to perform the Monte Carlo simulations
+
+    sae sim lmm...
+
+    simulate based on first stage models for the linear mixed models
+
+    The stats and inds sub-routines are useful for processing Mata formatted
+
+    simulation output and producing indicators with new thresholds or weights, as
+    well as profiling.
+
+    sae proc stats...
+
+    produce the statistics based on simulated data
+
+    sae proc ind...
+
+    prodiuce Poverty and Inequality indictors based on simulated data'
+  options: []
+  examples: []
+  stored_results: []
+  references:
+  - 'Bedi, T., A. Coudouel, and K. Simler (2007). More than a pretty picture: using
+    poverty maps to design better policies and interventions. World Bank Publications.
+    Demombynes, G., C. Elbers, J. O. Lanjouw, and P. Lanjouw (2008). How good is a
+    map? putting small area estimation to the test. Rivista Internazionale di Scienze
+    Sociali, 465–494. Elbers, C., J. O. Lanjouw, and P. Lanjouw (2002). Micro-level
+    estimation of welfare. 2911. Elbers, C., J. O. Lanjouw, and P. Lanjouw (2003).
+    Micro–level estimation of poverty and inequality. Econometrica 71 (1), 355–364.
+    Foster, J., J. Greer, and E. Thorbecke (1984). A class of decomposable poverty
+    measures. Econometrica: Journal of the Econometric Society, 761–766. Harvey, A.
+    C. (1976). Estimating regression models with multiplicative heteroscedasticity.
+    Econometrica: Journal of the Econometric Society, 461–465. Haslett, S., M. Isidro,
+    and G. Jones (2010). Comparison of survey regression techniques in the context
+    of small area estimation of poverty. Survey Methodology 36 (2), 157–170. Henderson,
+    C. R. (1953). Estimation of variance and covariance components. Biometrics 9 (2),
+    226–252. Huang, R. and M. Hidiroglou (2003). Design consistent estimators for
+    a mixed linear model on survey data. Proceedings of the Survey Research Methods
+    Section, American Statistical Association (2003), 1897–1904. Molina, I. and J.
+    Rao (2010). Small area estimation of poverty indicators. Canadian Journal of Statistics
+    38 (3), 369–385. Rao, J. N. and I. Molina (2015). Small area estimation. John
+    Wiley & Sons. Tarozzi, A. and A. Deaton (2009). Using census and survey data to
+    estimate poverty and inequality for small areas. The review of economics and statistics
+    91 (4), 773–792. Van der Weide, R. (2014). GLS estimation and empirical bayes
+    prediction for linear mixed models with heteroskedasticity and sampling weights:
+    a background study for the povmap project. World Bank Policy Research Working
+    Paper (7028). Zhao, Q. (2006). User manual for povmap. World Bank. http://siteresources.worldbank.org/INTPGI/
+    Resources/342674-1092157888460/Zhao_ManualPovMap.pdf .'
+  authors:
+  - Minh Cong Nguyen, mnguyen3@worldbank.org
+  - Paul Andres Corral Rodas, pcorralrodas@worldbank.org
+  - Joao Pedro Azevedo, jazevedo@worldbank.org
+  - Qinghua Zhao, qzhao@worldbank.org
+  - World Bank
+  acknowledgements: 'We would like to thank all the users for their comments during
+    the initial development of the codes.
+
+    All errors and ommissions are exclusively our responsibility.'
+  also_see: []
+  version: '{* *! version 1.0.0 11nov2017}...'
+  other_title: 'help for sae World Bank/Poverty and Equity GP - GSG1 ... }Introduction
+    to sae - small area estimation packages ... [Suggestion: Read [SAE] intro substantive
+    first.] ...'
+  remarks: 'Remarks are presented under the following headings: A simple example Suggested
+    reading order ...'
+  citation: 'sae is a user-written program that is freely distributed to the research
+    community. Please use the following citation: World Bank. (2017). “Small Area
+    Estimation: An extended ELL approach.”. World Bank.'
+  help_file_type: sthlp
+fhsae:
+  title: fhsae
+  short_description: ''
+  syntax: fhsae , RE:var(varname) method(string) [precision(real) maxiter(integer)
+    FH:predict(newvarname) FHSE:predict(newvarname) FHCV:predict(newvarname) DSE:predict(newvarname)
+    DCV:predict(newvarname) AREA:predict(newvarname) GAMMA:predict(newvarname) OUT:sample
+    NONEG:ative]
+  description: fhsae Supports Fay-Herriot's EBLUP small area estimation methods. Translated
+    from R's SAE package from Molina and Marhuenda.
+  options:
+  - RE:var(varname) Variable containing dependent variable's design-based sampling
+    variance
+  - 'method(string) Chosen fitting method. Allowed methods: ML (Max. likelihood);
+    FH (Fay Herriot''s moment''s method); REML (Restricted max. likelihood); CHANDRA
+    (FGLS)'
+  - precision(real) Fitting method's precision, default value is 1e-15
+  - maxiter(integer) Number of iterations before command gives up on estimation, default
+    is 100
+  - FH:predict(newvarname) New variable name for predicted Fay Herriot small area
+    estimate
+  - FHSE:predict(newvarname) New variable name for predicted Fay Herriot small area
+    estimate standard error
+  - FHCV:predict(newvarname) New variable name for predicted Fay Herriot small area
+    estimate coefficient of variation
+  - DSE:predict(newvarname) New variable name for predicted Fay Herriot direct estimate
+    standard error
+  - DCV:predict(newvarname) New variable name for predicted Fay Herriot direct estimate
+    coefficient of variation
+  - AREA:predict(newvarname) New variable name for predicted Fay Herriot area effects
+    (Only for chandra method)
+  - OUT:sample Requests that predictions be made for out of sample observations (requires
+    any of the options fhpredict, fhsepredict, fhcvpredict to be specified )
+  - NONEG:ative Requests that negative predictions be set to 0.
+  examples:
+  - fhsae yield hh_f hh_size, revar(vd) method(FH) fhpredict(fh) fhse(fhse) outsample
+  stored_results: []
+  references:
+  - 'Molina, I., Marhuenda, Y. (2015). R package sae: Methodology. Chandra, H., Sud,
+    U. C., & Gupta, V. K. (2013). Small Area Estimation under Area Level Model Using
+    R Software. Molina, I., & Marhuenda, Y. (2015). sae: An R package for small area
+    estimation. The R Journal, 7(1), 81-98. Fay III, R. E., & Herriot, R. A. (1979).
+    Estimates of income for small places: an application of James-Stein procedures
+    to census data. Journal of the American Statistical Association, 74(366a), 269-277.'
+  authors:
+  - Paul Corral The World Bank - Poverty and Equity Global Practice Washington, DC
+    pcorralrodas@worldbank.org William Seitz The World Bank - Poverty and Equity Global
+    Practice Washington, DC wseitz@worldbank.org Joao Pedro de Azevedo The World Bank
+    - Poverty and Equity Global Practice Washington, DC jazevedo@worldbank.org Minh
+    Cong Nguyen The World Bank - Poverty and Equity Global Practice Washington, DC
+    mnguyen3@worldbank.org Any error or omission is the authors’ responsibility alone.
+  acknowledgements: ''
+  also_see: []
+  version: '{* *! version 1.0.0 30April2018}...'
+  other_translated_into_stata_by_: Paul Corral The World Bank - Poverty and Equity
+    Global Practice Washington, DC pcorralrodas@worldbank.org William Seitz The World
+    Bank - Poverty and Equity Global Practice Washington, DC wseitz@worldbank.org
+    Joao Pedro de Azevedo The World Bank - Poverty and Equity Global Practice Washington,
+    DC jazevedo@worldbank.org Minh Cong Nguyen The World Bank - Poverty and Equity
+    Global Practice Washington, DC mnguyen3@worldbank.org Any error or omission is
+    the authors’ responsibility alone.
+  help_file_type: sthlp
+alorenz:
+  title: alorenz
+  short_description: Derivation of the Pen's Parade, Lorenz and Generalised Lorenz
+    curve from the empirical distribution
+  syntax: alorenz depvar [if exp] [in range] [weight] [ , points(number) by(varname)
+    order(varname) gl gp ge gom goa angle45 format(string) output(string) view fullview
+    compare base(refcat) grname(string) results(string) select(string) mlabangle(string)
+    mlabsize(string) mark(value 1 ... value n) marklabel(valuelabel 1...valuelabel
+    n) markvar(varname (categorical)) invert xdecrease ksmirnov exact noisily ]
+  description: 'alorenz derive and plot the Pen''s Parade, Lorenz and Generalized
+    Lorenz curve from the empirical distribution. In addition, alorenz allow user
+
+    to retrive the data used to generate the curves, and implement first order stochastic
+    dominance (Saposnik, 1981, 1983), second order
+
+    stochastic dominance (Shorrocks, 1983), and the Lorenz dominance analysis of the
+    distribution (Atkinson, 1970). Moreover, following
+
+    Pigou-Dalton principles, demonstrated by Marshall & Olkin (1979), alorenz also
+    ranks two or more social states by analysing
+
+    the Lorenz, Generalized Lorenz, and Pen''s Parade. alorenz also performs the two-sample
+    Kolmogorov-Smirnov tests of the equality
+
+    of distributions.'
+  options:
+  - points(#) sets the number of the distribution points. If the selected number of
+    points is larger than the number of observations, alorenz will automatically adjust
+    its value, and display a warning message. Default value 10.
+  - by(groupvar) repeats the command for each group of observations for which the
+    values of the variables in varlist are the same. Groupvar must be an integer variable.
+  - order(varname) Selects an alternative variable the build the cumulative distribution.
+    The default is the population.
+  - gl plot the Lorenz curve (cumulated share of var by cumulated share of the population).
+  - gp plot the Pen's Parade curve (max value of each percentile).
+  - ge plot the Generalized Lorenz curve (cumulated mean of var by cumulated share
+    of the population).
+  - gom plot the mean of variable depvar against the mean of variable order as ordered
+    by percentiles of the population by variable order.
+  - goa plot the cumulated mean of variable depvar against the cumulated mean of variable
+    order as ordered by percentiles of the population by variable order.
+  - angle45 specifies that a 45 degree angel line is to the ploted at the Lorenz Curve.
+  - format specify the display format for variables. Default format %12.2f.
+  - output desired name of the data file writes in comma-separated format.
+  - view specifies that the tabels are to be viewed on the Stata display window.
+  - fullview specifies that all the possible variables are to be displayed at the
+    Stata window.
+  - grname(string) specifies an alternative name of the figures.
+  - select(string) select particular observations to be marked on the plot.
+  - invert invert the axis of the gl, gp, ge, gom or goa plots.
+  - xdecrease invert the order the the x-axis, from increasing to decreasing.
+  - base(refcat) sets the value of the comparation categoric group that defided the
+    base group. If the base category was not defined alorenz will use the first category.
+  - mark(value 1 ... value n) select particular values to be marked on the plot.
+  - marklabel(valuelabel 1...valuelabel n) set the label for the selected values to
+    be marked on the plot.
+  - markvar(varname (categorical)) select the values of a particular categorical variable
+    to be marked on the graph.
+  - ksmirnov performs two-sample Kolmogorov-Smirnov tests of the equality of distributions.
+    For more information please see ksmirnov.
+  - exact specifies that the exact p-value be computed. This may take a long time
+    if n > 50. For more information please see ksmirnov.
+  - noisily displays on the Stata screen the results of the Kolmogorov-Smirnov tests.
+  - compare Analysis the first order stochastic dominance (Saposnik, 1981, 1983),
+    second order stochastic dominance (Shorrocks, 1983), and the Lorenz dominance
+    of the distribution (Atkinson, 1970).
+  - twoway_options accept any options other than name() or by() documented in [G]
+    twoway_options
+  examples: []
+  stored_results:
+  - 'max_: Pen''s Parade. ac_prop_: Loren''s Curve. ac_mean_: Generalized Loren''s
+    Curve. speso: Population. ac_speso: Cumulative Population. prop_pop: Distribution
+    of population. ac_prop_pop: Cumulative distribution of population. prop_: percentage
+    of depvar by percentile.'
+  references:
+  - 'Atkinson, A.B., 1970, "On the Measurement of Inequality", Journal of Economic
+    Theory, 2: 244-63. Dalton, H., 1920, "The Measurement of the Inequality of Incomes",
+    Economic Journal, 30: 348-61. Marshall, A.W. and I.Olkin, 1979, Inequalities:
+    Theory of Majorization and Its Applications. In: Mathematics in Science and Engineering,
+    V. 143. Academic Press. Pigou, A.F., 1912, Wealth and Welfare, Macmillan, London.
+    Saposnik, R., 1981, "Rank-Dominance in Income Distribution" Public Choice, 36
+    pp147-151. Saposnik, R., 1983, "On Evaluating Income Distributions: Rank Dominance,
+    the Suppes-Sen Grading Principle of Justice and Pareto Optimality", Public Choice,
+    40: 329-36. Shorrocks A.F., 1983, "Ranking Income Distributions", Economica, 50:
+    3-17.'
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  - Samuel Franco
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] lorenz Online: help for glcurve; inequal7; ineqdeco; ksmirnov; wbopendata(if
+    installed)'
+  version: ''
+  other_derivation_of_the_pen_s_parade__lorenz_and_generalised_lorenz_curve_from_the_empirical_distribution: alorenz
+    depvar [if exp] [in range] [weight] [ , points(number) by(varname) order(varname)
+    gl gp ge gom goa angle45 format(string) output(string) view fullview compare base(refcat)
+    grname(string) results(string) select(string) mlabangle(string) mlabsize(string)
+    mark(value 1 ... value n) marklabel(valuelabel 1...valuelabel n) markvar(varname
+    (categorical)) invert xdecrease ksmirnov exact noisily ] pweights, fweights and
+    aweights are allowed; see help weights. See help weight.
+  other_stocastic_dominance_analysis__marshall___olkin__1979_: 'I : Lack of envy.
+    IE: Lack of envy and preference for equity. CE: Preference for growth with equity.'
+  other_ado_dependencies: 'Paul Corral & Minh Cong Nguyen & Joao Pedro Azevedo, 2018.
+    "GROUPFUNCTION: Stata module to replace several basic collapse functions," Statistical
+    Software Components S458475, Boston College Department of Economics. <https://ideas.repec.org/c/boc/bocode/s458475.html>
+    Daniel Klein, 2019. "WHICH_VERSION: Stata module to return location and programmer''s
+    version of ado-files," Statistical Software Components S4584706, Boston College
+    Department of Economics, revised 11 Nov 2019. <https://ideas.repec.org/c/boc/bocode/s458706.html>'
+  other_aknowledgements: The authors would like to thank Andres Castaneda, Viviane
+    Sanfelice, Gabriel Facchini, and Amer Hasan for their valuable suggestions. The
+    usual disclaimer applies. alorenz uses the Stata user written command _pecats
+    by J. Scott Long and Jeremy Freese., as well as groupfunction and which_version.
+  help_file_type: sthlp
+isopoverty:
+  title: isopoverty
+  short_description: ''
+  syntax: isopoverty income [weight] [if exp] [in range] [ , varpl(varname) pline(number)
+    poverty inequal stepgrw(number) stepinq(number) mininq(number) maxinq(number)
+    mingrw(number) maxgrw(number) frontier int(number) target(number) ] fweights,
+    and aweights are allowed; see help weights.
+  description: 'isopoverty generates data that can be used to plot the Inequality-Poverty,
+    Growth-Poverty and the Iso-Poverty curves
+
+    (ECLAC, 2002; Bourguignon, 2002; Kakwani and Pernia, 2000; Bigsten and Shimeles,
+    2003; Barros et al, 2005; Barros et al, 2003).
+
+    stepgrw or stepinq have to be stated otherwise the programme does not work. If
+    the option stepgrw is
+
+    specified the ado automatically generates the Growth-Poverty data, likewise, if
+    the option stepinq is spefied the program it
+
+    will generate the Inequality-Poverty data. If both parameters are specified both
+    procedures will be implemented.
+
+    Please note that in order to provider a greater flexibility on the graph options
+    this ado does not automatically produce any
+
+    figures. The final output is stored as a matrix in the Stata memory (please see
+    ereturn), in order to retrive it to the data set
+
+    the use will have to use the svmat command. An illustration of a figure produced
+    with data from this ado can be found
+
+    in the examples below.
+
+    Inequality -> r(ineqreduc)
+
+    Growth -> r(growth)
+
+    Iso-Poverty -> r(frontier)
+
+    WARNING! The Iso-Poverty is quite computationally intensive. We strongly advice
+    the user to first estimate the
+
+    Inequality-Poverty curve and then the Growth-Poverty curve, in order to find out
+    the best cut off points for the data that
+
+    she or he is using.'
+  options:
+  - varpl(varname) provide the variable name containing the values poverty line.
+  - pline(#) sets the value of the poverty line. The default poverty line is computed
+    as half the median of varname.
+  - poverty is the default output and includes the head count ratio and the extremme
+    poverty head count ratio, several other poverty measures can be easily included
+    in this output.
+  - inequal includes the Gini and Theil inequallity measures in the output.
+  - mininq(#) states the minimum inquality reduction. Default value 0.
+  - maxinq(#) states the maximum inequality reduction. Default value 1.
+  - stepinq(#) specifies the number of increments that will be ploted between the
+    minium and maximum values of the inequality variation.
+  - mingrw(#) states the minimum growth. Default value 0.
+  - maxgrw(#) states the maximum growth. Default value 1.
+  - stepgrw(#) specifies the number of increments that will be ploted between the
+    minium and maximum values of the growth variation.
+  - frontier this option has to be stated if the user wants to estimate the Iso-Poverty
+    line, otherwise the ado will estimate the data for the Growth-Poverty and the
+    Inequality-Poverty curvers separtely.
+  - target specify the poverty rates as percentage of the population (head count)
+    from the Iso-Poverty curve being estimated. Multiple values accepted. No default
+    pre-determined.
+  - int specify the interval of the poverty rate that is acceptable. This is a usefull
+    option the user is using large increments on the both the poverty and inequalty
+    variation. Default value 0.
+  examples:
+  - . isopoverty rdpc, stepinq(50)
+  - . isopoverty rdpc, stepinq(50) varpl(lp)
+  - . isopoverty rdpc [fw=peso], stepinq(50)
+  - . mat temp=r(ineqreduc)
+  - . svmat double temp
+  - . graph twoway line temp2 temp1 if temp2>0, ytitle("Poverty - Head Count") xtitle("Inequality")
+    name(temp1, replace)
+  - . isopoverty rdpc [fw=peso], stepinq(50) varpl(lp)
+  - . isopoverty rdpc, stepinq(50) inequal
+  - . isopoverty rdpc, stepinq(50) stepgrw(10) mininq(0) maxinq(.50) mingrw(0) maxgrw(1.50)
+    target(25) int(2) frontier varpl(lp)
+  - . isopoverty rdpc [fw=peso], stepinq(50) stepgrw(10) mininq(0) maxinq(.50) mingrw(0)
+    maxgrw(1.50) target(25) int(2) frontier varpl(lp)
+  - . isopoverty gallT_ppp [fw=ipop], varpl(lp) stepinq(200) stepgrw(200) mininq(-.8)
+    maxinq(.8) mingrw(0) maxgrw(3) target(5 15 30 41) int(.5) frontier
+  - . mat temp=r(frontier)
+  - . svmat double temp
+  - . matrix list temp
+  - . graph twoway ///
+  - . (lowess temp1 temp2 if temp3 == 5) ///
+  - . (lowess temp1 temp2 if temp3 == 15) ///
+  - . (lowess temp1 temp2 if temp3 == 30) ///
+  - . (lowess temp1 temp2 if temp3 == 41) ///
+  - . , ytitle("Income change") xtitle("Distribution change") name(temp1, replace)
+  - . graph twoway ///
+  - . (lowess temp5 temp6 if temp3 == 5) ///
+  - . (lowess temp5 temp6 if temp3 == 15) ///
+  - . (lowess temp5 temp6 if temp3 == 30) ///
+  - . (lowess temp5 temp6 if temp3 == 41) ///
+  - . , ytitle("Income (level)") xtitle("Gini (level)") name(temp2, replace)
+  stored_results: []
+  references:
+  - "Barros, R. Carvalho, M. Franco, S. Ganuza E., Mendonça, R. (2005) El combate\
+    \ a la pobreza en Centroamerica. UNDP and IPEA. (Apendices 2 y 3 y Capitulo 5)\
+    \ Barros, R.P. Carvalho, M. Franco, S. (2003) La igualdad como estrategia de combate\
+    \ a la pobreza en Panamá (Capítulo 6). Panama: PNUD. www.undp.org.pa/_pnud/Documents/libro.pdf\
+    \ ECLAC (2002) Meeting the Millennium Poverty Reduction Targets in Latin America\
+    \ and the Caribbean. Santiago, Chile: ECLAC-IPEA-UNDP. http://www.eclac.cl/publicaciones/xml/5/12555/lcg2188i.pdf\
+    \ Bourguignon, F. (2002), \x93The Growth Elasticity of Poverty Reduction: explaining\
+    \ heterogeneity across countries and time periods\x94, in T. Eichler and S. Turnovsky\
+    \ (eds.), Growth and Inequality, Cambridge: MIT Press. Bigsten, A. and A. Shimeles\
+    \ (2003). \x93Prospects for a Pro-Poor Growth Strategy in Africa\x94, Paper presented\
+    \ at the WIDER Conference on Human Wellbeing and Income Inequality, Helsinki,\
+    \ May. Kakwani, N. and E.M. Pernia (2000), \x93What is Pro-Poor Growth?\x94, Asian\
+    \ Development Review 18(1): 1-16."
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  - Samuel Franco
+  acknowledgements: ''
+  also_see:
+  - 'On-line: help for lorenz2 & changemean if installed'
+  version: ''
+  other_: isopoverty income [weight] [if exp] [in range] [ , varpl(varname) pline(number)
+    poverty inequal stepgrw(number) stepinq(number) mininq(number) maxinq(number)
+    mingrw(number) maxgrw(number) frontier int(number) target(number) ] fweights,
+    and aweights are allowed; see help weights.
+  remarks: Please note that isopoverty uses the packages apoverty and ainequal on
+    its calculations.
+  help_file_type: hlp
+changemean:
+  title: changemean
+  short_description: Income and Inequalily Contribution on Poverty Variation
+  syntax: changemean varlist [weight] [if exp] [in range] [ , by(groupvar) base(refcat)
+    varpl(varname) pline(number) h h2 pgr igr w fgt1 fgt2 fgt3 fgt4 fgt5 fgt6 fgt7
+    fgt8 fgt9 chu1 chu2 chu3 chu4 chu5 s thon tak ] fweights, are allowed; see help
+    weights.
+  description: 'changemean decompose the poverty gap among two or more subgroups by
+    income and inequality. Several
+
+    measures of poverty can be used. If no specific measures is requested the default
+    value is the head count ratio
+
+    [FGT(0)]. This version of the program does not support the computation of multiple
+    poverty measures.
+
+    varlist Income variable'
+  options:
+  - by(groupvar) provide the variable name that defided the groups of comparison.
+    The default comparation group is computed as half the median of varlist.
+  - base(refcat) sets the value of the comparation categoric group that defided the
+    base group. If the base category was not defined changemean will use the first
+    category.
+  - varpl(varname) provide the variable name containing the values poverty line.
+  - pline(#) sets the value of the poverty line. The default poverty line is computed
+    as half the median of varname. The following options specify the poverty measure
+    to be computed.
+  - 'h : headcount ratio [FGT(0)] (default value)'
+  - 'h2 : extremem poverty headcount ratio'
+  - 'pgr : poverty gap ratio [FGT(1)]'
+  - 'igr : income gap ratio'
+  - 'w : Watts index'
+  - 's : Sen index'
+  - 'tak : Takayama index'
+  - 'thon : Thon index'
+  - 'fgt1 : Foster, Greer and Thorbecke - FGT(0.5)'
+  - 'fgt2 : Foster, Greer and Thorbecke - FGT(1.5)'
+  - 'fgt3 : Foster, Greer and Thorbecke - FGT(2)'
+  - 'fgt4 : Foster, Greer and Thorbecke - FGT(2.5)'
+  - 'fgt5 : Foster, Greer and Thorbecke - FGT(3)'
+  - 'fgt6 : Foster, Greer and Thorbecke - FGT(3.5)'
+  - 'fgt7 : Foster, Greer and Thorbecke - FGT(4)'
+  - 'fgt8 : Foster, Greer and Thorbecke - FGT(4.5)'
+  - 'fgt9 : Foster, Greer and Thorbecke - FGT(5)'
+  - 'chu1 : Clark, Ulph and Hemming index with beta of 0.10'
+  - 'chu2 : Clark, Ulph and Hemming index with beta of 0.25'
+  - 'chu3 : Clark, Ulph and Hemming index with beta of 0.50'
+  - 'chu4 : Clark, Ulph and Hemming index with beta of 0.75'
+  - 'chu5 : Clark, Ulph and Hemming index with beta of 0.90'
+  examples:
+  - . changemean rdpc
+  - . changemean rdpc [fw=peso]
+  - . changemean rdpc [fw=peso], by(educa)
+  - . changemean rdpc [fw=peso], by(educa) varpl(lp)
+  - . changemean rdpc [fw=peso], by(educa) line(240)
+  - . changemean rdpc [fw=peso], by(educa) base(1)
+  - . changemean rdpc [fw=peso], by(educa) base(1) varpl(lp)
+  - . changemean rdpc [fw=peso], by(educa) base(3) line(240)
+  stored_results: []
+  references: []
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  - Samuel Franco
+  - sam@ipea.gov.br
+  acknowledgements: ''
+  also_see: []
+  version: ''
+  other_income_and_inequalily_contribution_on_poverty_variation: changemean varlist
+    [weight] [if exp] [in range] [ , by(groupvar) base(refcat) varpl(varname) pline(number)
+    h h2 pgr igr w fgt1 fgt2 fgt3 fgt4 fgt5 fgt6 fgt7 fgt8 fgt9 chu1 chu2 chu3 chu4
+    chu5 s thon tak ] fweights, are allowed; see help weights.
+  remarks: 'The output table of change mean describe the following indicators: Index
+    Presents the comparision categories. Baseli Shows the poverty rate (head count
+    ratio) of the individuals on the base line category. Origin Shows the poverty
+    rate (head count ratio) of the individuals on each one of the comparison categories.
+    Income Poverty rate of the baseline group with the average income of the comparsion
+    group. Inequa Poverty rate of the baseline group with the inequality of the comparsion
+    group. Gap Poverty gap (head count ratio of base line category - head count ratio
+    of comparsin category). RawInc Raw contribution of the income differential on
+    the poverty gap. RawIne Raw contribution of the inequality differential on the
+    poverty gap. RelInc Relative contribution of the income differential on the poverty
+    gap. RelIne Relative contribution of the inequality differential on the poverty
+    gap.'
+  help_file_type: hlp
+grqreg:
+  title: grqreg
+  short_description: Graph the coefficients of a Quantile Regression
+  syntax: grqreg [varlist] [weight] [, qmin(integer) qmax(integer) qstep(integer)
+    quantiles(#[#[# ...]]) level(confidence interval) title(title list) mfx(type)
+    cons ci ols olsci compare list format(%fmt) seed(integer) reps(integer) save(filename)]
+  description: 'grqreg graphs the coefficients of a quantile regression (Koenker and
+
+    Basset, 1978). It also has the option to graph the confidence interval, the OLS
+    coefficient
+
+    and the OLS confidence interval on the same graph.
+
+    grqreg rewards the use of variable labels. The variable labels are
+
+    used in the graphs, providing more intelligible variable descriptions than 8-letter
+
+    names. If no variable label is available grqreg uses the variable names.
+
+    grqreg works after qreg, bsqreg and sqreg.
+
+    grqreg is an rclass program.'
+  options:
+  - varlist Select variables that will be graphed. Default value are all the estimated
+    coefficients except the intercept.
+  - qmin sets the minimum value for the quantile. Default value .05.
+  - qmax sets the maximum value for the quantile. Default value .95.
+  - qstep sets the quantile increments. Default value .05.
+  - 'quantile estimate # quantiles; this is a default option after running sqreg.
+    When using this option please use the same number format for all quantiles (i.e.
+    .25 .50 .75 or .251 .503 .752) and not (05 515 750).'
+  - level sets the level of the confidence interval. Default value the same used in
+    the original regression.
+  - cons plots the intercept. Default off.
+  - ci graph confidence interval of Quantile Regression. Default off.
+  - ols graph OLS estimate. Default off.
+  - list
+  - olsci graph OLS confidence interval of the OLS regression. Default off.
+  - compare graphs two coefficients of a quantile regression. Only supports two variables
+    at the time. The first variable is ploted on the y-axis and the second variable
+    on the x-axis. Default off.
+  - title Allow user to assing individual title names for each one of the figures.
+    Please note that no spaces are allowed between the name of the same figure (i.e.
+    Fig1a Fig1b ... Fig1z).
+  - seed(integer). Set seed value.
+  - reps(integer). Default value 20.
+  - format(%fmt). Default value %9.2f. For more information please see format.
+  - save Allow user to create a new dataset with the point estimates used to generate
+    the graphs. The replace option is permanently enabled.
+  - dydx specifies that marginal effects be calculated. It is the default.
+  - eyex specifies that elasticities be calculated in the form d(lny)/d(lnx)
+  - dyex specifies that elasticities be calculated in the form d(y)/d(lnx)
+  - eydx specifies that elasticities be calculated in the form d(lny)/d(x)
+  examples: []
+  stored_results: []
+  references:
+  - 'Chernozhukov, V. (2000) Conditional Extremes and Near-Extremes. MIT Dept. of
+    Economics Working Paper No. 01-21. http://ssrn.com/abstract=272836 Koenker, R.
+    and G. Basset (1978) "Regression Quantiles." Econometrica, 46(1): 33-50. Koenker,
+    R. and G. Basset (1982) "Robust test for heteroscedasticity based on regression
+    quantiles." Econometrica, 50(1): 43-61. Koenker, R. and K. F. Hallock (2001) "Quantile
+    Regression." Journal of Economic Perspectives, 15(4): 143-156. Koenker, R. and
+    Geling, O. (2001) Reappraising medfly longevity: a quantile regression survival
+    analysis. Journal of the American Statistical Association , 96: 458-468. Rogers,
+    W. H. (1993) "Calculation of quantile regression standard errors." Stata Technical
+    Bulltin, 3: 77-78.'
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] qreg bsqreg sqreg mfx Online: help for qreg bsqreg sqreg mfx'
+  version: 'version: 2.1'
+  other_graph_the_coefficients_of_a_quantile_regression: grqreg [varlist] [weight]
+    [, qmin(integer) qmax(integer) qstep(integer) quantiles(#[#[# ...]]) level(confidence
+    interval) title(title list) mfx(type) cons ci ols olsci compare list format(%fmt)
+    seed(integer) reps(integer) save(filename)] fweights and aweights are allowed
+    after qreg; see help weights. See help weight.
+  other_standard_errors: 'grqreg uses the standard errors generated by the qreg, bsqreg
+    and sqreg commands. qreg estimates the variance-covariance matrix of coefficients
+    using a method of Kroenker and Basset (1982) and Rogers (1993). This is described
+    in Methods and Formulas from the Stata Manual. sqreg obtains an estiamte of the
+    variance-covariance matrix via bootstraping and the variance-covariance matrix
+    includes between quantile blocks. bsqreg obtains an estiamte of the variance-covariance
+    matrix via bootstraping with one quantile. Please notice that: -bsqreg- and -sqreg-
+    have different standard errors (same initial seed and quantile) because the two
+    commands use different methods to generate bootstrap sample. Both commands calculate
+    the bootstrap standard errors manually instead of using the official -bootstrap-
+    prefix command. The -bsqreg- command uses -bsample- to take each of the bootstrap
+    samples. You can type for details on this command. On the other hand, -sqreg-
+    uses the undocumented -bsampl_w- command. You can type to see the code and more
+    information on this command. Here, you will see that this is logically equivalent
+    to -bsample-, but because they use different algorithms, they will not create
+    the same bootstrap sample when used with the same seed.'
+  remarks: For extreme quantiles it is not recomended to push tau (qstep) into the
+    tails (qmin and qmax) too far especially when there are a large number of parameters
+    being estimated. The crucial element is the existence of enough observations above
+    and below to make it plausible that the fit isn't just an artifact of a few extreme
+    observations. The asymptotics rely on there being enough observations on both
+    sides in order to get a conditional central limit theorem (CLT) effect from the
+    gradient. A rough rule of thumb would be that min should be 10p where p is the
+    number of parameters being estimated. So if you have p = 5, n=5000 then tau shouldn't
+    be smaller than .01. For more details on this remark please refer to Koenker and
+    Eboil (2001) and Chernozhukov (2000).
+  other_aknowledgements: This ado uses part of the code written by Michael Blasnik
+    (qregtrace). I would also like to thank Jeffrey T Grogger, Scott Merryman, Martin
+    Weiss, Getúlio Borges, James Hassell and Nick Cox for their valuable suggestions.
+    Many thanks to Joy Wang for the clarifications regarding the bootstrap procedures
+    of bsqreg and sqreg. The usual disclaimer applies.
+  help_file_type: hlp
+hoi:
+  title: hoi
+  short_description: Human Opportunity Index
+  syntax: ''
+  description: 'hoi computes the Human Opportunity Index proposed by Barros et al
+    (2008), including the Coverage
+
+    of Basic Opportunities (C), the Dissemilarity Index (D), and the Human Opportunity
+    Index (HOI). Analytical standard errors
+
+    are reported for the C, D, and HOI. The program also computes two decompositions
+    of changes of the HOI: (i) the scale and distribution decomposition
+
+    Barros et al (2008); and, (ii) the composition, equalization and scale decomposition
+    presented in (Molinas et al, 2010 and Velez et al, 2010).
+
+    If the by option is specified the command will automatically produce a counterfactual
+    using the coefficients from an alternative period in time or palce.
+
+    If the coverage rate of a selected outcome is equal to 100 or 0, hoi will produce
+    the respective HOI withough
+
+    relying on the logit.'
+  options:
+  - by(groupvar) repeats the command for the two groups of observations for which
+    the values of the variables in varlist are the same. Groupvar must be an integer
+    variable with labels.
+  - base(refcat) sets the value of the comparation categoric group that defided the
+    base group. If the base category was not defined hoi will use the first category.
+  - format specify the display format for variables. Default format %9.3f.
+  - estimates shows the coefficients of the logit model used on the calculation of
+    the index.
+  - level sets the level of the confidence interval. Default value 95%.
+  - 'adjust1([var[= #] ...]) provides the specifications of the first adjusted predictions.
+    The estimate is computed for each variables, setting the variables specified in
+    [var[= #] ...] to their mean or to the specified number if the = # part is specified.
+    Variables used for the estimation but not included in adjust variable list are
+    left at their current values, observation by observation.'
+  - keep preserve the predicted values used in the computation of the index.
+  - nose omit the standard errors and respective confidence intervals.
+  - 'coef(string) this option allows to choice of the coeeficients used in the estimation
+    of the HOI. Three options are allowed: all - uses the cofficient the full sample
+    will be used; value of by - analysist can also chose a particular reference category
+    by selecting a specific value of the by variable, to be used in all estimations
+    of the index; blank - the default option is to estimate a seperate logit of each
+    category of the by variable.'
+  - decomp1 reports the scale and distribution decomposition (Paes de Barros et al,
+    2008). If not specifically determined through the base option, the first category
+    in the list is used as reference.
+  - decomp2 reports the composition, equalization and scale decomposition (Molinas
+    et al, 2010). If not specifically determined through the base option, the first
+    category in the list is used as reference. It is important to note that the scale
+    effect reported in decomp2 is not the same as the scale effect reported in decomp1.
+  - 'mixcoef(string) this option allows one to chose the coefficient from which population
+    will be used on the composition, equalization and scale decomposition (decomp2).
+    Three options are allowed: all - uses the cofficient a pooled regression; value
+    of by - analysist can also chose a particular reference category by selecting
+    a specific value of the by variable, to be used in all estimations of the index;
+    blank - the default option is to estimate a seperate logit of each category of
+    the by variable.'
+  - simple reports only the C, D, and HOI. Omits summary statistics regarding the
+    logit, dataset used and information lost, and the share of the vulnerable population.
+  - nowarning omitts warning messages.
+  - asis forces retention of perfect predictor variables and their associated perfectly
+    predicted observations and may produce instabilities in maximization; see .
+  examples:
+  - . hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc casal scr area [fw=peso],
+    adjust1(id13=1 id14=0 id15=0 id16=0) format(%9.3f)
+  - . hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc casal scr area [fw=peso],
+    if idade >= 10 & idade <= 14 adjust1(id13=1 id14=0 id15=0 id16=0) format(%9.3f)
+  - . hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc casal scr area [fw=peso],
+    if idade >= 10 & idade <= 14 adjust1(id13=1 id14=0 id15=0 id16=0) format(%9.3f)
+    estimates
+  - . hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc casal scr area [fw=peso],
+    format(%9.3f) adjust1(id13=1 id14=0 id15=0 id16=0) by(subregion)
+  - . hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc casal scr area [fw=peso],
+    if idade >= 10 & idade <= 14 adjust1(id13=1 id14=0 id15=0 id16=0) by(subregion)
+    simple
+  - '. bootstrap hoi=r(hoi_1): hoi agua id13 id14 id15 id16 sexo educac educac2 lrdpc
+    casal scr area, if idade >= 10 & idade <= 14 adjust1(id13=1 id14=0 id15=0 id16=0)
+    simple'
+  stored_results:
+  - hoi return results in r() format. Type return list after estimation.
+  references:
+  - 'Carlos Eduardo Velez, Joao Pedro Azevedo, and Christian Posso. Oportunidades
+    para los niños colombianos: cuánto avanzamos en esta década. Banco Mundial, Bando
+    de la Republica, Departamento Nacional de Planeacion: Bogota, Colombia. http://go.worldbank.org/KNSYMOAU10
+    Jose Molinas Vega, Ricardo Paes de Barros, Jaime Saavedra Chanduvi, et all, 2010.
+    "Do Our Children Have a Chance? The 2010 Human Opportunity Report for Latin America
+    and the Caribbean - Conference Edition", World Bank: Washington, DC. http://www.worldbank.org/lacopportunity/
+    Ricardo Paes de Barros, Francisco H.G. Ferreira, Jose Molinas Vega, Jaime Saavedra
+    Chanduvi, et all, 2008. "Measuring Inequality of Opportunities in Latin America
+    and the Caribbean", World Bank: Washington, DC. http://go.worldbank.org/A9Z0NUV620'
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  - Samuel Franco
+  - Eliana Rubiano
+  - Alejandro Hoyos
+  acknowledgements: 'Numerous people have provided feedback and advice and the author''s
+    are very grateful for their comments. In
+
+    particular we''d like to thank: Jose R. Molinas Vega, Jaime Saavedra, Ricardo
+    Paes de Barros, Carolina Diaz-Bonilla,
+
+    Samuel Freije-Rodriguez, Georgina Pizzolitto, Amer Hassan, and Christian Manuel
+    Posso Suárez. The usual disclaimer
+
+    applies.'
+  also_see: []
+  version: ''
+  other_output: Converage (C) Coverage of Basic Opportunities Dissemilarity (D) Dissemilarity
+    Index Human Opportunity Index (HOI) Human Opportunity Index Pseudo R2 from the
+    logit model Obs Logit number of observations used in the logit model Obs number
+    of observations of the dependent variable Wtg Pop weighted population Vulnerable
+    Pop number of vulnerable populations (pi <= pBar) Vulnerable (%) share of vulnerable
+    population Obs 1 number of observations used in the logit model Obs 2 number of
+    observations of the dependet variable Loss (%) share of observations loss given
+    the set of circunstances
+  citation: 'J.P. Azevedo, S. Franco, E. Rubiano, A. Hoyos, 2010. "HOI: Stata module
+    to compute Human Opportunity Index," Statistical Software Components S457191,
+    Boston College Department of Economics.http://ideas.repec.org/c/boc/bocode/s457191.html.
+    This version INSERT_VERSION_HERE. where you can check your version as follows:'
+  remarks: Please note that hoi uses the user written packages indeplist from Maarten
+    L. Buis, and _pecats produced by J. Scott Long and Jeremy Freese on its calculations.
+    User's can download them from ssc.
+  help_file_type: hlp
+mol:
+  title: mol
+  short_description: Measures of Effective Literacy
+  syntax: mol varlist [weight] [if exp] [in range] , house(varname) [ f:ormat(%fmt)
+    by(varname) rank gen ] aweights and fweights are allowed; see help weights.
+  description: 'A country''s overall level of literacy is usually measured by taking
+    the number
+
+    of adults who are literate as a percentage of the total number of adults - the
+
+    so-called literacy rate. Following Sen (1985) there has been increased use of
+    the
+
+    literacy rate and other social indicators to evaluate the overall standard of
+
+    living in a country.
+
+    mol implements an alternative aproaches to evaluate the aggregate literacy level
+
+    in a country or region or any type of group. The resulting ''effective literacy''
+    proposed by
+
+    Basu and Foster (1998). This measure takes into account the intrahousehold externality
+    arising
+
+    from the presence of a literate member in the household. The extensions proposed
+    by
+
+    Subramanian (2004) are also implemented.'
+  options: []
+  examples:
+  - . mol alfab [fw= weight], house(domicilio)
+  - . mol alfab [fw= weight], house(domicilio) alpha(.2 .5 .8)
+  - . mol alfab [fw= weight], house(domicilio) by(region) gen
+  - . mol alfab [fw= weight], house(domicilio) by(state) rank
+  - . mol alfab [fw= weight], house(domicilio) by(gender) alpha(.2)
+  - . mol alfab [fw= weight], house(domicilio) by(gender) alpha(.2 .5 .8)
+  stored_results:
+  - mol returns results in r() format.
+  references:
+  - 'Basu, Kaushik and Foster, James E. (1998) On measuring literacy. Economic Journal,
+    vol.108, no.451, Nov., pp.1733-1749. Sen, A. (1985), Commodities and Capability.
+    Amsterdam: North-Holland. Subramanian, S (2004) Measuring literacy: some extensions
+    of the Basu-Foster framework. Journal of Development Economics, vol.73, pp453-463.'
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  - World Bank
+  acknowledgements: 'The financial support of UNESCO is gratefully acknowledge.
+
+
+    The usual disclaimer applies.'
+  also_see:
+  - 'Manual: [R] lorenz Online: help for alorenz; apoverty; changemean (if installed).'
+  version: ''
+  other_measures_of_effective_literacy: mol varlist [weight] [if exp] [in range] ,
+    house(varname) [ f:ormat(%fmt) by(varname) rank gen ] aweights and fweights are
+    allowed; see help weights.
+  other_option: by(housevar) indicates the variable that will be used to identify
+    the members of a given household. by(groupvar) repeats the command for each group
+    of observations for which the values of the variables in varlist are the same.
+    Groupvar must be an integer variable. alpha(number) specifies the sensitivity
+    alpha used. Alpha is contained within the interval [0,1]. If alpha is omited,
+    only the houseshould effective literacy is calculated. Multiple alphas are allowed
+    to be calculated at once. rank returns the rank of different groups according
+    to each indicator. gen generates tree new variables in the dataset with the output
+    of the exercise. format(%fmt) specifies the format to be used to display the estimated
+    inequality indices. The default is to use a %6.5f format.
+  other_output_variables: "R : 'Crude' Literacy Rate . Re : Effective Literacy [alpha\
+    \ = hous. lit. rate]. (1-I): Isolated Rate of Literacy (1-I). I : Isolated Rate\
+    \ of Illiteracy (1-I). Q : Efficiency Loss. Q is contained within the interval\
+    \ [0,1]: Q= 0 when I = 0, and Q= 1 when I=1\x06R (which, of course, is the maximum\
+    \ value I can attain, corresponding to a situation in which all illiterates are\
+    \ isolated illiterates). R* : Externality-adjusted Literacy Rate (Subramanian,\
+    \ 2004)."
+  help_file_type: hlp
+turnbull:
+  title: turnbull
+  short_description: Turnbull Nonparametric Estimator for Williness to Pay
+  syntax: turnbull where bid is the variable that reports the bid value offered to
+    the respondent. t is the variable that indicates if the repondent would like to
+    contribute to the project at the price offered (T =1 if WTP>AMOUNT).
+  description: 'turnbull estimates the Turnbull empirical distribution estimator of
+    willingness to
+
+    pay proposed by Carson et al (1994a,b). Haab and McConnell (1997) argue that this
+    estimator solves the
+
+    problem of estimating negative willingness to pay without resorting to ad hoc
+    distribution assumptions, and show
+
+    that central tendency measures of willingness to pay from parametric models are
+    sensitive to the assumed distribution,
+
+    while the lower bound Turnbull estimate is robust accross distributions.'
+  options: []
+  examples:
+  - . use ferry dataset (http://www-sekon.slu.se/~bkr/)
+  - . turnbull bid t
+  - . turnbull bid t, short
+  stored_results: []
+  references:
+  - "Azevedo, Joao Pedro. What is the Value of Educational Broadcast? (February 2009).\
+    \ Available at SSRN: http://ssrn.com/abstract=1332786. Carson, R. T., W. M. Hanemann,\
+    \ R. J. Kopp, J. A. Krosnick, R. C. Mitchell, S. Presser, P. A. Ruud, and V. K.\
+    \ Smith (1994a) \x91\x91Prospective Interim Lost Use Value Due to DDT and PCB\
+    \ Contamination in the Southern California Bight,\x92\x92 NOAA Contract No.-DGNC-1-00007.\
+    \ Carson, R. T., L. Wilks, and D. Imber (1994b). Valuing the preservation of Australia\x92\
+    s Kakadu Conservation Zone, Oxford Econom. Papers 46, 727-749. Haab, T. and K.\
+    \ McConnell (1997). Referendum Models and Negative Willingness to Pay: Alternative\
+    \ Solutions. Journal of Environmental Economics and Management 32(2), 251-270."
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  acknowledgements: ''
+  also_see:
+  - spike if installed.
+  version: ''
+  other_turnbull_nonparametric_estimator_for_williness_to_pay: turnbull where bid
+    is the variable that reports the bid value offered to the respondent. t is the
+    variable that indicates if the repondent would like to contribute to the project
+    at the price offered (T =1 if WTP>AMOUNT).
+  help_file_type: hlp
+spike:
+  title: spike
+  short_description: Spike model for Williness to Pay
+  syntax: spike where s is the variable that indicates if the respondent would like
+    to contribute at all to the project (S =1 if WTP>0). t is the variable that indicates
+    if the repondent would like to contribute to the project at the price offered
+    (T =1 if WTP>AMOUNT). bid is the variable that reports the bid value offered to
+    the respondent.
+  description: 'spike command allows for a non-zero probability of zero willingness-to-pay
+
+    in referendum-style contingent valuation experiments as suggested by Kristrom
+    (1997). This property is particular usefull in experiments in which
+
+    a large fraction of the population chose not to consume good being offered. In
+    such circunstances the use of traditional
+
+    parametric models based on probit and logit models are likelly to predict a negative
+    willingness-to-pay.'
+  options: []
+  examples:
+  - . use ferry dataset (http://www-sekon.slu.se/~bkr/)
+  - . spike s t bid
+  stored_results: []
+  references:
+  - 'Azevedo, Joao Pedro. What is the Value of Educational Broadcast? (February 2009).
+    Available at SSRN: http://ssrn.com/abstract=1332786. Kristrom, B. (1997). Spike
+    Models in Contingent Valuation. American Journal of Agricultural Economics 79(3),
+    1013-1023.'
+  authors:
+  - Joao Pedro Azevedo
+  - jazevedo@worldbank.org
+  acknowledgements: ''
+  also_see:
+  - turnbull if installed.
+  version: ''
+  other_spike_model_for_williness_to_pay: spike where s is the variable that indicates
+    if the respondent would like to contribute at all to the project (S =1 if WTP>0).
+    t is the variable that indicates if the repondent would like to contribute to
+    the project at the price offered (T =1 if WTP>AMOUNT). bid is the variable that
+    reports the bid value offered to the respondent.
+  help_file_type: hlp
+wbopendata:
+  title: wbopendata
+  short_description: ''
+  syntax: 'wbopendata, Parameters [Options] ... country(acronym): list of country
+    code (accepts multiples) (and) topics(acronym): topic code (only accepts one)
+    (or) indicator(acronym): list of indicator code(accepts multiples) ... long: imports
+    the data in the long format. clear: replace data in memory. latest: keep only
+    the latest available value of a single indicator. nometadata: omits the display
+    of the metadata. year(date1:date2): time interval (in yearly, quarterly or monthly
+    depending on the series). language(language): select the language. full: adds
+    full list of country attributes. iso: adds 2 digits ISO codes to country attributes.
+    update query: query the current vintage of indicators and country metadata available.
+    update check: checks the availability of new indicators and country metadata available
+    for download. update all: refreshes the indicators and country metadata information.
+    match(varname): mergue country attributes using WDI countrycodes. projection:
+    World Bank population estimates and projections (HPP) . metadataoffline: download
+    all indicator metadata informaiton and generates 71 sthlp files in your local
+    machine. wbopendata requires a connection to the internet and supports the Stata
+    dialogue function (). ...'
+  description: 'wbopendata allows Stata users to download over 17,000 indicators from
+    the World Bank databases, including: Development
+
+    Africa Development Indicators; Doing Business; Education Statistics; Enterprise
+    Surveys; Global Development Finance;
+
+    Gender Statistics; Health Nutrition and Population Statistics; International Development
+    Association - Results Measurement System;
+
+    Millennium Development Goals; World Development Indicators; Worldwide Governance
+    Indicators; and LAC Equity Lab. These indicators include information
+
+    from over 256 countries and regions, since 1960.
+
+    Users can chose from one of three of the languages supported by the database (and
+    Stata), namely, English, Spanish, or French.
+
+    Five possible downloads options are currently supported:
+
+    country: over 1,000 indicators for all selected years for a single country (WDI
+    Catalogue).
+
+    topics: WDI indicators within a specific topic, for all selected years and all
+    countries (WDI Catalogue).
+
+    indicator: all selected years for all countries for a single indicator (from any
+    of the catalogues: 17,000+ series).
+
+    indicator and country: all selected years for selected countries for a single
+    indicator (from any of the catalogues: 17,000+ series).
+
+    multiple indicator: all selected years for selected indicators separated by ;
+    (from any of the catalogues: 17,000+ series).
+
+    Users can also choose to have the data displayed in either the wide or long format
+    (wide is the default option).
+
+    Note that the reshape is the local machine, so it will require the appropriate
+    amount of RAM to work properly.
+
+    wbopendata draws from the main World Bank collections of development indicators,
+    compiled from
+
+    officially-recognized international sources. It presents the most current and
+    accurate global development
+
+    data available, and includes national, regional and global estimates.
+
+    The access to this databases is made possible by the World Bank''s Open Data Initiative
+    which provide
+
+    open full access to http://data.worldbank.org/.
+
+    (Go up to Sections Menu)
+
+    Parameters
+
+    country(string): Countries and Regions Abbreviations and acronyms. If solely specified,
+    this option
+
+    will return all the WDI indicators (1,076 series) for a single country or region
+    (no multiple country selection allowed in
+
+    this case). If this option is selected jointly with a specific indicator, the
+    output is a series for a specific
+
+    country or region, or multiple countries or region. When selecting multiple countries
+    please use the three letters code, separated by
+
+    a semicolon (;), with no spaces.
+
+    topics(numlist): Topic List 21 topic lists are curently supported and include
+    Agriculture & Rural Development;
+
+    Aid Effectiveness; Economy & Growth; Education; Energy & Mining; Environment;
+    Financial Sector; Health; Infrastructure; Social Protection & Labor;
+
+    Poverty; Private Sector; Public Sector; Science & Technology; Social Development;
+    Urban Development; Gender; Millenium development goals; Climate Change;
+
+    External Debt; and, Trade (only one topic collection can be requested at the time).
+
+    indicator(string): Indicators List list of indicator codes (All series). When
+    selecting multiple
+
+    indicators please use semicolon (;), to separate differenet indicatos.
+
+    (Go up to Sections Menu)
+
+    Options
+
+    long: imports the data in the long format. The default option is to import the
+    data in the wide format. It is important
+
+    note that wbopendata uses Stata resources to reshape the variables, hence user
+    has to make sure that Stata will have sufficient
+
+    RAM to complete this operation.
+
+    clear: replace data in memory.
+
+    latest: keep only the latest available value of a single indicator (it only work
+    if the data in the long format).
+
+    nometadata: omits the display of the metadata information from the series. Metadata
+    information is only available when downloading specific series (indicator option).
+    The metadata available include information on the name of the series, the source,
+    a detailed description
+
+    of the indicator, and the organization responsible for compiling this indicator.
+
+    year:(date1:date2): allow users to select a specific time interval. Date1=Initial
+    date; Date2=Final date. For most indicators Date should be expressed in yearly
+    format, however for specific series quartely and montly series will be supported.
+    Please check data documentation
+
+    at the World Bank Data website to identify which format is supported.
+
+    language(option): three languages are supported: The default language is English.
+
+    English: en
+
+    Spanish: es
+
+    French: fr
+
+    full: adds full list of country attributes.
+
+    iso: adds only 2 digits ISO codes to country attributes.
+
+    update query: query the current vintage of indicators available and country metadata.
+
+    update check: checks the availability of new indicators and country metadata available
+    for download.
+
+    update all: refreshes the indicators and country metadata information.
+
+    match(varname): mergue country attributes using WDI countrycodes.
+
+    projection: World Bank staff population projection estimates using the World Bank''s
+    total population and age/sex distributions of the United Nations Population Division''s
+    World Population Prospects: 2019 Revision.
+
+    metadataoffline: refresh all metadata information, and generate a local copy of
+    all indicators metadata organized by topics and source. This option creates 71
+    new help files in your local machine with approximately 15mb of documentation.
+
+    (Go up to Sections Menu)'
+  options: []
+  examples:
+  - (Go up to Sections Menu)
+  - . wbopendata, indicator(si.pov.dday; ny.gdp.pcap.pp.kd) clear long
+  - . tempfile tmp
+  - . wbopendata, language(en - English) indicator(it.cel.sets.p2) long clear latest
+  - . sort countrycode
+  - . save `tmp', replace
+  - . sysuse world-d, clear
+  - . merge countrycode using `tmp'
+  - . sum year
+  - . local avg = string(`r(mean)',"%16.1f")
+  - '. spmap it_cel_sets_p2 using "world-c.dta", id(_ID) /// clnumber(20) fcolor(Reds2)
+    ocolor(none ..) /// title("Mobile cellular subscriptions (per 100 people)", size(*1.2))
+    /// legstyle(3) legend(ring(1) position(3)) /// note("Source: World Development
+    Indicators (latest available year: `avg'') using /// Azevedo, J.P. (2011) wbopendata:
+    Stata module to " "access World Bank databases, /// Statistical Software Components
+    S457234 Boston College Department of Economics.", /// size(*.7)) (click to run)'
+  - . wbopendata, indicator(si.pov.dday ) clear long
+  - . drop if si_pov_dday == .
+  - . sort countryname year
+  - '. bysort countryname : gen diff_pov = (si_pov_dday-si_pov_dday[_n-1])/(year-year[_n-1])'
+  - . encode region, gen(reg)
+  - . encode countryname, gen(reg2)
+  - '. alorenz diff_pov, gp points(100) fullview xdecrease markvar(reg2) /// ytitle("Change
+    in Poverty (p.p.)") xtitle("Proportion of regional /// episodes of poverty reduction
+    (%)") legend(off) title("Poverty Reduction") /// mlabelangle(45) legend(off) ///
+    note("Source: World Development Indicators using Azevedo, J.P. (2011) /// wbopendata:
+    Stata module to " "access World Bank databases, Statistical /// Software Components
+    S457234 Boston College Department of Economics.", /// size(*.7)) (click to run)'
+  - . wbopendata, indicator(si.pov.dday ) clear long
+  - . drop if si_pov_dday == .
+  - . sort countryname year
+  - . keep if regionname == "Aggregates"
+  - '. bysort countryname : gen diff_pov = (si_pov_dday-si_pov_dday[_n-1])/(year-year[_n-1])'
+  - . gen baseline = si_pov_dday if year == 1990
+  - . sort countryname baseline
+  - '. bysort countryname : replace baseline = baseline[1] if baseline == .'
+  - . gen mdg1 = baseline/2
+  - . gen present = si_pov_dday if year == 2008
+  - . sort countryname present
+  - '. bysort countryname : replace present = present[1] if present == .'
+  - . gen target = ((baseline-mdg1)/(2008-1990))*(2015-1990)
+  - . sort countryname year
+  - . gen angel45x = .
+  - . gen angle45y = .
+  - . replace angel45x = 0 in 1
+  - . replace angle45y = 0 in 1
+  - . replace angel45x = 80 in 2
+  - . replace angle45y = 80 in 2
+  - '. graph twoway /// (scatter present target if year == 2008, mlabel( countrycode))
+    /// (line angle45y angel45x ), /// legend(off) xtitle("Target for 2008") ytitle(Present)
+    /// title("MDG 1 - 1.9 USD") /// note("Source: World Development Indicators (latest
+    available year: 2008) /// using Azevedo, J.P. (2011) wbopendata: Stata module
+    to " "access /// World Bank databases, Statistical Software Components S457234
+    Boston /// College Department of Economics.", size(*.7)) (click to run)'
+  - . wbopendata, indicator(si.pov.dday; ny.gdp.pcap.pp.kd) clear long latest
+  - '. graph twoway /// (scatter si_pov_dday ny_gdp_pcap_pp_kd, msize(*.6)) /// (scatter
+    si_pov_dday ny_gdp_pcap_pp_kd if region == "Aggregates", msize(*.8) /// mlabel(countryname)
+    mlabsize(*.8) mlabangle(25)) /// (lowess si_pov_dday ny_gdp_pcap_pp_kd) , ///
+    xtitle("GDP per capita, PPP (constant 2011 international $)") /// ytitle("Poverty
+    headcount ratio at the International Poverty Line") /// mlabelangle(45) legend(off)
+    /// note("Source: World Development Indicators (latest available year as off 2012-08-08)
+    /// using Azevedo, J.P. (2011) wbopendata: Stata module to " "access World Bank
+    databases, /// Statistical Software Components S457234 Boston College Department
+    of Economics.", /// size(*.7)) (click to run)'
+  - '...'
+  stored_results: []
+  references:
+  - '(Go up to Sections Menu) David C. Elliott, 2002. "TKNZ: Stata module to tokenize
+    string into named macros," Statistical Software Components S426302, Boston College
+    Department of Economics, revised 17 Oct 2006. ...'
+  authors:
+  - Joao Pedro Azevedo (jazevedo@worldbank.org)
+  acknowledgements: '(Go up to Sections Menu)
+
+
+    This program was developed by Joao Pedro Azevedo.
+
+
+    A special thanks to the World Bank API team, in particular, Malarvizhi Veerappan,
+    Lakshmikanthan Subramanian, Shanmugam Natarajan, Ugendran Machakkalai, Rochelle
+    Glenene O''Hagan, Timothy Grant Herzog,
+
+    and Ana Florina Pirlea.
+
+
+    The author would like to thanks comments received from Minh Cong Nguyen, John
+    Luke Gallup, Aart C. Kraay, Amer Hasan, Johan Mistiaen, Roy Shuji Katayama, Dean
+    Mitchell Jolliffe, Nobuo Yoshida,
+
+    Manohar Sharma, Gabriel Demombynes, Paolo Verme, Elizaveta Perova, Kit Baum, Kerry
+    Kammire, Derek Wagner, Neil Fantom and Loiuse J. Cord. The usual disclaimer applies.
+
+
+    I would like to dedicate this ado file to Dr Richard Sperling, who asked us to
+    support intelligent and well
+
+    thought out public policies that help those in society who are less fortunate
+    than we are. www.stata.com/statalist/archive/2011-02/msg00062.html
+
+
+    wbopendata uses the Stata user written command _pecats produced by J. Scott Long
+    and Jeremy Freese, and tknz written by David C. Elliott and
+
+    Nick Cox.'
+  also_see:
+  - 'Online: linewrap alorenz spmap tknz (if installed)'
+  version: version 16.3
+  other_title: '... World Bank Open Databases. ...'
+  other_sections: 'Sections are presented under the following headings: Command description
+    Parameters description Options description List of supported country attributes
+    Country code and names by selected attributes Indicators by Source Topic List
+    Examples Disclaimer Terms of use How to cite References Acknowledgements ... (Go
+    up to Sections Menu)'
+  other_list_country_attributes_currently_supported: '... countrycode: Country Code
+    countryname: Country Name region_iso2: Region Code (ISO 2 digits) regionname:
+    Region Name adminregion: Administrative Region Code adminregion_iso2: Administrative
+    Region Code (ISO 2 digits) adminregionname: Administrative Region Name incomelevel:
+    Income Level Code incomelevel_iso2: Income Level Code (ISO 2 digits) incomelevelname:
+    Income Level Name lendingtype: Lending Type Code region: Region Code lendingtype_iso2:
+    Lending Type Code (ISO 2 digits) lendingtypename: Lending Type Name capital: Capital
+    Name latitude: Capital Latitude longitude: Capital Longitude ... (Go up to Sections
+    Menu)'
+  other_country_names_and_codes_by_groups: "... NA: Aggregates EAS: East Asia and\
+    \ Pacific ECS: Europe and Central Asia LCN: Latin American and the Caribbean MEA:\
+    \ Middle East and North Africa NAC: North America SAS: South Asia SSF: Sub-Saharan\
+    \ Africa EAP: East Asia and Pacific ECA: Europe and Central Asia LAC: Latin American\
+    \ and the Caribbean MNA: Middle East and North Africa SAS: South Asia SSA: Sub-Saharan\
+    \ Africa NA: Aggregates HIC: High income UMC: Upper middle income LMC: Lower middle\
+    \ income LIC: Low income IBD: IBRD IDX: IDA IDB: Blend LNX: Not classified ...\
+    \ ... (Source TOC) 01: Doing Business 02: World Development Indicators 03: Worldwide\
+    \ Governance Indicators 05: Subnational Malnutrition Database 06: International\
+    \ Debt Statistics 11: Africa Development Indicators 12: Education Statistics 13:\
+    \ Enterprise Surveys 14: Gender Statistics 15: Global Economic Monitor 16: Health\
+    \ Nutrition and Population Statistics 18: IDA Results Measurement System 19: Millennium\
+    \ Development Goals 20: Quarterly Public Sector Debt 22: Quarterly External Debt\
+    \ Statistics SDDS 23: Quarterly External Debt Statistics GDDS 24: Poverty and\
+    \ Equity 25: Jobs 27: Global Economic Prospects 28: Global Financial Inclusion\
+    \ 29: The Atlas of Social Protection: Indicators of Resilience and Equity 30:\
+    \ Exporter Dynamics Database â\x80\x93 Indicators at Country-Year Level 32: Global\
+    \ Financial Development 33: G20 Financial Inclusion Indicators 34: Global Partnership\
+    \ for Education 35: Sustainable Energy for All 36: Statistical Capacity Indicators\
+    \ 37: LAC Equity Lab 39: Health Nutrition and Population Statistics by Wealth\
+    \ Quintile 40: Population estimates and projections 41: Country Partnership Strategy\
+    \ for India (FY2013 - 17) 45: Indonesia Database for Policy and Economic Research\
+    \ 46: Sustainable Development Goals 50: Subnational Population 54: Joint External\
+    \ Debt Hub 57: WDI Database Archives 59: Wealth Accounts 60: Economic Fitness\
+    \ 61: PPPs Regulatory Quality 62: International Comparison Program (ICP) 2011\
+    \ 63: Human Capital Index 64: Worldwide Bureaucracy Indicators 65: Health Equity\
+    \ and Financial Protection Indicators 66: Logistics Performance Index 67: PEFA\
+    \ 2011 69: Global Financial Inclusion and Consumer Protection Survey 70: Economic\
+    \ Fitness 2 71: International Comparison Program (ICP) 2005 73: Global Financial\
+    \ Inclusion and Consumer Protection Survey (Internal) 75: Environment, Social\
+    \ and Governance (ESG) Data ... (Go up to Sections Menu)"
+  other_topic_list: '... 1 - Agriculture & Rural Development: For the 70 percent of
+    the world''s poor who live in rural areas, agriculture is the main source of income
+    and employment. But depletion and degradation of land and water pose serious challenges
+    to producing enough food and other agricultural products to sustain livelihoods
+    here and meet the needs of urban populations. Data presented here include measures
+    of agricultural inputs, outputs, and productivity compiled by the UN''s Food and
+    Agriculture Organization. 2 - Aid Effectiveness: Aid effectiveness is the impact
+    that aid has in reducing poverty and inequality, increasing growth, building capacity,
+    and accelerating achievement of the Millennium Development Goals set by the international
+    community. Indicators here cover aid received as well as progress in reducing
+    poverty and improving education, health, and other measures of human welfare.
+    3 - Economy & Growth: Economic growth is central to economic development. When
+    national income grows, real people benefit. While there is no known formula for
+    stimulating economic growth, data can help policy-makers better understand their
+    countries'' economic situations and guide any work toward improvement. Data here
+    covers measures of economic growth, such as gross domestic product (GDP) and gross
+    national income (GNI). It also includes indicators representing factors known
+    to be relevant to economic growth, such as capital stock, employment, investment,
+    savings, consumption, government spending, imports, and exports. 4 - Education:
+    Education is one of the most powerful instruments for reducing poverty and inequality
+    and lays a foundation for sustained economic growth. The World Bank compiles data
+    on education inputs, participation, efficiency, and outcomes. Data on education
+    are compiled by the United Nations Educational, Scientific, and Cultural Organization
+    (UNESCO) Institute for Statistics from official responses to surveys and from
+    reports provided by education authorities in each country. 5 - Energy & Mining:
+    The world economy needs ever-increasing amounts of energy to sustain economic
+    growth, raise living standards, and reduce poverty. But today''s trends in energy
+    use are not sustainable. As the world''s population grows and economies become
+    more industrialized, nonrenewable energy sources will become scarcer and more
+    costly. Data here on energy production, use, dependency, and efficiency are compiled
+    by the World Bank from the International Energy Agency and the Carbon Dioxide
+    Information Analysis Center. 6 - Environment: Natural and man-made environmental
+    resources (fresh water, clean air, forests, grasslands, marine resources, and
+    agro-ecosystems) provide sustenance and a foundation for social and economic development.
+    The need to safeguard these resources crosses all borders. Today, the World Bank
+    is one of the key promoters and financiers of environmental upgrading in the developing
+    world. Data here cover forests, biodiversity, emissions, and pollution. Other
+    indicators relevant to the environment are found under data pages for Agriculture
+    & Rural Development, Energy & Mining, Infrastructure, and Urban Development. 7
+    - Financial Sector: An economy''s financial markets are critical to its overall
+    development. Banking systems and stock markets enhance growth, the main factor
+    in poverty reduction. Strong financial systems provide reliable and accessible
+    information that lowers transaction costs, which in turn bolsters resource allocation
+    and economic growth. Indicators here include the size and liquidity of stock markets;
+    the accessibility, stability, and efficiency of financial systems; and international
+    migration and workers\ remittances, which affect growth and social welfare in
+    both sending and receiving countries. 8 - Health: Improving health is central
+    to the Millennium Development Goals, and the public sector is the main provider
+    of health care in developing countries. To reduce inequities, many countries have
+    emphasized primary health care, including immunization, sanitation, access to
+    safe drinking water, and safe motherhood initiatives. Data here cover health systems,
+    disease prevention, reproductive health, nutrition, and population dynamics. Data
+    are from the United Nations Population Division, World Health Organization, United
+    Nations Children''s Fund, the Joint United Nations Programme on HIV/AIDS, and
+    various other sources. 9 - Infrastructure: Infrastructure helps determine the
+    success of manufacturing and agricultural activities. Investments in water, sanitation,
+    energy, housing, and transport also improve lives and help reduce poverty. And
+    new information and communication technologies promote growth, improve delivery
+    of health and other services, expand the reach of education, and support social
+    and cultural advances. Data here are compiled from such sources as the International
+    Road Federation, Containerisation International, the International Civil Aviation
+    Organization, the International Energy Association, and the International Telecommunications
+    Union. 10 - Social Protection & Labor: The supply of labor available in an economy
+    includes people who are employed, those who are unemployed but seeking work, and
+    first-time job-seekers. Not everyone who works is included: unpaid workers, family
+    workers, and students are often omitted, while some countries do not count members
+    of the armed forces. Data on labor and employment are compiled by the International
+    Labour Organization (ILO) from labor force surveys, censuses, establishment censuses
+    and surveys, and administrative records such as employment exchange registers
+    and unemployment insurance schemes. 11 - Poverty: For countries with an active
+    poverty monitoring program, the World Bank in collaboration with national institutions,
+    other development agencies, and civil society regularly conducts analytical work
+    to assess the extent and causes of poverty and inequality, examine the impact
+    of growth and public policy, and review household survey data and measurement
+    methods. Data here includes poverty and inequality measures generated from analytical
+    reports, from national poverty monitoring programs, and from the World Bank''s
+    Development Research Group which has been producing internationally comparable
+    and global poverty estimates and lines since 1990. 12 - Private Sector: Private
+    markets drive economic growth, tapping initiative and investment to create productive
+    jobs and raise incomes. Trade is also a driver of economic growth as it integrates
+    developing countries into the world economy and generates benefits for their people.
+    Data on the private sector and trade are from the World Bank Group''s Private
+    Participation in Infrastructure Project Database, Enterprise Surveys, and Doing
+    Business Indicators, as well as from the International Monetary Fund''s Balance
+    of Payments database and International Financial Statistics, the UN Commission
+    on Trade and Development, the World Trade Organization, and various other sources.
+    13 - Public Sector: Effective governments improve people''s standard of living
+    by ensuring access to essential services (health, education, water and sanitation,
+    electricity, transport and the opportunity to live and work in peace and security).
+    Data here includes World Bank staff assessments of country performance in economic
+    management, structural policies, policies for social inclusion and equity, and
+    public sector management and institutions for the poorest countries. Also included
+    are indicators on revenues and expenses from the International Monetary Fund''s
+    Government Finance Statistics, and on tax policies from various sources. 14 -
+    Science & Technology: Technological innovation, often fueled by governments, drives
+    industrial growth and helps raise living standards. Data here aims to shed light
+    on countries technology base: research and development, scientific and technical
+    journal articles, high-technology exports, royalty and license fees, and patents
+    and trademarks. Sources include the UNESCO Institute for Statistics, the U.S.
+    National Science Board, the UN Statistics Division, the International Monetary
+    Fund, and the World Intellectual Property Organization. 15 - Social Development:
+    Data here cover child labor, gender issues, refugees, and asylum seekers. Children
+    in many countries work long hours, often combining studying with work for pay.
+    The data on their paid work are from household surveys conducted by the International
+    Labour Organization (ILO), the United Nations Children''s Fund (UNICEF), the World
+    Bank, and national statistical offices. Gender disparities are measured using
+    a compilation of data on key topics such as education, health, labor force participation,
+    and political participation. Data on refugees are from the United Nations High
+    Commissioner for Refugees complemented by statistics on Palestinian refugees under
+    the mandate of the United Nations Relief and Works Agency. 16 - Urban Development:
+    Cities can be tremendously efficient. It is easier to provide water and sanitation
+    to people living closer together, while access to health, education, and other
+    social and cultural services is also much more readily available. However, as
+    cities grow, the cost of meeting basic needs increases, as does the strain on
+    the environment and natural resources. Data on urbanization, traffic and congestion,
+    and air pollution are from the United Nations Population Division, World Health
+    Organization, International Road Federation, World Resources Institute, and other
+    sources. 17 - Gender: Women''s empowerment and the promotion of gender equality
+    are key to achieving sustainable development. Greater gender equality can enhance
+    economic efficiency and improve other development outcomes by removing barriers
+    that prevent women from having the same access as men to human resource endowments,
+    rights, and economic opportunities. Giving women access to equal opportunities
+    allows them to emerge as social and economic actors, influencing and shaping more
+    inclusive policies. Improving women''s status also leads to more investment in
+    their children''s education, health, and overall wellbeing. Data here covers demography,
+    education, health, labor force and employment, and political participation. 18
+    - Millenium development goals: 19 - Climate Change: Climate change is expected
+    to hit developing countries the hardest. Its effects higher temperatures, changes
+    in precipitation patterns, rising sea levels, and more frequent weather-related
+    disasters pose risks for agriculture, food, and water supplies. At stake are recent
+    gains in the fight against poverty, hunger and disease, and the lives and livelihoods
+    of billions of people in developing countries. Addressing climate change requires
+    unprecedented global cooperation across borders. The World Bank Group is helping
+    support developing countries and contributing to a global solution, while tailoring
+    our approach to the differing needs of developing country partners. Data here
+    cover climate systems, exposure to climate impacts, resilience, greenhouse gas
+    emissions, and energy use. Other indicators relevant to climate change are found
+    under other data pages, particularly Environment, Agriculture & Rural Development,
+    Energy & Mining, Health, Infrastructure, Poverty, and Urban Development. 20 -
+    External Debt: Debt statistics provide a detailed picture of debt stocks and flows
+    of developing countries. Data presented as part of the Quarterly External Debt
+    Statistics takes a closer look at the external debt of high-income countries and
+    emerging markets to enable a more complete understanding of global financial flows.
+    The Quarterly Public Sector Debt database provides further data on public sector
+    valuation methods, debt instruments, and clearly defined tiers of debt for central,
+    state and local government, as well as extra-budgetary agencies and funds. Data
+    are gathered from national statistical organizations and central banks as well
+    as by various major multilateral institutions and World Bank staff. 21 - Trade:
+    Trade is a key means to fight poverty and achieve the Millennium Development Goals,
+    specifically by improving developing country access to markets, and supporting
+    a rules based, predictable trading system. In cooperation with other international
+    development partners, the World Bank launched the Transparency in Trade Initiative
+    to provide free and easy access to data on country-specific trade policies. ...'
+  other_disclaimer: (Go up to Sections Menu) Users should not use wbopendata without
+    checking first for more detailed information on the definitions of each http://data.worldbank.org/indicator/
+    and http://data.worldbank.org/data-catalog/ . The indicators names and codes used
+    by wbopendata are precisely the same used in the World Bank data catalogue in
+    order to facilitate such cross reference. When downloading specific series, through
+    the indicator options, wbopendata will by default display in the Stata results
+    window the metadata available for this particular series, including information
+    on the name of the series, the source, a detailed description of the indicator,
+    and the organization responsible for compiling this indicator. ...
+  other_terms_of_use_world_bank_data: (Go up to Sections Menu) The use of World Bank
+    datasets listed in the Data Catalog is governed by a specific http://data.worldbank.org/summary-terms-of-use/.
+    The terms of use of the APIs is governed by http://go.worldbank.org/C09SUA7BK0/.
+    ...
+  citation: '(Go up to Sections Menu) Azevedo, J.P. (2011) "wbopendata: Stata module
+    to access World Bank databases," Statistical Software Components S457234, Boston
+    College Department of Economics.http://ideas.repec.org/c/boc/bocode/s457234.html
+    Please make reference to the date when the database was downloaded, as indicator
+    values and availabiltiy may change. ...'
+  other_github_respository: For previous releases and additional examples please visit
+    wbopendata https://github.com/jpazvd/wbopendata Please make any enhancement suggestions
+    and/or report any problems with wbopendata at https://github.com/jpazvd/wbopendata/issues
+  help_file_type: sthlp
+factortest:
+  title: factortest
+  short_description: Calculate specification tests before factor or pca
+  syntax: ''
+  description: 'factortest performs the Bartlett''s test for sphericity and
+
+    the Kaiser-Meyer-Olkin Measure of Sampling Adequacy. Both tests should be used
+
+    prior to a factor or a principal component analysis.'
+  options: []
+  examples:
+  - . factortest price mpg rep78 rep77 hdroom rseat trunk
+  stored_results: []
+  references:
+  - 'Box,G.E.P.(1949) "A general distribution theory for a class of likelihood criteria."
+    Biometrica, 36: 317-346. Cureton, E.E., & D''Agostino, R.B. (1983). Factor analysis:
+    An applied approach. Hillsdale, NJ: Erlbaum.'
+  authors:
+  - Joao Pedro Azevedo, IPEA, Brazil
+  - jazevedo@ipea.gov.br
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] factor [R] pca [R] alpha Online: help for factor; pca; alpha'
+  version: ''
+  other_technical_details: 'Determinant of the matrix of correlation: This determinant
+    will equal 1.0 only if all correlations equal 0, otherwise the determinant will
+    be less than 1. Bartlett''s test for sphericity: Calculates the determinant of
+    the matrix of the sums of products and cross-products (S) from which the intercorrelations
+    matrix is derived. The determinant of the matrix S is converted to a chi-square
+    statistic and tested for significance. The null hypothesis is that the intercorrelation
+    matrix comes from a population in which the variables are noncollinear (i.e. an
+    identity matrix), and that the non-zero correlations in the sample matrix are
+    due to sampling error. Kaiser-Meyer-Olkin Measure of Sampling Adequacy: is an
+    index for comparing the magnitudes of the observed correlation coefficients to
+    the magnitudes of the partial correlation coefficients. Large values for the KMO
+    measure indicate that a factor analysis of the variables is a good idea. 90 or
+    above, excelent 80 or above, meritorious 70 or above, middling 60 or above, mediocre
+    50 or above, miserable; and below .50, unacceptable.'
+  other_aknowledgements: I would like to thank May M. Boggess for her help and Roberto
+    De Miguel for his suggestions.
+  help_file_type: hlp
+crtest:
+  title: crtest
+  short_description: Cramer-Ridder Test for pooling states in a Multinomial Logit
+  syntax: ''
+  description: 'crtest performs the Cramer-Ridder test for pooling states in the
+
+    Multinomial logit model.'
+  options: []
+  examples:
+  - .mlogit occup1 female under35 married2
+  - .crtest
+  stored_results: []
+  references:
+  - 'Cramer,J.S. and G.Ridder (1991) "Pooling states in multinomial logit model."
+    Journal of Econometrics, 47: 267-272.'
+  authors:
+  - Joao Pedro W. de Azevedo, University of Newcastle, UK
+  - j.p.azevedo@ncl.ac.uk
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] mlogit Online: help for mlogtest; iia; smhsiao (if installed)'
+  version: ''
+  other_technical_details: 'This test assume a multinomial logit model with (S+1)
+    states and two states that are candidates for pooling, s1 and s2. The null hypothesis
+    is that s1 and s2 have the same regressors coefficient apart from the intercept,
+    or Bs1 = Bs2 = Bs (1) To test this hypothesis the following test statistics can
+    be used: LR = 2 (2) where lnL is the maximum log likelihood of the original model
+    and lnLr the maximum log likelihood if the estimates are constrained to satisfy
+    (1). LR asymptotically has a chi-square distribution with k degrees of freedom
+    where k is the number of restrictions implied by (1). LnL is readily available
+    from the original model, but the lnLr apparently requires constrained estimation
+    which can be quite laborious. Cramer and Ridder (1991) show that the lnLr can
+    be easily derived from an unconstrained estimation of the pooled model with only
+    S states. The following expression to estimate the restricted maximum log likelihood
+    is then presented by the authors, lnLr = ns1*ln(ns1) + ns2*ln(ns2) - ns*ln(ns)
+    + lnLp where lnLp is the unconstrained maximum of the log likelihood of the pooled
+    model. ns1 and ns2 are the number of observations on the states s1 and s2, respectively,
+    and ns = ns1 + ns2.'
+  other_aknowledgements: This ado file uses the auxiliary ado file _pecats written
+    by J. Scott Long and Jeremy Freese. I would like to thank Brian Poi, Christopher
+    Baum and Nick Cox for their helpfull suggestions. As usual, all mistakes are of
+    my own responsibility.
+  help_file_type: hlp
+groupfunction:
+  title: groupfunction
+  short_description: ''
+  syntax: groupfunction [if] [in] [aw pw fw] , by(varlist) mean(varlist) sum(varlist)
+    rawsum(varlist) first(varlist) min(varlist) max(varlist) count(varlist) sd(varlist)
+    variance(varlist) gini(varlist) theil(varlist) xtile(varlist) nq(int) missing
+    norestore
+  description: groupfunction Replaces several collapse functions (mean, sum, variance,
+    first, max, min). The command is several orders of magnitude faster than collapse
+  options:
+  - by(varlist) Grouping for reporting estimates.
+  - xtile(varlist) Coupled with nq(), it creates variable with percentiles and adds
+    it to the by() option.
+  - nq(int) Option only works when xtile() is specified. It indicates the number of
+    quantiles.
+  - mean(varlist) Calculates means of specified variables.
+  - sum(varlist) Calculates total sum of specified variables. If weights are specified
+    it will give population expanded total.
+  - rawsum(varlist) Calculates total sum of specified variables. If weights are specified
+    it will ignore weights.
+  - first(varlist) Provides first observation by groups specified in by option.
+  - min(varlist) Provides minimum value, by groups, of vectors specified.
+  - max(varlist) Provides maximum value, by groups, of vectors specified.
+  - count(varlist) Provides observation count, by groups, of vectors specified.
+  - sd(varlist) Calculates standard deviations of specified variables.
+  - variance(varlist) Calculates variance of specified variables.
+  - gini(varlist) Calculates Gini coefficient of specified variables.
+  - theil(varlist) Calculates Theil coefficient of specified variables.
+  - missing This option is only relevant for sum and rawsum. If an entire group in
+    by() is missing for the sum/rawsum variable the output will be missing instead
+    of zero.
+  - norestore Drops all non-relevant variables before calculations to improve memory
+    management.
+  - slow Use this option if you run into memory issues, it will get values one by
+    one.
+  - merge Requests that values are not to be collapsed, it instead merges the new
+    vectors to the dataset in memory.
+  examples:
+  - clear all set more off set obs 300000 version 13 set seed 458267 gen regions =
+    int(runiform()*20) replace region = 1 if inrange(region,0,3) replace region =
+    2 if inrange(region,4,5) //Income per capita forval z=1/200{ gen x_`z' = region*runiform()*4000
+    + rnormal()*200 } forval z=1/300{ gen y`z' = runiform()*100 + (rnormal()*20)^2
+    } gen weight = abs(rnormal()) //time collapse preserve timer on 1 collapse (mean)
+    y* x_* [aw=w], by(region) timer off 1 restore //time fcollapse (Weights not supported)
+    preserve timer on 2 fcollapse (mean) y* x_*, by(region) timer off 2 restore //time
+    groupfunction preserve timer on 3 groupfunction [aw=weight], mean(y* x_*) by(region)
+    timer off 3 restore timer list
+  stored_results: []
+  references: []
+  authors:
+  - Paul Corral
+  - The World Bank - Poverty and Equity Global Practice
+  - Washington, DC
+  - pcorralrodas@worldbank.org
+  - Minh C. Nguyen
+  - The World Bank - Poverty and Equity Global Practice
+  - Washington, DC
+  - pcorralrodas@worldbank.org
+  - Joao Pedro Azevedo
+  - The World Bank - Poverty and Equity Global Practice
+  - Washington, DC
+  - jazevedo@worldbank.org
+  - Raul AndrÃ©s CastaÃ±eda provided valuable suggestions for this command.
+  acknowledgements: ''
+  also_see: []
+  version: ''
+  other_title: '... Replaces several basic collapse functions (mean, sum, variance,
+    standard deviation, first, max, min). The command is several orders of magnitude
+    faster than collapse when summarizing multiple vectors on larger datasets.} ...'
+  help_file_type: sthlp
+outtable:
+  title: outtable
+  short_description: Output matrix to LaTeX table
+  syntax: outtable using filename , mat(matrixname) [ r:eplace app:end nobox c:enter
+    cap:tion("Caption") f:ormat(formatlist) norow:lab nodots longtable label clabel(string)]
+    This command makes use of the file command, added to Stata on 8 May 2001. If file
+    is not recognized, update query.
+  description: 'outtable automates the conversion of a Stata matrix to a LaTeX table,
+    written to an
+
+    external file. The table is presented with row and column names taken from the
+    specified matrix.
+
+    Thus, one need only generate the appropriate matrix
+
+    using standard Stata commands. By default, only the lower triangle of a symmetric
+    matrix will
+
+    be written, as inferred by Stata''s issym() function.
+
+    The using clause is required, and must specify the name of a file to which the
+    LaTeX
+
+    table is to be written, without the .tex extension. If the file exists, either
+    the
+
+    replace option or the append option must be specified.
+
+    The mat qualifier specifies the name of the existing matrix which is to be written
+    in
+
+    tabular form.'
+  options:
+  - replace specifies that if filename exists, it should be overwritten with the contents
+    of mat.
+  - append specifies that output should be appended to an existing filename. It may
+    be used even if the file has not been previously created.
+  - nobox specifies that the default behavior of providing borders for each cell of
+    the table should not be applied.
+  - center specifies that elements in the second and following columns of the table
+    should be centered, rather than flush left.
+  - asis specifies that the row and column names of mat should be passed through to
+    the TeX file without alteration. This permits use of the underscore (_) to create
+    subscripts in row or column headings. However, if the names of regressors are
+    being used as labels, the default label _cons should be changed.
+  - caption specifies a caption to be produced above the table. The table will be
+    automatically numbered according to the style of the document.
+  - formatlist specifies the format to be applied to the elements in the body of the
+    table, which will then override the default format used to display matrix elements.
+    If one value is specified, all columns are output with that format. If more than
+    one space-delimited format is listed, they are mapped 1-to-1 to the columns of
+    the matrix.
+  - norowlab suppresses the row labels.
+  - nodots specifies that missing numeric values should be represented as empty cells
+    rather than ".".
+  - longtable option allows to create tables that span over several pages using the
+    "longtable" package (do not forget to \usepackage in the preamble of your .tex
+    document)
+  - label option allows to display variable labels (if they exist) instead of variable
+    names.
+  - clabel allows you to enter the \caption information which is used by LaTeX for
+    cross-referencing tables. This option may be omitted and later typed into your
+    LaTeX document.
+  examples:
+  - . use auto
+  - . forv r=2/5
+  - . qui reg price headroom-turn if rep78==`r'
+  - . mat c`r'=e(b)'
+  - . }
+  - . mat c=c2,c3,c4,c5
+  - . mat colnames c=rep78_2 rep78_3 rep78_4 rep78_5
+  - . outtable using cars,mat(c) replace
+  - . outtable using cars,mat(c) append center f(%9.2f)
+  - . outtable using cars,mat(c) replace center f(%9.2f %9.3f %9.1f %9.2f)
+  - . outtable using cars,mat(c) replace c
+  - cap("Regression coefficients by rep78")
+  stored_results: []
+  references: []
+  authors:
+  - Christopher F Baum, Boston College
+  - baum@bc.edu
+  - Joao Pedro Azevedo, Instituto de Pesquisa Economica Aplicada, Rio de Janeiro,
+    Brazil
+  - jazevedo@ipea.gov.br
+  acknowledgements: 'This command was made possible by Bill Gould''s implementation
+    of the file command,
+
+    and inspired by conversations with Petia Petrova. Suggestions from David Drukker,
+
+    Alan Feiveson and Nicholas J. Cox have improved its functionality. Formatting
+    code was
+
+    borrowed from Blasnik and Jann''s mat2txt.'
+  also_see:
+  - 'On-line: help for file, outseries (if installed), tosql (if installed)'
+  version: ''
+  other_output_matrix_to_latex_table: outtable using filename , mat(matrixname) [
+    r:eplace app:end nobox c:enter cap:tion("Caption") f:ormat(formatlist) norow:lab
+    nodots longtable label clabel(string)] This command makes use of the file command,
+    added to Stata on 8 May 2001. If file is not recognized, update query.
+  help_file_type: hlp
+dfl:
+  title: dfl
+  short_description: DiNardo, Fortin and Lemieux Counterfacual Kernel Density
+  syntax: dfl depvar indepvars [if exp] [in range] , outcome(varname) [group(varname)
+    min(integer) max(integer) nbins(integer) w(bandwidth) step(varlist) adaptive gauss
+    epan oaxaca quietly probit nxvar(string) ncfactual(string) nufactual(string) nfactual(string)
+    graph_combine axis_selection_options axis_scale_options title_options nogroupt
+    name3(string)]
+  description: 'dfl estimates DiNardo, Fortin and Lemieux Counterfacual Kernel Densities.
+
+    Treatment status is identified by depvar==1 for the treated and depvar==0
+
+    for the untreated observations.
+
+    The propensity score - the conditional treatment probability - is estimated by
+
+    the program on the indepvars.
+
+    outcome variable has to be specified.
+
+    dfl also support graph options such as graph_combine, title_options and
+
+    axis_selection_options.
+
+    Several different weight can be used on this procedure. In this ado we use the
+    following weight.
+
+    Weight=1-Prob(Depvar=1)/Prob(Depvar=0).'
+  options:
+  - group the group variable.
+  - graph cfactual (compares the (Depvar=0) distribution to the (Depvar=0) distribution
+    that would have prevailed if they had been paid like (Depvar=1)) , ufactual (compares
+    the (Depvar=1) distribution to the counterfactual. These will be different to
+    the extent that the X's of the two groups differ) and diff (difference between
+    the how (Depvar=0) distribution that would have prevailed if they had been paid
+    like (Depvar=1) and (Depvar=1) distribution).
+  - min sets the minimum value. When omited dfl uses the minimum value of the specified
+    outcome.
+  - max sets the maximum value. When omited dfl uses the maximum value of the specified
+    outcome.
+  - nbins number of equaly spaced intervals.Default value 200.
+  - adaptive produces density estimates using adaptive kernel estimation methods.
+    Please note that the method is slower than than the default one.
+  - step Sequential decomposition. This option runs N+1 models (N being the number
+    of variables in the varlist). The first model will consider all variables. Each
+    subsequent model will remove one variable at the time. The final output is a single
+    graph with overlaying kernel density differences for the N+1 models. My impression
+    is that if N>2 the figure gets very clutered.
+  - gauss specify the kernel (gaussian).
+  - epan specify the kernel (epanechnikov).
+  - oaxaca compute mean using the estimated density to and compare to the actual mean
+    of log wages or oaxaca wages (the predicted values).
+  - quietly do not print output of propensity score estimation.
+  - probit use probit instead of the default logit to estimate the propensity score.
+  - nxvar assign a label to the x-axis.
+  - ncfactual assign a label to cfactual.
+  - nfactual assign a label to factual.
+  - nufactual assing a label to ufactual.
+  - nogroupt drops the group names from the figure.
+  examples: []
+  stored_results: []
+  references:
+  - 'DiNardo, J., N.M. Fortin, and T.Lemieux (1996) "Labour Market Insitutions and
+    the Distribution of Wages, 1973-1992: A Semiparametric Approach," Econometrica,
+    64(5): 1001-1044. Van Kerm, P. (2003) "Adaptive kernel density estimation."The
+    Stata Journal , 3(2): 148-156.'
+  authors:
+  - Joao Pedro Azevedo, World Bank, jazevedo@worldbank.org
+  acknowledgements: ''
+  also_see:
+  - 'Manual: [R] kdensity Online: help for kdensity and help for akdensity and decompose
+    and jmp if installed.'
+  version: ''
+  other_dinardo__fortin_and_lemieux_counterfacual_kernel_density: dfl depvar indepvars
+    [if exp] [in range] , outcome(varname) [group(varname) min(integer) max(integer)
+    nbins(integer) w(bandwidth) step(varlist) adaptive gauss epan oaxaca quietly probit
+    nxvar(string) ncfactual(string) nufactual(string) nfactual(string) graph_combine
+    axis_selection_options axis_scale_options title_options nogroupt name3(string)]
+  other_aknowledgements: This ado uses part of the code written by John DiNardo. I
+    would like to thank some Stata users who have made comments to an earlier release
+    of this ado, in particular Jean Ries. The usual disclaimer applies.
+  help_file_type: hlp

@@ -1,0 +1,513 @@
+# Teaching and Mentoring Database
+# Author: João Pedro Azevedo
+# Purpose: Multi-use database for website, CV, EB1 petition, job applications
+# Last Updated: 2025-12-23
+
+# === SCHEMA REFERENCE ===
+# Required fields: id, date_start, year, institution, course_title, role
+# Optional fields: All others - only include if you have the data
+#
+# Field definitions:
+#   id:                    Unique identifier (kebab-case: "econometrics-nyc-2022")
+#   date_start:            ISO date YYYY-MM-DD (course start date)
+#   date_end:              ISO date YYYY-MM-DD (course end date, if applicable)
+#   year:                  Integer for filtering (year course began)
+#   years:                 Array of years for multi-year courses [2001, 2002, 2003]
+#   institution:           University, organization, or venue
+#   institution_type:      university | government | organization | training_program | other
+#   country:               Country where teaching occurred
+#   location:              "City, Country" or "Virtual" (optional)
+#   course_title:          Official course name
+#   course_code:           Academic course number/code if applicable
+#   course_type:           course | seminar | workshop | tutorial | lecture_series | supervision | mentoring
+#   level:                 undergraduate | graduate | professional | executive | general
+#   students_count:        Number of students enrolled (if known)
+#   semesters:             Semester/period description (e.g., "Academic Year", "July–August")
+#   duration_hours:        Hours per week or total hours
+#   description:           Course overview, learning objectives, and context
+#   role:                  Instructor | Co-instructor | Training Instructor | Specialist Trainer | Co-Advisor | Committee Member
+#   role_type:             primary | co-taught | guest | mentoring | supervision
+#   affiliation:           Your affiliation/employer at time of teaching
+#   affiliation_role:      Your job title at time of teaching
+#   language:              Language of instruction (English, Portuguese, Spanish, etc.)
+#   format:                in-person | hybrid | online | asynchronous
+#   frequency:             one-time | semester | annual | recurring
+#   pedagogical_approach:  Teaching methodology/approach used
+#   assessment_methods:    How students were evaluated
+#   student_demographics:  Description of student population
+#   student_outcomes:      Notable student achievements/placements
+#   feedback_summary:      Summary of student feedback/evaluations
+#   co_instructors:        Co-teachers/collaborators - list of {name, title, org, role}
+#   organizations:         Collaborating institutions
+#   urls:                  Web links (same structure as events.yml)
+#     syllabus:            Link to course syllabus
+#     website:             Course website/LMS page
+#     materials:           Link to teaching materials
+#     recordings:          Link to recorded lectures
+#   evidence:              Files you have saved for documentation (same structure as events.yml)
+#     syllabus:            Path to saved syllabus
+#     materials:           Path to course materials folder
+#     assignments:         Path to sample assignments
+#     grade_distribution:  Path to anonymized grade data
+#     student_feedback:    Path to student evaluations
+#     certificate:         Path to teaching certificate
+#   notes:                 Additional context/administrative notes
+#   tags:                  Thematic tags for filtering (consolidates topics + tags)
+#
+# Tag Taxonomy:
+#   econometrics       📊 Econometrics, causal inference, regression methods
+#   statistics         📈 Statistics, probability, data analysis
+#   development        🌍 Development economics, poverty measurement
+#   evaluation         📋 Program evaluation, impact assessment
+#   learning           📚 Learning outcomes, education measurement
+#   data-science       💻 Data science, programming, computational methods
+#   supervision        👥 PhD/Master supervision, mentoring
+#   seminar            🎓 Seminars, workshops, short courses
+#   methodology        🔬 Research methodology, quantitative methods
+#   policy             🏛️ Policy analysis, governance, applied work
+#   inequality         💰 Inequality measurement, poverty analysis
+#   public-health      ⚕️ Public health, demography, health data
+
+
+teaching:
+
+  # ============================================================================
+  # 2024
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2023
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2022
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2021
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2020
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2019
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2018
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2017
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2016
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2015
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2014
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2013
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2012
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2011
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2010
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2009
+  # ============================================================================
+
+
+  # ============================================================================
+  # 2008
+  # ============================================================================
+  - id: "ibge-masterthesis-supervision-2008"
+    date_start: "2008-01-01"
+    date_end: "2008-12-31"
+    year: 2008
+    years: [2008]
+    institution: "Fundação Instituto Brasileiro de Geografia e Estatística (IBGE)"
+    institution_type: "government"
+    country: "Brazil"
+    course_title: "Master's Thesis Co-Advisor"
+    level: "graduate"
+    role: "Co-Advisor"
+    affiliation: "World Bank"
+    affiliation_role: "Lead Economist"
+    description: |
+      Co-advised Master's thesis of Marcelo Pessoa da Silva in the Master's Program in 
+      Population Studies and Social Research at IBGE. Thesis title: "Avaliação de impacto 
+      utilizando Registros administrativos e dados Secundários: experiência do programa 
+      Brasil alfabetizado" (Impact Evaluation Using Administrative Records and Secondary 
+      Data: Experience of the Brasil Alfabetizado Program). Student went on to develop 
+      innovative evaluation methods using administrative data from Brazil's adult literacy program.
+    student_demographics: "Master's student at IBGE demographic research program"
+    notes: "Collaboration with Brazil's national statistical institute on literacy program evaluation"
+    tags: [supervision, statistics, methodology, measurement, learning]
+
+  - id: "ufmg-phd-cosupervisor-betania-2008"
+    date_start: "2006-01-01"
+    date_end: "2008-12-31"
+    year: 2006
+    years: [2006, 2007, 2008]
+    institution: "Universidade Federal de Minas Gerais (UFMG)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Doctoral Co-Advisor"
+    level: "graduate"
+    role: "Co-Advisor"
+    affiliation: "World Bank"
+    affiliation_role: "Lead Economist"
+    description: |
+      Co-advised PhD dissertation of Betânia Totino Peixoto in Economics at UFMG. 
+      Thesis title: "Uma Contribuição para prevenção da criminalidade" (A Contribution 
+      to Crime Prevention). Also served on her doctoral qualifying examination committee 
+      (2006) and defense committee (2008). Dissertation built on impact evaluation of 
+      the Fica Vivo violence prevention program in Minas Gerais.
+    student_demographics: "PhD student in economics"
+    notes: "Doctoral supervision focused on rigorous evaluation of crime prevention interventions; 
+      dissertation was published as part of broader impact evaluation research"
+    tags: [supervision, poverty, methodology, measurement, governance]
+
+  # ============================================================================
+  # 2006
+  # ============================================================================
+
+  - id: "ufrj-phd-committee-luiz-otavio-2006"
+    date_start: "2006-01-01"
+    date_end: "2006-12-31"
+    year: 2006
+    years: [2006]
+    institution: "Universidade Federal do Rio de Janeiro (UFRJ)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Doctoral Examination Committee"
+    level: "graduate"
+    role: "Committee Member"
+    affiliation: "World Bank"
+    affiliation_role: "Lead Economist"
+    description: |
+      Served on doctoral qualifying examination committee for Luís Otávio de Abreu Reiff, 
+      PhD student in Industrial and Technology Economics at UFRJ. Examined dissertation 
+      on "UMA AVALIAÇÃO DE IMPACTO DO PROGRAMA DE MODERNIZAÇÃO DA ADMINISTRAÇÃO TRIBUTÁRIA 
+      (PMAT/BNDES)" (Impact Evaluation of the Tax Administration Modernization Program). 
+      Committee provided feedback on evaluation methodology and research design.
+    student_demographics: "PhD student in industrial and technology economics"
+    notes: "Committee examination of doctoral research on BNDES tax modernization program evaluation"
+    tags: [supervision, methodology, measurement, governance]
+
+  - id: "enap-evaluacao-politicas-publicas-2006"
+    date_start: "2006-07-01"
+    date_end: "2006-08-31"
+    year: 2006
+    years: [2006]
+    institution: "Escola Nacional de Administração Pública (ENAP)"
+    institution_type: "government"
+    country: "Brazil"
+    course_title: "Avaliação em Políticas Públicas (Evaluation in Public Policies)"
+    level: "professional"
+    semesters: "July–August"
+    role: "Training Instructor"
+    affiliation: "Escola Nacional de Administração Pública"
+    affiliation_role: "Visiting Professor (Professor Visitante)"
+    description: |
+      Designed and delivered specialized training on public policy evaluation methods 
+      to Brazilian government professionals and administrators. Covered evaluation frameworks, 
+      methodological approaches, and practical case studies from Brazilian policy programs.
+    pedagogical_approach: "Interactive training with case studies and practical applications"
+    student_demographics: "Government officials, program managers, and policy analysts"
+    notes: "Part of ENAP professional development programs for Brazilian civil service"
+    tags: [seminar, methodology, policy, governance, measurement]
+
+  - id: "enap-fnde-monitoring-evaluation-2006"
+    date_start: "2006-05-01"
+    date_end: "2006-05-31"
+    year: 2006
+    years: [2006]
+    institution: "Escola Nacional de Administração Pública (ENAP)"
+    institution_type: "government"
+    country: "Brazil"
+    course_title: "Curso de Aperfeiçoamento em Acompanhamento, Avaliação e Monitoramento de Programas e Projetos Sociais do FNDE"
+    level: "professional"
+    semesters: "May"
+    role: "Training Instructor"
+    affiliation: "Escola Nacional de Administração Pública"
+    affiliation_role: "Visiting Professor"
+    description: |
+      Advanced course on monitoring, evaluation, and assessment of social and project 
+      programs administered by the Brazilian National Fund for Education Development (FNDE). 
+      Focused on elaboration of terms of reference for program and project evaluation, 
+      including methodological guidance and practical frameworks.
+    pedagogical_approach: "Professional training with case studies from FNDE programs"
+    student_demographics: "FNDE staff and program managers"
+    notes: "Specialized training for federal education program administrators"
+    tags: [seminar, methodology, policy, governance, measurement, learning]
+
+  - id: "enap-evaluacao-ex-post-social-programs-2006"
+    date_start: "2006-02-01"
+    date_end: "2006-02-28"
+    year: 2006
+    years: [2006]
+    institution: "Escola Nacional de Administração Pública (ENAP)"
+    institution_type: "government"
+    country: "Brazil"
+    course_title: "Avaliação ex-post de programas sociais para gestores (Post-evaluation of Social Programs for Managers)"
+    level: "professional"
+    semesters: "February"
+    role: "Training Instructor"
+    affiliation: "Escola Nacional de Administração Pública"
+    affiliation_role: "Visiting Professor"
+    description: |
+      Comprehensive training on ex-post evaluation of social programs for government 
+      managers. Two-component course: (1) Evaluation Methodology II covering basic 
+      statistical inference and experimental design; (2) Cost estimation and use of 
+      evaluation for program improvement, results documentation and dissemination.
+    pedagogical_approach: "Advanced quantitative methods training with practical application to social programs"
+    student_demographics: "Government managers and evaluation specialists from federal and state agencies"
+    assessment_methods: "Practical case studies and evaluation design projects"
+    notes: "Two-module specialized course for public sector evaluation professionals"
+    tags: [seminar, statistics, methodology, measurement, governance]
+
+  # ============================================================================
+  # 2005
+  # ============================================================================
+
+  - id: "psi-regression-discontinuity-2005"
+    date_start: "2005-02-01"
+    date_end: "2005-02-01"
+    year: 2005
+    years: [2005]
+    institution: "Policy Study Institute"
+    institution_type: "training_program"
+    country: "United Kingdom"
+    course_title: "Regression Discontinuity Design: An Overview"
+    level: "professional"
+    semesters: "February"
+    duration_hours: 8
+    role: "Specialist Trainer"
+    affiliation: "Policy Study Institute"
+    affiliation_role: "Technical Specialist"
+    description: |
+      Specialized technical training on regression discontinuity design (RDD), an important 
+      quasi-experimental evaluation methodology. Provided overview and practical guidance 
+      on design and implementation for policy evaluation research.
+    pedagogical_approach: "Technical seminar with methodological focus"
+    student_demographics: "Researchers and policy analysts"
+    notes: "Short specialized technical course on causal inference methodology"
+    tags: [seminar, statistics, methodology, measurement]
+
+  # ============================================================================
+  # 2004
+  # ============================================================================
+
+  - id: "uff-econometria-aplicada-master-2003"
+    date_start: "2003-01-01"
+    date_end: "2004-12-31"
+    year: 2003
+    years: [2003, 2004]
+    institution: "Universidade Federal Fluminense (UFF)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Econometria Aplicada (Applied Econometrics)"
+    level: "graduate"
+    semesters: "Academic Year"
+    duration_hours: 8
+    role: "Substitute Professor"
+    affiliation: "Universidade Federal Fluminense"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught applied econometrics to Master's students in Economics at UFF. Covered advanced 
+      econometric methods, causal inference, and applications in empirical research. Focus 
+      on practical implementation of econometric techniques using real data and research problems.
+    student_demographics: "Master's students in economics"
+    notes: "8 hours per week teaching position"
+    tags: [statistics, econometrics, methodology]
+
+  # ============================================================================
+  # 2003
+  # ============================================================================
+
+  # ============================================================================
+  # 2002
+  # ============================================================================
+
+  # ============================================================================
+  # 2001
+  # ============================================================================
+
+  - id: "newcastle-monetary-economics-2000"
+    date_start: "2000-01-01"
+    date_end: "2001-12-31"
+    year: 2000
+    years: [2000, 2001]
+    institution: "University of Newcastle Upon Tyne"
+    institution_type: "university"
+    country: "United Kingdom"
+    course_title: "Economia Monetaria (Monetary Economics)"
+    level: "undergraduate"
+    semesters: "Academic Year"
+    duration_hours: 40
+    role: "Substitute Professor"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught monetary economics to undergraduate students at Newcastle, covering 
+      money supply, banking systems, central banking, and macroeconomic policy. 
+      This was my first international teaching experience.
+    student_demographics: "Undergraduate economics students"
+    notes: "40 hours per week full-time teaching position"
+    tags: [statistics, governance]
+
+  - id: "newcastle-national-accounting-2000"
+    date_start: "2000-01-01"
+    date_end: "2001-12-31"
+    year: 2000
+    years: [2000, 2001]
+    institution: "University of Newcastle Upon Tyne"
+    institution_type: "university"
+    country: "United Kingdom"
+    course_title: "Contabilidade Nacional (National Accounting)"
+    level: "undergraduate"
+    semesters: "Academic Year"
+    duration_hours: 40
+    role: "Substitute Professor"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught national accounting and macroeconomic statistics to undergraduate students. 
+      Covered GDP accounting, national income statistics, and balance of payments accounting.
+    student_demographics: "Undergraduate economics students"
+    notes: "Part of 40 hours per week full-time teaching load"
+    tags: [statistics, governance]
+
+  # ============================================================================
+  # 2000
+  # ============================================================================
+
+  - id: "uff-calculo-i-2001"
+    date_start: "2001-01-01"
+    date_end: "2003-12-31"
+    year: 2001
+    years: [2001, 2002, 2003]
+    institution: "Universidade Federal Fluminense (UFF)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Cálculo I (Calculus I)"
+    level: "undergraduate"
+    semesters: "Academic Year"
+    duration_hours: 40
+    role: "Substitute Professor"
+    affiliation: "Universidade Federal Fluminense"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught foundational calculus to undergraduate economics and engineering students at UFF. 
+      Covered limits, derivatives, integrals, and applications in optimization and economic modeling.
+    student_demographics: "Undergraduate students in economics and engineering"
+    notes: "40 hours per week full-time teaching position"
+    tags: [statistics]
+
+  - id: "uff-introducao-economia-2001"
+    date_start: "2001-01-01"
+    date_end: "2003-12-31"
+    year: 2001
+    years: [2001, 2002, 2003]
+    institution: "Universidade Federal Fluminense (UFF)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Introdução a Economia (Introduction to Economics)"
+    level: "undergraduate"
+    semesters: "Academic Year"
+    duration_hours: 40
+    role: "Substitute Professor"
+    affiliation: "Universidade Federal Fluminense"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught foundational economics to undergraduate students at UFF. Covered microeconomic 
+      and macroeconomic principles, market structures, and applications to Brazilian economy.
+    student_demographics: "Undergraduate students in economics and business"
+    notes: "40 hours per week full-time teaching position"
+    tags: [governance]
+
+  - id: "uff-econometria-aplicada-undergrad-2001"
+    date_start: "2001-01-01"
+    date_end: "2003-12-31"
+    year: 2001
+    years: [2001, 2002, 2003]
+    institution: "Universidade Federal Fluminense (UFF)"
+    institution_type: "university"
+    country: "Brazil"
+    course_title: "Econometria Aplicada (Applied Econometrics)"
+    level: "undergraduate"
+    semesters: "Academic Year"
+    duration_hours: 40
+    role: "Substitute Professor"
+    affiliation: "Universidade Federal Fluminense"
+    affiliation_role: "Professor Substituto"
+    description: |
+      Taught applied econometrics to undergraduate students at UFF. Covered regression analysis, 
+      hypothesis testing, econometric methods, and practical applications with real economic data.
+    student_demographics: "Undergraduate economics students"
+    notes: "40 hours per week full-time teaching position"
+    tags: [statistics, methodology]
+
+# ==============================================================================
+# SUMMARY STATISTICS
+# ==============================================================================
+# Generated from data: 13 teaching experiences (2000-2008)
+#
+summary:
+  total_courses: 13
+  total_years_teaching: 2000–2008 (8 years active teaching)
+  institutions: 
+    - "Universidade Federal Fluminense (UFF)"
+    - "University of Newcastle Upon Tyne"
+    - "Escola Nacional de Administração Pública (ENAP)"
+    - "Policy Study Institute"
+    - "Fundação IBGE"
+    - "Universidade Federal de Minas Gerais (UFMG)"
+    - "Universidade Federal do Rio de Janeiro (UFRJ)"
+  levels_taught: [undergraduate, graduate, professional]
+  students_advised: 3
+  countries_teaching: [Brazil, United Kingdom]
+  tag_distribution:
+    statistics: 7
+    methodology: 8
+    governance: 5
+    supervision: 5
+    seminar: 4
+    policy: 2
+    learning: 2
+    poverty: 1

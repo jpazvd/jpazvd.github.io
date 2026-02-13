@@ -1,0 +1,198 @@
+---
+layout: archive
+title: "Data & Analytics Tools"
+permalink: /softwares/
+author_profile: true
+description: "Stata modules and data analytics tools by João Pedro Azevedo including WBOPENDATA, poverty measurement, and survey analysis tools."
+---
+
+{% include base_path %}
+
+<p>Open-source tools and Stata modules I have developed for data analysis, poverty measurement, and accessing World Bank data.</p>
+
+<!-- Software Metrics Banner - matching Publications page style -->
+<div class="citation-metrics jp-gradient-banner">
+  <h3 class="jp-gradient-banner__title">RePEc Software Metrics</h3>
+  <div class="jp-stats-row">
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.repec.software.count | default: '22' }}</div>
+      <div class="jp-stat__label">Stata Modules</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ site.data.citations.repec.software.downloads_total | default: '26886' }}</div>
+      <div class="jp-stat__label">Total Downloads</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=all" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}</a></div>
+      <div class="jp-stat__label">Global Rank</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=us" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software_us.rank_total_downloads | default: '6' }}</a></div>
+      <div class="jp-stat__label">US Rank</div>
+    </div>
+  </div>
+  <div class="jp-banner__footer">
+    <a href="https://ideas.repec.org/e/pwa88.html#soft" target="_blank" rel="noopener">All Software on IDEAS</a> |
+    <a href="{{ site.data.citations.repec.stats_url | default: 'http://logec.repec.org/RAS/pwa88.htm' }}" target="_blank" rel="noopener">Author Statistics</a>
+    <br>{{ site.data.citations.repec.ranking_note | default: 'Top 5% of authors by downloads' }} · Last updated: {{ site.data.citations.repec.last_updated | default: '—' }}
+  </div>
+</div>
+
+<div class="jp-quick-links">
+  <a href="{{ base_path }}/publications/">Publications</a>
+  <a href="{{ base_path }}/blogs/">Blogs</a>
+  <a href="{{ base_path }}/research/">Research</a>
+</div>
+
+<hr>
+
+<h2>Stata Modules on SSC</h2>
+
+<h3><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank">WBOPENDATA</a></h3>
+<p>
+  Access World Bank databases directly from Stata. Query the World Development Indicators, 
+  Doing Business, Health Nutrition and Population Statistics, and more.
+</p>
+<ul>
+  <li><strong>Install:</strong> <code>ssc install wbopendata</code></li>
+  <li><a href="https://github.com/worldbank/wbopendata" target="_blank">GitHub Repository</a></li>
+  <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-databases" target="_blank">Documentation</a></li>
+</ul>
+
+<h3>All Stata Modules</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Description</th>
+      <th>Install</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank">ainequal</a></strong></td>
+      <td>Inequality measures</td>
+      <td><code>ssc install ainequal</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank">apoverty</a></strong></td>
+      <td>Poverty measures</td>
+      <td><code>ssc install apoverty</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457562.html" target="_blank">adecomp</a></strong></td>
+      <td>Shapley decomposition</td>
+      <td><code>ssc install adecomp</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457563.html" target="_blank">drdecomp</a></strong></td>
+      <td>Datt-Ravallion decomposition</td>
+      <td><code>ssc install drdecomp</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457564.html" target="_blank">skdecomp</a></strong></td>
+      <td>Shapley-Kelkar decomposition</td>
+      <td><code>ssc install skdecomp</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457565.html" target="_blank">mpovline</a></strong></td>
+      <td>Multiple poverty lines</td>
+      <td><code>ssc install mpovline</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank">groupfunction</a></strong></td>
+      <td>Collapse with multiple functions</td>
+      <td><code>ssc install groupfunction</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank">sae</a></strong></td>
+      <td>Small area estimation</td>
+      <td><code>ssc install sae</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank">fhsae</a></strong></td>
+      <td>Fay-Herriot small area estimation</td>
+      <td><code>ssc install fhsae</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457191.html" target="_blank">hoi</a></strong></td>
+      <td>Human Opportunity Index</td>
+      <td><code>ssc install hoi</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s449001.html" target="_blank">dfl</a></strong></td>
+      <td>DiNardo-Fortin-Lemieux decomposition</td>
+      <td><code>ssc install dfl</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank">grqreg</a></strong></td>
+      <td>Graphical quantile regression</td>
+      <td><code>ssc install grqreg</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank">outtable</a></strong></td>
+      <td>Export matrix to LaTeX table</td>
+      <td><code>ssc install outtable</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank">alorenz</a></strong></td>
+      <td>Lorenz and concentration curves</td>
+      <td><code>ssc install alorenz</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank">isopoverty</a></strong></td>
+      <td>Iso-poverty curves</td>
+      <td><code>ssc install isopoverty</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank">changemean</a></strong></td>
+      <td>Mean vs distribution effects</td>
+      <td><code>ssc install changemean</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank">mol</a></strong></td>
+      <td>Effective literacy index (Basu-Foster)</td>
+      <td><code>ssc install mol</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank">turnbull</a></strong></td>
+      <td>Willingness-to-pay estimation</td>
+      <td><code>ssc install turnbull</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank">spike</a></strong></td>
+      <td>Zero willingness-to-pay</td>
+      <td><code>ssc install spike</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank">factortest</a></strong></td>
+      <td>Tests for factor analysis</td>
+      <td><code>ssc install factortest</code></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank">crtest</a></strong></td>
+      <td>Cramer-Ridder pooling test</td>
+      <td><code>ssc install crtest</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <a href="https://ideas.repec.org/e/pwa88.html#soft" target="_blank">View all {{ site.data.citations.repec.software.count }} modules on RePEc →</a>
+</p>
+
+<hr>
+
+<h2>GitHub Repositories</h2>
+
+<ul>
+  <li><a href="https://github.com/worldbank/wbopendata" target="_blank">worldbank/wbopendata</a> - World Bank Open Data Stata module</li>
+  <li><a href="https://github.com/jpazvd" target="_blank">jpazvd</a> - Personal GitHub profile with additional code</li>
+</ul>
+
+<hr>
+
+<p class="jp-muted">
+  <em>All tools are open source and available for academic and research use.</em>
+</p>

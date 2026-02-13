@@ -1,0 +1,15 @@
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ site.url }}/#website",
+  "url": "{{ site.url }}",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "publisher": {
+    "@id": "{{ site.url }}/#person"
+  },
+  "inLanguage": "en-US"
+}
+</script>

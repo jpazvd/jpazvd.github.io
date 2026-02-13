@@ -1,0 +1,97 @@
+---
+layout: archive
+title: "GitHub Repositories"
+permalink: /github/
+author_profile: true
+description: "Open-source projects and code repositories by João Pedro Azevedo on GitHub, including Stata packages for poverty measurement, education analytics, and development economics."
+---
+
+{% include base_path %}
+
+<p>My open-source projects and code repositories. These tools support research and analysis in education, poverty measurement, and development economics.</p>
+
+<!-- Stats Banner -->
+<div class="jp-gradient-banner" id="github-stats">
+  <div class="jp-stats-row">
+    <div class="jp-stat">
+      <div class="jp-stat__value" id="repo-count">—</div>
+      <div class="jp-stat__label">Public Repos</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value" id="total-stars">—</div>
+      <div class="jp-stat__label">Total Stars</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value" id="total-forks">—</div>
+      <div class="jp-stat__label">Total Forks</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value" id="top-language">—</div>
+      <div class="jp-stat__label">Top Language</div>
+    </div>
+  </div>
+  <div class="jp-banner__footer">
+    <a href="https://github.com/jpazvd" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> View on GitHub
+    </a>
+  </div>
+</div>
+
+<!-- Topic Filter -->
+<div class="tag-filters" id="topic-filters">
+  <button class="tag-filter topic-btn active" data-filter="all">All <span class="filter-count" id="all-count">—</span></button>
+  <button class="tag-filter topic-btn" data-filter="stata-packages">Stata Packages</button>
+  <button class="tag-filter topic-btn" data-filter="poverty">Poverty</button>
+  <button class="tag-filter topic-btn" data-filter="inequality">Inequality</button>
+  <button class="tag-filter topic-btn" data-filter="education">Education</button>
+  <button class="tag-filter topic-btn" data-filter="data-tools">Data Tools</button>
+  <button class="tag-filter topic-btn" data-filter="research">Research</button>
+  <button class="tag-filter topic-btn" data-filter="world-bank">World Bank</button>
+</div>
+
+<!-- Language Filter -->
+<div class="tag-filters tag-filters--alt" id="language-filters">
+  <strong class="tag-filters__label">Language:</strong>
+  <button class="tag-filter lang-btn active" data-filter="all">All</button>
+</div>
+
+<!-- Sort Options -->
+<div class="github-sort-bar">
+  <strong>Sort by:</strong>
+  <select id="sort-select">
+    <option value="featured">Featured First</option>
+    <option value="updated">Recently Updated</option>
+    <option value="stars">Most Stars</option>
+    <option value="name">Name (A-Z)</option>
+    <option value="created">Newest First</option>
+  </select>
+  <label>
+    <input type="checkbox" id="hide-forks" checked> Hide forks
+  </label>
+  <label>
+    <input type="checkbox" id="hide-hidden" checked> Hide utility repos
+  </label>
+</div>
+
+<h2>Repositories</h2>
+
+<div id="repos-loading" class="github-loading">
+  <i class="fa fa-spinner fa-spin fa-2x"></i>
+  <p>Loading repositories from GitHub...</p>
+</div>
+
+<div id="repos-error" class="github-error">
+  <i class="fa fa-exclamation-triangle fa-2x"></i>
+  <p>Unable to load repositories. <a href="https://github.com/jpazvd?tab=repositories" target="_blank">View on GitHub</a></p>
+</div>
+
+<div id="repos-list" class="posts-list github-repos"></div>
+
+<!-- Pass YAML data to JavaScript -->
+<script id="repo-tags-data" type="application/json">
+{% assign repo_data = site.data.github_repos.repos %}
+[{% for repo in repo_data %}{"name":"{{ repo.name }}","tags":{{ repo.tags | jsonify }},"featured":{{ repo.featured | default: false }},"hide":{{ repo.hide | default: false }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+</script>
+
+<script src="/assets/js/github-repos.js"></script>
+

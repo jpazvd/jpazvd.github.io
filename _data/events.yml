@@ -1,0 +1,2036 @@
+# Events and Speaking Engagements Database
+# Author: João Pedro Azevedo
+# Purpose: Multi-use database for website, CV, EB1 petition, job applications
+# Last Updated: 2025-12-23
+
+# === SCHEMA REFERENCE ===
+# Required fields: id, date, year, event, location, role
+# Optional fields: All others - only include if you have the data
+#
+# Field definitions:
+#   id:                    Unique identifier (kebab-case: "unsc56-ai-2025")
+#   date:                  ISO date YYYY-MM-DD
+#   year:                  Integer for filtering
+#   event:                 Official event name
+#   event_type:            conference | summit | workshop | side_event | webinar | seminar | university_talk | guest_lecture | public_lecture
+#   location:              "City, Country" or "Virtual"
+#   venue:                 Specific venue (e.g., "United Nations Headquarters")
+#   scope:                 international | regional | national | local
+#   session:               Session/panel title
+#   session_type:          keynote | panel | paper | roundtable | workshop
+#   presentation_title:    Your specific talk title (if distinct from session)
+#   abstract:              Summary of your intellectual contribution
+#   role:                  Speaker | Panelist | Presenter | Keynote | Chair | Organizer | Delegate
+#   role_type:             invited | keynote | peer_reviewed | organizer | delegate
+#   affiliation:           Your organization at time of event
+#   affiliation_role:      Your job title at time of event
+#   participants:          Other panelists/speakers - list of {name, title, org, role}
+#   organizers:            List of organizing institutions
+#   audience_size:         Estimated number of attendees
+#   countries_represented: Number of countries (for international events)
+#   urls:
+#     event:               Official event homepage
+#     session:             Session-specific page
+#     program:             PDF program or agenda
+#     recording:           Video/audio recording
+#     slides:              Your presentation file
+#     news:                Press coverage or recap
+#   evidence:              Files you have saved for documentation
+#     invitation:          Path to invitation letter
+#     program:             Path to saved program
+#     slides:              Path to your slides
+#     recording:           Path to saved recording
+#     photo:               Path to event photo
+#   description:           Additional context/notes
+#   tags:                  Thematic tags for filtering
+#
+# Tag Taxonomy:
+#   learning        📚 Learning & education measurement, assessments
+#   statistics      📊 Official statistics, methodology, standards
+#   governance      🏛️ Data governance, policies, frameworks
+#   sdg             🎯 SDG monitoring, indicator frameworks
+#   child-wellbeing 👶 Child welfare, MICS, child outcomes
+#   poverty         💰 Poverty, inequality measurement
+#   mobility        🔄 Social mobility, intergenerational dynamics
+#   partnerships    🤝 International partnerships, data alliances
+#   africa          🌍 Africa-focused events
+#   digital         💻 Digital tools, AI, technology in statistics
+
+
+events:
+
+  # ============================================================================
+  # 2025
+  # ============================================================================
+
+- id: geeap-literacy-launch-2025
+  date: '2025-12-04'
+  year: 2025
+  event: 'Webinar: Effective Reading Instruction in Low- and Middle-Income Countries: What the Evidence Shows'
+  event_type: webinar
+  location: Virtual
+  scope: international
+  session_time: '9:00 AM – 10:30 AM ET'
+  session: GEEAP-endorsed literacy report global launch panel discussion
+  session_type: panel
+  presentation_title: Panel speaker on reading instruction and literacy evidence
+  abstract: |
+    Participated in GEEAP webinar launch of evidence review on effective reading instruction 
+    across 160+ languages and 151 studies in low- and middle-income countries. Panel discussion 
+    addressed the learning crisis (70% of children in LMICs cannot read simple text by age 10) 
+    and solutions: systematic adoption of evidence-based instruction teaching six core literacy 
+    skills explicitly, systematically, and comprehensively.
+  role: Panelist
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  participants:
+  - name: João Pedro Azevedo
+    org: UNICEF
+    title: Chief Statistician; Deputy Director, DAPM
+    role: panelist
+  - name: Martin Benavides
+    org: UNESCO International Institute for Educational Planning (IIEP)
+    title: Director
+    role: panelist
+  - name: Nathanael Bevan
+    org: FCDO
+    title: Deputy Director of What Works Research and Evidence
+    role: panelist
+  - name: Margaret (Peggy) Dubeck
+    title: Consultant
+    role: speaker
+  - name: Rachel Glennerster
+    org: Center for Global Development
+    title: President; GEEAP member
+    role: panelist
+  - name: Rob Jenkins
+    org: Harvard University
+    title: Lecturer on Education, Faculty Co-Chair
+    role: panelist
+  - name: Ben Piper
+    org: Bill & Melinda Gates Foundation
+    title: Global Education; GEEAP member
+    role: panelist
+  - name: Jaime Saavedra
+    org: World Bank
+    title: Director of Human Development for Latin America and the Caribbean; GEEAP member
+    role: panelist
+  - name: Dr. Carlos Torrendel
+    org: Ministerio de Capital Humano, Argentina
+    title: Secretario de Educación
+    role: panelist
+  organizers:
+  - World Bank
+  - Global Evidence Advisory Panel (GEEAP)
+  - FCDO
+  - UNICEF
+  urls:
+    event: https://geeap.org/event/geeap-endorsed-literacy-report-global-launch/
+  description: |
+    GEEAP is an independent, cross-disciplinary body of renowned researchers co-convened by 
+    the World Bank, the Foreign, Commonwealth & Development Office (FCDO), and UNICEF. 
+    The webinar presented the GEEAP-endorsed paper "Effective Reading Instruction in Low- and 
+    Middle-Income Countries: What the Evidence Shows," synthesizing evidence from 151 studies 
+    across 160+ languages on what works in reading instruction and the critical skills for 
+    literacy success. Panel discussed implications, promises, and implementation challenges for 
+    scaling evidence-based literacy instruction globally.
+  tags:
+  - learning
+  - partnerships
+  - sdg
+  - statistics
+
+- id: adea-triennale-2025
+  date: '2025-10-31'
+  year: 2025
+  event: ADEA Triennale 2025
+  event_type: conference
+  location: Accra, Ghana
+  venue: Labadi Beach Hotel
+  scope: regional
+  session: Measurement in Foundational Learning in Africa
+  session_type: panel
+  presentation_title: 'UNICEF: Strengthening Learning Data Ecosystems for Africa'
+  abstract: "Presented UNICEF's three-pillar approach to strengthening learning data ecosystems in Africa:\n(1) Data Generation through MICS Foundational Learning Module implemented in 55 countries \n(16 African), with ongoing revision to align with the Global Proficiency Framework (FLM2.0) \nand partnerships with governments to strengthen national assessments;\n(2) Data Transparency & Use through the Learning & Skills Data Lab bringing together \ncountry-level data on learning and skills to promote research and visual analytics;\n(3) Monitoring & Action through the Foundational Learning Action Tracker (FLAT) monitoring \ncommitments-to-actions in 124 countries.\n"
+  role: Panelist
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Clio Dintilhac
+    title: Senior Program Officer
+    org: Bill & Melinda Gates Foundation
+    role: panelist
+  - name: Hilaire Hounkpodoté
+    title: Coordinator
+    org: PASEC/CONFEMEN
+    role: panelist
+  - name: Manos Antoninis
+    title: Director
+    org: UNESCO GEM Report
+    role: panelist
+  - name: Armando Ali
+    role: panelist
+  - name: Cally Ardington
+    title: Director, DataFirst
+    org: University of Cape Town
+    role: panelist
+  organizers:
+  - ADEA
+  - Ghana Ministry of Education
+  - African Development Bank
+  urls:
+    event: https://triennale.adeanet.org/
+  description: 'The ADEA Triennale is Africa''s flagship ministerial-level forum on education, themed ''Strengthening the resilience of Africa''s educational systems: advancing towards ending learning poverty by 2035.'' Panel under Sub-Theme 5 (Using Evidence and Digital Technology) discussed approaches to measuring foundational learning, data quality challenges, and coordination between regional and global monitoring frameworks including AFLAI and CESA.'
+  evidence:
+    slides: files/presentations/2025-adea-learning-ecosystems.pptx
+    briefing: files/evidence/2025-adea-briefing-note.docx
+  tags:
+  - learning
+  - africa
+
+- id: arfsd11-children-2025
+  date: '2025-04-07'
+  year: 2025
+  event: ARFSD-11 Side Event
+  event_type: side_event
+  location: Virtual
+  scope: regional
+  session: 'The State of African Children: Harnessing Data for Policy Action and SDG Acceleration'
+  session_type: panel
+  role: Speaker
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Botho Kebabonye Bayendi
+    org: African Union Commission
+    role: speaker
+  - name: William Muhwava
+    org: UNECA
+    role: speaker
+  - name: Robin Nandy
+    org: UNICEF Uganda
+    role: speaker
+  - name: Oprah Nkalubo
+    title: Youth Advocate
+    role: speaker
+  - name: Prof. Samuel Annim
+    org: University of Cape Coast
+    role: speaker
+  - name: Abdoullahi Beidou
+    org: World Bank
+    role: speaker
+  - name: Isabella Schmidt
+    org: UN Women
+    role: speaker
+  - name: Dr. Vincent Ssenono
+    org: Uganda Bureau of Statistics
+    role: speaker
+  organizers:
+  - UNICEF
+  - African Union Commission
+  - UNECA
+  description: Launch of the State of African Children Statistical Compendium
+  tags:
+  - child-wellbeing
+  - sdg
+  - africa
+  - partnerships
+- id: cies-2025
+  date: '2025-03-23'
+  year: 2025
+  event: CIES 2025
+  event_type: conference
+  location: Chicago, USA
+  scope: international
+  session: Digital tools and data-driven approaches in foundational learning
+  session_type: panel
+  role: Presenter
+  role_type: peer_reviewed
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Haogen Yao
+    org: UNICEF
+    role: panelist
+  - name: Suman Sachdev
+    org: UNICEF
+    role: panelist
+  - name: Thomas Dreesen
+    org: UNICEF
+    role: panelist
+  - name: Sakshi Mishra
+    org: UNICEF
+    role: panelist
+  tags:
+  - learning
+  - digital
+  - statistics
+- id: unsc56-ai-2025
+  date: '2025-03-06'
+  year: 2025
+  event: 56th UN Statistical Commission Side Event
+  event_type: side_event
+  location: New York, USA
+  venue: United Nations Headquarters
+  scope: international
+  session: 'AI & Data Quality: A Critical Intersection for Official Statistics'
+  session_type: panel
+  role: Speaker
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Yves Jaques
+    org: UNICEF
+    role: speaker
+  - name: Samuel Annim
+    title: Government Statistician
+    org: Ghana Statistical Service
+    role: speaker
+  - name: Prof. Dr. Georges-Simon Ulrich
+    title: Director General
+    org: Swiss Federal Statistical Office
+    role: speaker
+  - name: Steve MacFeely
+    title: Chief Statistician
+    org: OECD
+    role: speaker
+  organizers:
+  - UNICEF
+  - PARIS21
+  - OECD Statistics
+  tags:
+  - statistics
+  - governance
+  - digital
+  - partnerships
+- id: unsc-icvac-side-event-2025
+  date: '2025-03-06'
+  year: 2025
+  event: 'UNSC side event: Technology-Facilitated Violence against Children & ICVAC implementation strategy'
+  event_type: side_event
+  location: Labouisse Hall, New York, USA
+  scope: international
+  session: Launch of UNICEF data brief on TFVAC; implementation strategy for ICVAC
+  session_type: roundtable
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - child-wellbeing
+  - statistics
+  - governance
+  - sdg
+
+- id: unsc-africa-expert-group-2025
+  date: '2025-03-06'
+  year: 2025
+  event: 'UN56SC Side Event: Africa Expert Group on Child-and Adolescent-Related Statistics'
+  event_type: side_event
+  location: Maurice Pate conference room, New York, USA
+  scope: international
+  session: Establishing an Africa expert group on child-related statistics
+  session_type: roundtable
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - africa
+  - statistics
+  - governance
+  - partnerships
+
+  # ============================================================================
+  # 2024
+  # ============================================================================
+
+- id: oecd-wellbeing-2024
+  date: '2024-11-04'
+  year: 2024
+  event: 7th OECD World Forum on Well-being
+  event_type: conference
+  location: Rome, Italy
+  scope: international
+  session: Child well-being agenda
+  session_type: presentation
+  role: Presenter
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: 20th anniversary of OECD World Forum on Statistics, Knowledge and Policy. Co-organized with Italian Ministry of Economy and Finance, ISTAT, Bank of Italy. Part of Italian G7 Presidency.
+  tags:
+  - child-wellbeing
+  - statistics
+  - partnerships
+
+- id: africa-stats-conf-2024
+  date: '2024-10-28'
+  year: 2024
+  event: 9th Africa Statistical Conference
+  event_type: conference
+  location: Addis Ababa, Ethiopia
+  scope: regional
+  session: 'Multiple sessions: Child-centric Surveys & MICS Programme; Health Data Analytics; Data Governance for Children; Expert group on child-related statistics'
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: 'Theme: Unleashing the Potential of African Innovation in Statistical Development'
+  tags:
+  - statistics
+  - governance
+  - child-wellbeing
+  - africa
+  - partnerships
+
+- id: iaeg-sdg-14-2024
+  date: '2024-10-25'
+  year: 2024
+  event: 14th IAEG-SDG
+  event_type: conference
+  location: Copenhagen, Denmark
+  scope: international
+  session: Presenting methodology from UNICEF Child Wellbeing report
+  role: Presenter
+  role_type: delegate
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: Discussed criteria for the upcoming 2025 Comprehensive Review
+  tags:
+  - sdg
+  - statistics
+  - child-wellbeing
+- id: pakistan-pitb-2023
+  date: '2024-10-23'
+  year: 2024
+  event: UNICEF Pakistan — PITB Delegation Visit
+  event_type: workshop
+  location: Lahore, Pakistan
+  venue: Punjab Information Technology Board
+  scope: national
+  session: ICT Interventions and Data Analytics Collaboration
+  role: Delegation Leader
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Waqar Naeem Qureshi
+    title: Director General IT-Solutions
+    org: PITB
+    role: host
+  - name: Achraf Mohamed Mrabat
+    title: Data and Analytics Manager
+    org: UNICEF Pakistan
+    role: delegation
+  - name: Sabahat Ambreen
+    title: Chief of Field Office
+    org: UNICEF Punjab
+    role: delegation
+  - name: Nouman Ghani
+    title: Social Policy Planning Monitoring & Data Specialist
+    org: UNICEF Punjab
+    role: delegation
+  organizers:
+  - UNICEF
+  - PITB
+  description: Led UNICEF Headquarters delegation to Punjab Information Technology Board to discuss potential areas of collaboration on ICT interventions, education-centric solutions, and government-wide data-sharing platforms. PITB DG provided briefing on IT initiatives in education sector. PITB lauded by UNICEF team for education-centric IT solutions.
+  urls:
+    news: https://pitb.gov.pk/node/10388
+  tags:
+  - partnerships
+  - digital
+  - learning
+- id: pakistan-datafest-2024
+  date: '2024-10-21'
+  year: 2024
+  event: Pakistan DataFest 2024
+  event_type: conference
+  location: Islamabad, Pakistan
+  venue: Pakistan Bureau of Statistics
+  scope: national
+  session: 'Data For Life and Equity: Closing Human Capital Gaps'
+  session_type: panel
+  presentation_title: 'Education and Human Capital: A Life Course Approach'
+  abstract: "Keynote presentation covering: (1) The demographic urgency - 100% of workforce entering \nlabor market in 2050 has already been born, with 90% in Low- and Middle-Income countries;\n(2) The unprecedented challenge facing Sub-Saharan African education systems to deliver \nat scale during demographic boom; (3) Data gaps for children across SDG indicators and \nprogress in measurement standards; (4) Learning Poverty as early-warning indicator and \nevidence of the Matthew effect in learning; (5) The Life-Course Index measuring how \nchildren, adolescents, and youth survive and thrive across dimensions; (6) Perception \ngaps among government officials who significantly overestimate student reading ability.\nFinal remarks emphasized the need for greater intentionality in what, how, and why we \nmeasure to inform policies, programs, and practices.\n"
+  role: Keynote Speaker
+  role_type: keynote
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Dr. Shahid Soraya
+    title: Director General
+    org: PIE, Government of Pakistan
+    role: panelist
+  - name: Ms. Baela Raza Jamil
+    org: Idara-e-Taleem-o-Aagahi (ITA)
+    role: moderator
+  - name: Ms. Jessica Albert
+    org: LUMS
+    role: panelist
+  - name: Dr. Shireen Mustafa Narejo
+    org: Provincial Government
+    role: panelist
+  - name: Prof. Dr. Bushra Mirza
+    org: HEC, Government of Pakistan
+    role: panelist
+  organizers:
+  - Pakistan Bureau of Statistics
+  urls:
+    event: https://www.datafest.gov.pk/Datafest2024/panel2024
+  evidence:
+    slides: files/presentations/2024-pak-datafest-life-course.pptx
+  description: Keynote speaker at Pakistan's premier data conference organized by the Pakistan Bureau of Statistics. Panel 'Data As a Powerful Tool for Change' focused on using data to support equity and access to education, what data tells us about educational equity in Pakistan, challenges in data use for advocacy, and promising practices in data-driven decision-making.
+  tags:
+  - learning
+  - statistics
+  - partnerships
+
+- id: nicbr-survey-methodology-2024
+  date: '2024-08-26'
+  year: 2024
+  event: 14th NIC.br Annual Workshop on Survey Methodology
+  event_type: workshop
+  location: São Paulo, Brazil
+  scope: national
+  session: 'Improving ICT data quality and availability: combining new methodological approaches'
+  session_type: keynote
+  presentation_title: 'Recent Developments on Child-Centric Surveys: Lessons from the UNICEF MICS Program'
+  role: Keynote Speaker
+  role_type: keynote
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  organizers:
+  - NIC.br - Brazilian Network Information Center
+  - ENCE - National School of Statistical Sciences
+  description: Keynote address at Brazil's premier survey methodology workshop. Presented innovations in child-centric survey design and data collection from the UNICEF Multiple Indicator Cluster Surveys (MICS) program.
+  evidence:
+    certificate: files/evidence/2024-nicbr-keynote-certificate.pdf
+  tags:
+  - statistics
+  - child-wellbeing
+- id: nyu-gph-industry-seminar-2024
+  date: '2024-07-18'
+  year: 2024
+  event: NYU GPH Industry Seminar / PQAR Symposium
+  event_type: university_talk
+  location: New York, USA
+  venue: NYU School of Global Public Health (708 Broadway)
+  scope: national
+  session: Biostatistics & Data Science careers panel / PQAR Symposium day
+  session_type: panel
+  role: Panelist
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - learning
+  - statistics
+  - digital
+- id: idac-steering-2024
+  date: '2024-07-16'
+  year: 2024
+  event: IDAC Steering Committee
+  event_type: workshop
+  location: Virtual
+  scope: international
+  session: First Steering Committee meeting of the International Data Alliance for Children on the Move
+  role: Chair
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  organizers:
+  - Eurostat
+  - IOM
+  - OECD
+  - UNHCR
+  - UNICEF
+  description: Charted the course for advancing the mission to improve data and statistics on migrant and displaced children
+  tags:
+  - child-wellbeing
+  - governance
+  - partnerships
+  - statistics
+- id: africa-gender-stats-2024
+  date: '2024-06-01'
+  year: 2024
+  event: Africa Gender Statistics Workshop
+  event_type: workshop
+  location: Africa
+  scope: regional
+  role: Presenter
+  role_type: delegate
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Frederic Unterreiner
+    org: UNICEF
+    role: presenter
+  - name: Ranto Ramananjato
+    org: UNICEF
+    role: presenter
+  description: Discussed innovations in MICS 7 programme and linking EMIS data with household survey data
+  tags:
+  - statistics
+  - africa
+  - child-wellbeing
+- id: cies-measurement-2024
+  date: '2024-03-11'
+  year: 2024
+  event: CIES 2024
+  event_type: conference
+  location: Miami, USA
+  scope: international
+  session: 'Advancing Education Measurement for SDG 4.1.1(a): Improving Assessment Tools, Methods, and Reporting'
+  session_type: panel
+  role: Panelist
+  role_type: peer_reviewed
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Abdullah Ferdous
+    org: AIR
+    role: panelist
+  - name: Clio Dintilhac
+    org: Bill & Melinda Gates Foundation
+    role: panelist
+  - name: Marie-Helene Cloutier
+    org: World Bank
+    role: panelist
+  - name: Jayshree Oza
+    org: Central Square Foundation
+    role: panelist
+  - name: Rastee Chaudhry
+    org: PAL Network
+    role: panelist
+  tags:
+  - learning
+  - sdg
+  - statistics
+- id: cies-equity-2024
+  date: '2024-03-11'
+  year: 2024
+  event: CIES 2024
+  event_type: conference
+  location: Miami, USA
+  scope: international
+  session: 'Learning Equity Audits: Measuring the crisis within the ''learning crisis'''
+  session_type: panel
+  role: Panelist
+  role_type: peer_reviewed
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Dan Wagner
+    org: University of Pennsylvania
+    role: panelist
+  - name: Luis Crouch
+    org: RTI International
+    role: panelist
+  - name: Benjamin Piper
+    org: Bill & Melinda Gates Foundation
+    role: panelist
+  - name: Noam Angrist
+    org: University of Oxford
+    role: panelist
+  - name: Dhir Jhingran
+    org: Language and Learning Foundation
+    role: panelist
+  - name: Baela Jamil
+    org: Idara-e-Taleem-o-Aagahi / PAL Network
+    role: panelist
+  tags:
+  - learning
+  - statistics
+  - poverty
+- id: unece-children-stats-2024
+  date: '2024-03-08'
+  year: 2024
+  event: UNECE/UNICEF Meeting on Children's Statistics
+  event_type: workshop
+  location: Geneva, Switzerland
+  venue: Palais des Nations
+  scope: international
+  session: Data Collection Innovations; Enhancing Data on Disabilities; Violence and Alternative Care
+  role: Participant
+  role_type: delegate
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  audience_size: 107
+  description: 107 participants from diverse nations shaping the future of child welfare statistics
+  tags:
+  - child-wellbeing
+  - statistics
+  - partnerships
+- id: unsc55-poverty-2024
+  date: '2024-03-06'
+  year: 2024
+  event: 56th UN Statistical Commission Side Event
+  event_type: side_event
+  location: New York, USA
+  venue: United Nations Headquarters
+  scope: international
+  session: Child Poverty Measurement
+  session_type: panel
+  role: Presenter
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Dr. Saurabh Garg
+    org: India NSO
+    role: speaker
+  - name: Enrique Delamonica
+    org: UNICEF
+    role: speaker
+  - name: Oliver Fiala
+    org: Save the Children
+    role: speaker
+  - name: Matthew Wai-Poi
+    org: World Bank
+    role: speaker
+  - name: Prof. David Gordon
+    org: University of Bristol
+    role: speaker
+  description: Discussed consensual approach and MODA framework for child poverty measurement
+  tags:
+  - child-wellbeing
+  - poverty
+  - statistics
+  - sdg
+- id: wb-afw-edu-closing-panel-2024
+  date: '2024-03-05'
+  year: 2024
+  event: AFW Education Regional Event – Closing Panel
+  event_type: conference
+  location: Virtual
+  scope: regional
+  session: Closing panel
+  session_type: panel
+  role: Panelist (invited)
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - learning
+  - africa
+  - partnerships
+- id: un55sc-lis-access-2024
+  date: '2024-02-29'
+  year: 2024
+  event: Ensuring free access to the Luxembourg Income Study (LIS) data for UN entities
+  event_type: side_event
+  location: New York, USA
+  venue: Luxembourg House (17 Beekman Place, NY 10022)
+  scope: international
+  session: Technical/policy roundtable on LIS access
+  session_type: roundtable
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - statistics
+  - governance
+  - poverty
+- id: unsc55-2024
+  date: '2024-02-28'
+  year: 2024
+  event: 55th UN Statistical Commission
+  event_type: conference
+  location: New York, USA
+  venue: United Nations Headquarters
+  scope: international
+  session: Celebrating 30 years of Fundamental Principles of Official Statistics
+  role: Delegate
+  role_type: delegate
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: Preparation for 2025 Global Indicator Framework review
+  tags:
+  - statistics
+  - governance
+  - sdg
+- id: un55sc-accelerating-child-sdgs-2024
+  date: '2024-02-28'
+  year: 2024
+  event: 'UNICEF Side Event — Accelerating Progress on Child-Related SDGs: Insights and Actions'
+  event_type: side_event
+  location: New York, USA
+  venue: Danny Kaye Visitors Centre (UNICEF House)
+  scope: international
+  session: Benchmarking progress on child-related SDGs
+  session_type: keynote
+  role: Keynote
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - statistics
+  - sdg
+  - governance
+  - partnerships
+- id: un55sc-fao-unicef-nutrition-2024
+  date: '2024-02-28'
+  year: 2024
+  event: FAO/UNICEF Side Event on Food Security & Nutrition statistics
+  event_type: side_event
+  location: New York, USA
+  venue: UNHQ / UNICEF House
+  scope: international
+  session: Food security and nutrition data & statistics
+  session_type: panel
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - statistics
+  - sdg
+  - governance
+- id: un55sc-child-centered-nss-2024
+  date: '2024-02-26'
+  year: 2024
+  event: 'Better data for better children''s lives: Reimagining NSS through a child‑centered approach'
+  event_type: side_event
+  location: New York, USA
+  venue: Danny Kaye Visitors Centre (UNICEF House)
+  scope: international
+  session: Closed roundtable with G20 NSOs on child‑centred NSS
+  session_type: roundtable
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - statistics
+  - governance
+  - partnerships
+- id: unesco-edu-data-2024
+  date: '2024-02-07'
+  year: 2024
+  event: UNESCO Conference on Education Data and Statistics
+  event_type: conference
+  location: Paris, France
+  scope: international
+  session: UNICEF contribution to Early Childhood Education agenda
+  role: Presenter
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: Presented UNICEF's role in scaling the ECE initiative through SDG 4.2.1 custodianship, ECDI2030, and MICS
+  tags:
+  - learning
+  - statistics
+  - child-wellbeing
+  - partnerships
+- id: ipea-seminario-sowc-2024
+  date: '2024-01-17'
+  year: 2024
+  event: 'Seminário on-line: Progresso no Bem-Estar das Crianças – Centrando os Direitos da Criança na Agenda 2030'
+  event_type: webinar
+  location: Virtual (Brasília host)
+  scope: regional
+  session: Seminário IPEA
+  session_type: panel
+  role: Panelist (invited)
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  tags:
+  - statistics
+  - sdg
+  - governance
+
+  # ============================================================================
+  # 2023
+  # ============================================================================
+
+- id: anpec-unicef-special-2023
+  date: '2023-12-14'
+  year: 2023
+  event: 51st National Meeting of Economics (ANPEC)
+  event_type: conference
+  location: Rio de Janeiro, Brazil
+  venue: Hotel Windsor Barra
+  scope: national
+  session: 'UNICEF Special Session: Advancing the sustainable development agenda for children and adolescents in Brazil and Latin America - Progress and learnings for accelerated action'
+  session_type: panel
+  role: Organizer & Panelist
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  participants:
+  - name: Ricardo Paes de Barros
+    title: Professor
+    org: Insper
+    role: panelist
+  - name: Leany Lemos
+    title: Secretary
+    org: Secretaria de Planejamento (Federal Government)
+    role: panelist
+  - name: Marco Natalino
+    title: Researcher
+    org: IPEA
+    role: panelist
+  - name: Paola Babos
+    title: Deputy Representative
+    org: UNICEF Brazil
+    role: panelist
+  organizers:
+  - ANPEC
+  - UNICEF
+  description: Organized UNICEF Special Session at Brazil's premier economics conference, bringing together top policymakers and researchers to discuss accelerated action for children's SDG agenda. Panel included the Federal Government Planning Secretary and leading economists.
+  evidence:
+    program: _evidence/conference-invitations/2023-anpec/2023-anpec-program.pdf
+  tags:
+  - sdg
+  - child-wellbeing
+  - partnerships
+- id: iaeg-sdg-14-2023
+  date: '2023-10-23'
+  year: 2023
+  event: 14th IAEG-SDG
+  event_type: conference
+  location: Copenhagen, Denmark
+  scope: international
+  session: 2025 Comprehensive Review criteria
+  role: Delegate
+  role_type: delegate
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician
+  description: Discussed how agencies can support the SDG indicator review agenda
+  tags:
+  - sdg
+  - statistics
+
+  # ============================================================================
+  # 2022
+  # ============================================================================
+
+- id: wb-tokyo-seminar-2022
+  date: '2022-10-26'
+  year: 2022
+  event: 'World Bank Tokyo Online Morning Seminar #152'
+  event_type: seminar
+  location: Tokyo, Japan (Virtual)
+  scope: international
+  session: 'The State of Global Learning Poverty: 2022 Update'
+  session_type: presentation
+  presentation_title: 'The State of Global Learning Poverty: 2022 Update'
+  abstract: "Presented findings from the landmark report published jointly by World Bank, UNESCO, \nUNICEF, UK FCDO, USAID, and Bill & Melinda Gates Foundation. Key findings: Learning \npoverty increased from 57% pre-pandemic to 70% of 10-year-olds unable to read simple \ntext. This generation risks losing $21 trillion in potential lifetime earnings (17% of \nglobal GDP). Discussed policy frameworks for accelerating learning recovery.\n"
+  role: Featured Speaker
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: Halsey Rogers
+    title: Lead Economist
+    org: World Bank
+    role: co-presenter
+  organizers:
+  - World Bank Tokyo Office
+  urls:
+    event: https://www.worldbank.org/en/events/2022/10/26/world-bank-tokyo-online-morning-seminar-152-the-state-of-global-learning-poverty-2022-update
+    slides: https://thedocs.worldbank.org/en/doc/ddf823b4c89050fb845cd9692900d2ea-0360012022/original/State-of-Global-Learning-Poverty-2022-HD-PL-presentation.pdf
+  description: Co-authored the flagship State of Global Learning Poverty 2022 Update report with six major international organizations. Presented key findings to Japanese development community.
+  tags:
+  - learning
+  - statistics
+- id: wb-annual-meetings-2022
+  date: '2022-10-12'
+  year: 2022
+  event: 'World Bank Annual Meetings 2022: Investing in Education'
+  event_type: summit
+  location: Washington, DC, USA
+  venue: World Bank Headquarters
+  scope: international
+  session: 'At the Heart of a Resilient Future: Investing in Education for Our Children and Youth'
+  session_type: panel
+  presentation_title: 'Learning Crisis and Overcoming Learning Losses: The RAPID Framework'
+  abstract: "Featured expert panelist in World Bank's flagship Annual Meetings education event.\nPresented the RAPID framework for learning recovery: Reach every child, Assess learning \nlevels regularly, Prioritize teaching fundamentals, Increase efficiency of instruction, \nDevelop psychosocial health. Discussed how 70% of 10-year-olds in LMICs cannot read \na simple text, and how this generation risks losing $21 trillion in lifetime earnings.\nEngaged in live Q&A addressing teacher training, technology in education, inclusive \neducation for children with disabilities, and learning assessment methodologies.\n"
+  role: Expert Panelist & Live Q&A Expert
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: David R. Malpass
+    title: President
+    org: World Bank
+    role: moderator
+  - name: Catherine Russell
+    title: Executive Director
+    org: UNICEF
+    role: panelist
+  - name: Samuel D. Tweah Jr
+    title: Minister of Finance and Development Planning
+    org: Government of Liberia
+    role: panelist
+  - name: Shafiq Khan
+    title: President & CEO
+    org: Teach the World Foundation
+    role: panelist
+  - name: Halsey Rogers
+    title: Lead Economist
+    org: World Bank
+    role: co-presenter
+  - name: Mari Pangestu
+    title: Managing Director, Development Policy and Partnerships
+    org: World Bank
+    role: moderator_panel2
+  - name: Dr. Muhammad Al Jasser
+    title: Chairman
+    org: Islamic Development Bank Group
+    role: panelist
+  - name: Dr. Betty Vandenbosch
+    title: Chief Content Officer
+    org: Coursera
+    role: panelist
+  organizers:
+  - World Bank
+  urls:
+    event: https://live.worldbank.org/events/annual-meetings-2022-investing-in-education
+    recording: https://live.worldbank.org/events/annual-meetings-2022-investing-in-education
+  description: Flagship Annual Meetings event moderated by World Bank President David Malpass and featuring UNICEF Executive Director Catherine Russell. Presented alongside ministers of finance and development leaders on the global learning crisis and recovery strategies. Event available in Arabic, French, and Spanish.
+  tags:
+  - learning
+  - partnerships
+  - statistics
+- id: isdc-2021
+  date: '2021-07-26'
+  year: 2021
+  event: 39th International System Dynamics Conference
+  event_type: conference
+  location: Virtual (Chicago, USA)
+  scope: international
+  session_type: paper
+  presentation_title: The Long-Term Effects of the COVID Pandemic on Human Capital
+  abstract: "Education is central to achieving the World Bank Group's goals: it is a reliable route \nout of poverty because it has large and consistent returns to income for individuals \nand because it can drive economic growth. To understand the impact of the COVID pandemic \non education, a system dynamics model was used to complement the WBG's diagnostics work \nand international experience to provide a dynamic framework to help build a shared \nunderstanding on the critical elements required to achieve learning at early grade and \nat the end of primary, highlight the main interdependencies, and identify how they might \nreinforce or undermine one another. This tool informs critical elements of a clear \ntheory of change on how learning outcomes can be reached. The simulation model generates \nstructured conversation among policymakers, World Bank team members, and development \npartners regarding the country's initial conditions, possible parameter values, and how \nthose different\
+    \ assumptions interact as they generate distinct trajectories of the \nsystem's performance. Results help strengthen the narrative on how countries can \naccelerate learning, and provide feedback on how theoretical frameworks can be improved.\n"
+  role: Co-author/Presenter
+  role_type: peer_reviewed
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: Michael Bean
+    org: Forio
+    role: lead_author
+  organizers:
+  - System Dynamics Society
+  urls:
+    event: https://proceedings.systemdynamics.org/2021/
+    session: https://proceedings.systemdynamics.org/2021/abstracts/1093.html
+    proceedings: https://proceedings.systemdynamics.org/2021/abstracts/1093.html
+  description: Peer-reviewed paper presentation at the 39th International Conference of the System Dynamics Society. Developed novel system dynamics simulation model to analyze COVID-19's long-term impacts on human capital accumulation and learning outcomes. Model used by World Bank country teams for policy dialogue.
+  tags:
+  - learning
+  - statistics
+
+  # ============================================================================
+  # 2021
+  # ============================================================================
+
+- id: ges-ldc-2021
+  date: '2021-07-26'
+  year: 2021
+  event: Global Education Summit Side Event
+  event_type: side_event
+  location: Virtual
+  scope: international
+  session: Learning Data Compact (LDC)
+  session_type: presentation
+  role: Presenter
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: Silvia Montoya
+    title: Director
+    org: UNESCO Institute for Statistics
+    role: presenter
+  - name: Manuel Enrique Cardoso
+    org: UNICEF
+    role: presenter
+  organizers:
+  - UNESCO Institute for Statistics
+  - World Bank
+  - UNICEF
+  description: Presented initiative to ensure all countries have quality learning data by 2025
+  tags:
+  - learning
+  - statistics
+  - partnerships
+- id: lemann-saeb-2021
+  date: '2021-07-15'
+  year: 2021
+  event: Fundação Lemann / Instituto Natura / Estadão Debate
+  event_type: webinar
+  location: Brazil
+  scope: national
+  session: 'O Futuro das Avaliações Educacionais: Importância e Desafios da Avaliação no Contexto da COVID-19'
+  session_type: panel
+  role: Panelist
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: Kátia Schweickardt
+    role: panelist
+  - name: Rossieli Soares
+    role: panelist
+  - name: Renata Cafardo
+    role: moderator
+  description: Discussed importance of conducting SAEB 2021 to identify learning losses and inform recovery policies
+  tags:
+  - learning
+  - statistics
+  - partnerships
+
+  # ============================================================================
+  # 2020
+  # ============================================================================
+
+- id: wef-learning-poverty-2020
+  date: '2020-12-22'
+  year: 2020
+  event: World Economic Forum
+  event_type: publication
+  location: Virtual
+  scope: international
+  session: COVID-19 has fuelled a global 'learning poverty' crisis
+  role: Agenda Contributor
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  description: Published article on the global learning crisis exacerbated by COVID-19
+  urls:
+    news: https://www.weforum.org/stories/authors/joao-pedro/
+  tags:
+  - learning
+
+  # ============================================================================
+  # 2019
+  # ============================================================================
+
+- id: tcg6-sdg4-2019
+  date: '2019-09-01'
+  year: 2019
+  event: UNESCO Technical Cooperation Group on SDG 4 Indicators (TCG6)
+  event_type: workshop
+  location: International
+  scope: international
+  session: Technical guidance on SDG 4 education indicators
+  role: World Bank Representative
+  role_type: delegate
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  description: Represented World Bank as Lead Economist in technical cooperation group
+  urls:
+    program: https://tcg.uis.unesco.org/wp-content/uploads/sites/4/2019/08/Participants_TCG6-2.pdf
+  tags:
+  - learning
+  - sdg
+  - statistics
+  - partnerships
+
+  # ============================================================================
+  # 2018
+  # ============================================================================
+
+- id: sampleu-jean-monnet-2018
+  date: '2018-05-08'
+  year: 2018
+  event: 'Jean Monnet Chair SAMPLEU Workshop: Small Area Methods and Living Conditions Indicators in European Poverty Studies'
+  event_type: workshop
+  location: Pisa, Italy
+  venue: University of Pisa
+  scope: international
+  session: Day 1 Opening - European poverty studies at local level
+  session_type: keynote
+  presentation_title: 'Keynote 1: European Poverty Studies at Local Level'
+  abstract: "Opening keynote address at EU-funded Jean Monnet Chair workshop on small area estimation \nmethods for poverty measurement. Workshop theme: \"Small Area Methods and Living Conditions \nIndicators in European Poverty Studies in the Era of Data Deluge and Big Data.\" Addressed \nmethodological advances in poverty mapping and their application to EU policy monitoring.\n"
+  role: Keynote Speaker
+  role_type: keynote
+  affiliation: World Bank
+  affiliation_role: Lead Economist
+  participants:
+  - name: Partha Lahiri
+    title: Professor
+    org: University of Maryland
+    role: keynote_day2
+  - name: Luigi Biggeri
+    title: Professor
+    org: University of Florence, Centre ASESD-Dagum
+    role: keynote_day3
+  - name: Monica Pratesi
+    title: Professor
+    org: University of Pisa
+    role: chair
+  - name: Espen Beer Prydz
+    org: World Bank
+    role: panelist
+  - name: Carrie Exton
+    org: OECD
+    role: panelist
+  organizers:
+  - University of Pisa
+  - Jean Monnet Chair SAMPLEU
+  - European Commission
+  description: Opening keynote speaker at three-day EU-funded workshop on poverty measurement methods. One of three keynote speakers alongside Prof. Partha Lahiri (U. Maryland) and Prof. Luigi Biggeri (U. Florence). Workshop funded under EU Jean Monnet Programme.
+  urls:
+    event: http://sampleu.ec.unipi.it/8-10-may-2018-jean-monnet-chair-sampleu-workshop-on-small-area-methods-and-living-conditions-indicators-in-european-poverty-studies-in-the-era-of-data-deluge-and-big-data/
+    session: http://sampleu.ec.unipi.it/day-1-jean-monnet-chair-sampleu-workshop-8-may-2018/
+    program: http://sampleu.ec.unipi.it/wp-content/uploads/2018/02/Programme_DEF.pdf
+  evidence:
+    program: _evidence/conference-invitations/2018-sampleu-pisa/2018-sampleu-pisa-programme.pdf
+    certificate: _evidence/conference-invitations/2018-sampleu-pisa/2018-sampleu-pisa-certificate.pdf
+  tags:
+  - statistics
+  - poverty
+  - partnerships
+- id: unece-poverty-inequality-2017
+  date: '2017-09-26'
+  year: 2017
+  event: UNECE Expert Meeting on Measuring Poverty and Inequality
+  event_type: conference
+  location: Budva, Montenegro
+  venue: Hotel Mediteran
+  scope: international
+  session: G. Spatial patterns of poverty
+  session_type: paper
+  presentation_title: Multiple presentations on spatial poverty methods
+  abstract: "Delivered three presentations at UNECE Expert Meeting: (1) Update on Recommendations of \nthe Atkinson Commission on measuring extreme poverty in the EU; (2) Policy discussion on \nthe application of poverty maps for targeting and resource allocation; (3) Lagging regions \nand the Index of Multiple Deprivations - methodological framework for identifying \npersistently disadvantaged areas.\n"
+  role: Featured Speaker
+  role_type: invited
+  affiliation: World Bank
+  affiliation_role: Senior Economist
+  participants:
+  - name: Paul Andres Rodas
+    org: World Bank
+    role: co-presenter
+  - name: Cesar Cancho
+    org: World Bank
+    role: presenter
+  - name: Trudi Renwick
+    org: United States Census Bureau
+    role: presenter
+  - name: Thomas Christin
+    org: Federal Statistical Office of Switzerland
+    role: session_chair
+  organizers:
+  - UNECE - United Nations Economic Commission for Europe
+  - Conference of European Statisticians
+  description: Invited to present three papers on spatial poverty measurement at UNECE expert meeting. Topics included Atkinson Commission recommendations, poverty mapping policy applications, and Index of Multiple Deprivations methodology. Meeting brought together statisticians from 30+ countries.
+  urls:
+    slides: https://unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.15/2017/Expert-meeting-Montenegro-2017/Informations/PPT_s/Azevedo_WB_Spatial_cost_eng.pdf
+    program: https://unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.15/2017/Expert-meeting-Montenegro-2017/Timetable_2017.pdf
+  evidence:
+    program: _evidence/conference-invitations/2017-unece-montenegro/2017-unece-montenegro-timetable.pdf
+  tags:
+  - statistics
+  - poverty
+  - partnerships
+- id: stata-conf-sae-2017
+  date: '2017-07-01'
+  year: 2017
+  event: 2017 Stata Conference
+  event_type: conference
+  location: Baltimore, USA
+  scope: international
+  session: Small Area Estimation/Poverty Map in Stata
+  session_type: paper
+  presentation_title: Small Area Estimation/Poverty Map in Stata
+  abstract: "Introduced new Stata package (sae/povmap) for small area estimations of poverty and \ninequality implementing methodologies from Elbers, Lanjouw, and Lanjouw (Econometrica, \n2003). Small area methods solve low representativeness of surveys within areas or lack \nof data for specific sub-populations by incorporating information from outside sources \nlike census data. Introduced new Mata functions and a plugin to circumvent memory \nlimitations when working with big data, enabling poverty mapping at unprecedented scale.\n"
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: World Bank
+  affiliation_role: Senior Economist
+  participants:
+  - name: Minh Nguyen
+    org: World Bank
+    role: co-author
+  - name: Paul Andres Corral Rodas
+    org: World Bank
+    role: co-author
+  - name: Qinghua Zhao
+    org: World Bank
+    role: co-author
+  organizers:
+  - Stata Users Group
+  description: 'Peer-reviewed presentation introducing the sae Stata package for poverty mapping. Package widely adopted by World Bank teams and national statistical offices globally. Citation: Nguyen, Corral Rodas, Azevedo & Zhao (2017). 2017 Stata Conference 20, Stata Users Group. RePEc:boc:scon17:20'
+  urls:
+    event: https://ideas.repec.org/p/boc/scon17/20.html
+    paper: https://ideas.repec.org/p/boc/scon17/20.html
+  tags:
+  - statistics
+  - poverty
+
+  # ============================================================================
+  # 2008
+  # ============================================================================
+
+- id: lacea-poverty-benchmarking-2008
+  date: '2008-11-01'
+  year: 2008
+  event: Latin American and Caribbean Economic Association Annual Meeting (LACEA)
+  event_type: conference
+  location: Latin America
+  scope: international
+  presentation_title: 'The Real Bottom Line: Benchmarking Performance in Poverty Reduction in Latin America and the Caribbean'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: World Bank
+  affiliation_role: Economist
+  organizers:
+  - LACEA
+  tags:
+  - poverty
+  - statistics
+- id: nip-11-organizer-2008
+  date: '2008-11-01'
+  year: 2008
+  event: 11th Meeting of the Network on Inequality and Poverty (NIP)
+  event_type: conference
+  location: Latin America
+  scope: international
+  role: Conference Organizer
+  role_type: organizer
+  affiliation: World Bank
+  affiliation_role: Economist
+  organizers:
+  - NIP - Network on Inequality and Poverty
+  - IDB
+  - World Bank
+  - ECLAC
+  description: Organized the 11th annual meeting of the Latin American and Caribbean Network on Inequality and Poverty
+  tags:
+  - poverty
+  - partnerships
+- id: unesco-literacy-lifelong-2008
+  date: '2008-09-08'
+  end_date: '2008-09-10'
+  year: 2008
+  event: 'UNESCO International Literacy Conference: From Literacy to Lifelong Learning'
+  event_type: conference
+  location: Mexico City, Mexico
+  scope: international
+  session: Assessment, Monitoring and Evaluation of Literacy and Youth & Adult Education
+  presentation_title: Brazil's National Literacy Assessment System
+  session_type: panel
+  role: Invited Speaker
+  role_type: invited
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  organizers:
+  - UNESCO
+  - Government of Mexico
+  description: Invited speaker at UNESCO's flagship international literacy conference. Selected to present 10-minute presentation on Brazil's adult literacy evaluation system (Brasil Alfabetizado). Conference brought together international experts, practitioners, and policymakers to address literacy challenges worldwide.
+  evidence:
+    invitation: Formal speaker invitation with guidelines (August 2008)
+    program: _evidence/conference-invitations/2008-unesco-mexico/2008-unesco-mexico-speakers-guidelines-en.pdf
+    guidelines_es: _evidence/conference-invitations/2008-unesco-mexico/2008-unesco-mexico-speakers-guidelines-es.pdf
+    guidelines_en: _evidence/conference-invitations/2008-unesco-mexico/2008-unesco-mexico-speakers-guidelines-en.pdf
+  urls:
+    contact: litconference@unesco.org
+  tags:
+  - learning
+  - statistics
+- id: nip-10-organizer-2008
+  date: '2008-08-01'
+  year: 2008
+  event: 10th Meeting of the Network on Inequality and Poverty (NIP)
+  event_type: conference
+  location: Latin America
+  scope: international
+  role: Conference Organizer
+  role_type: organizer
+  affiliation: World Bank
+  affiliation_role: Economist
+  organizers:
+  - NIP - Network on Inequality and Poverty
+  - IDB
+  - World Bank
+  - ECLAC
+  description: Organized the 10th annual meeting of the Latin American and Caribbean Network on Inequality and Poverty, a leading regional forum for poverty and inequality research
+  tags:
+  - poverty
+  - partnerships
+
+  # ============================================================================
+  # 2007
+  # ============================================================================
+
+- id: anpec-fica-vivo-2007
+  date: '2007-12-04'
+  year: 2007
+  event: XXXV Encontro Nacional de Economia (ANPEC)
+  event_type: conference
+  location: Recife, Brazil
+  venue: Mar Hotel and Atlante Plaza
+  scope: national
+  presentation_title: Avaliação do Programa Fica Vivo no Município de Belo Horizonte
+  abstract: "Econometric evaluation of the 'Fica Vivo' (Stay Alive) program, a pioneering violence \nprevention intervention implemented in Belo Horizonte, Brazil. The program targets high-risk \nareas with integrated strategies combining social interventions and targeted policing. \nApplied impact evaluation methods to assess program effectiveness in reducing homicide rates.\n"
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  organizers:
+  - ANPEC - Associação Nacional dos Centros de Pós-Graduação em Economia
+  description: Peer-reviewed paper accepted for presentation and publication in conference proceedings. Presented evaluation of innovative public safety program that later became a national reference in Brazil for violence prevention policy.
+  evidence:
+    acceptance: Official acceptance letter from ANPEC for paper presentation and publication in conference proceedings. Accommodation and meals sponsored by ANPEC.
+  tags:
+  - statistics
+  - poverty
+- id: unesco-literacy-south-asia-2007
+  date: '2007-11-29'
+  year: 2007
+  event: UNESCO Regional Conference in Support of Global Literacy
+  event_type: conference
+  location: New Delhi, India
+  scope: international
+  session: 'Literacy Challenges in South, South-West and Central Asia: Building Partnerships and Promoting Innovative Approaches'
+  presentation_title: Monitoring and Evaluation in Literacy
+  session_type: presentation
+  role: Presenter & University Professors Meeting Participant
+  role_type: invited
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  participants:
+  - name: Phyllis R. Magrab
+    title: Professor, Pediatrics; UNESCO Chair; Director
+    org: Georgetown University Center for Child and Human Development
+    role: convener
+  - name: Timothy Ireland
+    org: Brazilian Ministry of Education
+    role: recommender
+  - name: Sue Shore
+    org: University of South Australia
+    role: participant
+  - name: R. Govinda
+    org: India
+    role: participant
+  - name: Harbans Bhola
+    role: participant
+  - name: Veronica McKay
+    role: participant
+  - name: Ambigapathy Pandian
+    role: participant
+  - name: Denzil Saldanha
+    role: participant
+  organizers:
+  - UNESCO
+  description: Invited by Prof. Phyllis Magrab (UNESCO Chair, Georgetown University) to attend UNESCO Regional Conference and participate in exclusive pre-conference meeting of university professors to discuss creating networks and North-South university collaboration for furthering the United Nations Literacy Agenda. Conference addressed literacy challenges across South, South-West and Central Asia.
+  evidence:
+    invitation: Formal invitation from Prof. Phyllis R. Magrab, UNESCO Chair, Georgetown University (Nov 12, 2007)
+  tags:
+  - learning
+  - statistics
+  - partnerships
+- id: nrdc-brasil-alfabetizado-2007
+  date: '2007-04-26'
+  year: 2007
+  event: NRDC International Conference 2007
+  event_type: conference
+  location: Nottingham, UK
+  venue: Eastwood Hall, Hayley Conference Centre
+  scope: international
+  presentation_title: 'Designing, Implementing and Using an Evaluation: The Experience of Brasil Alfabetizado'
+  session_type: workshop
+  role: Workshop Leader
+  role_type: invited
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  participants:
+  - name: Vera Masagão Ribeiro
+    org: Ação Educativa, Brazil
+    role: co-presenter
+  - name: Ursula Howard
+    org: NRDC
+    role: host
+  organizers:
+  - NRDC - National Research and Development Centre for Adult Literacy and Numeracy
+  - Institute of Education, University of London
+  description: Invited workshop leader at UK's premier adult literacy research conference. Recommended by Timothy Ireland (Brazilian Ministry of Education) to present Brazil's adult literacy evaluation system. The NRDC is a consortium led by the Institute of Education, University of London, and the Bedford Group for Lifecourse and Statistical Studies. Travel, accommodation, and participation fully sponsored by NRDC. Presented jointly with Vera Masagão Ribeiro from Ação Educativa.
+  evidence:
+    invitation: Invited by Richard Bull, Events & Marketing Manager, NRDC. Recommended by Timothy Ireland (MEC Brazil).
+    program: _evidence/conference-invitations/2007-nrdc-uk/2007-nrdc-uk-call-for-papers.pdf
+    notes: _evidence/eb1-petition/2007-nrdc-uk-notes.txt
+  tags:
+  - learning
+  - statistics
+- id: gdn-global-development-2007
+  date: '2007-01-14'
+  end_date: '2007-01-16'
+  year: 2007
+  event: Eighth Annual Global Development Conference
+  event_type: conference
+  location: Kuwait City, Kuwait
+  venue: AFESD Headquarters and Four Points Hotel
+  scope: international
+  role: Conference Presenter
+  role_type: invited
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  organizers:
+  - name: Global Development Network (GDN)
+    role: main_organizer
+  - name: Arab Fund for Economic and Social Development (AFESD)
+    role: host
+  description: Invited participant at GDN's flagship annual conference, the premier gathering of development researchers from around the world. Travel, accommodation, and full participation sponsored by GDN. The Global Development Network is an international organization that supports high quality, policy-oriented research in developing and transition countries.
+  evidence:
+    logistics: _evidence/eb1-petition/2007-gdn-kuwait-admin-note.doc
+    accommodation: Four Points Hotel, Safat 13060, Kuwait
+  urls:
+    event: http://www.gdnet.org
+    contact: conference@gdnet.org
+  tags:
+  - development
+  - partnerships
+
+  # ============================================================================
+  # 2006
+  # ============================================================================
+
+- id: sbe-new-deal-2006
+  date: '2006-12-01'
+  year: 2006
+  event: Encontro da Sociedade Brasileira de Econometria
+  event_type: conference
+  location: Brazil
+  scope: national
+  presentation_title: The Econometric Evaluation of the New Deal for Lone Parents
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Candidate
+  organizers:
+  - SBE - Sociedade Brasileira de Econometria
+  tags:
+  - statistics
+  - poverty
+
+  # ============================================================================
+  # 2006 (continued)
+  # ============================================================================
+
+- id: econometria-xxviii-2006
+  date: '2006-12-01'
+  year: 2006
+  event: XXVIII Encontro Brasileiro de Econometria
+  event_type: conference
+  location: Brazil
+  scope: national
+  presentation_title: The Econometric Evaluation of the New Deal for Lone Parents
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Candidate
+  organizers:
+  - SBE - Sociedade Brasileira de Econometria
+  tags:
+  - statistics
+  - poverty
+- id: lames-new-deal-2006
+  date: '2006-11-03'
+  year: 2006
+  event: LACEA-LAMES 2006 Parallel Meetings
+  event_type: conference
+  location: Mexico City, Mexico
+  venue: ITAM
+  scope: international
+  session: Education II
+  presentation_title: The Econometric Evaluation of the New Deal for Lone Parents
+  abstract: "This paper evaluates the New Deal for Lone Parents, a large voluntary program for single \nparents in the United Kingdom that provides information and limited financial support to \nlone parents. We apply semi-parametric matching methods to a large administrative dataset, \nand estimate substantive and fairly persistent effects of NDLP participation on the \nprobability of benefit receipt; these impacts are larger for the \"stock\" of long term \nrecipients than for the \"flow\" of new recipients. Finally, we find that taking account \nof the stratification in our data by applying propensity score matching within strata \nmakes a difference to our estimates.\n"
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: IPEA & University of Newcastle
+  affiliation_role: PhD Candidate
+  participants:
+  - name: Peter Dolton
+    title: Professor
+    org: Royal Holloway, University of London
+    role: co-author
+  - name: Jeffrey Smith
+    title: Professor
+    org: University of Michigan
+    role: co-author
+  - name: Alfonso Miranda
+    role: session_chair
+  organizers:
+  - LACEA
+  - Econometric Society
+  - ITAM
+  evidence:
+    submission: 'Paper Submission #111, Participant IDENT #18901'
+  urls:
+    event: http://www.lacealames2006.itam.mx/
+  description: Peer-reviewed paper presentation at joint LACEA-LAMES meetings. Co-authored with Prof. Peter Dolton (Royal Holloway) and Prof. Jeffrey Smith (University of Michigan). Applied semi-parametric matching methods to evaluate UK welfare-to-work program.
+  tags:
+  - statistics
+  - poverty
+- id: lacea-microfinance-2006
+  date: '2006-11-03'
+  year: 2006
+  event: LACEA-LAMES 2006 Parallel Meetings
+  event_type: conference
+  location: Mexico City, Mexico
+  venue: ITAM
+  scope: international
+  presentation_title: 'Liquidity Constraint and Enterprise Performance: Evidence from Microfinance Clients'
+  abstract: "This paper uses the administrative record of two microfinance institutions to analyze \nthe impact of credit on microentrepreneurs. First, it explores the relationship between \ncredit constraint, defined as unmet credit demand, and enterprise performance using an \nunbalanced panel of credit borrowers. The study shows a negative, but nonlinear, effect \nof credit constraint. This work also identifies the type of financial constraints by \nlooking at limited liability and moral hazard models. Nonparametric and reduced form \nestimation techniques support the limited liability model. Policy recommendations are \nthe reduction of transaction costs and quality improvements on collateral available \nto these microentrepreneurs.\n"
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: IPEA & University of Newcastle
+  affiliation_role: PhD Candidate
+  organizers:
+  - LACEA
+  - ITAM
+  evidence:
+    submission: 'Paper Submission #112, Participant IDENT #18901'
+  urls:
+    event: http://www.lacealames2006.itam.mx/
+  description: Second paper presented at LACEA 2006. Sole-authored research using administrative records from microfinance institutions to analyze credit constraints on microentrepreneurs in favelas.
+  tags:
+  - poverty
+  - mobility
+- id: seminario-economia-mineira-2006
+  date: '2006-08-27'
+  year: 2006
+  event: XII Seminário sobre a Economia Mineira
+  event_type: conference
+  location: Diamantina, Brazil
+  venue: Cedeplar/UFMG
+  scope: regional
+  presentation_title: Avaliação Econômica do Programa Fica Vivo
+  abstract: "Economic evaluation of the 'Fica Vivo' (Stay Alive) program implemented in Belo Horizonte, \nanalyzing its cost-effectiveness and impact on violent crime reduction. The program combines \ntargeted social interventions with strategic policing in high-risk neighborhoods.\n"
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  organizers:
+  - Cedeplar/UFMG - Centro de Desenvolvimento e Planejamento Regional
+  description: Peer-reviewed paper accepted for presentation at Brazil's most prestigious regional economics conference. Accommodation and meals sponsored by Cedeplar.
+  evidence:
+    acceptance: Official acceptance letter from Cedeplar for paper presentation
+  tags:
+  - statistics
+  - poverty
+- id: diferentes-diferencas-2006
+  date: '2006-01-01'
+  year: 2006
+  event: 'Diferentes Diferenças: Caminhos de uma Educação de Qualidade para Todos'
+  event_type: seminar
+  location: Brazil
+  scope: national
+  session: 'Mesa-redonda: Brasil Alfabetizado - Plano de Avaliação e os seus primeiros resultados'
+  presentation_title: 'Brasil Alfabetizado: Plano de Avaliação e os seus primeiros resultados'
+  session_type: roundtable
+  role: Panelist
+  role_type: invited
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  participants:
+  - name: Ariel Pares
+    org: MPOG
+    role: chair
+  - name: Kathy Lindert
+    org: World Bank (BIRD)
+    role: discussant
+  - name: Rômulo Paes
+    org: MDS
+    role: discussant
+  - name: Márcia Cavallari
+    org: IBOPE
+    role: discussant
+  description: Presented first results of the evaluation plan for Brasil Alfabetizado adult literacy program
+  tags:
+  - learning
+  - statistics
+- id: anpec-nacional-segmentation-2005
+  date: '2005-12-01'
+  year: 2005
+  event: Encontro Nacional da ANPEC
+  event_type: conference
+  location: Natal, Brazil
+  scope: national
+  presentation_title: 'An Investigation of the Labour Market Earnings in Deprived Areas: A Test of Labour Market Segmentation in the Slums'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - ANPEC
+  tags:
+  - poverty
+  - mobility
+
+  # ============================================================================
+  # 2005
+  # ============================================================================
+
+- id: lacea-10-slums-2005
+  date: '2005-10-01'
+  year: 2005
+  event: 10th Latin American and Caribbean Economic Association Annual Meeting (LACEA)
+  event_type: conference
+  location: Latin America
+  scope: international
+  presentation_title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differential in the Slums'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - LACEA
+  tags:
+  - poverty
+  - mobility
+- id: seminar-wage-inequality-2005
+  date: '2005-01-01'
+  year: 2005
+  event: Academic Seminar
+  event_type: seminar
+  location: Brazil
+  scope: national
+  presentation_title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality in the Slums'
+  role: Presenter
+  role_type: invited
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  tags:
+  - poverty
+  - mobility
+- id: dimac-entrepreneurship-2005
+  date: '2005-01-01'
+  year: 2005
+  event: DIMAC Seminar
+  event_type: seminar
+  location: Rio de Janeiro, Brazil
+  scope: national
+  presentation_title: 'Entrepreneurship and Liquidity Constraints in Deprived Areas: Evidence from the Slums of Rio de Janeiro'
+  role: Presenter
+  role_type: invited
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - IPEA - DIMAC
+  description: Presented at IPEA's Directorate of Macroeconomic Studies and Policies seminar series
+  tags:
+  - poverty
+  - mobility
+- id: anpec-xxxii-2004
+  date: '2004-12-01'
+  year: 2004
+  event: XXXII Encontro Nacional de Economia (ANPEC)
+  event_type: conference
+  location: Brazil
+  scope: national
+  presentation_title: 'Entrepreneurship and Liquidity Constraints in Deprived Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - ANPEC - Associação Nacional dos Centros de Pós-Graduação em Economia
+  tags:
+  - poverty
+  - mobility
+- id: eale-16-formal-informal-2004
+  date: '2004-09-01'
+  year: 2004
+  event: 16th Annual Conference of the European Association of Labour Economists (EALE)
+  event_type: conference
+  location: Lisbon, Portugal
+  scope: international
+  presentation_title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - European Association of Labour Economists
+  tags:
+  - poverty
+  - mobility
+- id: unlocking-human-potential-2004
+  date: '2004-09-01'
+  year: 2004
+  event: 'Unlocking Human Potential: Linking the Informal and Formal Sectors'
+  event_type: conference
+  location: International
+  scope: international
+  presentation_title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  tags:
+  - poverty
+  - mobility
+
+  # ============================================================================
+  # 2004
+  # ============================================================================
+
+- id: abep-oxford-wages-2004
+  date: '2004-03-19'
+  year: 2004
+  event: 1st ABEP/Oxford Centre for Brazilian Studies Conference
+  event_type: conference
+  location: Oxford, UK
+  venue: St Anthony's College
+  scope: international
+  presentation_title: 'An Investigation of the Labour Market Earnings in Poor Areas: Evaluating the Sources of Wage Inequality in the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - ABEP
+  - University of Oxford Centre for Brazilian Studies
+  description: Examined determinants of labour market earnings and inequality in 51 favelas using unique dataset of 21,704 households with GIS data
+  urls:
+    program: https://www.robots.ox.ac.uk/~teo/ResumosCongresso.pdf
+  tags:
+  - poverty
+  - statistics
+- id: abep-oxford-credit-2004
+  date: '2004-03-19'
+  year: 2004
+  event: 1st ABEP/Oxford Centre for Brazilian Studies Conference
+  event_type: conference
+  location: Oxford, UK
+  venue: St Anthony's College
+  scope: international
+  presentation_title: Credit and Entrepreneurship in the Slums of Rio de Janeiro
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - ABEP
+  - University of Oxford Centre for Brazilian Studies
+  description: Analyzed 4,500 entrepreneurs from favelas examining the role of traditional financial institutions on microentrepreneur performance and labor mobility
+  urls:
+    program: https://www.robots.ox.ac.uk/~teo/ResumosCongresso.pdf
+  tags:
+  - poverty
+  - mobility
+- id: lacea-8-microentrepreneurs-2003
+  date: '2003-10-01'
+  year: 2003
+  event: 8th Latin American and Caribbean Economic Association Annual Meeting (LACEA)
+  event_type: conference
+  location: Latin America
+  scope: international
+  presentation_title: 'The Nature and Performance of Micro-entrepreneurs: Evidence from Microcredit Clients in the Slums of Rio'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - LACEA
+  tags:
+  - poverty
+  - mobility
+
+  # ============================================================================
+  # 2003
+  # ============================================================================
+
+- id: eale-15-credit-2003
+  date: '2003-09-01'
+  year: 2003
+  event: 15th Annual Conference of the European Association of Labour Economists (EALE)
+  event_type: conference
+  location: Europe
+  scope: international
+  presentation_title: 'Credit and Entrepreneurship in Poor Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - European Association of Labour Economists
+  tags:
+  - poverty
+  - mobility
+- id: finance-growth-poverty-2003
+  date: '2003-04-01'
+  year: 2003
+  event: '3rd Annual International Conference: Finance for Growth and Poverty Reduction'
+  event_type: conference
+  location: International
+  scope: international
+  session: Experience and Policies for Developing Countries
+  presentation_title: 'Credit and Entrepreneurship in Poor Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  tags:
+  - poverty
+  - mobility
+- id: entrepreneurship-conf-2003
+  date: '2003-01-01'
+  year: 2003
+  event: 2003 International Entrepreneurship and New Venture Creation Conference
+  event_type: conference
+  location: International
+  scope: international
+  presentation_title: 'Credit and Entrepreneurship in Poor Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  tags:
+  - poverty
+  - mobility
+- id: entrepreneurship-uk-youth-2003
+  date: '2003-01-01'
+  year: 2003
+  event: International Entrepreneurship and New Venture Creation Conference
+  event_type: conference
+  location: International
+  scope: international
+  presentation_title: 'Becoming a Young Entrepreneur in the UK in the 1990s: Evidence from Shell Livewire Surveys'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  tags:
+  - mobility
+
+  # ============================================================================
+  # 2002
+  # ============================================================================
+
+- id: esrc-dev-econ-2002
+  date: '2002-01-01'
+  year: 2002
+  event: 2002 Conference of the ESRC Development Economics Study Group
+  event_type: conference
+  location: UK
+  scope: international
+  presentation_title: 'Credit and Entrepreneurship in Poor Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - ESRC - Economic and Social Research Council
+  tags:
+  - poverty
+  - mobility
+
+  # ============================================================================
+  # 2001
+  # ============================================================================
+
+- id: heidelberg-microfinance-2001
+  date: '2001-01-01'
+  year: 2001
+  event: 4th Heidelberg Workshop on Theoretical and Empirical Studies in Microfinance
+  event_type: workshop
+  location: Heidelberg, Germany
+  scope: international
+  presentation_title: 'Credit and Entrepreneurship in Poor Areas: Evidence from the Slums of Rio de Janeiro'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: University of Newcastle
+  affiliation_role: PhD Student
+  organizers:
+  - University of Heidelberg
+  tags:
+  - poverty
+  - mobility
+
+  # ============================================================================
+  # 2000
+  # ============================================================================
+
+- id: anpec-28-exports-2000
+  date: '2000-12-01'
+  year: 2000
+  event: 28th Annual Meeting of the Brazilian Economics Association (ANPEC)
+  event_type: conference
+  location: Brazil
+  scope: national
+  presentation_title: 'O Desempenho das Exportações Brasileiras para os Estados Unidos: O Papel do NAFTA e da Taxa de Câmbio sobre a Competitividade Brasileira'
+  session_type: paper
+  role: Conference Presenter
+  role_type: peer_reviewed
+  affiliation: IPEA
+  affiliation_role: Research Fellow
+  organizers:
+  - ANPEC - Associação Nacional dos Centros de Pós-Graduação em Economia
+  description: Analysis of Brazilian export performance to the United States, examining the role of NAFTA and exchange rate on Brazilian competitiveness
+  tags:
+  - statistics
+tags:
+  learning:
+    label: Learning & Education
+    color: '#2e86ab'
+    emoji: 📚
+  statistics:
+    label: Official Statistics
+    color: '#a23b72'
+    emoji: 📊
+  governance:
+    label: Data Governance
+    color: '#1d3557'
+    emoji: 🏛️
+  poverty:
+    label: Poverty & Inequality
+    color: '#e63946'
+    emoji: 📉
+  mobility:
+    label: Social Mobility
+    color: '#457b9d'
+    emoji: 📈
+  sdg:
+    label: SDG Monitoring
+    color: '#f18f01'
+    emoji: 🎯
+  child-wellbeing:
+    label: Child Well-being
+    color: '#c73e1d'
+    emoji: 👶
+  partnerships:
+    label: Partnerships
+    color: '#3d348b'
+    emoji: 🤝
+  africa:
+    label: Africa
+    color: '#119822'
+    emoji: 🌍
+  digital:
+    label: Digital & AI
+    color: '#6b4c9a'
+    emoji: 💻

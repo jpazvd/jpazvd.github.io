@@ -1,0 +1,33 @@
+{% comment %}
+Stats Banner Component - Unified styling across pages
+Usage: {% include stats-banner.html stats=stats_array footer_text="Optional footer" footer_link="https://..." %}
+
+Each stat in stats_array should have:
+  - value: The numeric/text value to display
+  - label: The label below the value
+{% endcomment %}
+
+<div class="jp-gradient-banner stats-banner">
+  <div class="jp-stats-row">
+    {% for stat in include.stats %}
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ stat.value }}</div>
+      <div class="jp-stat__label">{{ stat.label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if include.footer_text %}
+  <div class="jp-banner__footer">
+    {% if include.footer_link %}
+    <a href="{{ include.footer_link }}" target="_blank" rel="noopener" style="color: white;">
+      {{ include.footer_text }}
+    </a>
+    {% else %}
+    {{ include.footer_text }}
+    {% endif %}
+    {% if include.footer_meta %}
+    <br>{{ include.footer_meta }}
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

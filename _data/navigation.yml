@@ -1,0 +1,19 @@
+# main links
+main:
+  - title: "Research"
+    url: /research/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Software"
+    url: /softwares/
+
+  - title: "Writing"
+    url: /blogs/
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "Contact"
+    url: /contact/

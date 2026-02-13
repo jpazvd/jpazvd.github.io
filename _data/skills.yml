@@ -1,0 +1,48 @@
+# Skills data for CV auto-generation
+# Last updated: 2025-12-15
+
+technical:
+  - category: "Programming & Analytics"
+    items:
+      - "Stata (advanced, ado-file development, SSC contributor)"
+      - "R, Python, SQL"
+      - "Analytical APIs & data services (SDMX/REST/JSON; microdata catalogs; data warehouse APIs)"
+
+  - category: "AI & Automation"
+    items:
+      - "LLM-assisted analysis (governed use of LLM APIs for summarization/classification/extraction)"
+      - "Human-in-the-loop QA, versioning, and review workflows"
+
+  - category: "Data Engineering"
+    items:
+      - "Data quality & reliability engineering (schema validation, provenance logging, caching)"
+      - "Security & compliance for analytics (token/secret handling; PII-safe workflows)"
+      - "Reproducible workflows and automated refresh pipelines"
+
+  - category: "Quantitative Methods"
+    items:
+      - "Econometrics & Impact Evaluation"
+      - "Survey Design & Sampling"
+      - "Small Area Estimation & Poverty Mapping"
+      - "Data Visualization & Dashboard Development"
+
+domain:
+  - "Poverty Measurement & Analysis"
+  - "Education Statistics & Learning Assessment"
+  - "Child Development Indicators"
+  - "SDG Monitoring & Reporting"
+  - "Human Capital Measurement"
+
+leadership:
+  - "Team Leadership (45+ staff at UNICEF)"
+  - "International Development Operations"
+  - "Multi-stakeholder Coordination"
+  - "Technical Assistance & Capacity Building"
+
+languages:
+  - language: "Portuguese"
+    level: "native"
+  - language: "English"
+    level: "fluent"
+  - language: "Spanish"
+    level: "fluent"

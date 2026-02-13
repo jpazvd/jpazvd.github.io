@@ -1,0 +1,252 @@
+# Honors, Awards, and Professional Distinctions
+# Author: João Pedro Azevedo
+# Purpose: Professional recognition, memberships, fellowships, grants, awards
+# Last Updated: 2025-12-24
+
+# === SCHEMA REFERENCE ===
+# Field definitions:
+#   id:              Unique identifier (kebab-case)
+#   category:        executive_position | professional_membership | research_impact | fellowship | grant | award | recognition
+#   title:           Honor/award name
+#   organization:    Awarding organization
+#   year:            Year received
+#   year_end:        End year (for ongoing memberships)
+#   status:          current | completed
+#   level:           international | national | institutional
+#   description:     Details about the honor/award
+#   amount:          Monetary value (if applicable)
+#   url:             Link to announcement or certificate
+#   evidence:        Path to certificate/documentation
+#   tags:            Thematic tags
+
+# Summary Stats
+summary:
+  total_honors: 15
+  executive_positions: 2
+  professional_memberships: 3
+  research_impact_rankings: 4
+  fellowships: 8
+  conference_grants: 6
+  awards: 2
+  last_updated: "2025-12-24"
+
+# Honors and Distinctions
+
+executive_positions:
+  - id: chief-statistician-unicef-2023
+    category: executive_position
+    title: "Chief Statistician & Deputy Director, Data and Analytics Section"
+    organization: "UNICEF Headquarters"
+    year: 2023
+    year_end: null
+    status: current
+    level: international
+    location: "New York, USA"
+    description: "UNICEF's first Chief Statistician, leading global data and statistical work. Responsible for production of 300+ child-related indicators including 19 SDG indicators, technical assistance on MICS surveys, and 50+ publications annually. Manages 10 units and 45 international staff with $20M annual budget."
+    url: "https://www.unicef.org/statistics"
+    tags: ["leadership", "statistics", "sdg", "child welfare"]
+    
+  - id: lead-economist-wb-edtech-2018
+    category: executive_position
+    title: "Lead Economist & EdTech Fellow"
+    organization: "World Bank Education Practice"
+    year: 2018
+    year_end: 2023
+    status: completed
+    level: international
+    location: "Washington, D.C., USA"
+    description: "Lead Economist and EdTech Fellow coordinating education statistics for the World Bank Human Capital Project. Created the EduAnalytics team and developed the Learning Poverty measure and Global Target. Implemented harmonization of 1,000+ learning assessments."
+    url: "https://www.worldbank.org/en/topic/education"
+    tags: ["leadership", "education", "learning poverty", "edtech"]
+
+professional_memberships:
+  - id: isa-elected-member
+    category: professional_membership
+    title: "Elected Member"
+    organization: "International Statistical Association"
+    year: 2020
+    year_end: null
+    status: current
+    level: international
+    description: "Elected member of the International Statistical Association, the world's leading professional association for statisticians."
+    url: "https://www.isi-web.org"
+    tags: ["statistics", "professional association", "international"]
+    
+  - id: anpec-member
+    category: professional_membership
+    title: "Member"
+    organization: "Associação Nacional de Centros de Pós-Graduação em Economia (ANPEC)"
+    year: 1999
+    year_end: null
+    status: current
+    level: national
+    description: "Brazilian National Association of Graduate Programs in Economics"
+    tags: ["economics", "brazil", "professional association"]
+    
+  - id: res-member
+    category: professional_membership
+    title: "Member"
+    organization: "Royal Economic Society"
+    year: 2003
+    year_end: 2008
+    status: completed
+    level: international
+    description: "Professional membership in the Royal Economic Society (UK)"
+    tags: ["economics", "uk", "professional association"]
+
+research_impact:
+  - id: repec-software-top-5-percent
+    category: research_impact
+    title: "Top 5% Authors by Downloads and Citations"
+    organization: "RePEc/IDEAS (Research Papers in Economics)"
+    year: 2023
+    year_end: null
+    status: current
+    level: international
+    description: "Ranked among top 5% of authors globally by software downloads and abstract views on RePEc. #6 in US for software total downloads; #19 globally for software downloads."
+    url: "https://ideas.repec.org/e/pwa88.html"
+    tags: ["research impact", "software", "stata", "downloads"]
+    
+  - id: google-scholar-h-index-30
+    category: research_impact
+    title: "Google Scholar h-index: 30"
+    organization: "Google Scholar"
+    year: 2025
+    status: current
+    level: international
+    description: "5,555 total citations, h-index of 30, i10-index of 62 (as of December 2025)"
+    url: "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+    tags: ["citations", "research impact", "h-index"]
+    
+  - id: repec-software-global-19
+    category: research_impact
+    title: "#19 Global Ranking for Software Downloads"
+    organization: "RePEc/IDEAS"
+    year: 2024
+    status: current
+    level: international
+    description: "Ranked #19 globally among all authors for total software component downloads on RePEc. Over 26,886 downloads and 111,699 abstract views."
+    url: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all"
+    tags: ["research impact", "software", "downloads", "stata"]
+    
+  - id: repec-software-us-6
+    category: research_impact
+    title: "#6 US Ranking for Software Downloads"
+    organization: "RePEc/IDEAS"
+    year: 2024
+    status: current
+    level: national
+    description: "Ranked #6 in the United States for total software component downloads and #6 for abstract views among US-affiliated authors."
+    url: "https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us"
+    tags: ["research impact", "software", "downloads", "stata", "us"]
+
+fellowships_grants:
+  - id: conference-grant-gdn-2005
+    category: fellowship
+    title: "Conference Grant"
+    organization: "Global Development Network / World Bank"
+    year: 2005
+    level: international
+    description: "Travel grant to attend Global Development Network conference"
+    tags: ["conference", "grant", "world bank"]
+    
+  - id: conference-grant-res-2004
+    category: fellowship
+    title: "Conference Grant"
+    organization: "Royal Economic Society"
+    year: 2004
+    level: international
+    description: "Travel grant to present at Royal Economic Society annual conference"
+    tags: ["conference", "grant", "uk"]
+    
+  - id: conference-grant-res-2003
+    category: fellowship
+    title: "Conference Grant"
+    organization: "Royal Economic Society"
+    year: 2003
+    level: international
+    description: "Travel grant to present at Royal Economic Society annual conference"
+    tags: ["conference", "grant", "uk"]
+    
+  - id: orsas-2003
+    category: fellowship
+    title: "Overseas Research Award Scheme"
+    organization: "Universities UK on behalf of the Department of Education"
+    year: 2003
+    level: national
+    amount: null
+    description: "Prestigious scholarship for international PhD students in the UK covering tuition differential between UK and overseas fees"
+    tags: ["scholarship", "phd", "uk"]
+    
+  - id: newcastle-studentship-2003
+    category: fellowship
+    title: "University of Newcastle Studentship"
+    organization: "University of Newcastle"
+    year: 2003
+    level: institutional
+    description: "Full PhD studentship covering tuition and living expenses"
+    tags: ["scholarship", "phd", "uk"]
+    
+  - id: orsas-2002
+    category: fellowship
+    title: "Overseas Research Award Scheme"
+    organization: "Universities UK on behalf of the Department of Education"
+    year: 2002
+    level: national
+    description: "Scholarship for international PhD students in the UK (renewed)"
+    tags: ["scholarship", "phd", "uk"]
+    
+  - id: newcastle-studentship-2002
+    category: fellowship
+    title: "University of Newcastle Studentship"
+    organization: "University of Newcastle"
+    year: 2002
+    level: institutional
+    description: "PhD studentship (second year)"
+    tags: ["scholarship", "phd", "uk"]
+    
+  - id: newcastle-fellowship-2001
+    category: fellowship
+    title: "Research Fellowship"
+    organization: "Department of Economics, University of Newcastle"
+    year: 2001
+    level: institutional
+    description: "Research fellowship in the Department of Economics"
+    tags: ["fellowship", "research", "uk"]
+    
+  - id: newcastle-studentship-2001
+    category: fellowship
+    title: "University of Newcastle Studentship"
+    organization: "University of Newcastle"
+    year: 2001
+    level: institutional
+    description: "PhD studentship (first year)"
+    tags: ["scholarship", "phd", "uk"]
+
+awards:
+  - id: cnpq-masters-scholarship
+    category: award
+    title: "Master's Scholarship"
+    organization: "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)"
+    year: 1999
+    year_end: 2001
+    level: national
+    description: "Brazilian National Council for Scientific and Technological Development scholarship for Master's degree at UFF"
+    tags: ["scholarship", "masters", "brazil", "cnpq"]
+    
+  - id: cnpq-undergrad-scholarship
+    category: award
+    title: "Undergraduate Research Scholarship"
+    organization: "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)"
+    year: 1996
+    year_end: 1998
+    level: national
+    description: "Undergraduate research scholarship for scientific initiation at UFRJ"
+    tags: ["scholarship", "undergraduate", "brazil", "cnpq"]
+
+# Future honors to add:
+# - Journal editorial board memberships
+# - Best paper awards (if any)
+# - Teaching awards
+# - Invited lectureships
+# - Named lectures delivered

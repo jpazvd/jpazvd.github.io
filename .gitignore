@@ -1,0 +1,44 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Backup files (commented-out sample content)
+*.bak
+
+# Environment variables (API keys, secrets)
+.env
+.env.local
+.env.*.local
+
+# Python virtual environments
+.venv/
+
+# Local development
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ruby/Bundler
+vendor/
+.bundle/
+
+# Bundler lockfile is platform-specific for this repo
+Gemfile.lock
+
+# LinkedIn assets (local only)
+assets/linkdin/
+# EB1 Evidence backup (keep evidence in _evidence/ folder in repo)
+# Individual document backups should be deleted once committed
+_evidence-backup/
+**/~*

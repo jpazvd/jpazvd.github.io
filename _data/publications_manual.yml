@@ -1,0 +1,330 @@
+# Manual Publications Database
+# 
+# PURPOSE: Hand-curated publications NOT available in automated satellite databases
+# AUTHORITY: This file is the source of truth for:
+#   - Books (rarely in RePEc/OKR)
+#   - Book chapters (not systematically indexed)
+#   - Conference papers (often not in OKR)
+#   - Historical publications (pre-2000)
+#
+# DO NOT ADD:
+#   - Working papers (use fetch_repec_stats.py → okr_publications.yml)
+#   - Software (use scrape_stata_help_files.py → stata_help_files.yml)
+#   - Journal articles IF they're in OKR/RePEc
+#
+# WORKFLOW:
+#   1. Add entries here manually
+#   2. Run: python scripts/build_publications_master.py
+#   3. Generated publications.yml will include these entries
+#
+# Last Updated: 2025-12-24
+
+# === JOURNAL ARTICLES ===
+# Only include if NOT in OKR or RePEc
+
+journal_articles:
+  - id: azevedo-ndiaye-2004-microfinance
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Ndiaye, G."]
+    year: 2004
+    title: "Microfinance Institutions in Senegal"
+    journal: "Small Enterprise Development"
+    volume: "15"
+    issue: "2"
+    pages: "4-17"
+    citations: 12
+    tags: ["microfinance", "senegal", "africa"]
+    peer_reviewed: true
+    language: "en"
+    country: "UK"
+
+  - id: azevedo-batista-2002-cepal
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Batista, H.R."]
+    year: 2002
+    title: "Explaining the recent performance of Brazilian exports"
+    journal: "Revista de la CEPAL"
+    volume: "77"
+    pages: "63-74"
+    citations: 8
+    tags: ["trade", "exports", "brazil"]
+    peer_reviewed: true
+    language: "en"
+    country: "Chile"
+    urls:
+      journal: "https://repositorio.cepal.org/handle/11362/10921"
+
+  - id: azevedo-yamada-2002-microfinance
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Yamada, Gustavo"]
+    year: 2002
+    title: "Microfinance, institutions and entrepreneurs"
+    journal: "Journal of Microfinance"
+    volume: "4"
+    issue: "2"
+    pages: "103-128"
+    citations: 18
+    tags: ["microfinance", "entrepreneurship", "institutions"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: azevedo-batista-1999-exports
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Batista, H.R."]
+    year: 1999
+    title: "Brazilian manufactured exports: determinants and effects of the trade liberalization policy"
+    journal: "Revista de Economia Contemporânea"
+    volume: "3"
+    issue: "2"
+    pages: "93-118"
+    citations: 15
+    tags: ["trade", "exports", "brazil", "liberalization"]
+    peer_reviewed: true
+    language: "pt"
+    country: "Brazil"
+
+# === BOOKS ===
+
+books:
+  - id: dolton-azevedo-smith-2006-ndlp
+    type: book
+    authors: ["Dolton, P.", "Azevedo, João Pedro", "Smith, J."]
+    year: 2006
+    title: "The econometric evaluation of the New Deal for Lone Parents"
+    publisher: "Department for Work and Pensions"
+    pages: "Research Report No. 356"
+    country: "UK"
+    language: "en"
+    tags: ["policy evaluation", "uk", "welfare", "labor markets"]
+    urls:
+      pdf: "https://webarchive.nationalarchives.gov.uk/ukgwa/+/http://www.dwp.gov.uk/asd/asd5/rports2005-2006/rrep356.pdf"
+
+  - id: mec-ipea-2006-alfabetizado-brasil-sintese
+    type: book
+    authors: ["Ministério da Educação", "IPEA", "UNESCO"]
+    year: 2006
+    title: "Brasil Alfabetizado: caminhos da avaliação - Síntese dos principais resultados"
+    publisher: "MEC/UNESCO/IPEA"
+    country: "Brazil"
+    language: "pt"
+    tags: ["education", "literacy", "brazil", "evaluation"]
+
+  - id: mec-ipea-2006-alfabetizado-brasil-v1
+    type: book
+    authors: ["Ministério da Educação", "IPEA", "UNESCO"]
+    year: 2006
+    title: "Brasil Alfabetizado: caminhos da avaliação - Volume 1"
+    publisher: "MEC/UNESCO/IPEA"
+    country: "Brazil"
+    language: "pt"
+    tags: ["education", "literacy", "brazil", "evaluation"]
+
+  - id: mec-ipea-2006-alfabetizado-brasil-v2
+    type: book
+    authors: ["Ministério da Educação", "IPEA", "UNESCO"]
+    year: 2006
+    title: "Brasil Alfabetizado: caminhos da avaliação - Volume 2"
+    publisher: "MEC/UNESCO/IPEA"
+    country: "Brazil"
+    language: "pt"
+    tags: ["education", "literacy", "brazil", "evaluation"]
+
+  - id: mec-ipea-2006-alfabetizado-brasil-v3
+    type: book
+    authors: ["Ministério da Educação", "IPEA", "UNESCO"]
+    year: 2006
+    title: "Brasil Alfabetizado: caminhos da avaliação - Volume 3"
+    publisher: "MEC/UNESCO/IPEA"
+    country: "Brazil"
+    language: "pt"
+    tags: ["education", "literacy", "brazil", "evaluation"]
+
+  - id: dolton-azevedo-2006-ndyp
+    type: book
+    authors: ["Dolton, P.", "Azevedo, João Pedro"]
+    year: 2006
+    title: "The econometric evaluation of the New Deal for Young People"
+    publisher: "Department for Work and Pensions"
+    pages: "Research Report No. 355"
+    country: "UK"
+    language: "en"
+    tags: ["policy evaluation", "uk", "welfare", "youth", "labor markets"]
+    urls:
+      pdf: "https://webarchive.nationalarchives.gov.uk/ukgwa/+/http://www.dwp.gov.uk/asd/asd5/rports2005-2006/rrep355.pdf"
+
+# === BOOK CHAPTERS ===
+
+book_chapters:
+  - id: azevedo-2008-canal-futura
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2008
+    title: "Educational Television and Poverty: a contingent valuation of Canal Futura in Brazil"
+    book: "International Perspectives on the Economics of Education"
+    editor: "G. Johnes and J. Johnes"
+    publisher: "Edward Elgar"
+    pages: "273-302"
+    country: "UK"
+    language: "en"
+    tags: ["education", "television", "brazil", "contingent valuation"]
+
+  - id: azevedo-2007-inequality-significance
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2007
+    title: "On the statistical significance of poverty and inequality measures: a bootstrap approach with an application to Latin America"
+    book: "Inequality, Poverty and Wellbeing"
+    editor: "S. Jenkins and J. Micklewright"
+    publisher: "Palgrave Macmillan"
+    pages: "123-145"
+    country: "UK"
+    language: "en"
+    tags: ["inequality", "poverty", "bootstrap", "latin america", "methodology"]
+
+  - id: azevedo-2006-labour-slums
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2006
+    title: "Informal labour markets and poverty in Brazilian slums"
+    book: "Informal Labour Markets and Development"
+    editor: "B. Guha-Khasnobis and R. Kanbur"
+    publisher: "Palgrave-Macmillan"
+    pages: "187-210"
+    country: "UK"
+    language: "en"
+    tags: ["informal labor", "poverty", "brazil", "slums"]
+
+  - id: azevedo-2006-microfinance-entrepreneurs
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2006
+    title: "Microfinance institutions and entrepreneurs: a review of the literature"
+    book: "Handbook of Entrepreneurship Research"
+    editor: "S. Parker"
+    publisher: "Kluwer Academic Publishers"
+    pages: "345-378"
+    country: "Netherlands"
+    language: "en"
+    tags: ["microfinance", "entrepreneurship", "literature review"]
+
+  - id: azevedo-2002-microfinance-welfare
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2002
+    title: "The welfare effects of microfinance institutions"
+    book: "Economic Development and Microfinance"
+    editor: "FAO"
+    publisher: "Food and Agriculture Organization"
+    pages: "89-112"
+    country: "Italy"
+    language: "en"
+    tags: ["microfinance", "welfare", "development"]
+
+  - id: azevedo-2002-education-brazil
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2002
+    title: "Returns to education in Brazil"
+    book: "Education and Development"
+    editor: "UNESCO"
+    publisher: "UNESCO Publishing"
+    pages: "201-225"
+    country: "France"
+    language: "en"
+    tags: ["education", "returns to education", "brazil"]
+
+# === CONFERENCE PAPERS ===
+
+conference_papers:
+  - id: azevedo-2005-lacaea-paris
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2005
+    title: "Poverty and inequality in Latin America"
+    venue: "Latin American and Caribbean Economic Association (LACAEA)"
+    location: "Paris, France"
+    date: "2005-10"
+    tags: ["poverty", "inequality", "latin america"]
+
+  - id: azevedo-2005-anpec-natal
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2005
+    title: "Brazilian inequality decomposition"
+    venue: "Associação Nacional de Centros de Pós-Graduação em Economia (ANPEC)"
+    location: "Natal, Brazil"
+    date: "2005-12"
+    language: "pt"
+    tags: ["inequality", "decomposition", "brazil"]
+
+  - id: azevedo-2004-helsinki
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2004
+    title: "Microfinance and poverty reduction"
+    venue: "Development Economics Conference"
+    location: "Helsinki, Finland"
+    date: "2004-06"
+    tags: ["microfinance", "poverty"]
+
+  - id: azevedo-2004-eale-lisboa
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2004
+    title: "Labor market policies evaluation"
+    venue: "European Association of Labour Economists (EALE)"
+    location: "Lisboa, Portugal"
+    date: "2004-09"
+    tags: ["labor markets", "policy evaluation"]
+
+  - id: azevedo-2004-anpec-joao-pessoa
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2004
+    title: "Poverty dynamics in Brazil"
+    venue: "ANPEC"
+    location: "João Pessoa, Brazil"
+    date: "2004-12"
+    language: "pt"
+    tags: ["poverty", "dynamics", "brazil"]
+
+  - id: azevedo-2003-lacaea-puebla
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2003
+    title: "Inequality measures and decomposition"
+    venue: "LACAEA"
+    location: "Puebla, Mexico"
+    date: "2003-10"
+    tags: ["inequality", "decomposition", "methodology"]
+
+  - id: azevedo-2002-desg-nottingham
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2002
+    title: "Microfinance institutions in developing countries"
+    venue: "Development Economics Study Group (DESG)"
+    location: "Nottingham, UK"
+    date: "2002-04"
+    tags: ["microfinance", "development"]
+
+  - id: azevedo-2001-heidelberg
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2001
+    title: "Entrepreneurship and microfinance"
+    venue: "Development Economics Conference"
+    location: "Heidelberg, Germany"
+    date: "2001-09"
+    tags: ["entrepreneurship", "microfinance"]
+
+  - id: azevedo-2000-anpec-campinas
+    type: conference_paper
+    authors: ["Azevedo, João Pedro"]
+    year: 2000
+    title: "Brazilian export performance"
+    venue: "ANPEC"
+    location: "Campinas, Brazil"
+    date: "2000-12"
+    language: "pt"
+    tags: ["exports", "trade", "brazil"]

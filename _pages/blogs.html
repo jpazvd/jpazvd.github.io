@@ -1,0 +1,269 @@
+---
+layout: archive
+title: "Short Articles, Commentaries & Blogs"
+permalink: /blogs/
+author_profile: true
+description: "Short articles, commentaries and blog posts by João Pedro Azevedo on education, learning poverty, and development economics from World Bank, UNICEF, Brookings, and LinkedIn."
+---
+
+{% include base_path %}
+
+<p>Short articles, commentaries and blog posts on education, learning poverty, human capital, and development economics. Includes institutional blogs (World Bank, UNICEF, Brookings) and personal reflections (LinkedIn). For peer-reviewed journal articles, see <a href="/publications/">Publications</a>.</p>
+
+<!-- Stats Banner -->
+{% assign other_posts = site.data.other_blogs_full.posts %}
+{% if other_posts == nil %}
+  {% assign other_posts = "" | split: "," %}
+{% endif %}
+
+{% assign wb_posts = site.data.worldbank_blogs_full.posts %}
+{% if wb_posts == nil %}
+  {% assign wb_posts = "" | split: "," %}
+{% endif %}
+
+{% assign linkedin_posts = site.data.linkedin_blogs.posts %}
+{% if linkedin_posts == nil %}
+  {% assign linkedin_posts = "" | split: "," %}
+{% endif %}
+
+{% assign wb_count = site.data.worldbank_blogs_full.total_posts | default: site.data.citations.world_bank_blogs.english_posts | default: 24 %}
+{% assign other_count = other_posts.size | default: 0 %}
+{% assign linkedin_count = linkedin_posts.size | default: 0 %}
+{% assign total_count = wb_count | plus: other_count | plus: linkedin_count %}
+
+{% assign wb_first_year = site.data.citations.world_bank_blogs.timeline.first_year | default: 2012 | plus: 0 %}
+{% assign wb_last_year = site.data.citations.world_bank_blogs.timeline.latest_year | default: site.data.citations.world_bank_blogs.timeline.last_year | default: 2023 | plus: 0 %}
+
+{% assign other_years = other_posts | map: 'year' | sort %}
+{% assign other_first_year = other_years | first | default: wb_first_year | plus: 0 %}
+{% assign other_last_year = other_years | last | default: wb_last_year | plus: 0 %}
+
+{% assign linkedin_years = linkedin_posts | map: 'year' | sort %}
+{% assign linkedin_first_year = linkedin_years | first | default: wb_first_year | plus: 0 %}
+{% assign linkedin_last_year = linkedin_years | last | default: wb_last_year | plus: 0 %}
+
+{% assign first_year = wb_first_year %}
+{% if other_first_year < first_year %}
+  {% assign first_year = other_first_year %}
+{% endif %}
+{% if linkedin_first_year < first_year %}
+  {% assign first_year = linkedin_first_year %}
+{% endif %}
+
+{% assign last_year = wb_last_year %}
+{% if other_last_year > last_year %}
+  {% assign last_year = other_last_year %}
+{% endif %}
+{% if linkedin_last_year > last_year %}
+  {% assign last_year = linkedin_last_year %}
+{% endif %}
+
+{% assign all_posts = wb_posts | concat: other_posts | concat: linkedin_posts %}
+{% assign all_channels = all_posts | group_by: 'channel' %}
+
+<div class="blog-stats jp-gradient-banner">
+  <div class="jp-stats-row">
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ total_count }}</div>
+      <div class="jp-stat__label">Posts</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ first_year }}-{{ last_year }}</div>
+      <div class="jp-stat__label">Active Years</div>
+    </div>
+    <div class="jp-stat">
+      <div class="jp-stat__value">{{ all_channels | size }}</div>
+      <div class="jp-stat__label">Channels</div>
+    </div>
+  </div>
+  <div class="jp-banner__footer">
+    World Bank | Brookings | UNICEF | LinkedIn
+    <br>Last updated: {{ site.data.citations.all_blogs.last_updated | default: site.data.citations.world_bank_blogs.last_updated | default: site.data.worldbank_blogs_full.metadata.last_updated }}
+  </div>
+</div>
+
+<!-- Tag Filters -->
+<div class="tag-filters">
+  <button class="tag-filter active" data-tag="all" onclick="filterBlogs('all', this)">
+    All <span class="filter-count" id="visible-count">{{ total_count }}</span>
+  </button>
+  <button class="tag-filter" data-tag="learning" onclick="filterBlogs('learning', this)">
+    Learning
+  </button>
+  <button class="tag-filter" data-tag="statistics" onclick="filterBlogs('statistics', this)">
+    Statistics
+  </button>
+  <button class="tag-filter" data-tag="poverty" onclick="filterBlogs('poverty', this)">
+    Poverty
+  </button>
+  <button class="tag-filter" data-tag="sdg" onclick="filterBlogs('sdg', this)">
+    SDG
+  </button>
+  <button class="tag-filter" data-tag="child-wellbeing" onclick="filterBlogs('child-wellbeing', this)">
+    Child Wellbeing
+  </button>
+  <button class="tag-filter" data-tag="governance" onclick="filterBlogs('governance', this)">
+    Governance
+  </button>
+  <button class="tag-filter" data-tag="digital" onclick="filterBlogs('digital', this)">
+    Digital/AI
+  </button>
+  <button class="tag-filter" data-tag="africa" onclick="filterBlogs('africa', this)">
+    Africa
+  </button>
+</div>
+
+<!-- Organization Filter -->
+<div class="tag-filters tag-filters--alt">
+  <strong class="tag-filters__label">Source:</strong>
+  <button class="tag-filter active" data-org="all" onclick="filterByOrg('all', this)">All</button>
+  <button class="tag-filter" data-org="World Bank" onclick="filterByOrg('World Bank', this)">World Bank</button>
+  <button class="tag-filter" data-org="UNICEF" onclick="filterByOrg('UNICEF', this)">UNICEF</button>
+  <button class="tag-filter" data-org="Brookings" onclick="filterByOrg('Brookings', this)">Brookings</button>
+  <button class="tag-filter" data-org="LinkedIn" onclick="filterByOrg('LinkedIn', this)">LinkedIn</button>
+</div>
+
+<h2>All posts (chronological)</h2>
+
+{% assign all_sorted_posts = all_posts | sort: 'date' | reverse %}
+{% assign current_year = "" %}
+
+{% for post in all_sorted_posts %}
+  {% assign post_year = post.year | default: post.date | slice: 0, 4 %}
+  {% assign post_org = post.organization | default: 'World Bank' %}
+  
+  {% comment %}Map topics to standard tags{% endcomment %}
+  {% assign post_tags = "" %}
+  {% for topic in post.topics %}
+    {% assign topic_lower = topic | downcase %}
+    {% if topic_lower contains "education" or topic_lower contains "learning" or topic_lower contains "school" %}
+      {% assign post_tags = post_tags | append: "learning " %}
+    {% endif %}
+    {% if topic_lower contains "data" or topic_lower contains "statistic" or topic_lower contains "measurement" %}
+      {% assign post_tags = post_tags | append: "statistics " %}
+    {% endif %}
+    {% if topic_lower contains "poverty" or topic_lower contains "inequal" or topic_lower contains "equity" %}
+      {% assign post_tags = post_tags | append: "poverty " %}
+    {% endif %}
+    {% if topic_lower contains "sdg" or topic_lower contains "sustainable" %}
+      {% assign post_tags = post_tags | append: "sdg " %}
+    {% endif %}
+    {% if topic_lower contains "child" or topic_lower contains "youth" or topic_lower contains "adolescent" %}
+      {% assign post_tags = post_tags | append: "child-wellbeing " %}
+    {% endif %}
+    {% if topic_lower contains "govern" or topic_lower contains "policy" or topic_lower contains "framework" %}
+      {% assign post_tags = post_tags | append: "governance " %}
+    {% endif %}
+    {% if topic_lower contains "digital" or topic_lower contains "ai" or topic_lower contains "tech" %}
+      {% assign post_tags = post_tags | append: "digital " %}
+    {% endif %}
+    {% if topic_lower contains "africa" %}
+      {% assign post_tags = post_tags | append: "africa " %}
+    {% endif %}
+  {% endfor %}
+  {% comment %}Also check tags field if present{% endcomment %}
+  {% for tag in post.tags %}
+    {% assign tag_lower = tag | downcase %}
+    {% if tag_lower contains "education" or tag_lower contains "learning" %}
+      {% assign post_tags = post_tags | append: "learning " %}
+    {% endif %}
+    {% if tag_lower contains "data" or tag_lower contains "statistic" %}
+      {% assign post_tags = post_tags | append: "statistics " %}
+    {% endif %}
+    {% if tag_lower contains "africa" %}
+      {% assign post_tags = post_tags | append: "africa " %}
+    {% endif %}
+    {% if tag_lower contains "ai" or tag_lower contains "digital" %}
+      {% assign post_tags = post_tags | append: "digital " %}
+    {% endif %}
+  {% endfor %}
+  {% comment %}Default to learning if no tags matched (most posts are about education){% endcomment %}
+  {% if post_tags == "" %}
+    {% assign post_tags = "learning" %}
+  {% endif %}
+
+  {% if post_year != current_year %}
+    {% if current_year != "" %}</div>{% endif %}
+    <h3 id="y{{ post_year }}" class="year-header" data-year="{{ post_year }}">{{ post_year }}</h3>
+    <div class="posts-container">
+    {% assign current_year = post_year %}
+  {% endif %}
+
+  <article class="blog-card jp-card" data-tags="{{ post_tags }}" data-org="{{ post_org }}">
+    <h4 class="jp-card__title">
+      <a href="{{ post.url }}" {% unless post.url contains "/posts/" %}target="_blank" rel="noopener"{% endunless %}>{{ post.title }}</a>
+      {% if post.language and post.language != "en" %}
+        <span class="jp-lang-pill">{{ post.language | upcase }}</span>
+      {% endif %}
+    </h4>
+
+    <div class="jp-card__meta">
+      {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>{% endif %}
+      &bull;
+      <span class="jp-pill">{{ post_org }}</span>
+      {% if post.channel %}
+        &bull;
+        <em>{{ post.channel }}</em>
+      {% endif %}
+    </div>
+
+    {% if post.description and post.description.size > 10 %}
+    <p class="jp-card__desc">
+      {{ post.description | truncate: 250 }}
+    </p>
+    {% endif %}
+
+    {% if post.images and post.images.size > 0 %}
+    <div class="jp-card__img">
+      <img src="{{ post.images[0].src }}" alt="{{ post.images[0].alt | default: post.title }}" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="jp-card__footer">
+      {% if post.authors and post.authors.size > 1 %}
+        <span class="jp-muted">
+          <em>with {% for author in post.authors %}{% unless author == 'João Pedro Azevedo' %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}</em>
+        </span>
+      {% endif %}
+
+      {% if post.topics %}
+        {% for topic in post.topics %}
+          <span class="jp-topic">{{ topic }}</span>
+        {% endfor %}
+      {% endif %}
+
+      {% if post_org == 'World Bank' %}
+        <a href="{{ post.url }}" target="_blank" rel="noopener" class="jp-readmore">Read on World Bank →</a>
+      {% elsif post_org == 'LinkedIn' %}
+        <a href="{{ post.url | default: post.linkedin_url }}" class="jp-readmore">Read Article →</a>
+        {% if post.linkedin_url %}
+          <a href="{{ post.linkedin_url }}" target="_blank" rel="noopener" class="jp-readmore jp-readmore--secondary">View on LinkedIn ↗</a>
+        {% endif %}
+      {% elsif post_org == 'UNICEF' %}
+        <a href="{{ post.url }}" target="_blank" rel="noopener" class="jp-readmore">Read on UNICEF →</a>
+      {% elsif post_org == 'Brookings' %}
+        <a href="{{ post.url }}" target="_blank" rel="noopener" class="jp-readmore">Read on Brookings →</a>
+      {% else %}
+        <a href="{{ post.url }}" target="_blank" rel="noopener" class="jp-readmore">Read Article →</a>
+      {% endif %}
+
+      {% if post.translations %}
+        <span class="jp-translations">
+          Also in:
+          {% for trans in post.translations %}
+            <a href="{{ trans.url }}" target="_blank" rel="noopener" class="jp-lang-link" title="{{ trans.title }}">{{ trans.language | upcase }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<hr class="jp-separator">
+
+<p class="jp-muted">
+  <em>Last updated: {{ site.data.citations.world_bank_blogs.last_updated | default: site.data.worldbank_blogs_full.metadata.last_updated }}</em>
+</p>
+
+<script src="{{ base_path }}/assets/js/blogs-filter.js"></script>

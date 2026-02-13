@@ -1,0 +1,117 @@
+# LinkedIn Articles by João Pedro Azevedo
+# These articles were originally published on LinkedIn and are mirrored here
+
+metadata:
+  total_posts: 7
+  platform: LinkedIn
+  profile_url: https://www.linkedin.com/in/jpazvd
+  last_updated: '2025-12-14'
+
+posts:
+  - title: "From Evidence to Action: Strengthening Africa's Learning Data Ecosystems"
+    slug: "from-evidence-action-strengthening-africas-learning-data"
+    date: '2025-10-31'
+    year: 2025
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2025/10/from-evidence-action-strengthening-africas-learning-data/"
+    linkedin_url: "https://www.linkedin.com/pulse/from-evidence-action-strengthening-africas-learning-data-azevedo-splue"
+    description: "Reflections from the ADEA Triennale 2025 in Accra on building fit-for-purpose, comparable learning assessments across Africa."
+    tags:
+      - Education
+      - Africa
+      - Learning Data
+      - UNICEF
+      - ADEA
+
+  - title: "When the Future Arrives Faster Than Expected: Reflections on AI and Education at CIES 2025"
+    slug: "future-arrives-faster-ai-education-cies-2025"
+    date: '2025-03-23'
+    year: 2025
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2025/03/future-arrives-faster-ai-education-cies-2025/"
+    linkedin_url: "https://www.linkedin.com/pulse/when-future-arrives-faster-than-expected-reflections-ai-azevedo-fpi1e"
+    description: "Initial reflections on AI and Education from the Comparative and International Education Society (CIES) 2025 conference in Chicago."
+    tags:
+      - AI
+      - Education
+      - CIES
+      - EdTech
+
+  - title: "Strengthening Child and Adolescent Statistics in Africa"
+    slug: "strengthening-child-adolescent-statistics-africa-un56sc"
+    date: '2025-03-08'
+    year: 2025
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2025/03/strengthening-child-adolescent-statistics-africa-un56sc/"
+    linkedin_url: "https://www.linkedin.com/pulse/strengthening-child-adolescent-statistics-africa-un56sc-azevedo-oz2ze"
+    description: "Launch of the Africa Expert Group on Child and Adolescent Statistics at the UN 56th Statistical Commission side event."
+    tags:
+      - Statistics
+      - Africa
+      - UNICEF
+      - UN56SC
+      - Data
+
+  - title: "A Year of Insights, A Future of Action: UNICEF Data and Analytics 2024"
+    slug: "year-insights-future-action-unicef-data-analytics-2024"
+    date: '2025-01-03'
+    year: 2025
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2025/01/year-insights-future-action-unicef-data-analytics-2024/"
+    linkedin_url: "https://www.linkedin.com/pulse/year-insights-future-action-unicef-data-analytics-2024-azevedo-b4wce"
+    description: "Highlights from UNICEF Data and Analytics Team publications in 2024, covering child mortality, FGM, immunization, and more."
+    tags:
+      - UNICEF
+      - Data
+      - Child Rights
+      - SDGs
+
+  - title: "Data that Matters: Achieving Both Precision and Public Trust in Statistics"
+    slug: "data-matters-precision-public-trust-statistics"
+    date: '2024-10-31'
+    year: 2024
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2024/10/data-matters-precision-public-trust-statistics/"
+    linkedin_url: "https://www.linkedin.com/pulse/data-matters-achieving-both-precision-public-trust-jo%C3%A3o-pedro-azevedo-agqye"
+    description: "How Colombia transformed its poverty measurement through the MESEP process, rebuilding public trust in statistics."
+    tags:
+      - Statistics
+      - Poverty
+      - Colombia
+      - MESEP
+
+  - title: "Analyzing Intergenerational Mobility in Brazil: Education and Poverty Trends"
+    slug: "intergenerational-mobility-brazil-education-poverty"
+    date: '2024-08-27'
+    year: 2024
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2024/08/intergenerational-mobility-brazil-education-poverty/"
+    linkedin_url: "https://www.linkedin.com/in/jpazvd"
+    description: "Analysis of Brazil's progress in education and poverty reduction across generations using age-period-cohort data."
+    tags:
+      - Brazil
+      - Education
+      - Poverty
+      - Mobility
+      - Data Analysis
+
+  - title: "Learning Poverty and COVID-19 School Closures: Initial Simulations"
+    slug: "learning-poverty-covid-19-school-closures-simulations"
+    date: '2020-10-22'
+    year: 2020
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2020/10/learning-poverty-covid-19-school-closures-simulations/"
+    linkedin_url: "https://www.linkedin.com/pulse/how-could-covid-19-hinder-progress-learning-poverty-some-azevedo"
+    description: "Simulation scenarios showing potential impacts of COVID-19 school closures on learning poverty in low- and middle-income countries."
+    tags:
+      - COVID-19
+      - Learning Poverty
+      - Education
+      - Simulations

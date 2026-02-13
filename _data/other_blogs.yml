@@ -1,0 +1,79 @@
+metadata:
+  author: João Pedro Azevedo
+  source: Other Organizations
+  last_updated: '2025-12-12'
+  total_posts: 4
+posts:
+  - title: UNICEF report puts children at the heart of sustainable development
+    url: https://data.unicef.org/data-for-action/unicef-report-puts-children-at-the-heart-of-sustainable-development/
+    date: '2023-11-20'
+    year: 2023
+    organization: UNICEF
+    channel: UNICEF Data for Action
+    language: en
+    description: UNICEF report argues that accelerating progress on the SDGs requires centring child rights and child well-being, drawing on 20+ years of data across 48 indicators and 190+ countries.
+    authors:
+      - João Pedro Azevedo
+    topics:
+      - SDGs
+      - Data and Research
+      - Evidence to Policy
+      - Publication & data launches
+
+  - title: Did the EU’s economic recession lead to a rise in populism?
+    url: https://www.brookings.edu/articles/did-the-eus-economic-recession-lead-to-a-rise-in-populism/
+    date: '2018-05-29'
+    year: 2018
+    organization: Brookings
+    channel: Future Development
+    language: en
+    description: Analysis of whether the post-2008 shift toward less inclusive growth in the EU helps explain rising support for populist parties.
+    authors:
+      - Enrique Aldaz-Carroll
+      - Rogier van den Brink
+      - Vincent Tsoungui Belinga
+      - Matija Laco
+      - João Pedro Azevedo
+      - Paul Corral Rodas
+    topics:
+      - Europe
+      - Inclusive growth
+      - Poverty and inequality
+      - Political economy
+
+  - title: Prioritizing public schooling over social transfers in Brazil
+    url: https://www.brookings.edu/articles/prioritizing-public-schooling-over-social-transfers-in-brazil/
+    date: '2018-11-26'
+    year: 2018
+    organization: Brookings
+    channel: Future Development
+    language: en
+    description: Argument for protecting opportunity for the young in Brazil by reforming pensions and improving learning outcomes in public schools.
+    authors:
+      - Martin Raiser
+      - João Pedro Azevedo
+    topics:
+      - Brazil
+      - Education
+      - Social protection
+      - Intergenerational equity
+
+  - title: Learning losses due to COVID-19 could add up to $10 trillion
+    url: https://www.brookings.edu/articles/learning-losses-due-to-covid-19-could-add-up-to-10-trillion/
+    date: '2020-07-30'
+    year: 2020
+    organization: Brookings
+    channel: Future Development
+    language: en
+    description: Early global estimates of the economic costs of COVID-19 school closures and the potential scale of learning losses.
+    authors:
+      - João Pedro Azevedo
+      - Amer Hasan
+      - Koen Geven
+      - Diana Goldemberg
+      - Syedah Aroob Iqbal
+    topics:
+      - COVID-19
+      - Learning losses
+      - Human capital
+      - Education

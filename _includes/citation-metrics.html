@@ -1,0 +1,31 @@
+{% assign metrics = site.data.citations %}
+<div class="citation-metrics" style="text-align: center;">
+  <h3>📊 Citation Metrics</h3>
+
+  {% assign scholar_url = metrics.google_scholar.profile_url %}
+  {% assign repec_url = metrics.repec.profile_url %}
+  {% assign orcid_url = metrics.orcid.profile_url %}
+
+  <ul style="list-style: none; padding: 0;">
+    <li><strong>Total citations:</strong>
+      {% if scholar_url %}<a href="{{ scholar_url }}" target="_blank" rel="noopener">{{ metrics.google_scholar.total_citations | default: '—' }}</a>{% else %}{{ metrics.google_scholar.total_citations | default: '—' }}{% endif %}
+    </li>
+    <li><strong>H-index:</strong> {{ metrics.google_scholar.h_index | default: '—' }}</li>
+    <li><strong>i10-index:</strong> {{ metrics.google_scholar.i10_index | default: '—' }}</li>
+    <li><strong>Citations by Year:</strong>
+      <ul>
+        {% for item in metrics.google_scholar.citations_by_year %}
+          <li>{{ item[0] }}: {{ item[1] }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li><strong>RePEc works:</strong> {{ metrics.repec.total_works | default: '—' }}</li>
+    <li><strong>Last updated:</strong> {{ metrics.google_scholar.last_updated | default: metrics.repec.last_updated | default: '—' }}</li>
+  </ul>
+
+  <p>
+    {% if scholar_url %}<a href="{{ scholar_url }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+    {% if repec_url %}{% if scholar_url %} | {% endif %}<a href="{{ repec_url }}" target="_blank" rel="noopener">RePEc/IDEAS</a>{% endif %}
+    {% if orcid_url %}{% if scholar_url or repec_url %} | {% endif %}<a href="{{ orcid_url }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+  </p>
+</div>

@@ -1,0 +1,316 @@
+# Events and Speaking Engagements
+# Flat chronological list with tags for filtering
+# Source: LinkedIn posts with confirmed speaker/presenter/panelist roles + web verification
+
+# Tag Taxonomy (see .github/copilot-instructions.md for full definitions):
+#   - learning:        📚 Learning & education measurement, assessments, foundational skills
+#   - statistics:      📊 Official statistics, methodology, statistical standards
+#   - governance:      🏛️ Data governance, policies, frameworks, principles
+#   - sdg:             🎯 SDG monitoring, indicator frameworks, UN processes
+#   - child-wellbeing: 👶 Child welfare, MICS, child-specific outcomes
+#   - poverty:         💰 Poverty, inequality measurement
+#   - mobility:        🔄 Social mobility, intergenerational dynamics
+#   - partnerships:    🤝 International partnerships, data alliances
+#   - africa:          🌍 Africa-focused events
+#   - digital:         💻 Digital tools, AI, technology in statistics
+
+events:
+  - date: "2025-10-31"
+    year: 2025
+    event: "ADEA Triennale 2025"
+    location: "Accra, Ghana"
+    role: "Panelist"
+    session: "Measurement in Foundational Learning in Africa"
+    co_panelists: "Clio Dintilhac, Hilaire Hounkpodoté, Manos Antoninis, Armando Ali, Cally Ardington"
+    tags: [learning, africa]
+    
+  - date: "2025-04-07"
+    year: 2025
+    event: "ARFSD-11 Side Event"
+    location: "Virtual"
+    role: "Speaker"
+    session: "The State of African Children: Harnessing Data for Policy Action and SDG Acceleration"
+    co_speakers: "Botho Kebabonye Bayendi (AUC), William Muhwava (UNECA), Robin Nandy (UNICEF Uganda), Oprah Nkalubo (Youth Advocate), Prof. Samuel Annim (UCC), Abdoullahi Beidou (World Bank), Isabella Schmidt (UN Women), Dr. Vincent Ssenono (UBOS)"
+    organizers: "UNICEF, African Union Commission, UNECA"
+    description: "Launch of the State of African Children Statistical Compendium"
+    tags: [child-wellbeing, sdg, africa, partnerships]
+    
+  - date: "2025-03-23"
+    year: 2025
+    event: "CIES 2025"
+    location: "Chicago, USA"
+    role: "Presenter/Panelist"
+    session: "Digital tools and data-driven approaches in foundational learning"
+    co_panelists: "Haogen Yao, Suman Sachdev, Thomas Dreesen, Sakshi Mishra"
+    tags: [learning, digital, statistics]
+    
+  - date: "2025-03-06"
+    year: 2025
+    event: "56th UN Statistical Commission Side Event"
+    location: "New York, USA"
+    role: "Speaker/Panelist"
+    session: "AI & Data Quality: A Critical Intersection for Official Statistics"
+    co_speakers: "Yves Jaques (UNICEF), Samuel Annim (Ghana Statistical Service), Prof. Dr. Georges-Simon Ulrich (Swiss FSO), Steve MacFeely (OECD)"
+    organizers: "UNICEF, PARIS21, OECD Statistics"
+    tags: [statistics, governance, digital, partnerships]
+    
+  - date: "2024-11-04"
+    year: 2024
+    event: "7th OECD World Forum on Well-being"
+    location: "Rome, Italy"
+    role: "Presenter"
+    session: "Child well-being agenda"
+    description: "20th anniversary of OECD World Forum on Statistics, Knowledge and Policy. Co-organized with Italian Ministry of Economy and Finance, ISTAT, Bank of Italy. Part of Italian G7 Presidency."
+    tags: [child-wellbeing, statistics, partnerships]
+    
+  - date: "2024-10-28"
+    year: 2024
+    event: "9th Africa Statistical Conference"
+    location: "Addis Ababa, Ethiopia"
+    role: "Sessions organizer/Presenter"
+    session: "Multiple sessions: Child-centric Surveys & MICS Programme; Health Data Analytics; Data Governance for Children; Expert group on child-related statistics"
+    description: "Theme: Unleashing the Potential of African Innovation in Statistical Development"
+    tags: [statistics, governance, child-wellbeing, africa, partnerships]
+    
+  - date: "2024-10-25"
+    year: 2024
+    event: "14th IAEG-SDG"
+    location: "Copenhagen, Denmark"
+    role: "UNICEF Representative/Presenter"
+    session: "Presenting methodology from UNICEF Child Wellbeing report"
+    description: "Discussed criteria for the upcoming 2025 Comprehensive Review"
+    tags: [sdg, statistics, child-wellbeing]
+    
+  - date: "2024-07-16"
+    year: 2024
+    event: "IDAC Steering Committee"
+    location: "Virtual"
+    role: "Chair"
+    session: "First Steering Committee meeting of the International Data Alliance for Children on the Move"
+    partners: "Eurostat, IOM, OECD, UNHCR, UNICEF"
+    description: "Charted the course for advancing the mission to improve data and statistics on migrant and displaced children"
+    tags: [child-wellbeing, governance, partnerships, statistics]
+    
+  - date: "2024-06-01"
+    year: 2024
+    event: "Africa Gender Statistics Workshop"
+    location: "Africa"
+    role: "UNICEF Representative"
+    session: "Advancing gender statistics in Africa"
+    co_presenters: "Frederic Unterreiner, Ranto Ramananjato"
+    description: "Discussed innovations in MICS 7 programme and linking EMIS data with household survey data"
+    tags: [statistics, africa, child-wellbeing]
+    
+  - date: "2024-03-11"
+    year: 2024
+    event: "CIES 2024"
+    location: "Miami, USA"
+    role: "Panelist"
+    session: "Advancing Education Measurement for SDG 4.1.1(a): Improving Assessment Tools, Methods, and Reporting"
+    co_panelists: "Abdullah Ferdous (AIR), Clio Dintilhac (BMGF), Marie-Helene Cloutier (WB), Jayshree Oza (CSF), Rastee Chaudhry (PAL Network)"
+    tags: [learning, sdg, statistics]
+    
+  - date: "2024-03-11"
+    year: 2024
+    event: "CIES 2024"
+    location: "Miami, USA"
+    role: "Panelist"
+    session: "Learning Equity Audits: Measuring the crisis within the 'learning crisis'"
+    co_panelists: "Dan Wagner (UPenn), Luis Crouch (RTI), Benjamin Piper (BMGF), Noam Angrist (Oxford), Dhir Jhingran (LLF), Baela Jamil (ITA/PAL)"
+    tags: [learning, statistics, poverty]
+    
+  - date: "2024-03-08"
+    year: 2024
+    event: "UNECE/UNICEF Meeting on Children's Statistics"
+    location: "Geneva, Switzerland (Palais des Nations)"
+    role: "Participant/Contributor"
+    session: "Data Collection Innovations; Enhancing Data on Disabilities; Violence and Alternative Care"
+    description: "107 participants from diverse nations shaping the future of child welfare statistics"
+    tags: [child-wellbeing, statistics, partnerships]
+    
+  - date: "2024-03-06"
+    year: 2024
+    event: "56th UN Statistical Commission Side Event"
+    location: "New York, USA"
+    role: "Presenter"
+    session: "Child Poverty Measurement"
+    co_speakers: "Dr. Saurabh Garg (India NSO), Enrique Delamonica (UNICEF), Oliver Fiala (Save the Children), Matthew Wai-Poi (World Bank), Prof. David Gordon"
+    description: "Discussed consensual approach and MODA framework for child poverty measurement"
+    tags: [child-wellbeing, poverty, statistics, sdg]
+    
+  - date: "2024-02-28"
+    year: 2024
+    event: "55th UN Statistical Commission"
+    location: "New York, USA"
+    role: "UNICEF Representative"
+    session: "Celebrating 30 years of Fundamental Principles of Official Statistics"
+    description: "Preparation for 2025 Global Indicator Framework review"
+    tags: [statistics, governance, sdg]
+    
+  - date: "2024-02-07"
+    year: 2024
+    event: "UNESCO Conference on Education Data and Statistics"
+    location: "Paris, France"
+    role: "Presenter"
+    session: "UNICEF contribution to Early Childhood Education agenda"
+    description: "Presented UNICEF's role in scaling the ECE initiative through SDG 4.2.1 custodianship, ECDI2030, and MICS"
+    tags: [learning, statistics, child-wellbeing, partnerships]
+    
+  - date: "2023-10-23"
+    year: 2023
+    event: "14th IAEG-SDG"
+    location: "Copenhagen, Denmark"
+    role: "UNICEF Representative"
+    session: "2025 Comprehensive Review criteria"
+    description: "Discussed how agencies can support the SDG indicator review agenda"
+    tags: [sdg, statistics]
+    
+  - date: "2023-06-01"
+    year: 2023
+    event: "UNICEF Pakistan — PITB Delegation Visit"
+    location: "Pakistan"
+    role: "Delegation Leader"
+    session: "ICT Interventions and Data Analytics Collaboration"
+    description: "Led UNICEF Headquarters delegation to discuss data analytics partnerships"
+    link: "https://pitb.gov.pk/node/10388"
+    tags: [partnerships, digital]
+    
+  - date: "2022-10-26"
+    year: 2022
+    event: "World Bank Tokyo Online Morning Seminar #152"
+    location: "Tokyo, Japan (Virtual)"
+    role: "Featured Speaker"
+    session: "The State of Global Learning Poverty: 2022 Update"
+    co_speakers: "Halsey Rogers (Lead Economist, World Bank)"
+    link: "https://www.worldbank.org/en/events/2022/10/26/world-bank-tokyo-online-morning-seminar-152-the-state-of-global-learning-poverty-2022-update"
+    tags: [learning, statistics]
+    
+  - date: "2022-10-12"
+    year: 2022
+    event: "World Bank Annual Meetings 2022: Investing in Education"
+    location: "Washington, DC, USA"
+    role: "Expert Panelist (Live Q&A)"
+    session: "Learning Crisis and Overcoming Learning Losses; RAPID Framework"
+    co_panelists: "Halsey Rogers (World Bank), Catherine Russell (UNICEF Executive Director), David R. Malpass (World Bank President)"
+    link: "https://live.worldbank.org/events/annual-meetings-2022-investing-in-education"
+    tags: [learning, partnerships]
+    
+  - date: "2021-07-26"
+    year: 2021
+    event: "Global Education Summit Side Event"
+    location: "Virtual"
+    role: "Presenter"
+    session: "Learning Data Compact (LDC)"
+    co_presenters: "Silvia Montoya (UNESCO UIS), Manuel Enrique Cardoso"
+    organizers: "UNESCO Institute for Statistics, World Bank, UNICEF"
+    description: "Presented initiative to ensure all countries have quality learning data by 2025"
+    tags: [learning, statistics, partnerships]
+    
+  - date: "2021-07-15"
+    year: 2021
+    event: "Fundação Lemann / Instituto Natura / Estadão Debate"
+    location: "Brazil (Virtual)"
+    role: "Panelist"
+    session: "O Futuro das Avaliações Educacionais: Importância e Desafios da Avaliação no Contexto da COVID-19"
+    co_panelists: "Kátia Schweickardt, Rossieli Soares"
+    moderator: "Renata Cafardo"
+    description: "Discussed importance of conducting SAEB 2021 to identify learning losses and inform recovery policies"
+    tags: [learning, statistics]
+    
+  - date: "2020-12-22"
+    year: 2020
+    event: "World Economic Forum"
+    location: "Virtual"
+    role: "Agenda Contributor"
+    session: "COVID-19 has fuelled a global 'learning poverty' crisis"
+    description: "Published article on the global learning crisis exacerbated by COVID-19"
+    link: "https://www.weforum.org/stories/authors/joao-pedro/"
+    tags: [learning]
+    
+  - date: "2019-09-01"
+    year: 2019
+    event: "UNESCO Technical Cooperation Group on SDG 4 Indicators (TCG6)"
+    location: "International"
+    role: "World Bank Representative"
+    session: "Technical guidance on SDG 4 education indicators"
+    description: "Represented World Bank as Lead Economist in technical cooperation group"
+    link: "https://tcg.uis.unesco.org/wp-content/uploads/sites/4/2019/08/Participants_TCG6-2.pdf"
+    tags: [learning, sdg, statistics, partnerships]
+    
+  - date: "2017-07-01"
+    year: 2017
+    event: "2017 Stata Conference"
+    location: "Baltimore, USA"
+    role: "Conference Presenter"
+    session: "Small Area Estimation/Poverty Map in Stata"
+    co_presenters: "Minh Nguyen, Paul Andres Corral Rodas, Qinghua Zhao"
+    description: "Introduced new Stata package (sae) for small area estimations of poverty and inequality implementing Elbers, Lanjouw, and Lanjouw (Econometrica, 2003) methodology"
+    link: "https://ideas.repec.org/p/boc/scon17/20.html"
+    tags: [statistics, poverty]
+
+  - date: "2004-03-19"
+    year: 2004
+    event: "1st ABEP/Oxford Centre for Brazilian Studies Conference"
+    location: "St Anthony's College, Oxford, UK"
+    role: "Conference Presenter"
+    session: "An Investigation of the Labour Market Earnings in Poor Areas: Evaluating the Sources of Wage Inequality in the Slums of Rio de Janeiro"
+    affiliation: "University of Newcastle (PhD Student)"
+    organizers: "ABEP, University of Oxford Centre for Brazilian Studies"
+    description: "Examined determinants of labour market earnings and inequality in 51 favelas using unique dataset of 21,704 households with GIS data"
+    link: "https://www.robots.ox.ac.uk/~teo/ResumosCongresso.pdf"
+    tags: [poverty, statistics]
+
+  - date: "2004-03-19"
+    year: 2004
+    event: "1st ABEP/Oxford Centre for Brazilian Studies Conference"
+    location: "St Anthony's College, Oxford, UK"
+    role: "Conference Presenter"
+    session: "Credit and Entrepreneurship in the Slums of Rio de Janeiro"
+    affiliation: "University of Newcastle (PhD Student)"
+    organizers: "ABEP, University of Oxford Centre for Brazilian Studies"
+    description: "Analyzed 4,500 entrepreneurs from favelas examining the role of traditional financial institutions on microentrepreneur performance and labor mobility"
+    link: "https://www.robots.ox.ac.uk/~teo/ResumosCongresso.pdf"
+    tags: [poverty, mobility]
+
+# Tag definitions for display
+tags:
+  learning:
+    label: "Learning & Education"
+    color: "#2e86ab"
+    emoji: "📚"
+  statistics:
+    label: "Official Statistics"
+    color: "#a23b72"
+    emoji: "📊"
+  governance:
+    label: "Data Governance"
+    color: "#1d3557"
+    emoji: "🏛️"
+  poverty:
+    label: "Poverty & Inequality"
+    color: "#e63946"
+    emoji: "📉"
+  mobility:
+    label: "Social Mobility"
+    color: "#457b9d"
+    emoji: "📈"
+  sdg:
+    label: "SDG Monitoring"
+    color: "#f18f01"
+    emoji: "🎯"
+  child-wellbeing:
+    label: "Child Well-being"
+    color: "#c73e1d"
+    emoji: "👶"
+  partnerships:
+    label: "Partnerships"
+    color: "#3d348b"
+    emoji: "🤝"
+  africa:
+    label: "Africa"
+    color: "#119822"
+    emoji: "🌍"
+  digital:
+    label: "Digital & AI"
+    color: "#6b4c9a"
+    emoji: "💻"

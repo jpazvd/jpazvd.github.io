@@ -1,0 +1,30 @@
+# Profile data for CV auto-generation
+# Last updated: 2025-12-15
+
+summary: "UNICEF Chief Statistician and Deputy Director (Data & Analytics) with senior experience building statistical systems and policy analytics for international organizations, including leadership roles at the World Bank. Work spans poverty and equity measurement, education and learning assessment, SDG monitoring, and large-scale survey/microdata harmonization, with a focus on reproducible analytics and operational decision support."
+
+selected_contributions:
+  - "Led multi-unit data and analytics functions, managing teams of 45+ professionals across domains (population, education, poverty, nutrition, health, WASH, child protection, climate, frontier data, survey methods)."
+  - "Co-developed the World Bank Learning Poverty measure and contributed to scaling comparable learning outcomes metrics across countries."
+  - "Built global data harmonization and analytics architectures spanning 1,000+ learning assessments and 1,200+ household surveys."
+  - "Delivered technical assistance and capacity building with national statistical systems and sector ministries, including poverty mapping and deprivation indices to support resource allocation."
+
+service:
+  - role: "Co-Lead"
+    organization: "Global Solution Group on Welfare Measurement and Statistical Capacity"
+    parent: "World Bank"
+  - role: "Co-Lead"
+    organization: "Data for Goals Initiative"
+    parent: "World Bank"
+  - role: "Education Statistics Coordinator"
+    organization: "Education Global Practice"
+    parent: "World Bank"
+  - role: "Member"
+    organization: "Technical Cooperation Group on SDG 4 indicators"
+    parent: "UNESCO Institute for Statistics"
+  - role: "Reviewer"
+    organization: "World Development, Journal of Development Economics, World Bank Research Observer"
+    parent: ""
+  - role: "SSC Contributor"
+    organization: "Statistical Software Components"
+    parent: "Boston College"

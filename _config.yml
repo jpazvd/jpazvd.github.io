@@ -1,0 +1,139 @@
+# Welcome to Jekyll!
+
+# Site Settings
+locale                   : "en-US"
+title                    : "João Pedro Azevedo"
+title_separator          : "-"
+name                     : "João Pedro Azevedo"
+description              : "João Pedro Azevedo - UNICEF Chief Statistician and Development Economist. Research on learning poverty, education economics, and data systems for children."
+url                      : "https://jpazvd.github.io"
+baseurl                  : ""  # set to "/" if deployed on a subpath
+repository               : "jpazvd/jpazvd.github.io"
+teaser                   : "default-teaser.png"
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+
+# Theme Configuration
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
+
+# Comments and Social Settings
+comments:
+  provider               : false
+twitter:
+  username               : "jpazvd"
+
+# Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : "G-8K7TMJMKHG"
+    anonymize_ip         : false
+
+# Author Info
+author:
+  name                   : "João Pedro Azevedo"
+  avatar                 : "self-jpazvd.png"
+  bio                    : "Chief Statistician @ UNICEF | Development Economist"
+  location               : "New York City, NY"
+  employer               : "UNICEF"
+  github                 : "jpazvd"
+  linkedin               : "jpazvd"
+  twitter                : "jpazvd"
+  orcid                  : "https://orcid.org/0000-0002-3844-215X"
+  googlescholar          : "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+  repec                  : "https://ideas.repec.org/e/pwa88.html"
+
+# Social/Schema.org configuration (enables Person JSON-LD)
+social:
+  type: Person
+  name: "João Pedro Azevedo"
+  links:
+    - "https://x.com/jpazvd"
+    - "https://github.com/jpazvd"
+    - "https://www.linkedin.com/in/jpazvd"
+    - "https://scholar.google.com/citations?user=lTKXA78AAAAJ"
+    - "https://orcid.org/0000-0002-3844-215X"
+    - "https://ideas.repec.org/e/pwa88.html"
+
+# Open Graph default image (for social sharing)
+og_image: "profile.png"
+
+# Reading Files
+include:
+  - _pages
+  - files
+exclude:
+  - node_modules
+  - vendor
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+
+# Defaults
+defaults:
+  # Posts (blog articles)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+  # Publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+# Output Settings
+permalink: /:categories/:title/
+timezone: America/New_York
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+  blanklines: false
+  comments: ["<!-- ", " -->"]
+
+# Scholar configuration
+scholar:
+  source: "_bibliography"
+  bibliography: "references.bib"  # Full publication list (1,431 lines)
+  style: apa  # You can change this based on your citation style preference (e.g., ieee, mla)
+  locale: en  # Adjust for language preference, if needed
+  bibliography_class: bibliography  # CSS class for bibliography
+  bibliography_template: "{{ reference }}."  # Template for formatting citations
+  sort_by: none  # Sort entries by (e.g., year, none)
+  suppress_errors: true  # Suppress any errors during generation
+
+
