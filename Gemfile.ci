@@ -19,5 +19,9 @@ gem "jekyll-titles-from-headings", "~> 0.5.3"
 # Required for GitHub Pages compatibility
 gem "kramdown-parser-gfm", "~> 1.1.0"
 
+# Timezone support (required for Jekyll 4 timezone configuration)
+gem "tzinfo", "~> 2.0"
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 # Ruby 3 compatibility
 gem "webrick", "~> 1.8.0"
