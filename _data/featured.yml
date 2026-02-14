@@ -13,12 +13,12 @@ items:
   - title: "Hard truths about under-5 mortality"
     description: "Commentary in The Lancet calling for urgent global action on child mortality."
     url: "https://doi.org/10.1016/S0140-6736(24)00501-4"
-    type: "Lancet"
+    type: "Commentary"
 
   - title: "COVID-19 Learning Loss Simulations"
     description: "Global estimates of pandemic impact on schooling, cited by 400+ studies."
     url: "https://academic.oup.com/wbro/article/36/1/1/6174606"
-    type: "Paper"
+    type: "Article"
 
   - title: "WBOPENDATA"
     description: "Stata module to access World Bank databases, downloaded 26,000+ times."
