@@ -5,10 +5,15 @@ items:
     url: "https://www.worldbank.org/en/topic/education/brief/what-is-learning-poverty"
     type: "Indicator"
 
-  - title: "The State of the World's Children 2025"
-    description: "UNICEF's flagship report on children's well-being and progress toward the SDGs."
-    url: "https://www.unicef.org/reports/state-of-worlds-children/2025"
-    type: "Report"
+  - title: "SoWC 2025 Statistical Compendium"
+    description: "Key statistics on child survival, development and protection for the world's countries and regions."
+    url: "https://data.unicef.org/resources/sowc-2025/"
+    type: "Data"
+
+  - title: "SoAC 2025 Statistical Compendium"
+    description: "Comprehensive data on the situation of nearly one billion children across Africa."
+    url: "https://data.unicef.org/resources/soac-2025/"
+    type: "Data"
 
   - title: "Hard truths about under-5 mortality"
     description: "Commentary in The Lancet calling for urgent global action on child mortality."
@@ -17,10 +22,10 @@ items:
 
   - title: "COVID-19 Learning Loss Simulations"
     description: "Global estimates of pandemic impact on schooling, cited by 400+ studies."
-    url: "https://doi.org/10.1093/wbro/lkab003"
+    url: "https://academic.oup.com/wbro/article/36/1/1/6174606"
     type: "Paper"
 
   - title: "WBOPENDATA"
     description: "Stata module to access World Bank databases, downloaded 26,000+ times."
-    url: "https://github.com/worldbank/wbopendata"
+    url: "https://github.com/jpazvd/wbopendata"
     type: "Software"

@@ -89,7 +89,7 @@ description: "Open-source projects and code repositories by João Pedro Azevedo 
 
 <!-- Pass YAML data to JavaScript -->
 <script id="repo-tags-data" type="application/json">
-{% assign repo_data = site.data.github_repos.repos %}
+{% assign repo_data = site.data.github_repos.repositories %}
 [{% for repo in repo_data %}{"name":"{{ repo.name }}","tags":{{ repo.tags | jsonify }},"featured":{{ repo.featured | default: false }},"hide":{{ repo.hide | default: false }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
 </script>
 

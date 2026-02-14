@@ -33,7 +33,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   </div>
   <div class="jp-banner__footer">
     <a href="https://ideas.repec.org/e/pwa88.html#soft" target="_blank" rel="noopener">All Software on IDEAS</a> |
-    <a href="{{ site.data.citations.repec.stats_url | default: 'http://logec.repec.org/RAS/pwa88.htm' }}" target="_blank" rel="noopener">Author Statistics</a>
+    <a href="{{ site.data.citations.repec.stats_url | default: 'https://logec.repec.org/RAS/pwa88.htm' }}" target="_blank" rel="noopener">Author Statistics</a>
     <br>{{ site.data.citations.repec.ranking_note | default: 'Top 5% of authors by downloads' }} · Last updated: {{ site.data.citations.repec.last_updated | default: '—' }}
   </div>
 </div>
@@ -56,7 +56,6 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   <li><strong>Install:</strong> <code>ssc install wbopendata</code></li>
   <li><a href="https://github.com/jpazvd/wbopendata" target="_blank">GitHub Repository</a> · <a href="https://github.com/jpazvd/wbopendata/issues/new" target="_blank">Report bugs / Request features</a></li>
   <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-databases" target="_blank">Documentation</a></li>
-  <li><strong>Paper:</strong> Azevedo, JP, Hasan, A, Goldemberg, D, Geven, K, Iqbal, SA (2021). <a href="https://academic.oup.com/wbro/article/36/1/1/6174606" target="_blank">Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates</a>. <em>The World Bank Research Observer</em>, 36(1), 1-40. IF: 4.2</li>
 </ul>
 
 <h3>All Stata Modules</h3>
@@ -258,6 +257,11 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
       <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
       <td><a href="https://github.com/worldbank/datalibweb" target="_blank"><i class="fab fa-github"></i></a></td>
     </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/wb-api-repo" target="_blank">wb-api-repo</a></strong></td>
+      <td>World Bank API data extraction tools</td>
+      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -286,6 +290,35 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
       <td><strong><a href="https://github.com/worldbank/EduAnalyticsToolkit" target="_blank">EduAnalyticsToolkit</a></strong></td>
       <td>EduAnalytics team toolkit for data management, documentation, and analytics</td>
       <td><a href="https://github.com/worldbank/EduAnalyticsToolkit" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Utilities</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th><i class="fab fa-github"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/groupdata" target="_blank">groupdata</a></strong></td>
+      <td>Poverty and inequality estimation using grouped data</td>
+      <td><a href="https://github.com/jpazvd/groupdata" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/package" target="_blank">package</a></strong></td>
+      <td>Stata module to create GitHub dissemination packages</td>
+      <td><a href="https://github.com/jpazvd/package" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/useful_tweaks" target="_blank">useful_tweaks</a></strong></td>
+      <td>Useful tweaks to user-written ado files</td>
+      <td><a href="https://github.com/jpazvd/useful_tweaks" target="_blank"><i class="fab fa-github"></i></a></td>
     </tr>
   </tbody>
 </table>

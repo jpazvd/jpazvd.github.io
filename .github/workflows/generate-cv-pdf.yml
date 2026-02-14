@@ -131,7 +131,7 @@ jobs:
               printBackground: true,
               displayHeaderFooter: true,
               headerTemplate: '<div></div>',
-              footerTemplate: '<div style="font-size: 9px; width: 100%; text-align: center; color: #999;">JoÃ£o Pedro Azevedo - CV - Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
+              footerTemplate: '<div style="font-size: 9px; width: 100%; text-align: center; color: #999;">João Pedro Azevedo - CV - Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
             });
             
             console.log('PDF generated successfully:', pdfPath);

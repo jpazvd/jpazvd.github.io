@@ -183,7 +183,7 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
 <h3>Peer-Reviewed Journal Articles</h3>
 
 <ol>
-  <li><strong>Azevedo, JP</strong>, Hasan, A, Goldemberg, D, Geven, K, Iqbal, SA (2021). <a href="https://doi.org/10.1093/wbro/lkab003" target="_blank">"Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates."</a> <em>The World Bank Research Observer</em>, 36(1), 1-40. <span class="jp-badge jp-badge--info">IF: 4.2</span></li>
+  <li><strong>Azevedo, JP</strong>, Hasan, A, Goldemberg, D, Geven, K, Iqbal, SA (2021). <a href="https://academic.oup.com/wbro/article/36/1/1/6174606" target="_blank">"Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates."</a> <em>The World Bank Research Observer</em>, 36(1), 1-40. <span class="jp-badge jp-badge--info">IF: 4.2</span></li>
   
   <li>Pushparatnam, A, Luna Bazaldua, DA, Holla, A, <strong>Azevedo, JP</strong>, Clarke, M, Devercelli, A (2021). <a href="https://doi.org/10.3389/fpubh.2021.569448" target="_blank">"Measuring Early Childhood Development Among 4-6 Year Olds: The Identification of Psychometrically Robust Items Across Diverse Contexts."</a> <em>Frontiers in Public Health</em>. <span class="jp-badge jp-badge--info">IF: 3.0</span></li>
   
