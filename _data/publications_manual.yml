@@ -23,6 +23,92 @@
 # Only include if NOT in OKR or RePEc
 
 journal_articles:
+  - id: azevedo-2024-lancet-under5-mortality
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Banerjee, Anup", "Wilmoth, John", "Fu, Huong", "You, Danzhen"]
+    year: 2024
+    title: "Hard truths about under-5 mortality: call for urgent global action"
+    journal: "The Lancet"
+    doi: "10.1016/S0140-6736(24)00501-4"
+    tags: ["child mortality", "global health", "lancet"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: strong-2024-lancet-health-estimates
+    type: journal_article
+    authors: ["Strong, Kathryn", "You, Danzhen", "Banerjee, Anup", "Azevedo, João Pedro"]
+    year: 2024
+    title: "Global health estimates should be more responsive to country needs"
+    journal: "The Lancet"
+    doi: "10.1016/S0140-6736(24)00463-X"
+    tags: ["global health", "health estimates", "lancet"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: azevedo-2021-wbro-covid-simulations
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Hasan, Amer", "Goldemberg, Diana", "Geven, Koen", "Iqbal, Syedah Aroob"]
+    year: 2021
+    title: "Simulating the potential impacts of COVID-19 school closures on schooling and learning outcomes: A set of global estimates"
+    journal: "The World Bank Research Observer"
+    volume: "36"
+    issue: "1"
+    pages: "1-40"
+    tags: ["covid-19", "education", "learning loss", "simulation"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: pushparatnam-2021-frontiers-ecd
+    type: journal_article
+    authors: ["Pushparatnam, Aparajita", "Luna Bazaldua, Daniela A.", "Holla, Alaka", "Azevedo, João Pedro", "Clarke, Michael", "Devercelli, Ana"]
+    year: 2021
+    title: "Measuring Early Childhood Development Among 4-6 Year Olds: The Identification of Psychometrically Robust Items Across Diverse Contexts"
+    journal: "Frontiers in Public Health"
+    doi: "10.3389/fpubh.2021.569448"
+    tags: ["early childhood", "measurement", "child development"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: castaneda-2018-world-development-global-poor
+    type: journal_article
+    authors: ["Castañeda, Andrés", "Doan, Dung", "Newhouse, David", "Nguyen, Minh Cong", "Uematsu, Hiroki", "Azevedo, João Pedro"]
+    year: 2018
+    title: "A New Profile of the Global Poor"
+    journal: "World Development"
+    volume: "101"
+    pages: "250-267"
+    tags: ["poverty", "global", "measurement"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: andalon-2016-world-development-weather
+    type: journal_article
+    authors: ["Andalón, Mabel", "Azevedo, João Pedro", "Rodríguez-Castelán, Carlos", "Sanfelice, Viviane", "Valderrama-González, Daniel"]
+    year: 2016
+    title: "Weather Shocks and Health at Birth in Colombia"
+    journal: "World Development"
+    volume: "82"
+    pages: "69-82"
+    tags: ["health", "weather", "colombia", "birth outcomes"]
+    peer_reviewed: true
+    language: "en"
+
+  - id: azevedo-foguel-2006-inequality
+    type: journal_article
+    authors: ["Azevedo, João Pedro", "Foguel, Miguel"]
+    year: 2006
+    title: "Inequality decomposition by population subgroups and the shapley value"
+    journal: "Applied Economics Letters"
+    volume: "13"
+    issue: "12"
+    pages: "773-777"
+    doi: "10.1080/13504850500404217"
+    citations: 45
+    tags: ["inequality", "decomposition", "shapley"]
+    peer_reviewed: true
+    language: "en"
+    country: "UK"
+
   - id: azevedo-ndiaye-2004-microfinance
     type: journal_article
     authors: ["Azevedo, João Pedro", "Ndiaye, G."]

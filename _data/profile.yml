@@ -24,7 +24,6 @@ service:
     parent: "UNESCO Institute for Statistics"
   - role: "Reviewer"
     organization: "World Development, Journal of Development Economics, World Bank Research Observer"
-    parent: ""
   - role: "SSC Contributor"
     organization: "Statistical Software Components"
     parent: "Boston College"

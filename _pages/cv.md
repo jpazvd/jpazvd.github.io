@@ -111,7 +111,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-<p><a href="/publications/">View full publication record →</a></p>
+<p class="cv-nav-link"><a href="/publications/">View full publication record →</a></p>
 
 ## Service and Leadership
 
@@ -134,7 +134,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-<p><a href="/events/">View all speaking engagements →</a></p>
+<p class="cv-nav-link"><a href="/events/">View all speaking engagements →</a></p>
 
 ## Teaching & Mentoring
 
@@ -170,7 +170,11 @@ redirect_from:
 ## Technical Expertise
 
 <p class="cv-prose">
-Methodological work spans {% for category in site.data.skills.technical %}{% assign items = category.items | join: "; " %}{% if forloop.last %} and {% elsif forloop.first == false %}, {% endif %}{{ category.category | downcase }} ({{ items }}){% endfor %}. Domain expertise covers {{ site.data.skills.domain | join: ", " | downcase }}. Languages: {% for lang in site.data.skills.languages %}{{ lang.language }} ({{ lang.level }}){% unless forloop.last %}, {% endunless %}{% endfor %}.
+Technical work draws on advanced statistical programming in Stata (including ado-file development and SSC contributions), R, Python, and SQL, combined with experience building analytical data services using SDMX, REST, and data warehouse APIs. Recent work integrates LLM-assisted analysis with human-in-the-loop review workflows, and emphasizes reproducible pipelines, data quality engineering, and PII-safe compliance. Core quantitative methods include econometrics and impact evaluation, survey design and sampling, small area estimation and poverty mapping, and data visualization.
+</p>
+
+<p class="cv-prose">
+Domain expertise spans poverty measurement and analysis, education statistics and learning assessment, child development indicators, SDG monitoring and reporting, and human capital measurement. Languages: {% for lang in site.data.skills.languages %}{{ lang.language }} ({{ lang.level }}){% unless forloop.last %}, {% endunless %}{% endfor %}.
 </p>
 
 ## Writing & Commentary
@@ -195,7 +199,7 @@ Regular contributor to policy discourse through {{ wb_count }} World Bank blog p
 {% endfor %}
 </ul>
 
-<p><a href="/blogs/">View all blogs and articles →</a></p>
+<p class="cv-nav-link"><a href="/blogs/">View all blogs and articles →</a></p>
 
 <!--
 ===========================================

@@ -196,9 +196,13 @@
     page-break-inside: avoid;
   }
 
+  /* ---- Hide web-only navigation links in print ---- */
+  .cv-nav-link {
+    display: none !important;
+  }
+
   /* ---- CV job entries ---- */
   .cv-job {
-    page-break-inside: avoid;
     margin-bottom: 6pt;
   }
 
