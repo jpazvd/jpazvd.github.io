@@ -15,6 +15,16 @@ items:
     url: "https://data.unicef.org/resources/soac-2025/"
     type: "Data"
 
+  - title: "Progress on Children's Well-being (2023)"
+    description: "SDG progress report centring child rights in the 2030 Agenda across 48 child-related indicators."
+    url: "https://data.unicef.org/resources/sdg-report-2023/"
+    type: "Report"
+
+  - title: "Progress on Children's Well-being: Country Briefs"
+    description: "Country-level SDG benchmarking across five domains of child well-being for 190+ countries."
+    url: "https://data.unicef.org/resources/progress-on-childrens-wellbeing-sdg-country-briefs/"
+    type: "Data"
+
   - title: "Hard truths about under-5 mortality"
     description: "Commentary in The Lancet calling for urgent global action on child mortality."
     url: "https://doi.org/10.1016/S0140-6736(24)00501-4"
