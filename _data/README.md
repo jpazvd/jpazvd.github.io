@@ -292,7 +292,6 @@ Your `_data/` folder contains **30+ YAML and auxiliary files** organized into th
 - `events-new.yml`, `events-old.yml`, `teaching-new.yml` — Version control / backups
 - `events-new-v2.yml` — Alternative event format (testing)
 - `other_blogs_full.yml`, `worldbank_blogs_full.yml` — Unfiltered versions
-- `events-greencard-evidence-tracker.md` — EB1-A application tracking
 - `README_SOFTWARE_DATABASE.md` — This file
 
 ---
@@ -1408,7 +1407,6 @@ Legacy and obsolete data files are stored in `_data/_archive/`:
 - `events-old.yml` - Original events database
 - `events-new.yml`, `events-new-v2.yml`, `events-new.yml.backup` - Intermediate versions (superseded by events.yml)
 - `teaching-new.yml` - Intermediate version (superseded by teaching.yml)
-- `events-greencard-evidence-tracker.md` - Project-specific tracker
 
 **Active Dual-File Pattern (NOT archived):**
 - `worldbank_blogs_full.yml` - Keeps full blog content for archiving/searching

@@ -38,7 +38,6 @@ Gemfile.lock
 
 # LinkedIn assets (local only)
 assets/linkdin/
-# EB1 Evidence backup (keep evidence in _evidence/ folder in repo)
 # Individual document backups should be deleted once committed
 _evidence-backup/
 **/~*

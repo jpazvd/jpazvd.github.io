@@ -62,6 +62,12 @@ I'm always happy to connect with fellow researchers, practitioners, and anyone i
   <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
 </form>
 
+## Bugs & Suggestions for Statistical Software
+
+If you've found a bug or have a feature request for any of my [Stata modules](/softwares/), please open an issue on the corresponding GitHub repository. Each module's issues page is linked from the [software table](/softwares/). This helps me track and prioritize fixes, and lets other users benefit from the discussion.
+
+<a href="https://github.com/jpazvd" target="_blank"><i class="fab fa-github"></i> github.com/jpazvd</a>
+
 ## A Note on Response Times
 
 I receive many messages and try to respond to all genuine inquiries. However, due to my responsibilities at UNICEF, response times may vary. For urgent matters related to UNICEF's work, please use [official UNICEF channels](https://www.unicef.org/contact-us).

@@ -1,6 +1,5 @@
 # Events and Speaking Engagements Database
 # Author: João Pedro Azevedo
-# Purpose: Multi-use database for website, CV, EB1 petition, job applications
 # Last Updated: 2025-12-23
 
 # === SCHEMA REFERENCE ===
@@ -1387,7 +1386,6 @@ events:
       invitation: Invited by Richard Bull, Events & Marketing Manager, NRDC. Recommended
         by Timothy Ireland (MEC Brazil).
       program: _evidence/conference-invitations/2007-nrdc-uk/2007-nrdc-uk-call-for-papers.pdf
-      notes: _evidence/eb1-petition/2007-nrdc-uk-notes.txt
     tags:
     - learning
     - statistics
@@ -1416,7 +1414,6 @@ events:
       international organization that supports high quality, policy-oriented research
       in developing and transition countries.
     evidence:
-      logistics: _evidence/eb1-petition/2007-gdn-kuwait-admin-note.doc
       accommodation: Four Points Hotel, Safat 13060, Kuwait
     urls:
       event: http://www.gdnet.org
