@@ -228,12 +228,71 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 
 <hr>
 
-<h2>GitHub Repositories</h2>
+<h2>Data Platforms & Research Infrastructure</h2>
 
-<ul>
-  <li><a href="https://github.com/jpazvd/wbopendata" target="_blank">jpazvd/wbopendata</a> - World Bank Open Data Stata module</li>
-  <li><a href="https://github.com/jpazvd" target="_blank">jpazvd</a> - Personal GitHub profile with additional code</li>
-</ul>
+<p>Institutional projects I have led or co-developed for data access, education measurement, and analytics.</p>
+
+<h3>Data Access Platforms</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th><i class="fab fa-github"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://github.com/unicef-drp/unicefData" target="_blank">unicefData</a></strong></td>
+      <td>Open data and analytics platform led by UNICEF's Office of the Chief Statistician, providing reproducible, standards-based tools for accessing official child-related statistics</td>
+      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/wbopendata" target="_blank">wbopendata</a></strong></td>
+      <td>Stata module to access 29,000+ indicators from 51 World Bank databases (also available via <code>ssc install wbopendata</code>)</td>
+      <td><a href="https://github.com/jpazvd/wbopendata" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/worldbank/datalibweb" target="_blank">datalibweb</a></strong></td>
+      <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
+      <td><a href="https://github.com/worldbank/datalibweb" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Education & Learning Analytics</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th><i class="fab fa-github"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://github.com/worldbank/LearningPoverty" target="_blank">LearningPoverty</a></strong></td>
+      <td>Learning Poverty indicator — combining schooling and learning data to measure the share of children unable to read by age 10</td>
+      <td><a href="https://github.com/worldbank/LearningPoverty" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/worldbank/GLAD" target="_blank">GLAD</a></strong></td>
+      <td>Global Learning Assessment Database — harmonized learning assessment datasets at student and country level</td>
+      <td><a href="https://github.com/worldbank/GLAD" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/worldbank/EduAnalyticsToolkit" target="_blank">EduAnalyticsToolkit</a></strong></td>
+      <td>EduAnalytics team toolkit for data management, documentation, and analytics</td>
+      <td><a href="https://github.com/worldbank/EduAnalyticsToolkit" target="_blank"><i class="fab fa-github"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <a href="https://github.com/jpazvd" target="_blank">View all repositories on GitHub →</a>
+</p>
 
 <hr>
 
