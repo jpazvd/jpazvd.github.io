@@ -56,7 +56,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   <li><strong>Install:</strong> <code>ssc install wbopendata</code></li>
   <li><a href="https://github.com/jpazvd/wbopendata" target="_blank">GitHub Repository</a> · <a href="https://github.com/jpazvd/wbopendata/issues/new" target="_blank">Report bugs / Request features</a></li>
   <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-databases" target="_blank">Documentation</a></li>
-  <li><strong>Paper:</strong> Azevedo, J.P., Hasan, A., Goldemberg, D., Geven, K. &amp; Iqbal, S.A. (2021). <a href="https://doi.org/10.1093/wbro/lkab003" target="_blank">Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates</a>. <em>The World Bank Research Observer</em>, 36(1), 1–40.</li>
+  <li><strong>Paper:</strong> Azevedo, JP, Hasan, A, Goldemberg, D, Geven, K, Iqbal, SA (2021). <a href="https://academic.oup.com/wbro/article/36/1/1/6174606" target="_blank">Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates</a>. <em>The World Bank Research Observer</em>, 36(1), 1-40. IF: 4.2</li>
 </ul>
 
 <h3>All Stata Modules</h3>
