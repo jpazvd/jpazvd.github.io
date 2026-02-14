@@ -10,6 +10,17 @@ redirect_from:
 
 {% include base_path %}
 
+<!-- Print-only header: hidden on screen, visible when printing/generating PDF -->
+<div class="cv-print-header" style="display: none;">
+  <p class="cv-print-header__name">João Pedro Azevedo</p>
+  <p class="cv-print-header__title">Chief Statistician, UNICEF &bull; Development Economist</p>
+  <p class="cv-print-header__contact">
+    <a href="https://jpazvd.github.io">jpazvd.github.io</a> &bull;
+    <a href="https://scholar.google.com/citations?user=EvC_FeAAAAAJ">Google Scholar</a> &bull;
+    <a href="https://orcid.org/0000-0003-1519-457X">ORCID</a>
+  </p>
+</div>
+
 <p class="cv-download">
   <a href="/files/cv-joao-pedro-azevedo.pdf" class="btn btn--primary">
     Download PDF
