@@ -27,35 +27,6 @@ redirect_from:
   </a>
 </p>
 
-<!-- Citation Metrics Banner - pulls from _data/citations.yml -->
-<div class="citation-metrics jp-gradient-banner">
-  <h3 class="jp-gradient-banner__title">Citation Metrics</h3>
-  <div class="jp-stats-row">
-    <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.google_scholar.total_citations | default: '5,500+' }}</div>
-      <div class="jp-stat__label">Citations</div>
-    </div>
-    <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.google_scholar.h_index | default: '30' }}</div>
-      <div class="jp-stat__label">h-index</div>
-    </div>
-    <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.google_scholar.i10_index | default: '62' }}</div>
-      <div class="jp-stat__label">i10-index</div>
-    </div>
-    <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }}</div>
-      <div class="jp-stat__label">RePEc Downloads</div>
-    </div>
-  </div>
-  <div class="jp-banner__footer">
-    <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank">Google Scholar</a> |
-    <a href="{{ site.data.citations.repec.profile_url }}" target="_blank">RePEc/IDEAS</a> |
-    <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank">ORCID</a>
-    <br>Last updated: {{ site.data.citations.google_scholar.last_updated }}
-  </div>
-</div>
-
 ## Profile
 
 {{ site.data.profile.summary }}
@@ -68,6 +39,16 @@ redirect_from:
 {% endfor %}
 </ul>
 
+## Work Experience
+
+{% for job in site.data.work_experience %}
+<div class="cv-job">
+<h3>{{ job.organization }}</h3>
+<p class="cv-job__meta"><strong>{{ job.position }}</strong> — {{ job.start_date }}–{{ job.end_date }}</p>
+<p class="cv-job__desc">{{ job.description }}</p>
+</div>
+{% endfor %}
+
 ## Education
 
 <ul>
@@ -78,15 +59,82 @@ redirect_from:
 {% endfor %}
 </ul>
 
-## Work Experience
+## Selected Publications
 
-{% for job in site.data.work_experience %}
-<div class="cv-job">
-<h3>{{ job.organization }}</h3>
-<p class="cv-job__meta"><strong>{{ job.position }}</strong> — {{ job.start_date }}–{{ job.end_date }}</p>
-<p class="cv-job__desc">{{ job.description }}</p>
-</div>
+<p class="cv-citation-summary">
+  Google Scholar: {{ site.data.citations.google_scholar.total_citations | default: '5,500+' }} citations &bull;
+  h-index: {{ site.data.citations.google_scholar.h_index | default: '30' }} &bull;
+  i10-index: {{ site.data.citations.google_scholar.i10_index | default: '62' }} &bull;
+  RePEc: {{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }} downloads.
+  Full list: <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank">Google Scholar</a> |
+  <a href="{{ site.data.citations.repec.profile_url }}" target="_blank">RePEc/IDEAS</a> |
+  <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank">ORCID</a>
+</p>
+
+### Journal Articles
+
+<ul>
+{% for pub in site.data.publications.journal_articles %}
+<li class="cv-pub">
+  {{ pub.authors | join: ", " }} ({{ pub.year }}). "{{ pub.title }}." <em>{{ pub.journal }}</em>{% if pub.volume %}, {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi</a>{% endif %}
+</li>
 {% endfor %}
+</ul>
+
+### Books
+
+<ul>
+{% for pub in site.data.publications.books %}
+<li class="cv-pub">
+  {{ pub.authors | join: ", " }} ({{ pub.year }}). <em>{{ pub.title }}</em>. {{ pub.publisher }}.{% if pub.urls.pdf %} <a href="{{ pub.urls.pdf }}">PDF</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
+
+### Book Chapters
+
+<ul>
+{% for pub in site.data.publications.book_chapters %}
+<li class="cv-pub">
+  {{ pub.authors | join: ", " }} ({{ pub.year }}). "{{ pub.title }}." In {% if pub.editor %}{{ pub.editor }} (Ed.), {% endif %}<em>{{ pub.book }}</em>. {{ pub.publisher }}{% if pub.pages %}, {{ pub.pages }}{% endif %}.
+</li>
+{% endfor %}
+</ul>
+
+### Selected Working Papers
+
+<ul>
+{% for pub in site.data.publications.working_papers limit:10 %}
+<li class="cv-pub">
+  {{ pub.authors | join: ", " }} ({{ pub.year }}). "{{ pub.title }}." <em>{{ pub.venue }}</em>.{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi</a>{% elsif pub.url %} <a href="{{ pub.url }}">link</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
+
+<p><a href="/publications/">View full publication record →</a></p>
+
+## Service and Leadership
+
+<ul>
+{% for service in site.data.profile.service %}
+<li><strong>{{ service.role }}</strong>{% if service.organization %}, {{ service.organization }}{% endif %}{% if service.parent %} ({{ service.parent }}){% endif %}</li>
+{% endfor %}
+</ul>
+
+## Selected Talks & Presentations
+
+{% assign recent_events = site.data.events.events | sort: "date" | reverse %}
+<ul>
+{% for event in recent_events limit:15 %}
+<li>
+  <strong>{{ event.event }}</strong> ({{ event.year }})<br>
+  <span class="cv-teaching__meta">{{ event.role }}{% if event.session %}: "{{ event.session }}"{% endif %}</span><br>
+  <span class="cv-teaching__years">{{ event.location }}</span>
+</li>
+{% endfor %}
+</ul>
+
+<p><a href="/events/">View all speaking engagements →</a></p>
 
 ## Teaching & Mentoring
 
@@ -119,120 +167,66 @@ redirect_from:
 {% endfor %}
 </ul>
 
-<p><a href="/teaching/">View detailed teaching & mentoring experience →</a></p>
+## Technical Expertise
 
-## Skills
+<p class="cv-prose">
+Methodological work spans {% for category in site.data.skills.technical %}{% assign items = category.items | join: "; " %}{% if forloop.last %} and {% elsif forloop.first == false %}, {% endif %}{{ category.category | downcase }} ({{ items }}){% endfor %}. Domain expertise covers {{ site.data.skills.domain | join: ", " | downcase }}. Languages: {% for lang in site.data.skills.languages %}{{ lang.language }} ({{ lang.level }}){% unless forloop.last %}, {% endunless %}{% endfor %}.
+</p>
 
-{% for category in site.data.skills.technical %}
-### {{ category.category }}
+## Writing & Commentary
 
-<ul>
-{% for item in category.items %}
-<li>{{ item }}</li>
-{% endfor %}
-</ul>
-{% endfor %}
+{% assign wb_count = site.data.worldbank_blogs_full.metadata.total_posts | default: 0 %}
+{% assign other_count = site.data.other_blogs_full.metadata.total_posts | default: 0 %}
+{% assign li_count = site.data.linkedin_blogs.metadata.total_posts | default: 0 %}
 
-### Domain Expertise
-
-<ul>
-{% for item in site.data.skills.domain %}
-<li>{{ item }}</li>
-{% endfor %}
-</ul>
-
-### Leadership & Management
-
-<ul>
-{% for item in site.data.skills.leadership %}
-<li>{{ item }}</li>
-{% endfor %}
-</ul>
-
-### Languages
-
-<ul>
-{% for lang in site.data.skills.languages %}
-<li>{{ lang.language }} ({{ lang.level }})</li>
-{% endfor %}
-</ul>
-
-## Service and Leadership
-
-<ul>
-{% for service in site.data.profile.service %}
-<li><strong>{{ service.role }}</strong>{% if service.organization %}, {{ service.organization }}{% endif %}{% if service.parent %} ({{ service.parent }}){% endif %}</li>
-{% endfor %}
-</ul>
-
-## Selected Talks & Presentations
-
-{% assign recent_events = site.data.events.events | sort: "date" | reverse %}
-<ul>
-{% for event in recent_events limit:15 %}
-<li>
-  <strong>{{ event.event }}</strong> ({{ event.year }})<br>
-  <span class="cv-teaching__meta">{{ event.role }}{% if event.session %}: "{{ event.session }}"{% endif %}</span><br>
-  <span class="cv-teaching__years">{{ event.location }}</span>
-</li>
-{% endfor %}
-</ul>
-
-<p><a href="/events/">View all speaking engagements →</a></p>
-
-## Blogs, Opinion & Commentaries
+<p class="cv-prose">
+Regular contributor to policy discourse through {{ wb_count }} World Bank blog posts on education, poverty, and development data; {{ other_count }} UNICEF Data commentaries on child well-being and SDG monitoring; and {{ li_count }} LinkedIn articles on data systems and learning assessment. Selected recent posts:
+</p>
 
 {% assign wb_blogs = site.data.worldbank_blogs_full.posts | sort: "date" | reverse %}
 {% assign other_blogs = site.data.other_blogs_full.posts | sort: "date" | reverse %}
-{% assign linkedin_blogs = site.data.linkedin_blogs.posts | sort: "date" | reverse %}
-
-### World Bank Blogs ({{ site.data.worldbank_blogs_full.metadata.total_posts }} posts)
 
 <ul>
-{% for post in wb_blogs limit:5 %}
-<li>
-  <a href="{{ post.url }}" target="_blank"><strong>{{ post.title }}</strong></a> ({{ post.year }})<br>
-  <span class="cv-meta">{{ post.channel }}</span>
-</li>
+{% for post in wb_blogs limit:3 %}
+<li class="cv-pub"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a> ({{ post.year }}, {{ post.channel }})</li>
 {% endfor %}
-</ul>
-
-### UNICEF & Other Organizations
-
-<ul>
-{% for post in other_blogs limit:5 %}
-<li>
-  <a href="{{ post.url }}" target="_blank"><strong>{{ post.title }}</strong></a> ({{ post.year }})<br>
-  <span class="cv-meta">{{ post.organization }}</span>
-</li>
-{% endfor %}
-</ul>
-
-### LinkedIn Articles
-
-<ul>
-{% for post in linkedin_blogs limit:5 %}
-<li>
-  <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> ({{ post.year }})
-</li>
+{% for post in other_blogs limit:2 %}
+<li class="cv-pub"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a> ({{ post.year }}, {{ post.organization }})</li>
 {% endfor %}
 </ul>
 
 <p><a href="/blogs/">View all blogs and articles →</a></p>
 
-<!-- 
+<!--
 ===========================================
 CV AUTO-GENERATION NOTES
 ===========================================
 This CV page is auto-generated from YAML data files:
-- _data/citations.yml    → Citation metrics banner
 - _data/profile.yml      → Summary, contributions, service
-- _data/education.yml    → Education entries
 - _data/work_experience.yml → Work history
-- _data/skills.yml       → Technical, domain, leadership skills
+- _data/education.yml    → Education entries
+- _data/citations.yml    → Citation metrics (compact summary)
+- _data/publications.yml → Selected publications by type
+- _data/events.yml       → Talks & presentations
+- _data/teaching.yml     → Teaching & mentoring
+- _data/skills.yml       → Technical expertise (prose)
+- _data/worldbank_blogs_full.yml → Blog counts and recent posts
+- _data/other_blogs_full.yml    → UNICEF/other blog posts
+- _data/linkedin_blogs.yml      → LinkedIn articles
 
 To update CV content, edit the YAML files directly.
 The page will rebuild automatically on next Jekyll build.
 
-Last refactored: 2025-12-15
+Section order (Option C - Hybrid):
+1. Profile + contributions
+2. Work Experience
+3. Education
+4. Selected Publications (with compact citation metrics)
+5. Service & Leadership
+6. Talks & Presentations
+7. Teaching & Mentoring
+8. Technical Expertise (prose from skills.yml)
+9. Writing & Commentary (prose from blog data)
+
+Last refactored: 2026-02-14
 -->

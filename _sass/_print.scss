@@ -232,9 +232,35 @@
     color: #666;
   }
 
-  /* ---- Page breaks for major CV sections ---- */
-  .page__content > h2:nth-of-type(n+3) {
-    page-break-before: auto;
+  /* ---- Citation metrics summary (compact inline) ---- */
+  .cv-citation-summary {
+    font-size: 9.5pt;
+    color: #444;
+    border-left: 3px solid #999;
+    padding-left: 10pt;
+    margin-bottom: 10pt;
+  }
+
+  /* ---- Publication entries ---- */
+  .cv-pub {
+    font-size: 10pt;
+    margin-bottom: 4pt;
+    page-break-inside: avoid;
+  }
+
+  .cv-pub em {
+    font-style: italic;
+  }
+
+  .cv-pub a {
+    color: #444 !important;
+  }
+
+  /* ---- Prose paragraphs (skills, writing) ---- */
+  .cv-prose {
+    font-size: 10pt;
+    line-height: 1.5;
+    text-align: justify;
   }
 
   /* ---- Rankings section ---- */
