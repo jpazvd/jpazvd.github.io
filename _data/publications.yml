@@ -7,15 +7,15 @@ _metadata:
   - stata
   - github
   - manual
-  total_publications: 62
+  total_publications: 67
 summary:
-  total: 62
+  total: 67
   by_type:
     working_papers: 33
     softwares: 5
     journal_articles: 10
     books: 3
-    book_chapters: 2
+    book_chapters: 7
     conference_papers: 9
   by_source:
     okr_new: 33
@@ -24,7 +24,7 @@ summary:
     stata_merged: 0
     github_new: 5
     github_merged: 0
-    manual_new: 18
+    manual_new: 23
     manual_merged: 3
 working_papers:
 - title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
@@ -1045,19 +1045,21 @@ journal_articles:
   type: journal_article
   authors:
   - Azevedo, João Pedro
-  - Batista, H.R.
+  - Batista, Jorge Chami
   year: 2002
-  title: Explaining the recent performance of Brazilian exports
+  title: 'El TLC y las Pérdidas de Mercado de Brasil en los Estados Unidos, 1992-2001'
+  title_en: 'NAFTA and Brazil''s Market Losses in the United States, 1992-2001'
   journal: Revista de la CEPAL
-  volume: '77'
-  pages: 63-74
+  volume: '78'
+  pages: 167-182
   citations: 8
   tags:
   - trade
   - exports
   - brazil
+  - nafta
   peer_reviewed: true
-  language: en
+  language: es
   country: Chile
   urls:
     journal: https://repositorio.cepal.org/handle/11362/10921
@@ -1067,20 +1069,16 @@ journal_articles:
   type: journal_article
   authors:
   - Azevedo, João Pedro
-  - Batista, H.R.
+  - Batista, Jorge Chami
   year: 1999
-  title: 'Brazilian manufactured exports: determinants and effects of the trade liberalization policy'
-  journal: Revista de Economia Contemporânea
-  volume: '3'
-  issue: '2'
-  pages: 93-118
-  citations: 15
+  title: 'O Desempenho das Exportações Brasileiras no Comércio Internacional de Mercadorias: Uma Aplicação do Modelo Constant Market-Share'
+  journal: Jornal dos Economistas
+  issue: '127'
   tags:
   - trade
   - exports
   - brazil
-  - liberalization
-  peer_reviewed: true
+  peer_reviewed: false
   language: pt
   country: Brazil
   sources:
@@ -1089,19 +1087,17 @@ journal_articles:
   type: journal_article
   authors:
   - Azevedo, João Pedro
-  - Batista, H.R.
+  - Batista, Jorge Chami
   year: 1998
-  title: An empirical analysis of Brazilian manufactured exports
-  journal: Pesquisa e Planejamento Econômico
-  volume: '28'
+  title: A Inserção das Exportações Brasileiras no Comércio Internacional de Mercadorias
+  journal: Boletim de Conjuntura
+  volume: '18'
   issue: '3'
-  pages: 483-512
-  citations: 10
   tags:
   - trade
   - exports
   - brazil
-  peer_reviewed: true
+  peer_reviewed: false
   language: pt
   country: Brazil
   sources:
@@ -1186,6 +1182,66 @@ book_chapters:
   - slums
   sources:
   - manual
+- id: azevedo-2008-canal-futura-unisinos
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2008
+  title: 'Mensurando o Valor Social do Canal Futura: Uma Aplicação do Método de Valoração Contingente'
+  book: Comunicação e Transformação Social
+  editor: Débora Garcia and Ana Paula Brandão
+  publisher: Unisinos
+  location: São Leopoldo
+  pages: 221-253
+  language: pt
+  country: Brazil
+  tags:
+  - social value
+  - contingent valuation
+  - media
+  - brazil
+  sources:
+  - manual
+- id: azevedo-2007-ipea-desigualdade-v1
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2007
+  title: Avaliando a Significância Estatística da Queda na Desigualdade no Brasil
+  book: 'Desigualdade de Renda no Brasil: Uma Análise da Queda Recente'
+  editor: Ricardo Paes de Barros, Miguel Nathan Foguel, and Gabriel Ulyssea
+  publisher: IPEA
+  location: Brasília
+  volume: '1'
+  language: pt
+  country: Brazil
+  tags:
+  - inequality
+  - statistics
+  - brazil
+  sources:
+  - manual
+- id: azevedo-foguel-2007-ipea-desigualdade-v2
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  - Foguel, Miguel Nathan
+  year: 2007
+  title: Uma Decomposição da Desigualdade de Rendimentos do Trabalho no Brasil
+  book: 'Desigualdade de Renda no Brasil: Uma Análise da Queda Recente'
+  editor: Ricardo Paes de Barros, Miguel Nathan Foguel, and Gabriel Ulyssea
+  publisher: IPEA
+  location: Brasília
+  volume: '2'
+  language: pt
+  country: Brazil
+  tags:
+  - inequality
+  - decomposition
+  - labor
+  - brazil
+  sources:
+  - manual
 - id: azevedo-2007-microfinance-entrepreneurs
   type: book_chapter
   authors:
@@ -1208,20 +1264,60 @@ book_chapters:
   - poverty
   sources:
   - manual
+- id: azevedo-2003-lastres-mpe-uk
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2003
+  title: 'Políticas Públicas de Apoio às Micro e Pequenas Empresas no Reino Unido: Uma Avaliação das Experiências nos Anos 90'
+  book: 'Pequena Empresa: Cooperação e Desenvolvimento'
+  editor: Lastres, H., Cassiolato, J. E., and Maciel, M. L.
+  publisher: Relume Dumará
+  location: Rio de Janeiro
+  pages: 493-510
+  language: pt
+  country: Brazil
+  tags:
+  - small enterprise
+  - public policy
+  - uk
+  - brazil
+  sources:
+  - manual
+- id: azevedo-2002-lastres-microfinancas
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2002
+  title: Microfinanças para Arranjos e Sistemas de MPME
+  book: 'Interagir para Competir: Promoção de Arranjos Produtivos e Inovativos no Brasil'
+  editor: Lastres, H. et al.
+  publisher: SEBRAE
+  location: Brasília
+  pages: 325-354
+  language: pt
+  country: Brazil
+  tags:
+  - microfinance
+  - small enterprise
+  - brazil
+  sources:
+  - manual
 conference_papers:
 - id: azevedo-2005-lacaea-paris
   type: conference_paper
   authors:
   - Azevedo, João Pedro
   year: 2005
-  title: Poverty and inequality in Latin America
-  venue: Latin American and Caribbean Economic Association (LACAEA)
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differential in the Slums'
+  venue: Latin American and Caribbean Economic Association (LACAEA) Annual Meeting
   location: Paris, France
   date: 2005-10
   tags:
-  - poverty
+  - labor markets
   - inequality
-  - latin america
+  - slums
+  - brazil
   sources:
   - manual
 - id: azevedo-2005-anpec-natal
@@ -1229,14 +1325,14 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2005
-  title: Brazilian inequality decomposition
-  venue: Associação Nacional de Centros de Pós-Graduação em Economia (ANPEC)
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: A Test of Labour Market Segmentation in the Slums'
+  venue: XXXIII Encontro Nacional de Economia (ANPEC)
   location: Natal, Brazil
   date: 2005-12
-  language: pt
   tags:
-  - inequality
-  - decomposition
+  - labor markets
+  - segmentation
+  - slums
   - brazil
   sources:
   - manual
@@ -1245,13 +1341,15 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2004
-  title: Microfinance and poverty reduction
-  venue: Development Economics Conference
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
+  venue: 'Unlocking Human Potential: Linking the Informal and Formal Sectors'
   location: Helsinki, Finland
   date: 2004-06
   tags:
-  - microfinance
-  - poverty
+  - labor markets
+  - informal sector
+  - slums
+  - brazil
   sources:
   - manual
 - id: azevedo-2004-eale-lisboa
@@ -1259,13 +1357,14 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2004
-  title: Labor market policies evaluation
+  title: 'An Investigation of the Labour Market Earnings in Poor Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
   venue: European Association of Labour Economists (EALE)
   location: Lisboa, Portugal
   date: 2004-09
   tags:
   - labor markets
-  - policy evaluation
+  - informal sector
+  - slums
   sources:
   - manual
 - id: azevedo-2004-anpec-joao-pessoa
@@ -1273,14 +1372,14 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2004
-  title: Poverty dynamics in Brazil
-  venue: ANPEC
+  title: 'Entrepreneurship and Liquidity Constraints in Deprived Areas: Evidence from the Slums of Rio de Janeiro'
+  venue: XXXII Encontro Nacional de Economia (ANPEC)
   location: João Pessoa, Brazil
   date: 2004-12
-  language: pt
   tags:
-  - poverty
-  - dynamics
+  - entrepreneurship
+  - microfinance
+  - slums
   - brazil
   sources:
   - manual
@@ -1289,14 +1388,15 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2003
-  title: Inequality measures and decomposition
-  venue: LACAEA
+  title: 'The Nature and Performance of Micro-Entrepreneurs: Evidence from Microcredit Clients in the Slums of Rio'
+  venue: Latin American and Caribbean Economic Association (LACAEA) Annual Meeting
   location: Puebla, Mexico
   date: 2003-10
   tags:
-  - inequality
-  - decomposition
-  - methodology
+  - microfinance
+  - entrepreneurship
+  - slums
+  - brazil
   sources:
   - manual
 - id: azevedo-2002-desg-nottingham
@@ -1304,13 +1404,14 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2002
-  title: Microfinance institutions in developing countries
-  venue: Development Economics Study Group (DESG)
+  title: Credit and Entrepreneurship in the Slums of Rio de Janeiro
+  venue: ESRC Development Economics Study Group (DESG)
   location: Nottingham, UK
   date: 2002-04
   tags:
   - microfinance
-  - development
+  - entrepreneurship
+  - slums
   sources:
   - manual
 - id: azevedo-2001-heidelberg
@@ -1318,22 +1419,24 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2001
-  title: Entrepreneurship and microfinance
-  venue: Development Economics Conference
+  title: Credit and the Self-Employed in the Slums of Rio de Janeiro
+  venue: 4th Heidelberg Workshop on Theoretical and Empirical Studies in Microfinance
   location: Heidelberg, Germany
   date: 2001-09
   tags:
-  - entrepreneurship
   - microfinance
+  - self-employment
+  - slums
   sources:
   - manual
-- id: azevedo-2000-anpec-campinas
+- id: azevedo-batista-2000-anpec-campinas
   type: conference_paper
   authors:
   - Azevedo, João Pedro
+  - Batista, Jorge Chami
   year: 2000
-  title: Brazilian export performance
-  venue: ANPEC
+  title: 'O Desempenho das Exportações Brasileiras para os Estados Unidos: O Papel do NAFTA e da Taxa de Câmbio sobre a Competitividade Brasileira'
+  venue: 28º Encontro Nacional de Economia (ANPEC)
   location: Campinas, Brazil
   date: 2000-12
   language: pt
@@ -1341,5 +1444,6 @@ conference_papers:
   - exports
   - trade
   - brazil
+  - nafta
   sources:
   - manual

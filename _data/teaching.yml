@@ -332,27 +332,26 @@ teaching:
   # 2004
   # ============================================================================
 
-  - id: "uff-econometria-aplicada-master-2003"
-    date_start: "2003-01-01"
-    date_end: "2004-12-31"
+  - id: "newcastle-econometria-aplicada-master-2003"
+    date_start: "2003-08-01"
+    date_end: "2004-08-31"
     year: 2003
     years: [2003, 2004]
-    institution: "Universidade Federal Fluminense (UFF)"
+    institution: "University of Newcastle Upon Tyne"
     institution_type: "university"
-    country: "Brazil"
+    country: "United Kingdom"
     course_title: "Econometria Aplicada (Applied Econometrics)"
     level: "graduate"
     semesters: "Academic Year"
     duration_hours: 8
-    role: "Substitute Professor"
-    affiliation: "Universidade Federal Fluminense"
-    affiliation_role: "Professor Substituto"
+    role: "Teaching Assistant"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "PhD Student"
     description: |
-      Taught applied econometrics to Master's students in Economics at UFF. Covered advanced 
-      econometric methods, causal inference, and applications in empirical research. Focus 
-      on practical implementation of econometric techniques using real data and research problems.
-    student_demographics: "Master's students in economics"
-    notes: "8 hours per week teaching position"
+      Taught applied econometrics to postgraduate students in Economics at Newcastle. Covered
+      advanced econometric methods, causal inference, and applications in empirical research.
+    student_demographics: "Postgraduate students in economics"
+    notes: "8 hours per week teaching as PhD student"
     tags: [statistics, econometrics, methodology]
 
   # ============================================================================
@@ -367,46 +366,45 @@ teaching:
   # 2001
   # ============================================================================
 
-  - id: "newcastle-monetary-economics-2000"
-    date_start: "2000-01-01"
-    date_end: "2001-12-31"
+  - id: "uff-monetary-economics-2000"
+    date_start: "2000-08-01"
+    date_end: "2001-09-30"
     year: 2000
     years: [2000, 2001]
-    institution: "University of Newcastle Upon Tyne"
+    institution: "Universidade Federal Fluminense (UFF)"
     institution_type: "university"
-    country: "United Kingdom"
-    course_title: "Economia Monetaria (Monetary Economics)"
+    country: "Brazil"
+    course_title: "Economia Monetária (Monetary Economics)"
     level: "undergraduate"
     semesters: "Academic Year"
     duration_hours: 40
     role: "Substitute Professor"
-    affiliation: "University of Newcastle Upon Tyne"
+    affiliation: "Universidade Federal Fluminense"
     affiliation_role: "Professor Substituto"
     description: |
-      Taught monetary economics to undergraduate students at Newcastle, covering 
-      money supply, banking systems, central banking, and macroeconomic policy. 
-      This was my first international teaching experience.
+      Taught monetary economics to undergraduate students at UFF, covering
+      money supply, banking systems, central banking, and macroeconomic policy.
     student_demographics: "Undergraduate economics students"
     notes: "40 hours per week full-time teaching position"
     tags: [statistics, governance]
 
-  - id: "newcastle-national-accounting-2000"
-    date_start: "2000-01-01"
-    date_end: "2001-12-31"
+  - id: "uff-national-accounting-2000"
+    date_start: "2000-08-01"
+    date_end: "2001-09-30"
     year: 2000
     years: [2000, 2001]
-    institution: "University of Newcastle Upon Tyne"
+    institution: "Universidade Federal Fluminense (UFF)"
     institution_type: "university"
-    country: "United Kingdom"
+    country: "Brazil"
     course_title: "Contabilidade Nacional (National Accounting)"
     level: "undergraduate"
     semesters: "Academic Year"
     duration_hours: 40
     role: "Substitute Professor"
-    affiliation: "University of Newcastle Upon Tyne"
+    affiliation: "Universidade Federal Fluminense"
     affiliation_role: "Professor Substituto"
     description: |
-      Taught national accounting and macroeconomic statistics to undergraduate students. 
+      Taught national accounting and macroeconomic statistics to undergraduate students.
       Covered GDP accounting, national income statistics, and balance of payments accounting.
     student_demographics: "Undergraduate economics students"
     notes: "Part of 40 hours per week full-time teaching load"
@@ -416,70 +414,70 @@ teaching:
   # 2000
   # ============================================================================
 
-  - id: "uff-calculo-i-2001"
-    date_start: "2001-01-01"
-    date_end: "2003-12-31"
+  - id: "newcastle-calculo-i-2001"
+    date_start: "2001-08-01"
+    date_end: "2003-08-31"
     year: 2001
     years: [2001, 2002, 2003]
-    institution: "Universidade Federal Fluminense (UFF)"
+    institution: "University of Newcastle Upon Tyne"
     institution_type: "university"
-    country: "Brazil"
+    country: "United Kingdom"
     course_title: "Cálculo I (Calculus I)"
     level: "undergraduate"
     semesters: "Academic Year"
-    duration_hours: 40
-    role: "Substitute Professor"
-    affiliation: "Universidade Federal Fluminense"
-    affiliation_role: "Professor Substituto"
+    duration_hours: 8
+    role: "Teaching Assistant"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "PhD Student"
     description: |
-      Taught foundational calculus to undergraduate economics and engineering students at UFF. 
+      Taught foundational calculus to undergraduate economics students at Newcastle.
       Covered limits, derivatives, integrals, and applications in optimization and economic modeling.
-    student_demographics: "Undergraduate students in economics and engineering"
-    notes: "40 hours per week full-time teaching position"
+    student_demographics: "Undergraduate students in economics"
+    notes: "8 hours per week teaching as PhD student"
     tags: [statistics]
 
-  - id: "uff-introducao-economia-2001"
-    date_start: "2001-01-01"
-    date_end: "2003-12-31"
+  - id: "newcastle-introducao-economia-2001"
+    date_start: "2001-08-01"
+    date_end: "2003-08-31"
     year: 2001
     years: [2001, 2002, 2003]
-    institution: "Universidade Federal Fluminense (UFF)"
+    institution: "University of Newcastle Upon Tyne"
     institution_type: "university"
-    country: "Brazil"
+    country: "United Kingdom"
     course_title: "Introdução a Economia (Introduction to Economics)"
     level: "undergraduate"
     semesters: "Academic Year"
-    duration_hours: 40
-    role: "Substitute Professor"
-    affiliation: "Universidade Federal Fluminense"
-    affiliation_role: "Professor Substituto"
+    duration_hours: 8
+    role: "Teaching Assistant"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "PhD Student"
     description: |
-      Taught foundational economics to undergraduate students at UFF. Covered microeconomic 
-      and macroeconomic principles, market structures, and applications to Brazilian economy.
-    student_demographics: "Undergraduate students in economics and business"
-    notes: "40 hours per week full-time teaching position"
+      Taught foundational economics to undergraduate students at Newcastle. Covered microeconomic
+      and macroeconomic principles, market structures, and applied economic analysis.
+    student_demographics: "Undergraduate students in economics"
+    notes: "8 hours per week teaching as PhD student"
     tags: [governance]
 
-  - id: "uff-econometria-aplicada-undergrad-2001"
-    date_start: "2001-01-01"
-    date_end: "2003-12-31"
+  - id: "newcastle-econometria-aplicada-undergrad-2001"
+    date_start: "2001-08-01"
+    date_end: "2003-08-31"
     year: 2001
     years: [2001, 2002, 2003]
-    institution: "Universidade Federal Fluminense (UFF)"
+    institution: "University of Newcastle Upon Tyne"
     institution_type: "university"
-    country: "Brazil"
+    country: "United Kingdom"
     course_title: "Econometria Aplicada (Applied Econometrics)"
     level: "undergraduate"
     semesters: "Academic Year"
-    duration_hours: 40
-    role: "Substitute Professor"
-    affiliation: "Universidade Federal Fluminense"
-    affiliation_role: "Professor Substituto"
+    duration_hours: 8
+    role: "Teaching Assistant"
+    affiliation: "University of Newcastle Upon Tyne"
+    affiliation_role: "PhD Student"
     description: |
-      Taught applied econometrics to undergraduate students at UFF. Covered regression analysis, 
+      Taught applied econometrics to undergraduate students at Newcastle. Covered regression analysis,
       hypothesis testing, econometric methods, and practical applications with real economic data.
     student_demographics: "Undergraduate economics students"
-    notes: "40 hours per week full-time teaching position"
+    notes: "8 hours per week teaching as PhD student"
     tags: [statistics, methodology]
 
 # ==============================================================================

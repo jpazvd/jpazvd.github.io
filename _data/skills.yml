@@ -34,7 +34,7 @@ domain:
   - "Human Capital Measurement"
 
 leadership:
-  - "Team Leadership (45+ staff at UNICEF)"
+  - "Team Leadership"
   - "International Development Operations"
   - "Multi-stakeholder Coordination"
   - "Technical Assistance & Capacity Building"
@@ -46,3 +46,5 @@ languages:
     level: "fluent"
   - language: "Spanish"
     level: "fluent"
+  - language: "French"
+    level: "basic"
