@@ -280,17 +280,19 @@ book_chapters:
     language: "en"
     tags: ["informal labor", "poverty", "brazil", "slums"]
 
-  - id: azevedo-2006-microfinance-entrepreneurs
+  - id: azevedo-2007-microfinance-entrepreneurs
     type: book_chapter
     authors: ["Azevedo, João Pedro"]
-    year: 2006
+    year: 2007
     title: "Microfinance and Poor Entrepreneurs"
     book: "The Life Cycle of Entrepreneurial Ventures"
     series: "International Handbook Series on Entrepreneurship"
     volume: "3"
-    editor: "S. Parker"
-    publisher: "Springer"
+    editor: "Simon Parker"
+    publisher: "Springer US"
     location: "Boston, MA"
+    pages: "301-334"
+    isbn: "978-0-387-32313-8"
     doi: "10.1007/978-0-387-32313-8_11"
     language: "en"
     tags: ["microfinance", "entrepreneurship", "poverty"]
