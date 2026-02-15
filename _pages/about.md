@@ -12,7 +12,7 @@ redirect_from:
 
 **Development economist using data, measurement, and analytics to improve outcomes for children and vulnerable populations.**
 
-I am [UNICEF's first Chief Statistician](https://www.unicef.org/media/experts/joao-pedro-azevedo), appointed in February 2023 to lead the organization's global data and statistical work.
+I am [UNICEF's first Chief Statistician](https://data.unicef.org), appointed in February 2023 to lead the organization's global data and statistical work.
 
 Before joining UNICEF, I spent 16 years at the [World Bank](https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo) as Lead Economist across the Poverty and Equity Practice and Education Global Practice. There I served as EdTech Fellow, Education Statistics Coordinator, and Global Lead, co-leading the Global Solution Group on Welfare Measurement and Statistical Capacity for Results, and the Data for Goals agenda.
 

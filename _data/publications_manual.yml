@@ -284,14 +284,16 @@ book_chapters:
     type: book_chapter
     authors: ["Azevedo, João Pedro"]
     year: 2006
-    title: "Microfinance institutions and entrepreneurs: a review of the literature"
-    book: "Handbook of Entrepreneurship Research"
+    title: "Microfinance and Poor Entrepreneurs"
+    book: "The Life Cycle of Entrepreneurial Ventures"
+    series: "International Handbook Series on Entrepreneurship"
+    volume: "3"
     editor: "S. Parker"
-    publisher: "Kluwer Academic Publishers"
-    pages: "345-378"
-    country: "Netherlands"
+    publisher: "Springer"
+    location: "Boston, MA"
+    doi: "10.1007/978-0-387-32313-8_11"
     language: "en"
-    tags: ["microfinance", "entrepreneurship", "literature review"]
+    tags: ["microfinance", "entrepreneurship", "poverty"]
 
   - id: azevedo-2002-microfinance-welfare
     type: book_chapter

@@ -64,9 +64,9 @@ I'm always happy to connect with fellow researchers, practitioners, and anyone i
 
 ## Bugs & Suggestions for Statistical Software
 
-If you've found a bug or have a feature request for any of my [Stata modules](/softwares/), please open an issue on the corresponding GitHub repository. Each module's issues page is linked from the [software table](/softwares/). This helps me track and prioritize fixes, and lets other users benefit from the discussion.
+If you've found a bug or have a feature request for any of my Stata modules, please submit it through GitHub Issues on the corresponding repository. Each module's issue tracker is linked from the [software page](/softwares/) — look for the <i class="fab fa-github"></i> link next to each package. This helps me track and prioritize fixes, and lets other users benefit from the discussion.
 
-<a href="https://github.com/jpazvd" target="_blank"><i class="fab fa-github"></i> github.com/jpazvd</a>
+<a href="/softwares/"><i class="fas fa-code"></i> View software and report issues</a>
 
 ## A Note on Response Times
 
