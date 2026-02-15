@@ -193,18 +193,6 @@ books:
     language: "pt"
     tags: ["education", "literacy", "brazil", "evaluation"]
 
-  - id: dolton-azevedo-2006-ndyp
-    type: book
-    authors: ["Dolton, P.", "Azevedo, João Pedro"]
-    year: 2006
-    title: "The econometric evaluation of the New Deal for Young People"
-    publisher: "Department for Work and Pensions"
-    pages: "Research Report No. 355"
-    country: "UK"
-    language: "en"
-    tags: ["policy evaluation", "uk", "welfare", "youth", "labor markets"]
-    urls:
-      pdf: "https://webarchive.nationalarchives.gov.uk/ukgwa/+/http://www.dwp.gov.uk/asd/asd5/rports2005-2006/rrep355.pdf"
 
 # === BOOK CHAPTERS ===
 
