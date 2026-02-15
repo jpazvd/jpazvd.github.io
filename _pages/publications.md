@@ -189,7 +189,7 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
   
   <li>Castañeda, A, Doan, D, Newhouse, D, Nguyen, MC, Uematsu, H, <strong>Azevedo, JP</strong> (2018). <a href="https://doi.org/10.1016/j.worlddev.2017.08.002" target="_blank">"A New Profile of the Global Poor."</a> <em>World Development</em>, 101, 250-267. <span class="jp-badge jp-badge--info">IF: 5.3</span></li>
   
-  <li>Andalón, M, <strong>Azevedo, JP</strong>, Rodríguez-Castelán, C, Sanfelice, V, Valderrama-González, D (2016). <a href="https://doi.org/10.1016/j.worlddev.2015.12.020" target="_blank">"Weather Shocks and Health at Birth in Colombia."</a> <em>World Development</em>, 82, 69-82. <span class="jp-badge jp-badge--info">IF: 5.3</span></li>
+  <li>Andalón, M, <strong>Azevedo, JP</strong>, Rodríguez-Castelán, C, Sanfelice, V, Valderrama-González, D (2016). <a href="https://doi.org/10.1016/j.worlddev.2016.01.015" target="_blank">"Weather Shocks and Health at Birth in Colombia."</a> <em>World Development</em>, 82, 69-82. <span class="jp-badge jp-badge--info">IF: 5.3</span></li>
 </ol>
 
 <h3>World Bank Flagship Publications</h3>

@@ -25,7 +25,7 @@
 journal_articles:
   - id: azevedo-2024-lancet-under5-mortality
     type: journal_article
-    authors: ["Azevedo, João Pedro", "Banerjee, Anup", "Wilmoth, John", "Fu, Huong", "You, Danzhen"]
+    authors: ["Azevedo, João Pedro", "Banerjee, Anshu", "Wilmoth, John", "Fu, Haishan", "You, Danzhen"]
     year: 2024
     title: "Hard truths about under-5 mortality: call for urgent global action"
     journal: "The Lancet"
@@ -36,7 +36,7 @@ journal_articles:
 
   - id: strong-2024-lancet-health-estimates
     type: journal_article
-    authors: ["Strong, Kathryn", "You, Danzhen", "Banerjee, Anup", "Azevedo, João Pedro"]
+    authors: ["Strong, Kathleen", "You, Danzhen", "Banerjee, Anshu", "Azevedo, João Pedro"]
     year: 2024
     title: "Global health estimates should be more responsive to country needs"
     journal: "The Lancet"
