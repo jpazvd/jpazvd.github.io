@@ -11,7 +11,7 @@ redirect_from:
 {% include base_path %}
 
 <!-- Print-only header: hidden on screen, visible when printing/generating PDF -->
-<div class="cv-print-header" style="display: none;">
+<div class="cv-print-header">
   <p class="cv-print-header__name">João Pedro Azevedo</p>
   <p class="cv-print-header__title">Chief Statistician, UNICEF &bull; Development Economist</p>
   <p class="cv-print-header__contact">

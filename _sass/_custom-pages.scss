@@ -1070,6 +1070,11 @@ html {
    CV Page: Work Experience, Teaching, Skills
    ========================================================================== */
 
+/* Print-only header: hidden on screen, shown via _print.scss */
+.cv-print-header {
+  display: none;
+}
+
 .cv-job {
   margin-bottom: 1.5rem;
 }
