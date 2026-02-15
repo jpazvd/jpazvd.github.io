@@ -4,7 +4,7 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
-description: "João Pedro Azevedo is UNICEF's Chief Statistician, leading global child data initiatives. PhD economist with 80+ publications in Lancet, World Development."
+description: "João Pedro Azevedo is UNICEF's Chief Statistician, leading global child data initiatives. PhD economist with publications in Lancet, World Development, and World Bank Research Observer."
 redirect_from: 
   - /about/
   - /about.html
@@ -14,9 +14,9 @@ redirect_from:
 
 I am [UNICEF's first Chief Statistician](https://data.unicef.org), appointed in February 2023 to lead the organization's global data and statistical work.
 
-Before joining UNICEF, I spent 16 years at the [World Bank](https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo) as Lead Economist across the Poverty and Equity Practice and Education Global Practice. There I served as EdTech Fellow, Education Statistics Coordinator, and Global Lead, co-leading the Global Solution Group on Welfare Measurement and Statistical Capacity for Results, and the Data for Goals agenda.
+Before joining UNICEF, I spent 16 years at the [World Bank](https://www.worldbank.org/en/about/people/j/joao-pedro-azevedo), most recently as Lead Economist in the Education Global Practice and the Poverty and Equity Practice. I served as EdTech Fellow, Education Statistics Coordinator, and co-led the Global Solution Group on Welfare Measurement and Statistical Capacity for Results, and the Data for Goals initiative.
 
-Earlier in my career I was superintendent of Monitoring and Evaluation at the [Secretary of Finance for the State of Rio de Janeiro](https://www.fazenda.rj.gov.br/) and a research fellow at the [Institute of Applied Economic Research (IPEA)](https://ipea.gov.br) in Rio de Janeiro.
+Earlier in my career I was Superintendent for Public Policy Evaluation at the [Treasury of the State of Rio de Janeiro](https://www.fazenda.rj.gov.br/) and a research fellow at the [Institute of Applied Economic Research (IPEA)](https://ipea.gov.br) in Rio de Janeiro.
 
 I hold a PhD in Economics from Newcastle University. My research includes peer-reviewed articles in *The Lancet*, *World Development*, *World Bank Research Observer*, and *Frontiers in Public Health*, along with over 20 open-source statistical software packages.
 

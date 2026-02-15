@@ -7,15 +7,15 @@ _metadata:
   - stata
   - github
   - manual
-  total_publications: 69
+  total_publications: 62
 summary:
-  total: 69
+  total: 62
   by_type:
     working_papers: 33
     softwares: 5
-    journal_articles: 12
+    journal_articles: 10
     books: 3
-    book_chapters: 7
+    book_chapters: 2
     conference_papers: 9
   by_source:
     okr_new: 33
@@ -24,7 +24,7 @@ summary:
     stata_merged: 0
     github_new: 5
     github_merged: 0
-    manual_new: 25
+    manual_new: 18
     manual_merged: 3
 working_papers:
 - title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
@@ -1020,30 +1020,6 @@ journal_articles:
   language: en
   sources:
   - manual
-- id: azevedo-foguel-2006-inequality
-  type: journal_article
-  authors:
-  - Azevedo, João Pedro
-  - Foguel, Miguel
-  year: 2006
-  title: Inequality decomposition by population subgroups and the shapley value
-  journal: Applied Economics Letters
-  volume: '13'
-  issue: '12'
-  pages: 773-777
-  doi: 10.1080/13504850500404217
-  citations: 45
-  tags:
-  - inequality
-  - decomposition
-  - shapley
-  peer_reviewed: true
-  language: en
-  country: UK
-  urls:
-    journal: https://www.tandfonline.com/doi/abs/10.1080/13504850500404217
-  sources:
-  - manual
 - id: azevedo-ndiaye-2004-microfinance
   type: journal_article
   authors:
@@ -1085,26 +1061,6 @@ journal_articles:
   country: Chile
   urls:
     journal: https://repositorio.cepal.org/handle/11362/10921
-  sources:
-  - manual
-- id: azevedo-yamada-2002-microfinance
-  type: journal_article
-  authors:
-  - Azevedo, João Pedro
-  - Yamada, Gustavo
-  year: 2002
-  title: Microfinance, institutions and entrepreneurs
-  journal: Journal of Microfinance
-  volume: '4'
-  issue: '2'
-  pages: 103-128
-  citations: 18
-  tags:
-  - microfinance
-  - entrepreneurship
-  - institutions
-  peer_reviewed: true
-  language: en
   sources:
   - manual
 - id: azevedo-batista-1999-exports
@@ -1211,75 +1167,16 @@ books:
   - manual
   urls: {}
 book_chapters:
-- id: azevedo-2008-canal-futura
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  year: 2008
-  title: 'Educational Television and Poverty: a contingent valuation of Canal Futura in Brazil'
-  book: International Perspectives on the Economics of Education
-  editor: G. Johnes and J. Johnes
-  publisher: Edward Elgar
-  pages: 273-302
-  country: UK
-  language: en
-  tags:
-  - education
-  - television
-  - brazil
-  - contingent valuation
-  sources:
-  - manual
-- id: azevedo-2007-inequality-significance
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  year: 2007
-  title: 'On the statistical significance of poverty and inequality measures: a bootstrap approach with an application to
-    Latin America'
-  book: Inequality, Poverty and Wellbeing
-  editor: S. Jenkins and J. Micklewright
-  publisher: Palgrave Macmillan
-  pages: 123-145
-  country: UK
-  language: en
-  tags:
-  - inequality
-  - poverty
-  - bootstrap
-  - latin america
-  - methodology
-  sources:
-  - manual
-- id: azevedo-foguel-2007-decomposition
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  - Foguel, Miguel
-  year: 2007
-  title: Decomposing inequality changes in Brazil
-  book: Inequality, Poverty and Wellbeing
-  editor: S. Jenkins and J. Micklewright
-  publisher: Palgrave Macmillan
-  pages: 89-110
-  country: UK
-  language: en
-  tags:
-  - inequality
-  - decomposition
-  - brazil
-  sources:
-  - manual
 - id: azevedo-2006-labour-slums
   type: book_chapter
   authors:
   - Azevedo, João Pedro
   year: 2006
-  title: Informal labour markets and poverty in Brazilian slums
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differentials in the Slums'
   book: Informal Labour Markets and Development
   editor: B. Guha-Khasnobis and R. Kanbur
-  publisher: Palgrave-Macmillan
-  pages: 187-210
+  publisher: Palgrave Macmillan
+  pages: 109-135
   country: UK
   language: en
   tags:
@@ -1289,58 +1186,26 @@ book_chapters:
   - slums
   sources:
   - manual
-- id: azevedo-2006-microfinance-entrepreneurs
+- id: azevedo-2007-microfinance-entrepreneurs
   type: book_chapter
   authors:
   - Azevedo, João Pedro
-  year: 2006
-  title: 'Microfinance institutions and entrepreneurs: a review of the literature'
-  book: Handbook of Entrepreneurship Research
-  editor: S. Parker
-  publisher: Kluwer Academic Publishers
-  pages: 345-378
-  country: Netherlands
+  year: 2007
+  title: Microfinance and Poor Entrepreneurs
+  book: The Life Cycle of Entrepreneurial Ventures
+  series: International Handbook Series on Entrepreneurship
+  volume: '3'
+  editor: Simon Parker
+  publisher: Springer US
+  location: Boston, MA
+  pages: 301-334
+  isbn: 978-0-387-32313-8
+  doi: 10.1007/978-0-387-32313-8_11
   language: en
   tags:
   - microfinance
   - entrepreneurship
-  - literature review
-  sources:
-  - manual
-- id: azevedo-2002-microfinance-welfare
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  year: 2002
-  title: The welfare effects of microfinance institutions
-  book: Economic Development and Microfinance
-  editor: FAO
-  publisher: Food and Agriculture Organization
-  pages: 89-112
-  country: Italy
-  language: en
-  tags:
-  - microfinance
-  - welfare
-  - development
-  sources:
-  - manual
-- id: azevedo-2002-education-brazil
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  year: 2002
-  title: Returns to education in Brazil
-  book: Education and Development
-  editor: UNESCO
-  publisher: UNESCO Publishing
-  pages: 201-225
-  country: France
-  language: en
-  tags:
-  - education
-  - returns to education
-  - brazil
+  - poverty
   sources:
   - manual
 conference_papers:

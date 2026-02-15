@@ -16,8 +16,8 @@ redirect_from:
   <p class="cv-print-header__title">Chief Statistician, UNICEF &bull; Development Economist</p>
   <p class="cv-print-header__contact">
     <a href="https://jpazvd.github.io">jpazvd.github.io</a> &bull;
-    <a href="https://scholar.google.com/citations?user=EvC_FeAAAAAJ">Google Scholar</a> &bull;
-    <a href="https://orcid.org/0000-0003-1519-457X">ORCID</a>
+    <a href="{{ site.data.citations.google_scholar.profile_url }}">Google Scholar</a> &bull;
+    <a href="{{ site.data.citations.orcid.profile_url }}">ORCID</a>
   </p>
 </div>
 
@@ -170,7 +170,7 @@ redirect_from:
 ## Technical Expertise
 
 <p class="cv-prose">
-Technical work draws on advanced statistical programming in Stata (including ado-file development and SSC contributions), R, Python, and SQL, combined with experience building analytical data services using SDMX, REST, and data warehouse APIs. Recent work integrates LLM-assisted analysis with human-in-the-loop review workflows, and emphasizes reproducible pipelines, data quality engineering, and PII-safe compliance. Core quantitative methods include econometrics and impact evaluation, survey design and sampling, small area estimation and poverty mapping, and data visualization.
+Technical work draws on advanced statistical programming in Stata (including ado-file development and SSC contributions), R, Python, and SQL, combined with experience building analytical data services using SDMX, REST, and data warehouse APIs. Recent work integrates LLM-assisted analysis with human-in-the-loop review workflows, and emphasizes reproducible pipelines, data quality engineering, and PII compliance. Core quantitative methods include econometrics and impact evaluation, survey design and sampling, small area estimation and poverty mapping, and data visualization.
 </p>
 
 <p class="cv-prose">
