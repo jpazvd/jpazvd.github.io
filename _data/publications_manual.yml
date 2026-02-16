@@ -93,20 +93,7 @@ journal_articles:
     peer_reviewed: true
     language: "en"
 
-  - id: azevedo-ndiaye-2004-microfinance
-    type: journal_article
-    authors: ["Azevedo, João Pedro", "Ndiaye, G."]
-    year: 2004
-    title: "Microfinance Institutions in Senegal"
-    journal: "Small Enterprise Development"
-    volume: "15"
-    issue: "2"
-    pages: "4-17"
-    citations: 12
-    tags: ["microfinance", "senegal", "africa"]
-    peer_reviewed: true
-    language: "en"
-    country: "UK"
+
 
   - id: azevedo-batista-2002-cepal
     type: journal_article
