@@ -349,6 +349,78 @@ book_chapters:
     country: "Brazil"
     tags: ["microfinance", "small enterprise", "brazil"]
 
+# === REPORTS ===
+# Flagship institutional reports NOT in OKR (UNICEF, multi-agency, non-PRWP)
+
+reports:
+  - id: azevedo-2023-unicef-progress-children
+    type: report
+    authors: ["Azevedo, João Pedro", "Wajid, Sameen", "Wilbanks, Sarah", "Delamónica, Enrique", "Diniz de Oliveira, Juliano", "Mishra, Sakshi"]
+    year: 2023
+    title: "Progress on Children's Well-Being: Centring child rights in the 2030 agenda"
+    institution: "UNICEF"
+    location: "New York"
+    doi: "10.18356/9789280655018"
+    language: "en"
+    tags: ["children", "well-being", "SDGs", "UNICEF"]
+    urls:
+      doi: "https://doi.org/10.18356/9789280655018"
+
+  - id: chanduvi-2022-education-recovery-rapid
+    type: report
+    authors: ["Saavedra Chanduvi, Jaime", "Jenkins, Robert", "Dewan, Pragya", "Reuge, Nicolas", "Yao, Haogen", "Alejo, Anna", "Falconer, Aisling", "Chakroun, Borhene", "Chang, Gwang-Chol", "Azevedo, João Pedro", "Sánchez, Alonso", "Giannini, Stefania", "Brossard, Mathieu", "Dreesen, Thomas", "Bergmann, Jessica"]
+    year: 2022
+    title: "Where are we on Education Recovery? Taking the Global Pulse of a RAPID Response"
+    institution: "UNICEF Office of Research–Innocenti"
+    language: "en"
+    tags: ["education", "covid-19", "recovery", "UNICEF"]
+    urls:
+      report: "https://unicef-irc.org/where-we-are-on-education-recovery"
+
+  - id: azevedo-2021-state-global-education-crisis
+    type: report
+    authors: ["Azevedo, João Pedro", "Rogers, F. Halsey", "Ahlgren, Sanna Ellinore", "Cloutier, Marie-Helene", "Chakroun, Borhene", "Chang, Gwang Chol", "Mizunoya, Suguru", "Reuge, Nicolas Jean", "Brossard, Matt", "Bergmann, Jessica Lynn"]
+    year: 2021
+    title: "The State of the Global Education Crisis: A Path to Recovery"
+    institution: "World Bank / UNICEF / UNESCO"
+    location: "Washington, D.C."
+    language: "en"
+    tags: ["education", "covid-19", "learning loss", "learning poverty"]
+    urls:
+      report: "http://documents.worldbank.org/curated/en/416991638768297704/The-State-of-the-Global-Education-Crisis-A-Path-to-Recovery"
+
+  - id: unesco-2021-whats-next-education-recovery
+    type: report
+    authors: ["UNESCO", "UNICEF", "World Bank", "OECD"]
+    year: 2021
+    title: "What's Next? Lessons on Education Recovery: Findings from a Survey of Ministries of Education amid the COVID-19 Pandemic"
+    institution: "UNESCO / UNICEF / World Bank / OECD"
+    language: "en"
+    tags: ["education", "covid-19", "recovery", "survey"]
+    urls:
+      report: "https://openknowledge.worldbank.org/handle/10986/36393"
+
+  - id: unesco-2020-what-have-we-learnt
+    type: report
+    authors: ["UNESCO", "UNICEF", "World Bank"]
+    year: 2020
+    title: "What Have We Learnt? Overview of Findings from a Survey of Ministries of Education on National Responses to COVID-19"
+    institution: "UNESCO / UNICEF / World Bank"
+    language: "en"
+    tags: ["education", "covid-19", "survey"]
+    urls:
+      report: "https://openknowledge.worldbank.org/handle/10986/34700"
+
+  - id: azevedo-2019-ending-learning-poverty
+    type: report
+    authors: ["Azevedo, João Pedro", "Crawford, Michael F.", "Nayar, Reema", "Rogers, F. Halsey", "Barron Rodriguez, Maria Rebeca", "Ding, Elaine Yi Zhong", "Gutierrez Bernal, Marcela", "Dixon, Annette", "Saavedra Chanduvi, Jaime", "Arias Diaz, Omar S."]
+    year: 2019
+    title: "Ending Learning Poverty: What Will It Take?"
+    institution: "World Bank"
+    location: "Washington, D.C."
+    language: "en"
+    tags: ["education", "learning poverty"]
+
 # === CONFERENCE PAPERS ===
 
 conference_papers:

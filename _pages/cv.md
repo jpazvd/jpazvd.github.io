@@ -101,6 +101,16 @@ redirect_from:
 {% endfor %}
 </ul>
 
+### Selected Reports
+
+<ul>
+{% for pub in site.data.publications.reports %}
+<li class="cv-pub">
+  {{ pub.authors | join: ", " }} ({{ pub.year }}). <em>{{ pub.title }}</em>. {{ pub.institution }}.{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi</a>{% elsif pub.urls.report %} <a href="{{ pub.urls.report }}">link</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
+
 ### Selected Working Papers
 
 <ul>
