@@ -184,6 +184,27 @@ books:
 # === BOOK CHAPTERS ===
 
 book_chapters:
+  - id: azevedo-2021-unequal-impacts-covid
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "Gutiérrez, M.", "Hoyos, R.", "Saavedra, J."]
+    year: 2021
+    title: "The Unequal Impacts of COVID-19 on Student Learning"
+    book: "Primary and Secondary Education During COVID-19"
+    pages: "421-459"
+    language: "en"
+    tags: ["covid-19", "education", "inequality", "learning loss"]
+
+  - id: azevedo-2015-inequality-mobility-lac
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "López-Calva, L. F.", "Lustig, N.", "Ortiz-Juárez, E."]
+    year: 2015
+    title: "Inequality, Mobility and Middle Classes in Latin America"
+    book: "Latin America's Emerging Middle Classes: Economic Perspectives"
+    editor: "Jeff Dayton-Johnson"
+    publisher: "Palgrave Macmillan"
+    language: "en"
+    tags: ["inequality", "mobility", "middle class", "latin america"]
+
   - id: azevedo-2008-canal-futura-unisinos
     type: book_chapter
     authors: ["Azevedo, João Pedro"]
@@ -226,6 +247,39 @@ book_chapters:
     country: "Brazil"
     tags: ["inequality", "decomposition", "labor", "brazil"]
 
+  - id: azevedo-2007-mapa-avaliacao-alfabetizado
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "Barros, Ricardo Paes de", "Carvalho, Mirela de", "Henriques, Ricardo"]
+    year: 2007
+    title: "Um Mapa de Avaliação: O Caso do Programa Brasil Alfabetizado"
+    book: "Série Educação Para Todos - Avaliação do Programa Brasil Alfabetizado"
+    publisher: "UNESCO"
+    language: "pt"
+    country: "Brazil"
+    tags: ["education", "literacy", "evaluation", "brazil"]
+
+  - id: azevedo-2007-demanda-alfabetizacao
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "Cruz, Luiz Eduardo", "Pero, Valéria"]
+    year: 2007
+    title: "Uma Avaliação da Demanda por Alfabetização no Brasil: Uma análise com dados secundários"
+    book: "Série Educação Para Todos - Avaliação do Programa Brasil Alfabetizado"
+    publisher: "UNESCO"
+    language: "pt"
+    country: "Brazil"
+    tags: ["education", "literacy", "demand analysis", "brazil"]
+
+  - id: azevedo-2007-avaliacao-processo-alfabetizado
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "Ulyssea, Gabriel", "Schwartzman, Isabel F."]
+    year: 2007
+    title: "Avaliação de Processo: A Gestão do Programa Brasil Alfabetizado"
+    book: "Série Educação Para Todos - Avaliação do Programa Brasil Alfabetizado"
+    publisher: "UNESCO"
+    language: "pt"
+    country: "Brazil"
+    tags: ["education", "literacy", "process evaluation", "brazil"]
+
   - id: azevedo-2007-microfinance-entrepreneurs
     type: book_chapter
     authors: ["Azevedo, João Pedro"]
@@ -255,6 +309,17 @@ book_chapters:
     country: "UK"
     language: "en"
     tags: ["informal labor", "poverty", "brazil", "slums"]
+
+  - id: azevedo-2005-caja-los-andes-bolivia
+    type: book_chapter
+    authors: ["Azevedo, João Pedro", "Pearce, Douglas", "Reinsch, Myka", "Brar, Amitabh"]
+    year: 2005
+    title: "Caja Los Andes (Bolivia) Diversifies into Rural Lending"
+    book: "CGAP Agricultural Microfinance Case Study"
+    publisher: "CGAP"
+    location: "Washington, DC"
+    language: "en"
+    tags: ["microfinance", "rural lending", "bolivia"]
 
   - id: azevedo-2003-lastres-mpe-uk
     type: book_chapter
