@@ -184,19 +184,6 @@ books:
 # === BOOK CHAPTERS ===
 
 book_chapters:
-  - id: azevedo-2006-labour-slums
-    type: book_chapter
-    authors: ["Azevedo, João Pedro"]
-    year: 2006
-    title: "An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differentials in the Slums"
-    book: "Informal Labour Markets and Development"
-    editor: "B. Guha-Khasnobis and R. Kanbur"
-    publisher: "Palgrave Macmillan"
-    pages: "109-135"
-    country: "UK"
-    language: "en"
-    tags: ["informal labor", "poverty", "brazil", "slums"]
-
   - id: azevedo-2008-canal-futura-unisinos
     type: book_chapter
     authors: ["Azevedo, João Pedro"]
@@ -255,6 +242,19 @@ book_chapters:
     doi: "10.1007/978-0-387-32313-8_11"
     language: "en"
     tags: ["microfinance", "entrepreneurship", "poverty"]
+
+  - id: azevedo-2006-labour-slums
+    type: book_chapter
+    authors: ["Azevedo, João Pedro"]
+    year: 2006
+    title: "An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differentials in the Slums"
+    book: "Informal Labour Markets and Development"
+    editor: "B. Guha-Khasnobis and R. Kanbur"
+    publisher: "Palgrave Macmillan"
+    pages: "109-135"
+    country: "UK"
+    language: "en"
+    tags: ["informal labor", "poverty", "brazil", "slums"]
 
   - id: azevedo-2003-lastres-mpe-uk
     type: book_chapter
