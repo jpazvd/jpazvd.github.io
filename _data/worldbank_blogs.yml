@@ -3,11 +3,10 @@ metadata:
   source: World Bank Blogs
   source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
   api_url: https://webapi.worldbank.org/aemsite/blogs/global/search
-  last_updated: '2025-12-11'
-  total_posts: 24
+  last_updated: '2026-02-16'
+  total_posts: 29
   english_posts: 24
   translations: 5
-  note: Translations are linked within their English parent posts via translations field in worldbank_blogs_full.yml
 posts:
 - title: Why hasn’t the pandemic sparked more concern for learning losses in Latin
     America?  The perils of an invisible crisis

@@ -1,5 +1,5 @@
 _metadata:
-  generated: '2025-12-25T00:49:05.823348'
+  generated: '2026-02-16T06:27:04.337767'
   generator: scripts/build_publications_master.py
   warning: DO NOT EDIT MANUALLY - This file is auto-generated from satellite databases
   sources:
@@ -7,25 +7,25 @@ _metadata:
   - stata
   - github
   - manual
-  total_publications: 67
+  total_publications: 70
 summary:
-  total: 67
+  total: 70
   by_type:
     working_papers: 33
-    softwares: 5
-    journal_articles: 10
+    softwares: 13
+    journal_articles: 7
     books: 3
     book_chapters: 7
-    conference_papers: 9
+    conference_papers: 7
   by_source:
     okr_new: 33
     okr_merged: 1
-    stata_new: 0
+    stata_new: 10
     stata_merged: 0
-    github_new: 5
-    github_merged: 0
-    manual_new: 23
-    manual_merged: 3
+    github_merged: 2
+    github_new: 3
+    manual_new: 24
+    manual_merged: 6
 working_papers:
 - title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
   year: '2023'
@@ -48,7 +48,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2023-covid-19-school-closures
+  id: azevedo-2023-covid-19-school-closures-1e5de4
   sources:
   - okr
 - title: Blackout or Blanked Out?
@@ -71,7 +71,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: seitz-2023-blackout-or-blanked
+  id: seitz-2023-blackout-or-blanked-284f4c
   sources:
   - okr
 - title: Learning Losses during COVID-19
@@ -96,7 +96,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: akmal-2022-learning-losses-during
+  id: akmal-2022-learning-losses-during-73a1a9
   sources:
   - okr
 - title: Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes
@@ -118,12 +118,15 @@ working_papers:
     adjusted for
   venue: World Bank Policy Research Working Paper
   tags:
-  - world bank
-  - policy research
+  - covid-19
+  - education
+  - learning loss
+  - simulation
   peer_reviewed: false
-  id: hasan-2021-simulating-the-potential
+  id: hasan-2021-simulating-the-potential-cbdbda
   sources:
   - okr
+  - manual
   urls:
     okr: https://openknowledge.worldbank.org/handle/10986/33945
   okr_handle: 10986/33945
@@ -151,7 +154,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: goldemberg-2021-will-every-child
+  id: goldemberg-2021-will-every-child-573f0c
   sources:
   - okr
 - title: Remote Learning During COVID-19
@@ -177,7 +180,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: munoz-najar-2021-remote-learning-during
+  id: munoz-najar-2021-remote-learning-during-8a18b3
   sources:
   - okr
 - title: Learning Poverty Updates and Revisions
@@ -211,7 +214,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2021-learning-poverty-updates
+  id: azevedo-2021-learning-poverty-updates-f995a0
   sources:
   - okr
 - title: Learning Poverty
@@ -232,7 +235,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-learning-poverty
+  id: azevedo-2020-learning-poverty-bfd570
   sources:
   - okr
 - title: Learning Poverty in the Time of COVID-19
@@ -253,7 +256,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-learning-poverty-in
+  id: azevedo-2020-learning-poverty-in-fff3f8
   sources:
   - okr
 - title: Estimating the Potential COVID-19 Impacts on Learning Poverty in Brazil
@@ -275,7 +278,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-estimating-the-potential
+  id: azevedo-2020-estimating-the-potential-99a2ff
   sources:
   - okr
 - title: SAE - A Stata Package for Unit Level Small Area Estimation
@@ -299,7 +302,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: nguyen-2018-sae--a
+  id: nguyen-2018-sae--a-cf86f9
   sources:
   - okr
 - title: A New Profile of the Global Poor
@@ -322,12 +325,15 @@ working_papers:
     with three or more childr
   venue: World Bank Policy Research Working Paper
   tags:
-  - world bank
-  - policy research
+  - poverty
+  - global
+  - measurement
   peer_reviewed: false
-  id: castañeda-2018-a-new-profile
+  id: castañeda-2018-a-new-profile-7ab23b
   sources:
   - okr
+  - manual
+  urls: {}
 - title: Poverty, Inequality, and            Agriculture in the EU
   year: '2018'
   authors:
@@ -351,7 +357,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: van-den-brink-2018-poverty-inequality-and
+  id: van-den-brink-2018-poverty-inequality-and-036846
   sources:
   - okr
 - title: How Equitable is Access to Finance in Turkey?
@@ -374,7 +380,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: inan-2016-how-equitable-is
+  id: inan-2016-how-equitable-is-fac529
   sources:
   - okr
 - title: What Are the Impacts of Syrian Refugees on Host Community Welfare in Turkey?
@@ -397,7 +403,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: yang-2016-what-are-the
+  id: yang-2016-what-are-the-72b703
   sources:
   - okr
 - title: When and Where Do We See Regional Poverty Reduction and Convergence?
@@ -422,7 +428,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: yang-2016-when-and-where
+  id: yang-2016-when-and-where-987d36
   sources:
   - okr
 - title: Who Are the Poor in the Developing World?
@@ -448,7 +454,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: castaneda-2016-who-are-the
+  id: castaneda-2016-who-are-the-8071fa
   sources:
   - okr
 - title: Robustness of Shared Prosperity Estimates
@@ -475,7 +481,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: wieser-2016-robustness-of-shared
+  id: wieser-2016-robustness-of-shared-9bb4f3
   sources:
   - okr
 - title: Kyrgyz Republic
@@ -499,7 +505,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: calvo-2015-kyrgyz-republic
+  id: calvo-2015-kyrgyz-republic-9e79f1
   sources:
   - okr
 - title: 'Pathways to the Middle Class in Turkey : How Have Reducing Poverty and Boosting Shared Prosperity Helped?'
@@ -521,7 +527,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2014-pathways-to-the
+  id: azevedo-2014-pathways-to-the-0356c9
   sources:
   - okr
 - title: 'Poverty Reduction and Shared Prosperity in Tajikistan : A Diagnostic'
@@ -544,7 +550,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: rajabov-2014-poverty-reduction-and
+  id: rajabov-2014-poverty-reduction-and-fd1455
   sources:
   - okr
 - title: 'Fiscal Adjustment and Income Inequality : Sub-national Evidence from Brazil'
@@ -568,7 +574,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: david-2014-fiscal-adjustment-and
+  id: david-2014-fiscal-adjustment-and-0a124d
   sources:
   - okr
 - title: Weather Shocks and Health at Birth in Colombia
@@ -593,7 +599,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: andalon-2014-weather-shocks-and
+  id: andalon-2014-weather-shocks-and-6e71a9
   sources:
   - okr
 - title: Understanding Changes in Poverty
@@ -620,7 +626,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: van-nguyen-2014-understanding-changes-in
+  id: van-nguyen-2014-understanding-changes-in-b64827
   sources:
   - okr
 - title: 'From Noise to Signal : The Successful Turnaround of Poverty Measurement in Colombia'
@@ -641,7 +647,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2013-from-noise-to
+  id: azevedo-2013-from-noise-to-87bba1
   sources:
   - okr
 - title: Decomposing the Recent Inequality Decline in Latin America
@@ -664,7 +670,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: sanfelice-2013-decomposing-the-recent
+  id: sanfelice-2013-decomposing-the-recent-60bbfc
   sources:
   - okr
 - title: Setting Reasonable Performance Targets for Public Service Delivery
@@ -686,7 +692,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: newman-2013-setting-reasonable-performance
+  id: newman-2013-setting-reasonable-performance-e1e646
   sources:
   - okr
 - title: 'Fifteen Years of Inequality in Latin America : How Have Labor Markets Helped?'
@@ -711,7 +717,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: dávalos-2013-fifteen-years-of
+  id: dávalos-2013-fifteen-years-of-d0a8ee
   sources:
   - okr
 - title: Is Labor Income Responsible for Poverty Reduction? A Decomposition Approach
@@ -736,7 +742,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2013-is-labor-income
+  id: azevedo-2013-is-labor-income-766e8f
   sources:
   - okr
 - title: 'Teenage Pregnancy and Opportunities in Latin America and the Caribbean : On Teenage Fertility Decisions, Poverty
@@ -763,7 +769,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: favara-2012-teenage-pregnancy-and
+  id: favara-2012-teenage-pregnancy-and-6682b6
   sources:
   - okr
 - title: Is the Baby to Blame? An Inquiry into the Consequences of Early Childbearing
@@ -786,7 +792,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: perova-2012-is-the-baby
+  id: perova-2012-is-the-baby-6fbb12
   sources:
   - okr
 - title: When Job Earnings Are Behind Poverty Reduction
@@ -811,7 +817,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: inchauste-2012-when-job-earnings
+  id: inchauste-2012-when-job-earnings-8eafaf
   sources:
   - okr
 - title: 'Benchmarking : A Tool to improve the Effectiveness of Monitoring and Evaluation in the Policy Cycle'
@@ -834,22 +840,47 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: newman-2010-benchmarking-a
+  id: newman-2010-benchmarking-a-55b861
   sources:
   - okr
 softwares:
+- title: WBOPENDATA
+  year: '2026'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to access World Bank databases
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 15
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2026-wbopendata-6cc466
+  sources:
+  - stata
 - title: ALORENZ
-  year: '2020'
+  year: '2021'
   authors:
   - Azevedo, João Pedro
   type: software
   description: 'ALORENZ: Stata module to produce Pen''s Parade, Lorenz and Generalised Lorenz curve'
-  url: https://github.com/jpazvd/alorenz
-  tags: []
-  github_repo: alorenz
-  id: azevedo-2020-alorenz
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2021-alorenz-fc14e6
   sources:
+  - stata
   - github
+  urls:
+    github: https://github.com/jpazvd/alorenz
 - title: GRQREG
   year: '2020'
   authors:
@@ -859,7 +890,7 @@ softwares:
   url: https://github.com/jpazvd/grqreg
   tags: []
   github_repo: grqreg
-  id: azevedo-2020-grqreg
+  id: azevedo-2020-grqreg-83810e
   sources:
   - github
 - title: DFL
@@ -871,19 +902,7 @@ softwares:
   url: https://github.com/jpazvd/dfl
   tags: []
   github_repo: dfl
-  id: azevedo-2020-dfl
-  sources:
-  - github
-- title: ADECOMP
-  year: '2020'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'ADECOMP: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure'
-  url: https://github.com/jpazvd/adecomp
-  tags: []
-  github_repo: adecomp
-  id: azevedo-2020-adecomp
+  id: azevedo-2020-dfl-0e99cb
   sources:
   - github
 - title: WBOPENDATA
@@ -895,9 +914,149 @@ softwares:
   url: https://github.com/jpazvd/wbopendata
   tags: []
   github_repo: wbopendata
-  id: azevedo-2020-wbopendata
+  id: azevedo-2020-wbopendata-6cc466
   sources:
   - github
+- title: ADECOMP
+  year: '2019'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'ADECOMP: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 13
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2019-adecomp-ca8655
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/adecomp
+- title: HOI
+  year: '2011'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to compute Human Opportunity Index
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 9
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2011-hoi-17bbf5
+  sources:
+  - stata
+- title: GRQREG
+  year: '2011'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to graph the coefficients of a quantile regression
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 24
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2011-grqreg-83810e
+  sources:
+  - stata
+- title: DFL
+  year: '2010'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 2
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2010-dfl-0e99cb
+  sources:
+  - stata
+- title: AINEQUAL
+  year: '2007'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to compute measures of inequality
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2007-ainequal-85a909
+  sources:
+  - stata
+- title: FHSAE
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to fit an area level Fay-Herriot model
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-fhsae-794f2a
+  sources:
+  - stata
+- title: DRDECOMP
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to estimate Shapley value of growth and distribution components of changes in poverty indicators
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-drdecomp-fae32a
+  sources:
+  - stata
+- title: SKDECOMP
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to estimate Shapley value of growth, price, and distribution components on changes in poverty
+    indicators
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-skdecomp-49899c
+  sources:
+  - stata
 journal_articles:
 - id: azevedo-2024-lancet-under5-mortality
   type: journal_article
@@ -907,13 +1066,14 @@ journal_articles:
   - Wilmoth, John
   - Fu, Haishan
   - You, Danzhen
-  year: '2024'
+  year: 2024
   title: 'Hard truths about under-5 mortality: call for urgent global action'
   journal: The Lancet
   doi: 10.1016/S0140-6736(24)00501-4
   tags:
   - child mortality
   - global health
+  - lancet
   peer_reviewed: true
   language: en
   sources:
@@ -925,35 +1085,14 @@ journal_articles:
   - You, Danzhen
   - Banerjee, Anshu
   - Azevedo, João Pedro
-  year: '2024'
+  year: 2024
   title: Global health estimates should be more responsive to country needs
   journal: The Lancet
   doi: 10.1016/S0140-6736(24)00463-X
   tags:
   - global health
   - health estimates
-  peer_reviewed: true
-  language: en
-  sources:
-  - manual
-- id: azevedo-2021-wbro-covid-simulations
-  type: journal_article
-  authors:
-  - Azevedo, João Pedro
-  - Hasan, Amer
-  - Goldemberg, Diana
-  - Geven, Koen
-  - Iqbal, Syedah Aroob
-  year: '2021'
-  title: 'Simulating the potential impacts of COVID-19 school closures on schooling and learning outcomes: A set of global estimates'
-  journal: The World Bank Research Observer
-  volume: '36'
-  issue: '1'
-  pages: 1-40
-  tags:
-  - covid-19
-  - education
-  - learning loss
+  - lancet
   peer_reviewed: true
   language: en
   sources:
@@ -967,34 +1106,15 @@ journal_articles:
   - Azevedo, João Pedro
   - Clarke, Michael
   - Devercelli, Ana
-  year: '2021'
-  title: 'Measuring Early Childhood Development Among 4-6 Year Olds: The Identification of Psychometrically Robust Items Across Diverse Contexts'
+  year: 2021
+  title: 'Measuring Early Childhood Development Among 4-6 Year Olds: The Identification of Psychometrically Robust Items Across
+    Diverse Contexts'
   journal: Frontiers in Public Health
   doi: 10.3389/fpubh.2021.569448
   tags:
   - early childhood
   - measurement
-  peer_reviewed: true
-  language: en
-  sources:
-  - manual
-- id: castaneda-2018-world-development-global-poor
-  type: journal_article
-  authors:
-  - Castañeda, Andrés
-  - Doan, Dung
-  - Newhouse, David
-  - Nguyen, Minh Cong
-  - Uematsu, Hiroki
-  - Azevedo, João Pedro
-  year: '2018'
-  title: A New Profile of the Global Poor
-  journal: World Development
-  volume: '101'
-  pages: 250-267
-  tags:
-  - poverty
-  - global
+  - child development
   peer_reviewed: true
   language: en
   sources:
@@ -1007,7 +1127,7 @@ journal_articles:
   - Rodríguez-Castelán, Carlos
   - Sanfelice, Viviane
   - Valderrama-González, Daniel
-  year: '2016'
+  year: 2016
   title: Weather Shocks and Health at Birth in Colombia
   journal: World Development
   volume: '82'
@@ -1016,6 +1136,7 @@ journal_articles:
   - health
   - weather
   - colombia
+  - birth outcomes
   peer_reviewed: true
   language: en
   sources:
@@ -1047,8 +1168,8 @@ journal_articles:
   - Azevedo, João Pedro
   - Batista, Jorge Chami
   year: 2002
-  title: 'El TLC y las Pérdidas de Mercado de Brasil en los Estados Unidos, 1992-2001'
-  title_en: 'NAFTA and Brazil''s Market Losses in the United States, 1992-2001'
+  title: El TLC y las Pérdidas de Mercado de Brasil en los Estados Unidos, 1992-2001
+  title_en: NAFTA and Brazil's Market Losses in the United States, 1992-2001
   journal: Revista de la CEPAL
   volume: '78'
   pages: 167-182
@@ -1071,28 +1192,10 @@ journal_articles:
   - Azevedo, João Pedro
   - Batista, Jorge Chami
   year: 1999
-  title: 'O Desempenho das Exportações Brasileiras no Comércio Internacional de Mercadorias: Uma Aplicação do Modelo Constant Market-Share'
+  title: 'O Desempenho das Exportações Brasileiras no Comércio Internacional de Mercadorias: Uma Aplicação do Modelo Constant
+    Market-Share'
   journal: Jornal dos Economistas
   issue: '127'
-  tags:
-  - trade
-  - exports
-  - brazil
-  peer_reviewed: false
-  language: pt
-  country: Brazil
-  sources:
-  - manual
-- id: azevedo-batista-1998-exports
-  type: journal_article
-  authors:
-  - Azevedo, João Pedro
-  - Batista, Jorge Chami
-  year: 1998
-  title: A Inserção das Exportações Brasileiras no Comércio Internacional de Mercadorias
-  journal: Boletim de Conjuntura
-  volume: '18'
-  issue: '3'
   tags:
   - trade
   - exports
@@ -1119,7 +1222,6 @@ books:
   - policy evaluation
   - uk
   - welfare
-  - youth
   - labor markets
   urls:
     pdf: https://webarchive.nationalarchives.gov.uk/ukgwa/+/http://www.dwp.gov.uk/asd/asd5/rports2005-2006/rrep356.pdf
@@ -1163,25 +1265,6 @@ books:
   - manual
   urls: {}
 book_chapters:
-- id: azevedo-2006-labour-slums
-  type: book_chapter
-  authors:
-  - Azevedo, João Pedro
-  year: 2006
-  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differentials in the Slums'
-  book: Informal Labour Markets and Development
-  editor: B. Guha-Khasnobis and R. Kanbur
-  publisher: Palgrave Macmillan
-  pages: 109-135
-  country: UK
-  language: en
-  tags:
-  - informal labor
-  - poverty
-  - brazil
-  - slums
-  sources:
-  - manual
 - id: azevedo-2008-canal-futura-unisinos
   type: book_chapter
   authors:
@@ -1264,12 +1347,34 @@ book_chapters:
   - poverty
   sources:
   - manual
+- id: azevedo-2006-labour-slums
+  type: book_chapter
+  authors:
+  - Azevedo, João Pedro
+  year: 2006
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differentials
+    in the Slums'
+  book: Informal Labour Markets and Development
+  editor: B. Guha-Khasnobis and R. Kanbur
+  publisher: Palgrave Macmillan
+  pages: 109-135
+  country: UK
+  language: en
+  tags:
+  - labor markets
+  - inequality
+  - slums
+  - brazil
+  sources:
+  - manual
+  urls: {}
 - id: azevedo-2003-lastres-mpe-uk
   type: book_chapter
   authors:
   - Azevedo, João Pedro
   year: 2003
-  title: 'Políticas Públicas de Apoio às Micro e Pequenas Empresas no Reino Unido: Uma Avaliação das Experiências nos Anos 90'
+  title: 'Políticas Públicas de Apoio às Micro e Pequenas Empresas no Reino Unido: Uma Avaliação das Experiências nos Anos
+    90'
   book: 'Pequena Empresa: Cooperação e Desenvolvimento'
   editor: Lastres, H., Cassiolato, J. E., and Maciel, M. L.
   publisher: Relume Dumará
@@ -1304,22 +1409,6 @@ book_chapters:
   sources:
   - manual
 conference_papers:
-- id: azevedo-2005-lacaea-paris
-  type: conference_paper
-  authors:
-  - Azevedo, João Pedro
-  year: 2005
-  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Earning Differential in the Slums'
-  venue: Latin American and Caribbean Economic Association (LACAEA) Annual Meeting
-  location: Paris, France
-  date: 2005-10
-  tags:
-  - labor markets
-  - inequality
-  - slums
-  - brazil
-  sources:
-  - manual
 - id: azevedo-2005-anpec-natal
   type: conference_paper
   authors:
@@ -1341,7 +1430,8 @@ conference_papers:
   authors:
   - Azevedo, João Pedro
   year: 2004
-  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
+  title: 'An Investigation of the Labour Market Earnings in Deprived Areas: Evaluating the Sources of Wage Inequality Between
+    Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
   venue: 'Unlocking Human Potential: Linking the Informal and Formal Sectors'
   location: Helsinki, Finland
   date: 2004-06
@@ -1352,21 +1442,7 @@ conference_papers:
   - brazil
   sources:
   - manual
-- id: azevedo-2004-eale-lisboa
-  type: conference_paper
-  authors:
-  - Azevedo, João Pedro
-  year: 2004
-  title: 'An Investigation of the Labour Market Earnings in Poor Areas: Evaluating the Sources of Wage Inequality Between Formal and Informal Sector Workers in the Slums of Rio de Janeiro'
-  venue: European Association of Labour Economists (EALE)
-  location: Lisboa, Portugal
-  date: 2004-09
-  tags:
-  - labor markets
-  - informal sector
-  - slums
-  sources:
-  - manual
+  urls: {}
 - id: azevedo-2004-anpec-joao-pessoa
   type: conference_paper
   authors:
@@ -1435,7 +1511,8 @@ conference_papers:
   - Azevedo, João Pedro
   - Batista, Jorge Chami
   year: 2000
-  title: 'O Desempenho das Exportações Brasileiras para os Estados Unidos: O Papel do NAFTA e da Taxa de Câmbio sobre a Competitividade Brasileira'
+  title: 'O Desempenho das Exportações Brasileiras para os Estados Unidos: O Papel do NAFTA e da Taxa de Câmbio sobre a Competitividade
+    Brasileira'
   venue: 28º Encontro Nacional de Economia (ANPEC)
   location: Campinas, Brazil
   date: 2000-12

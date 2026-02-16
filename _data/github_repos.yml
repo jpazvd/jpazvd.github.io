@@ -2,7 +2,7 @@ metadata:
   user: jpazvd
   source: GitHub API
   source_url: https://github.com/jpazvd
-  last_updated: '2025-12-25T00:23:38.767474'
+  last_updated: '2026-02-16T06:27:03.685216'
   total_repositories: 26
   note: This is an auto-generated satellite database. Do not edit manually.
 repositories:
@@ -16,7 +16,7 @@ repositories:
   watchers: 0
   topics: []
   created_at: '2025-09-08T00:43:39Z'
-  updated_at: '2025-12-20T02:51:56Z'
+  updated_at: '2026-01-30T03:13:28Z'
   homepage: null
   open_issues: 0
   type: software
@@ -431,9 +431,9 @@ repositories:
   description: 'WBOPENDATA: Stata module to access World Bank databases'
   url: https://github.com/jpazvd/wbopendata
   language: Stata
-  stars: 42
+  stars: 43
   forks: 14
-  watchers: 42
+  watchers: 43
   topics:
   - api
   - api-wrapper
@@ -445,7 +445,7 @@ repositories:
   - sdgs
   - stata
   created_at: '2018-11-27T21:59:59Z'
-  updated_at: '2025-12-23T11:47:16Z'
+  updated_at: '2026-02-05T02:20:08Z'
   homepage: https://ideas.repec.org/c/boc/bocode/s457234.html
   open_issues: 2
   type: software

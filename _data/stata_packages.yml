@@ -1,0 +1,192 @@
+_metadata:
+  author: João Pedro Azevedo
+  source: IDEAS/RePEc
+  source_url: https://ideas.repec.org/e/pwa88.html
+  last_updated: '2026-02-16T06:27:02.424770+00:00'
+  total_packages: 22
+  note: Auto-generated satellite database. Do not edit manually.
+groupfunction:
+  title: GROUPFUNCTION
+  short_description: Stata module to replace several basic collapse functions
+  url: https://ideas.repec.org/c/boc/bocode/s458475.html
+  source: IDEAS/RePEc
+  year: '2021'
+  authors:
+  - Minh Cong Nguyen
+  - Joao Pedro  Azevedo
+sae:
+  title: SAE
+  short_description: Stata module to provide commands and mata functions devoted to unit level small area estimation
+  url: https://ideas.repec.org/c/boc/bocode/s458525.html
+  source: IDEAS/RePEc
+  year: '2018'
+  authors:
+  - Minh Cong Nguyen
+  - Joao Pedro  Azevedo
+fhsae:
+  title: FHSAE
+  short_description: Stata module to fit an area level Fay-Herriot model
+  url: https://ideas.repec.org/c/boc/bocode/s458495.html
+  source: IDEAS/RePEc
+  citations: 1
+  authors:
+  - Minh Cong Nguyen
+  - Joao Pedro  Azevedo
+adecomp:
+  title: ADECOMP
+  short_description: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure
+  url: https://ideas.repec.org/c/boc/bocode/s457562.html
+  source: IDEAS/RePEc
+  year: '2019'
+  citations: 13
+  authors:
+  - Minh Cong Nguyen
+  - Joao Pedro  Azevedo
+mpovline:
+  title: MPOVLINE
+  short_description: Stata module to calculate FGT0, FGT1 and FGT2 by intervals of multiple thresholds
+  url: https://ideas.repec.org/c/boc/bocode/s457565.html
+  source: IDEAS/RePEc
+  authors:
+  - Joao Pedro  Azevedo
+drdecomp:
+  title: DRDECOMP
+  short_description: Stata module to estimate Shapley value of growth and distribution components of changes in poverty indicators
+  url: https://ideas.repec.org/c/boc/bocode/s457563.html
+  source: IDEAS/RePEc
+  citations: 1
+  authors:
+  - Joao Pedro  Azevedo
+skdecomp:
+  title: SKDECOMP
+  short_description: Stata module to estimate Shapley value of growth, price, and distribution components on changes in poverty
+    indicators
+  url: https://ideas.repec.org/c/boc/bocode/s457564.html
+  source: IDEAS/RePEc
+  citations: 1
+  authors:
+  - Joao Pedro  Azevedo
+wbopendata:
+  title: WBOPENDATA
+  short_description: Stata module to access World Bank databases
+  url: https://ideas.repec.org/c/boc/bocode/s457234.html
+  source: IDEAS/RePEc
+  year: '2026'
+  citations: 15
+  authors:
+  - Joao Pedro  Azevedo
+spike:
+  title: SPIKE
+  short_description: Stata module to allow for a zero willingness to pay
+  url: https://ideas.repec.org/c/boc/bocode/s457126.html
+  source: IDEAS/RePEc
+  authors:
+  - Joao Pedro  Azevedo
+turnbull:
+  title: TURNBULL
+  short_description: Stata module to estimate the Turnbull empirical distribution estimator of willingness to pay
+  url: https://ideas.repec.org/c/boc/bocode/s457125.html
+  source: IDEAS/RePEc
+  authors:
+  - Joao Pedro  Azevedo
+hoi:
+  title: HOI
+  short_description: Stata module to compute Human Opportunity Index
+  url: https://ideas.repec.org/c/boc/bocode/s457191.html
+  source: IDEAS/RePEc
+  year: '2011'
+  citations: 9
+  authors:
+  - Joao Pedro  Azevedo
+mol:
+  title: MOL
+  short_description: Stata module to evaluate literacy level
+  url: https://ideas.repec.org/c/boc/bocode/s456987.html
+  source: IDEAS/RePEc
+  authors:
+  - Joao Pedro  Azevedo
+alorenz:
+  title: ALORENZ
+  short_description: Stata module to produce Pen's Parade, Lorenz and Generalised Lorenz curve
+  url: https://ideas.repec.org/c/boc/bocode/s456749.html
+  source: IDEAS/RePEc
+  year: '2021'
+  citations: 1
+  authors:
+  - Joao Pedro  Azevedo
+isopoverty:
+  title: ISOPOVERTY
+  short_description: Stata module to generate data for Inequality-Poverty and Iso-Poverty curves
+  url: https://ideas.repec.org/c/boc/bocode/s456752.html
+  source: IDEAS/RePEc
+  year: '2014'
+  authors:
+  - Joao Pedro  Azevedo
+ainequal:
+  title: AINEQUAL
+  short_description: Stata module to compute measures of inequality
+  url: https://ideas.repec.org/c/boc/bocode/s456748.html
+  source: IDEAS/RePEc
+  year: '2007'
+  citations: 1
+  authors:
+  - Joao Pedro  Azevedo
+apoverty:
+  title: APOVERTY
+  short_description: Stata module to compute poverty measures
+  url: https://ideas.repec.org/c/boc/bocode/s456750.html
+  source: IDEAS/RePEc
+  year: '2007'
+  authors:
+  - Joao Pedro  Azevedo
+changemean:
+  title: CHANGEMEAN
+  short_description: Stata module to compute Income and Inequality Contribution on Poverty Variation
+  url: https://ideas.repec.org/c/boc/bocode/s456751.html
+  source: IDEAS/RePEc
+  year: '2020'
+  authors:
+  - Joao Pedro  Azevedo
+dfl:
+  title: DFL
+  short_description: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density
+  url: https://ideas.repec.org/c/boc/bocode/s449001.html
+  source: IDEAS/RePEc
+  year: '2010'
+  citations: 2
+  authors:
+  - Joao Pedro  Azevedo
+grqreg:
+  title: GRQREG
+  short_description: Stata module to graph the coefficients of a quantile regression
+  url: https://ideas.repec.org/c/boc/bocode/s437001.html
+  source: IDEAS/RePEc
+  year: '2011'
+  citations: 24
+  authors:
+  - Joao Pedro  Azevedo
+factortest:
+  title: FACTORTEST
+  short_description: Stata module to perform tests for appropriateness of factor analysis
+  url: https://ideas.repec.org/c/boc/bocode/s436001.html
+  source: IDEAS/RePEc
+  year: '2006'
+  authors:
+  - Joao Pedro  Azevedo
+crtest:
+  title: CRTEST
+  short_description: Stata module to perform Cramer-Ridder Test for pooling states in a Multinomial logit
+  url: https://ideas.repec.org/c/boc/bocode/s433202.html
+  source: IDEAS/RePEc
+  year: '2003'
+  authors:
+  - Joao Pedro  Azevedo
+outtable:
+  title: OUTTABLE
+  short_description: Stata module to write matrix to LaTeX table
+  url: https://ideas.repec.org/c/boc/bocode/s419501.html
+  source: IDEAS/RePEc
+  year: '2025'
+  authors:
+  - Christopher F Baum
+  - Joao Pedro  Azevedo

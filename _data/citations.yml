@@ -1,33 +1,34 @@
 google_scholar:
   profile_url: https://scholar.google.com/citations?user=lTKXA78AAAAJ
-  total_citations: 5555
-  h_index: 30
-  i10_index: 62
+  total_citations: 5533
+  h_index: 28
+  i10_index: 60
   citations_5yr: 3691
   h_index_5yr: 23
   i10_index_5yr: 38
-  last_updated: '2025-12-10'
+  last_updated: '2026-02-16'
   citations_by_year:
-    2006: 16
+    2006: 15
     2007: 32
-    2008: 40
-    2009: 47
-    2010: 78
-    2011: 62
-    2012: 79
-    2013: 103
-    2014: 137
-    2015: 189
-    2016: 215
-    2017: 215
-    2018: 299
-    2019: 247
-    2020: 338
-    2021: 619
-    2022: 800
-    2023: 753
-    2024: 631
-    2025: 510
+    2008: 39
+    2009: 53
+    2010: 79
+    2011: 56
+    2012: 70
+    2013: 102
+    2014: 141
+    2015: 188
+    2016: 210
+    2017: 212
+    2018: 289
+    2019: 235
+    2020: 321
+    2021: 609
+    2022: 776
+    2023: 727
+    2024: 639
+    2025: 555
+    2026: 50
   publication_count: 20
 repec:
   profile_url: https://ideas.repec.org/e/pwa88.html
@@ -35,37 +36,37 @@ repec:
   working_papers:
     count: 105
     downloads_12mo: 124
-    downloads_total: 4833
-    abstract_views_12mo: 569
-    abstract_views_total: 15903
+    downloads_total: 4857
+    abstract_views_12mo: 833
+    abstract_views_total: 16242
   journal_articles:
     count: 10
-    downloads_12mo: 10
-    downloads_total: 413
-    abstract_views_12mo: 79
-    abstract_views_total: 1558
+    downloads_12mo: 9
+    downloads_total: 414
+    abstract_views_12mo: 123
+    abstract_views_total: 1619
   books:
     count: 5
     downloads_12mo: 8
-    downloads_total: 81
-    abstract_views_12mo: 31
-    abstract_views_total: 309
+    downloads_total: 82
+    abstract_views_12mo: 52
+    abstract_views_total: 331
   chapters:
     count: 24
-    downloads_12mo: 4
+    downloads_12mo: 3
     downloads_total: 52
-    abstract_views_12mo: 11
-    abstract_views_total: 386
+    abstract_views_12mo: 13
+    abstract_views_total: 389
   software:
     count: 22
-    downloads_12mo: 444
-    downloads_total: 26886
-    abstract_views_12mo: 1822
-    abstract_views_total: 111699
-  total_downloads_12mo: 590
-  total_downloads_all_time: 32265
-  total_abstract_views_12mo: 2512
-  total_abstract_views_all_time: 129855
+    downloads_12mo: 383
+    downloads_total: 26914
+    abstract_views_12mo: 1751
+    abstract_views_total: 111997
+  total_downloads_12mo: 527
+  total_downloads_all_time: 32319
+  total_abstract_views_12mo: 2772
+  total_abstract_views_all_time: 130578
   ranking_note: Top 5% of authors by downloads and abstract views (12 months)
   rankings:
     software:
@@ -73,8 +74,8 @@ repec:
       global:
         rank_total_downloads: 19
         rank_total_abstract_views: 17
-        rank_12mo_downloads: 27
-        rank_12mo_abstract_views: 23
+        rank_12mo_downloads: 31
+        rank_12mo_abstract_views: 25
         url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=all
         url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=all
         url_12mo_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=all
@@ -83,7 +84,7 @@ repec:
         rank_total_downloads: 6
         rank_total_abstract_views: 6
         rank_12mo_downloads: 10
-        rank_12mo_abstract_views: 8
+        rank_12mo_abstract_views: 9
         url_total_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=td&item=software&country=us
         url_total_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ta&item=software&country=us
         url_12mo_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=software&country=us
@@ -109,7 +110,7 @@ repec:
         url_12mo_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=us
         url_12mo_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=la&item=all&country=us
   total_works: 166
-  last_updated: '2025-12-16'
+  last_updated: '2026-02-16'
 orcid:
   profile_url: https://orcid.org/0000-0002-3844-215X
   orcid_id: 0000-0002-3844-215X
@@ -123,7 +124,7 @@ world_bank_okr:
   publication_count: 34
   profile_linked_count: 29
   search_count: 34
-  last_updated: '2025-12-11'
+  last_updated: '2026-02-16'
   by_type:
     working_paper: 16
     journal_article: 2
