@@ -54,6 +54,7 @@ journal_articles:
     volume: "36"
     issue: "1"
     pages: "1-40"
+    doi: "10.1093/wbro/lkab003"
     tags: ["covid-19", "education", "learning loss", "simulation"]
     peer_reviewed: true
     language: "en"
@@ -77,6 +78,7 @@ journal_articles:
     journal: "World Development"
     volume: "101"
     pages: "250-267"
+    doi: "10.1016/j.worlddev.2017.08.002"
     tags: ["poverty", "global", "measurement"]
     peer_reviewed: true
     language: "en"
@@ -89,6 +91,7 @@ journal_articles:
     journal: "World Development"
     volume: "82"
     pages: "69-82"
+    doi: "10.1016/j.worlddev.2016.01.015"
     tags: ["health", "weather", "colombia", "birth outcomes"]
     peer_reviewed: true
     language: "en"

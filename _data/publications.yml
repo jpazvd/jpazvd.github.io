@@ -1,5 +1,5 @@
 _metadata:
-  generated: '2026-02-16T14:37:57.854270'
+  generated: '2026-02-17T10:53:27.712855'
   generator: scripts/build_publications_master.py
   warning: DO NOT EDIT MANUALLY - This file is auto-generated from satellite databases
   sources:
@@ -835,7 +835,7 @@ journal_articles:
   type: journal_article
   url: https://openknowledge.worldbank.org/handle/10986/40037
   handle: 10986/40037
-  doi: 10.1596/1813-9450-9284
+  doi: 10.1093/wbro/lkab003
   abstract: This paper presents simulations of the potential effect of COVID-19-related school closures on schooling and learning
     outcomes. It considers four scenarios—varying in both the duration of school closures and the effectiveness of any mitigation
     strategies being deployed by governments. Using data on 174 countries, the analysis finds that the global level of schooling
@@ -894,7 +894,7 @@ journal_articles:
   type: journal_article
   url: https://openknowledge.worldbank.org/handle/10986/29225
   handle: 10986/29225
-  doi: 10.1596/29225
+  doi: 10.1016/j.worlddev.2017.08.002
   abstract: This paper presents a new demographic profile of extreme and moderate poverty, defined as those living on less
     than $1.90 and between $1.90 and $3.10 per day in 2013, based on household survey data from 89 developing countries. The
     face of poverty is primarily rural and young; 80% of the extreme poor and 75% of the moderate poor live in rural areas.
@@ -928,6 +928,7 @@ journal_articles:
   journal: World Development
   volume: '82'
   pages: 69-82
+  doi: 10.1016/j.worlddev.2016.01.015
   tags:
   - health
   - weather
