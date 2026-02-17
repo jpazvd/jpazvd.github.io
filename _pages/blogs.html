@@ -26,7 +26,7 @@ description: "Short articles, commentaries and blog posts by João Pedro Azevedo
   {% assign linkedin_posts = "" | split: "," %}
 {% endif %}
 
-{% assign wb_count = site.data.worldbank_blogs_full.total_posts | default: site.data.citations.world_bank_blogs.english_posts | default: 24 %}
+{% assign wb_count = site.data.worldbank_blogs_full.metadata.total_posts | default: site.data.citations.world_bank_blogs.english_posts | default: 24 %}
 {% assign other_count = other_posts.size | default: 0 %}
 {% assign linkedin_count = linkedin_posts.size | default: 0 %}
 {% assign total_count = wb_count | plus: other_count | plus: linkedin_count %}
