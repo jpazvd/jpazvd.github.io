@@ -139,11 +139,11 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
   <h3 class="jp-rankings__title">RePEc Rankings</h3>
   <div class="jp-rankings-row">
     <div class="jp-rankings-card">
-      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}</div>
+      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software.global.rank_total_downloads | default: '19' }}</div>
       <div class="jp-muted">Software Downloads<br>(Global)</div>
     </div>
     <div class="jp-rankings-card">
-      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software_us.rank_total_downloads | default: '6' }}</div>
+      <div class="jp-rankings-card__value">#{{ site.data.citations.repec.rankings.software.us.rank_total_downloads | default: '6' }}</div>
       <div class="jp-muted">Software Downloads<br>(US)</div>
     </div>
     <div class="jp-rankings-card">
