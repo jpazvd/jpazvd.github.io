@@ -1,12 +1,12 @@
 google_scholar:
   profile_url: https://scholar.google.com/citations?user=lTKXA78AAAAJ
-  total_citations: 5533
+  total_citations: 5537
   h_index: 28
   i10_index: 60
   citations_5yr: 3691
   h_index_5yr: 23
   i10_index_5yr: 38
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-17'
   citations_by_year:
     2006: 15
     2007: 32
@@ -17,18 +17,18 @@ google_scholar:
     2012: 70
     2013: 102
     2014: 141
-    2015: 188
+    2015: 189
     2016: 210
     2017: 212
     2018: 289
     2019: 235
-    2020: 321
+    2020: 322
     2021: 609
     2022: 776
-    2023: 727
+    2023: 728
     2024: 639
-    2025: 555
-    2026: 50
+    2025: 556
+    2026: 51
   publication_count: 20
 repec:
   profile_url: https://ideas.repec.org/e/pwa88.html
@@ -110,7 +110,7 @@ repec:
         url_12mo_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=us
         url_12mo_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=la&item=all&country=us
   total_works: 166
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-17'
 orcid:
   profile_url: https://orcid.org/0000-0002-3844-215X
   orcid_id: 0000-0002-3844-215X
@@ -124,7 +124,7 @@ world_bank_okr:
   publication_count: 34
   profile_linked_count: 29
   search_count: 34
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-17'
   by_type:
     working_paper: 16
     journal_article: 2
@@ -175,7 +175,7 @@ world_bank_blogs:
   english_posts: 24
   translations: 5
   source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
-  last_updated: '2025-12-11'
+  last_updated: '2026-02-17'
   timeline:
     first_year: 2012
     latest_year: 2023
@@ -188,7 +188,8 @@ world_bank_blogs:
     Latin America and Caribbean: 2
 all_blogs:
   post_count: 33
-  source_note: Combined total across World Bank Blogs + other organizations listed in _data/other_blogs.yml
+  source_note: Combined total across World Bank Blogs + other organizations listed
+    in _data/other_blogs.yml
   last_updated: '2025-12-12'
   timeline:
     first_year: 2012

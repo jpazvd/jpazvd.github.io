@@ -8,17 +8,17 @@ window.filterTeaching = function(tag, button) {
   if (button) {
     button.classList.add('active');
   }
-  
+
   // Get all cards
   var cards = document.querySelectorAll('.teaching-card');
   var visibleCount = 0;
-  
+
   // Show/hide cards based on tag
   for (var j = 0; j < cards.length; j++) {
     var card = cards[j];
     var cardTags = card.getAttribute('data-tags') || '';
     var tagArray = cardTags.split(',');
-    
+
     var isVisible = (tag === 'all');
     if (!isVisible) {
       for (var k = 0; k < tagArray.length; k++) {
@@ -28,15 +28,22 @@ window.filterTeaching = function(tag, button) {
     card.style.display = isVisible ? 'block' : 'none';
     if (isVisible) { visibleCount++; }
   }
-  
+
   // Update visible count
   var allCountEl = document.getElementById('all-count');
   if (allCountEl) {
     allCountEl.textContent = visibleCount;
   }
-  
+
   // Update year divider visibility
   updateYearDividers();
+
+  // Update URL hash for deep linking
+  if (tag !== 'all') {
+    window.history.replaceState(null, '', '#' + tag);
+  } else {
+    window.history.replaceState(null, '', window.location.pathname);
+  }
 };
 
 function updateYearDividers() {
@@ -49,8 +56,7 @@ function updateYearDividers() {
     for (var j = 0; j < cards.length; j++) {
       var card = cards[j];
       if (card.style.display === 'none') { continue; }
-      var yearsBadge = card.querySelector('.teaching-years');
-      if (yearsBadge && yearsBadge.textContent.indexOf(year) !== -1) {
+      if (card.getAttribute('data-year') === year) {
         hasVisible = true;
         break;
       }
@@ -59,8 +65,15 @@ function updateYearDividers() {
   }
 }
 
-// Initialize on page load
+// Handle hash-based deep links and initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
   updateYearDividers();
-});
 
+  var hash = window.location.hash.slice(1);
+  if (hash) {
+    var tagButton = document.querySelector('.tag-filter[data-tag="' + hash + '"]');
+    if (tagButton) {
+      window.filterTeaching(hash, tagButton);
+    }
+  }
+});

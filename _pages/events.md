@@ -29,7 +29,7 @@ description: "Speaking engagements, conference presentations, and panel discussi
     <div class="year-divider" data-year="{{ current_year }}">{{ current_year }}</div>
   {% endif %}
   
-  <div class="event-card" data-tags="{{ event.tags | join: ',' }}">
+  <div class="event-card" data-tags="{{ event.tags | join: ',' }}" data-year="{{ event.year }}">
     <div class="event-header">
       <div>
         <p class="event-title">

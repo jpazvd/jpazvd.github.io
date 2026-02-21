@@ -2,7 +2,7 @@
   "author": "João Pedro Azevedo",
   "orcid": "0000-0002-3844-215X",
   "summary": {
-    "total_citations": 2461,
+    "total_citations": 2462,
     "h_index": 20,
     "i10_index": null
   },
@@ -71,7 +71,7 @@
       "year": 2012,
       "works_count": 14,
       "oa_works_count": 3,
-      "cited_by_count": 192
+      "cited_by_count": 193
     },
     {
       "year": 2013,
@@ -147,5 +147,5 @@
     }
   ],
   "source": "openalex",
-  "fetched_at": "2026-02-16T06:25:55.555831+00:00"
+  "fetched_at": "2026-02-17T19:06:07.879759+00:00"
 }

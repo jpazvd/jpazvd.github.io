@@ -3,9 +3,10 @@ metadata:
   source: World Bank Blogs
   source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
   api_url: https://webapi.worldbank.org/aemsite/blogs/global/search
-  last_updated: '2025-12-16'
-  total_posts: 24
-  note: 5 translations (PT, ZH, RU) are linked within their English parent posts rather than listed separately
+  last_updated: '2026-02-17'
+  total_posts: 29
+  english_posts: 24
+  translations: 5
   includes_content: true
 posts:
 - title: Why hasn’t the pandemic sparked more concern for learning losses in Latin America?  The perils of an invisible crisis
@@ -652,10 +653,6 @@ posts:
   year: 2021
   channel: Education for Global Development
   language: en
-  translations:
-  - language: pt
-    title: 'Múltiplas exposições a avaliações de aprendizagem: um mosaico fotográfico do Brasil'
-    url: https://blogs.worldbank.org/pt/education/multiplas-exposicoes-avaliacoes-de-aprendizagem-um-mosaico-fotografico-do-brasil
   description: Measuring learning is a key part of evidence-based education policy, and the choices of measures matter.
   authors:
   - João Pedro Azevedo
@@ -742,6 +739,87 @@ posts:
     alt: Diana Goldemberg
   - src: https://s7d1.scene7.com/is/image/wbcollab/Andre_Lou?qlt=90&fmt=webp&resMode=sharp2
     alt: Andre Loureiro
+- title: 'Múltiplas exposições a avaliações de aprendizagem: um mosaico fotográfico do Brasil'
+  url: https://blogs.worldbank.org/pt/education/multiplas-exposicoes-avaliacoes-de-aprendizagem-um-mosaico-fotografico-do-brasil
+  date: '2021-01-04'
+  year: 2021
+  channel: Education for Global Development
+  language: pt
+  description: A mensuração da aprendizagem é parte fundamental de uma política educacional baseada em evidências. Neste contexto, as escolhas de medidas importam. E muito.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  - Andre Loureiro
+  topics:
+  - Education
+  content: 'O Objetivo de Desenvolvimento Sustentável 4 (ODS 4), estabelecido no contexto da Agenda 2030, define  como meta assegurar uma educação de qualidade inclusiva e equitativa e promover oportunidades de aprendizagem ao longo da vida para todos. Para monitorar o progresso e cumprimento deste compromisso, é essencial fazer uso de medidas precisas dos resultados de aprendizagem. Graças àAliança Global para Monitorar Aprendizado(GAML, em inglês), foi construído um consenso sobre os padrões mínimos internacionais para medir o aprendizado em diferentes séries e disciplinas, com valores correspondentes nas escalas de avaliações de aprendizagem nacionais e internacionais.
+
+
+    Alguns países como a China, Etiópia, Índia, Paquistão e Uganda usam atualmente suas avaliações nacionais para reportar seus indicadores dos ODS 4. Outros países, como o Brasil, reportam seus indicadores ODS usando exclusivamente avaliações internacionais ou regionais; mais precisamente, as avaliaçõesLLECE, para anos iniciais do ensino fundamental, ePISA, para os anos finais do sistema educacional. Além disso, o Brasil realiza a cada dois anos uma avaliação nacional censitária - a Prova Brasil - e usa a pontuação média para calcular e monitorar sistematicamente seu Índice de Qualidade da Educação Básica (IDEB).
+
+
+    A coexistência de avaliações nacionais e internacionais e de diferentes métricas para acompanhar o desempenho de um mesmo sistema educacional suscita as três questões abordadas neste blog: (1) Como os resultados de aprendizagem se comparam entre avaliações? (2) Como as avaliações nacionais e internacionais podem ser alinhadas? (3) Qual a importância da escolha do indicador de resultados de aprendizagem?
+
+
+    1.    Comparando avaliações de aprendizagem: contrastando fotografias nacionais e internacionaisComparar duas avaliações de aprendizagem é um desafio, mesmo que elas pretendam medir o mesmo conteúdo e a mesma população estudantil. Na psicometria, este desafio é conhecido como linking. É como comparar duas fotos da mesma floresta, tiradas com dias de intervalo, usando diferentes lentes, velocidade, luz e sensibilidade de filme. O tempo da foto reflete os alunos sendo avaliados em diferentes séries ou momentos do ano letivo. A amostragem em cada avaliação, semelhante à sensibilidade do filme, pode dar uma imagem mais ou menos precisa da aprendizagem e limitar nossa capacidade de ampliar a imagem. Finalmente, cada avaliação tem sua própria escala para medir a proficiência; assim como uma lente grande angular captura um amplo escopo, uma lente teleobjetiva permite ao fotógrafo registrar  uma área reduzida em detalhes. Todos estes fatores combinados podem criar composições contrastantes ao
+    destacar aspectos distintos de um mesmo assunto.
+
+
+    Vamos usar esta analogia fotográfica para comparar os resultados do aprendizado em português e matemática no Brasil utilizando como base avaliações nacionais e internacionais. Para tanto, é preciso definir as premissas utilizadas na análise fotográfica. Primeiramente, para minimizar a diferença no momento das fotos, selecionamos a combinação mais próxima de anos e séries: no final do ensino primário, comparamos o resultado da Prova Brasil – reportado na escala SAEB – dos alunos do quinto ano com o resultado da LLECE dos alunos do sexto ano, ambos em 2013. No final do ensino fundamental, analisamos os resultados do PISA aplicado a estudantes de 15 anos e os contrastamos com a avaliação Prova Brasil aplicada aos alunos do nono ano, ambos em 2015. Vale notar que as  resoluções (ou sensibilidade da película fotográfica) adotadas diferem significativamente: LLECE e PISA são baseados em amostras e avaliam alguns milhares de alunos cada, enquanto a Prova Brasil testa cerca de 2 milhões de alunos
+    em cada série. Finalmente, para avaliar o alcance dos limites mínimos de proficiência nas diferentes avaliações, utilizamos o parâmetro definido pelo GAML no caso do LLECE e PISA ao passo que para a Prova Brasil usamos as pontuações mínimas (na escala SAEB) propostas porespecialistas convocados pela ONG Todos pela Educação em 2006.
+
+
+    Como se comparam essas fotos da aprendizagem no Brasil? A figura 1 ilustra nossas conclusões. Cada barra representa a proporção de alunos por nível. As barras de cor laranja representam a proporção dos alunos abaixo da proficiência mínima, enquanto as barras em azul representam a proporção daqueles acima do nível mínimo de proficiência ; cada tonalidade corresponde a um nível de proficiência definido por pontos de corte nas respectivas escalas. Observamos que a proporção de alunos abaixo do nível mínimo de proficiência na avaliação nacional é consistentemente maior do que a proporção encontrada em avaliações internacionais. A princípio, tal discrepância poderia ser explicada  por três fatores: (i) os alunos são testados em séries anteriores no exame nacional; (ii) o nível de aspiração nacional pode ser mais ambicioso que o internacional; ou, (iii) as escalas não são estritamente comparáveis.
+
+
+    Figura 1 - Proporção de alunos em cada nível de proficiência, por disciplina nas avaliações nacionais e internacionais
+
+
+    Nota: para obter detalhes sobre os níveis de proficiência de cada avaliação disponível, consulteLLECE,SAEB,PISA2.    Alinhando escalas de avaliações nacionais e internacionaisUma questão central inerente ao exercício de comparação entre diferentes avaliações de aprendizagem, sejam elas nacionais ou internacionais, se refere à comparabilidade das escalas usadas para gerar indicadores. Neste contexto, uma das maiores contribuições da GAML foi mudar o foco da discussão sobre métricas dos indicadores, abandonando a ambição de uma escala comum - o que exigiria que todos os países aplicassem a mesma avaliação de forma a gerar resultados comparáveis - e introduzindo umaMatriz Global de Proficiência. Essa Matriz descreve ascompetênciasque os estudantes devem dominar para serem considerados proficientes em cada etapa. O seu uso possibilita comparar avaliações em diferentes países, sem exigir o uso de uma escala única. Embora menos precisa, esta abordagem possui a vantagem de utilizar sistemas
+    de avaliação de aprendizagem já existentes e pode aumentar a compreensão e a apropriação dos resultados da avaliação pelos países, facilitando o alcance do ODS4. Com base nessa Matriz, os especialistas do GAML mapearam os níveis de proficiência de várias avaliações de aprendizagem internacionais ( por exemplo, PISA e PIRLS) e regionais (por exemplo, LLECE, SAQMEC, e PASEC) em um continuum e identificaram os níveis mínimos de proficiência a serem atingidos em três momentos do ciclo educacional: inicio do primário (entre 1.o e 3.o ano), final do primário (de 4.o a 6.o ano), e início do secundário (de 7.p a 9.o ano).
+
+
+    Para implementar esse mapeamento entre os níveis de proficiência de avaliações nacionais e os níveis de proficiência mínimos usados pelo ODS4 e definidos pela referida Matriz, é fundamental ir além de uma triangulação empírica, como feita neste blog (Figura 1). Aúltima conferência do GAML, realizada em outubro de 2020, discutiu algumas técnicas para realizar esse exercício de mapeamento. São elas:
+
+
+    1.    Incluiritens globaisnas avaliações nacionais de aprendizagem que poderão ser usados para ‘linkar’  psicometricamente as duas escalas de proficiência a serem comparadas (ao nível nacional e a definida no âmbito da Matriz Global de Proficiência);2.    Adotar aabordagem da Pedra Rosetta da UIS/IEA, segundo a qual duas avaliações de aprendizagem com diferentes escalas – uma nacional e outra internacional - são aplicadas a um mesmo grupo de estudantes gerando um fator de conversão que pode ser utilizado para traduzir resultados dos indicadores. Esta abordagem vem sendo testada peloLaboratorio da UNESCO/UIS/IEAna Colômbia e Guatemala para ‘linkar’ a escala do LLECE com a escala do PIRLS; ou3.    Realizar“linkagem” por moderação social, onde especialistas da avaliação nacional juntamente com especialistas internacionais mapeiam as pontuações mínimas que demonstram o domínio da competência avaliada nas diferentes escalas (atualização da “linkagem” apresentada na 7ª reunião do GAML).
+
+
+    3. Escolhendo o indicador de resultados de aprendizagemO Brasil possui um sólido sistema de monitoramento educacional: a Prova Brasil permite avaliar a aprendizagem dos alunos, enquanto o Censo Escolar por aluno permite acompanhar as trajetórias de escolarização individualizadas.
+
+
+    Além desses instrumentos de coleta de dados, o país adotou o IDEB como uma forma simples de comunicar o seu monitoramento educacional, tanto em termos de escolarização quanto de aprendizado. Ele é um indicador multidimensional, composto pelo produto de dois termos: (i) a média das notas dos testes de português e matemática no final de cada ciclo educacional; e (ii) a média harmônica da taxa de aprovação de todos os anos do respectivo ciclo educacional. O IDEB é amplamente divulgado pela mídia nacional e constitui a principal métrica de referência do desempenho de sistemas de educação municipais e estaduais no Brasil.
+
+
+    Apesar do uso disseminado e metodologia robusta, o IDEB possui alguns ‘pontos cegos’. O primeiro deles se refere ao uso da pontuação média do teste, o que pode mascarar importantes aspectos referentes a distribuição da medida de aprendizagem na população de alunos. Como ilustra a Figura 2, a nota média e a proporção de alunos abaixo do nível mínimo de proficiência não se movem na mesma velocidade. Enquanto a proporção de alunos que não conseguem ler proficientemente no final do primário caiu quase pela metade (de 72% para 39%) entre 2007 e 2019, a média das notas aumentou apenas 22% no mesmo período. [Você pode interagir com a figura para visualizar outros anos, disciplinas e etapas]. Isso acontece porque as mudanças na proporção de alunos proficientes é impactada por mudanças tanto na pontuação média quanto na distribuição da pontuação na população de alunos (vejaoutro blogque discute este ponto usando dados do PISA). Neste sentido, é importante destacar que sistemas educacionais que
+    queiram ter uma métrica sensível às desigualdades de aprendizagem não devem se basear em notas médias. O foco nos estudantes com pior desempenho é o primeiro passo para um maior compromisso com a equidade educacional.
+
+
+    Figura 2 - Evolução da pontuação média e proporção de alunos abaixo da proficiência mínima
+
+
+    O segundo ‘ponto cego’ refere-se a possibilidade de inflar os resultados de avaliações de aprendizagem do IDEB através da redução da taxa de participação dos estudantes (i.e. a proporção entre os alunos que fazem a prova e o número total de alunos matriculados) com menor desempenho esperado. Apesar de mitigar este problema nos seus resultados por escola, uma vez que o IDEB só é reportado para escolas com uma taxa de participação acima de 80%, o mesmo não ocorre com o IDEB por município e estado, onde as notas dos alunos de escolas com baixa participação são incluídas na média final.
+
+
+    Olhando para frente, é possível identificar algumas oportunidades para melhorar o IDEB. A primeira delas seria incluir a taxa de participação dos alunos na Prova Brasil como um componente na fórmula de cálculo do IDEB. Este componente poderia operar como um fator de ajuste da nota final, valorizando os esforços de estados e municípios que buscam ampliar a taxa de participação dos seus alunos no exame nacional. A segunda possibilidade de melhoria seria utilizar a proporção de alunos abaixo de um patamar mínimo de proficiência como medida de aprendizado. Como visto acima, este indicador alternativo é sensível a mudanças na distribuição da notas dos alunos. A terceira melhoria potencial seria ajustar o indicador pela proporção dos alunos fora da escola ou com grandes defasagens idade-série de forma a aumentar a sensibilidade do IDEB à equidade de acesso à educação
+
+
+    A mensuração da aprendizagem é parte fundamental de uma política educacional baseada em evidências. Neste contexto, as escolhas de medidas importam. E muito.
+
+
+    Queremos ouvir suas opiniões!'
+  summary: A mensuração da aprendizagem é parte fundamental de uma política educacional baseada em evidências. Neste contexto, as escolhas de medidas importam. E muito.
+  images:
+  - src: https://s7d1.scene7.com/is/image/wbcollab/for_jp_brazl_blog-120?qlt=90&fmt=webp&resMode=sharp2
+    alt: Escola do Amanha at Complexo do Alemao
+  - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/Port-JP_Jan_blog.png
+    alt: Figure 1
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
+    alt: João Pedro Azevedo
+  - src: https://s7d1.scene7.com/is/image/wbcollab/290-diana_Capture?qlt=90&fmt=webp&resMode=sharp2
+    alt: Diana Goldemberg
+  - src: https://s7d1.scene7.com/is/image/wbcollab/Andre_Lou?qlt=90&fmt=webp&resMode=sharp2
+    alt: Andre Loureiro
 - title: How could COVID-19 hinder progress with Learning Poverty?  Some initial simulations
   url: https://blogs.worldbank.org/en/education/how-could-covid-19-hinder-progress-learning-poverty-some-initial-simulations
   date: '2020-12-15'
@@ -807,16 +885,84 @@ posts:
     alt: Figure 2
   - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
     alt: João Pedro Azevedo
+- title: 全民学习：国内各地的学习效果存在差异
+  url: https://blogs.worldbank.org/zh/voices/quanminxuexiguoneigededexuexixiaoguocunzaichayi
+  date: '2020-11-12'
+  year: 2020
+  channel: Voices
+  language: zh
+  description: 努力实现各组别学生学习均等化很有必要，但还不够。我们也必须推广相关方案和干预措施，以应对来自同一所学校和同一个人群的类似学生之间存在的差异。在这方面，我们拥有很多工具，但需要面向我们的孩子使用这些工具。
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+  content: '在之前一文中，我们强调了从起码熟练程度角度对人人学习效果进行监测的重要性。在可持续发展目标中，各国一致同意开展学习效果监测，监测重点为处于学习效果分布图底部的学生。我们分析了熟练程度在不同时期的变化，结果表明这一指标对学习效果分布图的变化敏感，学习效果差异增大始终伴随着教育结果变差。
+
+
+    每当你思考教育结果差异，你脑海中会浮现什么？大多数人会立刻描绘出按性别、社会经济状况、种族或民族划分的差异。列举的这些差异属横向差异，即按社会和文化背景划分的不同组别之间的差异。遗憾的是，横向差异现象目前仍很普遍。在阿富汗9-21岁年龄组别中，从未上过学的女童多达男童的两倍。在巴西， 顶层收入五等分组中的青年完成中等教育的概率比底层五等分组中的青年高出了55个百分点。在美国，亚裔学生从大学毕业的概率是黑人学生的近两倍。
+
+
+    各组别内部也存在差异，即纵向差异。这两种差异的区分——组别间差异（横向差异）和组别内差异（纵向差异）——对政策设计很有用，因为处理每种差异所需的工具和方式方法大为不同。关于（学习机会）可及性方面的文章已有很多；在本文中，我们集中关注学习效果差异。
+
+
+    下列互动式汇总图表中包含109个国家2000年以来16轮国际学习效果评估的数据，其中包括对600多万名学生的观测数据。你可以任选其中一国、一轮评估、一个学科以及一个细目（按性别、城乡或社会经济状况五等分位划分），查看各组别间学生分数分布的差异。除这些分布图之外，一份表格还给出了针对这些组别的摘要统计结果：用于监测可持续发展目标4.1.1的中间分数、分数的标准偏差以及熟练程度（或我们的互动式数据可视化图中选取的未达某种熟练程度的学生占比）。
+
+
+    让我们把注意力集中在未达起码熟练程度学生的占比上。评估差异的常规做法是报告组别间差异，但有必要分析整个系统的表现，而不仅仅分析非系统内的不平等现象：一个表现欠佳教育系统内的平等机会并不足以实现人人学习目标。例如：
+
+
+    - 最新一轮国际学生评估项目（PISA）的评估结果显示，从社会经济状况（SES）角度看，塞尔加尔和加拿大学生表现出相同的差异：顶层 SES五等分组别学生达到起码阅读熟练程度的概率比底层组别学生高出了15个百分点。但总体熟练程度差异巨大：塞内加尔未达起码熟练程度的学生占91%，而加拿大的这一占比仅为14%。
+
+
+    - 最新一轮PISA评估结果显示，秘鲁学生在阅读方面的社会经济状况差异最大，为57个百分点。尽管组别间差异巨大，但总体熟练程度并不低。实际上， 秘鲁富裕家庭学生的学习成绩优于卢森堡一般家庭的学生。
+
+
+    组别间差异（按性别、城乡以及SES五等分位划分）仅仅是全貌的一小部分。这些差异合计占一国国内考试分数总体差异的13%（其中，SES五等分组别间差异在三类差异中最为显著）。在未过多探究细节情况下，我们通过计算广义熵阶的差异指数得出了这一数字。此类差异度量指标的特别之处在于它们具有子组别一致性和加成可分解性。也就是说，它们有助于拆分出组别间和组别内差异的具体数值。
+
+
+    你可能注意到了一点，即上述分组并不能给出学校资源差异和地区差异。鉴于此，我们就把参与评估的每所学校视为一组。据此，34%的差异为各校间差异，66%的差异为跨校差异。
+
+
+    即便我们组合采用这两种方式，把各子组别与各种可能的学校、城乡、学生性别以及SES五等分组的组合放在一起考虑，我们也会发现，只有50%的差异为跨子组别差异。当然，确切数值会随国别学科评估和年份的不同而有所浮动。但是，总体结论在不同时期和各轮次评估中都很稳定（你可以在我们的数据可视化图中查找结论）：50%的差异为同一所学校性别和社会经济状况五等分组别相同的学生之间的差异。
+
+
+    学习效果差异为何事关重大，我们该怎样做才弥合差异？
+
+
+    上述发现既令人清醒也令人鼓舞。我们要清醒地认识到，了解应对教育不均等问题以实现各组别学生学习效果均等化的过程中所采取的常用方式只能有助我们完成该目标的一半。不过，发现学习效果在类似学生之间存在如此大的差异也令人鼓舞——这一发现意味着，通过把同一组别内所有学生的学习效果提高到该组内表现最佳学生的水平，我们就能够在弥合差异方面取得很大进展。
+
+
+    在国际学习效果评估过程中分解出学习效果差异的实践表明了对横向和纵向差异或组别间和组别内差异进行监测的重要性。我们所讲的组别内差异是度量不可归因于学生可观察特征（即其性别、社会经济状况以及所在学校）的差异的一个指标。目前仍不可观察的特征很复杂：教育学家和心理学家已开发出相关度量指标，用于找出并阐释各类学生之间存在的学习效果差异，但以具有可比性的方式推广应用这些指标目前仍是一个难题。
+
+
+    今后，有必要思考并明确我们应当度量什么及如何度量：
+
+
+    - 选取对差异情况变化敏感的度量指标：以上结果显示，组别内差异（即垂直差异）显著，这在最贫困学生中体现得尤为突出。因此，有必要用差异敏感性指标对度量学习效果的标准化指予以补充。了解关于重点度量未达起码熟练程度学生且具有分布敏感性的指标的讨论，请参见在可持续发展目标技术合作小组最近一次会议上介绍的论文。
+
+
+    - 采用差异化施教方式专门应对垂直差异：能够调动学生参与且契合学生学业水平的课堂教学方式，如因材施教方式或结构性授课计划，可优先适用于需掌握基础技能的所有学生。这些方式被列入了 “最划算、最有效”的教育方式之列。了解关于哪些因素使得这些方式取得成功的更深入讨论，请查看关于明确学习目标设定、施教一致性、教师支持以及语境凸显性的ALIGNS（使施教水平契合学习目标和学生需求的教学水平）原则。
+
+
+    - 找出可从中汲取宝贵经验的单元（国家、地区或学校）：对横向和纵向差异进行监测是一种极其有效的策略，有助于有针对性提出政策建议并识别正向偏差因素。大环境很重要：差异程度较低的一国为提升本国学习效果采取的某项干预措施，在差异程度较高的另一国未必同样有效。在国内或区内，找出垂直差异程度最低的学校可为制定促进所有儿童学习的有效新策略提供启示。
+
+
+    要应对教育差异问题，就要开展严密评估，也要采用对差异情况变化敏感的度量指标。努力实现各组别学生学习均等化很有必要，但还不够。我们也必须推广相关方案和干预措施，以应对来自同一所学校和同一个人群的类似学生之间存在的差异。在这方面，我们拥有很多工具，但需要面向我们的孩子使用这些工具。'
+  summary: 努力实现各组别学生学习均等化很有必要，但还不够。我们也必须推广相关方案和干预措施，以应对来自同一所学校和同一个人群的类似学生之间存在的差异。在这方面，我们拥有很多工具，但需要面向我们的孩子使用这些工具。
+  images:
+  - src: https://s7d1.scene7.com/is/image/wbcollab/learning_blog_jp-240?qlt=90&fmt=webp&resMode=sharp2
+    alt: ??????????El Renacimiento???????????????? Maria Fleischmann / ?????
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
+    alt: João Pedro Azevedo
+  - src: https://s7d1.scene7.com/is/image/wbcollab/290-diana_Capture?qlt=90&fmt=webp&resMode=sharp2
+    alt: Diana Goldemberg
 - title: 'Learning for All: Within-country learning inequality'
   url: https://blogs.worldbank.org/en/education/learning-all-within-country-learning-inequality
   date: '2020-11-12'
   year: 2020
   channel: Education for Global Development
   language: en
-  translations:
-  - language: zh
-    title: 全民学习：国内各地的学习效果存在差异
-    url: https://blogs.worldbank.org/zh/voices/quanminxuexiguoneigededexuexixiaoguocunzaichayi
   description: Efforts to equalize learning across groups are essential but not sufficient. We must also scale programs and interventions that tackle inequality of similar students within schools and demographic groups. We have the tools for this, and we owe it to our children.
   authors:
   - João Pedro Azevedo
@@ -901,10 +1047,6 @@ posts:
   year: 2020
   channel: Education for Global Development
   language: en
-  translations:
-  - language: pt
-    title: 'Aprendizagem para todos: Indo além de uma pontuação média'
-    url: https://blogs.worldbank.org/pt/education/aprendizagem-para-todos-indo-alem-de-uma-pontuacao-media
   description: Learning losses due to the pandemic will likely be large. We are only starting to grasp how learning inequalities may play out. Looking at historical data, can we find patterns that can help us better plan our actions in the near future?
   authors:
   - João Pedro Azevedo
@@ -993,6 +1135,110 @@ posts:
     alt: A boy
   - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/gif_for_blog.gif
     alt: GIF
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
+    alt: João Pedro Azevedo
+  - src: https://s7d1.scene7.com/is/image/wbcollab/290-diana_Capture?qlt=90&fmt=webp&resMode=sharp2
+    alt: Diana Goldemberg
+- title: 'Aprendizagem para todos: Indo além de uma pontuação média'
+  url: https://blogs.worldbank.org/pt/education/aprendizagem-para-todos-indo-alem-de-uma-pontuacao-media
+  date: '2020-10-22'
+  year: 2020
+  channel: Education for Global Development
+  language: pt
+  description: Antes da COVID-19, o mundo já estava em uma crise de aprendizado.
+  authors:
+  - João Pedro Azevedo
+  - Diana Goldemberg
+  topics:
+  - Education
+  content: 'Antes da COVID-19, o mundo já estava em uma crise de aprendizado. Com taxas históricas de progresso, a meta dos Objetivos de Desenvolvimento Sustentável (ODS) de garantir que todas as meninas e meninos concluam a educação primária e secundária gratuita, equitativa e de qualidade, levando a resultados de aprendizagem relevantes e eficazes até 2030, está fora de alcance.Mais da metade das crianças em países de renda baixa e média estão fora da escola ou não conseguem ler com compreensão aos dez anos de idade. No nível secundário, a situação é ainda pior.
+
+
+    As perdas de aprendizado devido à pandemia provavelmente serão grandes. Estamos apenas começando a entender qual será o impacto da desigualdade de aprendizagem. Olhando para os dados históricos, podemos encontrar padrões que nos ajudem a planejar melhor nossas ações no futuro próximo? À medida que os países reconstroem sistemas educacionais que são mais resilientes, equitativos e inclusivos - capazes de promover a aprendizagem para todos - qual a chance da desigualdade de aprendizagem atrapalhar esse processo?
+
+
+    ODS de educação: além da pontuação média
+
+
+    Vamos considerar os resultados de aprendizagem de alunos nos anos finais do ensino fundamental, conforme avaliados pelo Programa de Avaliação Internacional de Alunos (PISA). O PISA fornece dados comparáveis sobre o desempenho de alunos de 15 anos em matemática, ciências e leitura. Muita atenção é dedicada à discussão das classificações dos países e das melhorias nas pontuações médias nos testes do PISA. Mas a média fornece uma imagem incompleta em um mundo desigual. Sabemos que múltiplas fontes de desigualdade causam variações na aprendizagem na escola e em casa por gênero, etnia, status socioeconômico e deficiências.
+
+
+    Por meio do processo dos ODS, os países concordaram em monitorar a aprendizagem de todos através da parcela de alunos que alcançam um nível mínimo de proficiência. Por exemplo, em leitura, os alunos dos anos finais do ensino fundamental devem reconhecer a ideia principal de um texto, entender as relações ou interpretar o significado usando uma parte limitada do texto na qual a informação não é proeminente e fazer inferências básicas. A falta de domínio dessas competências básicas os impedirá de participar efetiva e produtivamente da vida futura como estudantes, trabalhadores e cidadãos. Ir além da pontuação do aluno médio reflete um forte compromisso em focar nossa atenção na melhoria da aprendizagem das crianças que não conseguem atingir esses padrões mínimos de habilidades / competências.
+
+
+    Essas duas medidas de desempenho dos sistemas educacionais - pontuação média e proporção de alunos que alcançam proficiência mínima transmitem informações importantes. São semelhantes a observar as mudanças na renda média per capita e na parcela da população que vive na pobreza, ao avaliar o desempenho econômico de um país ao longo do tempo. A renda média per capita e a pontuação média do teste são medidas sintéticas de todos os indivíduos. A percentagem da população em situação de pobreza e a percentagem de alunos abaixo do nível mínimo de proficiência referem-se à percentagem privada de padrões mínimos de vida e de competências adquiridas, respetivamente. Na educação, assim como na economia, essas medidas não caminham necessariamente na mesma direção.
+
+
+    Desagregando o progresso na proporção de alunos que alcançam proficiência mínima
+
+
+    Os economistas há muito investigam a relação entre pobreza, crescimento e desigualdade e entendem que eles são determinados em conjunto. As mudanças nas taxas de pobreza podem ser decompostas nas contribuições das mudanças na média (renda média per capita) e na distribuição de renda (desigualdade). Uma decomposição semelhante pode ser esclarecedora no contexto educacional. Uma melhoria na pontuação média do teste com crescente desigualdade será qualitativamente diferente de um processo no qual a pontuação média do teste aumenta na mesma proporção, mas a desigualdade permanece constante.
+
+
+    Exploramos dados de países que participaram de várias rodadas do PISA. Cada barra na Figura 1 representa a decomposição da mudança anualizada na participação dos alunos abaixo do limite do ODS na leitura entre duas rodadas do PISA para um determinado país. Os países em vermelho tiveram pior desempenho nos últimos anos. Ou seja, a proporção de alunos que não conseguem ler com proficiência aumentou em pelo menos 0,1 por cento a uma taxa anual. Os países em verde viram melhorias: mais alunos alcançando proficiência mínima em leitura. Por último, para os países em amarelo, a parcela de proficiência permanece razoavelmente semelhante. Decompomos a mudança na proporção de alunos abaixo da proficiência mínima (linha preta) na contribuição da pontuação média (barras escuras) e na distribuição das pontuações (barras claras).
+
+
+    Figura 1- Decomposição das mudanças na proporção de alunos abaixo da proficiência mínima (BMP)
+
+
+    <script type=''text/javascript'' src=''https://dataviz.worldbank.org/javascripts/api/viz_v1.js''></script><div class=''tableauPlaceholder'' style=''width: 1000px; height: 727px;''><object class=''tableauViz'' width=''1000'' height=''727'' style=''display:none;''><param name=''host_url'' value=''https%3A%2F%2Fdataviz.worldbank.org%2F'' /> <param name=''embed_code_version'' value=''3'' /> <param name=''site_root'' value=''&#47;t&#47;EdStats'' /><param name=''name'' value=''blog_dash_datt-ravallion_pisa&#47;Fig1'' /><param name=''tabs'' value=''no'' /><param name=''toolbar'' value=''yes'' /><param name=''showAppBanner'' value=''false'' /></object></div>
+
+
+    O leitor pode usar nossa visualização interativa para estender esta análise para matemática e ciências e subgrupos de alunos por gênero, localização e quintil de status socioeconômico. Também incluímos quaisquer dois anos de participação no PISA - não apenas o intervalo de tempo mais longo em que a disciplina foi o foco principal da avaliação. Uma metodologia de decomposição alternativa também é usada, mas abordaremos isso em um outro blog. Os resultados permanecem qualitativamente semelhantes - como você pode ver ao interagir com os filtros na Figura 1. Outra maneira de visualizar esses resultados é calculando a média de todos os países que melhoraram ou pioraram. Isso é feito na Figura 2, que resume a decomposição para leitura em mais de 300 observações (cada uma correspondendo a um país e um par de anos de participação).
+
+
+    Figura 2 Contribuições absolutas e relativas para mudanças na proporção de alunos abaixo da proficiência mínima (BMP)
+
+
+    <script type=''text/javascript'' src=''https://dataviz.worldbank.org/javascripts/api/viz_v1.js''></script><div class=''tableauPlaceholder'' style=''width: 1000px; height: 757px;''><object class=''tableauViz'' width=''1000'' height=''757'' style=''display:none;''><param name=''host_url'' value=''https%3A%2F%2Fdataviz.worldbank.org%2F'' /> <param name=''embed_code_version'' value=''3'' /> <param name=''site_root'' value=''&#47;t&#47;EdStats'' /><param name=''name'' value=''blog_dash_datt-ravallion_pisa&#47;Fig2'' /><param name=''tabs'' value=''no'' /><param name=''toolbar'' value=''yes'' /><param name=''showAppBanner'' value=''false'' /></object></div>
+
+
+    Alguns fatos estilizados emergem:
+
+
+    ➤ A maré alta [quase sempre] levanta todos os barcos
+
+
+    - Todos os países que melhoraram seu nível de proficiência também aumentaram as pontuações médias em testes. No Peru, a proporção de alunos que não sabem ler o básico caiu de 80% para 54%, ou uma taxa de variação anualizada de aproximadamente -1,4p.p. por ano. Durante este período, as pontuações médias aumentaram de 327 para 401 pontos entre 2000 e 2018, enquanto a desigualdade na aprendizagem piorou - ou seja, se a desigualdade nas pontuações dos testes tivesse permanecido a mesma de 2000, a melhoria na proporção de alunos abaixo do nivel de proficiencia mínimo acordado pelos através dos Objetivos de Desenvolvimento Sustentável seria 3p.p. superior, ou o equivalente a dois anos adicionais de melhoria média.
+
+
+    - Apenas em alguns países, a proporção de alunos que alcançaram a proficiência piorou, apesar de pequenas melhorias nas pontuações médias nos testes. Na Geórgia, a pontuação média aumentou 6 pontos entre 2009 e 2018; no entanto, a proporção de alunos abaixo do limite mínimo de proficiência aumentou 2,4 pontos percentuais. Portanto, foram os alunos com notas mais altas nos testes que melhoraram mais.
+
+
+    ➤ Quando as pontuações médias nos testes caem, a desigualdade na aprendizagem sempre piora; e não houve um padrão claro quando o nível de proficiência melhorou
+
+
+    - Em todos os países onde a proporção de alunos abaixo da proficiência mínima aumentou, a desigualdade na aprendizagem piorou a situação. Na Coréia do Sul, as pontuações médias em 2018 foram quase as mesmas de 2000, mas a proporção de jovens que não conseguem ler com proficiência mínima aumentou de 6% para 15% à medida que a desigualdade no aprendizado aumentou.
+
+
+    - A proficiência pode melhorar mesmo quando a desigualdade na aprendizagem piora. Entre 2006 e 2018, a proporção de alunos abaixo da proficiência mínima na Colômbia aumentou quase 6 pontos percentuais, embora as pontuações médias nos testes tenham aumentado 27 pontos, refletindo maiores melhorias na aprendizagem de crianças com desempenho de aprendizagem relativamente mais alto.
+
+
+    A visualização de exemplos de países pode esclarecer a decomposição. A Figura 3 mostra as distribuições sobrepostas das pontuações de leitura em um país para duas rodadas do PISA - a primeira em azul e a última em vermelho. Em países como o Peru, as duas fotos no tempo têm formas semelhantes, mas pontuações médias diferentes nos testes dão a impressão de que a curva deslizou, a maré alta que levantou todos os barcos. Na Coreia do Sul, a média permaneceu a mesma, mas a forma da distribuição (desigualdade no aprendizado) mudou significativamente entre os anos.
+
+
+    Figura 3- Distribuição das pontuações de leitura em duas rodadas do PISA para os países selecionados
+
+
+    Projetar políticas para escala com foco no aprendizado para todos
+
+
+    Os ODS nos deram um consenso sobre os níveis mínimos de proficiência de aprendizagem. Devemos construir sobre isso para documentar e compreender os motores da mudança. Aprendizado para todos requer a superação das desigualdades entre os países e dentro deles.
+
+
+    Em todos os países, devemos estar obcecados em obter resultados em escala. Intervenções bem-sucedidas em pequena escala que beneficiam um pequeno grupo de crianças não serão suficientes para lidar com a magnitude da crise de aprendizagem. As políticas e intervenções precisam ser planejadas em escala. Isso não significa necessariamente que precisamos revisar todo o sistema educacional no curto prazo para alcançar melhorias no aprendizado. Políticas mais focadas em escala, conforme descrito no “Relatório Ending Learning Poverty” eEstado do Cearáno Brasil, podem gerar melhorias significativas de curto prazo, enquanto, ao mesmo tempo, os países assumem a tarefa mais difícil de construir a longo prazo sistemas de educação robustos.
+
+
+    Para garantir que o aprendizado aconteça para todos, devemos medir e monitora as mudanças no aprendizado das crianças que não alcançam os níveis mínimos de proficiência. Avaliar o desempenho dos sistemas educacionais com base em pontuações médias ou lacunas de desempenho entre os grupos não é suficiente. Devemos ser intencionais e sistemáticos na maneira como documentamos e entendemos a desigualdade de aprendizagem dentro dos sistemas. Nem todos os sistemas educacionais propagam as desigualdades da mesma maneira.
+
+
+    Estimamos que a COVID-19 afetará negativamente a distribuição da aprendizagem, como já aconteceu antes em todos os episódios de declínio de aprendizagem. Períodos de redução da proficiência de aprendizagem nunca foram neutros do ponto de vista de distribuição. Daqui para frente, devemos mitigar e remediar as perdas de aprendizagem dos mais vulneráveis. Temos a oportunidade e a responsabilidade de reimaginar e reconstruir sistemas educacionais mais resilientes e capazes de proteger melhor a aprendizagem dos mais vulneráveis, especialmente em momentos de crise.'
+  summary: Antes da COVID-19, o mundo já estava em uma crise de aprendizado.
+  images:
+  - src: https://s7d1.scene7.com/is/image/wbcollab/Boy_in_Guatemala_002_-876?qlt=90&fmt=webp&resMode=sharp2
+    alt: A boy
+  - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/gif_for_blog_pt.gif
+    alt: World Bank Group
   - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
     alt: João Pedro Azevedo
   - src: https://s7d1.scene7.com/is/image/wbcollab/290-diana_Capture?qlt=90&fmt=webp&resMode=sharp2
@@ -1144,16 +1390,70 @@ posts:
   images:
   - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
     alt: João Pedro Azevedo
+- title: Мы должны избегать сглаживания кривой обучаемости – какими могут быть потери в процессе обучения во время закрытия школ
+  url: https://blogs.worldbank.org/ru/education/my-dolzhny-izbegat-sglazhivaniya-krivoy-obuchaemosti-kakimi-mogut-byt-poteri-v-processe
+  date: '2020-04-13'
+  year: 2020
+  channel: Education for Global Development
+  language: ru
+  description: Необходимой стратегией сокращения распространения нового коронавируса (COVID-19) было социальное дистанцирование, что заставило большинство стран закрыть свои школы.
+  authors:
+  - Syedah Aroob Iqbal
+  - João Pedro Azevedo
+  - Koen Geven
+  - Amer Hasan
+  - Harry A. Patrinos
+  topics:
+  - Education
+  content: 'Необходимой стратегией сокращения распространения нового коронавируса (COVID-19) было социальное дистанцирование, что заставило большинство стран закрыть свои школы. Однако с учетом того, что 1,5 млрд детей в 175 странах мира не посещают школу (по состоянию на 10 апреля), вопрос о долгосрочных последствиях данной стратегии для системы образования вызывает все большую озабоченность. Мир уже столкнулся с кризисом в области обучения, и продолжающаяся чрезвычайная ситуация создаст дополнительную нагрузку на с трудом достигнутые результаты в области обучения. В нашей текущей работе по моделированию этих последствий мы предлагаем подумать о последствиях закрытия школ для «кривой обучаемости». Это поможет нам сосредоточить внимание на самых бедных и самых неблагополучных учащихся и разработать более эффективные стратегии смягчения последствий в интересах детей.
+
+
+    Кривые обучаемости обычно составляют те, кто проводит национальные оценки (например, национальные оценки прогресса в области образования –NAEP) или международные оценки (например, Программа международной оценки успеваемости учащихся –PISA, Международное исследование тенденций в области математики и естественных наук –TIMSS, или Прогресс в проведении международного исследования по вопросам грамотности в области чтения –PIRLS). Средние баллы (представленные в верхней части) этих кривых, вероятно, наиболее известны, поскольку дляопределения рейтинга странзачастую используют средние баллы. Но из этих кривых мы можем извлечь гораздо больше информации. Ширина кривой (т.е. стандартное отклонение), например, является одним из индикаторов неравенства в школьных системах. Другая очень важная особенность этих кривых заключается в том, что их можно использовать для определения рейтинга учащихся в зависимости от уровня их знаний.
+
+
+    За последние несколько лет много усилий было затрачено на то, чтобы сделать кривые обучаемости более сопоставимыми в отношении нижнего ранга исполнителей, или детей, достигающих лишьминимального уровня мастерства. (Учащиеся, достигшие минимального уровня мастерства, отображаются в виде серой зоны слева от красной пунктирной линии). В прошлом году Всемирный банк взял на себя обязательство уделять особое внимание «малообразованным учащимся» - учащимся ниже минимального уровня знаний, которые не могут читать и понимать основной текст к 10 годам. Мы обеспокоены этой группой, потому что дети, которые не научились читать достаточно быстро, не могут преуспеть позже в школе или при поступлении на работу.
+
+
+    Диаграмма 1 - Три возможных варианта развития кривой обучаемости в ближайшие месяцы: более низкое среднее значение, более высокое стандартное отклонение или резкий рост низких показателей обучения в нижней части.
+
+
+    В своей текущей работе мы рассматриваем три возможных варианта кривой обучаемости, которые могут существенно повлиять на уровни обучения в странах, где школы закрыты. Каждый вариант обусловлен различным механизмом, который в настоящее время оказывает влияние на учащихся. Первый из них является самым простым преобразованием, которое вызвано снижением средних уровней обучения по всему распределению (синяя кривая). Это весьма вероятный сценарий, несмотря на все усилия, предпринимаемые школьными системами для обеспечения дистанционного обучения.Изменение учебного временисвязано с потерями в обучении. Предыдущие кризисы, такие какрецессия2008-09 гг., оказали существенное негативное воздействие на процесс обучения, особенно в районах с более высокой долей неблагополучных детей и детей из числа меньшинств. Имеются также свидетельства того, что такие потрясения, какнаводнения, существенно влияют на результаты обучения в различных классах. Дети, которые не посещают школу, учатся меньше, несмотря
+    на наилучшие намерения дистанционного образования и тех, кто учится на дому.
+
+
+    Второй вариант. Рассмотрим, как кривая может сплющиваться (или наклоняться) из-за крайне неравномерных последствий кризиса (фиолетовая кривая). Это вариант, при котором дети, находящиеся сверху, будут двигаться вперед, в то время как ученики снизу будут отставать все больше. Даже если вирусу все равно, богаты вы или бедны, богатые имеют гораздо больше возможностей смягчить его последствия. Более состоятельные семьи находятся в комфортабельных домах, имеют хорошее подключение к Интернету, могут нанять частного репетитора, и, возможно, лучше всего подходят для домашнего обучения хорошо образованным родителям. Бедные семьи, особенно крайне бедные, живут в низкокачественных домах, могут не иметь даже радио, не говоря уже об Интернете или цифровых гаджетах, не иметь ресурсов, чтобы нанять репетитора, и будут с трудом справляться с домашними заданиями своих детей. В нижней части распределения доходов может также наблюдаться резкийрост бедностииз-за отсутствия возможности работать или безработицы.
+    В этом варианте богатые вырвутся вперед, а бедные еще больше отстанут.
+
+
+    Третий вариант. Рассмотрим, как кривая может измениться из-за отсева (зеленый цвет - население, которое сейчас постоянно не посещает школу). Из более ранних кризисов, таких какфинансовый кризис в Азии в 1997-98 гг.ипандемия полиомиелита в 1916 г., мы узнали, что посещаемость школ может резко упасть как из-за побочных факторов спроса, так и из-за побочных факторов предложения. Что касается спроса, то резкое падение доходов вынуждает семьи просить своих детей выходить на работу, и они больше никогда не возвращаются в школу. Мы особенно обеспокоены положением девочек, поскольку они, как правило, первыми прекращают посещать школу. Мы можем столкнуться с увеличением числа закрываемых школ. Правительства будут испытывать нехватку наличных средств, поскольку глобальная экономическая система испытывает трудности. Это может привести к тому, что министерства образования будут вынуждены увольнять учителей и закрывать или объединять школы. Кроме того, многие страны расширили охват школьным образованием
+    через частные школы с низкой платой за обучение. Эти школы, как правило, работают на крошечной марже, и мы не знаем,переживут ли они этот кризис.
+
+
+    Для того чтобы понять, насколько значительными окажутся последствия кризиса COVID-19, потребуется время. Но мы не можем ждать так долго, нужно начинать действовать уже сейчас, поэтому мы моделируем воздействие данного кризиса на процесс обучения. Опираясь на имеющиеся данные о воздействии кризисов, а также на наши базы данных, такие, как«Согласованные результаты обучения»и«Набор данных об обучении в условиях нищеты», мы смоделируем процесс развития кривой в случае, если мы не предпримем соответствующих действий. Мы рассмотрим различные варианты развития событий, подобные представленным выше, и то, каким образом различные стратегии по уменьшению последствий могут помочь в этом.
+
+
+    У нас есть все возможности повлиять на кривую обучаемости.
+
+
+    Это будет «живой» документ. По мере того, как будут появляться результаты и новые прогнозы, мы будем обновлять этот блог и пытаться оценить, как разворачивается эта чрезвычайная ситуация. А пока, просим поделиться с нами своими мыслями и проектами, или дать нам знать, есть ли что-то конкретное, что вы хотели бы, чтобы мы оценили.'
+  summary: Необходимой стратегией сокращения распространения нового коронавируса (COVID-19) было социальное дистанцирование, что заставило большинство стран закрыть свои школы.
+  images:
+  - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/blog_graph-914.png
+    alt: A typical distribution of learning data. The grey area to the left of the red line indicates the share of children who are in ?learning poverty?
+  - src: https://s7d1.scene7.com/is/image/wbcollab/blog_graph_2?qlt=90&fmt=webp&resMode=sharp2
+    alt: 'Figure 2 – Three possible scenarios of how the learning curve may evolve in the coming months: a lower average, a higher standard deviation, or a sharp increase in low learning at the bottom.'
+  - src: https://s7d1.scene7.com/is/image/wbcollab/Syedah_Aroob_Iqbal?qlt=90&fmt=webp&resMode=sharp2
+    alt: Syedah Aroob Iqbal
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
+    alt: João Pedro Azevedo
+  - src: https://s7d1.scene7.com/is/image/wbcollab/Koen_Pic2?qlt=90&fmt=webp&resMode=sharp2
+    alt: Koen Geven
 - title: We should avoid flattening the curve in education – Possible scenarios for learning loss during the school lockdowns
   url: https://blogs.worldbank.org/en/education/we-should-avoid-flattening-curve-education-possible-scenarios-learning-loss-during-school
   date: '2020-04-13'
   year: 2020
   channel: Education for Global Development
   language: en
-  translations:
-  - language: ru
-    title: Мы должны избегать сглаживания кривой обучаемости — возможные сценарии потерь в обучении в период карантина в школах
-    url: https://blogs.worldbank.org/ru/education/my-dolzhny-izbegat-sglazhivaniya-krivoy-obuchaemosti-vozmozhnye-scenarii-poter-v-obuchenii-v
   description: Social distancing is a necessary strategy to reduce the spread of the novel coronavirus (COVID-19). With 1.5 billion children out of school in 175 countries (as of April 10), there are more and more concerns about the longer-term effects that school closures will have on them.
   authors:
   - Syedah Aroob Iqbal
@@ -1588,17 +1888,114 @@ posts:
   images:
   - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
     alt: João Pedro Azevedo
+- title: Mulheres latino-americanas fomentam a prosperidade da região
+  url: https://blogs.worldbank.org/pt/latinamerica/mulheres-latino-americanas-fomentam-a-prosperidade-da-regi-o
+  date: '2012-09-19'
+  year: 2012
+  channel: Latin America and Caribbean
+  language: pt
+  description: Also available in English, Spanish   As mulheres estão se tornando progressivamente as parceiras mais importantes no desenvolvimento da América Latina. Mães, estudantes, profissionais atuantes, mulheres de todas as origens são hoje a força motora da revolução de gênero que contribuiu de modo bastant
+  authors:
+  - João Pedro Azevedo
+  - Louise Cord
+  topics:
+  - Gender
+  content: 'Also available inEnglish,Spanish
+
+
+    As mulheres estão se tornando progressivamente as parceiras mais importantes no desenvolvimento daAmérica Latina. Mães, estudantes, profissionais atuantes, mulheres de todas as origens são hoje a força motora da revolução de gênero que contribuiu de modo bastante significativo para a prosperidade de nossa região.
+
+
+    Na última década, os países latino-americanos apresentaram um expressivo avanço na redução da pobreza e da desigualdade. Agora sabemos que uma grande parte desse progresso pode ser creditado às mulheres. Isto é tão verdadeiro que, se não houvesse tantas mulheres participando da força de trabalho, a pobreza extrema na região teria sido 30% maior em 2010. Algo semelhante pode ser dito sobre o recente progresso da região face à persistente desigualdade, como enfatiza o relatórioPoverty and Labor Brief: The Effect of Women’s Economic Power in Latin America and the Caribbean(Informe sobre Pobreza e Trabalho: O efeito do poder econômico das mulheres na América Latina e no Caribe).
+
+
+    A questão mais importante não se refere ao aumento da mão de obra feminina nos anos 2000 – houve apenas uma relativa expansão modesta da sua participação na força de trabalho – mas sobretudo ao fato de que o seu rendimento aumentou de modo significativo, refletindo em grande parte o maior acesso das meninas à educação.
+
+
+    Na maioria dos países latino-americanos, o percentual de meninas matriculadas na escola primária vem aumentando constantemente e o seu desempenho tem sido até melhor do que o dos meninos nos níveis médio e superior. A participação no mercado de trabalho também cresceu 15% em média entre 2000 e 2010 – graças ao maior investimento em capital humano, ao declínio da fertilidade e ao fato das mulheres estarem se casando mais tarde. No entanto, ainda persistem barreiras para que as mulheres possam expandir a sua contribuição econômica.
+
+
+    Acreditamos que esses obstáculos possam ser enfrentados apenas com a implementação de políticas e programas criativos. Estas são algumas sugestões derivadas do nosso informe:
+
+
+    - Criação de políticas diretas e indiretas para expandir as oportunidades das mulheres no conjunto da força de trabalho, com o objetivo de aumentar a sua participação e reduzir a disparidade de salários e a segmentação do mercado;
+
+
+    - Melhoria da capacidade de decidir e de atuar das mulheres – ou seja, a sua habilidade de tomar decisões abalizadas. Embora esse fator seja intrinsecamente importante, também acarreta potenciais benefícios para a igualdade de oportunidades e de bens econômicos;
+
+
+    - Apoio às famílias chefiadas por mulheres,  uma característica cada vez mais habitual nas sociedades latino-americanas.
+
+
+    - Inclusão, quando for possível, de fortes sistemas de monitoramento e de avaliação para melhor identificar as iniciativas adequadas à promoção da igualdade de gêneros.
+
+
+    As políticas voltadas para o mercado de trabalho se concentram normalmente na expansão dos serviços de formação vocacional e profissional, assim como de intermediação de emprego, visando ajudar as mulheres a se envolver em ocupações não tradicionais e encontrar melhores oportunidades de trabalho.
+
+
+    Um estudo, a ser divulgado em breve, sugere que os programas de formação e de intermediação de emprego são os mais eficazes quando combinados às iniciativas destinadas a ampliar o empoderamento  feminino e a sua capacidade de atuação ou de tomar decisões como, por exemplo, o treinamento em competências pessoais e as interações com líderes feministas e com a comunidade.
+
+
+    Na República Dominicana, por exemplo, os programas oferecem treinamento por meio de empregadores privados. Por sua vez, no Chile o projetoChile Califica(Chile Qualifica) estabeleceu provedores públicos para formação vocacional. No Haiti, a Iniciativa para Meninas Adolescentes tem como objetivo proporcionar formação em setores não tradicionais para jovens do sexo feminino por meio de diversas organizações não-governamentais, colocando-as posteriormente em estágios na iniciativa privada.
+
+
+    Na Argentina, as mulheres de baixa renda recebem subsídios para formação e certificação profissional em determinadas competências. Também no Cone Sul, os programas de intermediação de emprego estão ajudando as mulheres a encontrar empregos mais qualificados.
+
+
+    Melhoria do cuidado infantil
+
+
+    Segundo o estudoWork and Family: Latin American women in search of a new balance. (Trabalho e Família: As mulheres latino-americanas buscam um novo equilíbrio), o melhor acesso aos cuidados infantis e as opções flexíveis de trabalho proporcionam outra possibilidade de expandir as oportunidades no mercado de trabalho feminino.
+
+
+    Além disso,evidências do Rio de Janeiro, onde creches gratuitas foram oferecidas às mulheres pobres e vulneráveis, indicam que esses serviços podem melhorar as margens de participação (tanto o número de horas trabalhadas quanto a maior produtividade no emprego) e estimular ainda mais as mulheres a entrar no mercado de trabalho. Os formuladores de políticas não devem ignorar também “a outra metade do gênero”.
+
+
+    Levar em consideração a função dos homens e dos meninos nos papéis e estereótipos de gênero representa um importante investimento na igualdade dos sexos. No Brasil, oInstitutoPromundorealizou um interessante trabalho nessa área. Embora as mulheres estejam ingressando cada vez mais na força de trabalho, as pesquisas de uso do tempo mostram que os homens ainda não têm uma participação suficiente nos afazeres domésticos e nos cuidados infantis, o que significa que uma dupla carga recai sobre as mulheres.
+
+
+    Uma opção para os formuladores de políticas é aumentar a participação dos homens no cuidado infantil e no trabalho doméstico por meio de programas de licença paternidade e de promoção da educação conjunta dos filhos. Os governos devem considerar a implementação de programas de assistência e de gestão de risco dirigidos a esse grupo vulnerável.
+
+
+    Estimular a capacidade de decidir e de atuar
+
+
+    Não existe um conjunto de políticas para promover a capacidade de decidir e de atuar,  mas é importante começar a tratar esse tema como qualquer outro bem social, como a busca por uma boa saúde ou o acesso ao crédito, que pode ser cultivado e desenvolvido por meio de políticas e programas adequados.
+
+
+    Políticas inteligentes poderão complementar as iniciativas tradicionais, incorporando elementos específicos focados na capacidade de decidir e de atuar. Um exemplo dessas novas linhas de ação de gênero é o projeto piloto da Nicarágua,Atención a Crisis. A iniciativa utiliza um programa comum de transferência condicional de renda para aumentar a base monetária e a capacidade de gestão de risco das famílias rurais pobres expostas a vulnerabilidades climáticas, como a seca. A ideia básica é simples, mas eficaz.
+
+
+    Além dos pagamentos em dinheiro, um terço dos beneficiários – somente mulheres – recebe bolsas de estudo para formação vocacional. Outro terço foi contemplado com uma subvenção comercial e assistência técnica destinadas a investimentos produtivos em criação de gado e atividades não agrícolas.
+
+
+    Os avaliadores do programa concluíramque as mulheres que receberam auxílio e trabalharam em atividades autônomas não agrícolas, duplicaram a sua renda (além dos ganhos auferidos com o programa), quando rodeadas por líderes que também receberam essa subvenção. Levando em conta o aumento das famílias chefiadas por mulheres, particularmente nas áreas urbanas, é importante elaborar projetos para apoiar esses segmentos vulneráveis.
+
+
+    Até hoje, tem havido relativamente poucos programas direcionados a esse grupo. As áreas de ação propostas compreendem: programas de transferência condicional de renda para crianças de famílias chefiadas por mulheres; iniciativas de creches e pós-escolares de qualidade; monitoria para os filhos de mães que trabalham; apoio nutricional e educacional; e grupos de jovens.
+
+
+    Por fim, é importante ampliar a base de conhecimento do que tem sido eficaz para promover uma maior igualdade de gêneros. O nossoDepartamento de Pobreza, Gênero e Equidadelançará em breve uma Iniciativa de Avaliação do Impacto de Gênero, com o objetivo de preencher as lacunas no conhecimento de políticas e intervenções em prol da equidade de bens, oportunidades econômicas e capacidade de atuação.
+
+
+    As avaliações identificarão as principais políticas e as condições iniciais para diferenciar o que funciona ou não, e as pessoas a quem se destinam, visando promover melhorias na igualdade de gêneros.'
+  summary: Also available in English, Spanish   As mulheres estão se tornando progressivamente as parceiras mais importantes no desenvolvimento da América Latina. Mães, estudantes, profissionais atuantes, mulheres de todas as origens são hoje a força motora da revolução de gênero que contribuiu de modo bastante significativo para a prosperidade de nossa ...
+  images:
+  - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/women_blog_rur.jpg
+    alt: Image
+  - src: https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/blog_091212_port.jpg
+    alt: Image
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1614-1512663820?qlt=90&fmt=webp&resMode=sharp2
+    alt: João Pedro Azevedo
+  - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1583-1490798492?qlt=90&fmt=webp&resMode=sharp2
+    alt: Louise Cord
 - title: Latin American women driving region’s prosperity
   url: https://blogs.worldbank.org/en/latinamerica/latin-american-women-driving-region-s-prosperity
   date: '2012-09-12'
   year: 2012
   channel: Latin America and Caribbean
   language: en
-  translations:
-  - language: pt
-    title: Mulheres latino-americanas fomentam a prosperidade da região
-    url: https://blogs.worldbank.org/pt/latinamerica/mulheres-latino-americanas-fomentam-prosperidade-da-regi-o
-  description: Women are increasingly becoming Latin America's critical development partners. Moms, students, working professionals, women from all walks of life, are a driving force behind a gender revolution that has made huge contributions to our region's prosperity. Over t
+  description: Also available in Portuguese, Spanish Women are increasingly becoming Latin America's critical development partners. Moms, students, working professionals, women from all walks of life, are a driving force behind a gender revolution that has made huge contributions to our region's prosperity. Over t
   authors:
   - João Pedro Azevedo
   - Louise Cord
@@ -1681,5 +2078,3 @@ posts:
     alt: João Pedro Azevedo
   - src: https://s7d1.scene7.com/is/image/wbcollab/picture-1583-1490798492?qlt=90&fmt=webp&resMode=sharp2
     alt: Louise Cord
-total_posts: 24
-note: 5 translations (3 PT, 1 ZH, 1 RU) are linked within their English parent posts via translations field

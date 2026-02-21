@@ -35,7 +35,7 @@ description: "Teaching and mentoring experience by João Pedro Azevedo in econom
 <div class="year-divider" data-year="{{ current_year }}">{{ current_year }}</div>
   {% endif %}
   
-<div class="teaching-card" data-tags="{{ teaching_entry.tags | join: ',' }}">
+<div class="teaching-card" data-tags="{{ teaching_entry.tags | join: ',' }}" data-year="{{ teaching_entry.year }}">
   <div class="teaching-header">
     <div class="teaching-header__body">
       <p class="teaching-title">{{ teaching_entry.course_title }}</p>

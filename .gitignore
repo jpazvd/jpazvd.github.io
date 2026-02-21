@@ -29,6 +29,9 @@ Thumbs.db
 *.swo
 *~
 
+# Node.js
+node_modules/
+
 # Ruby/Bundler
 vendor/
 .bundle/
