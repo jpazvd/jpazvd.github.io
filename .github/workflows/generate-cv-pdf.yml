@@ -35,6 +35,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: "cv-pdf"
+  cancel-in-progress: true
+
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
