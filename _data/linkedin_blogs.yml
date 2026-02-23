@@ -2,12 +2,28 @@
 # These articles were originally published on LinkedIn and are mirrored here
 
 metadata:
-  total_posts: 7
+  total_posts: 8
   platform: LinkedIn
   profile_url: https://www.linkedin.com/in/jpazvd
-  last_updated: '2025-12-14'
+  last_updated: '2026-02-22'
 
 posts:
+  - title: "The Future of Provenance: Why Data Acquisition Must Be Code"
+    slug: "future-provenance-why-data-acquisition-must-be-code"
+    date: '2026-02-20'
+    year: 2026
+    channel: "LinkedIn"
+    organization: "LinkedIn"
+    url: "/posts/2026/02/future-provenance-why-data-acquisition-must-be-code/"
+    linkedin_url: "https://www.linkedin.com/pulse/future-provenance-why-data-acquisition-must-code-jo%C3%A3o-pedro-azevedo-jbinf"
+    description: "Data acquisition and preparation are not auxiliary tasks. They are methodological acts. And in the age of AI, they must be executable and auditable."
+    tags:
+      - Data Provenance
+      - Reproducibility
+      - AI
+      - Official Statistics
+      - Open Data
+
   - title: "From Evidence to Action: Strengthening Africa's Learning Data Ecosystems"
     slug: "from-evidence-action-strengthening-africas-learning-data"
     date: '2025-10-31'
