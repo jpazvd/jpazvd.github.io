@@ -12,9 +12,11 @@ on:
   push:
     branches: [main]
     paths:
-      # CV template
+      # CV templates
       - '_pages/cv.md'
+      - '_pages/cv-short.md'
       # CV data sources
+      - '_data/cv_short.yml'
       - '_data/citations.yml'
       - '_data/profile.yml'
       - '_data/education.yml'
@@ -73,65 +75,65 @@ jobs:
             sleep 30
           fi
 
-      - name: Generate CV PDF
+      - name: Generate CV PDFs (full + short)
         run: |
           node << 'EOF'
           const puppeteer = require('puppeteer');
           const fs = require('fs');
           const path = require('path');
-          
+
           (async () => {
             const browser = await puppeteer.launch({
               headless: 'new',
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
-            
-            const page = await browser.newPage();
-            
-            // Set viewport for consistent rendering
-            await page.setViewport({ width: 1200, height: 800 });
-            
-            // Navigate to the CV page
-            const cvUrl = 'https://jpazvd.github.io/cv/';
-            console.log('Loading CV page:', cvUrl);
-            
-            await page.goto(cvUrl, { 
-              waitUntil: 'networkidle2',
-              timeout: 60000 
-            });
-            
-            // Wait for content to fully render
-            // CV uses archive layout which has .archive class (not .page__content)
-            await page.waitForSelector('.archive, .page__content, #main', { timeout: 30000 });
 
-            // Load professional Google Fonts for PDF rendering
-            await page.addStyleTag({
-              url: 'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap'
-            });
-
-            // Wait for fonts to load
-            await page.evaluateHandle('document.fonts.ready');
-            
             // Ensure files directory exists
             const filesDir = path.join(process.cwd(), 'files');
             if (!fs.existsSync(filesDir)) {
               fs.mkdirSync(filesDir, { recursive: true });
             }
-            
-            // Generate PDF
-            const pdfPath = path.join(filesDir, 'cv-joao-pedro-azevedo.pdf');
-            await page.pdf({
-              path: pdfPath,
-              format: 'A4',
-              margin: { top: '1.8cm', right: '2cm', bottom: '1.8cm', left: '2cm' },
-              printBackground: true,
-              displayHeaderFooter: true,
-              headerTemplate: '<div></div>',
-              footerTemplate: '<div style="font-family: Helvetica, Arial, sans-serif; font-size: 8px; width: 100%; text-align: center; color: #aaa; padding: 0 2cm;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
-            });
-            
-            console.log('PDF generated successfully:', pdfPath);
-            
+
+            const variants = [
+              { path: '/cv/',       file: 'cv-joao-pedro-azevedo.pdf' },
+              { path: '/cv-short/', file: 'cv-joao-pedro-azevedo-short.pdf' }
+            ];
+
+            for (const variant of variants) {
+              const page = await browser.newPage();
+              await page.setViewport({ width: 1200, height: 800 });
+
+              const cvUrl = `https://jpazvd.github.io${variant.path}`;
+              console.log('Loading:', cvUrl);
+
+              await page.goto(cvUrl, {
+                waitUntil: 'networkidle2',
+                timeout: 60000
+              });
+
+              await page.waitForSelector('.archive, .page__content, #main', { timeout: 30000 });
+
+              await page.addStyleTag({
+                url: 'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap'
+              });
+
+              await page.evaluateHandle('document.fonts.ready');
+
+              const pdfPath = path.join(filesDir, variant.file);
+              await page.pdf({
+                path: pdfPath,
+                format: 'A4',
+                margin: { top: '1.8cm', right: '2cm', bottom: '1.8cm', left: '2cm' },
+                printBackground: true,
+                displayHeaderFooter: true,
+                headerTemplate: '<div></div>',
+                footerTemplate: '<div style="font-family: Helvetica, Arial, sans-serif; font-size: 8px; width: 100%; text-align: center; color: #aaa; padding: 0 2cm;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
+              });
+
+              console.log('Generated:', pdfPath);
+              await page.close();
+            }
+
             await browser.close();
           })();
           EOF
@@ -144,7 +146,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add files/cv-joao-pedro-azevedo.pdf
-          git diff --staged --quiet || git commit -m "chore: Auto-generate CV PDF (${{ steps.date.outputs.date }})"
+          git add files/cv-joao-pedro-azevedo.pdf files/cv-joao-pedro-azevedo-short.pdf
+          git diff --staged --quiet || git commit -m "chore: Auto-generate CV PDFs (${{ steps.date.outputs.date }})"
           git push
 
