@@ -283,4 +283,52 @@
   .page__title {
     display: none;
   }
+
+  /* ---- Short CV: tighter spacing for 2-page target ---- */
+  .cv-short-body {
+    h2 {
+      font-size: 12pt;
+      margin-top: 8pt;
+      margin-bottom: 4pt;
+      padding-bottom: 2pt;
+    }
+
+    h3 {
+      font-size: 10pt;
+      margin-top: 6pt;
+      margin-bottom: 2pt;
+    }
+
+    ul {
+      margin-top: 1pt;
+      margin-bottom: 4pt;
+    }
+
+    li {
+      margin-bottom: 1pt;
+    }
+
+    .cv-job {
+      margin-bottom: 2pt;
+    }
+
+    .cv-job__meta {
+      font-size: 9pt;
+    }
+
+    .cv-pub {
+      font-size: 9.5pt;
+      margin-bottom: 2pt;
+    }
+
+    .cv-citation-summary {
+      font-size: 9pt;
+      margin-bottom: 6pt;
+    }
+
+    .cv-prose {
+      font-size: 9.5pt;
+      line-height: 1.4;
+    }
+  }
 }
