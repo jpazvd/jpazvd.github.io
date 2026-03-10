@@ -23,10 +23,7 @@ redirect_from:
 
 <p class="cv-download">
   <a href="/files/cv-joao-pedro-azevedo.pdf" class="btn btn--primary">
-    Download Full CV
-  </a>
-  <a href="/files/cv-joao-pedro-azevedo-short.pdf" class="btn">
-    Short CV (2pp)
+    Download PDF
   </a>
 </p>
 

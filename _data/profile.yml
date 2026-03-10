@@ -7,6 +7,7 @@ selected_contributions:
   - "Led multi-unit data and analytics functions across domains including population, education, poverty, nutrition, health, WASH, child protection, climate, frontier data, and survey methods."
   - "Co-developed the World Bank Learning Poverty measure and contributed to scaling comparable learning outcomes metrics across countries."
   - "Built global data harmonization and analytics architectures spanning 1,000+ learning assessments and 1,200+ household surveys."
+  - "Created unicefData, a trilingual open-source package (R, Python, Stata) providing consistent interfaces to UNICEF's SDMX data warehouse for child welfare indicators."
   - "Delivered technical assistance and capacity building to national statistical systems and sector ministries, including poverty mapping and deprivation indices to support resource allocation."
 
 service:

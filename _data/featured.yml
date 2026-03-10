@@ -20,6 +20,11 @@ items:
     url: "https://academic.oup.com/wbro/article/36/1/1/6174606"
     type: "Article"
 
+  - title: "unicefData"
+    description: "Trilingual R, Python, and Stata package for accessing UNICEF child welfare indicators via SDMX API."
+    url: "https://github.com/unicef-drp/unicefData"
+    type: "Software"
+
   - title: "WBOPENDATA"
     description: "Stata module to access World Bank databases, downloaded 26,000+ times."
     url: "https://github.com/jpazvd/wbopendata"

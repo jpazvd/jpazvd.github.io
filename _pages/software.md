@@ -244,7 +244,12 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   <tbody>
     <tr>
       <td><strong><a href="https://github.com/unicef-drp/unicefData" target="_blank">unicefData</a></strong></td>
-      <td>Open data and analytics platform led by UNICEF's Office of the Chief Statistician, providing reproducible, standards-based tools for accessing official child-related statistics</td>
+      <td>Trilingual R, Python, and Stata library for downloading UNICEF child welfare indicators via SDMX API. Provides consistent interfaces across all three languages with cross-language test parity.<br>
+        <strong>Install:</strong>
+        <a href="https://cran.r-project.org/package=unicefData" target="_blank">CRAN</a> ·
+        <a href="https://pypi.org/project/unicefdata/" target="_blank">PyPI</a> ·
+        <a href="https://ideas.repec.org/c/boc/bocode/s459598.html" target="_blank">SSC</a>
+      </td>
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank"><i class="fab fa-github"></i></a></td>
     </tr>
     <tr>

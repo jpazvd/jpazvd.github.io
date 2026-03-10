@@ -1,6 +1,6 @@
 # Events and Speaking Engagements Database
 # Author: João Pedro Azevedo
-# Last Updated: 2025-12-23
+# Last Updated: 2026-03-10
 
 # === SCHEMA REFERENCE ===
 # Required fields: id, date, year, event, location, role
@@ -57,6 +57,61 @@
 
 
 events:
+
+  # ============================================================================
+  # 2026
+  # ============================================================================
+
+- id: unsc57-ai-readiness-2026
+  date: '2026-02-27'
+  year: 2026
+  event: '57th UN Statistical Commission Friday Seminar: AI-readiness for Official Data and Statistics'
+  event_type: side_event
+  location: New York, USA
+  venue: United Nations Headquarters
+  scope: international
+  session: 'Data governance, data governance tools, and capacity'
+  session_type: panel
+  abstract: |
+    Panelist on data governance session discussing AI readiness from the perspective of
+    licensing frameworks, technological guardrails, and human and institutional capacity.
+    Session explored standards for testing and evaluation, collaboration with AI system
+    providers, and the organizational capacity and cultural changes needed to strengthen
+    the responsible use of AI in official statistics.
+  role: Panelist
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  participants:
+  - name: Maria do Carmo Dias Bueno
+    org: IBGE, Brazil
+    role: moderator
+  - name: João Pedro Azevedo
+    org: UNICEF
+    role: panelist
+  - name: Osama Ramen
+    org: ONS, UK
+    role: panelist
+  - name: Roy Kaufman
+    org: Copyright Clearance Center
+    role: panelist
+  - name: Johannes Juetting
+    org: Paris21
+    role: panelist
+  - name: Dr. Sarah Bird
+    org: Microsoft
+    role: panelist
+  organizers:
+  - UNSD
+  urls:
+    event: https://unstats.un.org/UNSDWebsite/statcom/57
+    session: https://unstats.un.org/UNSDWebsite/events-details/un57sc-ai-readiness-for-official-data-and-statistics-27Feb2026/
+    program: https://unstats.un.org/UNSDWebsite/statcom/session_57/side-events/Friday_Seminar_2026_AI_Readable_Data_Concept_Note.pdf
+  tags:
+  - statistics
+  - governance
+  - digital
+  - partnerships
 
   # ============================================================================
   # 2025
