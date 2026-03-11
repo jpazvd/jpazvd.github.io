@@ -23,6 +23,9 @@ service:
   - role: "Member"
     organization: "Technical Cooperation Group on SDG 4 indicators"
     parent: "UNESCO Institute for Statistics"
+  - role: "Elected Member"
+    organization: "International Statistical Institute (ISI)"
+    since: 2025
   - role: "Reviewer"
     organization: "World Development, Journal of Development Economics, World Bank Research Observer"
   - role: "SSC Contributor"
