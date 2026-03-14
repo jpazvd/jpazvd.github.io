@@ -2,9 +2,24 @@ _metadata:
   author: João Pedro Azevedo
   source: IDEAS/RePEc
   source_url: https://ideas.repec.org/e/pwa88.html
-  last_updated: '2026-02-17T19:07:34.567807+00:00'
-  total_packages: 22
+  last_updated: '2026-03-09T06:24:49.137084+00:00'
+  total_packages: 24
   note: Auto-generated satellite database. Do not edit manually.
+yaml:
+  title: YAML
+  short_description: Stata module for reading, writing, and manipulating YAML configuration files
+  url: https://ideas.repec.org/c/boc/bocode/s459607.html
+  source: IDEAS/RePEc
+  authors:
+  - Joao Pedro  Azevedo
+unicefdata:
+  title: UNICEFDATA
+  short_description: Stata module to download indicators from UNICEF Data Warehouse
+  url: https://ideas.repec.org/c/boc/bocode/s459598.html
+  source: IDEAS/RePEc
+  year: '2026'
+  authors:
+  - Joao Pedro  Azevedo
 groupfunction:
   title: GROUPFUNCTION
   short_description: Stata module to replace several basic collapse functions

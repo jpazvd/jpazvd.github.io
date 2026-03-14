@@ -2,10 +2,39 @@ metadata:
   user: jpazvd
   source: GitHub API
   source_url: https://github.com/jpazvd
-  last_updated: '2026-02-17T19:07:35.955428'
-  total_repositories: 26
+  last_updated: '2026-03-09T06:24:50.525721'
+  total_repositories: 27
   note: This is an auto-generated satellite database. Do not edit manually.
 repositories:
+- name: yaml
+  full_name: jpazvd/yaml
+  description: The yaml command provides a complete YAML 1.2 (subset) parser for Stata, enabling configuration-driven workflows,
+    metadata management, and interoperability with other languages (R, Python, GitHub Actions).
+  url: https://github.com/jpazvd/yaml
+  language: Stata
+  stars: 0
+  forks: 0
+  watchers: 0
+  topics:
+  - automation
+  - ci-cd
+  - configuration-as-code
+  - data-as-code
+  - metadata-standard
+  - official-statistics
+  - reproducible-research
+  - research-infrastructure
+  - stata
+  - stata-package
+  - statistical-workflow
+  - yaml
+  created_at: '2026-02-18T01:40:31Z'
+  updated_at: '2026-02-25T02:02:16Z'
+  homepage: https://ideas.repec.org/c/boc/bocode/s459607.html
+  open_issues: 0
+  type: software
+  category: stata-packages
+  featured: false
 - name: wb-api-repo
   full_name: jpazvd/wb-api-repo
   description: World Bank API data extraction tools
@@ -16,7 +45,7 @@ repositories:
   watchers: 0
   topics: []
   created_at: '2025-09-08T00:43:39Z'
-  updated_at: '2026-01-30T03:13:28Z'
+  updated_at: '2026-03-06T03:14:42Z'
   homepage: null
   open_issues: 0
   type: software
@@ -431,9 +460,9 @@ repositories:
   description: 'WBOPENDATA: Stata module to access World Bank databases'
   url: https://github.com/jpazvd/wbopendata
   language: Stata
-  stars: 43
+  stars: 42
   forks: 14
-  watchers: 43
+  watchers: 42
   topics:
   - api
   - api-wrapper
@@ -445,9 +474,9 @@ repositories:
   - sdgs
   - stata
   created_at: '2018-11-27T21:59:59Z'
-  updated_at: '2026-02-05T02:20:08Z'
+  updated_at: '2026-02-24T10:44:35Z'
   homepage: https://ideas.repec.org/c/boc/bocode/s457234.html
-  open_issues: 2
+  open_issues: 0
   type: software
   category: stata-packages
   featured: true

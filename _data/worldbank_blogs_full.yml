@@ -3,7 +3,7 @@ metadata:
   source: World Bank Blogs
   source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
   api_url: https://webapi.worldbank.org/aemsite/blogs/global/search
-  last_updated: '2026-02-17'
+  last_updated: '2026-03-09'
   total_posts: 29
   english_posts: 24
   translations: 5

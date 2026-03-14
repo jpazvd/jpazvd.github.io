@@ -3,8 +3,8 @@ metadata:
   author_id: pwa88
   source: RePEc/IDEAS
   source_url: https://ideas.repec.org/e/pwa88.html
-  last_updated: '2026-02-17T19:07:26.240476'
-  total_papers: 64
+  last_updated: '2026-03-09T06:24:39.356316'
+  total_papers: 69
   note: This is an auto-generated satellite database. Do not edit manually.
 papers:
 - url: https://ideas.repec.org/p/wbk/wbrwps/10381.html
@@ -248,7 +248,7 @@ papers:
   handle: pra/mprapa/56063
   series: mprapa
   original_title: Uma avaliação ex-ante de algumas políticas para melhoria do ambiente de negócios no Estado do Rio de Janeiro
-    [An ex-ante evaluation of policies to improve the business environment of the State of R
+    [An ex-ante evaluation of policies to improve the business environment of the State of Rio de Janeiro]
 - url: https://ideas.repec.org/p/anp/en2007/165.html
   type: working_paper
   handle: anp/en2007/165
@@ -294,6 +294,31 @@ papers:
   handle: ecr/col070/10858
   series: col070
   original_title: El TLC y las pérdidas de mercado de Brasil en los Estados Unidos, 1992-2001
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap2.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: Índice de oportunidades humanas adecuado al nivel de desarrollo de Colombia
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap4.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: Circunstancias claves para la igualdad de oportunidades
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap1.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: Introducción
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap5.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: Resumen y conclusiones
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap3.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: La evolución del índice de oportunidades humanas durante la ultima década
 - url: https://ideas.repec.org/h/cdp/diam10/015.html
   type: working_paper
   handle: cdp/diam10/015
