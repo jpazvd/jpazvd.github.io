@@ -13,7 +13,7 @@ tags:
   - Data Analysis
 excerpt: "Analysis of Brazil's progress in education and poverty reduction across generations using age-period-cohort data."
 header:
-  teaser: "https://media.licdn.com/mediaD4E12AQFbO2LOwncgiQ"
+  teaser: "/images/posts/bra-inter-mobilitity-banner.png"
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---
@@ -28,7 +28,7 @@ Brazil has made significant strides in education and poverty reduction in recent
 
 The first chart highlights the average years of schooling across various age-period cohorts in Brazil. Education is a critical positive indicator, and more years of schooling generally correlate with better socioeconomic outcomes and opportunities.
 
-![Average years of schooling by Age-Period-Cohort](https://media.licdn.com/dms/image/v2/D4E12AQF12vZGuuquAQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1724771911609?e=1767225600&v=beta&t=63T406LwUVzZKId2ECRWvxxnGtGqzmwWinIt1_Nnbf8)
+![Average years of schooling by Age-Period-Cohort](/images/posts/bra-inter-mobilitity-fig1.png)
 *Average years of schooling by Age-Period-Cohort*
 
 ### Key Findings by Age Group:
@@ -45,7 +45,7 @@ The first chart highlights the average years of schooling across various age-per
 
 The second chart shows the proportion of each age group that falls into the bottom 40% of the income distribution over time—a measure of relative poverty. This is a negative indicator, where higher percentages represent greater economic inequality and limited social mobility.
 
-![Share of individuals at the bottom 40th percentile](https://media.licdn.com/dms/image/v2/D4E12AQGOxhpfpHTdUw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1724771930616?e=1767225600&v=beta&t=fp7rx3Rl15eXzxiWTxCigQcADGlE8Oeot1Vfajg2hPQ)
+![Share of individuals at the bottom 40th percentile](/images/posts/bra-inter-mobilitity-fig2.png)
 *Share of individuals at the bottom 40th percentile of the income distribution of a given year by Age-Period-Cohort*
 
 ### Key Findings:
@@ -62,7 +62,7 @@ The second chart shows the proportion of each age group that falls into the bott
 
 The third chart illustrates absolute poverty rates, defined by a specific poverty line (e.g., $6.85 USD/PPP per day). This is another negative indicator where lower values represent better outcomes.
 
-![Share of individuals living in monetary poor households](https://media.licdn.com/dms/image/v2/D4E12AQExmFG_z7Ptfg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1724771964038?e=1767225600&v=beta&t=P4S6oCBoHlHT2k_LasLraagnmJTBoStISpN7GYzCVBI)
+![Share of individuals living in monetary poor households](/images/posts/bra-inter-mobilitity-fig3.png)
 *Share of individuals living in monetary poor households at 6.85 USD/PPP by Age-Period-Cohort*
 
 ### Key Findings:
