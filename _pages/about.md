@@ -55,7 +55,7 @@ I hold a PhD in Economics from Newcastle University and am an elected member of 
 {% endif %}
 
 <div class="jp-quick-links">
-  <a href="{{ site.baseurl }}/research/">Research</a>
+  <a href="{{ site.baseurl }}/research/">Focus</a>
   <a href="{{ site.baseurl }}/publications/">Publications</a>
   <a href="{{ site.baseurl }}/softwares/">Software</a>
   <a href="{{ site.baseurl }}/blogs/">Writing</a>

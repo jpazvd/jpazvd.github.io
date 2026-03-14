@@ -41,7 +41,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <div class="jp-quick-links">
   <a href="{{ base_path }}/publications/">Publications</a>
   <a href="{{ base_path }}/blogs/">Blogs</a>
-  <a href="{{ base_path }}/research/">Research</a>
+  <a href="{{ base_path }}/research/">Focus</a>
 </div>
 
 <hr>
