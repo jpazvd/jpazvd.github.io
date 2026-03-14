@@ -127,7 +127,7 @@ redirect_from:
 
 <ul>
 {% for service in site.data.profile.service %}
-<li><strong>{{ service.role }}</strong>{% if service.organization %}, {{ service.organization }}{% endif %}{% if service.parent %} ({{ service.parent }}){% endif %}</li>
+<li><strong>{{ service.role }}</strong>{% if service.organization %}, {{ service.organization }}{% endif %}{% if service.parent %} ({{ service.parent }}){% endif %}{% if service.since %}, since {{ service.since }}{% endif %}</li>
 {% endfor %}
 </ul>
 
