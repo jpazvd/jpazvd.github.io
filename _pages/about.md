@@ -45,9 +45,11 @@ I hold a PhD in Economics from Newcastle University and am an elected member of 
 <h2>Featured Work</h2>
 <div class="jp-featured-list">
   {% for item in site.data.featured.items %}
-  <div class="jp-featured-item">
-    <span class="jp-featured-item__type">{{ item.type }}</span>
-    <a href="{{ item.url }}" target="_blank" rel="noopener" class="jp-featured-item__title">{{ item.title }}</a>
+  <div class="jp-featured-item jp-featured-item--stacked">
+    <div class="jp-featured-item__header">
+      <span class="jp-featured-item__type">{{ item.type }}</span>
+      <a href="{{ item.url }}" target="_blank" rel="noopener" class="jp-featured-item__title">{{ item.title }}</a>
+    </div>
     <span class="jp-featured-item__desc">{{ item.description }}</span>
   </div>
   {% endfor %}
