@@ -1,13 +1,53 @@
 {% include base_path %}
 
+{% capture share_url %}{{ base_path }}{{ page.url }}{% endcapture %}
+{% capture share_title %}{{ page.title | default: site.title }}{% endcapture %}
+{% capture share_title_encoded %}{{ share_title | url_encode }}{% endcapture %}
+{% capture share_url_encoded %}{{ share_url | url_encode }}{% endcapture %}
+
 <section class="page__share">
   {% if site.data.ui-text[site.locale].share_on_label %}
     <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label | default: "Share on" }}</h4>
   {% endif %}
 
-  <a href="https://twitter.com/intent/tweet?text={{ base_path }}{{ page.url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://x.com/intent/tweet?text={{ share_title_encoded }}%20%23Stata%20%23DataScience%20via%20%40jpazvd&url={{ share_url_encoded }}"
+     class="btn btn--twitter" target="_blank" rel="noopener"
+     title="Share on X">
+    <i class="fab fa-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_path }}{{ page.url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://bsky.app/intent/compose?text={{ share_title_encoded }}%20%23Stata%20%23DataScience%20{{ share_url_encoded }}"
+     class="btn btn--bluesky" target="_blank" rel="noopener"
+     title="Share on Bluesky">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 568 501" fill="currentColor" style="vertical-align:middle"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.889-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664z"/></svg><span> Bluesky</span>
+  </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ base_path }}{{ page.url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url_encoded }}&title={{ share_title_encoded }}"
+     class="btn btn--linkedin" target="_blank" rel="noopener"
+     title="Share on LinkedIn">
+    <i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url_encoded }}"
+     class="btn btn--facebook" target="_blank" rel="noopener"
+     title="Share on Facebook">
+    <i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://api.whatsapp.com/send?text={{ share_title_encoded }}%20{{ share_url_encoded }}"
+     class="btn btn--whatsapp" target="_blank" rel="noopener"
+     title="Share on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i><span> WhatsApp</span>
+  </a>
+
+  <a href="mailto:?subject={{ share_title_encoded }}&body={{ share_title_encoded }}%0A%0A{{ share_url_encoded }}"
+     class="btn btn--email"
+     title="Share via Email">
+    <i class="fas fa-envelope" aria-hidden="true"></i><span> Email</span>
+  </a>
+
+  <button class="btn btn--copy" onclick="navigator.clipboard.writeText('{{ share_url }}').then(function(){this.innerHTML='<i class=\'fas fa-check\' aria-hidden=\'true\'></i><span> Copied!</span>';var b=this;setTimeout(function(){b.innerHTML='<i class=\'fas fa-link\' aria-hidden=\'true\'></i><span> Copy link</span>';},2000);}.bind(this))"
+     title="Copy link to clipboard">
+    <i class="fas fa-link" aria-hidden="true"></i><span> Copy link</span>
+  </button>
 </section>

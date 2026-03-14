@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/SoftwareApplication">
+    <meta itemprop="name" content="{{ page.title }}">
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    <meta itemprop="applicationCategory" content="Statistical Software">
+    {% if page.install_cmd %}<meta itemprop="installUrl" content="https://ideas.repec.org">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title }}</h1>{% endif %}
+          {% if page.excerpt %}<p class="page__excerpt">{{ page.excerpt }}</p>{% endif %}
+        </header>
+      {% endunless %}
+
+      {% if page.share %}
+        <div class="page__share--top">
+          {% include social-share.html %}
+        </div>
+      {% endif %}
+
+      <!-- Platform badges -->
+      <div class="software-badges">
+        {% if page.ssc_url %}
+          <a href="{{ page.ssc_url }}" target="_blank" rel="noopener" class="software-badge software-badge--ssc" title="Available on SSC/RePEc">
+            {% include icons/stata-ssc.svg %}
+            <span>SSC</span>
+          </a>
+        {% endif %}
+        {% if page.cran_url %}
+          <a href="{{ page.cran_url }}" target="_blank" rel="noopener" class="software-badge software-badge--cran" title="Available on CRAN">
+            {% include icons/r-cran.svg %}
+            <span>CRAN</span>
+          </a>
+        {% endif %}
+        {% if page.pypi_url %}
+          <a href="{{ page.pypi_url }}" target="_blank" rel="noopener" class="software-badge software-badge--pypi" title="Available on PyPI">
+            {% include icons/python-pypi.svg %}
+            <span>PyPI</span>
+          </a>
+        {% endif %}
+        {% if page.github_url %}
+          <a href="{{ page.github_url }}" target="_blank" rel="noopener" class="software-badge software-badge--github" title="Source on GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        {% endif %}
+        {% if page.github_url %}
+          <a href="{{ page.github_url }}/issues/new" target="_blank" rel="noopener" class="software-badge software-badge--issues" title="Report bug or request feature">
+            <i class="fas fa-bug"></i>
+            <span>Issues</span>
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Install commands -->
+      {% if page.install_cmd or page.install_r or page.install_python %}
+      <div class="software-install">
+        <h2><i class="fas fa-download"></i> Installation</h2>
+        {% if page.install_cmd %}
+        <div class="install-block">
+          <span class="install-label">Stata</span>
+          <code>{{ page.install_cmd }}</code>
+        </div>
+        {% endif %}
+        {% if page.install_r %}
+        <div class="install-block">
+          <span class="install-label">R</span>
+          <code>{{ page.install_r }}</code>
+        </div>
+        {% endif %}
+        {% if page.install_python %}
+        <div class="install-block">
+          <span class="install-label">Python</span>
+          <code>{{ page.install_python }}</code>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <!-- Main content: Description + Examples -->
+      <section class="page__content" itemprop="text">
+        {{ content }}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+  </article>
+</div>

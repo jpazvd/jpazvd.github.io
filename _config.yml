@@ -79,6 +79,9 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
+  software:
+    output: true
+    permalink: /software/:path/
 
 # Defaults
 defaults:
@@ -97,6 +100,14 @@ defaults:
       type: publications
     values:
       layout: single
+      author_profile: true
+      share: true
+  # Software
+  - scope:
+      path: ""
+      type: software
+    values:
+      layout: software-page
       author_profile: true
       share: true
 

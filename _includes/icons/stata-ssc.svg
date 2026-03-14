@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 100" fill="currentColor" style="vertical-align:middle">
+  <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="currentColor" stroke-width="8"/>
+  <text x="50" y="42" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="bold" font-size="28" fill="currentColor">SSC</text>
+  <text x="50" y="72" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="currentColor">Stata</text>
+</svg>

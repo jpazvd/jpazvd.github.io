@@ -48,7 +48,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 
 <h2>Stata Modules on SSC</h2>
 
-<h3><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank">WBOPENDATA</a></h3>
+<h3><a href="{{ base_path }}/software/wbopendata/">WBOPENDATA</a></h3>
 <p>
   Access over 29,000 indicators from 51 World Bank databases directly from Stata, covering 296 countries and regions from 1960 to present. Supports five download modes, multilingual metadata (EN/ES/FR), and wide or long output formats.
 </p>
@@ -72,147 +72,147 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   </thead>
   <tbody>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank">ainequal</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/ainequal/">ainequal</a></strong></td>
       <td>Inequality measures</td>
       <td><code>ssc install ainequal</code></td>
       <td><a href="https://github.com/jpazvd/ainequal" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/ainequal/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank">apoverty</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/apoverty/">apoverty</a></strong></td>
       <td>Poverty measures</td>
       <td><code>ssc install apoverty</code></td>
       <td><a href="https://github.com/jpazvd/apoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/apoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457562.html" target="_blank">adecomp</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/adecomp/">adecomp</a></strong></td>
       <td>Shapley decomposition</td>
       <td><code>ssc install adecomp</code></td>
       <td><a href="https://github.com/jpazvd/adecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/adecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457563.html" target="_blank">drdecomp</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/drdecomp/">drdecomp</a></strong></td>
       <td>Datt-Ravallion decomposition</td>
       <td><code>ssc install drdecomp</code></td>
       <td><a href="https://github.com/jpazvd/drdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/drdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457564.html" target="_blank">skdecomp</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/skdecomp/">skdecomp</a></strong></td>
       <td>Shapley-Kelkar decomposition</td>
       <td><code>ssc install skdecomp</code></td>
       <td><a href="https://github.com/jpazvd/skdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/skdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457565.html" target="_blank">mpovline</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/mpovline/">mpovline</a></strong></td>
       <td>Multiple poverty lines</td>
       <td><code>ssc install mpovline</code></td>
       <td><a href="https://github.com/jpazvd/mpovline" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/mpovline/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank">groupfunction</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/groupfunction/">groupfunction</a></strong></td>
       <td>Collapse with multiple functions</td>
       <td><code>ssc install groupfunction</code></td>
       <td><a href="https://github.com/jpazvd/groupfunction" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/groupfunction/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank">sae</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/sae/">sae</a></strong></td>
       <td>Small area estimation</td>
       <td><code>ssc install sae</code></td>
       <td><a href="https://github.com/jpazvd/sae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/sae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank">fhsae</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/fhsae/">fhsae</a></strong></td>
       <td>Fay-Herriot small area estimation</td>
       <td><code>ssc install fhsae</code></td>
       <td><a href="https://github.com/jpazvd/fhsae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/fhsae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457191.html" target="_blank">hoi</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/hoi/">hoi</a></strong></td>
       <td>Human Opportunity Index</td>
       <td><code>ssc install hoi</code></td>
       <td><a href="https://github.com/jpazvd/hoi" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/hoi/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s449001.html" target="_blank">dfl</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/dfl/">dfl</a></strong></td>
       <td>DiNardo-Fortin-Lemieux decomposition</td>
       <td><code>ssc install dfl</code></td>
       <td><a href="https://github.com/jpazvd/dfl" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/dfl/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank">grqreg</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/grqreg/">grqreg</a></strong></td>
       <td>Graphical quantile regression</td>
       <td><code>ssc install grqreg</code></td>
       <td><a href="https://github.com/jpazvd/grqreg" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/grqreg/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank">outtable</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/outtable/">outtable</a></strong></td>
       <td>Export matrix to LaTeX table</td>
       <td><code>ssc install outtable</code></td>
       <td><a href="https://github.com/jpazvd/outtable" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/outtable/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank">alorenz</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/alorenz/">alorenz</a></strong></td>
       <td>Lorenz and concentration curves</td>
       <td><code>ssc install alorenz</code></td>
       <td><a href="https://github.com/jpazvd/alorenz" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/alorenz/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank">isopoverty</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/isopoverty/">isopoverty</a></strong></td>
       <td>Iso-poverty curves</td>
       <td><code>ssc install isopoverty</code></td>
       <td><a href="https://github.com/jpazvd/isopoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/isopoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank">changemean</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/changemean/">changemean</a></strong></td>
       <td>Mean vs distribution effects</td>
       <td><code>ssc install changemean</code></td>
       <td><a href="https://github.com/jpazvd/changemean" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/changemean/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank">mol</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/mol/">mol</a></strong></td>
       <td>Effective literacy index (Basu-Foster)</td>
       <td><code>ssc install mol</code></td>
       <td><a href="https://github.com/jpazvd/mol" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/mol/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank">turnbull</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/turnbull/">turnbull</a></strong></td>
       <td>Willingness-to-pay estimation</td>
       <td><code>ssc install turnbull</code></td>
       <td><a href="https://github.com/jpazvd/turnbull" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/turnbull/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank">spike</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/spike/">spike</a></strong></td>
       <td>Zero willingness-to-pay</td>
       <td><code>ssc install spike</code></td>
       <td><a href="https://github.com/jpazvd/spike" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/spike/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank">factortest</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/factortest/">factortest</a></strong></td>
       <td>Tests for factor analysis</td>
       <td><code>ssc install factortest</code></td>
       <td><a href="https://github.com/jpazvd/factortest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/factortest/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank">crtest</a></strong></td>
+      <td><strong><a href="{{ base_path }}/software/crtest/">crtest</a></strong></td>
       <td>Cramer-Ridder pooling test</td>
       <td><code>ssc install crtest</code></td>
       <td><a href="https://github.com/jpazvd/crtest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>

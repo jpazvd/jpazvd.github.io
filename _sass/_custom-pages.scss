@@ -1353,3 +1353,157 @@ html {
   vertical-align: middle;
 }
 
+/* ==========================================================================
+   Social share button extensions
+   ========================================================================== */
+
+.btn--bluesky {
+  background-color: #0085ff;
+  color: #fff;
+  &:hover { background-color: #006acc; }
+}
+
+.btn--whatsapp {
+  background-color: #25d366;
+  color: #fff;
+  &:hover { background-color: #1da851; }
+}
+
+.btn--email {
+  background-color: #666;
+  color: #fff;
+  &:hover { background-color: #444; }
+}
+
+.btn--copy {
+  background-color: #888;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  &:hover { background-color: #666; }
+}
+
+/* Top share bar (above content) */
+.page__share--top {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding-top: 0;
+  border-top: none;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 1em;
+}
+
+/* ==========================================================================
+   Software page components
+   ========================================================================== */
+
+.page__excerpt {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+/* Platform badges row */
+.software-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.software-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.4em 0.9em;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  &:hover { opacity: 0.85; text-decoration: none; }
+
+  svg, i { font-size: 1.1em; }
+}
+
+.software-badge--ssc {
+  background-color: #1a476f;
+  color: #fff;
+}
+
+.software-badge--cran {
+  background-color: #2166ac;
+  color: #fff;
+}
+
+.software-badge--pypi {
+  background-color: #3776ab;
+  color: #fff;
+}
+
+.software-badge--github {
+  background-color: #24292e;
+  color: #fff;
+}
+
+.software-badge--issues {
+  background-color: #d73a49;
+  color: #fff;
+}
+
+/* Install command blocks */
+.software-install {
+  background: #f6f8fa;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  margin-bottom: 1.5em;
+
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+}
+
+.install-block {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.4em;
+
+  &:last-child { margin-bottom: 0; }
+
+  code {
+    background: #fff;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+    flex: 1;
+  }
+}
+
+.install-label {
+  font-weight: 700;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  min-width: 4em;
+  color: #555;
+}
+
+/* Example figures in software pages */
+.software-example {
+  margin: 1.5em 0;
+  img {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    max-width: 100%;
+  }
+  figcaption {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0.4em;
+  }
+}
+
