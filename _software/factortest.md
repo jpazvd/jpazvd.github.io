@@ -34,7 +34,7 @@ factortest evaluates whether factor analysis is suitable for a given dataset by 
 
 ```stata
 * Bartlett's sphericity and KMO tests
-factortest price mpg rep78 rep77 hdroom rseat trunk
+factortest price mpg rep78 rep77 headroom rseat trunk
 ```
 
 ## Citation

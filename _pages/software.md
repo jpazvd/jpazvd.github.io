@@ -52,17 +52,17 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Tool</th>
+      <th class="jp-col-name">Tool</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/wbopendata/">wbopendata</a></strong></td>
       <td>Access 29,000+ indicators from 51 World Bank databases directly from Stata, covering 296 countries from 1960 to present</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/wbopendata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
     <tr>
@@ -78,7 +78,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
     <tr>
       <td><strong><a href="https://github.com/worldbank/datalibweb" target="_blank">datalibweb</a></strong></td>
       <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
-      <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="ssc install datalibweb">SSC</a></td>
+      <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="Available on GitHub"><span class="jp-lang-icon jp-lang-icon--stata">S</span>GitHub</a></td>
       <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
   </tbody>
@@ -94,67 +94,67 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Module</th>
+      <th class="jp-col-name">Module</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
-      <th><i class="fas fa-bug"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fas fa-bug"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/ainequal/">ainequal</a></strong></td>
       <td>Compute inequality and concentration indices with analytical standard errors</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank" title="ssc install ainequal">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank" title="ssc install ainequal"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/ainequal" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/ainequal/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/apoverty/">apoverty</a></strong></td>
       <td>FGT and other poverty measures with standard errors and hypothesis tests</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank" title="ssc install apoverty">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank" title="ssc install apoverty"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/apoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/apoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/mpovline/">mpovline</a></strong></td>
       <td>Poverty measures at multiple poverty lines simultaneously</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457565.html" target="_blank" title="ssc install mpovline">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457565.html" target="_blank" title="ssc install mpovline"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/mpovline" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/mpovline/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/isopoverty/">isopoverty</a></strong></td>
       <td>Graph iso-poverty curves showing growth-redistribution tradeoffs</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank" title="ssc install isopoverty">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank" title="ssc install isopoverty"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/isopoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/isopoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/alorenz/">alorenz</a></strong></td>
       <td>Graph Lorenz and concentration curves with confidence intervals</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank" title="ssc install alorenz">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank" title="ssc install alorenz"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/alorenz" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/alorenz/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/hoi/">hoi</a></strong></td>
       <td>Human Opportunity Index for measuring inequality of opportunity (Barros et al.)</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457191.html" target="_blank" title="ssc install hoi">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457191.html" target="_blank" title="ssc install hoi"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/hoi" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/hoi/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/mol/">mol</a></strong></td>
       <td>Measure of effective literacy using the Basu-Foster framework</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank" title="ssc install mol">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank" title="ssc install mol"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/mol" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/mol/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="https://github.com/jpazvd/groupdata" target="_blank">groupdata</a></strong></td>
       <td>Poverty and inequality estimation from grouped or tabulated data</td>
-      <td><a href="https://github.com/jpazvd/groupdata" target="_blank" title="Available on GitHub">GitHub</a></td>
+      <td><a href="https://github.com/jpazvd/groupdata" target="_blank" title="Available on GitHub"><span class="jp-lang-icon jp-lang-icon--stata">S</span>GitHub</a></td>
       <td><a href="https://github.com/jpazvd/groupdata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/groupdata/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
@@ -167,46 +167,46 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Module</th>
+      <th class="jp-col-name">Module</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
-      <th><i class="fas fa-bug"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fas fa-bug"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/adecomp/">adecomp</a></strong></td>
       <td>Shapley decomposition of changes in poverty and inequality indicators</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457562.html" target="_blank" title="ssc install adecomp">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457562.html" target="_blank" title="ssc install adecomp"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/adecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/adecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/drdecomp/">drdecomp</a></strong></td>
       <td>Datt-Ravallion decomposition of poverty changes into growth and redistribution</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457563.html" target="_blank" title="ssc install drdecomp">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457563.html" target="_blank" title="ssc install drdecomp"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/drdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/drdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/skdecomp/">skdecomp</a></strong></td>
       <td>Shapley value decomposition of changes in the income distribution</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457564.html" target="_blank" title="ssc install skdecomp">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457564.html" target="_blank" title="ssc install skdecomp"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/skdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/skdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/dfl/">dfl</a></strong></td>
       <td>DiNardo-Fortin-Lemieux counterfactual density decomposition</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s449001.html" target="_blank" title="ssc install dfl">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s449001.html" target="_blank" title="ssc install dfl"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/dfl" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/dfl/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/changemean/">changemean</a></strong></td>
       <td>Decompose poverty changes into growth and distributional effects</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank" title="ssc install changemean">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank" title="ssc install changemean"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/changemean" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/changemean/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
@@ -219,25 +219,25 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Module</th>
+      <th class="jp-col-name">Module</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
-      <th><i class="fas fa-bug"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fas fa-bug"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/sae/">sae</a></strong></td>
       <td>Unit-level small area estimation for poverty mapping using the ELL methodology</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank" title="ssc install sae">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank" title="ssc install sae"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/sae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/sae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/fhsae/">fhsae</a></strong></td>
       <td>Fay-Herriot area-level EBLUP small area estimation methods</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank" title="ssc install fhsae">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank" title="ssc install fhsae"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/fhsae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/fhsae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
@@ -250,46 +250,46 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Module</th>
+      <th class="jp-col-name">Module</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
-      <th><i class="fas fa-bug"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fas fa-bug"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/grqreg/">grqreg</a></strong></td>
       <td>Graph quantile regression coefficients across the distribution</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank" title="ssc install grqreg">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank" title="ssc install grqreg"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/grqreg" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/grqreg/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/factortest/">factortest</a></strong></td>
       <td>Bartlett and Kaiser-Meyer-Olkin tests for factor analysis suitability</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank" title="ssc install factortest">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank" title="ssc install factortest"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/factortest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/factortest/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/crtest/">crtest</a></strong></td>
-      <td>Cramer-Ridder test for pooling states in duration models</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank" title="ssc install crtest">SSC</a></td>
+      <td>Cramer-Ridder test for pooling states in multinomial logit models</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank" title="ssc install crtest"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/crtest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/crtest/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/turnbull/">turnbull</a></strong></td>
       <td>Turnbull nonparametric estimator for willingness-to-pay from contingent valuation</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank" title="ssc install turnbull">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank" title="ssc install turnbull"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/turnbull" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/turnbull/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/spike/">spike</a></strong></td>
       <td>Spike model for zero willingness-to-pay in contingent valuation surveys</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank" title="ssc install spike">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank" title="ssc install spike"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/spike" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/spike/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
@@ -302,41 +302,48 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Module</th>
+      <th class="jp-col-name">Module</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
-      <th><i class="fas fa-bug"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fas fa-bug"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/wbopendata/">wbopendata</a></strong></td>
       <td>Access 29,000+ World Bank indicators from 51 databases via Stata</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/wbopendata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/wbopendata/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/unicefdata-stata/">unicefdata</a></strong></td>
       <td>Download UNICEF child welfare indicators via SDMX API</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s459598.html" target="_blank" title="ssc install unicefdata">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s459598.html" target="_blank" title="ssc install unicefdata"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/unicef-drp/unicefData/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/groupfunction/">groupfunction</a></strong></td>
       <td>Fast replacement for collapse supporting multiple aggregation functions</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank" title="ssc install groupfunction">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank" title="ssc install groupfunction"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/groupfunction" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/groupfunction/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/outtable/">outtable</a></strong></td>
       <td>Export Stata matrix to LaTeX table with formatting options</td>
-      <td><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank" title="ssc install outtable">SSC</a></td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank" title="ssc install outtable"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
       <td><a href="https://github.com/jpazvd/outtable" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/outtable/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/yaml/">yaml</a></strong></td>
+      <td>Read, write, and manipulate YAML configuration files for reproducible workflows</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s459607.html" target="_blank" title="ssc install yaml"><span class="jp-lang-icon jp-lang-icon--stata">S</span>SSC</a></td>
+      <td><a href="https://github.com/jpazvd/yaml" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/yaml/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
   </tbody>
 </table>
@@ -352,17 +359,17 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Package</th>
+      <th class="jp-col-name">Package</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/unicefdata-r/">unicefData</a></strong></td>
       <td>Download UNICEF child welfare indicators via SDMX API with consistent R interface</td>
-      <td><a href="https://cran.r-project.org/package=unicefData" target="_blank" title="install.packages('unicefData')">CRAN</a></td>
+      <td><a href="https://cran.r-project.org/package=unicefData" target="_blank" title="install.packages('unicefData')"><i class="fab fa-r-project jp-lang-icon"></i>CRAN</a></td>
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
   </tbody>
@@ -375,23 +382,23 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Package</th>
+      <th class="jp-col-name">Package</th>
       <th>Description</th>
-      <th><i class="fas fa-download"></i></th>
-      <th><i class="fab fa-github"></i></th>
+      <th class="jp-col-dl"><i class="fas fa-download"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/unicefdata-python/">unicefdata</a></strong></td>
       <td>Download UNICEF child welfare indicators via SDMX API with consistent Python interface</td>
-      <td><a href="https://pypi.org/project/unicefdata/" target="_blank" title="pip install unicefdata">PyPI</a></td>
+      <td><a href="https://pypi.org/project/unicefdata/" target="_blank" title="pip install unicefdata"><i class="fab fa-python jp-lang-icon"></i>PyPI</a></td>
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="https://github.com/jpazvd/wb-api-repo" target="_blank">wb-api-repo</a></strong></td>
       <td>World Bank API data extraction scripts in Python</td>
-      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank" title="Available on GitHub">GitHub</a></td>
+      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank" title="Available on GitHub"><i class="fab fa-python jp-lang-icon"></i>GitHub</a></td>
       <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
   </tbody>
@@ -408,9 +415,9 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Project</th>
+      <th class="jp-col-name">Project</th>
       <th>Description</th>
-      <th><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>
@@ -437,9 +444,9 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Project</th>
+      <th class="jp-col-name">Project</th>
       <th>Description</th>
-      <th><i class="fab fa-github"></i></th>
+      <th class="jp-col-icon"><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>

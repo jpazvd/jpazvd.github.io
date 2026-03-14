@@ -59,9 +59,11 @@ I hold a PhD in Economics from Newcastle University and am an elected member of 
 <h2>Recent Writing</h2>
 <div class="jp-featured-list">
   {% for post in site.posts limit:3 %}
-  <div class="jp-featured-item">
-    <span class="jp-featured-item__type">{{ post.date | date: "%b %Y" }}</span>
-    <a href="{{ post.url }}" class="jp-featured-item__title">{{ post.title }}</a>
+  <div class="jp-featured-item jp-featured-item--stacked">
+    <div class="jp-featured-item__header">
+      <span class="jp-featured-item__type">{{ post.date | date: "%b %Y" }}</span>
+      <a href="{{ post.url }}" class="jp-featured-item__title">{{ post.title }}</a>
+    </div>
     <span class="jp-featured-item__desc">{{ post.excerpt | strip_html | truncate: 120 }}</span>
   </div>
   {% endfor %}
