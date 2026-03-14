@@ -8,7 +8,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 
 {% include base_path %}
 
-<p>Open-source tools and Stata modules I have developed for data analysis, poverty measurement, and accessing World Bank data.</p>
+<p>Open-source tools for data analysis, poverty measurement, and accessing international development data — available on SSC/RePEc, CRAN, and PyPI.</p>
 
 <!-- Software Metrics Banner - matching Publications page style -->
 <div class="citation-metrics jp-gradient-banner">
@@ -46,26 +46,57 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 
 <hr>
 
+<!-- Featured Data Access Tools -->
+<h2>Featured Data Access Tools</h2>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/wbopendata/">wbopendata</a></strong></td>
+      <td>Access 29,000+ indicators from 51 World Bank databases directly from Stata, covering 296 countries from 1960 to present</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/wbopendata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong>unicefData</strong></td>
+      <td>Trilingual library for downloading UNICEF child welfare indicators via SDMX API with cross-language test parity</td>
+      <td>
+        <a href="{{ base_path }}/software/unicefdata-r/">R</a> ·
+        <a href="{{ base_path }}/software/unicefdata-python/">Py</a> ·
+        <a href="{{ base_path }}/software/unicefdata-stata/">Stata</a>
+      </td>
+      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/worldbank/datalibweb" target="_blank">datalibweb</a></strong></td>
+      <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
+      <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="ssc install datalibweb">SSC</a></td>
+      <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
 <h2>Stata Modules on SSC</h2>
 
-<h3><a href="{{ base_path }}/software/wbopendata/">WBOPENDATA</a></h3>
-<p>
-  Access over 29,000 indicators from 51 World Bank databases directly from Stata, covering 296 countries and regions from 1960 to present. Supports five download modes, multilingual metadata (EN/ES/FR), and wide or long output formats.
-</p>
-<ul>
-  <li><strong>Install:</strong> <code>ssc install wbopendata</code></li>
-  <li><a href="https://github.com/jpazvd/wbopendata" target="_blank">GitHub Repository</a> · <a href="https://github.com/jpazvd/wbopendata/issues/new" target="_blank">Report bugs / Request features</a></li>
-  <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-databases" target="_blank">Documentation</a></li>
-</ul>
-
-<h3>All Stata Modules</h3>
+<!-- Poverty, Inequality & Welfare -->
+<h3>Poverty, Inequality & Welfare</h3>
 
 <table class="jp-table">
   <thead>
     <tr>
       <th>Module</th>
       <th>Description</th>
-      <th>Install</th>
+      <th><i class="fas fa-download"></i></th>
       <th><i class="fab fa-github"></i></th>
       <th><i class="fas fa-bug"></i></th>
     </tr>
@@ -73,150 +104,239 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/ainequal/">ainequal</a></strong></td>
-      <td>Inequality measures</td>
-      <td><code>ssc install ainequal</code></td>
+      <td>Compute inequality and concentration indices with analytical standard errors</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456748.html" target="_blank" title="ssc install ainequal">SSC</a></td>
       <td><a href="https://github.com/jpazvd/ainequal" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/ainequal/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/apoverty/">apoverty</a></strong></td>
-      <td>Poverty measures</td>
-      <td><code>ssc install apoverty</code></td>
+      <td>FGT and other poverty measures with standard errors and hypothesis tests</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456750.html" target="_blank" title="ssc install apoverty">SSC</a></td>
       <td><a href="https://github.com/jpazvd/apoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/apoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
+      <td><strong><a href="{{ base_path }}/software/mpovline/">mpovline</a></strong></td>
+      <td>Poverty measures at multiple poverty lines simultaneously</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457565.html" target="_blank" title="ssc install mpovline">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/mpovline" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/mpovline/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/isopoverty/">isopoverty</a></strong></td>
+      <td>Graph iso-poverty curves showing growth-redistribution tradeoffs</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456752.html" target="_blank" title="ssc install isopoverty">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/isopoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/isopoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/alorenz/">alorenz</a></strong></td>
+      <td>Graph Lorenz and concentration curves with confidence intervals</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456749.html" target="_blank" title="ssc install alorenz">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/alorenz" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/alorenz/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/hoi/">hoi</a></strong></td>
+      <td>Human Opportunity Index for measuring inequality of opportunity (Barros et al.)</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457191.html" target="_blank" title="ssc install hoi">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/hoi" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/hoi/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/mol/">mol</a></strong></td>
+      <td>Measure of effective literacy using the Basu-Foster framework</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456987.html" target="_blank" title="ssc install mol">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/mol" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/mol/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/groupdata" target="_blank">groupdata</a></strong></td>
+      <td>Poverty and inequality estimation from grouped or tabulated data</td>
+      <td><a href="https://github.com/jpazvd/groupdata" target="_blank" title="Available on GitHub">GitHub</a></td>
+      <td><a href="https://github.com/jpazvd/groupdata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/groupdata/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Decomposition Methods -->
+<h3>Decomposition Methods</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+      <th><i class="fas fa-bug"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td><strong><a href="{{ base_path }}/software/adecomp/">adecomp</a></strong></td>
-      <td>Shapley decomposition</td>
-      <td><code>ssc install adecomp</code></td>
+      <td>Shapley decomposition of changes in poverty and inequality indicators</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457562.html" target="_blank" title="ssc install adecomp">SSC</a></td>
       <td><a href="https://github.com/jpazvd/adecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/adecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/drdecomp/">drdecomp</a></strong></td>
-      <td>Datt-Ravallion decomposition</td>
-      <td><code>ssc install drdecomp</code></td>
+      <td>Datt-Ravallion decomposition of poverty changes into growth and redistribution</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457563.html" target="_blank" title="ssc install drdecomp">SSC</a></td>
       <td><a href="https://github.com/jpazvd/drdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/drdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/skdecomp/">skdecomp</a></strong></td>
-      <td>Shapley-Kelkar decomposition</td>
-      <td><code>ssc install skdecomp</code></td>
+      <td>Shapley value decomposition of changes in the income distribution</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457564.html" target="_blank" title="ssc install skdecomp">SSC</a></td>
       <td><a href="https://github.com/jpazvd/skdecomp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/skdecomp/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="{{ base_path }}/software/mpovline/">mpovline</a></strong></td>
-      <td>Multiple poverty lines</td>
-      <td><code>ssc install mpovline</code></td>
-      <td><a href="https://github.com/jpazvd/mpovline" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/mpovline/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+      <td><strong><a href="{{ base_path }}/software/dfl/">dfl</a></strong></td>
+      <td>DiNardo-Fortin-Lemieux counterfactual density decomposition</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s449001.html" target="_blank" title="ssc install dfl">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/dfl" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/dfl/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="{{ base_path }}/software/groupfunction/">groupfunction</a></strong></td>
-      <td>Collapse with multiple functions</td>
-      <td><code>ssc install groupfunction</code></td>
-      <td><a href="https://github.com/jpazvd/groupfunction" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/groupfunction/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+      <td><strong><a href="{{ base_path }}/software/changemean/">changemean</a></strong></td>
+      <td>Decompose poverty changes into growth and distributional effects</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s456751.html" target="_blank" title="ssc install changemean">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/changemean" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/changemean/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
+  </tbody>
+</table>
+
+<!-- Small Area Estimation -->
+<h3>Small Area Estimation</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+      <th><i class="fas fa-bug"></i></th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/sae/">sae</a></strong></td>
-      <td>Small area estimation</td>
-      <td><code>ssc install sae</code></td>
+      <td>Unit-level small area estimation for poverty mapping using the ELL methodology</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458525.html" target="_blank" title="ssc install sae">SSC</a></td>
       <td><a href="https://github.com/jpazvd/sae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/sae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/fhsae/">fhsae</a></strong></td>
-      <td>Fay-Herriot small area estimation</td>
-      <td><code>ssc install fhsae</code></td>
+      <td>Fay-Herriot area-level EBLUP small area estimation methods</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458495.html" target="_blank" title="ssc install fhsae">SSC</a></td>
       <td><a href="https://github.com/jpazvd/fhsae" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/fhsae/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
+  </tbody>
+</table>
+
+<!-- Econometrics & Estimation -->
+<h3>Econometrics & Estimation</h3>
+
+<table class="jp-table">
+  <thead>
     <tr>
-      <td><strong><a href="{{ base_path }}/software/hoi/">hoi</a></strong></td>
-      <td>Human Opportunity Index</td>
-      <td><code>ssc install hoi</code></td>
-      <td><a href="https://github.com/jpazvd/hoi" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/hoi/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+      <th>Module</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+      <th><i class="fas fa-bug"></i></th>
     </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/dfl/">dfl</a></strong></td>
-      <td>DiNardo-Fortin-Lemieux decomposition</td>
-      <td><code>ssc install dfl</code></td>
-      <td><a href="https://github.com/jpazvd/dfl" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/dfl/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/grqreg/">grqreg</a></strong></td>
-      <td>Graphical quantile regression</td>
-      <td><code>ssc install grqreg</code></td>
+      <td>Graph quantile regression coefficients across the distribution</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s437001.html" target="_blank" title="ssc install grqreg">SSC</a></td>
       <td><a href="https://github.com/jpazvd/grqreg" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/grqreg/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
-      <td><strong><a href="{{ base_path }}/software/outtable/">outtable</a></strong></td>
-      <td>Export matrix to LaTeX table</td>
-      <td><code>ssc install outtable</code></td>
-      <td><a href="https://github.com/jpazvd/outtable" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/outtable/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/alorenz/">alorenz</a></strong></td>
-      <td>Lorenz and concentration curves</td>
-      <td><code>ssc install alorenz</code></td>
-      <td><a href="https://github.com/jpazvd/alorenz" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/alorenz/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/isopoverty/">isopoverty</a></strong></td>
-      <td>Iso-poverty curves</td>
-      <td><code>ssc install isopoverty</code></td>
-      <td><a href="https://github.com/jpazvd/isopoverty" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/isopoverty/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/changemean/">changemean</a></strong></td>
-      <td>Mean vs distribution effects</td>
-      <td><code>ssc install changemean</code></td>
-      <td><a href="https://github.com/jpazvd/changemean" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/changemean/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/mol/">mol</a></strong></td>
-      <td>Effective literacy index (Basu-Foster)</td>
-      <td><code>ssc install mol</code></td>
-      <td><a href="https://github.com/jpazvd/mol" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/mol/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/turnbull/">turnbull</a></strong></td>
-      <td>Willingness-to-pay estimation</td>
-      <td><code>ssc install turnbull</code></td>
-      <td><a href="https://github.com/jpazvd/turnbull" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/turnbull/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="{{ base_path }}/software/spike/">spike</a></strong></td>
-      <td>Zero willingness-to-pay</td>
-      <td><code>ssc install spike</code></td>
-      <td><a href="https://github.com/jpazvd/spike" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
-      <td><a href="https://github.com/jpazvd/spike/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
-    </tr>
-    <tr>
       <td><strong><a href="{{ base_path }}/software/factortest/">factortest</a></strong></td>
-      <td>Tests for factor analysis</td>
-      <td><code>ssc install factortest</code></td>
+      <td>Bartlett and Kaiser-Meyer-Olkin tests for factor analysis suitability</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s436001.html" target="_blank" title="ssc install factortest">SSC</a></td>
       <td><a href="https://github.com/jpazvd/factortest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/factortest/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="{{ base_path }}/software/crtest/">crtest</a></strong></td>
-      <td>Cramer-Ridder pooling test</td>
-      <td><code>ssc install crtest</code></td>
+      <td>Cramer-Ridder test for pooling states in duration models</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s433202.html" target="_blank" title="ssc install crtest">SSC</a></td>
       <td><a href="https://github.com/jpazvd/crtest" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
       <td><a href="https://github.com/jpazvd/crtest/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/turnbull/">turnbull</a></strong></td>
+      <td>Turnbull nonparametric estimator for willingness-to-pay from contingent valuation</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457125.html" target="_blank" title="ssc install turnbull">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/turnbull" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/turnbull/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/spike/">spike</a></strong></td>
+      <td>Spike model for zero willingness-to-pay in contingent valuation surveys</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457126.html" target="_blank" title="ssc install spike">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/spike" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/spike/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Data Management & Utilities -->
+<h3>Data Management & Utilities</h3>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+      <th><i class="fas fa-bug"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/wbopendata/">wbopendata</a></strong></td>
+      <td>Access 29,000+ World Bank indicators from 51 databases via Stata</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s457234.html" target="_blank" title="ssc install wbopendata">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/wbopendata" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/wbopendata/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/unicefdata-stata/">unicefdata</a></strong></td>
+      <td>Download UNICEF child welfare indicators via SDMX API</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s459598.html" target="_blank" title="ssc install unicefdata">SSC</a></td>
+      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/unicef-drp/unicefData/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/groupfunction/">groupfunction</a></strong></td>
+      <td>Fast replacement for collapse supporting multiple aggregation functions</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s458475.html" target="_blank" title="ssc install groupfunction">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/groupfunction" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/groupfunction/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/outtable/">outtable</a></strong></td>
+      <td>Export Stata matrix to LaTeX table with formatting options</td>
+      <td><a href="https://ideas.repec.org/c/boc/bocode/s419501.html" target="_blank" title="ssc install outtable">SSC</a></td>
+      <td><a href="https://github.com/jpazvd/outtable" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+      <td><a href="https://github.com/jpazvd/outtable/issues/new" target="_blank" title="Report bug or request feature"><i class="fas fa-bug"></i></a></td>
     </tr>
   </tbody>
 </table>
@@ -227,48 +347,61 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 
 <hr>
 
-<h2>Data Platforms & Research Infrastructure</h2>
-
-<p>Institutional projects I have led or co-developed for data access, education measurement, and analytics.</p>
-
-<h3>Data Access Platforms</h3>
+<h2>R Packages on CRAN</h2>
 
 <table class="jp-table">
   <thead>
     <tr>
-      <th>Project</th>
+      <th>Package</th>
       <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
       <th><i class="fab fa-github"></i></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong><a href="https://github.com/unicef-drp/unicefData" target="_blank">unicefData</a></strong></td>
-      <td>Trilingual R, Python, and Stata library for downloading UNICEF child welfare indicators via SDMX API. Provides consistent interfaces across all three languages with cross-language test parity.<br>
-        <strong>Install:</strong>
-        <a href="https://cran.r-project.org/package=unicefData" target="_blank">CRAN</a> ·
-        <a href="https://pypi.org/project/unicefdata/" target="_blank">PyPI</a> ·
-        <a href="https://ideas.repec.org/c/boc/bocode/s459598.html" target="_blank">SSC</a>
-      </td>
-      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank"><i class="fab fa-github"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="https://github.com/jpazvd/wbopendata" target="_blank">wbopendata</a></strong></td>
-      <td>Stata module to access 29,000+ indicators from 51 World Bank databases (also available via <code>ssc install wbopendata</code>)</td>
-      <td><a href="https://github.com/jpazvd/wbopendata" target="_blank"><i class="fab fa-github"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="https://github.com/worldbank/datalibweb" target="_blank">datalibweb</a></strong></td>
-      <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
-      <td><a href="https://github.com/worldbank/datalibweb" target="_blank"><i class="fab fa-github"></i></a></td>
-    </tr>
-    <tr>
-      <td><strong><a href="https://github.com/jpazvd/wb-api-repo" target="_blank">wb-api-repo</a></strong></td>
-      <td>World Bank API data extraction tools</td>
-      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank"><i class="fab fa-github"></i></a></td>
+      <td><strong><a href="{{ base_path }}/software/unicefdata-r/">unicefData</a></strong></td>
+      <td>Download UNICEF child welfare indicators via SDMX API with consistent R interface</td>
+      <td><a href="https://cran.r-project.org/package=unicefData" target="_blank" title="install.packages('unicefData')">CRAN</a></td>
+      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
   </tbody>
 </table>
+
+<hr>
+
+<h2>Python Packages on PyPI</h2>
+
+<table class="jp-table">
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Description</th>
+      <th><i class="fas fa-download"></i></th>
+      <th><i class="fab fa-github"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="{{ base_path }}/software/unicefdata-python/">unicefdata</a></strong></td>
+      <td>Download UNICEF child welfare indicators via SDMX API with consistent Python interface</td>
+      <td><a href="https://pypi.org/project/unicefdata/" target="_blank" title="pip install unicefdata">PyPI</a></td>
+      <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/jpazvd/wb-api-repo" target="_blank">wb-api-repo</a></strong></td>
+      <td>World Bank API data extraction scripts in Python</td>
+      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank" title="Available on GitHub">GitHub</a></td>
+      <td><a href="https://github.com/jpazvd/wb-api-repo" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Other Projects: Reproducible & Scalable Analytics</h2>
+
+<p>Institutional projects I have led or co-developed for reproducible data access, education measurement, and scalable analytics.</p>
 
 <h3>Education & Learning Analytics</h3>
 
@@ -310,11 +443,6 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong><a href="https://github.com/jpazvd/groupdata" target="_blank">groupdata</a></strong></td>
-      <td>Poverty and inequality estimation using grouped data</td>
-      <td><a href="https://github.com/jpazvd/groupdata" target="_blank"><i class="fab fa-github"></i></a></td>
-    </tr>
     <tr>
       <td><strong><a href="https://github.com/jpazvd/package" target="_blank">package</a></strong></td>
       <td>Stata module to create GitHub dissemination packages</td>

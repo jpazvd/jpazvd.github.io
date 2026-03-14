@@ -1492,6 +1492,12 @@ html {
   color: #555;
 }
 
+/* Code examples on software pages: align font size with body text */
+.page__content div.highlighter-rouge .highlight,
+.page__content figure.highlight .highlight {
+  font-size: $type-size-6;  // ~12px → closer to body text than the default ~11px
+}
+
 /* Example figures in software pages */
 .software-example {
   margin: 1.5em 0;

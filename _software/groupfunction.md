@@ -1,6 +1,6 @@
 ---
 title: "GROUPFUNCTION"
-excerpt: "Collapse data with multiple functions applied to different variables simultaneously in Stata."
+excerpt: "Fast replacement for Stata's collapse command supporting multiple aggregation functions simultaneously."
 layout: software-page
 permalink: /software/groupfunction/
 author_profile: true
@@ -18,4 +18,16 @@ install_cmd: "ssc install groupfunction"
 
 ## Description
 
-Collapse data with multiple functions applied to different variables simultaneously in Stata.
+groupfunction replaces several collapse functions (mean, sum, variance, first, max, min). The command is several orders of magnitude faster than Stata's built-in `collapse` command, making it particularly useful for large datasets.
+
+## Examples
+
+```stata
+* Basic usage: mean and min by group
+sysuse auto, clear
+groupfunction [aw=weight], mean(price) min(weight) by(foreign)
+```
+
+## Citation
+
+Corral, P., Nguyen, M.C. and Azevedo, J.P. "GROUPFUNCTION: Stata module to replace several basic collapse functions." *Statistical Software Components* S458475, Boston College Department of Economics.
