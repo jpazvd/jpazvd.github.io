@@ -143,16 +143,14 @@
 
 /* Stacked variant: description below title (used in Recent Writing) */
 .jp-featured-item.jp-featured-item--stacked {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25rem;
+  display: block;
 }
 
 .jp-featured-item--stacked .jp-featured-item__header {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
-  width: 100%;
+  margin-bottom: 0.25rem;
 }
 
 .jp-featured-item--stacked .jp-featured-item__title {
@@ -160,8 +158,7 @@
 }
 
 .jp-featured-item--stacked .jp-featured-item__desc {
-  padding-left: 0;
-  margin-top: 0.15rem;
+  display: block;
   font-size: 0.85rem;
   line-height: 1.4;
 }
