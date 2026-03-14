@@ -54,6 +54,21 @@ I hold a PhD in Economics from Newcastle University and am an elected member of 
 </div>
 {% endif %}
 
+<!-- Recent Posts -->
+{% if site.posts.size > 0 %}
+<h2>Recent Writing</h2>
+<div class="jp-featured-list">
+  {% for post in site.posts limit:3 %}
+  <div class="jp-featured-item">
+    <span class="jp-featured-item__type">{{ post.date | date: "%b %Y" }}</span>
+    <a href="{{ post.url }}" class="jp-featured-item__title">{{ post.title }}</a>
+    <span class="jp-featured-item__desc">{{ post.excerpt | strip_html | truncate: 120 }}</span>
+  </div>
+  {% endfor %}
+</div>
+<p style="margin-top: 0.5em;"><a href="{{ site.baseurl }}/blogs/">View all articles →</a></p>
+{% endif %}
+
 <div class="jp-quick-links">
   <a href="{{ site.baseurl }}/research/">Focus</a>
   <a href="{{ site.baseurl }}/publications/">Publications</a>

@@ -211,6 +211,13 @@ Regular contributor to policy discourse through {{ wb_count }} World Bank blog p
 
 <p class="cv-nav-link"><a href="/blogs/">View all blogs and articles →</a></p>
 
+<div class="jp-quick-links">
+  <a href="/files/cv-joao-pedro-azevedo.pdf" class="btn btn--primary">Download PDF</a>
+  <a href="/publications/">Publications</a>
+  <a href="/softwares/">Software</a>
+  <a href="/contact/">Get in Touch</a>
+</div>
+
 <!--
 ===========================================
 CV AUTO-GENERATION NOTES

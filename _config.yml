@@ -33,6 +33,9 @@ analytics:
     tracking_id          : "G-8K7TMJMKHG"
     anonymize_ip         : false
 
+# Search Console verification
+google_site_verification: "google9242b5e36c167e54"
+
 # Author Info
 author:
   name                   : "João Pedro Azevedo"

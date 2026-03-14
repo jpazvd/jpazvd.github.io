@@ -64,4 +64,14 @@ description: "Teaching and mentoring experience by João Pedro Azevedo in econom
 {% endfor %}
 </div>
 
+<hr />
+
+<h3>Related Resources</h3>
+<p>Open-source tools and materials related to these courses:</p>
+<ul>
+  <li><a href="/softwares/">Data & Analytics Tools</a> — Stata modules for poverty measurement, survey analysis, and econometrics</li>
+  <li><a href="/research/">Focus Areas</a> — Research context behind the topics covered in these courses</li>
+  <li><a href="/publications/">Publications</a> — Papers and working papers used as course readings</li>
+</ul>
+
 <script src="{{ base_path }}/assets/js/teaching-filter.js"></script>

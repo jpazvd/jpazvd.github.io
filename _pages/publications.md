@@ -202,6 +202,17 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
 
 <p class="jp-muted"><em>For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=lTKXA78AAAAJ" target="_blank">Google Scholar</a> or <a href="https://ideas.repec.org/e/pwa88.html" target="_blank">RePEc</a> profiles.</em></p>
 
+<hr class="jp-hr">
+
+<h2>Related Blog Posts</h2>
+<p>Commentary and analysis related to these publications:</p>
+<ul>
+  {% for post in site.posts limit:5 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%b %Y" }}) — {{ post.excerpt | strip_html | truncate: 100 }}</li>
+  {% endfor %}
+</ul>
+<p><a href="{{ base_path }}/blogs/">View all articles →</a></p>
+
 <div class="jp-quick-links">
   <a href="{{ base_path }}/research/">Focus</a>
   <a href="{{ base_path }}/softwares/">Software</a>
