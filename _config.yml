@@ -9,7 +9,7 @@ description              : "João Pedro Azevedo - UNICEF Chief Statistician and 
 url                      : "https://jpazvd.github.io"
 baseurl                  : ""  # set to "/" if deployed on a subpath
 repository               : "jpazvd/jpazvd.github.io"
-teaser                   : "default-teaser.png"
+teaser                   : ""  # no default teaser; each page sets its own
 breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
@@ -63,7 +63,7 @@ social:
     - "https://ideas.repec.org/e/pwa88.html"
 
 # Open Graph default image (for social sharing)
-og_image: "profile.png"
+# og_image: removed to prevent personal photo in share cards
 
 # Reading Files
 include:
