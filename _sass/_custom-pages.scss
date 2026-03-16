@@ -316,15 +316,44 @@
 
 /* Language icon before registry badge in software tables */
 .jp-lang-icon {
-  font-size: 0.85em;
-  margin-right: 0.2em;
-  vertical-align: baseline;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  vertical-align: text-bottom;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.jp-lang-icon::before {
+  content: none;
 }
 
 .jp-lang-icon--stata {
-  font-weight: 700;
-  font-size: 0.75em;
-  color: #1a476f;
+  font-size: 0;
+  background-image: url("/images/software/icon-stata.svg");
+}
+
+.jp-lang-icon--r,
+.fab.fa-r-project.jp-lang-icon {
+  background-image: url("/images/software/icon-R.svg");
+}
+
+.jp-lang-icon--python,
+.fab.fa-python.jp-lang-icon {
+  background-image: url("/images/software/icon-python.svg");
+}
+
+.jp-download-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+}
+
+.jp-download-links a {
+  white-space: nowrap;
 }
 
 .jp-pill--linkedin {
@@ -1551,6 +1580,94 @@ html {
 .page__content div.highlighter-rouge .highlight,
 .page__content figure.highlight .highlight {
   font-size: $type-size-6;  // ~12px → closer to body text than the default ~11px
+}
+
+/* ==========================================================================
+   Email Subscribe Form (Buttondown)
+   ========================================================================== */
+
+.jp-subscribe {
+  background: linear-gradient(135deg, rgba($info-color, 0.08) 0%, rgba($info-color, 0.03) 100%);
+  border: 1px solid rgba($info-color, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.jp-subscribe__title {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  color: mix(#000, $info-color, 35%);
+}
+
+.jp-subscribe__desc {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: $gray;
+}
+
+.jp-subscribe__form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.jp-subscribe__input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  min-width: 0;
+}
+
+.jp-subscribe__input:focus {
+  outline: none;
+  border-color: $info-color;
+  box-shadow: 0 0 0 2px rgba($info-color, 0.2);
+}
+
+.jp-subscribe__btn {
+  padding: 0.6rem 1.25rem;
+  background: $info-color;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.jp-subscribe__btn:hover {
+  background: mix(#000, $info-color, 15%);
+}
+
+.jp-subscribe__note {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: $gray;
+
+  a {
+    color: $gray;
+    margin-left: 0.5rem;
+    &:hover { color: $info-color; }
+  }
+}
+
+@media (max-width: 480px) {
+  .jp-subscribe__form {
+    flex-direction: column;
+  }
+  .jp-subscribe__btn {
+    width: 100%;
+  }
 }
 
 /* Example figures in software pages */

@@ -25,6 +25,23 @@
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
 
+{% assign seo_image = nil %}
+{% if page.header.image %}
+  {% assign seo_image = page.header.image %}
+{% elsif page.layout == "software-page" and page.header.teaser == "/images/software/stata-module.png" %}
+  {% if page.install_r or page.cran_url %}
+    {% assign seo_image = "/images/software/icon-R.png" %}
+  {% elsif page.install_python or page.pypi_url %}
+    {% assign seo_image = "/images/software/icon-python.png" %}
+  {% elsif page.install_cmd or page.ssc_url %}
+    {% assign seo_image = "/images/software/icon-stata.png" %}
+  {% endif %}
+{% elsif page.header.teaser %}
+  {% assign seo_image = page.header.teaser %}
+{% elsif page.header.overlay_image %}
+  {% assign seo_image = page.header.overlay_image %}
+{% endif %}
+
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
 {% if seo_author %}
   {% if seo_author.twitter %}
@@ -59,12 +76,9 @@
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 
-  {% if page.header.image %}
+  {% if seo_image %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-  {% elsif page.header.teaser %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.teaser contains "://" %}{{ page.header.teaser }}{% else %}{{ page.header.teaser | prepend: base_path }}{% endif %}">
+    <meta name="twitter:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
   {% else %}
     <meta name="twitter:card" content="summary">
     {% if site.og_image %}
@@ -87,12 +101,8 @@
   {% endif %}
 {% endif %}
 
-{% if page.header.image %}
-  <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-{% elsif page.header.teaser %}
-  <meta property="og:image" content="{% if page.header.teaser contains "://" %}{{ page.header.teaser }}{% else %}{{ page.header.teaser | prepend: base_path }}{% endif %}">
-{% elsif page.header.overlay_image %}
-  <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% if seo_image %}
+  <meta property="og:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
 {% endif %}
 
 {% if page.date %}
