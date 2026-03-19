@@ -11,6 +11,7 @@ tags:
   - Stata
   - Poverty
   - Visualization
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456752.html"
 github_url: "https://github.com/jpazvd/isopoverty"
 install_cmd: "ssc install isopoverty"

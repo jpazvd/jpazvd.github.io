@@ -11,6 +11,7 @@ tags:
   - Stata
   - Poverty
   - Measurement
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457565.html"
 github_url: "https://github.com/jpazvd/mpovline"
 install_cmd: "ssc install mpovline"

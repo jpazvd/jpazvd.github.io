@@ -11,6 +11,7 @@ tags:
   - Stata
   - Quantile Regression
   - Visualization
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s437001.html"
 github_url: "https://github.com/jpazvd/grqreg"
 install_cmd: "ssc install grqreg"

@@ -11,6 +11,7 @@ tags:
   - Stata
   - Literacy
   - Education
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456987.html"
 github_url: "https://github.com/jpazvd/mol"
 install_cmd: "ssc install mol"

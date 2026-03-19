@@ -11,6 +11,7 @@ tags:
   - Stata
   - Factor Analysis
   - Statistics
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s436001.html"
 github_url: "https://github.com/jpazvd/factortest"
 install_cmd: "ssc install factortest"

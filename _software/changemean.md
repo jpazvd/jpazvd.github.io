@@ -11,6 +11,7 @@ tags:
   - Stata
   - Poverty
   - Decomposition
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456751.html"
 github_url: "https://github.com/jpazvd/changemean"
 install_cmd: "ssc install changemean"

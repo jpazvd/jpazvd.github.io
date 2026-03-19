@@ -11,6 +11,7 @@ tags:
   - Stata
   - Decomposition
   - Poverty
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457564.html"
 github_url: "https://github.com/jpazvd/skdecomp"
 install_cmd: "ssc install skdecomp"

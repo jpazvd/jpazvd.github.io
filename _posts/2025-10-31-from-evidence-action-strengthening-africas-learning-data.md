@@ -12,6 +12,7 @@ tags:
   - UNICEF
   - ADEA
   - MICS
+  - Open Data
 excerpt: "Reflections from the ADEA Triennale 2025 in Accra on building fit-for-purpose, comparable learning assessments across Africa."
 header:
   teaser: "/images/posts/evidence-action-africa-learning-banner.png"  # TODO: save image from your LinkedIn post

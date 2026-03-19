@@ -12,6 +12,7 @@ tags:
   - Decomposition
   - Poverty
   - Inequality
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457562.html"
 github_url: "https://github.com/jpazvd/adecomp"
 install_cmd: "ssc install adecomp"

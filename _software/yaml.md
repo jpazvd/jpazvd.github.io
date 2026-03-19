@@ -11,6 +11,7 @@ tags:
   - Stata
   - Data Management
   - Utilities
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s459607.html"
 github_url: "https://github.com/jpazvd/yaml"
 install_cmd: "ssc install yaml"

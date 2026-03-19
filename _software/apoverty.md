@@ -11,6 +11,7 @@ tags:
   - Stata
   - Poverty
   - Measurement
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456750.html"
 github_url: "https://github.com/jpazvd/apoverty"
 install_cmd: "ssc install apoverty"

@@ -11,6 +11,7 @@ tags:
   - Stata
   - Inequality
   - Poverty
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456748.html"
 github_url: "https://github.com/jpazvd/ainequal"
 install_cmd: "ssc install ainequal"

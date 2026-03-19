@@ -11,6 +11,7 @@ tags:
   - Stata
   - LaTeX
   - Output
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s419501.html"
 github_url: "https://github.com/jpazvd/outtable"
 install_cmd: "ssc install outtable"

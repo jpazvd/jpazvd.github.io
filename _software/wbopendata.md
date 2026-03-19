@@ -12,6 +12,7 @@ tags:
   - World Bank
   - Open Data
   - API
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457234.html"
 github_url: "https://github.com/jpazvd/wbopendata"
 install_cmd: "ssc install wbopendata"

@@ -11,6 +11,7 @@ tags:
   - Child Rights
   - SDGs
   - Statistics
+  - Open Data
 excerpt: "Highlights from UNICEF Data and Analytics Team publications in 2024, covering child mortality, FGM, immunization, and more."
 header:
   teaser: "/images/posts/unicef-analytics-2024-banner.png"  # TODO: save image from your LinkedIn post

@@ -11,6 +11,7 @@ tags:
   - Stata
   - Data Management
   - Utilities
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s458475.html"
 github_url: "https://github.com/jpazvd/groupfunction"
 install_cmd: "ssc install groupfunction"

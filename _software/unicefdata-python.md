@@ -12,6 +12,8 @@ tags:
   - UNICEF
   - SDMX
   - API
+  - Open Data
+  - Reproducibility
 pypi_url: "https://pypi.org/project/unicefdata/"
 github_url: "https://github.com/unicef-drp/unicefData"
 install_python: "pip install unicefdata"

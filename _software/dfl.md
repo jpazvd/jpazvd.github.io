@@ -11,6 +11,7 @@ tags:
   - Stata
   - Decomposition
   - Distribution
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s449001.html"
 github_url: "https://github.com/jpazvd/dfl"
 install_cmd: "ssc install dfl"

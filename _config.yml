@@ -26,6 +26,11 @@ comments:
 twitter:
   username               : "jpazvd"
 
+# Default hashtags appended to every social share (X, Bluesky)
+share_hashtags:
+  - OpenData
+  - Reproducibility
+
 # Analytics
 analytics:
   provider               : "google-gtag"

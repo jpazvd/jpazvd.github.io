@@ -11,6 +11,7 @@ tags:
   - Stata
   - Inequality
   - Opportunity
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457191.html"
 github_url: "https://github.com/jpazvd/hoi"
 install_cmd: "ssc install hoi"

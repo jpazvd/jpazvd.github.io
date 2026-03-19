@@ -11,6 +11,7 @@ tags:
   - Education
   - World Bank
   - Simulations
+  - Open Data
 excerpt: "Simulation scenarios showing potential impacts of COVID-19 school closures on learning poverty in low- and middle-income countries."
 header:
   teaser: "/images/posts/learning-poverty-covid19-banner.png"  # TODO: save image from your LinkedIn post

@@ -11,6 +11,7 @@ tags:
   - Stata
   - Small Area Estimation
   - Fay-Herriot
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s458495.html"
 github_url: "https://github.com/jpazvd/fhsae"
 install_cmd: "ssc install fhsae"

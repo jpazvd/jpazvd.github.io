@@ -5,12 +5,28 @@
 {% capture share_title_encoded %}{{ share_title | url_encode }}{% endcapture %}
 {% capture share_url_encoded %}{{ share_url | url_encode }}{% endcapture %}
 
-{% comment %}Build context-specific hashtags from page tags{% endcomment %}
+{% comment %}Build hashtags: site defaults first, then up to 3 page-specific tags (deduped){% endcomment %}
 {% assign share_hashtags = "" %}
-{% if page.tags.size > 0 %}
-  {% for tag in page.tags limit:3 %}
+{% if site.share_hashtags %}
+  {% for tag in site.share_hashtags %}
     {% assign clean_tag = tag | remove: " " %}
     {% assign share_hashtags = share_hashtags | append: "%20%23" | append: clean_tag %}
+  {% endfor %}
+{% endif %}
+{% if page.tags.size > 0 %}
+  {% assign page_tag_count = 0 %}
+  {% for tag in page.tags %}
+    {% if page_tag_count >= 3 %}{% break %}{% endif %}
+    {% assign clean_tag = tag | remove: " " %}
+    {% assign is_default = false %}
+    {% for default_tag in site.share_hashtags %}
+      {% assign clean_default = default_tag | remove: " " %}
+      {% if clean_tag == clean_default %}{% assign is_default = true %}{% endif %}
+    {% endfor %}
+    {% unless is_default %}
+      {% assign share_hashtags = share_hashtags | append: "%20%23" | append: clean_tag %}
+      {% assign page_tag_count = page_tag_count | plus: 1 %}
+    {% endunless %}
   {% endfor %}
 {% endif %}
 

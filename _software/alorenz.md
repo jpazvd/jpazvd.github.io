@@ -11,6 +11,7 @@ tags:
   - Stata
   - Inequality
   - Lorenz Curve
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s456749.html"
 github_url: "https://github.com/jpazvd/alorenz"
 install_cmd: "ssc install alorenz"

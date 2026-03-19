@@ -11,6 +11,7 @@ tags:
   - Stata
   - Testing
   - Multinomial Logit
+  - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s433202.html"
 github_url: "https://github.com/jpazvd/crtest"
 install_cmd: "ssc install crtest"
