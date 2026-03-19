@@ -6,7 +6,7 @@ permalink: /software/unicefdata-stata/
 author_profile: true
 share: true
 header:
-  teaser: /images/software/icon-stata.png
+  teaser: /images/software/banner-stata.png
 tags:
   - Stata
   - UNICEF
