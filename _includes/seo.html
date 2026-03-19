@@ -28,14 +28,6 @@
 {% assign seo_image = nil %}
 {% if page.header.image %}
   {% assign seo_image = page.header.image %}
-{% elsif page.layout == "software-page" and page.header.teaser == "/images/software/stata-module.png" %}
-  {% if page.install_r or page.cran_url %}
-    {% assign seo_image = "/images/software/icon-R.png" %}
-  {% elsif page.install_python or page.pypi_url %}
-    {% assign seo_image = "/images/software/icon-python.png" %}
-  {% elsif page.install_cmd or page.ssc_url %}
-    {% assign seo_image = "/images/software/icon-stata.png" %}
-  {% endif %}
 {% elsif page.header.teaser %}
   {% assign seo_image = page.header.teaser %}
 {% elsif page.header.overlay_image %}
@@ -79,11 +71,11 @@
   {% if seo_image %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
+  {% elsif site.og_image %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ "/images/" | append: site.og_image | prepend: base_path }}">
   {% else %}
     <meta name="twitter:card" content="summary">
-    {% if site.og_image %}
-      <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
-    {% endif %}
   {% endif %}
 
   {% if seo_author_twitter %}
@@ -103,6 +95,8 @@
 
 {% if seo_image %}
   <meta property="og:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
+{% elsif site.og_image %}
+  <meta property="og:image" content="{{ "/images/" | append: site.og_image | prepend: base_path }}">
 {% endif %}
 
 {% if page.date %}

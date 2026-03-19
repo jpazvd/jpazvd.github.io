@@ -13,7 +13,7 @@ tags:
   - World Bank
 excerpt: "How Colombia transformed its poverty measurement through the MESEP process, rebuilding public trust in statistics."
 header:
-  teaser: "https://media.licdn.com/mediaD4E12AQFeIinjTRAQKQ"
+  teaser: "/images/posts/data-matters-statistics-banner.png"  # TODO: save image from your LinkedIn post
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---

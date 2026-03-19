@@ -6,7 +6,7 @@ permalink: /software/unicefdata-r/
 author_profile: true
 share: true
 header:
-  teaser: /images/software/stata-module.png
+  teaser: /images/software/icon-R.png
 tags:
   - Rstats
   - UNICEF

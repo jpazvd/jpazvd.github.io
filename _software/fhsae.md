@@ -6,7 +6,7 @@ permalink: /software/fhsae/
 author_profile: true
 share: true
 header:
-  teaser: /images/software/stata-module.png
+  teaser: /images/software/icon-stata.png
 tags:
   - Stata
   - Small Area Estimation

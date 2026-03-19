@@ -6,7 +6,7 @@ permalink: /software/unicefdata-python/
 author_profile: true
 share: true
 header:
-  teaser: /images/software/stata-module.png
+  teaser: /images/software/icon-python.png
 tags:
   - Pstats
   - UNICEF

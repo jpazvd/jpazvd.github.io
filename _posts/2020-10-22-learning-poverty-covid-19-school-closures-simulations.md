@@ -13,7 +13,7 @@ tags:
   - Simulations
 excerpt: "Simulation scenarios showing potential impacts of COVID-19 school closures on learning poverty in low- and middle-income countries."
 header:
-  teaser: "https://media.licdn.com/mediaC4E12AQE3ijs-eGRsEQ"
+  teaser: "/images/posts/learning-poverty-covid19-banner.png"  # TODO: save image from your LinkedIn post
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---

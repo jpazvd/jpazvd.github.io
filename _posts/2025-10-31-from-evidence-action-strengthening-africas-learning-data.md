@@ -14,7 +14,7 @@ tags:
   - MICS
 excerpt: "Reflections from the ADEA Triennale 2025 in Accra on building fit-for-purpose, comparable learning assessments across Africa."
 header:
-  teaser: "https://media.licdn.com/mediaD4E12AQHjX59zZCsbbg"
+  teaser: "/images/posts/evidence-action-africa-learning-banner.png"  # TODO: save image from your LinkedIn post
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---

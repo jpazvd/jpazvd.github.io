@@ -13,7 +13,7 @@ tags:
   - Statistics
 excerpt: "Highlights from UNICEF Data and Analytics Team publications in 2024, covering child mortality, FGM, immunization, and more."
 header:
-  teaser: "https://media.licdn.com/mediaD4E12AQGWiVDncpoXnw"
+  teaser: "/images/posts/unicef-analytics-2024-banner.png"  # TODO: save image from your LinkedIn post
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---

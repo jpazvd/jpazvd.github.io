@@ -62,8 +62,8 @@ social:
     - "https://orcid.org/0000-0002-3844-215X"
     - "https://ideas.repec.org/e/pwa88.html"
 
-# Open Graph default image (for social sharing)
-# og_image: removed to prevent personal photo in share cards
+# Open Graph default image (for social sharing on pages without a teaser)
+og_image: "og-default-banner.png"
 
 # Reading Files
 include:

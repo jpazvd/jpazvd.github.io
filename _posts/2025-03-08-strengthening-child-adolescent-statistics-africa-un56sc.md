@@ -14,7 +14,7 @@ tags:
   - Children
 excerpt: "Launch of the Africa Expert Group on Child and Adolescent Statistics at the UN 56th Statistical Commission side event."
 header:
-  teaser: "https://media.licdn.com/mediaD4E12AQGid50MYG0kmw"
+  teaser: "/images/posts/child-statistics-africa-un56sc-banner.png"  # TODO: save image from your LinkedIn post
   overlay_color: "#0077B5"
   overlay_filter: "linear-gradient(135deg, rgba(0, 119, 181, 0.9) 0%, rgba(0, 65, 100, 0.95) 100%)"
 ---
