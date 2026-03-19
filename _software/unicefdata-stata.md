@@ -13,7 +13,7 @@ tags:
   - SDMX
   - API
   - Reproducibility
-  - Open Data
+  - opendata
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s459598.html"
 github_url: "https://github.com/unicef-drp/unicefData"
 install_cmd: "ssc install unicefdata"

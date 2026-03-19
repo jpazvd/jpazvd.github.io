@@ -12,7 +12,7 @@ tags:
   - UN56SC
   - Data
   - Children
-  - Open Data
+  - opendata
 excerpt: "Launch of the Africa Expert Group on Child and Adolescent Statistics at the UN 56th Statistical Commission side event."
 header:
   teaser: "/images/posts/child-statistics-africa-un56sc-banner.png"  # TODO: save image from your LinkedIn post

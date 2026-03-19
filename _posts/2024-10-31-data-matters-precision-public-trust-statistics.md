@@ -11,7 +11,7 @@ tags:
   - Colombia
   - MESEP
   - World Bank
-  - Open Data
+  - opendata
 excerpt: "How Colombia transformed its poverty measurement through the MESEP process, rebuilding public trust in statistics."
 header:
   teaser: "/images/posts/data-matters-statistics-banner.png"  # TODO: save image from your LinkedIn post

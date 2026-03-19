@@ -10,7 +10,7 @@ header:
 tags:
   - Stata
   - World Bank
-  - Open Data
+  - opendata
   - API
   - Reproducibility
 ssc_url: "https://ideas.repec.org/c/boc/bocode/s457234.html"

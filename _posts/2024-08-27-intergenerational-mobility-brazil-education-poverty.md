@@ -11,7 +11,7 @@ tags:
   - Poverty
   - Mobility
   - Data Analysis
-  - Open Data
+  - opendata
   - Reproducibility
 excerpt: "Analysis of Brazil's progress in education and poverty reduction across generations using age-period-cohort data."
 header:

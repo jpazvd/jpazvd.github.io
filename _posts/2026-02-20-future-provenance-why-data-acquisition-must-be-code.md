@@ -10,7 +10,7 @@ tags:
   - Reproducibility
   - AI
   - Official Statistics
-  - Open Data
+  - opendata
   - Programmatic Access
 excerpt: "Data acquisition and preparation are not auxiliary tasks. They are methodological acts. And in the age of AI, they must be executable and auditable."
 header:

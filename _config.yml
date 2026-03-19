@@ -28,7 +28,7 @@ twitter:
 
 # Default hashtags appended to every social share (X, Bluesky)
 share_hashtags:
-  - OpenData
+  - opendata
   - Reproducibility
 
 # Analytics

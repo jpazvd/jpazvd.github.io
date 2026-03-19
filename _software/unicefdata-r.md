@@ -12,7 +12,7 @@ tags:
   - UNICEF
   - SDMX
   - API
-  - Open Data
+  - opendata
   - Reproducibility
 cran_url: "https://cran.r-project.org/package=unicefData"
 github_url: "https://github.com/unicef-drp/unicefData"
