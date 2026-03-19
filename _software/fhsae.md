@@ -1,6 +1,6 @@
 ---
 title: "FHSAE"
-excerpt: "Fay-Herriot area-level small area estimation methods (EBLUP) in Stata."
+excerpt: "Produce reliable welfare estimates for small geographic areas or subgroups with limited samples using the Fay-Herriot area-level model, combining survey direct estimates with auxiliary administrative or census data via EBLUP."
 layout: software-page
 permalink: /software/fhsae/
 author_profile: true

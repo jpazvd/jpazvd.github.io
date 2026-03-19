@@ -1,6 +1,6 @@
 ---
 title: "DFL"
-excerpt: "Estimate DiNardo-Fortin-Lemieux counterfactual kernel density decomposition in Stata."
+excerpt: "Construct counterfactual wage or welfare distributions using the DiNardo-Fortin-Lemieux (1996) reweighting approach, isolating the contribution of institutional changes, price effects, and compositional shifts."
 layout: software-page
 permalink: /software/dfl/
 author_profile: true

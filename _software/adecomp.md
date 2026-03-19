@@ -1,6 +1,6 @@
 ---
 title: "ADECOMP"
-excerpt: "Estimate Shapley decomposition by components of a welfare measure."
+excerpt: "Decompose changes in poverty or inequality into contributions by welfare components (e.g. labor income, transfers) using Shapley-Shorrocks averaging, resolving path-dependence in micro-decompositions."
 layout: software-page
 permalink: /software/adecomp/
 author_profile: true

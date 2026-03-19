@@ -1,5 +1,5 @@
 ---
-title: "🚀 Strengthening Child and Adolescent Statistics in Africa | #UN56SC"
+title: "Strengthening Child and Adolescent Statistics in Africa | UN56SC"
 date: 2025-03-08
 permalink: /posts/2025/03/strengthening-child-adolescent-statistics-africa-un56sc/
 categories:

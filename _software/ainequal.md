@@ -1,6 +1,6 @@
 ---
 title: "AINEQUAL"
-excerpt: "Compute a variety of inequality measures from individual-level or grouped data in Stata."
+excerpt: "Compute 12+ inequality indices from micro or grouped data, including Gini, Atkinson, Theil entropy, mean log deviation, Mehran, Piesch, Kakwani, and generalized entropy measures with user-defined sensitivity parameters."
 layout: software-page
 permalink: /software/ainequal/
 author_profile: true

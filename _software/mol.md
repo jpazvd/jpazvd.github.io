@@ -1,6 +1,6 @@
 ---
 title: "MOL"
-excerpt: "Compute the Basu-Foster effective literacy measure accounting for intrahousehold externalities in Stata."
+excerpt: "Go beyond the standard literacy rate by computing the Basu-Foster (1998) effective literacy measure, which accounts for household-level spillovers where a literate member partially extends literacy benefits to illiterate household members."
 layout: software-page
 permalink: /software/mol/
 author_profile: true

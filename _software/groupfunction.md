@@ -1,6 +1,6 @@
 ---
 title: "GROUPFUNCTION"
-excerpt: "Fast replacement for Stata's collapse command supporting multiple aggregation functions simultaneously."
+excerpt: "High-performance data aggregation for large datasets — several orders of magnitude faster than Stata's collapse — computing means, sums, variances, first values, minima, and maxima across groups in a single pass."
 layout: software-page
 permalink: /software/groupfunction/
 author_profile: true

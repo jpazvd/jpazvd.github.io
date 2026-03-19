@@ -1,6 +1,6 @@
 ---
 title: "HOI"
-excerpt: "Compute the Human Opportunity Index for measuring inequality of opportunity in Stata."
+excerpt: "Measure how equitably basic opportunities (education, sanitation, health) are distributed among children using the Human Opportunity Index (HOI), decomposing gaps by coverage rate and inequality across circumstances."
 layout: software-page
 permalink: /software/hoi/
 author_profile: true

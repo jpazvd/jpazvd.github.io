@@ -1,6 +1,6 @@
 ---
 title: "APOVERTY"
-excerpt: "Compute a variety of poverty measures from individual-level or grouped data in Stata."
+excerpt: "Compute 12+ poverty measures from micro or grouped welfare data, including headcount ratio, poverty gap, FGT indices, Watts index, Sen index, Takayama index, and Thon index, with optional bootstrapped standard errors."
 layout: software-page
 permalink: /software/apoverty/
 author_profile: true

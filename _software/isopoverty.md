@@ -1,6 +1,6 @@
 ---
 title: "ISOPOVERTY"
-excerpt: "Generate iso-poverty, inequality-poverty, and growth-poverty curves for analyzing pro-poor growth dynamics in Stata."
+excerpt: "Map the growth-redistribution trade-offs needed to reach a poverty target by plotting iso-poverty, growth-poverty, and inequality-poverty curves — key tools for pro-poor policy analysis."
 layout: software-page
 permalink: /software/isopoverty/
 author_profile: true

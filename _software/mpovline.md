@@ -1,6 +1,6 @@
 ---
 title: "MPOVLINE"
-excerpt: "Calculate FGT0, FGT1 and FGT2 by intervals of multiple poverty thresholds in Stata."
+excerpt: "Calculate poverty headcount, gap, and severity (FGT0–FGT2) simultaneously across a range of poverty lines, enabling welfare-tier analysis of the poor, vulnerable, and middle class in a single command."
 layout: software-page
 permalink: /software/mpovline/
 author_profile: true

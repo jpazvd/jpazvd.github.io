@@ -1,6 +1,6 @@
 ---
 title: "FACTORTEST"
-excerpt: "Perform Bartlett's sphericity test and Kaiser-Meyer-Olkin measure to assess factor analysis suitability in Stata."
+excerpt: "Test whether a correlation matrix is suitable for factor analysis using Bartlett's sphericity test (is the matrix the identity?) and the Kaiser-Meyer-Olkin (KMO) measure of sampling adequacy."
 layout: software-page
 permalink: /software/factortest/
 author_profile: true

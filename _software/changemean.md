@@ -1,6 +1,6 @@
 ---
 title: "CHANGEMEAN"
-excerpt: "Compute the contribution of changes in mean income and distribution on 25 poverty measures in Stata."
+excerpt: "Separate the effect of income growth from distributional change on poverty across 25 welfare measures, covering FGT indices, Watts, Sen, Clark-Ulph-Hemming, and other standard poverty metrics."
 layout: software-page
 permalink: /software/changemean/
 author_profile: true
