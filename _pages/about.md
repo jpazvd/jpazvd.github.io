@@ -73,9 +73,8 @@ I hold a PhD in Economics from Newcastle University and am an elected member of 
 <p style="margin-top: 0.5em;"><a href="{{ site.baseurl }}/blogs/">View all articles →</a></p>
 {% endif %}
 
-<div class="jp-quick-links">
-  <a href="{{ site.baseurl }}/research/">Focus</a>
-  <a href="{{ site.baseurl }}/publications/">Publications</a>
-  <a href="{{ site.baseurl }}/softwares/">Software</a>
-  <a href="{{ site.baseurl }}/blogs/">Writing</a>
+<div class="jp-cta-row">
+  <a href="{{ site.baseurl }}/research/" class="btn btn--primary btn--large">Explore my Research</a>
+  <a href="{{ site.baseurl }}/publications/" class="btn btn--inverse btn--large">Publications</a>
+  <a href="{{ site.baseurl }}/cv/" class="btn btn--inverse btn--large">CV</a>
 </div>

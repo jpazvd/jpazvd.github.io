@@ -2,37 +2,46 @@ document.addEventListener('DOMContentLoaded', function() {
   var username = 'jpazvd';
   var reposPerPage = 100;
   
-  // Load tag data from YAML (passed via Liquid)
+  // Load repo data from YAML (passed via Liquid)
   var repoTagsData = {};
+  var yamlRepos = [];
   try {
     var tagDataEl = document.getElementById('repo-tags-data');
     if (tagDataEl) {
       var tagArray = JSON.parse(tagDataEl.textContent);
       for (var i = 0; i < tagArray.length; i++) {
         repoTagsData[tagArray[i].name] = tagArray[i];
+        // If the entry has full repo data (html_url present), store it
+        if (tagArray[i].html_url) {
+          yamlRepos.push(tagArray[i]);
+        }
       }
     }
   } catch (e) {
     console.warn('Could not parse repo tags data:', e);
   }
-  
+
   // Get tags for a repo
   function getRepoTags(repoName) {
     return repoTagsData[repoName] ? repoTagsData[repoName].tags || [] : [];
   }
-  
+
   // Check if repo is featured
   function isFeatured(repoName) {
     return repoTagsData[repoName] ? repoTagsData[repoName].featured === true : false;
   }
-  
+
   // Check if repo should be hidden
   function isHidden(repoName) {
     return repoTagsData[repoName] ? repoTagsData[repoName].hide === true : false;
   }
-  
-  // Fetch all repos
+
+  // Load repos from pre-built YAML data (instant, no API call)
   function fetchAllRepos() {
+    if (yamlRepos.length > 0) {
+      return Promise.resolve(yamlRepos);
+    }
+    // Fallback to GitHub API if YAML data is not available
     return fetch('https://api.github.com/users/' + username + '/repos?per_page=' + reposPerPage + '&type=public')
       .then(function(response) {
         if (!response.ok) throw new Error('GitHub API error');

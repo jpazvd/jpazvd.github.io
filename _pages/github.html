@@ -90,7 +90,7 @@ description: "Open-source projects and code repositories by João Pedro Azevedo 
 <!-- Pass YAML data to JavaScript -->
 <script id="repo-tags-data" type="application/json">
 {% assign repo_data = site.data.github_repos.repositories %}
-[{% for repo in repo_data %}{"name":"{{ repo.name }}","tags":{{ repo.tags | jsonify }},"featured":{{ repo.featured | default: false }},"hide":{{ repo.hide | default: false }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+[{% for repo in repo_data %}{"name":{{ repo.name | jsonify }},"full_name":{{ repo.full_name | jsonify }},"description":{{ repo.description | jsonify }},"html_url":{{ repo.url | jsonify }},"language":{{ repo.language | jsonify }},"stargazers_count":{{ repo.stars | default: 0 }},"forks_count":{{ repo.forks | default: 0 }},"created_at":{{ repo.created_at | jsonify }},"updated_at":{{ repo.updated_at | jsonify }},"fork":false,"tags":{{ repo.tags | jsonify }},"featured":{{ repo.featured | default: false }},"hide":{{ repo.hide | default: false }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
 </script>
 
 <script src="/assets/js/github-repos.js"></script>
