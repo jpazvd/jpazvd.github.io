@@ -1,0 +1,30 @@
+{% comment %}
+  Email subscribe form (Buttondown).
+  Set site.buttondown_username in _config.yml to activate.
+  Pass optional context: {% include subscribe-form.html context="blog" %}
+{% endcomment %}
+
+{% assign bd_user = site.buttondown_username | default: "jpazvd" %}
+
+<div class="jp-subscribe" id="subscribe">
+  <h3 class="jp-subscribe__title">Stay updated</h3>
+  <p class="jp-subscribe__desc">Occasional updates on new writing, research, and software.</p>
+
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/{{ bd_user }}"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/{{ bd_user }}', 'popupwindow')"
+    class="jp-subscribe__form embeddable-buttondown-form"
+  >
+    <label for="bd-email" class="jp-subscribe__label">Enter your email</label>
+    <input type="email" name="email" id="bd-email" placeholder="your@email.com" required class="jp-subscribe__input" />
+    <button type="submit" class="jp-subscribe__btn">Subscribe</button>
+  </form>
+
+  <p class="jp-subscribe__note">
+    No spam. Unsubscribe anytime.
+    <a href="https://buttondown.com/refer/{{ bd_user }}" target="_blank" rel="noopener noreferrer">Powered by Buttondown</a>
+    <a href="{{ site.url }}/feed.xml" title="RSS feed"><i class="fas fa-rss"></i> RSS</a>
+  </p>
+</div>

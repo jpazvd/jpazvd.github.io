@@ -71,6 +71,8 @@ layout: default
         {% include page__taxonomy.html %}
       </footer>
 
+      {% if page.date %}{% include subscribe-form.html %}{% endif %}
+
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}

@@ -31,6 +31,10 @@ share_hashtags:
   - opendata
   - Reproducibility
 
+# Newsletter (Buttondown RSS-to-email)
+# Sign up at https://buttondown.com then set your username here
+buttondown_username        : "jpazvd"
+
 # Analytics
 analytics:
   provider               : "google-gtag"

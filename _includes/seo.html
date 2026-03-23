@@ -26,12 +26,30 @@
 {% endif %}
 
 {% assign seo_image = nil %}
+{% assign seo_image_alt = nil %}
 {% if page.header.image %}
   {% assign seo_image = page.header.image %}
+  {% assign seo_image_alt = page.title | append: " preview image" %}
+{% elsif page.collection == "software" or page.layout == "software-page" %}
+  {% if page.install_r or page.cran_url %}
+    {% assign seo_image = "/images/software/icon-R.png" %}
+    {% assign seo_image_alt = page.title | append: " R package preview" %}
+  {% elsif page.install_python or page.pypi_url %}
+    {% assign seo_image = "/images/software/icon-python.png" %}
+    {% assign seo_image_alt = page.title | append: " Python package preview" %}
+  {% elsif page.install_cmd or page.ssc_url %}
+    {% assign seo_image = "/images/software/icon-stata.png" %}
+    {% assign seo_image_alt = page.title | append: " Stata module preview" %}
+  {% elsif page.header.teaser %}
+    {% assign seo_image = page.header.teaser %}
+    {% assign seo_image_alt = page.title | append: " software preview image" %}
+  {% endif %}
 {% elsif page.header.teaser %}
   {% assign seo_image = page.header.teaser %}
+  {% assign seo_image_alt = page.title | append: " preview image" %}
 {% elsif page.header.overlay_image %}
   {% assign seo_image = page.header.overlay_image %}
+  {% assign seo_image_alt = page.title | append: " preview image" %}
 {% endif %}
 
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
@@ -71,6 +89,9 @@
   {% if seo_image %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
+    {% if seo_image_alt %}
+      <meta name="twitter:image:alt" content="{{ seo_image_alt | escape_once }}">
+    {% endif %}
   {% elsif site.og_image %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="{{ "/images/" | append: site.og_image | prepend: base_path }}">
@@ -95,6 +116,9 @@
 
 {% if seo_image %}
   <meta property="og:image" content="{% if seo_image contains "://" %}{{ seo_image }}{% else %}{{ seo_image | prepend: base_path }}{% endif %}">
+  {% if seo_image_alt %}
+    <meta property="og:image:alt" content="{{ seo_image_alt | escape_once }}">
+  {% endif %}
 {% elsif site.og_image %}
   <meta property="og:image" content="{{ "/images/" | append: site.og_image | prepend: base_path }}">
 {% endif %}
