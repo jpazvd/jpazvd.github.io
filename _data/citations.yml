@@ -1,12 +1,12 @@
 google_scholar:
   profile_url: https://scholar.google.com/citations?user=lTKXA78AAAAJ
-  total_citations: 5566
+  total_citations: 5609
   h_index: 28
-  i10_index: 60
+  i10_index: 61
   citations_5yr: 3691
   h_index_5yr: 23
   i10_index_5yr: 38
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-23'
   citations_by_year:
     2006: 15
     2007: 32
@@ -16,19 +16,19 @@ google_scholar:
     2011: 59
     2012: 70
     2013: 101
-    2014: 142
+    2014: 143
     2015: 189
     2016: 211
-    2017: 212
-    2018: 289
-    2019: 235
-    2020: 323
-    2021: 606
-    2022: 780
-    2023: 726
-    2024: 639
-    2025: 565
-    2026: 68
+    2017: 214
+    2018: 288
+    2019: 236
+    2020: 324
+    2021: 607
+    2022: 782
+    2023: 731
+    2024: 638
+    2025: 577
+    2026: 86
   publication_count: 20
 repec:
   profile_url: https://ideas.repec.org/e/pwa88.html
@@ -110,7 +110,7 @@ repec:
         url_12mo_downloads: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=ld&item=all&country=us
         url_12mo_abstract_views: https://logec.repec.org/scripts/authorstat.pf?topnum=100&sortby=la&item=all&country=us
   total_works: 180
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-23'
 orcid:
   profile_url: https://orcid.org/0000-0002-3844-215X
   orcid_id: 0000-0002-3844-215X
@@ -123,8 +123,8 @@ world_bank_okr:
   handle: 10986/38780
   publication_count: 34
   profile_linked_count: 29
-  search_count: 34
-  last_updated: '2026-03-09'
+  search_count: 33
+  last_updated: '2026-03-23'
   by_type:
     working_paper: 16
     journal_article: 2
@@ -175,7 +175,7 @@ world_bank_blogs:
   english_posts: 24
   translations: 5
   source_url: https://blogs.worldbank.org/en/team/j/joao-pedro-azevedo
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-23'
   timeline:
     first_year: 2012
     latest_year: 2023

@@ -2,7 +2,7 @@ _metadata:
   author: João Pedro Azevedo
   source: IDEAS/RePEc
   source_url: https://ideas.repec.org/e/pwa88.html
-  last_updated: '2026-03-09T06:24:49.137084+00:00'
+  last_updated: '2026-03-23T06:29:01.412791+00:00'
   total_packages: 24
   note: Auto-generated satellite database. Do not edit manually.
 yaml:
@@ -90,6 +90,15 @@ wbopendata:
   citations: 15
   authors:
   - Joao Pedro  Azevedo
+hoi:
+  title: HOI
+  short_description: Stata module to compute Human Opportunity Index
+  url: https://ideas.repec.org/c/boc/bocode/s457191.html
+  source: IDEAS/RePEc
+  year: '2011'
+  citations: 9
+  authors:
+  - Joao Pedro  Azevedo
 spike:
   title: SPIKE
   short_description: Stata module to allow for a zero willingness to pay
@@ -102,15 +111,6 @@ turnbull:
   short_description: Stata module to estimate the Turnbull empirical distribution estimator of willingness to pay
   url: https://ideas.repec.org/c/boc/bocode/s457125.html
   source: IDEAS/RePEc
-  authors:
-  - Joao Pedro  Azevedo
-hoi:
-  title: HOI
-  short_description: Stata module to compute Human Opportunity Index
-  url: https://ideas.repec.org/c/boc/bocode/s457191.html
-  source: IDEAS/RePEc
-  year: '2011'
-  citations: 9
   authors:
   - Joao Pedro  Azevedo
 mol:
@@ -127,6 +127,14 @@ alorenz:
   source: IDEAS/RePEc
   year: '2021'
   citations: 1
+  authors:
+  - Joao Pedro  Azevedo
+changemean:
+  title: CHANGEMEAN
+  short_description: Stata module to compute Income and Inequality Contribution on Poverty Variation
+  url: https://ideas.repec.org/c/boc/bocode/s456751.html
+  source: IDEAS/RePEc
+  year: '2020'
   authors:
   - Joao Pedro  Azevedo
 isopoverty:
@@ -152,14 +160,6 @@ apoverty:
   url: https://ideas.repec.org/c/boc/bocode/s456750.html
   source: IDEAS/RePEc
   year: '2007'
-  authors:
-  - Joao Pedro  Azevedo
-changemean:
-  title: CHANGEMEAN
-  short_description: Stata module to compute Income and Inequality Contribution on Poverty Variation
-  url: https://ideas.repec.org/c/boc/bocode/s456751.html
-  source: IDEAS/RePEc
-  year: '2020'
   authors:
   - Joao Pedro  Azevedo
 dfl:
