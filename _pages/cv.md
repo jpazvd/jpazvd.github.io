@@ -199,9 +199,8 @@ redirect_from:
 {% for entry in sorted_teaching %}
   {% if entry.role contains "Co-Advisor" or entry.role contains "Committee Member" %}
   <li>
-    <strong>{{ entry.course_title }}</strong>, {{ entry.institution }} ({{ entry.country }})<br>
-    <span class="cv-teaching__meta">{{ entry.role }} • {{ entry.level }}</span><br>
-    <span class="cv-teaching__years">{{ entry.years | join: "–" }}</span>
+    <strong>{{ entry.course_title }}</strong>, {{ entry.institution }} ({{ entry.country }}), {{ entry.years | join: "–" }}<br>
+    <span class="cv-teaching__meta">{{ entry.description | strip_newlines | strip }}</span>
   </li>
   {% endif %}
 {% endfor %}
