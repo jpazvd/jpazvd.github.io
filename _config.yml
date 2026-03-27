@@ -138,8 +138,8 @@ plugins:
   - jekyll-paginate
   - jekyll-relative-links
   - jekyll-readme-index
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
+  # jekyll-default-layout removed: incompatible with Jekyll 4.3.4 + Ruby 3.1 (yaml_file? NoMethodError)
+  # jekyll-titles-from-headings removed: not needed, all pages have explicit titles
 
 # HTML Compression
 compress_html:

@@ -8,8 +8,8 @@ plugins:
   - jekyll-paginate
   - jekyll-relative-links
   - jekyll-readme-index
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
+  # jekyll-default-layout omitted: incompatible with Jekyll 4.3.4 + Ruby 3.1
+  # jekyll-titles-from-headings omitted: not needed, all pages have explicit layout/title
 
 # This file is used only for local/CI builds that need Scholar.
 # Production (GitHub Pages native build) does NOT use this config.

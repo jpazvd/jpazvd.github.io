@@ -13,8 +13,8 @@ gem "jekyll-include-cache", "~> 0.2.1"
 gem "jekyll-paginate", "~> 1.1.0"
 gem "jekyll-relative-links", "~> 0.7.0"
 gem "jekyll-readme-index", "~> 0.3.0"
-gem "jekyll-default-layout", "~> 0.1.5"
-gem "jekyll-titles-from-headings", "~> 0.5.3"
+# jekyll-default-layout removed: incompatible with Jekyll 4.3.4 + Ruby 3.1 (yaml_file? NoMethodError)
+# jekyll-titles-from-headings removed: not needed, all pages have explicit titles
 
 # Required for GitHub Pages compatibility
 gem "kramdown-parser-gfm", "~> 1.1.0"
