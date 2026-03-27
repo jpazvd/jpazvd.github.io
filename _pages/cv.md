@@ -124,6 +124,35 @@ redirect_from:
 
 <p class="cv-nav-link"><a href="/publications/">View full publication record →</a></p>
 
+## Media & Press
+
+<ul>
+<li class="cv-pub">Masood, E, Priyadarshini, S, Pinto, L (2026). "Statistics reach a 'crisis point': nations struggle with a critical lack of data." <em>Nature</em>, 651(8105), 298-300. <a href="https://doi.org/10.1038/d41586-026-00699-2">doi</a></li>
+</ul>
+
+## Software
+
+<p class="cv-citation-summary">
+  {{ site.data.citations.repec.software.count | default: '24' }} Stata modules on SSC/RePEc &bull;
+  {{ site.data.citations.repec.software.downloads_total | default: '26,000+' }} total downloads &bull;
+  Global rank: #{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}.
+  Full list: <a href="/softwares/">Software page</a> |
+  <a href="https://ideas.repec.org/e/pwa88.html#soft" target="_blank">RePEc/IDEAS</a>
+</p>
+
+### Featured Tools
+
+<ul>
+<li class="cv-pub"><strong><a href="https://pypi.org/project/unicefstats-mcp/">unicefstats-mcp</a></strong> — MCP server providing AI assistants access to 790+ UNICEF child-focused indicators across 200+ countries via SDMX API (EQA: 0.984). <em>Python/PyPI.</em></li>
+<li class="cv-pub"><strong><a href="https://github.com/unicef-drp/unicefData">unicefData</a></strong> — Trilingual library (R/Python/Stata) for downloading UNICEF child welfare indicators via SDMX API. v2.4 with query status codes and MRV support. <em>CRAN, PyPI, SSC.</em></li>
+<li class="cv-pub"><strong><a href="https://github.com/jpazvd/wbopendata">WBOPENDATA</a></strong> — Access 29,000+ indicators from 51 World Bank databases directly from Stata. 26,000+ downloads. <em>SSC/RePEc.</em></li>
+<li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457562.html">ADECOMP</a></strong> — Shapley decomposition of changes in poverty and inequality indicators. <em>SSC/RePEc.</em></li>
+<li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457191.html">HOI</a></strong> — Human Opportunity Index for measuring inequality of opportunity. <em>SSC/RePEc.</em></li>
+<li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458525.html">SAE/FHSAE</a></strong> — Unit-level and area-level small area estimation for poverty mapping. <em>SSC/RePEc.</em></li>
+</ul>
+
+<p class="cv-nav-link"><a href="/softwares/">View all software →</a></p>
+
 ## Service and Leadership
 
 <ul>

@@ -13,7 +13,23 @@
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
+            {% if link.children %}
+            <li class="masthead__menu-item masthead__menu-item--has-children">
+              <a href="{{ domain }}{{ link.url }}" class="masthead__dropdown-toggle" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="masthead__dropdown-arrow">&#9662;</span></a>
+              <ul class="masthead__dropdown">
+                {% for child in link.children %}
+                  {% if child.url contains 'http' %}
+                    {% assign child_domain = '' %}
+                  {% else %}
+                    {% assign child_domain = base_path %}
+                  {% endif %}
+                  <li><a href="{{ child_domain }}{{ child.url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>

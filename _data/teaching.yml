@@ -151,6 +151,37 @@ teaching:
 
 
   # ============================================================================
+  # 2019
+  # ============================================================================
+  - id: "tilburg-phd-committee-sandoval-2019"
+    date_start: "2019-12-16"
+    date_end: "2019-12-16"
+    year: 2019
+    years: [2019]
+    institution: "Tilburg University"
+    institution_type: "university"
+    country: "Netherlands"
+    location: "Tilburg, Netherlands"
+    course_title: "Doctoral Committee Member"
+    level: "graduate"
+    role: "Committee Member"
+    role_type: "supervision"
+    affiliation: "World Bank"
+    affiliation_role: "Lead Economist"
+    description: |
+      Member of the promotiecommissie (doctoral committee) for the PhD dissertation
+      of Carlos Eduardo Sandoval Moreno: "Three Essays on Poverty Measurement and
+      Risk Protection" (CentER Dissertation Series, Tilburg University). The dissertation
+      covers asset-based poverty traps in urban Colombia, household income dynamics
+      and convergence-based poverty measurement, and the effect of health insurance
+      types on health outcomes using fuzzy RDD. Promotor: Prof. dr. Arthur van Soest;
+      Copromotor: dr. Martin Salm.
+    student_demographics: "PhD student in Economics, CentER Graduate School"
+    urls:
+      website: https://doi.org/10.26116/center-lis-1938
+    notes: "Defense held 16 December 2019 at Portrettenzaal, Tilburg University"
+    tags: [supervision, poverty, methodology, measurement]
+
   # 2008
   # ============================================================================
   - id: "ibge-masterthesis-supervision-2008"
