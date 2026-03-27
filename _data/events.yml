@@ -62,6 +62,129 @@ events:
   # 2026
   # ============================================================================
 
+- id: measuredev-2026-ai-reliability
+  date: '2026-04-29'
+  year: 2026
+  event: 'MeasureDev Conference 2026: Open Science in the Age of AI'
+  event_type: conference
+  location: Washington D.C., USA
+  venue: World Bank Headquarters
+  scope: international
+  session: 'Transparency in the Age of AI'
+  session_type: panel
+  presentation_title: 'AI Reliability for Official Statistics'
+  abstract: |
+    Presentation on AI reliability for official statistics at the 12th annual
+    Measuring Development Conference, organized by the World Bank, CEGA (UC Berkeley),
+    and the Becker Friedman Institute (University of Chicago). The session, chaired
+    by Julia Lane (NYU), explored transparency, ethics, and interpretability in the
+    context of AI applications for development data and official statistics.
+  role: Speaker
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  participants:
+  - name: Julia Lane
+    org: NYU Wagner School
+    role: chair
+  - name: João Pedro Azevedo
+    org: UNICEF
+    role: speaker
+  - name: Virginia Ziulu
+    org: World Bank
+    role: speaker
+  - name: Silvia Arini
+    org: Statistics Indonesia
+    role: speaker
+  organizers:
+  - World Bank Group
+  - Center for Effective Global Action (CEGA), UC Berkeley
+  - Becker Friedman Institute, University of Chicago
+  urls:
+    event: https://www.worldbank.org/en/events/2026/04/29/measuredev-conference-2026
+    session: https://www.worldbank.org/en/events/2026/04/29/measuredev-conference-2026#tabs-85e9c955c0-item-8bae38801f-tab
+  tags:
+  - statistics
+  - digital
+  - governance
+
+- id: cies-2026-beyond-classrooms
+  date: '2026-03-28'
+  year: 2026
+  event: 'CIES 2026 — Comparative and International Education Society Annual Conference'
+  event_type: conference
+  location: San Francisco, USA
+  venue: Hilton San Francisco Union Square, Floor 4, Union Square 20
+  scope: international
+  session: 'Beyond Classrooms: Measuring Learning Through Household Surveys'
+  session_type: panel
+  role: Moderator
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  participants:
+  - name: Martin Gustafsson
+    org: Stellenbosch University
+    title: Researcher, Department of Economics
+    role: panelist
+  - name: Baela R. Jamil
+    org: ITA
+    title: CEO
+    role: panelist
+  - name: Michelle Kaffenberger
+    org: What Works Hub
+    title: Director, Evidence Translation
+    role: panelist
+  - name: Daniel A. Wagner
+    org: UNESCO
+    title: Professor, Special Advisor to the Director-General
+    role: panelist
+  organizers:
+  - UNICEF Office of the Chief Statistician
+  tags:
+  - learning
+  - statistics
+
+- id: cies-2026-flm-training
+  date: '2026-03-30'
+  year: 2026
+  event: 'CIES 2026 — Comparative and International Education Society Annual Conference'
+  event_type: conference
+  location: San Francisco, USA
+  venue: Hilton San Francisco Union Square, Ballroom Level, Continental 2
+  scope: international
+  session: "Household Surveys for Learning Outcomes: Training on UNICEF's Foundational Learning Module"
+  session_type: workshop
+  role: Organizer
+  role_type: organizer
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  organizers:
+  - UNICEF Office of the Chief Statistician
+  tags:
+  - learning
+  - statistics
+
+- id: cies-2026-data-foundational-learning
+  date: '2026-04-01'
+  year: 2026
+  event: 'CIES 2026 — Comparative and International Education Society Annual Conference'
+  event_type: conference
+  location: San Francisco, USA
+  venue: Hilton San Francisco Union Square, Floor 6, Nob Hill 1
+  scope: international
+  session: "Data for Foundational Learning: What Do Recent Efforts Tell Us? Insights from AMPL, ICAN-ICAR, PASEC, and UNICEF's FLM 2.0"
+  session_type: panel
+  role: Speaker
+  role_type: invited
+  affiliation: UNICEF
+  affiliation_role: Chief Statistician; Deputy Director, DAPM
+  organizers:
+  - UNICEF Office of the Chief Statistician
+  tags:
+  - learning
+  - statistics
+
 - id: unsc57-ai-readiness-2026
   date: '2026-02-27'
   year: 2026

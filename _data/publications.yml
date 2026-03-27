@@ -785,6 +785,30 @@ working_papers:
   sources:
   - okr
 journal_articles:
+- id: cojocaru-2026-covid-intergenerational-mobility
+  type: journal_article
+  authors:
+  - Cojocaru, Alexandru
+  - Azevedo, João Pedro
+  - Narayan, Ambar
+  - Montalva Talledo, Veronica
+  year: 2026
+  title: 'COVID-19 school closures, learning losses and intergenerational mobility'
+  journal: Humanities and Social Sciences Communications
+  volume: '13'
+  pages: 1-12
+  doi: 10.1057/s41599-026-06967-w
+  url: https://www.nature.com/articles/s41599-026-06967-w
+  tags:
+  - covid-19
+  - education
+  - intergenerational mobility
+  - learning loss
+  peer_reviewed: true
+  open_access: true
+  language: en
+  sources:
+  - manual
 - id: azevedo-2024-lancet-under5-mortality
   type: journal_article
   authors:

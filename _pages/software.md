@@ -77,6 +77,12 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
     <tr>
+      <td><strong><a href="https://pypi.org/project/unicefstats-mcp/" target="_blank">unicefstats-mcp</a></strong></td>
+      <td>MCP server providing AI assistants access to 790+ UNICEF child-focused indicators across 200+ countries via SDMX API</td>
+      <td><a href="https://pypi.org/project/unicefstats-mcp/" target="_blank" title="pip install unicefstats-mcp"><i class="fab fa-python jp-lang-icon"></i>PyPI</a></td>
+      <td><a href="https://github.com/jpazvd/unicefstats-mcp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
       <td><strong><a href="https://github.com/worldbank/datalibweb" target="_blank">datalibweb</a></strong></td>
       <td>Stata frontend for the World Bank microdata API, enabling access to global, regional, and country microdata catalogs</td>
       <td><a href="https://github.com/worldbank/datalibweb" target="_blank" title="Available on GitHub"><span class="jp-lang-icon jp-lang-icon--stata">S</span>GitHub</a></td>
@@ -392,9 +398,15 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
   <tbody>
     <tr>
       <td><strong><a href="{{ base_path }}/software/unicefdata-python/">unicefdata</a></strong></td>
-      <td>Download UNICEF child welfare indicators via SDMX API with consistent Python interface</td>
+      <td>Download UNICEF child welfare indicators via SDMX API with query status codes, year filtering, and MRV support (v2.4)</td>
       <td><a href="https://pypi.org/project/unicefdata/" target="_blank" title="pip install unicefdata"><i class="fab fa-python jp-lang-icon"></i>PyPI</a></td>
       <td><a href="https://github.com/unicef-drp/unicefData" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://pypi.org/project/unicefstats-mcp/" target="_blank">unicefstats-mcp</a></strong></td>
+      <td>MCP server providing AI assistants access to 790+ UNICEF child-focused indicators across 200+ countries (EQA: 0.984)</td>
+      <td><a href="https://pypi.org/project/unicefstats-mcp/" target="_blank" title="pip install unicefstats-mcp"><i class="fab fa-python jp-lang-icon"></i>PyPI</a></td>
+      <td><a href="https://github.com/jpazvd/unicefstats-mcp" target="_blank" title="GitHub repo"><i class="fab fa-github"></i></a></td>
     </tr>
     <tr>
       <td><strong><a href="https://github.com/jpazvd/wb-api-repo" target="_blank">wb-api-repo</a></strong></td>

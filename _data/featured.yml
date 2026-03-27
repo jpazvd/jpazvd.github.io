@@ -20,12 +20,17 @@ items:
     url: "https://academic.oup.com/wbro/article/36/1/1/6174606"
     type: "Article"
 
+  - title: "COVID-19 Learning Losses & Intergenerational Mobility"
+    description: "New evidence on how school closures reduced intergenerational educational mobility, published in Humanities and Social Sciences Communications."
+    url: "https://doi.org/10.1057/s41599-026-06967-w"
+    type: "Article"
+
+  - title: "unicefstats-mcp"
+    description: "MCP server giving AI assistants access to 790+ UNICEF indicators across 200+ countries. EQA: 0.984."
+    url: "https://pypi.org/project/unicefstats-mcp/"
+    type: "Software"
+
   - title: "unicefData"
     description: "Trilingual R, Python, and Stata package for accessing UNICEF child welfare indicators via SDMX API."
     url: "https://github.com/unicef-drp/unicefData"
-    type: "Software"
-
-  - title: "WBOPENDATA"
-    description: "Stata module to access World Bank databases, downloaded 26,000+ times."
-    url: "https://github.com/jpazvd/wbopendata"
     type: "Software"

@@ -185,6 +185,8 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
 <h3>Peer-Reviewed Journal Articles</h3>
 
 <ol>
+  <li>Cojocaru, A, <strong>Azevedo, JP</strong>, Narayan, A, Montalva Talledo, V (2026). <a href="https://doi.org/10.1057/s41599-026-06967-w" target="_blank">"COVID-19 school closures, learning losses and intergenerational mobility."</a> <em>Humanities and Social Sciences Communications</em>, 13, 1-12. <span class="jp-badge jp-badge--success">Open Access</span></li>
+
   <li><strong>Azevedo, JP</strong>, Hasan, A, Goldemberg, D, Geven, K, Iqbal, SA (2021). <a href="https://academic.oup.com/wbro/article/36/1/1/6174606" target="_blank">"Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates."</a> <em>The World Bank Research Observer</em>, 36(1), 1-40. <span class="jp-badge jp-badge--info">IF: 4.2</span></li>
   
   <li>Pushparatnam, A, Luna Bazaldua, DA, Holla, A, <strong>Azevedo, JP</strong>, Clarke, M, Devercelli, A (2021). <a href="https://doi.org/10.3389/fpubh.2021.569448" target="_blank">"Measuring Early Childhood Development Among 4-6 Year Olds: The Identification of Psychometrically Robust Items Across Diverse Contexts."</a> <em>Frontiers in Public Health</em>. <span class="jp-badge jp-badge--info">IF: 3.0</span></li>
@@ -203,6 +205,14 @@ description: "Publications by João Pedro Azevedo: 144+ works on Learning Povert
 </ol>
 
 <p class="jp-muted"><em>For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=lTKXA78AAAAJ" target="_blank">Google Scholar</a> or <a href="https://ideas.repec.org/e/pwa88.html" target="_blank">RePEc</a> profiles.</em></p>
+
+<hr class="jp-hr">
+
+<h2>In the Media</h2>
+
+<ul>
+  <li>Masood, E, Priyadarshini, S, Pinto, L (2026). <a href="https://doi.org/10.1038/d41586-026-00699-2" target="_blank">"Statistics reach a 'crisis point': nations struggle with a critical lack of data."</a> <em>Nature</em>, 651(8105), 298-300. — News feature on the global data crisis, citing challenges in official statistics that underpin development policy.</li>
+</ul>
 
 <hr class="jp-hr">
 
