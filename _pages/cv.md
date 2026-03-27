@@ -3,6 +3,7 @@ layout: archive
 title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
+last_modified_at: 2026-03-27
 description: "Curriculum Vitae of João Pedro Azevedo - UNICEF Chief Statistician, former World Bank Lead Economist. PhD Economics, Newcastle University."
 redirect_from:
   - /resume

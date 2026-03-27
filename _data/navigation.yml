@@ -15,5 +15,12 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Contact"
-    url: /contact/
+  - title: "More"
+    url: "#"
+    children:
+      - title: "Events"
+        url: /events/
+      - title: "Teaching"
+        url: /teaching/
+      - title: "Contact"
+        url: /contact/

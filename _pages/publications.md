@@ -3,10 +3,12 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+last_modified_at: 2026-03-27
 description: "Publications by João Pedro Azevedo: 144+ works on Learning Poverty, education economics, poverty measurement. Includes Lancet, World Development articles."
 ---
 
 {% include base_path %}
+{% include publications-schema.html %}
 
 <!-- Citation Metrics Banner -->
 <div class="citation-metrics jp-gradient-banner">

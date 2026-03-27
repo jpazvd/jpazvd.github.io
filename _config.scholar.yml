@@ -1,5 +1,15 @@
 plugins:
   - jekyll-scholar
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
 
 # This file is used only for local/CI builds that need Scholar.
 # Production (GitHub Pages native build) does NOT use this config.

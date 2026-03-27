@@ -3,6 +3,7 @@ layout: archive
 title: "Data & Analytics Tools"
 permalink: /softwares/
 author_profile: true
+last_modified_at: 2026-03-27
 description: "Stata modules and data analytics tools by João Pedro Azevedo including WBOPENDATA, poverty measurement, and survey analysis tools."
 ---
 

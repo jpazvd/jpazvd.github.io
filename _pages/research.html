@@ -3,10 +3,12 @@ layout: archive
 title: "Focus Areas"
 permalink: /research/
 author_profile: true
+last_modified_at: 2026-03-27
 description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capital measurement, education economics, poverty measurement, and SDG indicators for children. Data-driven policy tools, AI-assisted analytics, and national statistical capacity building."
 ---
 
 {% include base_path %}
+{% include faq-schema.html %}
 
 <div class="long-form-content">
 <p>I use data, measurement, and applied economics to support better decisions for children and vulnerable populations. Across UNICEF, the World Bank, and the Brazilian public sector, my work sits at the intersection of development economics, education policy, poverty and equity measurement, and the strengthening of national statistical systems.</p>
@@ -14,6 +16,13 @@ description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capita
 <p>My focus is operational: translating complex data into indicators, diagnostics, scalable analytics, and decision-support tools; evaluating policies and programs; and strengthening institutional capacity to produce timely, comparable, and reproducible evidence. Recent work includes creating global public goods such as the Learning Poverty measure and quantifying the impacts of COVID-19 on learning and intergenerational mobility.</p>
 
 <p>Increasingly, I am leading teams to use AI- and LLM-assisted workflows to improve analytical productivity and increase the dissemination and interpretability of rigorous analysis—within clear technical and ethical guardrails and with human-in-the-loop review (e.g., validation, documentation, continuous integration and deployment, privacy/PII safeguards, and auditability).</p>
+</div>
+
+<!-- Definition Block: Learning Poverty -->
+<div class="jp-soft-panel" id="learning-poverty-definition">
+  <h2>What is Learning Poverty?</h2>
+  <p><strong>Learning Poverty</strong> is the share of children who cannot read and understand a simple text by age 10. Co-developed by João Pedro Azevedo at the World Bank, it combines schooling and learning data to capture both out-of-school children and those in school but not learning. Before COVID-19, 57% of children in low- and middle-income countries were learning poor. Post-pandemic simulations estimate this figure rose to 70%. The indicator is now used by the World Bank, UNESCO, UNICEF, FCDO, USAID, and the Bill & Melinda Gates Foundation to track SDG 4 progress and guide education investment.</p>
+  <p class="jp-muted">Source: <a href="https://openknowledge.worldbank.org/handle/10986/35300" target="_blank" rel="noopener">Azevedo et al. (2021), World Bank Policy Research Working Paper No. 9588</a></p>
 </div>
 
 <hr />
@@ -187,6 +196,39 @@ description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capita
 </div>
 
 <hr />
+
+<!-- FAQ Section -->
+<div class="jp-soft-panel" itemscope itemtype="https://schema.org/FAQPage">
+  <h2>Frequently Asked Questions</h2>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h3 itemprop="name">What is Learning Poverty and how is it measured?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text">Learning Poverty measures the percentage of 10-year-old children who cannot read and understand a simple, age-appropriate text. It combines two indicators: the share of children who are out of school and the share of children in school who fall below a minimum reading proficiency threshold. The concept was introduced by the World Bank in 2019, co-developed by João Pedro Azevedo, and is used by major international organizations to track SDG 4 progress.</p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Who is João Pedro Azevedo?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text">João Pedro Azevedo is UNICEF's first Chief Statistician, appointed in 2023 to lead the organization's global data and statistical work. He holds a PhD in Economics from Newcastle University, is an elected member of the International Statistical Institute, and previously spent 16 years at the World Bank as Lead Economist. He has published in The Lancet, World Development, and the World Bank Research Observer, with over 5,500 citations and 20+ open-source statistical software packages.</p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h3 itemprop="name">What Stata packages does João Pedro Azevedo develop?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text">João Pedro Azevedo has developed over 22 open-source Stata modules available on SSC/RePEc, with over 25,000 downloads globally. Key packages include: WBOPENDATA (access 29,000+ World Bank indicators from Stata), ADECOMP (Shapley decomposition of poverty changes), HOI (Human Opportunity Index), SAE/FHSAE (small area estimation), DFL (DiNardo-Fortin-Lemieux decomposition), and SKDECOMP (counterfactual distribution decompositions). See the <a href="/softwares/">Software page</a> for the full catalog.</p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h3 itemprop="name">How did COVID-19 affect Learning Poverty?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text">Simulations by Azevedo et al. (2020, 2021) estimated that COVID-19 school closures could increase Learning Poverty from 57% to 70% in low- and middle-income countries, with learning losses equivalent to 0.3–0.9 years of schooling. These estimates, published as World Bank Policy Research Working Papers and in the World Bank Research Observer, informed global education recovery strategies and were widely cited by policymakers and media.</p>
+    </div>
+  </div>
+</div>
 
 <p>For a complete and filterable list of all my work, please see the <a href="/publications/">Publications Page</a>.</p>
 
