@@ -68,7 +68,7 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
     </tr>
     <tr>
       <td><strong>unicefData</strong></td>
-      <td>Trilingual library for downloading UNICEF child welfare indicators via SDMX API with cross-language test parity</td>
+      <td>Trilingual library for downloading UNICEF child welfare indicators via SDMX API with cross-language test parity &mdash; <a href="https://jpazvd.github.io/unicefData-dev/dashboard.html" target="_blank" rel="noopener" title="Package download statistics dashboard">📊 download stats</a></td>
       <td class="jp-download-links">
         <a href="{{ base_path }}/software/unicefdata-r/" title="unicefData for R"><span class="jp-lang-icon jp-lang-icon--r" aria-hidden="true"></span>R</a>
         <a href="{{ base_path }}/software/unicefdata-python/" title="unicefData for Python"><span class="jp-lang-icon jp-lang-icon--python" aria-hidden="true"></span>Python</a>
