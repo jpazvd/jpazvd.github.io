@@ -4,6 +4,11 @@ source "https://rubygems.org"
 # This is used only by the Actions workflow (not by GitHub Pages native build).
 
 gem "jekyll", "~> 4.4.0"
+# Pin sass-converter to the 2.x line: jekyll-remote-theme 0.4.1 calls
+# Theme#configure_sass, which jekyll-sass-converter 3.x removed (NoMethodError
+# at build init). No Gemfile.lock is committed, so without this pin CI floats to
+# 3.x and the build breaks. 2.x (libsass/sassc) is the stable combo.
+gem "jekyll-sass-converter", "~> 2.0"
 gem "jekyll-scholar", "~> 7.1.0"
 gem "jekyll-feed", "~> 0.17.0"
 gem "jekyll-sitemap", "~> 1.4.0"

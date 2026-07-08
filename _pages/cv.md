@@ -63,10 +63,10 @@ redirect_from:
 ## Selected Publications
 
 <p class="cv-citation-summary">
-  Google Scholar: {{ site.data.citations.google_scholar.total_citations | default: '5,500+' }} citations &bull;
-  h-index: {{ site.data.citations.google_scholar.h_index | default: '30' }} &bull;
-  i10-index: {{ site.data.citations.google_scholar.i10_index | default: '62' }} &bull;
-  RePEc: {{ site.data.citations.repec.total_downloads_all_time | default: '32,000+' }} downloads.
+  Google Scholar: {% include format-number.html number=site.data.citations.google_scholar.total_citations %} citations &bull;
+  h-index: {{ site.data.citations.google_scholar.h_index | default: '—' }} &bull;
+  i10-index: {{ site.data.citations.google_scholar.i10_index | default: '—' }} &bull;
+  RePEc: {% include format-number.html number=site.data.citations.repec.total_downloads_all_time %} downloads.
   Full list: <a href="{{ site.data.citations.google_scholar.profile_url }}" target="_blank">Google Scholar</a> |
   <a href="{{ site.data.citations.repec.profile_url }}" target="_blank">RePEc/IDEAS</a> |
   <a href="{{ site.data.citations.orcid.profile_url }}" target="_blank">ORCID</a>
@@ -133,9 +133,9 @@ redirect_from:
 ## Software
 
 <p class="cv-citation-summary">
-  {{ site.data.citations.repec.software.count | default: '24' }} Stata modules on SSC/RePEc &bull;
-  {{ site.data.citations.repec.software.downloads_total | default: '26,000+' }} total downloads &bull;
-  Global rank: #{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}.
+  {{ site.data.citations.repec.software.count }} Stata modules on SSC/RePEc &bull;
+  {% include format-number.html number=site.data.citations.repec.software.downloads_total %} total downloads &bull;
+  Global rank: #{{ site.data.citations.repec.rankings.software.global.rank_total_downloads }}.
   Full list: <a href="/softwares/">Software page</a> |
   <a href="https://ideas.repec.org/e/pwa88.html#soft" target="_blank">RePEc/IDEAS</a>
 </p>
@@ -145,7 +145,7 @@ redirect_from:
 <ul>
 <li class="cv-pub"><strong><a href="https://pypi.org/project/unicefstats-mcp/">unicefstats-mcp</a></strong> — MCP server providing AI assistants access to 790+ UNICEF child-focused indicators across 200+ countries via SDMX API (EQA: 0.984). <em>Python/PyPI.</em></li>
 <li class="cv-pub"><strong><a href="https://github.com/unicef-drp/unicefData">unicefData</a></strong> — Trilingual library (R/Python/Stata) for downloading UNICEF child welfare indicators via SDMX API. v2.4 with query status codes and MRV support. <em>CRAN, PyPI, SSC.</em></li>
-<li class="cv-pub"><strong><a href="https://github.com/jpazvd/wbopendata">WBOPENDATA</a></strong> — Access 29,000+ indicators from 51 World Bank databases directly from Stata. 26,000+ downloads. <em>SSC/RePEc.</em></li>
+<li class="cv-pub"><strong><a href="https://github.com/jpazvd/wbopendata">WBOPENDATA</a></strong> — Access {{ site.data.facts.wbopendata.indicators }} indicators from {{ site.data.facts.wbopendata.databases }} World Bank databases directly from Stata. <em>SSC/RePEc.</em></li>
 <li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457562.html">ADECOMP</a></strong> — Shapley decomposition of changes in poverty and inequality indicators. <em>SSC/RePEc.</em></li>
 <li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s457191.html">HOI</a></strong> — Human Opportunity Index for measuring inequality of opportunity. <em>SSC/RePEc.</em></li>
 <li class="cv-pub"><strong><a href="https://ideas.repec.org/c/boc/bocode/s458525.html">SAE/FHSAE</a></strong> — Unit-level and area-level small area estimation for poverty mapping. <em>SSC/RePEc.</em></li>

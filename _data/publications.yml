@@ -1,19 +1,20 @@
 _metadata:
-  generated: '2026-03-23T06:29:27.930282'
+  generated: '2026-07-07T17:30:20.100340'
   generator: scripts/build_publications_master.py
   warning: DO NOT EDIT MANUALLY - This file is auto-generated from satellite databases
   sources:
   - okr
+  - repec
   - stata
   - github
   - manual
-  total_publications: 85
+  total_publications: 81
 summary:
-  total: 85
+  total: 81
   by_type:
-    working_papers: 31
-    journal_articles: 8
-    softwares: 13
+    working_papers: 29
+    softwares: 10
+    journal_articles: 9
     books: 5
     book_chapters: 13
     reports: 6
@@ -21,37 +22,14 @@ summary:
   by_source:
     okr_new: 33
     okr_merged: 1
+    repec_merged: 30
     stata_new: 10
     stata_merged: 0
-    github_merged: 2
-    github_new: 3
-    manual_new: 39
-    manual_merged: 2
+    github_merged: 5
+    github_new: 0
+    manual_merged: 4
+    manual_new: 38
 working_papers:
-- title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
-  year: '2023'
-  authors:
-  - Azevedo, João Pedro
-  - Cojocaru, Alexandru
-  - Talledo, Veronica Montalva
-  - Narayan, Ambar
-  type: working_paper
-  url: https://openknowledge.worldbank.org/handle/10986/39607
-  handle: 10986/39607
-  doi: 10.1596/1813-9450-10381
-  abstract: "The paper presents a first global\n            investigation of the longer-term inequality implications of\n\
-    \            COVID-19 by examining the effect of school closures on the\n            ability of children from different\
-    \ countries and backgrounds\n            to engage in continued learning throughout the pandemic, and\n            their\
-    \ implications for intergenerational mobility in\n            education. The analysis builds on the data from the Global\n\
-    \            Database of Intergenerational"
-  venue: World Bank Policy Research Working Paper
-  tags:
-  - world bank
-  - policy research
-  peer_reviewed: false
-  id: azevedo-2023-covid-19-school-closures-1e5de4
-  sources:
-  - okr
 - title: Blackout or Blanked Out?
   year: '2023'
   authors:
@@ -72,7 +50,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: seitz-2023-blackout-or-blanked-284f4c
+  id: seitz-2023-blackout-or-blanked-a954a2
   sources:
   - okr
 - title: Learning Losses during COVID-19
@@ -97,7 +75,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: akmal-2022-learning-losses-during-73a1a9
+  id: akmal-2022-learning-losses-during-e3c7a9
   sources:
   - okr
 - title: Will Every Child Be Able to Read by 2030? Defining Learning Poverty and Mapping the Dimensions of the Challenge
@@ -124,9 +102,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: goldemberg-2021-will-every-child-573f0c
+  id: goldemberg-2021-will-every-child-ec8795
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/9588.html
+  repec_handle: wbk/wbrwps/9588
 - title: Remote Learning During COVID-19
   year: '2021'
   authors:
@@ -150,9 +132,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: munoz-najar-2021-remote-learning-during-8a18b3
+  id: munoz-najar-2021-remote-learning-during-6511e3
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wboper/36665.html
+  repec_handle: wbk/wboper/36665
 - title: Learning Poverty Updates and Revisions
   year: '2021'
   authors:
@@ -184,9 +170,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2021-learning-poverty-updates-f995a0
+  id: azevedo-2021-learning-poverty-updates-de2fc6
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wboper/42366.html
+  repec_handle: wbk/wboper/42366
 - title: Learning Poverty
   year: '2020'
   authors:
@@ -205,7 +195,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-learning-poverty-bfd570
+  id: azevedo-2020-learning-poverty-626d10
   sources:
   - okr
 - title: Learning Poverty in the Time of COVID-19
@@ -226,9 +216,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-learning-poverty-in-fff3f8
+  id: azevedo-2020-learning-poverty-in-95f368
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wboper/34850.html
+  repec_handle: wbk/wboper/34850
 - title: Estimating the Potential COVID-19 Impacts on Learning Poverty in Brazil
   year: '2020'
   authors:
@@ -248,9 +242,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2020-estimating-the-potential-99a2ff
+  id: azevedo-2020-estimating-the-potential-fb90fc
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/b/wbk/wbpubs/37660.html
+  repec_handle: wbk/wbpubs/37660
 - title: SAE - A Stata Package for Unit Level Small Area Estimation
   year: '2018'
   authors:
@@ -272,9 +270,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: nguyen-2018-sae--a-cf86f9
+  id: nguyen-2018-sae--a-02e477
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/8630.html
+  repec_handle: wbk/wbrwps/8630
 - title: Poverty, Inequality, and            Agriculture in the EU
   year: '2018'
   authors:
@@ -298,9 +300,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: van-den-brink-2018-poverty-inequality-and-036846
+  id: van-den-brink-2018-poverty-inequality-and-52e3b5
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/8638.html
+  repec_handle: wbk/wbrwps/8638
 - title: How Equitable is Access to Finance in Turkey?
   year: '2016'
   authors:
@@ -321,7 +327,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: inan-2016-how-equitable-is-fac529
+  id: inan-2016-how-equitable-is-1860ef
   sources:
   - okr
 - title: What Are the Impacts of Syrian Refugees on Host Community Welfare in Turkey?
@@ -344,7 +350,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: yang-2016-what-are-the-72b703
+  id: yang-2016-what-are-the-a37498
   sources:
   - okr
 - title: When and Where Do We See Regional Poverty Reduction and Convergence?
@@ -369,7 +375,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: yang-2016-when-and-where-987d36
+  id: yang-2016-when-and-where-61ded5
   sources:
   - okr
 - title: Who Are the Poor in the Developing World?
@@ -395,9 +401,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: castaneda-2016-who-are-the-8071fa
+  id: castaneda-2016-who-are-the-cd1b24
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/7844.html
+  repec_handle: wbk/wbrwps/7844
 - title: Robustness of Shared Prosperity Estimates
   year: '2016'
   authors:
@@ -422,7 +432,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: wieser-2016-robustness-of-shared-9bb4f3
+  id: wieser-2016-robustness-of-shared-d2396d
   sources:
   - okr
 - title: Kyrgyz Republic
@@ -446,9 +456,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: calvo-2015-kyrgyz-republic-9e79f1
+  id: calvo-2015-kyrgyz-republic-ab560c
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wboper/22756.html
+  repec_handle: wbk/wboper/22756
 - title: 'Pathways to the Middle Class in Turkey : How Have Reducing Poverty and Boosting Shared Prosperity Helped?'
   year: '2014'
   authors:
@@ -468,9 +482,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2014-pathways-to-the-0356c9
+  id: azevedo-2014-pathways-to-the-5f7c12
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6834.html
+  repec_handle: wbk/wbrwps/6834
 - title: 'Poverty Reduction and Shared Prosperity in Tajikistan : A Diagnostic'
   year: '2014'
   authors:
@@ -491,9 +509,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: rajabov-2014-poverty-reduction-and-fd1455
+  id: rajabov-2014-poverty-reduction-and-f5505b
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6923.html
+  repec_handle: wbk/wbrwps/6923
 - title: 'Fiscal Adjustment and Income Inequality : Sub-national Evidence from Brazil'
   year: '2014'
   authors:
@@ -515,34 +537,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: david-2014-fiscal-adjustment-and-0a124d
+  id: david-2014-fiscal-adjustment-and-82ef5d
   sources:
   - okr
-- title: Weather Shocks and Health at Birth in Colombia
-  year: '2014'
-  authors:
-  - Andalon, Mabel
-  - Azevedo, Joao Pedro
-  - Rodriguez Castelan, Carlos
-  - Sanfelice, Viviane
-  - Valderrama, Daniel
-  type: working_paper
-  url: https://openknowledge.worldbank.org/handle/10986/20636
-  handle: 10986/20636
-  doi: 10.1596/1813-9450-7081
-  abstract: "Poor health at birth has negative\r\n            long-run effects on individual well-being and is also\r\n  \
-    \          detrimental for intergenerational mobility. This paper\r\n            examines whether health outcomes at birth\
-    \ are affected by in\r\n            utero increased exposure to rainfall and temperature shocks\r\n            in Colombia,\
-    \ one of the countries in the world with the\r\n            highest incidence of extreme weather events per year. The\r\
-    \n            paper uses a fixed effects desi"
-  venue: World Bank Policy Research Working Paper
-  tags:
-  - world bank
-  - policy research
-  peer_reviewed: false
-  id: andalon-2014-weather-shocks-and-6e71a9
-  sources:
-  - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6945.html
+  repec_handle: wbk/wbrwps/6945
 - title: Understanding Changes in Poverty
   year: '2014'
   authors:
@@ -567,9 +568,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: van-nguyen-2014-understanding-changes-in-b64827
+  id: van-nguyen-2014-understanding-changes-in-111367
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/b/wbk/wbpubs/19445.html
+  repec_handle: wbk/wbpubs/19445
 - title: 'From Noise to Signal : The Successful Turnaround of Poverty Measurement in Colombia'
   year: '2013'
   authors:
@@ -588,9 +593,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2013-from-noise-to-87bba1
+  id: azevedo-2013-from-noise-to-fdbc8c
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/a/wbk/prmecp/ep117.html
+  repec_handle: wbk/wboper/16118
 - title: Decomposing the Recent Inequality Decline in Latin America
   year: '2013'
   authors:
@@ -611,9 +620,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: sanfelice-2013-decomposing-the-recent-60bbfc
+  id: sanfelice-2013-decomposing-the-recent-ac3a69
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6715.html
+  repec_handle: wbk/wbrwps/6715
 - title: Setting Reasonable Performance Targets for Public Service Delivery
   year: '2013'
   authors:
@@ -633,9 +646,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: newman-2013-setting-reasonable-performance-e1e646
+  id: newman-2013-setting-reasonable-performance-0b0984
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6385.html
+  repec_handle: wbk/wbrwps/6385
 - title: 'Fifteen Years of Inequality in Latin America : How Have Labor Markets Helped?'
   year: '2013'
   authors:
@@ -658,9 +675,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: dávalos-2013-fifteen-years-of-d0a8ee
+  id: dávalos-2013-fifteen-years-of-b4d484
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6384.html
+  repec_handle: wbk/wbrwps/6384
 - title: Is Labor Income Responsible for Poverty Reduction? A Decomposition Approach
   year: '2013'
   authors:
@@ -683,9 +704,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: azevedo-2013-is-labor-income-766e8f
+  id: azevedo-2013-is-labor-income-bcd551
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6414.html
+  repec_handle: wbk/wbrwps/6414
 - title: 'Teenage Pregnancy and Opportunities in Latin America and the Caribbean : On Teenage Fertility Decisions, Poverty
     and Economic Achievement'
   year: '2012'
@@ -710,7 +735,7 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: favara-2012-teenage-pregnancy-and-6682b6
+  id: favara-2012-teenage-pregnancy-and-16f77e
   sources:
   - okr
 - title: Is the Baby to Blame? An Inquiry into the Consequences of Early Childbearing
@@ -733,9 +758,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: perova-2012-is-the-baby-6fbb12
+  id: perova-2012-is-the-baby-6ed9fa
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/6074.html
+  repec_handle: wbk/wbrwps/6074
 - title: When Job Earnings Are Behind Poverty Reduction
   year: '2012'
   authors:
@@ -758,9 +787,13 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: inchauste-2012-when-job-earnings-8eafaf
+  id: inchauste-2012-when-job-earnings-9831f5
   sources:
   - okr
+  - repec
+  urls:
+    repec: https://ideas.repec.org/a/wbk/prmecp/ep97.html
+  repec_handle: wbk/wboper/17067
 - title: 'Benchmarking : A Tool to improve the Effectiveness of Monitoring and Evaluation in the Policy Cycle'
   year: '2010'
   authors:
@@ -781,34 +814,237 @@ working_papers:
   - world bank
   - policy research
   peer_reviewed: false
-  id: newman-2010-benchmarking-a-55b861
+  id: newman-2010-benchmarking-a-ae3e0a
   sources:
   - okr
-journal_articles:
-- id: cojocaru-2026-covid-intergenerational-mobility
-  type: journal_article
+  - repec
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wboper/10205.html
+  repec_handle: wbk/wboper/10205
+softwares:
+- title: WBOPENDATA
+  year: '2026'
   authors:
-  - Cojocaru, Alexandru
   - Azevedo, João Pedro
-  - Narayan, Ambar
-  - Montalva Talledo, Veronica
+  type: software
+  description: 'WBOPENDATA: Stata module to access World Bank databases'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 15
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2026-wbopendata-5a2c8f
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/wbopendata
+- title: ALORENZ
+  year: '2021'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'ALORENZ: Stata module to produce Pen''s Parade, Lorenz and Generalised Lorenz curve'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2021-alorenz-665143
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/alorenz
+- title: ADECOMP
+  year: '2019'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'ADECOMP: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 13
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2019-adecomp-02fdac
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/adecomp
+- title: HOI
+  year: '2011'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to compute Human Opportunity Index
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 9
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2011-hoi-de6b9d
+  sources:
+  - stata
+- title: GRQREG
+  year: '2011'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'GRQREG: Stata module to graph the coefficients of a quantile regression'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 24
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2011-grqreg-3ef69b
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/grqreg
+- title: DFL
+  year: '2010'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: 'DFL: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density'
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 2
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2010-dfl-c8c0c1
+  sources:
+  - stata
+  - github
+  urls:
+    github: https://github.com/jpazvd/dfl
+- title: AINEQUAL
+  year: '2007'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to compute measures of inequality
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2007-ainequal-7d490b
+  sources:
+  - stata
+- title: FHSAE
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to fit an area level Fay-Herriot model
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-fhsae-2a718e
+  sources:
+  - stata
+- title: DRDECOMP
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to estimate Shapley value of growth and distribution components of changes in poverty indicators
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-drdecomp-128f10
+  sources:
+  - stata
+- title: SKDECOMP
+  year: '2006'
+  authors:
+  - Azevedo, João Pedro
+  type: software
+  description: Stata module to estimate Shapley value of growth, price, and distribution components on changes in poverty
+    indicators
+  venue: Statistical Software Components, Boston College
+  downloads: 0
+  citations: 1
+  language: stata
+  tags:
+  - stata
+  - software
+  - ssc
+  id: azevedo-2006-skdecomp-5b8283
+  sources:
+  - stata
+journal_articles:
+- title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
   year: 2026
-  title: 'COVID-19 school closures, learning losses and intergenerational mobility'
-  journal: Humanities and Social Sciences Communications
-  volume: '13'
-  pages: 1-12
+  authors:
+  - Azevedo, João Pedro
+  - Cojocaru, Alexandru
+  - Talledo, Veronica Montalva
+  - Narayan, Ambar
+  type: journal_article
+  url: https://openknowledge.worldbank.org/handle/10986/39607
+  handle: 10986/39607
   doi: 10.1057/s41599-026-06967-w
-  url: https://www.nature.com/articles/s41599-026-06967-w
+  abstract: "The paper presents a first global\n            investigation of the longer-term inequality implications of\n\
+    \            COVID-19 by examining the effect of school closures on the\n            ability of children from different\
+    \ countries and backgrounds\n            to engage in continued learning throughout the pandemic, and\n            their\
+    \ implications for intergenerational mobility in\n            education. The analysis builds on the data from the Global\n\
+    \            Database of Intergenerational"
+  venue: World Bank Policy Research Working Paper
   tags:
   - covid-19
   - education
   - intergenerational mobility
   - learning loss
   peer_reviewed: true
-  open_access: true
-  language: en
+  id: cojocaru-2026-covid-intergenerational-mobility
   sources:
+  - okr
+  - repec
   - manual
+  urls:
+    repec: https://ideas.repec.org/p/wbk/wbrwps/10381.html
+    manual: https://www.nature.com/articles/s41599-026-06967-w
+  repec_handle: wbk/wbrwps/10381
+  journal: Humanities and Social Sciences Communications
+  volume: '13'
+  pages: 1-12
+  language: en
 - id: azevedo-2024-lancet-under5-mortality
   type: journal_article
   authors:
@@ -849,7 +1085,7 @@ journal_articles:
   sources:
   - manual
 - title: Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes
-  year: '2021'
+  year: 2021
   authors:
   - Hasan, Amer
   - Azevedo, João Pedro
@@ -872,13 +1108,16 @@ journal_articles:
   - learning loss
   - simulation
   peer_reviewed: true
-  id: hasan-2021-simulating-the-potential-cbdbda
+  id: azevedo-2021-wbro-covid-simulations
   sources:
   - okr
+  - repec
   - manual
   urls:
     okr: https://openknowledge.worldbank.org/handle/10986/33945
+    repec: https://ideas.repec.org/p/wbk/wbrwps/9284.html
   okr_handle: 10986/33945
+  repec_handle: wbk/wbrwps/9284
   journal: The World Bank Research Observer
   volume: '36'
   issue: '1'
@@ -907,7 +1146,7 @@ journal_articles:
   sources:
   - manual
 - title: A New Profile of the Global Poor
-  year: '2018'
+  year: 2018
   authors:
   - Castañeda, Andrés
   - Doan, Dung
@@ -930,38 +1169,53 @@ journal_articles:
   - global
   - measurement
   peer_reviewed: true
-  id: castañeda-2018-a-new-profile-7ab23b
+  id: castaneda-2018-world-development-global-poor
   sources:
   - okr
+  - repec
   - manual
+  urls:
+    repec: https://ideas.repec.org/a/eee/wdevel/v101y2018icp250-267.html
   journal: World Development
   volume: '101'
   pages: 250-267
   language: en
-  urls: {}
-- id: andalon-2016-world-development-weather
-  type: journal_article
-  authors:
-  - Andalón, Mabel
-  - Azevedo, João Pedro
-  - Rodríguez-Castelán, Carlos
-  - Sanfelice, Viviane
-  - Valderrama-González, Daniel
+- title: Weather Shocks and Health at Birth in Colombia
   year: 2016
-  title: Weather Shocks and Health at Birth in Colombia
-  journal: World Development
-  volume: '82'
-  pages: 69-82
+  authors:
+  - Andalon, Mabel
+  - Azevedo, Joao Pedro
+  - Rodriguez Castelan, Carlos
+  - Sanfelice, Viviane
+  - Valderrama, Daniel
+  type: journal_article
+  url: https://openknowledge.worldbank.org/handle/10986/20636
+  handle: 10986/20636
   doi: 10.1016/j.worlddev.2016.01.015
+  abstract: "Poor health at birth has negative\r\n            long-run effects on individual well-being and is also\r\n  \
+    \          detrimental for intergenerational mobility. This paper\r\n            examines whether health outcomes at birth\
+    \ are affected by in\r\n            utero increased exposure to rainfall and temperature shocks\r\n            in Colombia,\
+    \ one of the countries in the world with the\r\n            highest incidence of extreme weather events per year. The\r\
+    \n            paper uses a fixed effects desi"
+  venue: World Bank Policy Research Working Paper
   tags:
   - health
   - weather
   - colombia
   - birth outcomes
   peer_reviewed: true
-  language: en
+  id: andalon-2016-world-development-weather
   sources:
+  - okr
+  - repec
   - manual
+  urls:
+    repec: https://ideas.repec.org/a/eee/wdevel/v82y2016icp69-82.html
+  repec_handle: wbk/wbrwps/7081
+  journal: World Development
+  volume: '82'
+  pages: 69-82
+  language: en
 - id: azevedo-batista-2002-cepal
   type: journal_article
   authors:
@@ -1005,220 +1259,6 @@ journal_articles:
   country: Brazil
   sources:
   - manual
-softwares:
-- title: WBOPENDATA
-  year: '2026'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to access World Bank databases
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 15
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2026-wbopendata-6cc466
-  sources:
-  - stata
-- title: ALORENZ
-  year: '2021'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'ALORENZ: Stata module to produce Pen''s Parade, Lorenz and Generalised Lorenz curve'
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 1
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2021-alorenz-fc14e6
-  sources:
-  - stata
-  - github
-  urls:
-    github: https://github.com/jpazvd/alorenz
-- title: GRQREG
-  year: '2020'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'GRQREG: Stata module to graph the coefficients of a quantile regression'
-  url: https://github.com/jpazvd/grqreg
-  tags: []
-  github_repo: grqreg
-  id: azevedo-2020-grqreg-83810e
-  sources:
-  - github
-- title: DFL
-  year: '2020'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'DFL: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density'
-  url: https://github.com/jpazvd/dfl
-  tags: []
-  github_repo: dfl
-  id: azevedo-2020-dfl-0e99cb
-  sources:
-  - github
-- title: WBOPENDATA
-  year: '2020'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'WBOPENDATA: Stata module to access World Bank databases'
-  url: https://github.com/jpazvd/wbopendata
-  tags: []
-  github_repo: wbopendata
-  id: azevedo-2020-wbopendata-6cc466
-  sources:
-  - github
-- title: ADECOMP
-  year: '2019'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: 'ADECOMP: Stata module to estimate Shapley Decomposition by Components of a Welfare Measure'
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 13
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2019-adecomp-ca8655
-  sources:
-  - stata
-  - github
-  urls:
-    github: https://github.com/jpazvd/adecomp
-- title: HOI
-  year: '2011'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to compute Human Opportunity Index
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 9
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2011-hoi-17bbf5
-  sources:
-  - stata
-- title: GRQREG
-  year: '2011'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to graph the coefficients of a quantile regression
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 24
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2011-grqreg-83810e
-  sources:
-  - stata
-- title: DFL
-  year: '2010'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to estimate DiNardo, Fortin and Lemieux Counterfactual Kernel Density
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 2
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2010-dfl-0e99cb
-  sources:
-  - stata
-- title: AINEQUAL
-  year: '2007'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to compute measures of inequality
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 1
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2007-ainequal-85a909
-  sources:
-  - stata
-- title: FHSAE
-  year: '2006'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to fit an area level Fay-Herriot model
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 1
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2006-fhsae-794f2a
-  sources:
-  - stata
-- title: DRDECOMP
-  year: '2006'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to estimate Shapley value of growth and distribution components of changes in poverty indicators
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 1
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2006-drdecomp-fae32a
-  sources:
-  - stata
-- title: SKDECOMP
-  year: '2006'
-  authors:
-  - Azevedo, João Pedro
-  type: software
-  description: Stata module to estimate Shapley value of growth, price, and distribution components on changes in poverty
-    indicators
-  venue: Statistical Software Components, Boston College
-  downloads: 0
-  citations: 1
-  language: stata
-  tags:
-  - stata
-  - software
-  - ssc
-  id: azevedo-2006-skdecomp-49899c
-  sources:
-  - stata
 books:
 - id: dolton-azevedo-smith-2006-ndlp
   type: book

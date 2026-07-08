@@ -14,21 +14,25 @@ description: "Stata modules and data analytics tools by João Pedro Azevedo incl
 <!-- Software Metrics Banner - matching Publications page style -->
 <div class="citation-metrics jp-gradient-banner">
   <h3 class="jp-gradient-banner__title">RePEc Software Metrics</h3>
+  <!-- Values come ONLY from _data/citations.yml. The old rankings paths here
+       (rankings.software_global / software_us) never existed in the data — the
+       numeric defaults were what actually rendered. Correct paths are
+       rankings.software.global / rankings.software.us; fallbacks are banned. -->
   <div class="jp-stats-row">
     <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.repec.software.count | default: '22' }}</div>
+      <div class="jp-stat__value">{{ site.data.citations.repec.software.count }}</div>
       <div class="jp-stat__label">Stata Modules</div>
     </div>
     <div class="jp-stat">
-      <div class="jp-stat__value">{{ site.data.citations.repec.software.downloads_total | default: '26886' }}</div>
+      <div class="jp-stat__value">{% include format-number.html number=site.data.citations.repec.software.downloads_total %}</div>
       <div class="jp-stat__label">Total Downloads</div>
     </div>
     <div class="jp-stat">
-      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=all" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software_global.rank_total_downloads | default: '19' }}</a></div>
+      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=all" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software.global.rank_total_downloads }}</a></div>
       <div class="jp-stat__label">Global Rank</div>
     </div>
     <div class="jp-stat">
-      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=us" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software_us.rank_total_downloads | default: '6' }}</a></div>
+      <div class="jp-stat__value"><a href="https://logec.repec.org/scripts/authorstat.pf?topnum=50&sortby=td&item=software&country=us" target="_blank" rel="noopener" >#{{ site.data.citations.repec.rankings.software.us.rank_total_downloads }}</a></div>
       <div class="jp-stat__label">US Rank</div>
     </div>
   </div>

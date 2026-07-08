@@ -1,0 +1,29 @@
+# Media & press mentions — single source of truth.
+#
+# Currently the Nature 2026 feature is hand-copied into _pages/publications.md,
+# _pages/cv.md, and _pages/research.html. This file is the canonical record;
+# the Phase 4 page rewrites will loop over it (via _includes/press-item.html)
+# and delete those three copies. Curation lives here: `featured` shows an item
+# on /publications/ and /cv/; `research_theme` places it on /research/.
+metadata:
+  description: Press and media coverage of JPA's work
+  last_updated: '2026-07-07'
+items:
+  - id: nature-2026-statistics-crisis
+    outlet: Nature
+    type: news_feature
+    title: "Statistics reach a 'crisis point': nations struggle with a critical lack of data"
+    authors: ["Masood, E", "Priyadarshini, S", "Pinto, L"]
+    date: '2026-03-19'
+    volume: "651"
+    issue: "8105"
+    pages: "298-300"
+    url: https://doi.org/10.1038/d41586-026-00699-2
+    doi: 10.1038/d41586-026-00699-2
+    summary: >-
+      News feature on the global data crisis, citing challenges in official
+      statistics that underpin development policy.
+    related_publication_id: null
+    research_theme: data-systems
+    featured: true
+    order: 1

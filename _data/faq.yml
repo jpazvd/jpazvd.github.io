@@ -1,0 +1,89 @@
+# Frequently asked questions — SINGLE SOURCE for the visible FAQ on /research/,
+# the FAQPage JSON-LD emitted by _includes/faq-schema.html, and /llms.txt.
+#
+# Answers may contain %TOKENS%, substituted at render time by
+# _includes/render-faq-answer.html from _data/citations.yml and _data/facts.yml:
+#   %TOTAL_CITATIONS%   %SOFTWARE_COUNT%   %SOFTWARE_DOWNLOADS%
+#   %LP_PRE%  %LP_POST%  %LOSS_YEARS%  %WB_INDICATORS%  %WB_DATABASES%
+#
+# `answer` is plain text (used verbatim for JSON-LD). `answer_html` (optional)
+# may add inline links/extra detail for the visible page; it falls back to
+# `answer` when absent. Never type a metric number directly into an answer —
+# that is exactly the drift this file exists to prevent.
+metadata:
+  last_updated: '2026-07-07'
+
+faqs:
+  - id: what-is-learning-poverty
+    short_label: Learning Poverty
+    question: "What is Learning Poverty and how is it measured?"
+    answer: >-
+      Learning Poverty measures the percentage of 10-year-old children who
+      cannot read and understand a simple, age-appropriate text. It combines
+      two indicators: the share of children who are out of school and the share
+      of children in school who fall below a minimum reading proficiency
+      threshold. The concept was introduced by the World Bank in 2019,
+      co-developed by João Pedro Azevedo, and is used by major international
+      organizations to track SDG 4 progress.
+
+  - id: who-is-jpa
+    short_label: About the author
+    question: "Who is João Pedro Azevedo?"
+    answer: >-
+      João Pedro Azevedo is UNICEF's first Chief Statistician, appointed in
+      2023 to lead the organization's global data and statistical work. He
+      holds a PhD in Economics from Newcastle University, is an elected member
+      of the International Statistical Institute, and previously spent 16 years
+      at the World Bank as Lead Economist. He has published in The Lancet,
+      World Development, and the World Bank Research Observer, with
+      %TOTAL_CITATIONS% citations and %SOFTWARE_COUNT% open-source statistical
+      software packages.
+
+  - id: stata-packages
+    short_label: Stata packages
+    question: "What Stata packages does João Pedro Azevedo develop?"
+    answer: >-
+      João Pedro Azevedo has developed %SOFTWARE_COUNT% open-source Stata
+      modules available on SSC/RePEc, with %SOFTWARE_DOWNLOADS% downloads
+      globally. Key packages include: WBOPENDATA (access %WB_INDICATORS% World
+      Bank indicators from Stata), ADECOMP (Shapley decomposition of poverty
+      changes), HOI (Human Opportunity Index), SAE/FHSAE (small area
+      estimation), and DFL (DiNardo-Fortin-Lemieux decomposition).
+    answer_html: >-
+      João Pedro Azevedo has developed %SOFTWARE_COUNT% open-source Stata
+      modules available on SSC/RePEc, with %SOFTWARE_DOWNLOADS% downloads
+      globally. Key packages include: WBOPENDATA (access %WB_INDICATORS% World
+      Bank indicators from Stata), ADECOMP (Shapley decomposition of poverty
+      changes), HOI (Human Opportunity Index), SAE/FHSAE (small area
+      estimation), DFL (DiNardo-Fortin-Lemieux decomposition), and SKDECOMP
+      (counterfactual distribution decompositions). See the
+      <a href="/softwares/">Software page</a> for the full catalog.
+
+  - id: covid-learning-poverty
+    short_label: COVID-19 impact
+    question: "How did COVID-19 affect Learning Poverty?"
+    answer: >-
+      Simulations by Azevedo et al. (2020, 2021) estimated that COVID-19 school
+      closures could increase Learning Poverty from %LP_PRE%% to %LP_POST%% in
+      low- and middle-income countries, with learning losses equivalent to
+      %LOSS_YEARS% years of schooling. A 2026 peer-reviewed study by Cojocaru,
+      Azevedo, Narayan, and Montalva Talledo, published in Humanities and
+      Social Sciences Communications, further showed that extensive school
+      closures significantly reduced both absolute and relative
+      intergenerational educational mobility — in upper-middle-income
+      countries, the share of children with more education than their parents
+      could decline by 8 percentage points.
+    answer_html: >-
+      Simulations by Azevedo et al. (2020, 2021) estimated that COVID-19 school
+      closures could increase Learning Poverty from %LP_PRE%% to %LP_POST%% in
+      low- and middle-income countries, with learning losses equivalent to
+      %LOSS_YEARS% years of schooling. A 2026 peer-reviewed study by Cojocaru,
+      Azevedo, Narayan, and Montalva Talledo, published in Humanities and
+      Social Sciences Communications, further showed that extensive school
+      closures significantly reduced both absolute and relative
+      intergenerational educational mobility — in upper-middle-income
+      countries, the share of children with more education than their parents
+      could decline by 8 percentage points. Unequal access to continued
+      learning across socioeconomic backgrounds made relative mobility declines
+      even larger under optimistic assumptions about remote learning
+      effectiveness.

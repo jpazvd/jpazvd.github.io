@@ -15,6 +15,13 @@ _site/
 # Python virtual environments
 .venv/
 
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Atomic-write temp files (belt-and-braces; data_io also unlinks on failure)
+*.tmp
+
 # Local development
 *.log
 

@@ -1,0 +1,25 @@
+{%- comment -%}
+Substitute %TOKENS% in FAQ answer text with live values from _data/citations.yml
+and _data/facts.yml, so the same number can never drift across the visible FAQ,
+the JSON-LD schema, and llms.txt.
+Usage: {% include render-faq-answer.html text=faq.answer %}
+{%- endcomment -%}
+{%- assign c = site.data.citations -%}
+{%- assign f = site.data.facts -%}
+{%- capture v_citations -%}{%- include format-number.html number=c.google_scholar.total_citations -%}{%- endcapture -%}
+{%- capture v_downloads -%}{%- include format-number.html number=c.repec.software.downloads_total -%}{%- endcapture -%}
+{%- assign v_count = c.repec.software.count | append: '' -%}
+{%- assign v_lp_pre = f.learning_poverty.pre_covid_pct | append: '' -%}
+{%- assign v_lp_post = f.learning_poverty.post_covid_pct | append: '' -%}
+{%- assign v_loss = f.learning_poverty.learning_loss_years | append: '' -%}
+{%- assign v_wbind = f.wbopendata.indicators | append: '' -%}
+{%- assign v_wbdb = f.wbopendata.databases | append: '' -%}
+{{- include.text
+  | replace: '%TOTAL_CITATIONS%', v_citations
+  | replace: '%SOFTWARE_COUNT%', v_count
+  | replace: '%SOFTWARE_DOWNLOADS%', v_downloads
+  | replace: '%LP_PRE%', v_lp_pre
+  | replace: '%LP_POST%', v_lp_post
+  | replace: '%LOSS_YEARS%', v_loss
+  | replace: '%WB_INDICATORS%', v_wbind
+  | replace: '%WB_DATABASES%', v_wbdb -}}

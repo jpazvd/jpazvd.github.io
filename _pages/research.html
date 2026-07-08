@@ -171,7 +171,7 @@ description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capita
 
 <h4>Sub-theme: Econometric and Statistical Software Development</h4>
 
-<p>To support rigorous and reproducible research, I have developed over 20 open-source statistical packages, primarily for Stata. These tools have been downloaded over 25,000 times by the global research community.</p>
+<p>To support rigorous and reproducible research, I have developed {{ site.data.citations.repec.software.count }} open-source statistical packages, primarily for Stata. These tools have been downloaded {% include format-number.html number=site.data.citations.repec.software.downloads_total %} times by the global research community.</p>
 
 <ul class="work-list">
 <li><span class="pub-type code">Code</span> <a href="https://ideas.repec.org/c/boc/bocode/s457234.html">WBOPENDATA</a> — Access World Bank databases from Stata</li>
@@ -186,7 +186,7 @@ description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capita
 <li><span class="pub-type blog">Blog</span> <a href="https://blogs.worldbank.org/en/opendata/wbopendata-stata-module-upgrade">Wbopendata Stata Module Upgrade</a> (2014)</li>
 </ul>
 
-<p><strong><a href="/software/">View all 22 software modules on the Software page →</a></strong></p>
+<p><strong><a href="/software/">View all {{ site.data.citations.repec.software.count }} software modules on the Software page →</a></strong></p>
 
 <h4>In the Media</h4>
 <ul class="work-list">
@@ -203,37 +203,19 @@ description: "Focus areas of João Pedro Azevedo: Learning Poverty, Human Capita
 
 <hr />
 
-<!-- FAQ Section -->
+<!-- FAQ Section — single-sourced from _data/faq.yml (numbers substituted from
+     _data/citations.yml + _data/facts.yml by render-faq-answer.html). The
+     JSON-LD twin in _includes/faq-schema.html renders from the SAME data. -->
 <div class="jp-soft-panel" itemscope itemtype="https://schema.org/FAQPage">
   <h2>Frequently Asked Questions</h2>
-
+  {% for faq in site.data.faq.faqs %}
   <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-    <h3 itemprop="name">What is Learning Poverty and how is it measured?</h3>
+    <h3 itemprop="name">{{ faq.question }}</h3>
     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text">Learning Poverty measures the percentage of 10-year-old children who cannot read and understand a simple, age-appropriate text. It combines two indicators: the share of children who are out of school and the share of children in school who fall below a minimum reading proficiency threshold. The concept was introduced by the World Bank in 2019, co-developed by João Pedro Azevedo, and is used by major international organizations to track SDG 4 progress.</p>
+      <p itemprop="text">{% assign faq_text = faq.answer_html | default: faq.answer %}{% include render-faq-answer.html text=faq_text %}</p>
     </div>
   </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-    <h3 itemprop="name">Who is João Pedro Azevedo?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text">João Pedro Azevedo is UNICEF's first Chief Statistician, appointed in 2023 to lead the organization's global data and statistical work. He holds a PhD in Economics from Newcastle University, is an elected member of the International Statistical Institute, and previously spent 16 years at the World Bank as Lead Economist. He has published in The Lancet, World Development, and the World Bank Research Observer, with over 5,500 citations and 20+ open-source statistical software packages.</p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-    <h3 itemprop="name">What Stata packages does João Pedro Azevedo develop?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text">João Pedro Azevedo has developed over 22 open-source Stata modules available on SSC/RePEc, with over 25,000 downloads globally. Key packages include: WBOPENDATA (access 29,000+ World Bank indicators from Stata), ADECOMP (Shapley decomposition of poverty changes), HOI (Human Opportunity Index), SAE/FHSAE (small area estimation), DFL (DiNardo-Fortin-Lemieux decomposition), and SKDECOMP (counterfactual distribution decompositions). See the <a href="/softwares/">Software page</a> for the full catalog.</p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-    <h3 itemprop="name">How did COVID-19 affect Learning Poverty?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text">Simulations by Azevedo et al. (2020, 2021) estimated that COVID-19 school closures could increase Learning Poverty from 57% to 70% in low- and middle-income countries, with learning losses equivalent to 0.3–0.9 years of schooling. A 2026 peer-reviewed study by Cojocaru, Azevedo, Narayan, and Montalva Talledo, published in Humanities and Social Sciences Communications, further showed that extensive school closures significantly reduced both absolute and relative intergenerational educational mobility — in upper-middle-income countries, the share of children with more education than their parents could decline by 8 percentage points. Unequal access to continued learning across socioeconomic backgrounds made relative mobility declines even larger under optimistic assumptions about remote learning effectiveness.</p>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <p>For a complete and filterable list of all my work, please see the <a href="/publications/">Publications Page</a>.</p>

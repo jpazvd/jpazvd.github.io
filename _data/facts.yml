@@ -1,0 +1,17 @@
+# Canonical hand-maintained research facts (NOT auto-fetched metrics — those
+# live in citations.yml). These are the figures currently hardcoded in prose
+# across research.html, llms.txt, and about.md. The Phase 4 rewrites will
+# interpolate them via tokens so the same number can never diverge again.
+metadata:
+  last_updated: '2026-07-07'
+
+learning_poverty:
+  pre_covid_pct: 57
+  post_covid_pct: 70
+  learning_loss_years: "0.3-0.9"
+  source_handle: "10986/35300"
+
+wbopendata:
+  indicators: "29,000+"
+  databases: 51
+  countries: 296

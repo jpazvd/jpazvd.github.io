@@ -26,13 +26,15 @@ description: "Short articles, commentaries and blog posts by João Pedro Azevedo
   {% assign linkedin_posts = "" | split: "," %}
 {% endif %}
 
-{% assign wb_count = site.data.worldbank_blogs_full.metadata.total_posts | default: site.data.citations.world_bank_blogs.english_posts | default: 24 %}
+{% comment %} Counts and years come only from _data — numeric fallbacks are
+banned (they silently mask a broken data path; see docs/AUTOMATION.md). {% endcomment %}
+{% assign wb_count = site.data.worldbank_blogs_full.metadata.total_posts | default: site.data.citations.world_bank_blogs.english_posts %}
 {% assign other_count = other_posts.size | default: 0 %}
 {% assign linkedin_count = linkedin_posts.size | default: 0 %}
 {% assign total_count = wb_count | plus: other_count | plus: linkedin_count %}
 
-{% assign wb_first_year = site.data.citations.world_bank_blogs.timeline.first_year | default: 2012 | plus: 0 %}
-{% assign wb_last_year = site.data.citations.world_bank_blogs.timeline.latest_year | default: site.data.citations.world_bank_blogs.timeline.last_year | default: 2023 | plus: 0 %}
+{% assign wb_first_year = site.data.citations.world_bank_blogs.timeline.first_year | plus: 0 %}
+{% assign wb_last_year = site.data.citations.world_bank_blogs.timeline.latest_year | default: site.data.citations.world_bank_blogs.timeline.last_year | plus: 0 %}
 
 {% assign other_years = other_posts | map: 'year' | sort %}
 {% assign other_first_year = other_years | first | default: wb_first_year | plus: 0 %}
