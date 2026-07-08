@@ -2,23 +2,56 @@ metadata:
   user: jpazvd
   source: GitHub API
   source_url: https://github.com/jpazvd
-  last_updated: '2026-03-23T06:29:02.774722'
-  total_repositories: 28
+  last_updated: '2026-07-08T16:22:00.962874'
+  total_repositories: 31
   note: This is an auto-generated satellite database. Do not edit manually.
 repositories:
+- name: datalib
+  full_name: jpazvd/datalib
+  description: null
+  url: https://github.com/jpazvd/datalib
+  language: Stata
+  stars: 0
+  forks: 0
+  watchers: 0
+  topics: []
+  created_at: '2026-07-05T02:40:17Z'
+  updated_at: '2026-07-05T03:16:17Z'
+  homepage: null
+  open_issues: 0
+  type: software
+  category: other
+  featured: false
+- name: mics-world-cup
+  full_name: jpazvd/mics-world-cup
+  description: The 2026 FIFA World Cup bracket replayed on MICS survey-programme strength. Deterministic simulation + pre-rendered
+    bracket.
+  url: https://github.com/jpazvd/mics-world-cup
+  language: Python
+  stars: 1
+  forks: 0
+  watchers: 1
+  topics: []
+  created_at: '2026-06-13T20:22:02Z'
+  updated_at: '2026-06-15T00:26:34Z'
+  homepage: null
+  open_issues: 0
+  type: software
+  category: other
+  featured: false
 - name: unicefstats-mcp
   full_name: jpazvd/unicefstats-mcp
   description: MCP server for UNICEF child development indicator data — 790+ indicators, 200+ countries, territories and other
     aggregates, no API key required
   url: https://github.com/jpazvd/unicefstats-mcp
   language: Python
-  stars: 0
-  forks: 0
-  watchers: 0
+  stars: 5
+  forks: 1
+  watchers: 5
   topics: []
-  created_at: '2026-03-22T13:19:47Z'
-  updated_at: '2026-03-23T04:39:15Z'
-  homepage: ''
+  created_at: '2026-03-27T10:22:44Z'
+  updated_at: '2026-06-24T12:37:50Z'
+  homepage: https://pypi.org/project/unicefstats-mcp/
   open_issues: 0
   type: software
   category: other
@@ -62,7 +95,23 @@ repositories:
   watchers: 0
   topics: []
   created_at: '2025-09-08T00:43:39Z'
-  updated_at: '2026-03-06T03:14:42Z'
+  updated_at: '2026-05-24T13:28:35Z'
+  homepage: null
+  open_issues: 0
+  type: software
+  category: other
+  featured: false
+- name: jpazvd
+  full_name: jpazvd/jpazvd
+  description: João Pedro Azevedo
+  url: https://github.com/jpazvd/jpazvd
+  language: null
+  stars: 1
+  forks: 0
+  watchers: 1
+  topics: []
+  created_at: '2024-04-29T01:12:53Z'
+  updated_at: '2026-07-08T00:49:23Z'
   homepage: null
   open_issues: 0
   type: software
@@ -477,9 +526,9 @@ repositories:
   description: 'WBOPENDATA: Stata module to access World Bank databases'
   url: https://github.com/jpazvd/wbopendata
   language: Stata
-  stars: 45
-  forks: 14
-  watchers: 45
+  stars: 46
+  forks: 15
+  watchers: 46
   topics:
   - api
   - api-wrapper
@@ -491,7 +540,7 @@ repositories:
   - sdgs
   - stata
   created_at: '2018-11-27T21:59:59Z'
-  updated_at: '2026-03-13T16:57:30Z'
+  updated_at: '2026-04-29T02:47:42Z'
   homepage: https://ideas.repec.org/c/boc/bocode/s457234.html
   open_issues: 0
   type: software

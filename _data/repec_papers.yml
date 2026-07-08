@@ -3,7 +3,7 @@ metadata:
   author_id: pwa88
   source: RePEc/IDEAS
   source_url: https://ideas.repec.org/e/pwa88.html
-  last_updated: '2026-03-23T06:28:52.677676'
+  last_updated: '2026-07-08T16:21:49.853754'
   total_papers: 69
   note: This is an auto-generated satellite database. Do not edit manually.
 papers:
@@ -77,16 +77,16 @@ papers:
   handle: wbk/wbrwps/8630
   series: wbrwps
   original_title: 'sae : A Stata Package for Unit Level Small Area Estimation'
-- url: https://ideas.repec.org/p/wbk/wbgpmt/1.html
-  type: working_paper
-  handle: wbk/wbgpmt/1
-  series: wbgpmt
-  original_title: 'April 2018 PovcalNet Update: What’s New'
 - url: https://ideas.repec.org/p/wbk/wbgpmt/3.html
   type: working_paper
   handle: wbk/wbgpmt/3
   series: wbgpmt
   original_title: Prices Used in Global Poverty Measurement
+- url: https://ideas.repec.org/p/wbk/wbgpmt/1.html
+  type: working_paper
+  handle: wbk/wbgpmt/1
+  series: wbgpmt
+  original_title: 'April 2018 PovcalNet Update: What’s New'
 - url: https://ideas.repec.org/p/boc/scon17/20.html
   type: working_paper
   handle: boc/scon17/20
@@ -97,6 +97,11 @@ papers:
   handle: wbk/wbrwps/7611
   series: wbrwps
   original_title: 'Robustness of shared prosperity estimates : how different methodological choices matter'
+- url: https://ideas.repec.org/p/wbk/wbrwps/7542.html
+  type: working_paper
+  handle: wbk/wbrwps/7542
+  series: wbrwps
+  original_title: What are the impacts of Syrian refugees on host community welfare in Turkey ? a subnational poverty analysis
 - url: https://ideas.repec.org/p/wbk/wbrwps/7541.html
   type: working_paper
   handle: wbk/wbrwps/7541
@@ -107,11 +112,6 @@ papers:
   handle: wbk/wbrwps/7844
   series: wbrwps
   original_title: Who are the poor in the developing world ?
-- url: https://ideas.repec.org/p/wbk/wbrwps/7542.html
-  type: working_paper
-  handle: wbk/wbrwps/7542
-  series: wbrwps
-  original_title: What are the impacts of Syrian refugees on host community welfare in Turkey ? a subnational poverty analysis
 - url: https://ideas.repec.org/p/wbk/wbrwps/7540.html
   type: working_paper
   handle: wbk/wbrwps/7540
@@ -132,11 +132,6 @@ papers:
   handle: wbk/wbrwps/6923
   series: wbrwps
   original_title: 'Poverty reduction and shared prosperity in Tajikistan : a diagnostic'
-- url: https://ideas.repec.org/p/wbk/wbrwps/6834.html
-  type: working_paper
-  handle: wbk/wbrwps/6834
-  series: wbrwps
-  original_title: 'Pathways to the middle class in Turkey : how have reducing poverty and boosting shared prosperity helped?'
 - url: https://ideas.repec.org/p/wbk/wbrwps/7081.html
   type: working_paper
   handle: wbk/wbrwps/7081
@@ -145,6 +140,11 @@ papers:
 - url: https://ideas.repec.org/a/eee/wdevel/v82y2016icp69-82.html
   type: working_paper
   original_title: Weather Shocks and Health at Birth in Colombia
+- url: https://ideas.repec.org/p/wbk/wbrwps/6834.html
+  type: working_paper
+  handle: wbk/wbrwps/6834
+  series: wbrwps
+  original_title: 'Pathways to the middle class in Turkey : how have reducing poverty and boosting shared prosperity helped?'
 - url: https://ideas.repec.org/p/imf/imfwpa/2014-085.html
   type: working_paper
   handle: imf/imfwpa/2014
@@ -155,6 +155,16 @@ papers:
   handle: wbk/wbrwps/6945
   series: wbrwps
   original_title: 'Fiscal adjustment and income inequality : sub-national evidence from Brazil'
+- url: https://ideas.repec.org/p/wbk/wbrwps/6715.html
+  type: working_paper
+  handle: wbk/wbrwps/6715
+  series: wbrwps
+  original_title: Decomposing the recent inequality decline in Latin America
+- url: https://ideas.repec.org/p/wbk/wbrwps/6384.html
+  type: working_paper
+  handle: wbk/wbrwps/6384
+  series: wbrwps
+  original_title: 'Fifteen years of inequality in Latin America : how have labor markets helped ?'
 - url: https://ideas.repec.org/p/wbk/wbrwps/6385.html
   type: working_paper
   handle: wbk/wbrwps/6385
@@ -168,29 +178,11 @@ papers:
 - url: https://ideas.repec.org/a/wbk/prmecp/ep117.html
   type: working_paper
   original_title: 'From Noise to Signal: The Successful Turnaround of Poverty Measurement in Colombia'
-- url: https://ideas.repec.org/p/wbk/wbrwps/6715.html
-  type: working_paper
-  handle: wbk/wbrwps/6715
-  series: wbrwps
-  original_title: Decomposing the recent inequality decline in Latin America
-- url: https://ideas.repec.org/p/wbk/wbrwps/6384.html
-  type: working_paper
-  handle: wbk/wbrwps/6384
-  series: wbrwps
-  original_title: 'Fifteen years of inequality in Latin America : how have labor markets helped ?'
 - url: https://ideas.repec.org/p/wbk/wbrwps/6414.html
   type: working_paper
   handle: wbk/wbrwps/6414
   series: wbrwps
   original_title: Is labor income responsible for poverty reduction ? a decomposition approach
-- url: https://ideas.repec.org/p/wbk/wboper/17067.html
-  type: working_paper
-  handle: wbk/wboper/17067
-  series: wboper
-  original_title: When Job Earnings Are Behind Poverty Reduction
-- url: https://ideas.repec.org/a/wbk/prmecp/ep97.html
-  type: working_paper
-  original_title: When Job Earnings Are behind Poverty Reduction
 - url: https://ideas.repec.org/p/pra/mprapa/85584.html
   type: working_paper
   handle: pra/mprapa/85584
@@ -206,6 +198,14 @@ papers:
   handle: wbk/wbrwps/6074
   series: wbrwps
   original_title: Is the baby to blame ? an inquiry into the consequences of early childbearing
+- url: https://ideas.repec.org/p/wbk/wboper/17067.html
+  type: working_paper
+  handle: wbk/wboper/17067
+  series: wboper
+  original_title: When Job Earnings Are Behind Poverty Reduction
+- url: https://ideas.repec.org/a/wbk/prmecp/ep97.html
+  type: working_paper
+  original_title: When Job Earnings Are behind Poverty Reduction
 - url: https://ideas.repec.org/p/wbk/wboper/16978.html
   type: working_paper
   handle: wbk/wboper/16978
@@ -213,11 +213,6 @@ papers:
   original_title: 'Teenage Pregnancy and Opportunities in Latin America and the Caribbean : On Teenage Fertility Decisions,
     Poverty and Economic Achievement [Embarazo adolescente y oportunidades en América Latina y el Caribe : sobre maternidad
     temprana, pobreza y lo'
-- url: https://ideas.repec.org/p/col/000094/007872.html
-  type: working_paper
-  handle: col/000094/007872
-  series: 000094
-  original_title: 'Oportunidades para los ni�os colombianos: cu�nto avanzamos en esta d�cada'
 - url: https://ideas.repec.org/p/bdr/borrec/637.html
   type: working_paper
   handle: bdr/borrec/637
@@ -228,6 +223,11 @@ papers:
   handle: bdr/bdrlib/2010
   series: bdrlib
   original_title: 'Oportunidades para los niños colombianos: cuánto avanzamos en esta década'
+- url: https://ideas.repec.org/p/col/000094/007872.html
+  type: working_paper
+  handle: col/000094/007872
+  series: 000094
+  original_title: 'Oportunidades para los ni�os colombianos: cu�nto avanzamos en esta d�cada'
 - url: https://ideas.repec.org/p/wbk/wboper/10205.html
   type: working_paper
   handle: wbk/wboper/10205
@@ -236,14 +236,14 @@ papers:
 - url: https://ideas.repec.org/p/cdp/texdis/td337.html
   type: working_paper
   original_title: 'Prevenção e controle de homicídios: uma avaliação de impacto no Brasil'
+- url: https://ideas.repec.org/p/cdp/texdis/td336.html
+  type: working_paper
+  original_title: 'Avaliação econômica do Programa Fica Vivo: o caso piloto'
 - url: https://ideas.repec.org/p/pra/mprapa/85585.html
   type: working_paper
   handle: pra/mprapa/85585
   series: mprapa
   original_title: 'The Real Bottom Line: Benchmarking Performance in Poverty Reduction in Latin America and the Caribbean'
-- url: https://ideas.repec.org/p/cdp/texdis/td336.html
-  type: working_paper
-  original_title: 'Avaliação econômica do Programa Fica Vivo: o caso piloto'
 - url: https://ideas.repec.org/p/pra/mprapa/56063.html
   type: working_paper
   handle: pra/mprapa/56063
@@ -285,26 +285,16 @@ papers:
 - url: https://ideas.repec.org/a/eee/wdevel/v101y2018icp250-267.html
   type: working_paper
   original_title: A New Profile of the Global Poor
-- url: https://ideas.repec.org/a/ecr/col070/10858.html
-  type: working_paper
-  handle: ecr/col070/10858
-  series: col070
-  original_title: El TLC y las pérdidas de mercado de Brasil en los Estados Unidos, 1992-2001
 - url: https://ideas.repec.org/a/ecr/col070/10914.html
   type: working_paper
   handle: ecr/col070/10914
   series: col070
   original_title: NAFTA and the loss of US market share by Brazil, 1992-2001
-- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap5.html
+- url: https://ideas.repec.org/a/ecr/col070/10858.html
   type: working_paper
-  handle: bdr/bdrcap/2010
-  series: bdrcap
-  original_title: Resumen y conclusiones
-- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap3.html
-  type: working_paper
-  handle: bdr/bdrcap/2010
-  series: bdrcap
-  original_title: La evolución del índice de oportunidades humanas durante la ultima década
+  handle: ecr/col070/10858
+  series: col070
+  original_title: El TLC y las pérdidas de mercado de Brasil en los Estados Unidos, 1992-2001
 - url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap2.html
   type: working_paper
   handle: bdr/bdrcap/2010
@@ -320,6 +310,16 @@ papers:
   handle: bdr/bdrcap/2010
   series: bdrcap
   original_title: Introducción
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap5.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: Resumen y conclusiones
+- url: https://ideas.repec.org/h/bdr/bdrcap/2010-isbn9789586642347-cap3.html
+  type: working_paper
+  handle: bdr/bdrcap/2010
+  series: bdrcap
+  original_title: La evolución del índice de oportunidades humanas durante la ultima década
 - url: https://ideas.repec.org/h/cdp/diam10/015.html
   type: working_paper
   handle: cdp/diam10/015
