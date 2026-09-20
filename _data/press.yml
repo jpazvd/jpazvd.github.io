@@ -1,10 +1,12 @@
 # Media & press mentions — single source of truth.
 #
-# Currently the Nature 2026 feature is hand-copied into _pages/publications.md,
-# _pages/cv.md, and _pages/research.html. This file is the canonical record;
-# the Phase 4 page rewrites will loop over it (via _includes/press-item.html)
-# and delete those three copies. Curation lives here: `featured` shows an item
-# on /publications/ and /cv/; `research_theme` places it on /research/.
+# Every item below is currently hand-copied into _pages/publications.md,
+# _pages/cv.md, and _pages/research.html — 2 items x 3 pages as of 2026-09-20,
+# so the duplication now grows with each addition. This file is the canonical
+# record; the Phase 4 page rewrites will loop over it (via
+# _includes/press-item.html) and delete those copies. Curation lives here:
+# `featured` shows an item on /publications/ and /cv/; `research_theme` places
+# it on /research/.
 metadata:
   description: Press and media coverage of JPA's work
   last_updated: '2026-09-20'

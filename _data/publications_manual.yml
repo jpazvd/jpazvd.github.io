@@ -24,10 +24,10 @@
 
 journal_articles:
   # BMJ Opinion piece accompanying the 2026 UN IGME child-mortality estimates
-  # series. NOT peer-reviewed research — the article footer labels it "OPINION"
-  # (see _evidence/publications/2026-bmj-child-survival/ for the captured PDF).
+  # series. NOT peer-reviewed research — the article footer labels it "OPINION".
   # Kept in journal_articles because it is a journal item; peer_reviewed: false
   # follows the azevedo-batista-1999-exports precedent.
+  # This file is synced to the public repo: do not cite private file paths here.
   - id: allotey-2026-bmj-child-survival
     type: journal_article
     authors:
