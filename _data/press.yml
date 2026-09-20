@@ -7,8 +7,26 @@
 # on /publications/ and /cv/; `research_theme` places it on /research/.
 metadata:
   description: Press and media coverage of JPA's work
-  last_updated: '2026-07-07'
+  last_updated: '2026-09-20'
 items:
+  - id: techcrunch-2026-un-google-data-commons
+    outlet: TechCrunch
+    type: interview
+    title: "UN turns to Google to make its global data ready for AI agents"
+    authors: ["Singh, J"]
+    date: '2026-09-17'
+    url: https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/
+    summary: >-
+      Coverage of the UN System Data Commons launch with Google, quoting JPA
+      throughout on UNICEF's benchmark of large language models retrieving
+      development indicators (21.2% average accuracy; about three in five
+      responses returned no usable number; models that returned a number twice
+      repeated it only about half the time) and on a 67% year-over-year rise in
+      visits reaching UNICEF's data site from ChatGPT answers.
+    related_publication_id: null
+    research_theme: data-systems
+    featured: true
+    order: 1
   - id: nature-2026-statistics-crisis
     outlet: Nature
     type: news_feature
@@ -26,4 +44,4 @@ items:
     related_publication_id: null
     research_theme: data-systems
     featured: true
-    order: 1
+    order: 2

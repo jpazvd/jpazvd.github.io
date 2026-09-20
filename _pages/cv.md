@@ -127,6 +127,7 @@ redirect_from:
 ## Media & Press
 
 <ul>
+<li class="cv-pub">Singh, J (2026). "UN turns to Google to make its global data ready for AI agents." <em>TechCrunch</em>, 17 September 2026. <a href="https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/">link</a></li>
 <li class="cv-pub">Masood, E, Priyadarshini, S, Pinto, L (2026). "Statistics reach a 'crisis point': nations struggle with a critical lack of data." <em>Nature</em>, 651(8105), 298-300. <a href="https://doi.org/10.1038/d41586-026-00699-2">doi</a></li>
 </ul>
 

@@ -211,6 +211,7 @@ description: "Publications by João Pedro Azevedo: journal articles, working pap
 <h2>In the Media</h2>
 
 <ul>
+  <li>Singh, J (2026). <a href="https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/" target="_blank">"UN turns to Google to make its global data ready for AI agents."</a> <em>TechCrunch</em>, 17 September 2026. — Interview on UNICEF's benchmark of AI models retrieving development indicators, and the launch of the UN System Data Commons.</li>
   <li>Masood, E, Priyadarshini, S, Pinto, L (2026). <a href="https://doi.org/10.1038/d41586-026-00699-2" target="_blank">"Statistics reach a 'crisis point': nations struggle with a critical lack of data."</a> <em>Nature</em>, 651(8105), 298-300. — News feature on the global data crisis, citing challenges in official statistics that underpin development policy.</li>
 </ul>
 

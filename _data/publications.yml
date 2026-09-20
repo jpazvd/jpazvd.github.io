@@ -1,5 +1,5 @@
 _metadata:
-  generated: '2026-07-07T17:30:20.100340'
+  generated: '2026-09-20T16:32:31.287103'
   generator: scripts/build_publications_master.py
   warning: DO NOT EDIT MANUALLY - This file is auto-generated from satellite databases
   sources:
@@ -8,13 +8,13 @@ _metadata:
   - stata
   - github
   - manual
-  total_publications: 81
+  total_publications: 82
 summary:
-  total: 81
+  total: 82
   by_type:
     working_papers: 29
     softwares: 10
-    journal_articles: 9
+    journal_articles: 10
     books: 5
     book_chapters: 13
     reports: 6
@@ -27,8 +27,8 @@ summary:
     stata_merged: 0
     github_merged: 5
     github_new: 0
+    manual_new: 39
     manual_merged: 4
-    manual_new: 38
 working_papers:
 - title: Blackout or Blanked Out?
   year: '2023'
@@ -1009,6 +1009,30 @@ softwares:
   sources:
   - stata
 journal_articles:
+- id: allotey-2026-bmj-child-survival
+  type: journal_article
+  authors:
+  - Allotey, Pascale
+  - Azevedo, João Pedro
+  - Wilmoth, John
+  - Fu, Haishan
+  year: 2026
+  title: After remarkable progress, newborn, child, and adolescent survival is now at risk
+  journal: BMJ
+  volume: '393'
+  pages: e895610
+  doi: 10.1136/bmj-2026-895610
+  url: https://www.bmj.com/content/393/bmj-2026-895610.full
+  tags:
+  - child mortality
+  - child survival
+  - sdg
+  - global health
+  peer_reviewed: false
+  open_access: false
+  language: en
+  sources:
+  - manual
 - title: COVID-19 School Closures, Learning Losses and Intergenerational Mobility
   year: 2026
   authors:
